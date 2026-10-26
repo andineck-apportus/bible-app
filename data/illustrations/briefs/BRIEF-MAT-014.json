@@ -26,10 +26,28 @@
           "icons": [
             "FIG-JOHANNES-TAEUFER",
             "FIG-ZEICHEN-TOD"
-          ]
+          ],
+          "word": {
+            "de": "Gib mir hier auf einer Schale den Kopf des Johannes des Täufers!",
+            "gsw": "Gib mir da uf ere Platte de Chopf vom Johannes em Täufer!"
+          }
         }
       ],
-      "action_de": "Herodes hält Jesus für den auferweckten Johannes; rückblickend wird erzählt, wie er Johannes auf Bitte der Tochter der Herodias, von ihrer Mutter angestiftet, enthaupten liess.",
+      "action_de": "An Herodes' Geburtstag verlangt die Tochter der Herodias, von ihrer Mutter angestiftet: Gib mir hier auf einer Schale den Kopf des Johannes des Täufers! Der König ist betrübt, lässt aber wegen der Eide und der Gäste Johannes im Gefängnis enthaupten.",
+      "keywords": {
+        "de": "liess Johannes im Gefängnis enthaupten",
+        "gsw": "hät de Johannes im Gfängnis la chöpfe"
+      },
+      "names": {
+        "FIG-HERODES-ANTIPAS": {
+          "de": "Herodes",
+          "gsw": "Herodes"
+        },
+        "FIG-HERODIAS": {
+          "de": "Herodias",
+          "gsw": "Herodias"
+        }
+      },
       "stage": {
         "arrows": [
           [
@@ -40,12 +58,13 @@
         ],
         "mood": {
           "FIG-HERODES-ANTIPAS": "worried",
+          "FIG-TOCHTER-HERODIAS": "calm",
           "FIG-HERODIAS": "earnest"
         },
         "x": {
           "FIG-HERODES-ANTIPAS": 30,
-          "FIG-TOCHTER-HERODIAS": 100,
-          "FIG-HERODIAS": 156
+          "FIG-TOCHTER-HERODIAS": 108,
+          "FIG-HERODIAS": 160
         }
       }
     },
@@ -53,47 +72,57 @@
       "n": 2,
       "reference": "MAT.14.13-MAT.14.21",
       "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
         "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-BROT"
+        "FIG-OBJ-BROTE-FISCHE",
+        "FIG-OBJ-KORB"
       ],
       "signs": [
+        "FIG-ZEICHEN-SEGNEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Jesus segnet fünf Brote und zwei Fische und speist etwa fünftausend Männer, ohne Frauen und Kinder; zwölf Körbe bleiben übrig.",
+      "speech": [],
+      "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+      "keywords": {
+        "de": "alle assen und wurden satt",
+        "gsw": "alli händ ggässe und sind satt worde"
+      },
       "stage": {
-        "god_side": "right",
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+        },
         "at": {
+          "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT",
-          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
-        },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
         "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-JUENGER",
+            "act"
+          ],
           [
             "FIG-GRUPPE-JUENGER",
             "FIG-GRUPPE-MENGE",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "smile",
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 154
+        },
+        "floor_x": {
+          "FIG-OBJ-KORB": 120
+        }
       }
     },
     {
@@ -104,12 +133,11 @@
         "FIG-PETRUS"
       ],
       "objects": [
-        "FIG-OBJ-BOOT",
-        "FIG-ORT-SEE"
+        "FIG-ORT-MEER-OFFEN"
       ],
       "signs": [
-        "FIG-ZEICHEN-NACHT",
-        "FIG-ZEICHEN-WIND"
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-RETTUNG"
       ],
       "speech": [
         {
@@ -117,13 +145,33 @@
           "to": "FIG-JESUS",
           "icons": [
             "FIG-ZEICHEN-RETTUNG"
-          ]
+          ],
+          "word": {
+            "de": "Herr, rette mich!",
+            "gsw": "Herr, rett mich!"
+          }
         }
       ],
-      "action_de": "In der Nacht kommt Jesus auf dem See zu den Jüngern; Petrus geht ihm entgegen, beginnt aus Furcht zu sinken und wird von Jesus ergriffen.",
+      "action_de": "Petrus geht auf Jesu Wort auf dem Wasser, sieht den starken Wind, fürchtet sich und beginnt zu versinken; er schreit: Herr, rette mich! Sogleich ergreift ihn Jesus: Du Kleingläubiger, warum hast du gezweifelt?",
+      "keywords": {
+        "de": "Wahrhaftig, du bist Gottes Sohn!",
+        "gsw": "Würkli, du bisch de Sohn vo Gott!"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
+        "on_water": [
+          "FIG-JESUS"
+        ],
         "in_water": true,
-        "big_side": "right",
+        "night": true,
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+        },
         "arrows": [
           [
             "FIG-JESUS",
@@ -131,28 +179,22 @@
             "act"
           ]
         ],
-        "at": {
-          "FIG-ZEICHEN-WIND": "FIG-PETRUS"
-        },
         "mood": {
-          "FIG-PETRUS": "worried"
+          "FIG-JESUS": "earnest",
+          "FIG-PETRUS": "fear"
         },
         "x": {
-          "FIG-JESUS": 34,
-          "FIG-PETRUS": 78
-        },
-        "on_water": [
-          "FIG-JESUS"
-        ]
+          "FIG-JESUS": 60,
+          "FIG-PETRUS": 128
+        }
       }
     },
     {
       "n": 4,
       "reference": "MAT.14.34-MAT.14.36",
       "figures": [
-        "FIG-JESUS",
-        "FIG-ROLLE-KRANKER",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-KRANKE",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [
@@ -160,51 +202,58 @@
         "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [],
-      "action_de": "In Gennesaret werden alle gerettet, die den Saum seines Mantels berühren.",
+      "action_de": "In Gennesaret bringen sie Jesus alle Kranken; alle, die den Saum seines Mantels berühren, werden gerettet.",
+      "keywords": {
+        "de": "alle, die ihn berührten, wurden gerettet",
+        "gsw": "alli, wo en aagrüert händ, sind grettet worde"
+      },
       "stage": {
-        "pose": {
-          "FIG-ROLLE-KRANKER": "kneel"
+        "beside": {
+          "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE"
         },
+        "at": {
+          "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
+        },
+        "arrows": [
+          [
+            "FIG-GRUPPE-KRANKE",
+            "FIG-JESUS",
+            "act"
+          ]
+        ],
         "mood": {
-          "FIG-GRUPPE-MENGE": "smile",
-          "FIG-ROLLE-KRANKER": "delight",
+          "FIG-GRUPPE-KRANKE": "delight",
           "FIG-JESUS": "calm"
         },
         "x": {
-          "FIG-JESUS": 46,
-          "FIG-ROLLE-KRANKER": 110,
-          "FIG-GRUPPE-MENGE": 162
-        },
-        "air_x": 56,
-        "air_y": 104,
-        "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+          "FIG-GRUPPE-KRANKE": 60,
+          "FIG-JESUS": 132
         }
       }
     }
   ],
   "actions_de": [
-    "Herodes hält Jesus für den auferweckten Johannes; rückblickend wird erzählt, wie er Johannes auf Bitte der Tochter der Herodias, von ihrer Mutter angestiftet, enthaupten liess.",
-    "Jesus segnet fünf Brote und zwei Fische und speist etwa fünftausend Männer, ohne Frauen und Kinder; zwölf Körbe bleiben übrig.",
-    "In der Nacht kommt Jesus auf dem See zu den Jüngern; Petrus geht ihm entgegen, beginnt aus Furcht zu sinken und wird von Jesus ergriffen.",
-    "In Gennesaret werden alle gerettet, die den Saum seines Mantels berühren."
+    "An Herodes' Geburtstag verlangt die Tochter der Herodias, von ihrer Mutter angestiftet: Gib mir hier auf einer Schale den Kopf des Johannes des Täufers! Der König ist betrübt, lässt aber wegen der Eide und der Gäste Johannes im Gefängnis enthaupten.",
+    "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+    "Petrus geht auf Jesu Wort auf dem Wasser, sieht den starken Wind, fürchtet sich und beginnt zu versinken; er schreit: Herr, rette mich! Sogleich ergreift ihn Jesus: Du Kleingläubiger, warum hast du gezweifelt?",
+    "In Gennesaret bringen sie Jesus alle Kranken; alle, die den Saum seines Mantels berühren, werden gerettet."
   ],
   "captions_de": [
-    "Johannes: Angestiftet von der Mutter (Pfeil von Herodias) verlangt die Tochter von Herodes den Tod des Johannes (Johannes, Totenkopf).",
-    "Fünftausend: Jesus segnet das Brot (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Brot in der Hand, Pfeil), alle werden satt (Schale mit Brot und grünem Haken).",
-    "Auf dem Wasser: Petrus sinkt und ruft: Rette mich! (Pfeil nach oben aus den Wellen); Jesus ergreift ihn (Pfeil).",
-    "Gennesaret: Ein Kranker berührt den Saum des Mantels (Hand am Saum); alle werden gesund (Hand mit grünem Lichtpunkt beim Kranken)."
+    "Die Bitte: Herodes (goldenes Diadem, violettes Gewand) ist betrübt; die Tochter der Herodias (rosa) verlangt den Kopf des Johannes (Johannes, Totenkopf in der Blase); Herodias (pflaumenfarben) hat sie angestiftet (Pfeil).",
+    "Speisung: Jesus hält die Brote und Fische (Fladenbrot und Fisch) und segnet sie (erhobene Hand mit Funkeln); die Jünger geben sie weiter (Pfeile), die Menge wird satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die übrigen Brocken.",
+    "Rettung: Petrus (ockerfarbener Mantel) versinkt in den Wellen (erschrockenes Gesicht) und schreit: «Herr, rette mich!»; Jesus steht auf dem Wasser, ergreift ihn (Pfeil, aus den Wellen nach oben) und sagt: «Du Kleingläubiger, warum hast du gezweifelt?» (nicht als Blase, damit Jesu Gesicht frei bleibt).",
+    "Gennesaret: Die Kranken (Kopfverband) berühren den Saum seines Mantels (Hand am roten Mantelsaum) und werden gerettet (berührende Hand mit grünem Lichtpunkt)."
   ],
-  "interpretation_note_de": "Vier Stationen: der Tod des Täufers im Rückblick ([[MAT.14.1-MAT.14.12]]), die Speisung der Fünftausend ([[MAT.14.13-MAT.14.21]]), Jesus und Petrus auf dem Wasser ([[MAT.14.22-MAT.14.33]]) und die Heilungen in Gennesaret ([[MAT.14.34-MAT.14.36]]). Der Tod des Johannes wird nicht gezeigt; das verschlossene Grab steht für ihn. Die Körbe sind weniger als zwölf gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: die Bitte um den Kopf des Johannes ([[MAT.14.1-MAT.14.12]]), die Speisung der Fünftausend ([[MAT.14.13-MAT.14.21]]), Petrus auf dem Wasser, darunter als Stichwort das Bekenntnis der Jünger ([[MAT.14.22-MAT.14.33]]), die Heilungen in Gennesaret ([[MAT.14.34-MAT.14.36]]). Der Tod des Johannes erscheint als Totenkopf in der Blase, nicht ausgemalt. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-014",
       "field": "summary",
-      "fingerprint": "6bb3f9a9437e82d7"
+      "fingerprint": "d8f318352facf6b3"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -586,6 +635,691 @@
           "Fünftausend: Jesus segnet das Brot (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Brot in der Hand, Pfeil), alle werden satt (Schale mit Brot und grünem Haken).",
           "Auf dem Wasser: Petrus sinkt und ruft: Rette mich! (Pfeil nach oben aus den Wellen); Jesus ergreift ihn (Pfeil).",
           "Gennesaret: Ein Kranker berührt den Saum des Mantels (Hand am Saum); alle werden gesund (Hand mit grünem Lichtpunkt beim Kranken)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.1-MAT.14.12",
+            "figures": [
+              "FIG-HERODES-ANTIPAS",
+              "FIG-TOCHTER-HERODIAS",
+              "FIG-HERODIAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TOCHTER-HERODIAS",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              }
+            ],
+            "action_de": "Herodes hält Jesus für den auferweckten Johannes; rückblickend wird erzählt, wie er Johannes auf Bitte der Tochter der Herodias, von ihrer Mutter angestiftet, enthaupten liess.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HERODIAS",
+                  "FIG-TOCHTER-HERODIAS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "worried",
+                "FIG-HERODIAS": "earnest"
+              },
+              "x": {
+                "FIG-HERODES-ANTIPAS": 30,
+                "FIG-TOCHTER-HERODIAS": 100,
+                "FIG-HERODIAS": 156
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.13-MAT.14.21",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Jesus segnet fünf Brote und zwei Fische und speist etwa fünftausend Männer, ohne Frauen und Kinder; zwölf Körbe bleiben übrig.",
+            "stage": {
+              "god_side": "right",
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.22-MAT.14.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-WIND"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG"
+                ]
+              }
+            ],
+            "action_de": "In der Nacht kommt Jesus auf dem See zu den Jüngern; Petrus geht ihm entgegen, beginnt aus Furcht zu sinken und wird von Jesus ergriffen.",
+            "stage": {
+              "in_water": true,
+              "big_side": "right",
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-PETRUS",
+                  "act"
+                ]
+              ],
+              "at": {
+                "FIG-ZEICHEN-WIND": "FIG-PETRUS"
+              },
+              "mood": {
+                "FIG-PETRUS": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-PETRUS": 78
+              },
+              "on_water": [
+                "FIG-JESUS"
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.14.34-MAT.14.36",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-KRANKER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "In Gennesaret werden alle gerettet, die den Saum seines Mantels berühren.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-KRANKER": "kneel"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile",
+                "FIG-ROLLE-KRANKER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-KRANKER": 110,
+                "FIG-GRUPPE-MENGE": 162
+              },
+              "air_x": 56,
+              "air_y": 104,
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KRANKER"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Herodes hält Jesus für den auferweckten Johannes; rückblickend wird erzählt, wie er Johannes auf Bitte der Tochter der Herodias, von ihrer Mutter angestiftet, enthaupten liess.",
+          "Jesus segnet fünf Brote und zwei Fische und speist etwa fünftausend Männer, ohne Frauen und Kinder; zwölf Körbe bleiben übrig.",
+          "In der Nacht kommt Jesus auf dem See zu den Jüngern; Petrus geht ihm entgegen, beginnt aus Furcht zu sinken und wird von Jesus ergriffen.",
+          "In Gennesaret werden alle gerettet, die den Saum seines Mantels berühren."
+        ],
+        "captions_de": [
+          "Johannes: Angestiftet von der Mutter (Pfeil von Herodias) verlangt die Tochter von Herodes den Tod des Johannes (Johannes, Totenkopf).",
+          "Fünftausend: Jesus segnet das Brot (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Brot in der Hand, Pfeil), alle werden satt (Schale mit Brot und grünem Haken).",
+          "Auf dem Wasser: Petrus sinkt und ruft: Rette mich! (Pfeil nach oben aus den Wellen); Jesus ergreift ihn (Pfeil).",
+          "Gennesaret: Ein Kranker berührt den Saum des Mantels (Hand am Saum); alle werden gesund (Hand mit grünem Lichtpunkt beim Kranken)."
+        ],
+        "interpretation_note_de": "Vier Stationen: der Tod des Täufers im Rückblick ([[MAT.14.1-MAT.14.12]]), die Speisung der Fünftausend ([[MAT.14.13-MAT.14.21]]), Jesus und Petrus auf dem Wasser ([[MAT.14.22-MAT.14.33]]) und die Heilungen in Gennesaret ([[MAT.14.34-MAT.14.36]]). Der Tod des Johannes wird nicht gezeigt; das verschlossene Grab steht für ihn. Die Körbe sind weniger als zwölf gezeichnet.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-014",
+            "field": "summary",
+            "fingerprint": "6bb3f9a9437e82d7"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.1-MAT.14.12",
+            "figures": [
+              "FIG-HERODES-ANTIPAS",
+              "FIG-TOCHTER-HERODIAS",
+              "FIG-HERODIAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TOCHTER-HERODIAS",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TOD"
+                ],
+                "word": {
+                  "de": "Gib mir hier auf einer Schale den Kopf des Johannes des Täufers!",
+                  "gsw": "Gib mir da uf ere Platte de Chopf vom Johannes em Täufer!"
+                }
+              }
+            ],
+            "action_de": "An Herodes' Geburtstag verlangt die Tochter der Herodias, von ihrer Mutter angestiftet: Gib mir hier auf einer Schale den Kopf des Johannes des Täufers! Der König ist betrübt, lässt aber wegen der Eide und der Gäste Johannes im Gefängnis enthaupten.",
+            "keywords": {
+              "de": "Gib mir hier auf einer Schale den Kopf des Johannes des Täufers!",
+              "gsw": "Gib mir da uf ere Platte de Chopf vom Johannes em Täufer!"
+            },
+            "names": {
+              "FIG-HERODES-ANTIPAS": {
+                "de": "Herodes",
+                "gsw": "Herodes"
+              },
+              "FIG-HERODIAS": {
+                "de": "Herodias",
+                "gsw": "Herodias"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HERODIAS",
+                  "FIG-TOCHTER-HERODIAS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "worried",
+                "FIG-TOCHTER-HERODIAS": "calm",
+                "FIG-HERODIAS": "earnest"
+              },
+              "x": {
+                "FIG-HERODES-ANTIPAS": 30,
+                "FIG-TOCHTER-HERODIAS": 108,
+                "FIG-HERODIAS": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.13-MAT.14.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+            "keywords": {
+              "de": "alle assen und wurden satt",
+              "gsw": "alli händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 120
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.22-MAT.14.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-RETTUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG"
+                ],
+                "word": {
+                  "de": "Herr, rette mich!",
+                  "gsw": "Herr, rett mich!"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-UNGLAUBE"
+                ],
+                "word": {
+                  "de": "Du Kleingläubiger, warum hast du gezweifelt?",
+                  "gsw": "Du Chliigläubige, werum häsch zwiiflet?"
+                }
+              }
+            ],
+            "action_de": "Petrus geht auf Jesu Wort auf dem Wasser, sieht den starken Wind, fürchtet sich und beginnt zu versinken; er schreit: Herr, rette mich! Sogleich ergreift ihn Jesus: Du Kleingläubiger, warum hast du gezweifelt?",
+            "keywords": {
+              "de": "Wahrhaftig, du bist Gottes Sohn!",
+              "gsw": "Würkli, du bisch de Sohn vo Gott!"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "in_water": true,
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-PETRUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-PETRUS": 128
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.14.34-MAT.14.36",
+            "figures": [
+              "FIG-GRUPPE-KRANKE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "In Gennesaret bringen sie Jesus alle Kranken; alle, die den Saum seines Mantels berühren, werden gerettet.",
+            "keywords": {
+              "de": "alle, die ihn berührten, wurden gerettet",
+              "gsw": "alli, wo en aagrüert händ, sind grettet worde"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-KRANKE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-KRANKE": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-KRANKE": 60,
+                "FIG-JESUS": 132
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Bitte: Herodes (goldenes Diadem, violettes Gewand) ist betrübt; die Tochter der Herodias (rosa) verlangt den Kopf des Johannes (Johannes, Totenkopf in der Blase); Herodias (pflaumenfarben) hat sie angestiftet (Pfeil).",
+          "Speisung: Jesus hält die Brote und Fische (Fladenbrot und Fisch) und segnet sie (erhobene Hand mit Funkeln); die Jünger geben sie weiter (Pfeile), die Menge wird satt (Schale mit Brot und grünem Haken); am Boden ein Korb für die übrigen Brocken.",
+          "Rettung: Petrus (ockerfarbener Mantel) versinkt in den Wellen (erschrockenes Gesicht) und schreit: «Herr, rette mich!»; Jesus steht auf dem Wasser, ergreift ihn (Pfeil, aus den Wellen nach oben) und sagt: «Du Kleingläubiger, warum hast du gezweifelt?» (Herz mit Riss).",
+          "Gennesaret: Die Kranken (Kopfverband) berühren den Saum seines Mantels (Hand am roten Mantelsaum) und werden gerettet (berührende Hand mit grünem Lichtpunkt)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.1-MAT.14.12",
+            "figures": [
+              "FIG-HERODES-ANTIPAS",
+              "FIG-TOCHTER-HERODIAS",
+              "FIG-HERODIAS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-TOCHTER-HERODIAS",
+                "to": "FIG-HERODES-ANTIPAS",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER",
+                  "FIG-ZEICHEN-TOD"
+                ],
+                "word": {
+                  "de": "Gib mir hier auf einer Schale den Kopf des Johannes des Täufers!",
+                  "gsw": "Gib mir da uf ere Platte de Chopf vom Johannes em Täufer!"
+                }
+              }
+            ],
+            "action_de": "An Herodes' Geburtstag verlangt die Tochter der Herodias, von ihrer Mutter angestiftet: Gib mir hier auf einer Schale den Kopf des Johannes des Täufers! Der König ist betrübt, lässt aber wegen der Eide und der Gäste Johannes im Gefängnis enthaupten.",
+            "keywords": {
+              "de": "liess Johannes im Gefängnis enthaupten",
+              "gsw": "hät de Johannes im Gfängnis la chöpfe"
+            },
+            "names": {
+              "FIG-HERODES-ANTIPAS": {
+                "de": "Herodes",
+                "gsw": "Herodes"
+              },
+              "FIG-HERODIAS": {
+                "de": "Herodias",
+                "gsw": "Herodias"
+              }
+            },
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-HERODIAS",
+                  "FIG-TOCHTER-HERODIAS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-HERODES-ANTIPAS": "worried",
+                "FIG-TOCHTER-HERODIAS": "calm",
+                "FIG-HERODIAS": "earnest"
+              },
+              "x": {
+                "FIG-HERODES-ANTIPAS": 30,
+                "FIG-TOCHTER-HERODIAS": 108,
+                "FIG-HERODIAS": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.13-MAT.14.21",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SEGNEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Jesus nimmt die fünf Brote und zwei Fische, blickt zum Himmel auf, spricht den Segen, bricht sie und gibt sie den Jüngern, die Jünger aber der Menge; alle essen und werden satt.",
+            "keywords": {
+              "de": "alle assen und wurden satt",
+              "gsw": "alli händ ggässe und sind satt worde"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "at": {
+                "FIG-ZEICHEN-SEGNEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 120
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.22-MAT.14.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-RETTUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG"
+                ],
+                "word": {
+                  "de": "Herr, rette mich!",
+                  "gsw": "Herr, rett mich!"
+                }
+              }
+            ],
+            "action_de": "Petrus geht auf Jesu Wort auf dem Wasser, sieht den starken Wind, fürchtet sich und beginnt zu versinken; er schreit: Herr, rette mich! Sogleich ergreift ihn Jesus: Du Kleingläubiger, warum hast du gezweifelt?",
+            "keywords": {
+              "de": "Wahrhaftig, du bist Gottes Sohn!",
+              "gsw": "Würkli, du bisch de Sohn vo Gott!"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "in_water": true,
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-PETRUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-PETRUS": 128
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.14.34-MAT.14.36",
+            "figures": [
+              "FIG-GRUPPE-KRANKE",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "In Gennesaret bringen sie Jesus alle Kranken; alle, die den Saum seines Mantels berühren, werden gerettet.",
+            "keywords": {
+              "de": "alle, die ihn berührten, wurden gerettet",
+              "gsw": "alli, wo en aagrüert händ, sind grettet worde"
+            },
+            "stage": {
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-GRUPPE-KRANKE"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-KRANKE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-KRANKE": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-KRANKE": 60,
+                "FIG-JESUS": 132
+              }
+            }
+          }
         ]
       }
     }

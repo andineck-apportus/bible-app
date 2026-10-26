@@ -1,0 +1,130 @@
+{
+ "id": "CORE-MAT-012-009-014",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.12.9-MAT.12.14",
+ "target": "TU-MAT-012-009-014",
+ "core_de": "In der Synagoge fragen sie Jesus, um ihn anzuklagen, ob es erlaubt sei, am Sabbat zu heilen; er antwortet, jeder würde sein einziges Schaf am Sabbat aus der Grube ziehen, und ein Mensch ist viel mehr wert als ein Schaf – also ist es erlaubt, am Sabbat Gutes zu tun; er heilt die verdorrte Hand, und die Pharisäer beraten, wie sie ihn umbringen könnten.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Fangfrage – Antwort – Heilung – Tötungsplan",
+    "range": "MAT.12.9-MAT.12.14",
+    "elements": [
+     {
+      "label": "In ihrer Synagoge ein Mensch mit einer verdorrten Hand; Frage «Ist es erlaubt, am Sabbat zu heilen?», damit sie ihn anklagen könnten",
+      "ref": "MAT.12.9-MAT.12.10",
+      "role": "Fangfrage"
+     },
+     {
+      "label": "Antwort: Schaf ↔ Mensch",
+      "ref": "MAT.12.11-MAT.12.12",
+      "role": "Schluss",
+      "child": "s2"
+     },
+     {
+      "label": "«Streck deine Hand aus!» – sie wird gesund wie die andere",
+      "ref": "MAT.12.13",
+      "role": "Heilung"
+     },
+     {
+      "label": "Die Pharisäer halten Rat, wie sie ihn umbringen könnten",
+      "ref": "MAT.12.14",
+      "role": "Ausgang"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "Schluss vom Kleineren aufs Grössere",
+    "range": "MAT.12.11-MAT.12.12",
+    "elements": [
+     {
+      "label": "Wer ein einziges Schaf hat, packt es am Sabbat und zieht es aus der Grube",
+      "ref": "MAT.12.11",
+      "role": "Kleineres"
+     },
+     {
+      "label": "Wie viel ist nun ein Mensch mehr wert als ein Schaf!",
+      "ref": "MAT.12.12",
+      "role": "Grösseres"
+     },
+     {
+      "label": "Also ist es am Sabbat erlaubt, Gutes zu tun",
+      "ref": "MAT.12.12",
+      "role": "Entscheid"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.12.10-MAT.12.12",
+   "text_de": "In der Synagoge ist ein Mensch mit einer verdorrten Hand; sie fragen, um ihn anzuklagen: «Ist es erlaubt, am Sabbat zu heilen?»; Jesus: Wer sein einziges Schaf am Sabbat in einer Grube hat, zieht es heraus; «Wie viel ist nun ein Mensch mehr wert als ein Schaf! Also ist es am Sabbat erlaubt, Gutes zu tun.»",
+   "reason_de": "Frage und Schluss vom Kleineren aufs Grössere (Kriterien 1 und 2).",
+   "recognition_de": "Waage: Schaf in der Grube ↔ Mensch, viel mehr wert.",
+   "keywords": [
+    "Ist es erlaubt, am Sabbat zu heilen?",
+    "Wie viel ist nun ein Mensch mehr wert als ein Schaf!",
+    "Also ist es am Sabbat erlaubt, Gutes zu tun"
+   ]
+  },
+  {
+   "reference": "MAT.12.13",
+   "text_de": "Jesus sagt zu dem Menschen: «Streck deine Hand aus!», und sie wird wieder gesund wie die andere.",
+   "reason_de": "Heilung als Tat zum Wort (Kriterium 4).",
+   "recognition_de": "Der Mann streckt die geheilte Hand aus.",
+   "keywords": [
+    "Streck deine Hand aus!",
+    "sie wurde wieder gesund wie die andere"
+   ]
+  },
+  {
+   "reference": "MAT.12.14",
+   "text_de": "Die Pharisäer gehen hinaus und halten Rat gegen ihn, wie sie ihn umbringen könnten.",
+   "reason_de": "Ausgang: erster Tötungsplan (Kriterium 3).",
+   "recognition_de": "Pharisäer beraten abseits.",
+   "keywords": [
+    "hielten Rat gegen ihn, wie sie ihn umbringen könnten"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Wer genau fragt («sie»), nennt der Text erst in [[MAT.12.14]]: die Pharisäer"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-MANN-HAND",
+  "FIG-GRUPPE-PHARISAEER"
+ ],
+ "places": [
+  "FIG-ORT-SYNAGOGE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.12.9-MAT.12.14",
+   "fingerprint": "34412ea31f5b0eed"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

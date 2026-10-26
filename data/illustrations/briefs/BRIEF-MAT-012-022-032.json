@@ -11,191 +11,253 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.12.22-MAT.12.23",
+      "reference": "MAT.12.22-MAT.12.24",
       "figures": [
-        "FIG-ROLLE-BESESSENER",
+        "FIG-GRUPPE-MENGE",
+        "FIG-ROLLE-MENSCH",
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-PHARISAEER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-SEHEN"
       ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-JESUS",
-            "FIG-DAVID",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Ist das vielleicht der Sohn Davids?",
+            "gsw": "Isch dä ächt de Sohn vom David?"
+          }
+        },
+        {
+          "from": "FIG-GRUPPE-PHARISAEER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-SATAN"
+          ],
+          "word": {
+            "de": "Der treibt die Dämonen nicht aus, ausser durch Beelzebul, den Herrscher der Dämonen.",
+            "gsw": "Dä tribt d Dämone nu dur de Beelzebul us, de Herrscher vo de Dämone."
+          }
         }
       ],
-      "action_de": "Ein Besessener, der blind und stumm ist, wird zu Jesus gebracht; er heilt ihn, sodass er redet und sieht. Die Menschenmengen geraten ausser sich und fragen: «Ist das vielleicht der Sohn Davids?»",
+      "action_de": "Jesus heilt einen blinden und stummen Besessenen, sodass er redet und sieht; die Mengen fragen: Ist das vielleicht der Sohn Davids? Die Pharisäer sagen: Der treibt die Dämonen nicht aus, ausser durch Beelzebul, den Herrscher der Dämonen.",
+      "keywords": {
+        "de": "ausser durch Beelzebul, den Herrscher der Dämonen",
+        "gsw": "nu dur de Beelzebul us, de Herrscher vo de Dämone"
+      },
       "stage": {
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ROLLE-BESESSENER",
-            "act"
-          ]
-        ],
-        "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BESESSENER"
+        "at": {
+          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-MENSCH"
         },
         "mood": {
-          "FIG-ROLLE-BESESSENER": "delight",
-          "FIG-GRUPPE-MENGE": "surprised"
+          "FIG-GRUPPE-MENGE": "surprised",
+          "FIG-ROLLE-MENSCH": "delight",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-PHARISAEER": "angry"
         },
         "x": {
-          "FIG-JESUS": 28,
-          "FIG-ROLLE-BESESSENER": 80,
-          "FIG-GRUPPE-MENGE": 146
+          "FIG-GRUPPE-MENGE": 22,
+          "FIG-ROLLE-MENSCH": 64,
+          "FIG-JESUS": 112,
+          "FIG-GRUPPE-PHARISAEER": 162
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.12.24",
-      "figures": [
-        "FIG-GRUPPE-PHARISAEER",
-        "FIG-GRUPPE-MENGE"
-      ],
+      "reference": "MAT.12.25-MAT.12.30",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-PHARISAEER",
-          "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-SATAN"
-          ]
-        }
-      ],
-      "action_de": "Als die Pharisäer das hören, sagen sie: «Der treibt die Dämonen nur durch Beelzebul aus, den Herrscher der Dämonen.»",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-GRUPPE-MENGE": "worried"
-        }
+      "speech": [],
+      "action_de": "Jesus antwortet: Jedes gespaltene Reich wird verwüstet; wenn der Satan den Satan austreibt, wie soll sein Reich bestehen? Wenn ich aber durch den Geist Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen; niemand plündert das Haus des Starken, ohne ihn zuerst zu binden. Wer nicht mit mir ist, ist gegen mich.",
+      "keywords": {
+        "de": "durch den Geist Gottes",
+        "gsw": "dur de Geischt vo Gott"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 4,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Wer nicht mit mir ist, ist gegen mich, und wer nicht mit mir sammelt, zerstreut.",
+          "gsw": "Wer nöd mit mir isch, isch gäge mich, und wer nöd mit mir sammlet, verströit."
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "Jedes Reich, das gegen sich selbst gespalten ist, wird verwüstet.",
+              "gsw": "Jedes Riich, wo gäge sich sälber gspalte isch, wird verwüeschtet."
+            },
+            "icons": [
+              "FIG-ZEICHEN-TRENNEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Wenn der Satan den Satan austreibt, wie wird dann sein Reich bestehen?",
+              "gsw": "Wänn de Satan de Satan ustribt, wie wird dänn sis Riich bestaa?"
+            },
+            "icons": [
+              "FIG-SATAN",
+              "FIG-ZEICHEN-FRAGEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Wenn ich aber durch den Geist Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen.",
+              "gsw": "Wänn ich aber dur de Geischt vo Gott d Dämone ustriibe, dänn isch s Riich vo Gott zu eu choo."
+            },
+            "icons": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-ZEICHEN-REICH-GOTTES"
+            ],
+            "tone": "new"
+          },
+          {
+            "a": {
+              "de": "Niemand plündert das Haus des Starken, wenn er nicht zuerst den Starken bindet.",
+              "gsw": "Niemer plünderet s Huus vom Starche, wänn er nöd zerscht de Starch bindt."
+            },
+            "icons": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-FESSEL"
+            ]
+          }
+        ]
       }
     },
     {
       "n": 3,
-      "reference": "MAT.12.25-MAT.12.29",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
+      "reference": "MAT.12.31-MAT.12.32",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-SATAN",
-            "FIG-SATAN",
-            "FIG-ZEICHEN-UMSTURZ"
-          ]
+      "speech": [],
+      "action_de": "Darum: Jede Sünde und Lästerung wird den Menschen vergeben werden, auch ein Wort gegen den Menschensohn; die Lästerung gegen den Geist aber wird nicht vergeben werden, weder in dieser Weltzeit noch in der kommenden.",
+      "keywords": {
+        "de": "die Lästerung gegen den Geist aber wird nicht vergeben werden",
+        "gsw": "d Läschterig gäge de Geischt aber wird nöd vergää"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "arrow": false,
+        "speaker": "FIG-JESUS",
+        "head_tones": [
+          "new",
+          "old"
+        ],
+        "title": {
+          "de": "Darum sage ich euch:",
+          "gsw": "Drum säg ich eu:"
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-HEILIGER-GEIST",
-            "FIG-ZEICHEN-BRINGEN",
-            "FIG-ZEICHEN-REICH-GOTTES"
+        "head": [
+          {
+            "de": "wird vergeben werden",
+            "gsw": "wird vergää"
+          },
+          {
+            "de": "wird nicht vergeben werden",
+            "gsw": "wird nöd vergää"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Jede Sünde und Lästerung",
+                "gsw": "Jedi Sünd und Läschterig"
+              },
+              "icons": [
+                "FIG-ZEICHEN-VERGEBEN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "die Lästerung gegen den Geist",
+                "gsw": "d Läschterig gäge de Geischt"
+              },
+              "icons": [
+                "FIG-HEILIGER-GEIST",
+                "FIG-ZEICHEN-NICHT"
+              ],
+              "tone": "old"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "wer ein Wort gegen den Menschensohn sagt",
+                "gsw": "wer es Wort gäge de Mänschesohn seit"
+              },
+              "icons": [
+                "FIG-ZEICHEN-SPRECHEN"
+              ],
+              "tone": "new",
+              "who": "FIG-JESUS"
+            },
+            {
+              "a": {
+                "de": "wer gegen den heiligen Geist redet – weder in dieser Weltzeit noch in der kommenden",
+                "gsw": "wer gäge de heilig Geischt redt – wäder i dere Wältziit no i de chomende"
+              },
+              "icons": [
+                "FIG-ZEICHEN-STUNDE"
+              ],
+              "tone": "old"
+            }
           ]
-        }
-      ],
-      "action_de": "Jesus kennt ihre Gedanken: Ein gespaltenes Reich wird verwüstet; treibt der Satan den Satan aus, kann sein Reich nicht bestehen. Treibt er aber die Dämonen durch den Geist Gottes aus, dann ist das Reich Gottes zu ihnen gekommen.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.12.30-MAT.12.32",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-HEILIGER-GEIST",
-            "FIG-ZEICHEN-ABLEHNEN",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-ZEICHEN-VERGEBUNG",
-            "FIG-ZEICHEN-NICHT"
-          ]
-        }
-      ],
-      "action_de": "Wer nicht mit ihm ist, ist gegen ihn. Jede Sünde und Lästerung wird den Menschen vergeben, auch ein Wort gegen den Menschensohn; die Lästerung gegen den heiligen Geist aber wird nicht vergeben, weder in dieser Weltzeit noch in der kommenden.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
-        }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Ein Besessener, der blind und stumm ist, wird zu Jesus gebracht; er heilt ihn, sodass er redet und sieht. Die Menschenmengen geraten ausser sich und fragen: «Ist das vielleicht der Sohn Davids?»",
-    "Als die Pharisäer das hören, sagen sie: «Der treibt die Dämonen nur durch Beelzebul aus, den Herrscher der Dämonen.»",
-    "Jesus kennt ihre Gedanken: Ein gespaltenes Reich wird verwüstet; treibt der Satan den Satan aus, kann sein Reich nicht bestehen. Treibt er aber die Dämonen durch den Geist Gottes aus, dann ist das Reich Gottes zu ihnen gekommen.",
-    "Wer nicht mit ihm ist, ist gegen ihn. Jede Sünde und Lästerung wird den Menschen vergeben, auch ein Wort gegen den Menschensohn; die Lästerung gegen den heiligen Geist aber wird nicht vergeben, weder in dieser Weltzeit noch in der kommenden."
+    "Jesus heilt einen blinden und stummen Besessenen, sodass er redet und sieht; die Mengen fragen: Ist das vielleicht der Sohn Davids? Die Pharisäer sagen: Der treibt die Dämonen nicht aus, ausser durch Beelzebul, den Herrscher der Dämonen.",
+    "Jesus antwortet: Jedes gespaltene Reich wird verwüstet; wenn der Satan den Satan austreibt, wie soll sein Reich bestehen? Wenn ich aber durch den Geist Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen; niemand plündert das Haus des Starken, ohne ihn zuerst zu binden. Wer nicht mit mir ist, ist gegen mich.",
+    "Darum: Jede Sünde und Lästerung wird den Menschen vergeben werden, auch ein Wort gegen den Menschensohn; die Lästerung gegen den Geist aber wird nicht vergeben werden, weder in dieser Weltzeit noch in der kommenden."
   ],
   "captions_de": [
-    "Heilung → Staunen: Jesus heilt den blinden und stummen Besessenen (Pfeil zu ihm; berührende Hand mit grünem Lichtpunkt); die Menschenmengen staunen und fragen: Sohn Davids? (Jesus, David, Fragezeichen).",
-    "Der Vorwurf: Die Pharisäer sagen zu den Leuten: Jesus treibt durch den Herrscher der Dämonen aus (Jesus, dunkler Schatten ohne feste Gestalt).",
-    "Gespalten: Jesus sagt: Satan gegen Satan – das stürzt ein (zwei dunkle Schatten, kippende Mauern); Geist Gottes → Reich Gottes: durch den Geist ist das Reich Gottes da (zweite Sprechblase: Taube, Pfeil, Krone mit Wolke).",
-    "Lästerung gegen den Geist → keine Vergebung: Jesus sagt: Wer gegen den Geist redet (Taube, Person mit gekreuzten Armen), dem fehlt die Vergebung (Pfeil, helles Tuch mit goldenen Funken, leerer Kreis mit Schrägstrich)."
+    "Heilung und Vorwurf: Der Geheilte (graues Gewand) sieht und redet (zwei offene Augen); die Menge fragt: «Ist das vielleicht der Sohn Davids?»; die Pharisäer sagen: «Der treibt die Dämonen nur durch Beelzebul aus» (Schatten mit hellen Augen).",
+    "Pfeilkette (Bild Jesus, Blase «Wer nicht mit mir ist, ist gegen mich»): ein gespaltenes Reich wird verwüstet (gezackter Bruch) → treibt der Satan den Satan aus (Schatten), wie soll sein Reich bestehen? → hervorgehoben: Durch den Geist Gottes (Taube) – dann ist das Reich Gottes zu euch gekommen (Krone mit Wolke) → wer das Haus des Starken plündert, bindet zuerst den Starken (blauer Knoten).",
+    "Zwei Spalten (Bild Jesus, Blase «Darum sage ich euch»): links, hervorgehoben, was vergeben wird – jede Sünde und Lästerung, auch ein Wort gegen den Menschensohn (zerrissener Schuldschein); rechts, was nicht vergeben wird – die Lästerung gegen den Geist (Taube, Verbotskreis), weder in dieser noch in der kommenden Weltzeit."
   ],
-  "interpretation_note_de": "Der dunkle Schatten steht für Beelzebul und den Satan, die Jesus in [[MAT.12.24-MAT.12.26]] gleichsetzt; «Sohn Davids» zeigen Jesus und David nebeneinander (Deutung). Der Geist Gottes erscheint als Taube ([[MAT.12.28]]), das Reich Gottes als goldene Krone. Das Bildwort vom Starken ([[MAT.12.29]]) und «wer nicht mit mir ist» ([[MAT.12.30]]) sind nicht gezeichnet. Die abwehrende Hand steht für die Lästerung gegen den Geist ([[MAT.12.31-MAT.12.32]]); dass jede andere Sünde vergeben wird, auch ein Wort gegen den Menschensohn, nennt nur der Text.",
+  "interpretation_note_de": "Drei Felder nach «Vorwurf – Gegenbeweis – Folgerung» ([[MAT.12.22-MAT.12.32]]). Der Vorwurf steht als Rede der Pharisäer, nicht als Aussage des Textes; Beelzebul zeigt das Lexikonzeichen des Satans, weil der Text beide gleichsetzt ([[MAT.12.26]]). Der Gegenbeweis ist eine Pfeilkette, die Folgerung ein Gegensatz; hervorgehoben ist «vergeben». Was die Lästerung gegen den Geist genau ist, deutet das Bild nicht.",
   "basis": [
     {
       "record": "TU-MAT-012-022-032",
       "field": "summary",
-      "fingerprint": "b5274a00d170f8f7"
+      "fingerprint": "1064c136513b5eaa"
     },
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.12.22-MAT.12.23",
-      "fingerprint": "f2e28101893ac27c"
+      "reference": "MAT.12.22-MAT.12.24",
+      "fingerprint": "234cd1d293a81781"
     },
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.12.24",
-      "fingerprint": "8a747f1ede2b99e3"
+      "reference": "MAT.12.25-MAT.12.30",
+      "fingerprint": "e320186ddf467981"
     },
     {
       "record": "TRANS-MAT-012-001-050-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.12.25-MAT.12.29",
-      "fingerprint": "3a9c7d471879ca8a"
-    },
-    {
-      "record": "TRANS-MAT-012-001-050-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.12.30-MAT.12.32",
-      "fingerprint": "b3797388a9274cbf"
+      "reference": "MAT.12.31-MAT.12.32",
+      "fingerprint": "ffdef57123bfea46"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -510,6 +572,445 @@
           "Der Vorwurf: Die Pharisäer sagen zu den Leuten: Jesus treibt durch den Herrscher der Dämonen aus (Jesus, dunkler Schatten ohne feste Gestalt).",
           "Gespalten: Jesus sagt: Satan gegen Satan – das stürzt ein (zwei dunkle Schatten, kippende Mauern); Geist Gottes → Reich Gottes: durch den Geist ist das Reich Gottes da (zweite Sprechblase: Taube, Pfeil, goldene Krone mit Strahlen).",
           "Lästerung gegen den Geist → keine Vergebung: Jesus sagt: Wer gegen den Geist redet (Taube, abwehrende Hand), dem fehlt die Vergebung (Pfeil, helles Tuch mit goldenen Funken, leerer Kreis mit Schrägstrich)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.12.22-MAT.12.23",
+            "figures": [
+              "FIG-ROLLE-BESESSENER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-DAVID",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Ein Besessener, der blind und stumm ist, wird zu Jesus gebracht; er heilt ihn, sodass er redet und sieht. Die Menschenmengen geraten ausser sich und fragen: «Ist das vielleicht der Sohn Davids?»",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BESESSENER",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-ROLLE-BESESSENER": "delight",
+                "FIG-GRUPPE-MENGE": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-ROLLE-BESESSENER": 80,
+                "FIG-GRUPPE-MENGE": 146
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.12.24",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-SATAN"
+                ]
+              }
+            ],
+            "action_de": "Als die Pharisäer das hören, sagen sie: «Der treibt die Dämonen nur durch Beelzebul aus, den Herrscher der Dämonen.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-MENGE": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.12.25-MAT.12.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-SATAN",
+                  "FIG-SATAN",
+                  "FIG-ZEICHEN-UMSTURZ"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-ZEICHEN-BRINGEN",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Jesus kennt ihre Gedanken: Ein gespaltenes Reich wird verwüstet; treibt der Satan den Satan aus, kann sein Reich nicht bestehen. Treibt er aber die Dämonen durch den Geist Gottes aus, dann ist das Reich Gottes zu ihnen gekommen.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.12.30-MAT.12.32",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-HEILIGER-GEIST",
+                  "FIG-ZEICHEN-ABLEHNEN",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-ZEICHEN-VERGEBUNG",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Wer nicht mit ihm ist, ist gegen ihn. Jede Sünde und Lästerung wird den Menschen vergeben, auch ein Wort gegen den Menschensohn; die Lästerung gegen den heiligen Geist aber wird nicht vergeben, weder in dieser Weltzeit noch in der kommenden.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Ein Besessener, der blind und stumm ist, wird zu Jesus gebracht; er heilt ihn, sodass er redet und sieht. Die Menschenmengen geraten ausser sich und fragen: «Ist das vielleicht der Sohn Davids?»",
+          "Als die Pharisäer das hören, sagen sie: «Der treibt die Dämonen nur durch Beelzebul aus, den Herrscher der Dämonen.»",
+          "Jesus kennt ihre Gedanken: Ein gespaltenes Reich wird verwüstet; treibt der Satan den Satan aus, kann sein Reich nicht bestehen. Treibt er aber die Dämonen durch den Geist Gottes aus, dann ist das Reich Gottes zu ihnen gekommen.",
+          "Wer nicht mit ihm ist, ist gegen ihn. Jede Sünde und Lästerung wird den Menschen vergeben, auch ein Wort gegen den Menschensohn; die Lästerung gegen den heiligen Geist aber wird nicht vergeben, weder in dieser Weltzeit noch in der kommenden."
+        ],
+        "captions_de": [
+          "Heilung → Staunen: Jesus heilt den blinden und stummen Besessenen (Pfeil zu ihm; berührende Hand mit grünem Lichtpunkt); die Menschenmengen staunen und fragen: Sohn Davids? (Jesus, David, Fragezeichen).",
+          "Der Vorwurf: Die Pharisäer sagen zu den Leuten: Jesus treibt durch den Herrscher der Dämonen aus (Jesus, dunkler Schatten ohne feste Gestalt).",
+          "Gespalten: Jesus sagt: Satan gegen Satan – das stürzt ein (zwei dunkle Schatten, kippende Mauern); Geist Gottes → Reich Gottes: durch den Geist ist das Reich Gottes da (zweite Sprechblase: Taube, Pfeil, Krone mit Wolke).",
+          "Lästerung gegen den Geist → keine Vergebung: Jesus sagt: Wer gegen den Geist redet (Taube, Person mit gekreuzten Armen), dem fehlt die Vergebung (Pfeil, helles Tuch mit goldenen Funken, leerer Kreis mit Schrägstrich)."
+        ],
+        "interpretation_note_de": "Der dunkle Schatten steht für Beelzebul und den Satan, die Jesus in [[MAT.12.24-MAT.12.26]] gleichsetzt; «Sohn Davids» zeigen Jesus und David nebeneinander (Deutung). Der Geist Gottes erscheint als Taube ([[MAT.12.28]]), das Reich Gottes als goldene Krone. Das Bildwort vom Starken ([[MAT.12.29]]) und «wer nicht mit mir ist» ([[MAT.12.30]]) sind nicht gezeichnet. Die abwehrende Hand steht für die Lästerung gegen den Geist ([[MAT.12.31-MAT.12.32]]); dass jede andere Sünde vergeben wird, auch ein Wort gegen den Menschensohn, nennt nur der Text.",
+        "basis": [
+          {
+            "record": "TU-MAT-012-022-032",
+            "field": "summary",
+            "fingerprint": "b5274a00d170f8f7"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.22-MAT.12.23",
+            "fingerprint": "f2e28101893ac27c"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.24",
+            "fingerprint": "8a747f1ede2b99e3"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.25-MAT.12.29",
+            "fingerprint": "3a9c7d471879ca8a"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.30-MAT.12.32",
+            "fingerprint": "b3797388a9274cbf"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-012-022-032",
+            "field": "summary",
+            "fingerprint": "b5274a00d170f8f7"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.22-MAT.12.24",
+            "fingerprint": "234cd1d293a81781"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.25-MAT.12.30",
+            "fingerprint": "e320186ddf467981"
+          },
+          {
+            "record": "TRANS-MAT-012-001-050-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.12.31-MAT.12.32",
+            "fingerprint": "ffdef57123bfea46"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.12.22-MAT.12.24",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-ROLLE-BESESSENER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ist das vielleicht der Sohn Davids?",
+                  "gsw": "Isch dä ächt de Sohn vom David?"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-SATAN"
+                ],
+                "word": {
+                  "de": "Der treibt die Dämonen nur durch Beelzebul aus!",
+                  "gsw": "Dä tribt d Dämone nu dur de Beelzebul us!"
+                }
+              }
+            ],
+            "action_de": "Jesus heilt einen blinden und stummen Besessenen, sodass er redet und sieht; die Mengen fragen: Ist das vielleicht der Sohn Davids? Die Pharisäer sagen: Der treibt die Dämonen nicht aus, ausser durch Beelzebul, den Herrscher der Dämonen.",
+            "keywords": {
+              "de": "ausser durch Beelzebul, den Herrscher der Dämonen",
+              "gsw": "nu dur de Beelzebul us, de Herrscher vo de Dämone"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-BESESSENER"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-ROLLE-BESESSENER": "delight",
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-PHARISAEER": "angry"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 22,
+                "FIG-ROLLE-BESESSENER": 64,
+                "FIG-JESUS": 112,
+                "FIG-GRUPPE-PHARISAEER": 162
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.12.25-MAT.12.30",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Jesus antwortet: Jedes gespaltene Reich wird verwüstet; wenn der Satan den Satan austreibt, wie soll sein Reich bestehen? Wenn ich aber durch den Geist Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen; niemand plündert das Haus des Starken, ohne ihn zuerst zu binden. Wer nicht mit mir ist, ist gegen mich.",
+            "keywords": {
+              "de": "durch den Geist Gottes",
+              "gsw": "dur de Geischt vo Gott"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 2,
+              "cols": 4,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Wer nicht mit mir ist, ist gegen mich.",
+                "gsw": "Wer nöd mit mir isch, isch gäge mich."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Jedes Reich, das gegen sich selbst gespalten ist, wird verwüstet.",
+                    "gsw": "Jedes Riich, wo gäge sich sälber gspalte isch, wird verwüeschtet."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-TRENNEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Wenn der Satan den Satan austreibt, wie wird dann sein Reich bestehen?",
+                    "gsw": "Wänn de Satan de Satan ustribt, wie wird dänn sis Riich bestaa?"
+                  },
+                  "icons": [
+                    "FIG-SATAN",
+                    "FIG-ZEICHEN-FRAGEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "Wenn ich aber durch den Geist Gottes die Dämonen austreibe, dann ist das Reich Gottes zu euch gekommen.",
+                    "gsw": "Wänn ich aber dur de Geischt vo Gott d Dämone ustriibe, dänn isch s Riich vo Gott zu eu choo."
+                  },
+                  "icons": [
+                    "FIG-HEILIGER-GEIST",
+                    "FIG-ZEICHEN-REICH-GOTTES"
+                  ],
+                  "tone": "new"
+                },
+                {
+                  "a": {
+                    "de": "Niemand plündert das Haus des Starken, wenn er nicht zuerst den Starken bindet.",
+                    "gsw": "Niemer plünderet s Huus vom Starche, wänn er nöd zerscht de Starch bindt."
+                  },
+                  "icons": [
+                    "FIG-ORT-HAUS",
+                    "FIG-OBJ-FESSEL"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.12.31-MAT.12.32",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Darum: Jede Sünde und Lästerung wird den Menschen vergeben werden, auch ein Wort gegen den Menschensohn; die Lästerung gegen den Geist aber wird nicht vergeben werden, weder in dieser Weltzeit noch in der kommenden.",
+            "keywords": {
+              "de": "die Lästerung gegen den Geist aber wird nicht vergeben werden",
+              "gsw": "d Läschterig gäge de Geischt aber wird nöd vergää"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "arrow": false,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "new",
+                "old"
+              ],
+              "title": {
+                "de": "Darum sage ich euch:",
+                "gsw": "Drum säg ich eu:"
+              },
+              "head": [
+                {
+                  "de": "wird vergeben werden",
+                  "gsw": "wird vergää"
+                },
+                {
+                  "de": "wird nicht vergeben werden",
+                  "gsw": "wird nöd vergää"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Jede Sünde und Lästerung",
+                      "gsw": "Jedi Sünd und Läschterig"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-VERGEBEN"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "die Lästerung gegen den Geist",
+                      "gsw": "d Läschterig gäge de Geischt"
+                    },
+                    "icons": [
+                      "FIG-HEILIGER-GEIST",
+                      "FIG-ZEICHEN-NICHT"
+                    ],
+                    "tone": "old"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "wer ein Wort gegen den Menschensohn sagt",
+                      "gsw": "wer es Wort gäge de Mänschesohn seit"
+                    },
+                    "tone": "new",
+                    "who": "FIG-JESUS"
+                  },
+                  {
+                    "a": {
+                      "de": "wer gegen den heiligen Geist redet – weder in dieser Weltzeit noch in der kommenden",
+                      "gsw": "wer gäge de heilig Geischt redt – wäder i dere Wältziit no i de chomende"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-STUNDE"
+                    ],
+                    "tone": "old"
+                  }
+                ]
+              ]
+            }
+          }
         ]
       }
     }

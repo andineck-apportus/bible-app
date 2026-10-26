@@ -11,27 +11,32 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.13.1-MAT.13.9",
+      "reference": "MAT.13.1-MAT.13.23",
       "figures": [
         "FIG-GRUPPE-MENGE",
         "FIG-JESUS"
       ],
       "objects": [
-        "FIG-ORT-SEE",
-        "FIG-OBJ-BOOT"
+        "FIG-OBJ-BOOT",
+        "FIG-ORT-SEE"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
-          "icons": [
-            "FIG-ROLLE-SAEMANN",
-            "FIG-ZEICHEN-HOEREN"
-          ]
+          "icons": [],
+          "word": {
+            "de": "Wer Ohren hat, der höre!",
+            "gsw": "Wer Ohre hät, dä söll lose!"
+          }
         }
       ],
-      "action_de": "Vom Boot aus erzählt Jesus den Menschenmengen das Gleichnis vom Sämann.",
+      "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+      "keywords": {
+        "de": "der Sämann ging hinaus, um zu säen",
+        "gsw": "de Sämaa isch usegange, go sääje"
+      },
       "stage": {
         "big_side": "right",
         "in": {
@@ -39,85 +44,102 @@
         },
         "in_pos": {
           "FIG-JESUS": [
-            0.3,
-            0.42
+            0.5,
+            0.4
           ]
         },
+        "sea": "calm",
         "x": {
           "FIG-GRUPPE-MENGE": 50
+        },
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-MENGE": "pensive"
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.13.24-MAT.13.30",
+      "reference": "MAT.13.24-MAT.13.43",
       "figures": [
-        "FIG-ROLLE-GUTSHERR",
-        "FIG-ROLLE-FEIND"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
-        "FIG-ORT-KORNFELD",
-        "FIG-OBJ-SAMEN",
-        "FIG-OBJ-UNKRAUT"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-NACHT",
-        "FIG-ZEICHEN-SCHLAFEN"
-      ],
-      "speech": [],
-      "action_de": "Im Gleichnis sät ein Feind nachts Unkraut unter den Weizen eines Hausherrn; beides wächst bis zur Ernte.",
-      "stage": {
-        "x": {
-          "FIG-ROLLE-GUTSHERR": 48,
-          "FIG-ROLLE-FEIND": 150
-        },
-        "hold": {
-          "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
-        },
-        "floor_x": {
-          "FIG-OBJ-UNKRAUT": 96
-        },
-        "mood": {
-          "FIG-ROLLE-GUTSHERR": "sleep",
-          "FIG-ROLLE-FEIND": "earnest"
-        },
-        "at": {
-          "FIG-ZEICHEN-SCHLAFEN": "FIG-ROLLE-GUTSHERR"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.13.31-MAT.13.46",
-      "figures": [
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-SENFSTAUDE",
-        "FIG-OBJ-SCHATZ",
-        "FIG-OBJ-PERLE-KOSTBAR"
+        "FIG-OBJ-UNKRAUT",
+        "FIG-OBJ-GARBE"
       ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-JESUS",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-REICH-GOTTES"
-          ]
+            "FIG-ZEICHEN-SONNE"
+          ],
+          "word": {
+            "de": "Dann werden die Gerechten leuchten wie die Sonne im Reich ihres Vaters.",
+            "gsw": "Dänn wärded d Grächte lüüchte wie d Sunne im Riich vo irem Vatter."
+          }
         }
       ],
-      "action_de": "Das Reich der Himmel gleicht einem Senfkorn, einem Sauerteig, einem Schatz im Feld und einer kostbaren Perle.",
+      "action_de": "Jesus erzählt vom Unkraut unter dem Weizen, vom Senfkorn und vom Sauerteig und deutet den Jüngern das Unkraut: Bei der Vollendung werden die Gerechten leuchten wie die Sonne.",
+      "keywords": {
+        "de": "Lasst beides miteinander wachsen bis zur Ernte",
+        "gsw": "Lönd beides mitenand wachse bis zur Ärn"
+      },
       "stage": {
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-PERLE-KOSTBAR"
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "pensive"
         },
         "x": {
-          "FIG-JESUS": 40
+          "FIG-JESUS": 40,
+          "FIG-GRUPPE-JUENGER": 150
         },
         "floor_x": {
-          "FIG-OBJ-SENFSTAUDE": 76,
-          "FIG-OBJ-SCHATZ": 138
+          "FIG-OBJ-UNKRAUT": 80,
+          "FIG-OBJ-GARBE": 100
+        }
+      }
+    },
+    {
+      "n": 3,
+      "reference": "MAT.13.44-MAT.13.52",
+      "figures": [
+        "FIG-ROLLE-MENSCH",
+        "FIG-ROLLE-HAENDLER"
+      ],
+      "objects": [
+        "FIG-OBJ-SCHATZ",
+        "FIG-OBJ-PERLE-KOSTBAR"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FREUDE"
+      ],
+      "speech": [],
+      "action_de": "Für den Schatz im Feld verkauft einer alles, was er hat, ebenso der Kaufmann für die kostbare Perle; das Netz wird am Ufer sortiert.",
+      "keywords": {
+        "de": "verkauft alles, was er hat",
+        "gsw": "verchauft alles, won er hät"
+      },
+      "stage": {
+        "hold": {
+          "FIG-ROLLE-HAENDLER": "FIG-OBJ-PERLE-KOSTBAR"
+        },
+        "at": {
+          "FIG-ZEICHEN-FREUDE": "FIG-ROLLE-MENSCH"
+        },
+        "mood": {
+          "FIG-ROLLE-MENSCH": "delight",
+          "FIG-ROLLE-HAENDLER": "delight"
+        },
+        "x": {
+          "FIG-ROLLE-MENSCH": 46,
+          "FIG-ROLLE-HAENDLER": 136
+        },
+        "floor_x": {
+          "FIG-OBJ-SCHATZ": 80
         }
       }
     },
@@ -126,58 +148,70 @@
       "reference": "MAT.13.53-MAT.13.58",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-VOLK"
       ],
       "objects": [
         "FIG-ORT-SYNAGOGE"
       ],
       "signs": [
-        "FIG-ZEICHEN-UNGLAUBE"
+        "FIG-ZEICHEN-ABLEHNEN"
       ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-MENGE",
+          "from": "FIG-GRUPPE-VOLK",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-MARIA-MUTTER-JESU",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Ist dieser nicht der Sohn des Zimmermanns?",
+            "gsw": "Isch dä nöd de Sohn vom Zimmermaa?"
+          }
         }
       ],
-      "action_de": "In seiner Heimat nehmen die Leute Anstoss an Jesus; wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+      "action_de": "In seiner Heimat fragen die Leute: Ist dieser nicht der Sohn des Zimmermanns? Sie nehmen Anstoss an ihm, und wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+      "keywords": {
+        "de": "Und sie nahmen Anstoss an ihm",
+        "gsw": "Und si händ a ihm Aastoss gnoo"
+      },
       "stage": {
-        "back_side": "left",
+        "before": true,
         "at": {
-          "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-MENGE"
+          "FIG-ZEICHEN-ABLEHNEN": "FIG-GRUPPE-VOLK"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest"
+          "FIG-JESUS": "pensive",
+          "FIG-GRUPPE-VOLK": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 54,
+          "FIG-GRUPPE-VOLK": 134
         }
       }
     }
   ],
   "actions_de": [
-    "Vom Boot aus erzählt Jesus den Menschenmengen das Gleichnis vom Sämann.",
-    "Im Gleichnis sät ein Feind nachts Unkraut unter den Weizen eines Hausherrn; beides wächst bis zur Ernte.",
-    "Das Reich der Himmel gleicht einem Senfkorn, einem Sauerteig, einem Schatz im Feld und einer kostbaren Perle.",
-    "In seiner Heimat nehmen die Leute Anstoss an Jesus; wegen ihres Unglaubens tut er dort nicht viele Machttaten."
+    "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+    "Jesus erzählt vom Unkraut unter dem Weizen, vom Senfkorn und vom Sauerteig und deutet den Jüngern das Unkraut: Bei der Vollendung werden die Gerechten leuchten wie die Sonne.",
+    "Für den Schatz im Feld verkauft einer alles, was er hat, ebenso der Kaufmann für die kostbare Perle; das Netz wird am Ufer sortiert.",
+    "In seiner Heimat fragen die Leute: Ist dieser nicht der Sohn des Zimmermanns? Sie nehmen Anstoss an ihm, und wegen ihres Unglaubens tut er dort nicht viele Machttaten."
   ],
   "captions_de": [
-    "Vom Boot aus: Jesus erzählt den Menschenmengen am Ufer vom Sämann (Sämann, Ohr).",
-    "Unkraut: In der Nacht (Mondsichel) kommt ein Feind (Kapuze) mit Unkrautsamen (Hand und Keimling) und sät Unkraut (dunkle Halme) unter den Weizen (Kornfeld), während der Hausherr schläft (geschlossene Augen, Zzz).",
-    "Bilder vom Reich: Jesus spricht vom Reich der Himmel (Krone mit Wolke): Senfstaude, Schatztruhe, Perle in der Muschel (in seiner Hand).",
-    "Heimat: Die Leute fragen: Ist das nicht Marias Sohn? (Maria, Fragezeichen); sie glauben nicht (graues Herz mit Riss)."
+    "Gleichnisse vom Boot aus: Jesus sitzt im Boot auf dem See, die Menge steht am Ufer; Jesus: «Wer Ohren hat, der höre!» (Ohr).",
+    "Gleichnisse vom Wachsen: Zwischen Jesus und den Jüngern Unkraut (dunkle Halme) und Weizen (goldene Garbe); Senfkorn und Sauerteig zeigt das Abschnittsbild; Jesus: «Dann werden die Gerechten leuchten wie die Sonne im Reich ihres Vaters» (Sonne).",
+    "Alles verkaufen: Ein Mensch (sandfarbenes Gewand) hat den Schatz gefunden (offene Truhe), der Kaufmann (voller Bart, Stirnband) die kostbare Perle (Muschel mit Perle).",
+    "Ablehnung: In der Synagoge (Davidstern) fragen die Leute: «Ist dieser nicht der Sohn des Zimmermanns?»; sie nehmen Anstoss (Person mit gekreuzten Armen)."
   ],
-  "interpretation_note_de": "Vier Stationen: Sämann ([[MAT.13.1-MAT.13.23]]), Unkraut unter dem Weizen ([[MAT.13.24-MAT.13.43]]), die Gleichnisse von Senfkorn, Schatz und Perle ([[MAT.13.31-MAT.13.52]]) und die Ablehnung in der Heimat ([[MAT.13.53-MAT.13.58]]). Sauerteig, Netz und die Deutungen zeigen die Abschnittsbilder. Dass in Feld 2 der Hausherr schläft, ist Gestaltung; der Text sagt, «die Leute» schliefen ([[MAT.13.25]]).",
+  "interpretation_note_de": "Vier Comic-Szenen für acht Abschnitte: Feld 1 bündelt Sämann, Frage und Deutung ([[MAT.13.1-MAT.13.23]]), Feld 2 Unkraut, Senfkorn, Sauerteig und die Deutung des Unkrauts ([[MAT.13.24-MAT.13.43]]), Feld 3 Schatz, Perle und Netz ([[MAT.13.44-MAT.13.52]]), Feld 4 die Ablehnung in der Heimat ([[MAT.13.53-MAT.13.58]]). Die Gegenstände in Feld 2 und 3 sind Bilder aus den Gleichnissen, keine Szene am Ort. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-013",
       "field": "summary",
-      "fingerprint": "fc77a902a300f2fb"
+      "fingerprint": "c94ae866ab7b6dd6"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -358,6 +392,765 @@
           "Unkraut: In der Nacht (Mondsichel) kommt ein Feind (Kapuze) mit Unkrautsamen (Hand mit Körnern) und sät Unkraut (dunkle Halme) unter den Weizen (Kornfeld), während der Hausherr schläft (geschlossene Augen, Mondsichel mit Punkten).",
           "Bilder vom Reich: Jesus spricht vom Reich der Himmel (goldene Krone mit Strahlen): Senfstaude, Schatztruhe, Perle in der Muschel (in seiner Hand).",
           "Heimat: Die Leute fragen: Ist das nicht Marias Sohn? (Maria, Fragezeichen); sie glauben nicht (graues Herz mit Riss)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.9",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-SEE",
+              "FIG-OBJ-BOOT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ROLLE-SAEMANN",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Vom Boot aus erzählt Jesus den Menschenmengen das Gleichnis vom Sämann.",
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 50
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.24-MAT.13.30",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-FEIND"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-SAMEN",
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [],
+            "action_de": "Im Gleichnis sät ein Feind nachts Unkraut unter den Weizen eines Hausherrn; beides wächst bis zur Ernte.",
+            "stage": {
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 48,
+                "FIG-ROLLE-FEIND": 150
+              },
+              "hold": {
+                "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 96
+              },
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "sleep",
+                "FIG-ROLLE-FEIND": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-ROLLE-GUTSHERR"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.31-MAT.13.46",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SENFSTAUDE",
+              "FIG-OBJ-SCHATZ",
+              "FIG-OBJ-PERLE-KOSTBAR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Das Reich der Himmel gleicht einem Senfkorn, einem Sauerteig, einem Schatz im Feld und einer kostbaren Perle.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-PERLE-KOSTBAR"
+              },
+              "x": {
+                "FIG-JESUS": 40
+              },
+              "floor_x": {
+                "FIG-OBJ-SENFSTAUDE": 76,
+                "FIG-OBJ-SCHATZ": 138
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.53-MAT.13.58",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UNGLAUBE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-MARIA-MUTTER-JESU",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "In seiner Heimat nehmen die Leute Anstoss an Jesus; wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+            "stage": {
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Vom Boot aus erzählt Jesus den Menschenmengen das Gleichnis vom Sämann.",
+          "Im Gleichnis sät ein Feind nachts Unkraut unter den Weizen eines Hausherrn; beides wächst bis zur Ernte.",
+          "Das Reich der Himmel gleicht einem Senfkorn, einem Sauerteig, einem Schatz im Feld und einer kostbaren Perle.",
+          "In seiner Heimat nehmen die Leute Anstoss an Jesus; wegen ihres Unglaubens tut er dort nicht viele Machttaten."
+        ],
+        "captions_de": [
+          "Vom Boot aus: Jesus erzählt den Menschenmengen am Ufer vom Sämann (Sämann, Ohr).",
+          "Unkraut: In der Nacht (Mondsichel) kommt ein Feind (Kapuze) mit Unkrautsamen (Hand und Keimling) und sät Unkraut (dunkle Halme) unter den Weizen (Kornfeld), während der Hausherr schläft (geschlossene Augen, Zzz).",
+          "Bilder vom Reich: Jesus spricht vom Reich der Himmel (Krone mit Wolke): Senfstaude, Schatztruhe, Perle in der Muschel (in seiner Hand).",
+          "Heimat: Die Leute fragen: Ist das nicht Marias Sohn? (Maria, Fragezeichen); sie glauben nicht (graues Herz mit Riss)."
+        ],
+        "interpretation_note_de": "Vier Stationen: Sämann ([[MAT.13.1-MAT.13.23]]), Unkraut unter dem Weizen ([[MAT.13.24-MAT.13.43]]), die Gleichnisse von Senfkorn, Schatz und Perle ([[MAT.13.31-MAT.13.52]]) und die Ablehnung in der Heimat ([[MAT.13.53-MAT.13.58]]). Sauerteig, Netz und die Deutungen zeigen die Abschnittsbilder. Dass in Feld 2 der Hausherr schläft, ist Gestaltung; der Text sagt, «die Leute» schliefen ([[MAT.13.25]]).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-013",
+            "field": "summary",
+            "fingerprint": "fc77a902a300f2fb"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Wer Ohren hat, der höre!",
+                  "gsw": "Wer Ohre hät, dä söll lose!"
+                }
+              }
+            ],
+            "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+            "keywords": {
+              "de": "der Sämann ging hinaus, um zu säen",
+              "gsw": "de Sämaa isch usegange, go sääje"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "x": {
+                "FIG-GRUPPE-MENGE": 142
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.24-MAT.13.43",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-UNKRAUT",
+              "FIG-OBJ-SENFSTAUDE",
+              "FIG-OBJ-SAUERTEIG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SONNE"
+                ],
+                "word": {
+                  "de": "Die Gerechten werden leuchten wie die Sonne.",
+                  "gsw": "D Grächte wärded lüüchte wie d Sunne."
+                }
+              }
+            ],
+            "action_de": "Jesus erzählt vom Unkraut unter dem Weizen, vom Senfkorn und vom Sauerteig und deutet den Jüngern das Unkraut: Bei der Vollendung werden die Gerechten leuchten wie die Sonne.",
+            "keywords": {
+              "de": "Lasst beides miteinander wachsen bis zur Ernte",
+              "gsw": "Lönd beides mitenand wachse bis zur Ärn"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 74,
+                "FIG-OBJ-SENFSTAUDE": 96,
+                "FIG-OBJ-SAUERTEIG": 118
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.44-MAT.13.52",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHATZ",
+              "FIG-OBJ-PERLE-KOSTBAR",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Für den Schatz im Feld verkauft einer alles, was er hat, ebenso der Kaufmann für die kostbare Perle; das Netz wird am Ufer sortiert.",
+            "keywords": {
+              "de": "verkauft alles, was er hat",
+              "gsw": "verchauft alles, won er hät"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-HAENDLER": "FIG-OBJ-PERLE-KOSTBAR"
+              },
+              "at": {
+                "FIG-ZEICHEN-FREUDE": "FIG-ROLLE-MENSCH"
+              },
+              "mood": {
+                "FIG-ROLLE-MENSCH": "delight",
+                "FIG-ROLLE-HAENDLER": "delight"
+              },
+              "x": {
+                "FIG-ROLLE-MENSCH": 46,
+                "FIG-ROLLE-HAENDLER": 136
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHATZ": 80,
+                "FIG-OBJ-NETZ": 172
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.53-MAT.13.58",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABLEHNEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ist dieser nicht der Sohn des Zimmermanns?",
+                  "gsw": "Isch dä nöd de Sohn vom Zimmermaa?"
+                }
+              }
+            ],
+            "action_de": "In seiner Heimat fragen die Leute: Ist dieser nicht der Sohn des Zimmermanns? Sie nehmen Anstoss an ihm, und wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+            "keywords": {
+              "de": "Und sie nahmen Anstoss an ihm",
+              "gsw": "Und si händ a ihm Aastoss gnoo"
+            },
+            "stage": {
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-ABLEHNEN": "FIG-GRUPPE-VOLK"
+              },
+              "mood": {
+                "FIG-JESUS": "pensive",
+                "FIG-GRUPPE-VOLK": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-GRUPPE-VOLK": 134
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.23",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Wer Ohren hat, der höre!",
+                  "gsw": "Wer Ohre hät, dä söll lose!"
+                }
+              }
+            ],
+            "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+            "keywords": {
+              "de": "der Sämann ging hinaus, um zu säen",
+              "gsw": "de Sämaa isch usegange, go sääje"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "x": {
+                "FIG-GRUPPE-MENGE": 142
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.24-MAT.13.43",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-UNKRAUT",
+              "FIG-OBJ-SENFSTAUDE",
+              "FIG-OBJ-SAUERTEIG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SONNE"
+                ],
+                "word": {
+                  "de": "Die Gerechten werden leuchten wie die Sonne.",
+                  "gsw": "D Grächte wärded lüüchte wie d Sunne."
+                }
+              }
+            ],
+            "action_de": "Jesus erzählt vom Unkraut unter dem Weizen, vom Senfkorn und vom Sauerteig und deutet den Jüngern das Unkraut: Bei der Vollendung werden die Gerechten leuchten wie die Sonne.",
+            "keywords": {
+              "de": "Lasst beides miteinander wachsen bis zur Ernte",
+              "gsw": "Lönd beides mitenand wachse bis zur Ärn"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 74,
+                "FIG-OBJ-SENFSTAUDE": 96,
+                "FIG-OBJ-SAUERTEIG": 118
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.44-MAT.13.52",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHATZ",
+              "FIG-OBJ-PERLE-KOSTBAR",
+              "FIG-OBJ-NETZ"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Für den Schatz im Feld verkauft einer alles, was er hat, ebenso der Kaufmann für die kostbare Perle; das Netz wird am Ufer sortiert.",
+            "keywords": {
+              "de": "verkauft alles, was er hat",
+              "gsw": "verchauft alles, won er hät"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-HAENDLER": "FIG-OBJ-PERLE-KOSTBAR"
+              },
+              "at": {
+                "FIG-ZEICHEN-FREUDE": "FIG-ROLLE-MENSCH"
+              },
+              "mood": {
+                "FIG-ROLLE-MENSCH": "delight",
+                "FIG-ROLLE-HAENDLER": "delight"
+              },
+              "x": {
+                "FIG-ROLLE-MENSCH": 46,
+                "FIG-ROLLE-HAENDLER": 136
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHATZ": 80,
+                "FIG-OBJ-NETZ": 172
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.53-MAT.13.58",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABLEHNEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ist dieser nicht der Sohn des Zimmermanns?",
+                  "gsw": "Isch dä nöd de Sohn vom Zimmermaa?"
+                }
+              }
+            ],
+            "action_de": "In seiner Heimat fragen die Leute: Ist dieser nicht der Sohn des Zimmermanns? Sie nehmen Anstoss an ihm, und wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+            "keywords": {
+              "de": "Und sie nahmen Anstoss an ihm",
+              "gsw": "Und si händ a ihm Aastoss gnoo"
+            },
+            "stage": {
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-ABLEHNEN": "FIG-GRUPPE-VOLK"
+              },
+              "mood": {
+                "FIG-JESUS": "pensive",
+                "FIG-GRUPPE-VOLK": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-GRUPPE-VOLK": 134
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Gleichnisse vom Boot aus: Jesus sitzt im Boot auf dem See, die Menge steht am Ufer; Jesus: «Wer Ohren hat, der höre!» (Ohr).",
+          "Gleichnisse vom Wachsen: Vor Jesus und den Jüngern Unkraut (dunkle Halme), die Senfstaude (Kräuterzweig mit Vogel) und der Sauerteig (Teig in Tonschale); Jesus: «Die Gerechten werden leuchten wie die Sonne» (Sonne).",
+          "Alles verkaufen: Ein Mensch (sandfarbenes Gewand) hat den Schatz gefunden (offene Truhe), der Kaufmann (voller Bart, Stirnband) die kostbare Perle (Muschel mit Perle); am Boden das Netz voller Fische.",
+          "Ablehnung: In der Synagoge (Davidstern) fragen die Leute: «Ist dieser nicht der Sohn des Zimmermanns?»; sie nehmen Anstoss (Person mit gekreuzten Armen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.1-MAT.13.23",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [],
+                "word": {
+                  "de": "Wer Ohren hat, der höre!",
+                  "gsw": "Wer Ohre hät, dä söll lose!"
+                }
+              }
+            ],
+            "action_de": "Jesus sitzt wegen der grossen Menge in einem Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen.",
+            "keywords": {
+              "de": "der Sämann ging hinaus, um zu säen",
+              "gsw": "de Sämaa isch usegange, go sääje"
+            },
+            "stage": {
+              "big_side": "right",
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.5,
+                  0.4
+                ]
+              },
+              "sea": "calm",
+              "x": {
+                "FIG-GRUPPE-MENGE": 50
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.24-MAT.13.43",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-UNKRAUT",
+              "FIG-OBJ-GARBE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SONNE"
+                ],
+                "word": {
+                  "de": "Dann werden die Gerechten leuchten wie die Sonne im Reich ihres Vaters.",
+                  "gsw": "Dänn wärded d Grächte lüüchte wie d Sunne im Riich vo irem Vatter."
+                }
+              }
+            ],
+            "action_de": "Jesus erzählt vom Unkraut unter dem Weizen, vom Senfkorn und vom Sauerteig und deutet den Jüngern das Unkraut: Bei der Vollendung werden die Gerechten leuchten wie die Sonne.",
+            "keywords": {
+              "de": "Lasst beides miteinander wachsen bis zur Ernte",
+              "gsw": "Lönd beides mitenand wachse bis zur Ärn"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 82,
+                "FIG-OBJ-GARBE": 108
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.44-MAT.13.52",
+            "figures": [
+              "FIG-ROLLE-MENSCH",
+              "FIG-ROLLE-HAENDLER"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHATZ",
+              "FIG-OBJ-PERLE-KOSTBAR"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Für den Schatz im Feld verkauft einer alles, was er hat, ebenso der Kaufmann für die kostbare Perle; das Netz wird am Ufer sortiert.",
+            "keywords": {
+              "de": "verkauft alles, was er hat",
+              "gsw": "verchauft alles, won er hät"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-HAENDLER": "FIG-OBJ-PERLE-KOSTBAR"
+              },
+              "at": {
+                "FIG-ZEICHEN-FREUDE": "FIG-ROLLE-MENSCH"
+              },
+              "mood": {
+                "FIG-ROLLE-MENSCH": "delight",
+                "FIG-ROLLE-HAENDLER": "delight"
+              },
+              "x": {
+                "FIG-ROLLE-MENSCH": 46,
+                "FIG-ROLLE-HAENDLER": 136
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHATZ": 80
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.53-MAT.13.58",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOLK"
+            ],
+            "objects": [
+              "FIG-ORT-SYNAGOGE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABLEHNEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-VOLK",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ist dieser nicht der Sohn des Zimmermanns?",
+                  "gsw": "Isch dä nöd de Sohn vom Zimmermaa?"
+                }
+              }
+            ],
+            "action_de": "In seiner Heimat fragen die Leute: Ist dieser nicht der Sohn des Zimmermanns? Sie nehmen Anstoss an ihm, und wegen ihres Unglaubens tut er dort nicht viele Machttaten.",
+            "keywords": {
+              "de": "Und sie nahmen Anstoss an ihm",
+              "gsw": "Und si händ a ihm Aastoss gnoo"
+            },
+            "stage": {
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-ABLEHNEN": "FIG-GRUPPE-VOLK"
+              },
+              "mood": {
+                "FIG-JESUS": "pensive",
+                "FIG-GRUPPE-VOLK": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 54,
+                "FIG-GRUPPE-VOLK": 134
+              }
+            }
+          }
         ]
       }
     }

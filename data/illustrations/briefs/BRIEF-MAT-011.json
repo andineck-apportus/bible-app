@@ -11,23 +11,24 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.11.2-MAT.11.6",
+      "reference": "MAT.11.1-MAT.11.6",
       "figures": [
         "FIG-GRUPPE-JOHANNES-JUENGER",
         "FIG-JESUS"
       ],
-      "objects": [
-        "FIG-ORT-GEFAENGNIS"
-      ],
+      "objects": [],
       "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-JOHANNES-JUENGER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-JESUS",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Bist du der Kommende, oder sollen wir auf einen anderen warten?",
+            "gsw": "Bisch du dä, wo chunnt, oder söled mir uf en andere warte?"
+          }
         },
         {
           "from": "FIG-JESUS",
@@ -35,35 +36,36 @@
           "icons": [
             "FIG-ZEICHEN-SEHEN",
             "FIG-ZEICHEN-HOEREN"
-          ]
+          ],
+          "word": {
+            "de": "Geht hin und berichtet Johannes, was ihr hört und seht:",
+            "gsw": "Gönd und verzelled em Johannes, was ir ghöred und gsehnd:"
+          }
         }
       ],
-      "action_de": "Johannes lässt aus dem Gefängnis fragen, ob Jesus der Kommende sei; Jesus verweist auf das, was die Boten hören und sehen.",
+      "action_de": "Die Jünger des Johannes fragen Jesus: Bist du der Kommende? Jesus antwortet: Berichtet Johannes, was ihr hört und seht.",
+      "keywords": {
+        "de": "Bist du der Kommende",
+        "gsw": "Bisch du dä, wo chunnt"
+      },
       "stage": {
-        "back_side": "left",
-        "arrows": [
-          [
-            "FIG-ORT-GEFAENGNIS",
-            "FIG-GRUPPE-JOHANNES-JUENGER",
-            "go"
-          ]
-        ],
-        "x": {
-          "FIG-GRUPPE-JOHANNES-JUENGER": 76,
-          "FIG-JESUS": 156
-        },
         "mood": {
-          "FIG-GRUPPE-JOHANNES-JUENGER": "pensive",
+          "FIG-GRUPPE-JOHANNES-JUENGER": "question",
           "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-JOHANNES-JUENGER": 50,
+          "FIG-JESUS": 136
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.11.16-MAT.11.19",
+      "reference": "MAT.11.7-MAT.11.19",
       "figures": [
-        "FIG-GRUPPE-KINDER",
-        "FIG-ROLLE-KIND"
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE",
+        "FIG-GRUPPE-KINDER"
       ],
       "objects": [
         "FIG-OBJ-FLOETE"
@@ -71,23 +73,36 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-GRUPPE-KINDER",
-          "to": "FIG-ROLLE-KIND",
+          "from": "FIG-JESUS",
+          "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-FLOETE",
-            "FIG-ZEICHEN-FREUDE",
-            "FIG-ZEICHEN-NEIN"
-          ]
+            "FIG-JOHANNES-TAEUFER"
+          ],
+          "word": {
+            "de": "Ja, ich sage euch: sogar mehr als einen Propheten.",
+            "gsw": "Ja, ich säg eu: sogar meh als en Prophet."
+          }
         }
       ],
-      "action_de": "Dieses Geschlecht vergleicht er mit Kindern, die auf nichts eingehen: Johannes nennen sie besessen, den Menschensohn einen Fresser und Weinsäufer.",
+      "action_de": "Jesus sagt den Mengen über Johannes: mehr als ein Prophet; dieses Geschlecht aber gleicht Kindern, die rufen: Wir haben euch auf der Flöte gespielt, und ihr habt nicht getanzt.",
+      "keywords": {
+        "de": "Wir haben euch auf der Flöte gespielt",
+        "gsw": "Mir händ eu uf de Flöte gspilt"
+      },
       "stage": {
         "hold": {
           "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
         },
+        "split": 2,
         "mood": {
-          "FIG-GRUPPE-KINDER": "pensive",
-          "FIG-ROLLE-KIND": "calm"
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-MENGE": "pensive",
+          "FIG-GRUPPE-KINDER": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-MENGE": 84,
+          "FIG-GRUPPE-KINDER": 152
         }
       }
     },
@@ -95,39 +110,51 @@
       "n": 3,
       "reference": "MAT.11.20-MAT.11.24",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-JESUS"
       ],
       "objects": [
         "FIG-ORT-STADT"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-UMKEHR",
+        "FIG-ZEICHEN-NICHT"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-MENGE",
+          "to": "FIG-ORT-STADT",
           "icons": [
-            "FIG-ZEICHEN-STERN",
-            "FIG-ZEICHEN-UMKEHR",
-            "FIG-ZEICHEN-NEIN"
-          ]
+            "FIG-ZEICHEN-GERICHT"
+          ],
+          "word": {
+            "de": "Wehe dir, Chorazin! Wehe dir, Betsaida!",
+            "gsw": "Wee dir, Chorazin! Wee dir, Betsaida!"
+          }
         }
       ],
-      "action_de": "Er spricht Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+      "action_de": "Jesus ruft Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+      "keywords": {
+        "de": "weil sie nicht umgekehrt waren",
+        "gsw": "wil si nöd umgchehrt sind"
+      },
       "stage": {
         "back_side": "right",
         "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-MENGE": "pensive"
-        }
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-JESUS": 54
+        },
+        "air_x": 124
       }
     },
     {
       "n": 4,
       "reference": "MAT.11.25-MAT.11.30",
       "figures": [
-        "FIG-GRUPPE-MENGE",
-        "FIG-JESUS"
+        "FIG-GOTT",
+        "FIG-JESUS",
+        "FIG-GRUPPE-MENGE"
       ],
       "objects": [
         "FIG-OBJ-LAST"
@@ -138,46 +165,54 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-OBJ-LAST",
-            "FIG-ZEICHEN-DARAUS",
-            "FIG-JESUS"
+            "FIG-OBJ-JOCH",
+            "FIG-ZEICHEN-RUHE"
           ]
         }
       ],
-      "action_de": "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen.",
+      "action_de": "Jesus preist den Vater, der es Unmündigen offenbart, und lädt alle ein, die sich abmühen und beladen sind: Kommt her zu mir, und ich werde euch Ruhe geben.",
+      "keywords": {
+        "de": "Kommt her zu mir",
+        "gsw": "Chömed zu mir"
+      },
       "stage": {
-        "hold": {
-          "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST"
+        "god_side": "left",
+        "at": {
+          "FIG-OBJ-LAST": "FIG-GRUPPE-MENGE"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "worried",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-MENGE": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 60,
+          "FIG-GRUPPE-MENGE": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Johannes lässt aus dem Gefängnis fragen, ob Jesus der Kommende sei; Jesus verweist auf das, was die Boten hören und sehen.",
-    "Dieses Geschlecht vergleicht er mit Kindern, die auf nichts eingehen: Johannes nennen sie besessen, den Menschensohn einen Fresser und Weinsäufer.",
-    "Er spricht Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
-    "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen."
+    "Die Jünger des Johannes fragen Jesus: Bist du der Kommende? Jesus antwortet: Berichtet Johannes, was ihr hört und seht.",
+    "Jesus sagt den Mengen über Johannes: mehr als ein Prophet; dieses Geschlecht aber gleicht Kindern, die rufen: Wir haben euch auf der Flöte gespielt, und ihr habt nicht getanzt.",
+    "Jesus ruft Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+    "Jesus preist den Vater, der es Unmündigen offenbart, und lädt alle ein, die sich abmühen und beladen sind: Kommt her zu mir, und ich werde euch Ruhe geben."
   ],
   "captions_de": [
-    "Bist du es? Aus dem Gefängnis (Steinblock mit vergittertem Fenster) schickt Johannes seine Jünger (gestrichelter Weg); sie fragen: Bist du es? (Jesus, Fragezeichen); Jesus antwortet: Blinde sehen, Taube hören (offene Augen, Ohr).",
-    "Auf dem Marktplatz: Kinder mit der Flöte (Holzflöte) rufen einem anderen Kind zu: Wir spielten – du tanzt nicht (Flöte, strahlendes Gesicht, rotes X).",
-    "Wehe: Vor einer Stadt sagt Jesus: Machttaten – und keine Umkehr (goldener Stern, Pfeil im Bogen, rotes X).",
-    "Kommt zu mir: Beladene Menschen (braunes Tuchbündel, oben verschnürt) ruft Jesus zu sich (Bündel, dicker Pfeil, Jesus)."
+    "Die Anfrage: Die Jünger des Johannes (Fellkragen) fragen: «Bist du der Kommende?» (Fragezeichen); Jesus: «Berichtet Johannes, was ihr hört und seht!» (zwei offene Augen, Ohr).",
+    "Mehr als ein Prophet: Jesus spricht zu den Mengen über Johannes (Kamelhaargewand in der Blase); daneben das Vergleichsbild: Kinder mit Flöte (Holzflöte), zu deren Spiel niemand tanzt.",
+    "Wehe: Jesus ruft über die Städte (Mauer mit Tor): «Wehe dir, Chorazin! Wehe dir, Betsaida!»; sie sind nicht umgekehrt (umkehrender Pfeil im Verbotskreis).",
+    "Einladung: Über Jesus der Vater (goldener Strahlenkranz); Jesus lädt die Menge ein, die schwer trägt (verschnürtes Bündel): «Kommt her zu mir» (Merkwort; Joch und Ruhe in der Blase); dazu sein Joch (Querholz mit zwei Bögen) und Ruhe (Haus mit warmem Licht)."
   ],
-  "interpretation_note_de": "Das Kapitel hat fünf Abschnitte; die Rede Jesu über Johannes ([[MAT.11.7-MAT.11.15]]) ist im Kapitelbild nicht eigens gezeigt. Feld 2 steht für das ganze Gleichnis von den Kindern und den Vorwurf gegen Johannes und Jesus ([[MAT.11.16-MAT.11.19]]).",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte: Feld 1 die Anfrage des Täufers ([[MAT.11.1-MAT.11.6]]), Feld 2 bündelt die Rede über Johannes und das Bild der Kinder auf dem Marktplatz ([[MAT.11.7-MAT.11.19]]), Feld 3 die Weherufe ([[MAT.11.20-MAT.11.24]]), Feld 4 Lobpreis und Einladung ([[MAT.11.25-MAT.11.30]]). Die Kinder in Feld 2 sind das Vergleichsbild aus Jesu Rede, nicht Anwesende (gestrichelte Linie). Die Blase in Feld 2 fasst «Ja, ich sage euch: sogar mehr als einen Propheten» knapp. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-011",
       "field": "summary",
-      "fingerprint": "1ea7ea24d2631933"
+      "fingerprint": "178b405d477db8eb"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -342,6 +377,775 @@
           "Auf dem Marktplatz: Kinder mit der Flöte (helle Doppelflöte) rufen einem anderen Kind zu: Wir spielten – du tanzt nicht (Flöte, goldene Funken, rotes X).",
           "Wehe: Vor einer Stadt sagt Jesus: Machttaten – und keine Umkehr (goldener Stern, Pfeil im Bogen, rotes X).",
           "Kommt zu mir: Beladene Menschen (braunes Tuchbündel, oben verschnürt) ruft Jesus zu sich (Bündel, dicker Pfeil, Jesus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.2-MAT.11.6",
+            "figures": [
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-GEFAENGNIS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ]
+              }
+            ],
+            "action_de": "Johannes lässt aus dem Gefängnis fragen, ob Jesus der Kommende sei; Jesus verweist auf das, was die Boten hören und sehen.",
+            "stage": {
+              "back_side": "left",
+              "arrows": [
+                [
+                  "FIG-ORT-GEFAENGNIS",
+                  "FIG-GRUPPE-JOHANNES-JUENGER",
+                  "go"
+                ]
+              ],
+              "x": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": 76,
+                "FIG-JESUS": 156
+              },
+              "mood": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": "pensive",
+                "FIG-JESUS": "calm"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.16-MAT.11.19",
+            "figures": [
+              "FIG-GRUPPE-KINDER",
+              "FIG-ROLLE-KIND"
+            ],
+            "objects": [
+              "FIG-OBJ-FLOETE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-KINDER",
+                "to": "FIG-ROLLE-KIND",
+                "icons": [
+                  "FIG-OBJ-FLOETE",
+                  "FIG-ZEICHEN-FREUDE",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Dieses Geschlecht vergleicht er mit Kindern, die auf nichts eingehen: Johannes nennen sie besessen, den Menschensohn einen Fresser und Weinsäufer.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
+              },
+              "mood": {
+                "FIG-GRUPPE-KINDER": "pensive",
+                "FIG-ROLLE-KIND": "calm"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.20-MAT.11.24",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-UMKEHR",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              }
+            ],
+            "action_de": "Er spricht Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.11.25-MAT.11.30",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-LAST"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-LAST",
+                  "FIG-ZEICHEN-DARAUS",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-LAST"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "worried",
+                "FIG-JESUS": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Johannes lässt aus dem Gefängnis fragen, ob Jesus der Kommende sei; Jesus verweist auf das, was die Boten hören und sehen.",
+          "Dieses Geschlecht vergleicht er mit Kindern, die auf nichts eingehen: Johannes nennen sie besessen, den Menschensohn einen Fresser und Weinsäufer.",
+          "Er spricht Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+          "Er preist den Vater, der dies den Unmündigen offenbart hat, und lädt die Beladenen ein, sein Joch auf sich zu nehmen."
+        ],
+        "captions_de": [
+          "Bist du es? Aus dem Gefängnis (Steinblock mit vergittertem Fenster) schickt Johannes seine Jünger (gestrichelter Weg); sie fragen: Bist du es? (Jesus, Fragezeichen); Jesus antwortet: Blinde sehen, Taube hören (offene Augen, Ohr).",
+          "Auf dem Marktplatz: Kinder mit der Flöte (Holzflöte) rufen einem anderen Kind zu: Wir spielten – du tanzt nicht (Flöte, strahlendes Gesicht, rotes X).",
+          "Wehe: Vor einer Stadt sagt Jesus: Machttaten – und keine Umkehr (goldener Stern, Pfeil im Bogen, rotes X).",
+          "Kommt zu mir: Beladene Menschen (braunes Tuchbündel, oben verschnürt) ruft Jesus zu sich (Bündel, dicker Pfeil, Jesus)."
+        ],
+        "interpretation_note_de": "Das Kapitel hat fünf Abschnitte; die Rede Jesu über Johannes ([[MAT.11.7-MAT.11.15]]) ist im Kapitelbild nicht eigens gezeigt. Feld 2 steht für das ganze Gleichnis von den Kindern und den Vorwurf gegen Johannes und Jesus ([[MAT.11.16-MAT.11.19]]).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-011",
+            "field": "summary",
+            "fingerprint": "1ea7ea24d2631933"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.1-MAT.11.6",
+            "figures": [
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Bist du der Kommende?",
+                  "gsw": "Bisch du dä, wo chunnt?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Berichtet Johannes, was ihr hört und seht!",
+                  "gsw": "Verzelled em Johannes, was ir ghöred und gsehnd!"
+                }
+              }
+            ],
+            "action_de": "Die Jünger des Johannes fragen Jesus: Bist du der Kommende? Jesus antwortet: Berichtet Johannes, was ihr hört und seht.",
+            "keywords": {
+              "de": "Bist du der Kommende",
+              "gsw": "Bisch du dä, wo chunnt"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": "question",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.7-MAT.11.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [
+              "FIG-OBJ-FLOETE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER"
+                ],
+                "word": {
+                  "de": "Er ist sogar mehr als ein Prophet.",
+                  "gsw": "Er isch sogar meh als en Prophet."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt den Mengen über Johannes: mehr als ein Prophet; dieses Geschlecht aber gleicht Kindern, die rufen: Wir haben euch auf der Flöte gespielt, und ihr habt nicht getanzt.",
+            "keywords": {
+              "de": "Wir haben euch auf der Flöte gespielt",
+              "gsw": "Mir händ eu uf de Flöte gspilt"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive",
+                "FIG-GRUPPE-KINDER": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-MENGE": 84,
+                "FIG-GRUPPE-KINDER": 152
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.20-MAT.11.24",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UMKEHR",
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-STADT",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT"
+                ],
+                "word": {
+                  "de": "Wehe dir, Chorazin! Wehe dir, Betsaida!",
+                  "gsw": "Wee dir, Chorazin! Wee dir, Betsaida!"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+            "keywords": {
+              "de": "weil sie nicht umgekehrt waren",
+              "gsw": "wil si nöd umgchehrt sind"
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 54
+              },
+              "air_x": {
+                "FIG-ZEICHEN-UMKEHR": 140,
+                "FIG-ZEICHEN-NICHT": 140
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.11.25-MAT.11.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LAST"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-JOCH",
+                  "FIG-ZEICHEN-RUHE"
+                ],
+                "word": {
+                  "de": "Kommt her zu mir, und ich werde euch Ruhe geben.",
+                  "gsw": "Chömed zu mir, und ich gib eu Rue."
+                }
+              }
+            ],
+            "action_de": "Jesus preist den Vater, der es Unmündigen offenbart, und lädt alle ein, die sich abmühen und beladen sind: Kommt her zu mir, und ich werde euch Ruhe geben.",
+            "keywords": {
+              "de": "Kommt her zu mir",
+              "gsw": "Chömed zu mir"
+            },
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-OBJ-LAST": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.1-MAT.11.6",
+            "figures": [
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Bist du der Kommende?",
+                  "gsw": "Bisch du dä, wo chunnt?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Berichtet Johannes, was ihr hört und seht!",
+                  "gsw": "Verzelled em Johannes, was ir ghöred und gsehnd!"
+                }
+              }
+            ],
+            "action_de": "Die Jünger des Johannes fragen Jesus: Bist du der Kommende? Jesus antwortet: Berichtet Johannes, was ihr hört und seht.",
+            "keywords": {
+              "de": "Bist du der Kommende",
+              "gsw": "Bisch du dä, wo chunnt"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": "question",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.7-MAT.11.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [
+              "FIG-OBJ-FLOETE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER"
+                ],
+                "word": {
+                  "de": "Er ist sogar mehr als ein Prophet.",
+                  "gsw": "Er isch sogar meh als en Prophet."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt den Mengen über Johannes: mehr als ein Prophet; dieses Geschlecht aber gleicht Kindern, die rufen: Wir haben euch auf der Flöte gespielt, und ihr habt nicht getanzt.",
+            "keywords": {
+              "de": "Wir haben euch auf der Flöte gespielt",
+              "gsw": "Mir händ eu uf de Flöte gspilt"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive",
+                "FIG-GRUPPE-KINDER": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-MENGE": 84,
+                "FIG-GRUPPE-KINDER": 152
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.20-MAT.11.24",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UMKEHR",
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-STADT",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT"
+                ],
+                "word": {
+                  "de": "Wehe dir, Chorazin! Wehe dir, Betsaida!",
+                  "gsw": "Wee dir, Chorazin! Wee dir, Betsaida!"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+            "keywords": {
+              "de": "weil sie nicht umgekehrt waren",
+              "gsw": "wil si nöd umgchehrt sind"
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 54
+              },
+              "air_x": 124
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.11.25-MAT.11.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LAST"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-JOCH",
+                  "FIG-ZEICHEN-RUHE"
+                ],
+                "word": {
+                  "de": "Kommt her zu mir, und ich werde euch Ruhe geben.",
+                  "gsw": "Chömed zu mir, und ich gib eu Rue."
+                }
+              }
+            ],
+            "action_de": "Jesus preist den Vater, der es Unmündigen offenbart, und lädt alle ein, die sich abmühen und beladen sind: Kommt her zu mir, und ich werde euch Ruhe geben.",
+            "keywords": {
+              "de": "Kommt her zu mir",
+              "gsw": "Chömed zu mir"
+            },
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-OBJ-LAST": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.11.1-MAT.11.6",
+            "figures": [
+              "FIG-GRUPPE-JOHANNES-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Bist du der Kommende, oder sollen wir auf einen anderen warten?",
+                  "gsw": "Bisch du dä, wo chunnt, oder söled mir uf en andere warte?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JOHANNES-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEHEN",
+                  "FIG-ZEICHEN-HOEREN"
+                ],
+                "word": {
+                  "de": "Geht hin und berichtet Johannes, was ihr hört und seht:",
+                  "gsw": "Gönd und verzelled em Johannes, was ir ghöred und gsehnd:"
+                }
+              }
+            ],
+            "action_de": "Die Jünger des Johannes fragen Jesus: Bist du der Kommende? Jesus antwortet: Berichtet Johannes, was ihr hört und seht.",
+            "keywords": {
+              "de": "Bist du der Kommende",
+              "gsw": "Bisch du dä, wo chunnt"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": "question",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JOHANNES-JUENGER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.11.7-MAT.11.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE",
+              "FIG-GRUPPE-KINDER"
+            ],
+            "objects": [
+              "FIG-OBJ-FLOETE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-JOHANNES-TAEUFER"
+                ],
+                "word": {
+                  "de": "Ja, ich sage euch: sogar mehr als einen Propheten.",
+                  "gsw": "Ja, ich säg eu: sogar meh als en Prophet."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt den Mengen über Johannes: mehr als ein Prophet; dieses Geschlecht aber gleicht Kindern, die rufen: Wir haben euch auf der Flöte gespielt, und ihr habt nicht getanzt.",
+            "keywords": {
+              "de": "Wir haben euch auf der Flöte gespielt",
+              "gsw": "Mir händ eu uf de Flöte gspilt"
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-KINDER": "FIG-OBJ-FLOETE"
+              },
+              "split": 2,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "pensive",
+                "FIG-GRUPPE-KINDER": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-MENGE": 84,
+                "FIG-GRUPPE-KINDER": 152
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.11.20-MAT.11.24",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-STADT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UMKEHR",
+              "FIG-ZEICHEN-NICHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ORT-STADT",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT"
+                ],
+                "word": {
+                  "de": "Wehe dir, Chorazin! Wehe dir, Betsaida!",
+                  "gsw": "Wee dir, Chorazin! Wee dir, Betsaida!"
+                }
+              }
+            ],
+            "action_de": "Jesus ruft Wehe über Chorazin, Betsaida und Kafarnaum, die trotz seiner Machttaten nicht umgekehrt sind.",
+            "keywords": {
+              "de": "weil sie nicht umgekehrt waren",
+              "gsw": "wil si nöd umgchehrt sind"
+            },
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 54
+              },
+              "air_x": 124
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.11.25-MAT.11.30",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-LAST"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-OBJ-JOCH",
+                  "FIG-ZEICHEN-RUHE"
+                ],
+                "word": {
+                  "de": "Kommt her zu mir, alle, die ihr euch abmüht und beladen seid, und ich werde euch Ruhe geben.",
+                  "gsw": "Chömed zu mir, alli, wo sich abmüehed und schwär z träge händ, und ich gib eu Rue."
+                }
+              }
+            ],
+            "action_de": "Jesus preist den Vater, der es Unmündigen offenbart, und lädt alle ein, die sich abmühen und beladen sind: Kommt her zu mir, und ich werde euch Ruhe geben.",
+            "keywords": {
+              "de": "Kommt her zu mir",
+              "gsw": "Chömed zu mir"
+            },
+            "stage": {
+              "god_side": "left",
+              "at": {
+                "FIG-OBJ-LAST": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-MENGE": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-GRUPPE-MENGE": 136
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Anfrage: Die Jünger des Johannes (Fellkragen) fragen: «Bist du der Kommende?» (Fragezeichen); Jesus: «Berichtet Johannes, was ihr hört und seht!» (zwei offene Augen, Ohr).",
+          "Mehr als ein Prophet: Jesus spricht zu den Mengen über Johannes (Kamelhaargewand in der Blase); daneben das Vergleichsbild: Kinder mit Flöte (Holzflöte), zu deren Spiel niemand tanzt.",
+          "Wehe: Jesus ruft über die Städte (Mauer mit Tor): «Wehe dir, Chorazin! Wehe dir, Betsaida!»; sie sind nicht umgekehrt (umkehrender Pfeil im Verbotskreis).",
+          "Einladung: Über Jesus der Vater (goldener Strahlenkranz); Jesus lädt die Menge ein, die schwer trägt (verschnürtes Bündel): «Kommt her zu mir!»; dazu sein Joch (Querholz mit zwei Bögen) und Ruhe (Haus mit warmem Licht)."
         ]
       }
     }

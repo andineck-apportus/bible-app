@@ -1,0 +1,117 @@
+{
+ "id": "CORE-MAT-015-029-031",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.15.29-MAT.15.31",
+ "target": "TU-MAT-015-029-031",
+ "core_de": "Am See von Galiläa sitzt Jesus auf dem Berg; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, er heilt sie, und die Menge staunt, dass Stumme reden, Verkrüppelte gesund sind, Lahme gehen und Blinde sehen, und preist den Gott Israels.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Bringen – Heilen – Staunen – Lob",
+    "range": "MAT.15.29-MAT.15.31",
+    "elements": [
+     {
+      "label": "Jesus auf dem Berg am See von Galiläa",
+      "ref": "MAT.15.29",
+      "role": "Ort"
+     },
+     {
+      "label": "Sie bringen Stumme, Blinde, Lahme, Verkrüppelte und viele andere, legen sie zu seinen Füssen; er heilt sie",
+      "ref": "MAT.15.30",
+      "role": "Heilung",
+      "child": "s2"
+     },
+     {
+      "label": "Die Menge staunt und preist den Gott Israels",
+      "ref": "MAT.15.31",
+      "role": "Lob"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "vier Gruppen (in [[MAT.15.31]] gespiegelt)",
+    "range": "MAT.15.30-MAT.15.31",
+    "elements": [
+     {
+      "label": "Stumme → reden",
+      "ref": "MAT.15.30-MAT.15.31"
+     },
+     {
+      "label": "Blinde → sehen",
+      "ref": "MAT.15.30-MAT.15.31"
+     },
+     {
+      "label": "Lahme → gehen umher",
+      "ref": "MAT.15.30-MAT.15.31"
+     },
+     {
+      "label": "Verkrüppelte → gesund",
+      "ref": "MAT.15.30-MAT.15.31"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.15.29-MAT.15.30",
+   "text_de": "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen bringen Stumme, Blinde, Lahme, Verkrüppelte und viele andere, legen sie zu seinen Füssen hin, und er heilt sie.",
+   "reason_de": "Heilung vieler (Kriterien 1 und 4).",
+   "recognition_de": "Jesus auf dem Berg, Kranke zu seinen Füssen.",
+   "keywords": [
+    "legten sie zu seinen Füssen hin, und er heilte sie"
+   ]
+  },
+  {
+   "reference": "MAT.15.31",
+   "text_de": "Die Menge staunt, als sie sieht, wie Stumme reden, Verkrüppelte gesund sind, Lahme umhergehen und Blinde sehen, und sie preisen den Gott Israels.",
+   "reason_de": "Ausgang: Lob Gottes (Kriterien 2 und 3).",
+   "recognition_de": "Die Menge preist Gott.",
+   "keywords": [
+    "sodass die Menge staunte",
+    "sie priesen den Gott Israels"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ob die Menge aus Juden oder Heiden besteht, sagt der Text nicht – Deutungsfrage"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-GRUPPE-KRANKE",
+  "FIG-GOTT"
+ ],
+ "places": [
+  "FIG-ORT-BERG",
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.15.29-MAT.15.31",
+   "fingerprint": "60e128cbab1324eb"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

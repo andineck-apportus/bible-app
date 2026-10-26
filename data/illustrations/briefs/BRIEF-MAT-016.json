@@ -21,28 +21,28 @@
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
+          "from": "FIG-GRUPPE-PHARISAEER",
+          "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-STERN",
-            "FIG-ZEICHEN-NEIN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-PHARISAEER",
-          "icons": [
-            "FIG-JONA",
-            "FIG-OBJ-GROSSER-FISCH"
+            "FIG-ZEICHEN-STERN"
           ]
         }
       ],
-      "action_de": "Pharisäer und Sadduzäer fordern ein Zeichen vom Himmel; Jesus sagt, es werde kein Zeichen gegeben ausser dem Zeichen des Jona.",
+      "action_de": "Pharisäer und Sadduzäer kommen, um Jesus auf die Probe zu stellen, und fordern ihn auf, ihnen ein Zeichen vom Himmel zu zeigen.",
+      "keywords": {
+        "de": "ausser dem Zeichen des Jona",
+        "gsw": "usser em Zeiche vom Jona"
+      },
       "stage": {
         "mood": {
-          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-PHARISAEER": "earnest",
-          "FIG-GRUPPE-SADDUZAEER": "pensive"
+          "FIG-GRUPPE-SADDUZAEER": "earnest",
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 30,
+          "FIG-GRUPPE-SADDUZAEER": 76,
+          "FIG-JESUS": 152
         }
       }
     },
@@ -50,28 +50,43 @@
       "n": 2,
       "reference": "MAT.16.5-MAT.16.12",
       "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-KORB"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-WARNEN",
             "FIG-OBJ-SAUERTEIG",
-            "FIG-GRUPPE-PHARISAEER",
-            "FIG-GRUPPE-SADDUZAEER"
-          ]
+            "FIG-ZEICHEN-LEHREN"
+          ],
+          "word": {
+            "de": "Seht zu und hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!",
+            "gsw": "Lueged und hüeted eu vor em Suurteig vo de Pharisäer und Sadduzäer!"
+          }
         }
       ],
-      "action_de": "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen, dass er ihre Lehre meint.",
+      "action_de": "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen schliesslich, dass ihre Lehre gemeint ist.",
+      "keywords": {
+        "de": "sondern vor der Lehre der Pharisäer und Sadduzäer",
+        "gsw": "sondern vor de Lehr vo de Pharisäer und Sadduzäer"
+      },
       "stage": {
         "mood": {
           "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-ZWOELF": "pensive"
+          "FIG-GRUPPE-JUENGER": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 44,
+          "FIG-GRUPPE-JUENGER": 140
+        },
+        "floor_x": {
+          "FIG-OBJ-KORB": 92
         }
       }
     },
@@ -79,34 +94,62 @@
       "n": 3,
       "reference": "MAT.16.13-MAT.16.20",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-PETRUS"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-PETRUS",
+        "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-FELS"
+      ],
       "signs": [],
       "speech": [
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-PETRUS",
+          "icons": [
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Ihr aber, wer, sagt ihr, sei ich?",
+            "gsw": "Ir aber, wer, säged ir, sig ich?"
+          }
+        },
         {
           "from": "FIG-PETRUS",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-CHRISTUS",
-            "FIG-GOTT",
-            "FIG-ZEICHEN-LEBEN"
-          ]
+            "FIG-ZEICHEN-CHRISTUS"
+          ],
+          "word": {
+            "de": "Du bist der Christus, der Sohn des lebendigen Gottes!",
+            "gsw": "Du bisch de Christus, de Sohn vom läbige Gott!"
+          }
         }
       ],
-      "action_de": "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+      "action_de": "Auf Jesu Frage «Ihr aber, wer, sagt ihr, sei ich?» antwortet Simon Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+      "keywords": {
+        "de": "auf diesen Felsen werde ich meine Gemeinde bauen",
+        "gsw": "uf dä Felse wird ich mini Gmeind buue"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Simon Petrus",
+          "gsw": "Simon Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "determined",
-          "FIG-GRUPPE-ZWOELF": "calm"
+          "FIG-GRUPPE-JUENGER": "pensive",
+          "FIG-PETRUS": "earnest",
+          "FIG-JESUS": "smile"
         },
         "x": {
-          "FIG-GRUPPE-ZWOELF": 40,
-          "FIG-PETRUS": 96,
-          "FIG-JESUS": 150
+          "FIG-GRUPPE-JUENGER": 28,
+          "FIG-PETRUS": 84,
+          "FIG-JESUS": 154
+        },
+        "floor_x": {
+          "FIG-OBJ-FELS": 120
         }
       }
     },
@@ -115,59 +158,64 @@
       "reference": "MAT.16.21-MAT.16.28",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-KREUZ"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-AUFERWECKEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
             "FIG-OBJ-KREUZ",
             "FIG-ZEICHEN-NACHFOLGEN"
           ]
         }
       ],
-      "action_de": "Jesus kündigt zum ersten Mal an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft zur Nachfolge mit dem Kreuz.",
+      "action_de": "Jesus kündigt an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft: Wer mir folgen will, nehme sein Kreuz auf sich und folge mir nach.",
+      "keywords": {
+        "de": "getötet werden und am dritten Tag auferweckt werden muss",
+        "gsw": "umbracht wärde und am dritte Tag uferweckt wärde"
+      },
       "stage": {
         "mood": {
           "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-ZWOELF": "worried"
+          "FIG-GRUPPE-JUENGER": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 44,
+          "FIG-GRUPPE-JUENGER": 138
+        },
+        "floor_x": {
+          "FIG-OBJ-KREUZ": 92
         }
       }
     }
   ],
   "actions_de": [
-    "Pharisäer und Sadduzäer fordern ein Zeichen vom Himmel; Jesus sagt, es werde kein Zeichen gegeben ausser dem Zeichen des Jona.",
-    "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen, dass er ihre Lehre meint.",
-    "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
-    "Jesus kündigt zum ersten Mal an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft zur Nachfolge mit dem Kreuz."
+    "Pharisäer und Sadduzäer kommen, um Jesus auf die Probe zu stellen, und fordern ihn auf, ihnen ein Zeichen vom Himmel zu zeigen.",
+    "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen schliesslich, dass ihre Lehre gemeint ist.",
+    "Auf Jesu Frage «Ihr aber, wer, sagt ihr, sei ich?» antwortet Simon Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+    "Jesus kündigt an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft: Wer mir folgen will, nehme sein Kreuz auf sich und folge mir nach."
   ],
   "captions_de": [
-    "Zeichenforderung: Jesus sagt den Pharisäern und Sadduzäern: Kein Zeichen (Stern, rotes X) ausser dem des Jona (Jona, grosser Fisch).",
-    "Warnung: Jesus warnt vor dem Sauerteig der Pharisäer und Sadduzäer (erhobener Zeigefinger, Teigtrog, Pharisäer, Sadduzäer).",
-    "Bekenntnis: Petrus sagt: Du bist der Christus, der Sohn des lebendigen Gottes (Jesus, Ölhorn über Krone, Strahlenkranz, Keimling mit Unendlichzeichen).",
-    "Leiden und Nachfolge: Jesus kündigt Tod und Auferweckung an (Totenkopf, offenes Grab mit goldenem Pfeil) und ruft: Nehmt das Kreuz und folgt mir (Kreuz, zwei gehende Personen)."
+    "Die Forderung: Pharisäer (gestreifter Gebetsmantel) und Sadduzäer (petrolgrauer Mantel) fordern von Jesus ein Zeichen vom Himmel (leuchtender Stern).",
+    "Sauerteig: Jesus warnt: «Seht zu und hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!» (Teig in Tonschale, Lehrer mit Schriftrolle); die Jünger mit leerem Korb.",
+    "Bekenntnis: Jesus fragt: «Ihr aber, wer, sagt ihr, sei ich?» (Fragezeichen); Petrus (Schlüssel, grauer Bart) antwortet: «Du bist der Christus, der Sohn des lebendigen Gottes!» (Ölhorn mit goldenem Tropfen auf eine Krone); dahinter der Fels (grauer Felsbrocken).",
+    "Der Weg: Jesus spricht zu den Jüngern vom Kreuz und von der Nachfolge (Kreuz, Nachfolge in der Blase; dunkles Holzkreuz am Boden); Leiden und Auferweckung nennt das Merkwort."
   ],
-  "interpretation_note_de": "Je ein Feld zu den vier Abschnitten. Den Sauerteig zeigt das Bild als Teigtrog in der Sprechblase (Bildwort für die Lehre, [[MAT.16.12]]). Die Zusage an Petrus (Fels und Schlüssel, [[MAT.16.18-MAT.16.19]]) und die Zurechtweisung des Petrus ([[MAT.16.22-MAT.16.23]]) sind nur in den Abschnittsbildern gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: die Zeichenforderung ([[MAT.16.1-MAT.16.4]]), die Warnung vor dem Sauerteig ([[MAT.16.5-MAT.16.12]]), das Bekenntnis des Petrus ([[MAT.16.13-MAT.16.20]]), Leidensankündigung und Nachfolge ([[MAT.16.21-MAT.16.28]]). Das Kreuz in Feld 4 gehört zum Wort an die Nachfolgenden («nehme sein Kreuz auf sich»), nicht zur Ankündigung, die den Kreuzestod nicht nennt. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-016",
       "field": "summary",
-      "fingerprint": "0b017c659a0ce415"
+      "fingerprint": "dad6df81f203248c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -325,6 +373,782 @@
           "Warnung: Jesus warnt vor dem Sauerteig der Pharisäer und Sadduzäer (erhobener Zeigefinger, Teigtrog, Pharisäer, Sadduzäer).",
           "Bekenntnis: Petrus sagt: Du bist der Christus, der Sohn des lebendigen Gottes (Jesus, Ölhorn über Krone, Strahlenkranz, Baum im goldenen Ring).",
           "Leiden und Nachfolge: Jesus kündigt Tod und Auferweckung an (verschlossenes Grab, offenes Grab mit goldenem Pfeil) und ruft: Nehmt das Kreuz und folgt mir (Kreuz, Fussspuren)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.16.1-MAT.16.4",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-SADDUZAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-NEIN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-JONA",
+                  "FIG-OBJ-GROSSER-FISCH"
+                ]
+              }
+            ],
+            "action_de": "Pharisäer und Sadduzäer fordern ein Zeichen vom Himmel; Jesus sagt, es werde kein Zeichen gegeben ausser dem Zeichen des Jona.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-SADDUZAEER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.16.5-MAT.16.12",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-WARNEN",
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-GRUPPE-PHARISAEER",
+                  "FIG-GRUPPE-SADDUZAEER"
+                ]
+              }
+            ],
+            "action_de": "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen, dass er ihre Lehre meint.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.16.13-MAT.16.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-PETRUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-CHRISTUS",
+                  "FIG-GOTT",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "determined",
+                "FIG-GRUPPE-ZWOELF": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ZWOELF": 40,
+                "FIG-PETRUS": 96,
+                "FIG-JESUS": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.16.21-MAT.16.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus kündigt zum ersten Mal an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft zur Nachfolge mit dem Kreuz.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pharisäer und Sadduzäer fordern ein Zeichen vom Himmel; Jesus sagt, es werde kein Zeichen gegeben ausser dem Zeichen des Jona.",
+          "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen, dass er ihre Lehre meint.",
+          "Bei Cäsarea Philippi bekennt Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+          "Jesus kündigt zum ersten Mal an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft zur Nachfolge mit dem Kreuz."
+        ],
+        "captions_de": [
+          "Zeichenforderung: Jesus sagt den Pharisäern und Sadduzäern: Kein Zeichen (Stern, rotes X) ausser dem des Jona (Jona, grosser Fisch).",
+          "Warnung: Jesus warnt vor dem Sauerteig der Pharisäer und Sadduzäer (erhobener Zeigefinger, Teigtrog, Pharisäer, Sadduzäer).",
+          "Bekenntnis: Petrus sagt: Du bist der Christus, der Sohn des lebendigen Gottes (Jesus, Ölhorn über Krone, Strahlenkranz, Keimling mit Unendlichzeichen).",
+          "Leiden und Nachfolge: Jesus kündigt Tod und Auferweckung an (Totenkopf, offenes Grab mit goldenem Pfeil) und ruft: Nehmt das Kreuz und folgt mir (Kreuz, zwei gehende Personen)."
+        ],
+        "interpretation_note_de": "Je ein Feld zu den vier Abschnitten. Den Sauerteig zeigt das Bild als Teigtrog in der Sprechblase (Bildwort für die Lehre, [[MAT.16.12]]). Die Zusage an Petrus (Fels und Schlüssel, [[MAT.16.18-MAT.16.19]]) und die Zurechtweisung des Petrus ([[MAT.16.22-MAT.16.23]]) sind nur in den Abschnittsbildern gezeichnet.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-016",
+            "field": "summary",
+            "fingerprint": "0b017c659a0ce415"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.16.1-MAT.16.4",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-SADDUZAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-STERN"
+                ],
+                "word": {
+                  "de": "Zeig uns ein Zeichen vom Himmel!",
+                  "gsw": "Zeig üs es Zeiche vom Himel!"
+                }
+              }
+            ],
+            "action_de": "Pharisäer und Sadduzäer kommen, um Jesus auf die Probe zu stellen, und fordern ihn auf, ihnen ein Zeichen vom Himmel zu zeigen.",
+            "keywords": {
+              "de": "ausser dem Zeichen des Jona",
+              "gsw": "usser em Zeiche vom Jona"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-SADDUZAEER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 30,
+                "FIG-GRUPPE-SADDUZAEER": 76,
+                "FIG-JESUS": 152
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.16.5-MAT.16.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-ZEICHEN-LEHREN"
+                ],
+                "word": {
+                  "de": "Hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!",
+                  "gsw": "Hüeted eu vor em Suurteig vo de Pharisäer und Sadduzäer!"
+                }
+              }
+            ],
+            "action_de": "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen schliesslich, dass ihre Lehre gemeint ist.",
+            "keywords": {
+              "de": "sondern vor der Lehre der Pharisäer und Sadduzäer",
+              "gsw": "sondern vor de Lehr vo de Pharisäer und Sadduzäer"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 140
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 170
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.16.13-MAT.16.20",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FELS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ihr aber, wer, sagt ihr, sei ich?",
+                  "gsw": "Ir aber, wer, säged ir, sig ich?"
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-CHRISTUS"
+                ],
+                "word": {
+                  "de": "Du bist der Christus, der Sohn des lebendigen Gottes!",
+                  "gsw": "Du bisch de Christus, de Sohn vom läbige Gott!"
+                }
+              }
+            ],
+            "action_de": "Auf Jesu Frage «Ihr aber, wer, sagt ihr, sei ich?» antwortet Simon Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+            "keywords": {
+              "de": "auf diesen Felsen werde ich meine Gemeinde bauen",
+              "gsw": "uf dä Felse wird ich mini Gmeind buue"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Simon Petrus",
+                "gsw": "Simon Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-PETRUS": "earnest",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 28,
+                "FIG-PETRUS": 84,
+                "FIG-JESUS": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-FELS": 120
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.16.21-MAT.16.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ],
+                "word": {
+                  "de": "Wer mir folgen will, nehme sein Kreuz auf sich und folge mir nach.",
+                  "gsw": "Wer mir wott nachefolge, söll sis Chrüüz uf sich nää und mir nachefolge."
+                }
+              }
+            ],
+            "action_de": "Jesus kündigt an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft: Wer mir folgen will, nehme sein Kreuz auf sich und folge mir nach.",
+            "keywords": {
+              "de": "getötet werden und am dritten Tag auferweckt werden muss",
+              "gsw": "umbracht wärde und am dritte Tag uferweckt wärde"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 138
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 92
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Forderung: Pharisäer (gestreifter Gebetsmantel) und Sadduzäer (petrolgrauer Mantel) fordern von Jesus ein Zeichen vom Himmel (leuchtender Stern).",
+          "Sauerteig: Jesus warnt: «Hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!» (Teig in Tonschale, Lehrer mit Schriftrolle); die Jünger mit leerem Korb.",
+          "Bekenntnis: Jesus fragt: «Ihr aber, wer, sagt ihr, sei ich?» (Fragezeichen); Petrus (Schlüssel, grauer Bart) antwortet: «Du bist der Christus, der Sohn des lebendigen Gottes!» (Ölhorn mit goldenem Tropfen auf eine Krone); dahinter der Fels (grauer Felsbrocken).",
+          "Der Weg: Jesus spricht zu den Jüngern vom Leiden und der Auferweckung (Totenkopf, offenes Grab mit Pfeil nach oben in der Blase) und vom Kreuz, das jeder auf sich nimmt (dunkles Holzkreuz)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: die Zeichenforderung ([[MAT.16.1-MAT.16.4]]), die Warnung vor dem Sauerteig ([[MAT.16.5-MAT.16.12]]), das Bekenntnis des Petrus ([[MAT.16.13-MAT.16.20]]), Leidensankündigung und Nachfolge ([[MAT.16.21-MAT.16.28]]). Das Kreuz in Feld 4 gehört zum Wort an die Nachfolgenden («nehme sein Kreuz auf sich»), nicht zur Ankündigung, die den Kreuzestod nicht nennt. Die Blase in Feld 4 lässt «verleugne sich selbst» weg; der volle Satz steht im Abschnittsbild. Comic-Szenen nach dem Entscheid vom 2026-10-25."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.16.1-MAT.16.4",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-SADDUZAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-STERN"
+                ]
+              }
+            ],
+            "action_de": "Pharisäer und Sadduzäer kommen, um Jesus auf die Probe zu stellen, und fordern ihn auf, ihnen ein Zeichen vom Himmel zu zeigen.",
+            "keywords": {
+              "de": "ausser dem Zeichen des Jona",
+              "gsw": "usser em Zeiche vom Jona"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-SADDUZAEER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 30,
+                "FIG-GRUPPE-SADDUZAEER": 76,
+                "FIG-JESUS": 152
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.16.5-MAT.16.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-ZEICHEN-LEHREN"
+                ],
+                "word": {
+                  "de": "Seht zu und hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!",
+                  "gsw": "Lueged und hüeted eu vor em Suurteig vo de Pharisäer und Sadduzäer!"
+                }
+              }
+            ],
+            "action_de": "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen schliesslich, dass ihre Lehre gemeint ist.",
+            "keywords": {
+              "de": "sondern vor der Lehre der Pharisäer und Sadduzäer",
+              "gsw": "sondern vor de Lehr vo de Pharisäer und Sadduzäer"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 140
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 170
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.16.13-MAT.16.20",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FELS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ihr aber, wer, sagt ihr, sei ich?",
+                  "gsw": "Ir aber, wer, säged ir, sig ich?"
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-CHRISTUS"
+                ],
+                "word": {
+                  "de": "Du bist der Christus, der Sohn des lebendigen Gottes!",
+                  "gsw": "Du bisch de Christus, de Sohn vom läbige Gott!"
+                }
+              }
+            ],
+            "action_de": "Auf Jesu Frage «Ihr aber, wer, sagt ihr, sei ich?» antwortet Simon Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+            "keywords": {
+              "de": "auf diesen Felsen werde ich meine Gemeinde bauen",
+              "gsw": "uf dä Felse wird ich mini Gmeind buue"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Simon Petrus",
+                "gsw": "Simon Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-PETRUS": "earnest",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 28,
+                "FIG-PETRUS": 84,
+                "FIG-JESUS": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-FELS": 120
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.16.21-MAT.16.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ],
+                "word": {
+                  "de": "Wenn jemand hinter mir herkommen will, der verleugne sich selbst und nehme sein Kreuz auf sich und folge mir nach.",
+                  "gsw": "Wänn öpper hinder mir härchoo wott, dä söll sich sälber verleugne und sis Chrüüz uf sich nää und mir nachefolge."
+                }
+              }
+            ],
+            "action_de": "Jesus kündigt an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft: Wer mir folgen will, nehme sein Kreuz auf sich und folge mir nach.",
+            "keywords": {
+              "de": "getötet werden und am dritten Tag auferweckt werden muss",
+              "gsw": "umbracht wärde und am dritte Tag uferweckt wärde"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 138
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 92
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.16.1-MAT.16.4",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-SADDUZAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-STERN"
+                ]
+              }
+            ],
+            "action_de": "Pharisäer und Sadduzäer kommen, um Jesus auf die Probe zu stellen, und fordern ihn auf, ihnen ein Zeichen vom Himmel zu zeigen.",
+            "keywords": {
+              "de": "ausser dem Zeichen des Jona",
+              "gsw": "usser em Zeiche vom Jona"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "earnest",
+                "FIG-GRUPPE-SADDUZAEER": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 30,
+                "FIG-GRUPPE-SADDUZAEER": 76,
+                "FIG-JESUS": 152
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.16.5-MAT.16.12",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SAUERTEIG",
+                  "FIG-ZEICHEN-LEHREN"
+                ],
+                "word": {
+                  "de": "Seht zu und hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!",
+                  "gsw": "Lueged und hüeted eu vor em Suurteig vo de Pharisäer und Sadduzäer!"
+                }
+              }
+            ],
+            "action_de": "Jesus warnt die Jünger vor dem Sauerteig der Pharisäer und Sadduzäer; sie verstehen schliesslich, dass ihre Lehre gemeint ist.",
+            "keywords": {
+              "de": "sondern vor der Lehre der Pharisäer und Sadduzäer",
+              "gsw": "sondern vor de Lehr vo de Pharisäer und Sadduzäer"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 140
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 92
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.16.13-MAT.16.20",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FELS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Ihr aber, wer, sagt ihr, sei ich?",
+                  "gsw": "Ir aber, wer, säged ir, sig ich?"
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-CHRISTUS"
+                ],
+                "word": {
+                  "de": "Du bist der Christus, der Sohn des lebendigen Gottes!",
+                  "gsw": "Du bisch de Christus, de Sohn vom läbige Gott!"
+                }
+              }
+            ],
+            "action_de": "Auf Jesu Frage «Ihr aber, wer, sagt ihr, sei ich?» antwortet Simon Petrus: Du bist der Christus, der Sohn des lebendigen Gottes!",
+            "keywords": {
+              "de": "auf diesen Felsen werde ich meine Gemeinde bauen",
+              "gsw": "uf dä Felse wird ich mini Gmeind buue"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Simon Petrus",
+                "gsw": "Simon Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-PETRUS": "earnest",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 28,
+                "FIG-PETRUS": 84,
+                "FIG-JESUS": 154
+              },
+              "floor_x": {
+                "FIG-OBJ-FELS": 120
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.16.21-MAT.16.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-KREUZ"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-NACHFOLGEN"
+                ],
+                "word": {
+                  "de": "Wenn jemand hinter mir herkommen will, der verleugne sich selbst und nehme sein Kreuz auf sich und folge mir nach.",
+                  "gsw": "Wänn öpper hinder mir härchoo wott, dä söll sich sälber verleugne und sis Chrüüz uf sich nää und mir nachefolge."
+                }
+              }
+            ],
+            "action_de": "Jesus kündigt an, dass er leiden, getötet und am dritten Tag auferweckt werden muss, und ruft: Wer mir folgen will, nehme sein Kreuz auf sich und folge mir nach.",
+            "keywords": {
+              "de": "getötet werden und am dritten Tag auferweckt werden muss",
+              "gsw": "umbracht wärde und am dritte Tag uferweckt wärde"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-JUENGER": 138
+              },
+              "floor_x": {
+                "FIG-OBJ-KREUZ": 92
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Forderung: Pharisäer (gestreifter Gebetsmantel) und Sadduzäer (petrolgrauer Mantel) fordern von Jesus ein Zeichen vom Himmel (leuchtender Stern).",
+          "Sauerteig: Jesus warnt: «Seht zu und hütet euch vor dem Sauerteig der Pharisäer und Sadduzäer!» (Teig in Tonschale, Lehrer mit Schriftrolle); die Jünger mit leerem Korb.",
+          "Bekenntnis: Jesus fragt: «Ihr aber, wer, sagt ihr, sei ich?» (Fragezeichen); Petrus (Schlüssel, grauer Bart) antwortet: «Du bist der Christus, der Sohn des lebendigen Gottes!» (Ölhorn mit goldenem Tropfen auf eine Krone); dahinter der Fels (grauer Felsbrocken).",
+          "Der Weg: Jesus sagt den Jüngern: «Wenn jemand hinter mir herkommen will, der verleugne sich selbst und nehme sein Kreuz auf sich und folge mir nach.» (Kreuz, Nachfolge in der Blase; dunkles Holzkreuz am Boden); Leiden und Auferweckung nennt das Merkwort."
         ]
       }
     }

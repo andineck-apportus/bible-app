@@ -1,0 +1,151 @@
+{
+ "id": "CORE-MAT-013-001-009",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.13.1-MAT.13.9",
+ "target": "TU-MAT-013-001-009",
+ "core_de": "Vom Boot aus erzählt Jesus der grossen Menge das Gleichnis vom Sämann: Samen fällt an den Weg und wird von Vögeln gefressen, auf felsigen Boden und verdorrt, unter die Dornen und wird erstickt, auf gute Erde und bringt Frucht, hundertfach, sechzigfach, dreissigfach – wer Ohren hat, der höre.",
+ "mode": "parable",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-MENGE"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "parable",
+    "subtype": "Bildhälfte ohne Deutung (Deutung in [[MAT.13.18-MAT.13.23]])",
+    "range": "MAT.13.1-MAT.13.9",
+    "elements": [
+     {
+      "label": "Rahmen: Jesus im Boot, die Menge am Ufer; er redet vieles in Gleichnissen",
+      "ref": "MAT.13.1-MAT.13.3",
+      "role": "Rahmen"
+     },
+     {
+      "label": "Der Sämann ging hinaus, um zu säen",
+      "ref": "MAT.13.3",
+      "role": "Bild"
+     },
+     {
+      "label": "Vier Böden",
+      "ref": "MAT.13.4-MAT.13.8",
+      "role": "Reihe",
+      "child": "s2"
+     },
+     {
+      "label": "Wer Ohren hat, der höre!",
+      "ref": "MAT.13.9",
+      "role": "Ruf"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "Wer Ohren hat, der höre!",
+       "refs": [
+        "MAT.11.15",
+        "MAT.13.9",
+        "MAT.13.43"
+       ],
+       "role": "Ruf am Schluss"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "Boden → Ergebnis (3 + 1)",
+    "range": "MAT.13.4-MAT.13.8",
+    "elements": [
+     {
+      "label": "an den Weg → die Vögel frassen es auf",
+      "ref": "MAT.13.4"
+     },
+     {
+      "label": "auf den felsigen Boden → ging sogleich auf, verdorrte ohne Wurzel",
+      "ref": "MAT.13.5-MAT.13.6"
+     },
+     {
+      "label": "unter die Dornen → die Dornen erstickten es",
+      "ref": "MAT.13.7"
+     },
+     {
+      "label": "auf die gute Erde → brachte Frucht: hundertfach, sechzigfach, dreissigfach",
+      "ref": "MAT.13.8",
+      "role": "Schlussglied, Pointe"
+     }
+    ],
+    "features": {
+     "pattern_break": [
+      {
+       "ref": "MAT.13.8",
+       "note": "Drei Verluste, ein Gelingen mit dreifacher Abstufung"
+      }
+     ],
+     "numbers": [
+      {
+       "ref": "MAT.13.8",
+       "note": "hundertfach, sechzigfach, dreissigfach (absteigend)"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.13.1-MAT.13.3",
+   "text_de": "Jesus sitzt am See; wegen der grossen Menge steigt er in ein Boot, die Menge steht am Ufer, und er redet vieles in Gleichnissen: «Siehe, der Sämann ging hinaus, um zu säen.»",
+   "reason_de": "Rahmen der Gleichnisrede (Kriterium 3).",
+   "recognition_de": "Jesus im Boot, die Menge am Ufer.",
+   "keywords": [
+    "sodass er in ein Boot stieg und sich setzte",
+    "der Sämann ging hinaus, um zu säen"
+   ]
+  },
+  {
+   "reference": "MAT.13.4-MAT.13.9",
+   "text_de": "Einiges fällt an den Weg, und die Vögel fressen es; anderes auf felsigen Boden, es geht schnell auf und verdorrt; anderes unter die Dornen, die es ersticken; anderes auf die gute Erde und bringt Frucht: hundertfach, sechzigfach, dreissigfach. Wer Ohren hat, der höre!",
+   "reason_de": "Die vier Böden tragen das Gleichnis (Kriterien 1 und 4).",
+   "recognition_de": "Raster mit vier Feldern: Weg – felsiger Boden – Dornen – gute Erde.",
+   "keywords": [
+    "fiel einiges an den Weg",
+    "Anderes aber fiel auf die gute Erde und brachte Frucht",
+    "Wer Ohren hat, der höre!"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ob die Saattechnik (erst säen, dann pflügen) die Bildhälfte erklärt – Hintergrund damals"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-MENGE",
+  "FIG-ROLLE-SAEMANN"
+ ],
+ "places": [
+  "FIG-ORT-SEE"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.13.1-MAT.13.9",
+   "fingerprint": "22d736213427746a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

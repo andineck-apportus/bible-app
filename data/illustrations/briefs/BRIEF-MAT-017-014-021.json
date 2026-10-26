@@ -13,40 +13,53 @@
       "n": 1,
       "reference": "MAT.17.14-MAT.17.16",
       "figures": [
-        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER",
+        "FIG-ROLLE-JUNGE",
         "FIG-ROLLE-VATER",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-JESUS"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-DAEMON"
+      ],
       "speech": [
         {
           "from": "FIG-ROLLE-VATER",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ZEICHEN-KIND",
-            "FIG-ZEICHEN-FEUER",
-            "FIG-ZEICHEN-WASSER"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-VATER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-GRUPPE-JUENGER",
             "FIG-ZEICHEN-HEILEN",
             "FIG-ZEICHEN-NICHT"
-          ]
+          ],
+          "word": {
+            "de": "Und ich habe ihn zu deinen Jüngern gebracht, und sie konnten ihn nicht heilen.",
+            "gsw": "Und ich ha en zu dine Jünger brocht, und si händ en nöd chöne heile."
+          }
         }
       ],
-      "action_de": "Als sie zur Menge kommen, fällt ein Mensch vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes! Er ist mondsüchtig und fällt oft ins Feuer und ins Wasser; deine Jünger konnten ihn nicht heilen.",
+      "action_de": "Ein Mensch fällt vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer; die Jünger konnten ihn nicht heilen.",
+      "keywords": {
+        "de": "Herr, erbarme dich meines Sohnes",
+        "gsw": "Herr, häb Erbarme mit mim Sohn"
+      },
       "stage": {
         "pose": {
           "FIG-ROLLE-VATER": "kneel"
         },
+        "at": {
+          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+        },
         "mood": {
+          "FIG-GRUPPE-JUENGER": "worried",
+          "FIG-ROLLE-JUNGE": "pain",
           "FIG-ROLLE-VATER": "worried",
-          "FIG-GRUPPE-ZWOELF": "pensive"
+          "FIG-JESUS": "calm"
+        },
+        "x": {
+          "FIG-GRUPPE-JUENGER": 22,
+          "FIG-ROLLE-JUNGE": 66,
+          "FIG-ROLLE-VATER": 112,
+          "FIG-JESUS": 162
         }
       }
     },
@@ -55,34 +68,36 @@
       "reference": "MAT.17.17-MAT.17.18",
       "figures": [
         "FIG-JESUS",
-        "FIG-ROLLE-JUNGE"
+        "FIG-ROLLE-JUNGE",
+        "FIG-ROLLE-VATER"
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-DAEMON"
+        "FIG-ZEICHEN-AUSTREIBEN",
+        "FIG-ZEICHEN-HEILEN"
       ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-JUNGE",
+          "to": "FIG-ROLLE-VATER",
           "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-AUSTREIBEN"
-          ]
+            "FIG-ROLLE-JUNGE"
+          ],
+          "word": {
+            "de": "Bringt ihn mir hierher!",
+            "gsw": "Bringed en mir da häre!"
+          }
         }
       ],
-      "action_de": "Jesus klagt über das ungläubige Geschlecht und sagt: Bringt ihn mir hierher! Er droht dem Dämon, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+      "action_de": "Jesus sagt: O ungläubiges und verkehrtes Geschlecht! Bringt ihn mir hierher! Er droht ihm, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+      "keywords": {
+        "de": "der Dämon fuhr von ihm aus",
+        "gsw": "de Dämon isch us ihm usgfahre"
+      },
       "stage": {
-        "x": {
-          "FIG-JESUS": 62,
-          "FIG-ROLLE-JUNGE": 124
-        },
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-ROLLE-JUNGE": "calm"
-        },
-        "beside": {
-          "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+        "at": {
+          "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
         },
         "arrows": [
           [
@@ -90,66 +105,90 @@
             "FIG-ROLLE-JUNGE",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "determined",
+          "FIG-ROLLE-JUNGE": "smile",
+          "FIG-ROLLE-VATER": "calm"
+        },
+        "x": {
+          "FIG-JESUS": 36,
+          "FIG-ROLLE-JUNGE": 100,
+          "FIG-ROLLE-VATER": 154
+        }
       }
     },
     {
       "n": 3,
       "reference": "MAT.17.19-MAT.17.20",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-ZWOELF",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ZEICHEN-DAEMON",
-            "FIG-ZEICHEN-NICHT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+      "speech": [],
+      "action_de": "Die Jünger fragen: Warum konnten wir ihn nicht austreiben? – Wegen eures Kleinglaubens. Wenn ihr Glauben habt wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen; und nichts wird euch unmöglich sein.",
+      "keywords": {
+        "de": "Warum konnten wir ihn nicht austreiben?",
+        "gsw": "Werum händ mir en nöd chöne ustriibe?"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "cols": 3,
+        "speaker": "FIG-JESUS",
+        "title": {
+          "de": "Wegen eures Kleinglaubens.",
+          "gsw": "Wäge eurem Chliiglaube."
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-OBJ-SAMEN",
-            "FIG-ORT-BERG"
-          ]
-        }
-      ],
-      "action_de": "Die Jünger fragen Jesus allein: Warum konnten wir ihn nicht austreiben? Er sagt: Wegen eures Kleinglaubens. Habt ihr Glauben wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-ZWOELF": 36,
-          "FIG-JESUS": 150
-        }
+        "cells": [
+          {
+            "a": {
+              "de": "Wenn ihr Glauben habt wie ein Senfkorn,",
+              "gsw": "Wänn ir Glaube händ wie es Senfchorn,"
+            },
+            "icons": [
+              "FIG-OBJ-SAMEN",
+              "FIG-ZEICHEN-GLAUBEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "werdet ihr zu diesem Berg sagen: «Geh von hier nach dort!», und er wird hinübergehen;",
+              "gsw": "wärded ir zu dem Bärg säge: «Gang vo da dört äne!», und er wird änegaa;"
+            },
+            "icons": [
+              "FIG-ORT-BERG"
+            ]
+          },
+          {
+            "a": {
+              "de": "und nichts wird euch unmöglich sein.",
+              "gsw": "und nüüt wird eu unmöglich sii."
+            },
+            "icons": [
+              "FIG-ZEICHEN-KRAFT"
+            ],
+            "tone": "new"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Als sie zur Menge kommen, fällt ein Mensch vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes! Er ist mondsüchtig und fällt oft ins Feuer und ins Wasser; deine Jünger konnten ihn nicht heilen.",
-    "Jesus klagt über das ungläubige Geschlecht und sagt: Bringt ihn mir hierher! Er droht dem Dämon, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
-    "Die Jünger fragen Jesus allein: Warum konnten wir ihn nicht austreiben? Er sagt: Wegen eures Kleinglaubens. Habt ihr Glauben wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen."
+    "Ein Mensch fällt vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer; die Jünger konnten ihn nicht heilen.",
+    "Jesus sagt: O ungläubiges und verkehrtes Geschlecht! Bringt ihn mir hierher! Er droht ihm, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+    "Die Jünger fragen: Warum konnten wir ihn nicht austreiben? – Wegen eures Kleinglaubens. Wenn ihr Glauben habt wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen; und nichts wird euch unmöglich sein."
   ],
   "captions_de": [
-    "Die Bitte: Ein Vater kniet vor Jesus: Sein Sohn fällt ins Feuer und ins Wasser (Kind, Flammen, Wassertropfen); die Jünger konnten ihn nicht heilen (Jünger, heilende Hand, roter Kreis mit Schrägbalken).",
-    "Jesu Wort → der Junge ist frei: Jesus gebietet dem Dämon (kleiner dunkler Wirbel) auszufahren (Pfeil von Jesus zum Jungen; Pfeil mit Bewegungsstrichen); der Wirbel ist neben dem Jungen, nicht mehr in ihm.",
-    "Kleiner Glaube: Die Jünger fragen, warum sie es nicht konnten (dunkler Wirbel, roter Kreis mit Schrägbalken, Fragezeichen); Jesus: Glaube wie ein Korn versetzt einen Berg (Hand und Keimling, Berg)."
+    "Die Bitte: Der Vater (grauer Bart) kniet vor Jesus: «Herr, erbarme dich meines Sohnes» (Merkwort) und: «Und ich habe ihn zu deinen Jüngern gebracht, und sie konnten ihn nicht heilen.» (Jünger, heilen im Verbotskreis); der Junge (helles kurzes Gewand) leidet (kleiner dunkler Wirbel).",
+    "Heilung: Jesus sagt: «Bringt ihn mir hierher!» und droht dem Dämon (dunkler Schatten mit Pfeil hinaus); der Junge ist geheilt (berührende Hand mit grünem Lichtpunkt).",
+    "Pfeilkette (Bild Jesus, Blase «Wegen eures Kleinglaubens»): Wenn ihr Glauben habt wie ein Senfkorn (Hand mit Keimling; Herz mit Lichtstrahl) → werdet ihr zu diesem Berg sagen: «Geh von hier nach dort!», und er wird hinübergehen (grauer Berg) → hervorgehoben: Nichts wird euch unmöglich sein."
   ],
-  "interpretation_note_de": "«Mondsüchtig» ([[MAT.17.15]]) ist nicht als Krankheitsbild gezeichnet, nur die Not (Feuer, Wasser). Der Dämon ist als dunkler Wirbel ohne Gesicht gezeichnet. Der Mensch ([[MAT.17.14]]) ist als Vater dargestellt, weil er von «meinem Sohn» spricht. Die Klage über das «ungläubige und verkehrte Geschlecht» ([[MAT.17.17]]) und die Menge sind nicht gezeichnet. Das Senfkorn zeigt die Hand mit Körnern; der Berg steht für das Bildwort vom Berg, der hinübergeht. [[MAT.17.21]] fehlt im griechischen Grundtext (SBLGNT).",
+  "interpretation_note_de": "Drei Felder nach «Bitte – Klage – Heilung – Belehrung» ([[MAT.17.14-MAT.17.21]]). Die Krankheit (Feuer, Wasser) ist nicht ausgemalt; der Dämon erscheint als dunkler Wirbel. Die Belehrung ist eine Pfeilkette Bedingung → Folge. [[MAT.17.21]] fehlt im Grundtext und im Bild.",
   "basis": [
     {
       "record": "TU-MAT-017-014-021",
       "field": "summary",
-      "fingerprint": "e21e420ae68f905b"
+      "fingerprint": "1bcb69ef86ffa2f7"
     },
     {
       "record": "TRANS-MAT-017-001-027-DE-WORKING",
@@ -171,7 +210,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -586,6 +625,531 @@
           "Die Bitte: Ein Vater kniet vor Jesus: Sein Sohn fällt ins Feuer und ins Wasser (Kind, Flammen, Wassertropfen); die Jünger konnten ihn nicht heilen (Jünger, heilende Hand, roter Kreis mit Schrägbalken).",
           "Jesu Wort → der Junge ist frei: Jesus gebietet dem Dämon (kleiner dunkler Wirbel) auszufahren (Pfeil von Jesus zum Jungen; Pfeil mit Bewegungsstrichen); der Wirbel ist neben dem Jungen, nicht mehr in ihm.",
           "Kleiner Glaube: Die Jünger fragen, warum sie es nicht konnten (dunkler Wirbel, roter Kreis mit Schrägbalken, Fragezeichen); Jesus: Glaube wie ein Korn versetzt einen Berg (Hand mit Körnern, Berg)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.14-MAT.17.16",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-VATER",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-KIND",
+                  "FIG-ZEICHEN-FEUER",
+                  "FIG-ZEICHEN-WASSER"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GRUPPE-ZWOELF",
+                  "FIG-ZEICHEN-HEILEN",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Als sie zur Menge kommen, fällt ein Mensch vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes! Er ist mondsüchtig und fällt oft ins Feuer und ins Wasser; deine Jünger konnten ihn nicht heilen.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-VATER": "kneel"
+              },
+              "mood": {
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.17-MAT.17.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUNGE",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-AUSTREIBEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus klagt über das ungläubige Geschlecht und sagt: Bringt ihn mir hierher! Er droht dem Dämon, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+            "stage": {
+              "x": {
+                "FIG-JESUS": 62,
+                "FIG-ROLLE-JUNGE": 124
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-JUNGE": "calm"
+              },
+              "beside": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.19-MAT.17.20",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ZWOELF",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-DAEMON",
+                  "FIG-ZEICHEN-NICHT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-SAMEN",
+                  "FIG-ORT-BERG"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger fragen Jesus allein: Warum konnten wir ihn nicht austreiben? Er sagt: Wegen eures Kleinglaubens. Habt ihr Glauben wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ZWOELF": 36,
+                "FIG-JESUS": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Als sie zur Menge kommen, fällt ein Mensch vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes! Er ist mondsüchtig und fällt oft ins Feuer und ins Wasser; deine Jünger konnten ihn nicht heilen.",
+          "Jesus klagt über das ungläubige Geschlecht und sagt: Bringt ihn mir hierher! Er droht dem Dämon, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+          "Die Jünger fragen Jesus allein: Warum konnten wir ihn nicht austreiben? Er sagt: Wegen eures Kleinglaubens. Habt ihr Glauben wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen."
+        ],
+        "captions_de": [
+          "Die Bitte: Ein Vater kniet vor Jesus: Sein Sohn fällt ins Feuer und ins Wasser (Kind, Flammen, Wassertropfen); die Jünger konnten ihn nicht heilen (Jünger, heilende Hand, roter Kreis mit Schrägbalken).",
+          "Jesu Wort → der Junge ist frei: Jesus gebietet dem Dämon (kleiner dunkler Wirbel) auszufahren (Pfeil von Jesus zum Jungen; Pfeil mit Bewegungsstrichen); der Wirbel ist neben dem Jungen, nicht mehr in ihm.",
+          "Kleiner Glaube: Die Jünger fragen, warum sie es nicht konnten (dunkler Wirbel, roter Kreis mit Schrägbalken, Fragezeichen); Jesus: Glaube wie ein Korn versetzt einen Berg (Hand und Keimling, Berg)."
+        ],
+        "interpretation_note_de": "«Mondsüchtig» ([[MAT.17.15]]) ist nicht als Krankheitsbild gezeichnet, nur die Not (Feuer, Wasser). Der Dämon ist als dunkler Wirbel ohne Gesicht gezeichnet. Der Mensch ([[MAT.17.14]]) ist als Vater dargestellt, weil er von «meinem Sohn» spricht. Die Klage über das «ungläubige und verkehrte Geschlecht» ([[MAT.17.17]]) und die Menge sind nicht gezeichnet. Das Senfkorn zeigt die Hand mit Körnern; der Berg steht für das Bildwort vom Berg, der hinübergeht. [[MAT.17.21]] fehlt im griechischen Grundtext (SBLGNT).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-017-014-021",
+            "field": "summary",
+            "fingerprint": "e21e420ae68f905b"
+          },
+          {
+            "record": "TRANS-MAT-017-001-027-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.17.14-MAT.17.16",
+            "fingerprint": "c7f7aa3e340833ae"
+          },
+          {
+            "record": "TRANS-MAT-017-001-027-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.17.17-MAT.17.18",
+            "fingerprint": "7d668b0fda382592"
+          },
+          {
+            "record": "TRANS-MAT-017-001-027-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.17.19-MAT.17.20",
+            "fingerprint": "9544fd834c3da07c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.14-MAT.17.16",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ROLLE-JUNGE",
+              "FIG-ROLLE-VATER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ROLLE-JUNGE"
+                ],
+                "word": {
+                  "de": "Herr, erbarme dich meines Sohnes!",
+                  "gsw": "Herr, häb Erbarme mit mim Sohn!"
+                }
+              }
+            ],
+            "action_de": "Ein Mensch fällt vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer; die Jünger konnten ihn nicht heilen.",
+            "keywords": {
+              "de": "sie konnten ihn nicht heilen",
+              "gsw": "si händ en nöd chöne heile"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-VATER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-ROLLE-JUNGE": "pain",
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 22,
+                "FIG-ROLLE-JUNGE": 66,
+                "FIG-ROLLE-VATER": 112,
+                "FIG-JESUS": 162
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.17-MAT.17.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGE",
+              "FIG-ROLLE-VATER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSTREIBEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-VATER",
+                "icons": [
+                  "FIG-ROLLE-JUNGE"
+                ],
+                "word": {
+                  "de": "Bringt ihn mir hierher!",
+                  "gsw": "Bringed en mir da häre!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: O ungläubiges und verkehrtes Geschlecht! Bringt ihn mir hierher! Er droht ihm, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+            "keywords": {
+              "de": "der Dämon fuhr von ihm aus",
+              "gsw": "de Dämon isch us ihm usgfahre"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-ROLLE-JUNGE": "smile",
+                "FIG-ROLLE-VATER": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 36,
+                "FIG-ROLLE-JUNGE": 100,
+                "FIG-ROLLE-VATER": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.19-MAT.17.20",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Jünger fragen: Warum konnten wir ihn nicht austreiben? – Wegen eures Kleinglaubens. Wenn ihr Glauben habt wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen; und nichts wird euch unmöglich sein.",
+            "keywords": {
+              "de": "Warum konnten wir ihn nicht austreiben?",
+              "gsw": "Werum händ mir en nöd chöne ustriibe?"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Wegen eures Kleinglaubens.",
+                "gsw": "Wäge eurem Chliiglaube."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Wenn ihr Glauben habt wie ein Senfkorn,",
+                    "gsw": "Wänn ir Glaube händ wie es Senfchorn,"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SAMEN",
+                    "FIG-ZEICHEN-GLAUBEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "werdet ihr zu diesem Berg sagen: «Geh von hier nach dort!», und er wird hinübergehen;",
+                    "gsw": "wärded ir zu dem Bärg säge: «Gang vo da dört äne!», und er wird änegaa;"
+                  },
+                  "icons": [
+                    "FIG-ORT-BERG"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "und nichts wird euch unmöglich sein.",
+                    "gsw": "und nüüt wird eu unmöglich sii."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-KRAFT"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Bitte: Der Vater (grauer Bart) kniet vor Jesus: «Herr, erbarme dich meines Sohnes!» (offene Hände mit Herz); der Junge (helles kurzes Gewand) leidet (kleiner dunkler Wirbel); die Jünger konnten ihn nicht heilen.",
+          "Heilung: Jesus sagt: «Bringt ihn mir hierher!» und droht dem Dämon (dunkler Schatten mit Pfeil hinaus); der Junge ist geheilt (berührende Hand mit grünem Lichtpunkt), der Vater freut sich.",
+          "Pfeilkette (Bild Jesus, Blase «Wegen eures Kleinglaubens»): Wenn ihr Glauben habt wie ein Senfkorn (Hand mit Keimling; Herz mit Lichtstrahl) → werdet ihr zu diesem Berg sagen: «Geh von hier nach dort!», und er wird hinübergehen (grauer Berg) → hervorgehoben: Nichts wird euch unmöglich sein."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.17.14-MAT.17.16",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ROLLE-JUNGE",
+              "FIG-ROLLE-VATER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-DAEMON"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-VATER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ROLLE-JUNGE"
+                ],
+                "word": {
+                  "de": "Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer; oft fällt er nämlich ins Feuer und oft ins Wasser.",
+                  "gsw": "Herr, häb Erbarme mit mim Sohn, wil er mondsüchtig isch und schlimm liidet; er gheit nämli vil Mal is Füür und vil Mal is Wasser."
+                }
+              }
+            ],
+            "action_de": "Ein Mensch fällt vor Jesus auf die Knie: Herr, erbarme dich meines Sohnes, denn er ist mondsüchtig und leidet schwer; die Jünger konnten ihn nicht heilen.",
+            "keywords": {
+              "de": "sie konnten ihn nicht heilen",
+              "gsw": "si händ en nöd chöne heile"
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-VATER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-DAEMON": "FIG-ROLLE-JUNGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-ROLLE-JUNGE": "pain",
+                "FIG-ROLLE-VATER": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 22,
+                "FIG-ROLLE-JUNGE": 66,
+                "FIG-ROLLE-VATER": 112,
+                "FIG-JESUS": 162
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.17.17-MAT.17.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-JUNGE",
+              "FIG-ROLLE-VATER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-AUSTREIBEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-VATER",
+                "icons": [
+                  "FIG-ROLLE-JUNGE"
+                ],
+                "word": {
+                  "de": "Bringt ihn mir hierher!",
+                  "gsw": "Bringed en mir da häre!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: O ungläubiges und verkehrtes Geschlecht! Bringt ihn mir hierher! Er droht ihm, der Dämon fährt aus, und der Junge ist von jener Stunde an geheilt.",
+            "keywords": {
+              "de": "der Dämon fuhr von ihm aus",
+              "gsw": "de Dämon isch us ihm usgfahre"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-AUSTREIBEN": "FIG-ROLLE-JUNGE",
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-JUNGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-JUNGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "determined",
+                "FIG-ROLLE-JUNGE": "smile",
+                "FIG-ROLLE-VATER": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 36,
+                "FIG-ROLLE-JUNGE": 100,
+                "FIG-ROLLE-VATER": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.17.19-MAT.17.20",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Jünger fragen: Warum konnten wir ihn nicht austreiben? – Wegen eures Kleinglaubens. Wenn ihr Glauben habt wie ein Senfkorn, werdet ihr zu diesem Berg sagen: Geh von hier nach dort!, und er wird hinübergehen; und nichts wird euch unmöglich sein.",
+            "keywords": {
+              "de": "Warum konnten wir ihn nicht austreiben?",
+              "gsw": "Werum händ mir en nöd chöne ustriibe?"
+            },
+            "diagram": {
+              "visual": "arrows",
+              "span": 2,
+              "cols": 3,
+              "speaker": "FIG-JESUS",
+              "title": {
+                "de": "Wegen eures Kleinglaubens.",
+                "gsw": "Wäge eurem Chliiglaube."
+              },
+              "cells": [
+                {
+                  "a": {
+                    "de": "Wenn ihr Glauben habt wie ein Senfkorn,",
+                    "gsw": "Wänn ir Glaube händ wie es Senfchorn,"
+                  },
+                  "icons": [
+                    "FIG-OBJ-SAMEN",
+                    "FIG-ZEICHEN-GLAUBEN"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "werdet ihr zu diesem Berg sagen: «Geh von hier nach dort!», und er wird hinübergehen;",
+                    "gsw": "wärded ir zu dem Bärg säge: «Gang vo da dört äne!», und er wird änegaa;"
+                  },
+                  "icons": [
+                    "FIG-ORT-BERG"
+                  ]
+                },
+                {
+                  "a": {
+                    "de": "und nichts wird euch unmöglich sein.",
+                    "gsw": "und nüüt wird eu unmöglich sii."
+                  },
+                  "icons": [
+                    "FIG-ZEICHEN-KRAFT"
+                  ],
+                  "tone": "new"
+                }
+              ]
+            }
+          }
+        ],
+        "captions_de": [
+          "Die Bitte: Der Vater (grauer Bart) kniet vor Jesus: «Herr, erbarme dich meines Sohnes!» (offene Hände mit Herz); der Junge (helles kurzes Gewand) leidet (kleiner dunkler Wirbel); die Jünger konnten ihn nicht heilen.",
+          "Heilung: Jesus sagt: «Bringt ihn mir hierher!» und droht dem Dämon (dunkler Schatten mit Pfeil hinaus); der Junge ist geheilt (berührende Hand mit grünem Lichtpunkt).",
+          "Pfeilkette (Bild Jesus, Blase «Wegen eures Kleinglaubens»): Wenn ihr Glauben habt wie ein Senfkorn (Hand mit Keimling; Herz mit Lichtstrahl) → werdet ihr zu diesem Berg sagen: «Geh von hier nach dort!», und er wird hinübergehen (grauer Berg) → hervorgehoben: Nichts wird euch unmöglich sein."
         ]
       }
     }

@@ -11,213 +11,204 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.13.24",
+      "reference": "MAT.13.24-MAT.13.26",
       "figures": [
-        "FIG-ROLLE-GUTSHERR"
-      ],
-      "objects": [
-        "FIG-OBJ-ACKER",
-        "FIG-OBJ-SAMEN"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld sät.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-GUTSHERR": "FIG-OBJ-SAMEN"
-        },
-        "x": {
-          "FIG-ROLLE-GUTSHERR": 50
-        },
-        "mood": {
-          "FIG-ROLLE-GUTSHERR": "calm"
-        },
-        "floor_x": {
-          "FIG-OBJ-ACKER": 100
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-GUTSHERR",
-            "FIG-OBJ-ACKER",
-            "throw"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.13.25-MAT.13.26",
-      "figures": [
-        "FIG-GRUPPE-DIENER",
+        "FIG-JESUS",
         "FIG-ROLLE-FEIND"
       ],
       "objects": [
-        "FIG-ORT-KORNFELD",
-        "FIG-OBJ-SAMEN",
+        "FIG-ORT-FELD",
         "FIG-OBJ-UNKRAUT"
       ],
-      "signs": [
-        "FIG-ZEICHEN-NACHT",
-        "FIG-ZEICHEN-SCHLAFEN"
-      ],
+      "signs": [],
       "speech": [],
-      "action_de": "Während die Leute schlafen, kommt sein Feind, sät Unkraut mitten unter den Weizen und geht weg; als die Saat aufgeht, zeigt sich auch das Unkraut.",
+      "action_de": "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld säte; während die Leute schliefen, kam sein Feind, säte Unkraut mitten unter den Weizen und ging weg.",
+      "keywords": {
+        "de": "kam sein Feind und säte Unkraut mitten unter den Weizen",
+        "gsw": "isch sin Feind choo und hät Uchruut mitten under de Weize gsäät"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
         },
-        "at": {
-          "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-DIENER"
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-FEIND": "angry"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 150,
-          "FIG-ROLLE-FEIND": 30
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-FEIND": 120
         },
         "floor_x": {
-          "FIG-OBJ-UNKRAUT": 84
-        },
-        "mood": {
-          "FIG-ROLLE-FEIND": "earnest",
-          "FIG-GRUPPE-DIENER": "sleep"
-        },
-        "arrows": [
-          [
-            "FIG-ROLLE-FEIND",
-            "FIG-OBJ-UNKRAUT",
-            "throw"
-          ]
+          "FIG-OBJ-UNKRAUT": 160
+        }
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MAT.13.27-MAT.13.29",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Die Knechte fragen den Hausherrn: Herr, hast du nicht guten Samen gesät? Woher hat es denn Unkraut? – Das hat ein Feind getan. – Willst du, dass wir es einsammeln? – Nein, damit ihr nicht beim Einsammeln des Unkrauts den Weizen ausreisst.",
+      "keywords": {
+        "de": "Das hat ein Feind getan",
+        "gsw": "Das hät en Feind gmacht"
+      },
+      "diagram": {
+        "visual": "dialogue",
+        "span": 2,
+        "turns": [
+          {
+            "who": "FIG-GRUPPE-DIENER",
+            "cell": {
+              "a": {
+                "de": "«Herr, hast du nicht guten Samen auf dein Feld gesät? Woher hat es denn Unkraut?»",
+                "gsw": "«Herr, häsch nöd guete Same uf dis Fäld gsäät? Vo wo hät s dänn Uchruut?»"
+              },
+              "icons": [
+                "FIG-OBJ-UNKRAUT",
+                "FIG-ZEICHEN-FRAGEN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-ROLLE-GUTSHERR",
+            "cell": {
+              "a": {
+                "de": "«Das hat ein Feind getan.»",
+                "gsw": "«Das hät en Feind gmacht.»"
+              },
+              "icons": [
+                "FIG-ROLLE-FEIND"
+              ]
+            }
+          },
+          {
+            "who": "FIG-GRUPPE-DIENER",
+            "cell": {
+              "a": {
+                "de": "«Willst du also, dass wir hingehen und es einsammeln?»",
+                "gsw": "«Wottsch also, dass mer gönd und s zämeläsed?»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-SAMMELN"
+              ]
+            }
+          },
+          {
+            "who": "FIG-ROLLE-GUTSHERR",
+            "cell": {
+              "a": {
+                "de": "«Nein, damit ihr nicht etwa beim Einsammeln des Unkrauts zusammen mit ihm den Weizen ausreisst.»",
+                "gsw": "«Nei, suscht riissed ir bim Zämeläse vom Uchruut zäme mit ihm de Weize us.»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-NICHT",
+                "FIG-OBJ-GARBE"
+              ]
+            }
+          }
         ]
       }
     },
     {
       "n": 3,
-      "reference": "MAT.13.27-MAT.13.28",
-      "figures": [
-        "FIG-GRUPPE-DIENER",
-        "FIG-ROLLE-GUTSHERR"
-      ],
-      "objects": [
-        "FIG-OBJ-UNKRAUT"
-      ],
+      "reference": "MAT.13.30",
+      "figures": [],
+      "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-DIENER",
-          "to": "FIG-ROLLE-GUTSHERR",
-          "icons": [
-            "FIG-OBJ-UNKRAUT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+      "speech": [],
+      "action_de": "Lasst beides miteinander wachsen bis zur Ernte; dann sollen die Schnitter zuerst das Unkraut bündeln, um es zu verbrennen, den Weizen aber in die Scheune bringen.",
+      "keywords": {
+        "de": "Lasst beides miteinander wachsen bis zur Ernte",
+        "gsw": "Lönd beides mitenand wachse bis zur Ärn"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "arrow": false,
+        "speaker": "FIG-ROLLE-GUTSHERR",
+        "title": {
+          "de": "Lasst beides miteinander wachsen bis zur Ernte!",
+          "gsw": "Lönd beides mitenand wachse bis zur Ärn!"
         },
-        {
-          "from": "FIG-ROLLE-GUTSHERR",
-          "to": "FIG-GRUPPE-DIENER",
-          "icons": [
-            "FIG-ROLLE-FEIND"
+        "head": [
+          {
+            "de": "das Unkraut",
+            "gsw": "s Uchruut"
+          },
+          {
+            "de": "der Weizen",
+            "gsw": "de Weize"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "Sammelt zuerst das Unkraut ein und bindet es in Bündel, um es zu verbrennen!",
+                "gsw": "Läsed zerscht s Uchruut zäme und binded s i Büschel, für s z verbränne!"
+              },
+              "icons": [
+                "FIG-OBJ-UNKRAUT",
+                "FIG-OBJ-FEUER"
+              ]
+            },
+            {
+              "a": {
+                "de": "Den Weizen aber bringt in meine Scheune!",
+                "gsw": "De Weize aber bringed i mini Schüür!"
+              },
+              "icons": [
+                "FIG-OBJ-GARBE",
+                "FIG-ORT-SCHEUNE"
+              ]
+            }
           ]
-        }
-      ],
-      "action_de": "Die Knechte fragen den Hausherrn, woher das Unkraut komme; er antwortet: «Das hat ein Feind getan.»",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-DIENER": "worried",
-          "FIG-ROLLE-GUTSHERR": "earnest"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.13.29-MAT.13.30",
-      "figures": [
-        "FIG-ROLLE-GUTSHERR",
-        "FIG-GRUPPE-SCHNITTER"
-      ],
-      "objects": [
-        "FIG-ORT-SCHEUNE",
-        "FIG-OBJ-GARBE"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-GUTSHERR",
-          "to": "FIG-GRUPPE-SCHNITTER",
-          "icons": [
-            "FIG-OBJ-UNKRAUT",
-            "FIG-ZEICHEN-FEUER"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-GUTSHERR",
-          "to": "FIG-GRUPPE-SCHNITTER",
-          "icons": [
-            "FIG-OBJ-GARBE",
-            "FIG-ORT-SCHEUNE"
-          ]
-        }
-      ],
-      "action_de": "Beides soll bis zur Ernte miteinander wachsen; dann werden die Schnitter zuerst das Unkraut bündeln und verbrennen und den Weizen in die Scheune bringen.",
-      "stage": {
-        "back_side": "right",
-        "mood": {
-          "FIG-ROLLE-GUTSHERR": "calm",
-          "FIG-GRUPPE-SCHNITTER": "calm"
-        },
-        "x": {
-          "FIG-ROLLE-GUTSHERR": 30,
-          "FIG-GRUPPE-SCHNITTER": 90
-        },
-        "hold": {
-          "FIG-GRUPPE-SCHNITTER": "FIG-OBJ-GARBE"
-        }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld sät.",
-    "Während die Leute schlafen, kommt sein Feind, sät Unkraut mitten unter den Weizen und geht weg; als die Saat aufgeht, zeigt sich auch das Unkraut.",
-    "Die Knechte fragen den Hausherrn, woher das Unkraut komme; er antwortet: «Das hat ein Feind getan.»",
-    "Beides soll bis zur Ernte miteinander wachsen; dann werden die Schnitter zuerst das Unkraut bündeln und verbrennen und den Weizen in die Scheune bringen."
+    "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld säte; während die Leute schliefen, kam sein Feind, säte Unkraut mitten unter den Weizen und ging weg.",
+    "Die Knechte fragen den Hausherrn: Herr, hast du nicht guten Samen gesät? Woher hat es denn Unkraut? – Das hat ein Feind getan. – Willst du, dass wir es einsammeln? – Nein, damit ihr nicht beim Einsammeln des Unkrauts den Weizen ausreisst.",
+    "Lasst beides miteinander wachsen bis zur Ernte; dann sollen die Schnitter zuerst das Unkraut bündeln, um es zu verbrennen, den Weizen aber in die Scheune bringen."
   ],
   "captions_de": [
-    "Gute Saat: Der Hausherr (dunkelroter Mantel) wirft guten Samen auf seinen Acker (Hand und Keimling, gepunkteter Bogen, brauner Acker mit Furchen).",
-    "Feind sät → Unkraut im Weizen: Während die Knechte schlafen (Zzz), kommt der Feind (Kapuze) mit Unkrautsamen (Hand und Keimling) und wirft sie aus (gepunkteter Bogen): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
-    "Woher? Die Knechte fragen nach dem Unkraut (dunkle Halme, Fragezeichen); der Hausherr antwortet: ein Feind (Mann mit Kapuze).",
-    "Bei der Ernte: Der Hausherr sagt den Schnittern (Stirnband, Garbe im Arm): Unkraut ins Feuer (dunkle Halme, Flammen), Weizen in die Scheune (Garbe, Speicher mit spitzem Dach)."
+    "Gleichnis: Jesus erzählt (am Rand); im Feld (reifes Getreide) sät der Feind (erdbrauner Mantel, Unkraut auf der Brust) Unkraut (dunkle Halme) unter den Weizen.",
+    "Gespräch in Dialogspalten: die Knechte (sandbeige Gewänder) fragen, der Hausherr (dunkelroter Mantel) antwortet – «Woher hat es denn Unkraut?» – «Das hat ein Feind getan.» – «Willst du, dass wir es einsammeln?» – «Nein, damit ihr nicht den Weizen ausreisst.»",
+    "Ernte in zwei Spalten (Bild Hausherr, Blase «Lasst beides miteinander wachsen bis zur Ernte!»): links das Unkraut in Bündeln zum Verbrennen (dunkle Halme, Flamme); rechts, hervorgehoben, der Weizen in die Scheune (goldene Garbe, Lehmbau mit Holztor)."
   ],
-  "interpretation_note_de": "Der Mensch, der sät, heisst ab [[MAT.13.27]] Hausherr; das Bild zeigt ihn durchgehend als Gutsherrn. Die Knechte sind dieselben Leute, die in [[MAT.13.25]] schlafen (Deutung). Das Unkraut ist wohl der Taumellolch; die dunkle Farbe dient nur der Unterscheidung. Die Ernte ist hier noch angekündigt; Feld 4 zeigt die Anweisung, nicht die Ernte.",
+  "interpretation_note_de": "Drei Felder nach «Saat – Feind – Gespräch – Ernte» ([[MAT.13.24-MAT.13.30]]). Das Gleichnis wird als Bild erzählt, Jesus steht als Erzähler am Rand. Die Ernte ist im Gleichnis angeordnet, nicht erzählt; die Spalten geben die Anordnung des Hausherrn wieder, hervorgehoben ist der Weizen. Die Deutung folgt erst [[MAT.13.36-MAT.13.43]].",
   "basis": [
     {
       "record": "TU-MAT-013-024-030",
       "field": "summary",
-      "fingerprint": "bf7b1f896bf94e2a"
+      "fingerprint": "a430e5d83b4bce7f"
     },
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.13.24",
-      "fingerprint": "16bb6b6e3bd069fc"
+      "reference": "MAT.13.24-MAT.13.26",
+      "fingerprint": "2f43e249b0326056"
     },
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.13.25-MAT.13.26",
-      "fingerprint": "cbb890dd9e8eae57"
+      "reference": "MAT.13.27-MAT.13.29",
+      "fingerprint": "e3ae3fbea236b267"
     },
     {
       "record": "TRANS-MAT-013-001-058-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.13.27-MAT.13.28",
-      "fingerprint": "3ecd9523e0c2e689"
-    },
-    {
-      "record": "TRANS-MAT-013-001-058-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.13.29-MAT.13.30",
-      "fingerprint": "836a5a4393506d4f"
+      "reference": "MAT.13.30",
+      "fingerprint": "2708bd2dafe4dc92"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -566,6 +557,417 @@
           "Feind sät → Unkraut im Weizen: Während die Knechte schlafen (Mondsichel mit Punkten), kommt der Feind (Kapuze) mit Unkrautsamen (Hand mit Körnern) und wirft sie aus (gepunkteter Bogen): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
           "Woher? Die Knechte fragen nach dem Unkraut (dunkle Halme, Fragezeichen); der Hausherr antwortet: ein Feind (Mann mit Kapuze).",
           "Bei der Ernte: Der Hausherr sagt den Schnittern (Stirnband, Garbe im Arm): Unkraut ins Feuer (dunkle Halme, Flammen), Weizen in die Scheune (Garbe, Speicher mit spitzem Dach)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.24",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR"
+            ],
+            "objects": [
+              "FIG-OBJ-ACKER",
+              "FIG-OBJ-SAMEN"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld sät.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-GUTSHERR": "FIG-OBJ-SAMEN"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 50
+              },
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm"
+              },
+              "floor_x": {
+                "FIG-OBJ-ACKER": 100
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-GUTSHERR",
+                  "FIG-OBJ-ACKER",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.25-MAT.13.26",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-FEIND"
+            ],
+            "objects": [
+              "FIG-ORT-KORNFELD",
+              "FIG-OBJ-SAMEN",
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-NACHT",
+              "FIG-ZEICHEN-SCHLAFEN"
+            ],
+            "speech": [],
+            "action_de": "Während die Leute schlafen, kommt sein Feind, sät Unkraut mitten unter den Weizen und geht weg; als die Saat aufgeht, zeigt sich auch das Unkraut.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FEIND": "FIG-OBJ-SAMEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHLAFEN": "FIG-GRUPPE-DIENER"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 150,
+                "FIG-ROLLE-FEIND": 30
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 84
+              },
+              "mood": {
+                "FIG-ROLLE-FEIND": "earnest",
+                "FIG-GRUPPE-DIENER": "sleep"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-FEIND",
+                  "FIG-OBJ-UNKRAUT",
+                  "throw"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.27-MAT.13.28",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-GUTSHERR"
+            ],
+            "objects": [
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-ROLLE-GUTSHERR",
+                "icons": [
+                  "FIG-OBJ-UNKRAUT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ROLLE-FEIND"
+                ]
+              }
+            ],
+            "action_de": "Die Knechte fragen den Hausherrn, woher das Unkraut komme; er antwortet: «Das hat ein Feind getan.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-DIENER": "worried",
+                "FIG-ROLLE-GUTSHERR": "earnest"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.13.29-MAT.13.30",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-GRUPPE-SCHNITTER"
+            ],
+            "objects": [
+              "FIG-ORT-SCHEUNE",
+              "FIG-OBJ-GARBE"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-SCHNITTER",
+                "icons": [
+                  "FIG-OBJ-UNKRAUT",
+                  "FIG-ZEICHEN-FEUER"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-SCHNITTER",
+                "icons": [
+                  "FIG-OBJ-GARBE",
+                  "FIG-ORT-SCHEUNE"
+                ]
+              }
+            ],
+            "action_de": "Beides soll bis zur Ernte miteinander wachsen; dann werden die Schnitter zuerst das Unkraut bündeln und verbrennen und den Weizen in die Scheune bringen.",
+            "stage": {
+              "back_side": "right",
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm",
+                "FIG-GRUPPE-SCHNITTER": "calm"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 30,
+                "FIG-GRUPPE-SCHNITTER": 90
+              },
+              "hold": {
+                "FIG-GRUPPE-SCHNITTER": "FIG-OBJ-GARBE"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld sät.",
+          "Während die Leute schlafen, kommt sein Feind, sät Unkraut mitten unter den Weizen und geht weg; als die Saat aufgeht, zeigt sich auch das Unkraut.",
+          "Die Knechte fragen den Hausherrn, woher das Unkraut komme; er antwortet: «Das hat ein Feind getan.»",
+          "Beides soll bis zur Ernte miteinander wachsen; dann werden die Schnitter zuerst das Unkraut bündeln und verbrennen und den Weizen in die Scheune bringen."
+        ],
+        "captions_de": [
+          "Gute Saat: Der Hausherr (dunkelroter Mantel) wirft guten Samen auf seinen Acker (Hand und Keimling, gepunkteter Bogen, brauner Acker mit Furchen).",
+          "Feind sät → Unkraut im Weizen: Während die Knechte schlafen (Zzz), kommt der Feind (Kapuze) mit Unkrautsamen (Hand und Keimling) und wirft sie aus (gepunkteter Bogen): Unkraut (dunkle Halme) wächst im Weizen (Kornfeld).",
+          "Woher? Die Knechte fragen nach dem Unkraut (dunkle Halme, Fragezeichen); der Hausherr antwortet: ein Feind (Mann mit Kapuze).",
+          "Bei der Ernte: Der Hausherr sagt den Schnittern (Stirnband, Garbe im Arm): Unkraut ins Feuer (dunkle Halme, Flammen), Weizen in die Scheune (Garbe, Speicher mit spitzem Dach)."
+        ],
+        "interpretation_note_de": "Der Mensch, der sät, heisst ab [[MAT.13.27]] Hausherr; das Bild zeigt ihn durchgehend als Gutsherrn. Die Knechte sind dieselben Leute, die in [[MAT.13.25]] schlafen (Deutung). Das Unkraut ist wohl der Taumellolch; die dunkle Farbe dient nur der Unterscheidung. Die Ernte ist hier noch angekündigt; Feld 4 zeigt die Anweisung, nicht die Ernte.",
+        "basis": [
+          {
+            "record": "TU-MAT-013-024-030",
+            "field": "summary",
+            "fingerprint": "bf7b1f896bf94e2a"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.24",
+            "fingerprint": "16bb6b6e3bd069fc"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.25-MAT.13.26",
+            "fingerprint": "cbb890dd9e8eae57"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.27-MAT.13.28",
+            "fingerprint": "3ecd9523e0c2e689"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.29-MAT.13.30",
+            "fingerprint": "836a5a4393506d4f"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-013-024-030",
+            "field": "summary",
+            "fingerprint": "bf7b1f896bf94e2a"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.24-MAT.13.26",
+            "fingerprint": "2f43e249b0326056"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.27-MAT.13.29",
+            "fingerprint": "e3ae3fbea236b267"
+          },
+          {
+            "record": "TRANS-MAT-013-001-058-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.13.30",
+            "fingerprint": "2708bd2dafe4dc92"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.13.24-MAT.13.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-FEIND"
+            ],
+            "objects": [
+              "FIG-ORT-FELD",
+              "FIG-OBJ-UNKRAUT"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Das Reich der Himmel gleicht einem Menschen, der guten Samen auf sein Feld säte; während die Leute schliefen, kam sein Feind, säte Unkraut mitten unter den Weizen und ging weg.",
+            "keywords": {
+              "de": "kam sein Feind und säte Unkraut mitten unter den Weizen",
+              "gsw": "isch sin Feind choo und hät Uchruut mitten under de Weize gsäät"
+            },
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-FEIND": "angry"
+              },
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-FEIND": 120
+              },
+              "floor_x": {
+                "FIG-OBJ-UNKRAUT": 160
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.13.27-MAT.13.29",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Die Knechte fragen den Hausherrn: Herr, hast du nicht guten Samen gesät? Woher hat es denn Unkraut? – Das hat ein Feind getan. – Willst du, dass wir es einsammeln? – Nein, damit ihr nicht beim Einsammeln des Unkrauts den Weizen ausreisst.",
+            "keywords": {
+              "de": "Das hat ein Feind getan",
+              "gsw": "Das hät en Feind gmacht"
+            },
+            "diagram": {
+              "visual": "dialogue",
+              "span": 2,
+              "turns": [
+                {
+                  "who": "FIG-GRUPPE-DIENER",
+                  "cell": {
+                    "a": {
+                      "de": "«Herr, hast du nicht guten Samen auf dein Feld gesät? Woher hat es denn Unkraut?»",
+                      "gsw": "«Herr, häsch nöd guete Same uf dis Fäld gsäät? Vo wo hät s dänn Uchruut?»"
+                    },
+                    "icons": [
+                      "FIG-OBJ-UNKRAUT",
+                      "FIG-ZEICHEN-FRAGEN"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-ROLLE-GUTSHERR",
+                  "cell": {
+                    "a": {
+                      "de": "«Das hat ein Feind getan.»",
+                      "gsw": "«Das hät en Feind gmacht.»"
+                    },
+                    "icons": [
+                      "FIG-ROLLE-FEIND"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-GRUPPE-DIENER",
+                  "cell": {
+                    "a": {
+                      "de": "«Willst du also, dass wir hingehen und es einsammeln?»",
+                      "gsw": "«Wottsch also, dass mer gönd und s zämeläsed?»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-SAMMELN"
+                    ]
+                  }
+                },
+                {
+                  "who": "FIG-ROLLE-GUTSHERR",
+                  "cell": {
+                    "a": {
+                      "de": "«Nein, damit ihr nicht etwa beim Einsammeln des Unkrauts zusammen mit ihm den Weizen ausreisst.»",
+                      "gsw": "«Nei, suscht riissed ir bim Zämeläse vom Uchruut zäme mit ihm de Weize us.»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-NEIN"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.13.30",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Lasst beides miteinander wachsen bis zur Ernte; dann sollen die Schnitter zuerst das Unkraut bündeln, um es zu verbrennen, den Weizen aber in die Scheune bringen.",
+            "keywords": {
+              "de": "Lasst beides miteinander wachsen bis zur Ernte",
+              "gsw": "Lönd beides mitenand wachse bis zur Ärn"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "arrow": false,
+              "speaker": "FIG-ROLLE-GUTSHERR",
+              "title": {
+                "de": "Lasst beides miteinander wachsen bis zur Ernte!",
+                "gsw": "Lönd beides mitenand wachse bis zur Ärn!"
+              },
+              "head": [
+                {
+                  "de": "das Unkraut",
+                  "gsw": "s Uchruut"
+                },
+                {
+                  "de": "der Weizen",
+                  "gsw": "de Weize"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Sammelt zuerst das Unkraut ein und bindet es in Bündel, um es zu verbrennen!",
+                      "gsw": "Läsed zerscht s Uchruut zäme und binded s i Büschel, für s z verbränne!"
+                    },
+                    "icons": [
+                      "FIG-OBJ-UNKRAUT",
+                      "FIG-OBJ-FEUER"
+                    ]
+                  },
+                  {
+                    "a": {
+                      "de": "Den Weizen aber bringt in meine Scheune!",
+                      "gsw": "De Weize aber bringed i mini Schüür!"
+                    },
+                    "icons": [
+                      "FIG-OBJ-GARBE",
+                      "FIG-ORT-SCHEUNE"
+                    ]
+                  }
+                ]
+              ]
+            }
+          }
         ]
       }
     }

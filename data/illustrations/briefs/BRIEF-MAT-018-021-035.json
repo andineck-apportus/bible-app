@@ -25,175 +25,225 @@
           "icons": [
             "FIG-ZEICHEN-VERGEBEN",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Herr, wie oft wird mein Bruder gegen mich sündigen und ich ihm vergeben? Bis zu siebenmal?",
+            "gsw": "Herr, wie mängisch sündiget min Brueder gäge mich, und ich vergib em? Bis sibe Mal?"
+          }
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-PETRUS",
           "icons": [
-            "FIG-ZEICHEN-VERGEBEN",
-            "FIG-ZEICHEN-VERGEBEN",
             "FIG-ZEICHEN-VERGEBEN"
-          ]
+          ],
+          "word": {
+            "de": "Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+            "gsw": "Ich säg dir nöd: bis sibe Mal, sondern bis sibenesibezg Mal."
+          }
         }
       ],
-      "action_de": "Petrus fragt: Herr, wie oft soll ich meinem Bruder vergeben, wenn er gegen mich sündigt? Bis zu siebenmal? Jesus: Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+      "action_de": "Petrus fragt: Herr, wie oft wird mein Bruder gegen mich sündigen und ich ihm vergeben? Bis zu siebenmal? Jesus antwortet: Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+      "keywords": {
+        "de": "sondern bis zu siebenundsiebzigmal",
+        "gsw": "sondern bis sibenesibezg Mal"
+      },
+      "names": {
+        "FIG-PETRUS": {
+          "de": "Petrus",
+          "gsw": "Petrus"
+        }
+      },
       "stage": {
         "mood": {
-          "FIG-PETRUS": "pensive",
+          "FIG-PETRUS": "question",
           "FIG-JESUS": "smile"
+        },
+        "x": {
+          "FIG-PETRUS": 56,
+          "FIG-JESUS": 136
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.18.23-MAT.18.27",
-      "figures": [
-        "FIG-ROLLE-DIENER",
-        "FIG-ROLLE-KOENIG"
-      ],
+      "reference": "MAT.18.23-MAT.18.30",
+      "figures": [],
       "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-VERGEBEN"
-      ],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-DIENER",
-          "to": "FIG-ROLLE-KOENIG",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-OBJ-MUENZEN"
-          ]
-        }
-      ],
-      "action_de": "Das Reich der Himmel gleicht einem König, der mit seinen Knechten abrechnet. Einer schuldet ihm zehntausend Talente, wirft sich vor ihm nieder und bittet: Hab Geduld mit mir! Der König hat Erbarmen und erlässt ihm die ganze Schuld.",
-      "stage": {
-        "pose": {
-          "FIG-ROLLE-DIENER": "kneel"
+      "signs": [],
+      "speech": [],
+      "action_de": "Ein König erlässt seinem Knecht, der um Geduld fleht, die ganze Schuld von zehntausend Talenten; derselbe Knecht würgt seinen Mitknecht, der ihm hundert Denare schuldet, hört dessen gleiche Bitte nicht und wirft ihn ins Gefängnis.",
+      "keywords": {
+        "de": "Hab Geduld mit mir",
+        "gsw": "Häb Geduld mit mir"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "arrow": false,
+        "speaker": "FIG-JESUS",
+        "head_tones": [
+          "new",
+          "old"
+        ],
+        "title": {
+          "de": "Darum gleicht das Reich der Himmel einem König, der mit seinen Knechten abrechnen wollte.",
+          "gsw": "Drum isch s Riich vo de Himel wie en König, wo mit sine Chnächt hät wele abrächne."
         },
-        "mood": {
-          "FIG-ROLLE-DIENER": "worried",
-          "FIG-ROLLE-KOENIG": "calm"
-        },
-        "at": {
-          "FIG-ZEICHEN-VERGEBEN": "FIG-ROLLE-DIENER"
-        },
-        "arrows": [
+        "head": [
+          {
+            "de": "der König und sein Knecht",
+            "gsw": "de König und sin Chnächt"
+          },
+          {
+            "de": "der Knecht und sein Mitknecht",
+            "gsw": "de Chnächt und sin Mitchnächt"
+          }
+        ],
+        "rows": [
           [
-            "FIG-ROLLE-KOENIG",
-            "FIG-ROLLE-DIENER",
-            "act"
+            {
+              "a": {
+                "de": "Schuld: zehntausend Talente",
+                "gsw": "Schuld: zäätuusig Talänt"
+              },
+              "icons": [
+                "FIG-OBJ-TALENT"
+              ],
+              "tone": "new",
+              "who": "FIG-ROLLE-KOENIG"
+            },
+            {
+              "a": {
+                "de": "Schuld: hundert Denare",
+                "gsw": "Schuld: hundert Denar"
+              },
+              "icons": [
+                "FIG-OBJ-DENAR"
+              ],
+              "tone": "old",
+              "who": "FIG-ROLLE-SKLAVE"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "«Hab Geduld mit mir, und ich werde dir alles zurückzahlen!»",
+                "gsw": "«Häb Geduld mit mir, und ich zal dir alles zrugg!»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-KNIEN"
+              ],
+              "tone": "new",
+              "who": "FIG-ROLLE-SKLAVE"
+            },
+            {
+              "a": {
+                "de": "«Hab Geduld mit mir, und ich werde es dir zurückzahlen!»",
+                "gsw": "«Häb Geduld mit mir, und ich zal dir s zrugg!»"
+              },
+              "icons": [
+                "FIG-ZEICHEN-KNIEN"
+              ],
+              "tone": "old",
+              "who": "FIG-ROLLE-DIENER"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "Der Herr hat Erbarmen, lässt ihn frei und erlässt ihm das Darlehen.",
+                "gsw": "De Herr hät Erbarme, laat en frei und erlaat ihm s Darlehe."
+              },
+              "icons": [
+                "FIG-ZEICHEN-ERBARMEN",
+                "FIG-ZEICHEN-VERGEBEN"
+              ],
+              "tone": "new"
+            },
+            {
+              "a": {
+                "de": "Er wollte nicht und warf ihn ins Gefängnis, bis er die Schuld bezahlt hätte.",
+                "gsw": "Er hät nöd wele und hät en is Gfängnis gworfe, bis er d Schuld zalt hät."
+              },
+              "icons": [
+                "FIG-ORT-GEFAENGNIS"
+              ],
+              "tone": "old"
+            }
           ]
         ]
       }
     },
     {
       "n": 3,
-      "reference": "MAT.18.28-MAT.18.30",
-      "figures": [
-        "FIG-ROLLE-SKLAVE",
-        "FIG-ROLLE-DIENER"
-      ],
-      "objects": [
-        "FIG-ORT-GEFAENGNIS"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-SKLAVE",
-          "to": "FIG-ROLLE-DIENER",
-          "icons": [
-            "FIG-ZEICHEN-STUNDE",
-            "FIG-OBJ-MUENZEN"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-DIENER",
-          "to": "FIG-ROLLE-SKLAVE",
-          "icons": [
-            "FIG-ZEICHEN-NEIN",
-            "FIG-ORT-GEFAENGNIS"
-          ]
-        }
-      ],
-      "action_de": "Draussen trifft dieser Knecht einen Mitknecht, der ihm hundert Denare schuldet, und fordert das Geld. Der Mitknecht fällt nieder und bittet um Geduld; doch er will nicht und wirft ihn ins Gefängnis.",
-      "stage": {
-        "pose": {
-          "FIG-ROLLE-SKLAVE": "kneel"
-        },
-        "mood": {
-          "FIG-ROLLE-SKLAVE": "worried",
-          "FIG-ROLLE-DIENER": "earnest"
-        },
-        "back_side": "right",
-        "x": {
-          "FIG-ROLLE-SKLAVE": 36,
-          "FIG-ROLLE-DIENER": 92
-        }
-      }
-    },
-    {
-      "n": 4,
       "reference": "MAT.18.31-MAT.18.35",
       "figures": [
         "FIG-GRUPPE-DIENER",
         "FIG-ROLLE-KOENIG",
-        "FIG-ROLLE-DIENER"
+        "FIG-ROLLE-SKLAVE"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-TRAUER",
+        "FIG-ZEICHEN-AUSLIEFERN"
+      ],
       "speech": [
         {
-          "from": "FIG-GRUPPE-DIENER",
-          "to": "FIG-ROLLE-KOENIG",
-          "icons": [
-            "FIG-ROLLE-DIENER",
-            "FIG-ORT-GEFAENGNIS"
-          ]
-        },
-        {
           "from": "FIG-ROLLE-KOENIG",
-          "to": "FIG-ROLLE-DIENER",
+          "to": "FIG-ROLLE-SKLAVE",
           "icons": [
-            "FIG-ZEICHEN-VERGEBEN",
-            "FIG-ZEICHEN-ERBARMEN",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
+            "FIG-ZEICHEN-BOESES"
+          ],
+          "word": {
+            "de": "Du böser Knecht!",
+            "gsw": "Du böse Chnächt!"
+          }
         }
       ],
-      "action_de": "Die Mitknechte berichten traurig alles dem Herrn. Er ruft den Knecht: Du böser Knecht! Die ganze Schuld habe ich dir erlassen; hättest nicht auch du dich über deinen Mitknecht erbarmen müssen? So, sagt Jesus, wird der Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt.",
+      "action_de": "Die Mitknechte berichten es traurig dem Herrn; er sagt: Du böser Knecht! Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie ich mich über dich erbarmt habe? Er liefert ihn den Folterknechten aus. So wird auch der himmlische Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt.",
+      "keywords": {
+        "de": "Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen",
+        "gsw": "Hettsch du nöd au mit dim Mitchnächt müese Erbarme ha"
+      },
       "stage": {
+        "signs_who": {
+          "FIG-ZEICHEN-TRAUER": [
+            "FIG-GRUPPE-DIENER"
+          ]
+        },
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-ROLLE-SKLAVE"
+        },
         "mood": {
           "FIG-GRUPPE-DIENER": "worried",
-          "FIG-ROLLE-KOENIG": "earnest",
-          "FIG-ROLLE-DIENER": "worried"
+          "FIG-ROLLE-KOENIG": "angry",
+          "FIG-ROLLE-SKLAVE": "fear"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 34,
-          "FIG-ROLLE-KOENIG": 100,
-          "FIG-ROLLE-DIENER": 156
+          "FIG-GRUPPE-DIENER": 30,
+          "FIG-ROLLE-KOENIG": 96,
+          "FIG-ROLLE-SKLAVE": 158
         }
       }
     }
   ],
   "actions_de": [
-    "Petrus fragt: Herr, wie oft soll ich meinem Bruder vergeben, wenn er gegen mich sündigt? Bis zu siebenmal? Jesus: Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
-    "Das Reich der Himmel gleicht einem König, der mit seinen Knechten abrechnet. Einer schuldet ihm zehntausend Talente, wirft sich vor ihm nieder und bittet: Hab Geduld mit mir! Der König hat Erbarmen und erlässt ihm die ganze Schuld.",
-    "Draussen trifft dieser Knecht einen Mitknecht, der ihm hundert Denare schuldet, und fordert das Geld. Der Mitknecht fällt nieder und bittet um Geduld; doch er will nicht und wirft ihn ins Gefängnis.",
-    "Die Mitknechte berichten traurig alles dem Herrn. Er ruft den Knecht: Du böser Knecht! Die ganze Schuld habe ich dir erlassen; hättest nicht auch du dich über deinen Mitknecht erbarmen müssen? So, sagt Jesus, wird der Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt."
+    "Petrus fragt: Herr, wie oft wird mein Bruder gegen mich sündigen und ich ihm vergeben? Bis zu siebenmal? Jesus antwortet: Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+    "Ein König erlässt seinem Knecht, der um Geduld fleht, die ganze Schuld von zehntausend Talenten; derselbe Knecht würgt seinen Mitknecht, der ihm hundert Denare schuldet, hört dessen gleiche Bitte nicht und wirft ihn ins Gefängnis.",
+    "Die Mitknechte berichten es traurig dem Herrn; er sagt: Du böser Knecht! Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie ich mich über dich erbarmt habe? Er liefert ihn den Folterknechten aus. So wird auch der himmlische Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt."
   ],
   "captions_de": [
-    "Wie oft vergeben? Petrus fragt, wie oft er vergeben soll (zerrissener Schuldschein, Fragezeichen); Jesus: immer wieder (dreimal der zerrissene Schuldschein).",
-    "Bitte → Erlass (Die grosse Schuld): Ein Knecht (Schürze) kniet vor dem König und bittet um Geduld (Sanduhr, Münzen); der König hat Erbarmen und erlässt ihm die ganze Schuld (Pfeil vom König zum Knecht, zerrissener Schuldschein mit goldenen Funken beim Knecht).",
-    "Keine Geduld: Ein Mitknecht (ungefärbtes Gewand, Stirnband) bittet den Knecht um Geduld (Sanduhr, Münzen); der Knecht lehnt ab und lässt ihn ins Gefängnis werfen (rotes X, Steinblock mit Gitter).",
-    "Zur Rede gestellt: Die Mitknechte berichten traurig dem König (Knecht, Steinblock mit Gitter); der König hält dem Knecht vor: Ich habe dir vergeben, hättest du dich nicht auch erbarmen müssen? (zerrissener Schuldschein, Herz in Händen, Fragezeichen)."
+    "Wie oft vergeben? Petrus (Schlüssel) fragt: «Bis zu siebenmal?» (zerrissener Schuldschein, Fragezeichen); Jesus antwortet: «Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.»",
+    "Zwei Szenen in zwei Spalten (Bild Jesus, Blase «Darum gleicht das Reich der Himmel einem König, der mit seinen Knechten abrechnen wollte»): links, hervorgehoben, der König und sein Knecht (ungefärbtes Gewand, Tragkorb) – Schuld zehntausend Talente (Silbersack), «Hab Geduld mit mir, und ich werde dir alles zurückzahlen!», der Herr erlässt die Schuld (zerrissener Schuldschein); rechts der Knecht und sein Mitknecht (Schürze, Tablett) – Schuld hundert Denare (Silbermünze), «Hab Geduld mit mir, und ich werde es dir zurückzahlen!», er wirft ihn ins Gefängnis (Steinblock mit Gitter).",
+    "Zur Rede gestellt: Die Mitknechte (sandbeige Gewänder) haben traurig berichtet (Träne); der König (goldene Bügelkrone) sagt zornig zum Knecht: «Du böser Knecht!» (zackiger Schatten); seine Frage «Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen …?» steht im Merkwort; er liefert ihn aus (offene Hand und Kette)."
   ],
-  "interpretation_note_de": "«Siebenundsiebzigmal» ([[MAT.18.22]]) ist als dreifach wiederholtes Zeichen «vergeben» gezeichnet (keine Zahlen). Im Gleichnis ist der Knecht als Diener (Schürze), der Mitknecht als Sklave (einfaches Arbeitsgewand) gezeichnet, damit man die zwei unterscheidet; beide heissen im Text «Knecht». Die Schuld (zehntausend Talente, hundert Denare) zeigen Münzen, «Geduld» die Sanduhr. Das Würgen ([[MAT.18.28]]) und die Folterknechte ([[MAT.18.34]]) sind nicht gezeichnet; der Zorn des Herrn ist nur als ernstes Gesicht angedeutet. Die Deutung auf den himmlischen Vater ([[MAT.18.35]]) steht nur in der Handlung.",
+  "interpretation_note_de": "Drei Felder nach «Frage und Antwort – Gleichnis – Urteil – Anwendung» ([[MAT.18.21-MAT.18.35]]). Die zwei Szenen des Gleichnisses sind Zeile für Zeile gespiegelt (gleiche Bitte, entgegengesetzte Antwort); hervorgehoben ist das Erbarmen des Königs. Die Strafe ist gezeigt, wie der Text sie nennt (ausgeliefert), ohne Folter im Bild. Die Blase in Feld 3 gibt den Anruf aus [[MAT.18.32]] wörtlich, das Merkwort die Frage aus [[MAT.18.33]]; die Anwendung [[MAT.18.35]] steht im Kapitelbild.",
   "basis": [
     {
       "record": "TU-MAT-018-021-035",
       "field": "summary",
-      "fingerprint": "4968ee1c942db3fc"
+      "fingerprint": "44755c504b2e0b19"
     },
     {
       "record": "TRANS-MAT-018-001-035-DE-WORKING",
@@ -204,14 +254,8 @@
     {
       "record": "TRANS-MAT-018-001-035-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.18.23-MAT.18.27",
-      "fingerprint": "9ee7a7beb036b9e5"
-    },
-    {
-      "record": "TRANS-MAT-018-001-035-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.18.28-MAT.18.30",
-      "fingerprint": "a38b3fdcde2a4073"
+      "reference": "MAT.18.23-MAT.18.30",
+      "fingerprint": "be6a0c5c7a4ba8fc"
     },
     {
       "record": "TRANS-MAT-018-001-035-DE-WORKING",
@@ -221,7 +265,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -565,6 +609,726 @@
           "Keine Geduld: Ein Mitknecht (ungefärbtes Gewand, Stirnband) bittet den Knecht um Geduld (Sanduhr, Münzen); der Knecht lehnt ab und lässt ihn ins Gefängnis werfen (rotes X, Steinblock mit Gitter).",
           "Zur Rede gestellt: Die Mitknechte berichten traurig dem König (Knecht, Steinblock mit Gitter); der König hält dem Knecht vor: Ich habe dir vergeben, hättest du dich nicht auch erbarmen müssen? (zerrissener Schuldschein, Herz in Händen, Fragezeichen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.18.21-MAT.18.22",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-VERGEBEN"
+                ]
+              }
+            ],
+            "action_de": "Petrus fragt: Herr, wie oft soll ich meinem Bruder vergeben, wenn er gegen mich sündigt? Bis zu siebenmal? Jesus: Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "pensive",
+                "FIG-JESUS": "smile"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.18.23-MAT.18.27",
+            "figures": [
+              "FIG-ROLLE-DIENER",
+              "FIG-ROLLE-KOENIG"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-VERGEBEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-DIENER",
+                "to": "FIG-ROLLE-KOENIG",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-OBJ-MUENZEN"
+                ]
+              }
+            ],
+            "action_de": "Das Reich der Himmel gleicht einem König, der mit seinen Knechten abrechnet. Einer schuldet ihm zehntausend Talente, wirft sich vor ihm nieder und bittet: Hab Geduld mit mir! Der König hat Erbarmen und erlässt ihm die ganze Schuld.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-DIENER": "kneel"
+              },
+              "mood": {
+                "FIG-ROLLE-DIENER": "worried",
+                "FIG-ROLLE-KOENIG": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-VERGEBEN": "FIG-ROLLE-DIENER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-ROLLE-DIENER",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.18.28-MAT.18.30",
+            "figures": [
+              "FIG-ROLLE-SKLAVE",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-ORT-GEFAENGNIS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-SKLAVE",
+                "to": "FIG-ROLLE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-STUNDE",
+                  "FIG-OBJ-MUENZEN"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-DIENER",
+                "to": "FIG-ROLLE-SKLAVE",
+                "icons": [
+                  "FIG-ZEICHEN-NEIN",
+                  "FIG-ORT-GEFAENGNIS"
+                ]
+              }
+            ],
+            "action_de": "Draussen trifft dieser Knecht einen Mitknecht, der ihm hundert Denare schuldet, und fordert das Geld. Der Mitknecht fällt nieder und bittet um Geduld; doch er will nicht und wirft ihn ins Gefängnis.",
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-SKLAVE": "kneel"
+              },
+              "mood": {
+                "FIG-ROLLE-SKLAVE": "worried",
+                "FIG-ROLLE-DIENER": "earnest"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-SKLAVE": 36,
+                "FIG-ROLLE-DIENER": 92
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.18.31-MAT.18.35",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-KOENIG",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-DIENER",
+                "to": "FIG-ROLLE-KOENIG",
+                "icons": [
+                  "FIG-ROLLE-DIENER",
+                  "FIG-ORT-GEFAENGNIS"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-KOENIG",
+                "to": "FIG-ROLLE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Mitknechte berichten traurig alles dem Herrn. Er ruft den Knecht: Du böser Knecht! Die ganze Schuld habe ich dir erlassen; hättest nicht auch du dich über deinen Mitknecht erbarmen müssen? So, sagt Jesus, wird der Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-DIENER": "worried",
+                "FIG-ROLLE-KOENIG": "earnest",
+                "FIG-ROLLE-DIENER": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 34,
+                "FIG-ROLLE-KOENIG": 100,
+                "FIG-ROLLE-DIENER": 156
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Petrus fragt: Herr, wie oft soll ich meinem Bruder vergeben, wenn er gegen mich sündigt? Bis zu siebenmal? Jesus: Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+          "Das Reich der Himmel gleicht einem König, der mit seinen Knechten abrechnet. Einer schuldet ihm zehntausend Talente, wirft sich vor ihm nieder und bittet: Hab Geduld mit mir! Der König hat Erbarmen und erlässt ihm die ganze Schuld.",
+          "Draussen trifft dieser Knecht einen Mitknecht, der ihm hundert Denare schuldet, und fordert das Geld. Der Mitknecht fällt nieder und bittet um Geduld; doch er will nicht und wirft ihn ins Gefängnis.",
+          "Die Mitknechte berichten traurig alles dem Herrn. Er ruft den Knecht: Du böser Knecht! Die ganze Schuld habe ich dir erlassen; hättest nicht auch du dich über deinen Mitknecht erbarmen müssen? So, sagt Jesus, wird der Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt."
+        ],
+        "captions_de": [
+          "Wie oft vergeben? Petrus fragt, wie oft er vergeben soll (zerrissener Schuldschein, Fragezeichen); Jesus: immer wieder (dreimal der zerrissene Schuldschein).",
+          "Bitte → Erlass (Die grosse Schuld): Ein Knecht (Schürze) kniet vor dem König und bittet um Geduld (Sanduhr, Münzen); der König hat Erbarmen und erlässt ihm die ganze Schuld (Pfeil vom König zum Knecht, zerrissener Schuldschein mit goldenen Funken beim Knecht).",
+          "Keine Geduld: Ein Mitknecht (ungefärbtes Gewand, Stirnband) bittet den Knecht um Geduld (Sanduhr, Münzen); der Knecht lehnt ab und lässt ihn ins Gefängnis werfen (rotes X, Steinblock mit Gitter).",
+          "Zur Rede gestellt: Die Mitknechte berichten traurig dem König (Knecht, Steinblock mit Gitter); der König hält dem Knecht vor: Ich habe dir vergeben, hättest du dich nicht auch erbarmen müssen? (zerrissener Schuldschein, Herz in Händen, Fragezeichen)."
+        ],
+        "interpretation_note_de": "«Siebenundsiebzigmal» ([[MAT.18.22]]) ist als dreifach wiederholtes Zeichen «vergeben» gezeichnet (keine Zahlen). Im Gleichnis ist der Knecht als Diener (Schürze), der Mitknecht als Sklave (einfaches Arbeitsgewand) gezeichnet, damit man die zwei unterscheidet; beide heissen im Text «Knecht». Die Schuld (zehntausend Talente, hundert Denare) zeigen Münzen, «Geduld» die Sanduhr. Das Würgen ([[MAT.18.28]]) und die Folterknechte ([[MAT.18.34]]) sind nicht gezeichnet; der Zorn des Herrn ist nur als ernstes Gesicht angedeutet. Die Deutung auf den himmlischen Vater ([[MAT.18.35]]) steht nur in der Handlung.",
+        "basis": [
+          {
+            "record": "TU-MAT-018-021-035",
+            "field": "summary",
+            "fingerprint": "4968ee1c942db3fc"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.21-MAT.18.22",
+            "fingerprint": "20fd26c3192c403e"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.23-MAT.18.27",
+            "fingerprint": "9ee7a7beb036b9e5"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.28-MAT.18.30",
+            "fingerprint": "a38b3fdcde2a4073"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.31-MAT.18.35",
+            "fingerprint": "99b0962d643d9be5"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-018-021-035",
+            "field": "summary",
+            "fingerprint": "4968ee1c942db3fc"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.21-MAT.18.22",
+            "fingerprint": "20fd26c3192c403e"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.23-MAT.18.30",
+            "fingerprint": "be6a0c5c7a4ba8fc"
+          },
+          {
+            "record": "TRANS-MAT-018-001-035-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.18.31-MAT.18.35",
+            "fingerprint": "99b0962d643d9be5"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.18.21-MAT.18.22",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Wie oft soll ich meinem Bruder vergeben? Bis zu siebenmal?",
+                  "gsw": "Wie mängisch söll ich mim Brueder vergää? Bis sibe Mal?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN"
+                ],
+                "word": {
+                  "de": "Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+                  "gsw": "Nöd bis sibe Mal, sondern bis sibenesibezg Mal."
+                }
+              }
+            ],
+            "action_de": "Petrus fragt: Herr, wie oft soll ich meinem Bruder vergeben, wenn er gegen mich sündigt? Bis zu siebenmal? Jesus antwortet: Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+            "keywords": {
+              "de": "sondern bis zu siebenundsiebzigmal",
+              "gsw": "sondern bis sibenesibezg Mal"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "question",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-PETRUS": 56,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.18.23-MAT.18.30",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Ein König erlässt seinem Knecht, der um Geduld fleht, die ganze Schuld von zehntausend Talenten; derselbe Knecht würgt seinen Mitknecht, der ihm hundert Denare schuldet, hört dessen gleiche Bitte nicht und wirft ihn ins Gefängnis.",
+            "keywords": {
+              "de": "Hab Geduld mit mir",
+              "gsw": "Häb Geduld mit mir"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "arrow": false,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "new",
+                "old"
+              ],
+              "title": {
+                "de": "Darum gleicht das Reich der Himmel einem König, der mit seinen Knechten abrechnen wollte.",
+                "gsw": "Drum isch s Riich vo de Himel wie en König, wo mit sine Chnächt hät wele abrächne."
+              },
+              "head": [
+                {
+                  "de": "der König und sein Knecht",
+                  "gsw": "de König und sin Chnächt"
+                },
+                {
+                  "de": "der Knecht und sein Mitknecht",
+                  "gsw": "de Chnächt und sin Mitchnächt"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Schuld: zehntausend Talente",
+                      "gsw": "Schuld: zäätuusig Talänt"
+                    },
+                    "icons": [
+                      "FIG-OBJ-TALENT"
+                    ],
+                    "tone": "new",
+                    "who": "FIG-ROLLE-KOENIG"
+                  },
+                  {
+                    "a": {
+                      "de": "Schuld: hundert Denare",
+                      "gsw": "Schuld: hundert Denar"
+                    },
+                    "icons": [
+                      "FIG-OBJ-DENAR"
+                    ],
+                    "tone": "old",
+                    "who": "FIG-ROLLE-SKLAVE"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "«Hab Geduld mit mir, und ich werde dir alles zurückzahlen!»",
+                      "gsw": "«Häb Geduld mit mir, und ich zal dir alles zrugg!»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KNIEN"
+                    ],
+                    "tone": "new",
+                    "who": "FIG-ROLLE-SKLAVE"
+                  },
+                  {
+                    "a": {
+                      "de": "«Hab Geduld mit mir, und ich werde es dir zurückzahlen!»",
+                      "gsw": "«Häb Geduld mit mir, und ich zal dir s zrugg!»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KNIEN"
+                    ],
+                    "tone": "old",
+                    "who": "FIG-ROLLE-DIENER"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Der Herr hat Erbarmen, lässt ihn frei und erlässt ihm das Darlehen.",
+                      "gsw": "De Herr hät Erbarme, laat en frei und erlaat ihm s Darlehe."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-ERBARMEN",
+                      "FIG-ZEICHEN-VERGEBEN"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Er wollte nicht und warf ihn ins Gefängnis, bis er die Schuld bezahlt hätte.",
+                      "gsw": "Er hät nöd wele und hät en is Gfängnis gworfe, bis er d Schuld zalt hät."
+                    },
+                    "icons": [
+                      "FIG-ORT-GEFAENGNIS"
+                    ],
+                    "tone": "old"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.18.31-MAT.18.35",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-KOENIG",
+              "FIG-ROLLE-SKLAVE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIG",
+                "to": "FIG-ROLLE-SKLAVE",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Du böser Knecht! Hättest nicht auch du dich erbarmen müssen?",
+                  "gsw": "Du böse Chnächt! Hettsch du nöd au müese Erbarme ha?"
+                }
+              }
+            ],
+            "action_de": "Die Mitknechte berichten es traurig dem Herrn; er sagt: Du böser Knecht! Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie ich mich über dich erbarmt habe? Er liefert ihn den Folterknechten aus. So wird auch der himmlische Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt.",
+            "keywords": {
+              "de": "wenn ihr nicht von Herzen vergebt",
+              "gsw": "wänn ir nöd vo Härze vergänd"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-DIENER"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-ROLLE-SKLAVE"
+              },
+              "mood": {
+                "FIG-GRUPPE-DIENER": "worried",
+                "FIG-ROLLE-KOENIG": "angry",
+                "FIG-ROLLE-SKLAVE": "fear"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 30,
+                "FIG-ROLLE-KOENIG": 96,
+                "FIG-ROLLE-SKLAVE": 158
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Petrus fragt: Herr, wie oft soll ich meinem Bruder vergeben, wenn er gegen mich sündigt? Bis zu siebenmal? Jesus antwortet: Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+          "Ein König erlässt seinem Knecht, der um Geduld fleht, die ganze Schuld von zehntausend Talenten; derselbe Knecht würgt seinen Mitknecht, der ihm hundert Denare schuldet, hört dessen gleiche Bitte nicht und wirft ihn ins Gefängnis.",
+          "Die Mitknechte berichten es traurig dem Herrn; er sagt: Du böser Knecht! Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie ich mich über dich erbarmt habe? Er liefert ihn den Folterknechten aus. So wird auch der himmlische Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt."
+        ],
+        "captions_de": [
+          "Wie oft vergeben? Petrus (Schlüssel) fragt: «Bis zu siebenmal?» (zerrissener Schuldschein, Fragezeichen); Jesus antwortet: «Nicht bis zu siebenmal, sondern bis zu siebenundsiebzigmal.»",
+          "Zwei Szenen in zwei Spalten (Bild Jesus, Blase «Darum gleicht das Reich der Himmel einem König, der mit seinen Knechten abrechnen wollte»): links, hervorgehoben, der König und sein Knecht (ungefärbtes Gewand, Tragkorb) – Schuld zehntausend Talente (Silbersack), «Hab Geduld mit mir, und ich werde dir alles zurückzahlen!», der Herr erlässt die Schuld (zerrissener Schuldschein); rechts der Knecht und sein Mitknecht (Schürze, Tablett) – Schuld hundert Denare (Silbermünze), «Hab Geduld mit mir, und ich werde es dir zurückzahlen!», er wirft ihn ins Gefängnis (Steinblock mit Gitter).",
+          "Zur Rede gestellt: Die Mitknechte (sandbeige Gewänder) haben traurig berichtet (Träne); der König (goldene Bügelkrone) sagt zornig zum Knecht: «Hättest nicht auch du dich erbarmen müssen?» (offene Hände mit Herz, Fragezeichen); er liefert ihn aus (offene Hand und Kette)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.18.21-MAT.18.22",
+            "figures": [
+              "FIG-PETRUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Herr, wie oft wird mein Bruder gegen mich sündigen und ich ihm vergeben? Bis zu siebenmal?",
+                  "gsw": "Herr, wie mängisch sündiget min Brueder gäge mich, und ich vergib em? Bis sibe Mal?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PETRUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERGEBEN"
+                ],
+                "word": {
+                  "de": "Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+                  "gsw": "Ich säg dir nöd: bis sibe Mal, sondern bis sibenesibezg Mal."
+                }
+              }
+            ],
+            "action_de": "Petrus fragt: Herr, wie oft wird mein Bruder gegen mich sündigen und ich ihm vergeben? Bis zu siebenmal? Jesus antwortet: Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.",
+            "keywords": {
+              "de": "sondern bis zu siebenundsiebzigmal",
+              "gsw": "sondern bis sibenesibezg Mal"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-PETRUS": "question",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-PETRUS": 56,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.18.23-MAT.18.30",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Ein König erlässt seinem Knecht, der um Geduld fleht, die ganze Schuld von zehntausend Talenten; derselbe Knecht würgt seinen Mitknecht, der ihm hundert Denare schuldet, hört dessen gleiche Bitte nicht und wirft ihn ins Gefängnis.",
+            "keywords": {
+              "de": "Hab Geduld mit mir",
+              "gsw": "Häb Geduld mit mir"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "arrow": false,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "new",
+                "old"
+              ],
+              "title": {
+                "de": "Darum gleicht das Reich der Himmel einem König, der mit seinen Knechten abrechnen wollte.",
+                "gsw": "Drum isch s Riich vo de Himel wie en König, wo mit sine Chnächt hät wele abrächne."
+              },
+              "head": [
+                {
+                  "de": "der König und sein Knecht",
+                  "gsw": "de König und sin Chnächt"
+                },
+                {
+                  "de": "der Knecht und sein Mitknecht",
+                  "gsw": "de Chnächt und sin Mitchnächt"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "Schuld: zehntausend Talente",
+                      "gsw": "Schuld: zäätuusig Talänt"
+                    },
+                    "icons": [
+                      "FIG-OBJ-TALENT"
+                    ],
+                    "tone": "new",
+                    "who": "FIG-ROLLE-KOENIG"
+                  },
+                  {
+                    "a": {
+                      "de": "Schuld: hundert Denare",
+                      "gsw": "Schuld: hundert Denar"
+                    },
+                    "icons": [
+                      "FIG-OBJ-DENAR"
+                    ],
+                    "tone": "old",
+                    "who": "FIG-ROLLE-SKLAVE"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "«Hab Geduld mit mir, und ich werde dir alles zurückzahlen!»",
+                      "gsw": "«Häb Geduld mit mir, und ich zal dir alles zrugg!»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KNIEN"
+                    ],
+                    "tone": "new",
+                    "who": "FIG-ROLLE-SKLAVE"
+                  },
+                  {
+                    "a": {
+                      "de": "«Hab Geduld mit mir, und ich werde es dir zurückzahlen!»",
+                      "gsw": "«Häb Geduld mit mir, und ich zal dir s zrugg!»"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-KNIEN"
+                    ],
+                    "tone": "old",
+                    "who": "FIG-ROLLE-DIENER"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "Der Herr hat Erbarmen, lässt ihn frei und erlässt ihm das Darlehen.",
+                      "gsw": "De Herr hät Erbarme, laat en frei und erlaat ihm s Darlehe."
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-ERBARMEN",
+                      "FIG-ZEICHEN-VERGEBEN"
+                    ],
+                    "tone": "new"
+                  },
+                  {
+                    "a": {
+                      "de": "Er wollte nicht und warf ihn ins Gefängnis, bis er die Schuld bezahlt hätte.",
+                      "gsw": "Er hät nöd wele und hät en is Gfängnis gworfe, bis er d Schuld zalt hät."
+                    },
+                    "icons": [
+                      "FIG-ORT-GEFAENGNIS"
+                    ],
+                    "tone": "old"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.18.31-MAT.18.35",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-KOENIG",
+              "FIG-ROLLE-SKLAVE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-KOENIG",
+                "to": "FIG-ROLLE-SKLAVE",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie auch ich mich über dich erbarmt habe?",
+                  "gsw": "Hettsch du nöd au mit dim Mitchnächt müese Erbarme ha, wie au ich mit dir Erbarme gha han?"
+                }
+              }
+            ],
+            "action_de": "Die Mitknechte berichten es traurig dem Herrn; er sagt: Du böser Knecht! Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie ich mich über dich erbarmt habe? Er liefert ihn den Folterknechten aus. So wird auch der himmlische Vater mit euch verfahren, wenn ihr nicht von Herzen vergebt.",
+            "keywords": {
+              "de": "wenn ihr nicht von Herzen vergebt",
+              "gsw": "wänn ir nöd vo Härze vergänd"
+            },
+            "stage": {
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-GRUPPE-DIENER"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-ROLLE-SKLAVE"
+              },
+              "mood": {
+                "FIG-GRUPPE-DIENER": "worried",
+                "FIG-ROLLE-KOENIG": "angry",
+                "FIG-ROLLE-SKLAVE": "fear"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 30,
+                "FIG-ROLLE-KOENIG": 96,
+                "FIG-ROLLE-SKLAVE": 158
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Wie oft vergeben? Petrus (Schlüssel) fragt: «Bis zu siebenmal?» (zerrissener Schuldschein, Fragezeichen); Jesus antwortet: «Ich sage dir nicht: bis zu siebenmal, sondern bis zu siebenundsiebzigmal.»",
+          "Zwei Szenen in zwei Spalten (Bild Jesus, Blase «Darum gleicht das Reich der Himmel einem König, der mit seinen Knechten abrechnen wollte»): links, hervorgehoben, der König und sein Knecht (ungefärbtes Gewand, Tragkorb) – Schuld zehntausend Talente (Silbersack), «Hab Geduld mit mir, und ich werde dir alles zurückzahlen!», der Herr erlässt die Schuld (zerrissener Schuldschein); rechts der Knecht und sein Mitknecht (Schürze, Tablett) – Schuld hundert Denare (Silbermünze), «Hab Geduld mit mir, und ich werde es dir zurückzahlen!», er wirft ihn ins Gefängnis (Steinblock mit Gitter).",
+          "Zur Rede gestellt: Die Mitknechte (sandbeige Gewänder) haben traurig berichtet (Träne); der König (goldene Bügelkrone) sagt zornig zum Knecht: «Hättest nicht auch du dich über deinen Mitknecht erbarmen müssen, wie auch ich mich über dich erbarmt habe?» (offene Hände mit Herz, Fragezeichen); er liefert ihn aus (offene Hand und Kette)."
+        ],
+        "interpretation_note_de": "Drei Felder nach «Frage und Antwort – Gleichnis – Urteil – Anwendung» ([[MAT.18.21-MAT.18.35]]). Die zwei Szenen des Gleichnisses sind Zeile für Zeile gespiegelt (gleiche Bitte, entgegengesetzte Antwort); hervorgehoben ist das Erbarmen des Königs. Die Strafe ist gezeigt, wie der Text sie nennt (ausgeliefert), ohne Folter im Bild. Die Blase in Feld 3 kürzt [[MAT.18.32-MAT.18.33]]."
       }
     }
   ]

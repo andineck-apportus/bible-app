@@ -1,0 +1,129 @@
+{
+ "id": "CORE-MAT-016-001-004",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.16.1-MAT.16.4",
+ "target": "TU-MAT-016-001-004",
+ "core_de": "Pharisäer und Sadduzäer fordern, um Jesus auf die Probe zu stellen, ein Zeichen vom Himmel; er antwortet, das Aussehen des Himmels könnten sie beurteilen, die Zeichen der Zeiten aber nicht, und diesem bösen Geschlecht werde kein Zeichen gegeben ausser dem des Jona – und er verlässt sie.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Forderung – Antwort – Abbruch",
+    "range": "MAT.16.1-MAT.16.4",
+    "elements": [
+     {
+      "label": "Pharisäer und Sadduzäer fordern, um ihn zu versuchen, ein Zeichen vom Himmel",
+      "ref": "MAT.16.1",
+      "role": "Forderung"
+     },
+     {
+      "label": "Himmel beurteilen ↔ Zeichen der Zeiten nicht",
+      "ref": "MAT.16.2-MAT.16.3",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Kein Zeichen ausser dem Zeichen des Jona",
+      "ref": "MAT.16.4",
+      "role": "Antwort"
+     },
+     {
+      "label": "Er verliess sie und ging weg",
+      "ref": "MAT.16.4",
+      "role": "Abbruch"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "MAT.16.2-MAT.16.3",
+       "note": "Die Wetterworte («Wenn es Abend wird … beurteilen») fehlen in einigen wichtigen Handschriften; die Arbeitsübersetzung hat sie."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "MAT.12.38-MAT.12.40",
+       "kind": "Wiederholung",
+       "note": "Zeichen des Jona"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Himmel ↔ Zeichen der Zeiten",
+    "range": "MAT.16.2-MAT.16.3",
+    "elements": [
+     {
+      "label": "Abend: «Schönes Wetter! Denn der Himmel ist rot» – Morgen: «Heute kommt ein Unwetter» – das Aussehen des Himmels wisst ihr zu beurteilen",
+      "ref": "MAT.16.2-MAT.16.3",
+      "role": "können"
+     },
+     {
+      "label": "die Zeichen der Zeiten aber könnt ihr nicht beurteilen",
+      "ref": "MAT.16.3",
+      "role": "nicht können"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.16.1-MAT.16.3",
+   "text_de": "Pharisäer und Sadduzäer fordern ihn auf, ihnen ein Zeichen vom Himmel zu zeigen; Jesus: Am Abend sagt ihr «Schönes Wetter!», am Morgen «Heute kommt ein Unwetter»; «Das Aussehen des Himmels wisst ihr zwar zu beurteilen, die Zeichen der Zeiten aber könnt ihr nicht beurteilen.»",
+   "reason_de": "Forderung und Gegensatz (Kriterien 1 und 4).",
+   "recognition_de": "Zwei Spalten: roter Himmel beurteilen ↔ Zeichen der Zeiten nicht.",
+   "keywords": [
+    "ihnen ein Zeichen vom Himmel zu zeigen",
+    "die Zeichen der Zeiten aber könnt ihr nicht beurteilen"
+   ]
+  },
+  {
+   "reference": "MAT.16.4",
+   "text_de": "«Ein böses und ehebrecherisches Geschlecht verlangt ein Zeichen, und ein Zeichen wird ihm nicht gegeben werden ausser dem Zeichen des Jona.» Und er verlässt sie und geht weg.",
+   "reason_de": "Antwort und Abbruch (Kriterien 2 und 3).",
+   "recognition_de": "Jesus wendet sich ab; Jona im Fisch.",
+   "keywords": [
+    "ausser dem Zeichen des Jona",
+    "er verliess sie und ging weg"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Wetterregeln im Einzelnen – Hintergrund"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-SADDUZAEER",
+  "FIG-JONA"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.16.1-MAT.16.4",
+   "fingerprint": "0329169695c562a5"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 11–18 nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

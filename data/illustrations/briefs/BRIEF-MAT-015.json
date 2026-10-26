@@ -13,27 +13,46 @@
       "n": 1,
       "reference": "MAT.15.1-MAT.15.20",
       "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-PHARISAEER"
+        "FIG-GRUPPE-PHARISAEER",
+        "FIG-JESUS"
       ],
       "objects": [],
       "signs": [],
       "speech": [
         {
+          "from": "FIG-GRUPPE-PHARISAEER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-HAENDE-WASCHEN",
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Warum übertreten deine Jünger die Überlieferung der Ältesten?",
+            "gsw": "Werum verstoossed dini Jünger gäge d Überliferig vo de Ältischte?"
+          }
+        },
+        {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
             "FIG-ZEICHEN-HERZ",
-            "FIG-ZEICHEN-STAMMT-AUS",
-            "FIG-ZEICHEN-UNREIN"
+            "FIG-ZEICHEN-BOESES"
           ]
         }
       ],
-      "action_de": "Pharisäer und Schriftgelehrte werfen Jesus vor, seine Jünger übertreten die Überlieferung; Jesus lehrt: Unrein macht, was aus dem Herzen kommt, nicht das Essen mit ungewaschenen Händen.",
+      "action_de": "Pharisäer und Schriftgelehrte werfen den Jüngern ungewaschene Hände vor; Jesus lehrt: Aus dem Herzen kommen böse Gedanken hervor, das macht den Menschen unrein.",
+      "keywords": {
+        "de": "Denn aus dem Herzen kommen böse Gedanken hervor",
+        "gsw": "Us em Härz chömed nämli böösi Gedanke use"
+      },
       "stage": {
         "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-PHARISAEER": "pensive"
+          "FIG-GRUPPE-PHARISAEER": "angry",
+          "FIG-JESUS": "earnest"
+        },
+        "x": {
+          "FIG-GRUPPE-PHARISAEER": 50,
+          "FIG-JESUS": 136
         }
       }
     },
@@ -42,31 +61,55 @@
       "reference": "MAT.15.21-MAT.15.28",
       "figures": [
         "FIG-JESUS",
-        "FIG-SYROPHOENIZIERIN"
+        "FIG-ROLLE-FRAU",
+        "FIG-ROLLE-KIND"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-HEILEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-SYROPHOENIZIERIN",
+          "to": "FIG-ROLLE-FRAU",
           "icons": [
             "FIG-ZEICHEN-GLAUBEN"
-          ]
+          ],
+          "word": {
+            "de": "Frau, dein Glaube ist gross!",
+            "gsw": "Frau, din Glaube isch gross!"
+          }
         }
       ],
-      "action_de": "Die kanaanäische Frau bittet für ihre Tochter; Jesus heilt sie, weil ihr Glaube gross ist.",
+      "action_de": "Jesus sagt: Frau, dein Glaube ist gross! Dir geschehe, wie du willst; und ihre Tochter ist von jener Stunde an geheilt.",
+      "keywords": {
+        "de": "auch die Hündchen essen von den Brotkrumen",
+        "gsw": "au d Hündli ässed vo de Brösmeli"
+      },
       "stage": {
+        "split": 2,
         "pose": {
-          "FIG-SYROPHOENIZIERIN": "kneel"
+          "FIG-ROLLE-FRAU": "kneel"
         },
+        "at": {
+          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KIND"
+        },
+        "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-ROLLE-KIND",
+            "act"
+          ]
+        ],
         "mood": {
           "FIG-JESUS": "smile",
-          "FIG-SYROPHOENIZIERIN": "calm"
+          "FIG-ROLLE-FRAU": "earnest",
+          "FIG-ROLLE-KIND": "smile"
         },
         "x": {
-          "FIG-JESUS": 50,
-          "FIG-SYROPHOENIZIERIN": 122
+          "FIG-JESUS": 24,
+          "FIG-ROLLE-FRAU": 96,
+          "FIG-ROLLE-KIND": 160
         }
       }
     },
@@ -74,123 +117,130 @@
       "n": 3,
       "reference": "MAT.15.29-MAT.15.31",
       "figures": [
+        "FIG-GOTT",
         "FIG-JESUS",
+        "FIG-GRUPPE-KRANKE",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-ORT-BERG",
-        "FIG-OBJ-KRANKENMATTE"
+        "FIG-ORT-BERG"
       ],
       "signs": [
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-HEILEN",
+        "FIG-ZEICHEN-PREISEN"
       ],
       "speech": [],
-      "action_de": "Auf dem Berg am See von Galiläa heilt Jesus viele Kranke.",
+      "action_de": "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, und er heilt sie; die Menge staunt und preist den Gott Israels.",
+      "keywords": {
+        "de": "sie priesen den Gott Israels",
+        "gsw": "si händ de Gott vo Israel prise"
+      },
       "stage": {
+        "god_side": "right",
+        "back_side": "left",
         "on": {
           "FIG-JESUS": "FIG-ORT-BERG"
         },
-        "back_side": "left",
+        "pose": {
+          "FIG-JESUS": "sit",
+          "FIG-GRUPPE-KRANKE": "lie"
+        },
         "at": {
-          "FIG-ZEICHEN-HEILEN": "FIG-OBJ-KRANKENMATTE"
+          "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE",
+          "FIG-ZEICHEN-PREISEN": "FIG-GRUPPE-MENGE"
         },
         "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JESUS": "calm"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-KRANKE": "smile",
+          "FIG-GRUPPE-MENGE": "delight"
         },
         "x": {
-          "FIG-GRUPPE-MENGE": 160
-        },
-        "floor_x": {
-          "FIG-OBJ-KRANKENMATTE": 82
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-OBJ-KRANKENMATTE",
-            "act"
-          ]
-        ]
+          "FIG-JESUS": 40,
+          "FIG-GRUPPE-KRANKE": 98,
+          "FIG-GRUPPE-MENGE": 156
+        }
       }
     },
     {
       "n": 4,
       "reference": "MAT.15.32-MAT.15.39",
       "figures": [
-        "FIG-GOTT",
         "FIG-JESUS",
         "FIG-GRUPPE-JUENGER",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-BROT",
-        "FIG-OBJ-KORB"
+        "FIG-OBJ-BROTE-FISCHE"
       ],
       "signs": [
+        "FIG-ZEICHEN-BETEN",
         "FIG-ZEICHEN-SATT"
       ],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GOTT",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-OBJ-BROT"
-          ]
-        }
-      ],
-      "action_de": "Mit sieben Broten und ein paar Fischen speist Jesus viertausend Männer, ohne Frauen und Kinder.",
+      "speech": [],
+      "action_de": "Aus Erbarmen speist Jesus mit sieben Broten und ein paar Fischen viertausend Männer; sieben Körbe bleiben übrig.",
+      "keywords": {
+        "de": "sieben Körbe voll",
+        "gsw": "sibe Chörb voll"
+      },
       "stage": {
-        "god_side": "right",
-        "floor_side": "left",
-        "count": {
-          "FIG-OBJ-KORB": 7
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+        },
+        "signs_who": {
+          "FIG-ZEICHEN-BETEN": [
+            "FIG-JESUS"
+          ]
         },
         "at": {
           "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "smile"
-        },
-        "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT",
-          "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
-        },
-        "floor_x": {
-          "FIG-OBJ-KORB": 22
-        },
         "arrows": [
+          [
+            "FIG-JESUS",
+            "FIG-GRUPPE-JUENGER",
+            "act"
+          ],
           [
             "FIG-GRUPPE-JUENGER",
             "FIG-GRUPPE-MENGE",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "smile",
+          "FIG-GRUPPE-MENGE": "delight"
+        },
+        "x": {
+          "FIG-JESUS": 30,
+          "FIG-GRUPPE-JUENGER": 92,
+          "FIG-GRUPPE-MENGE": 154
+        }
       }
     }
   ],
   "actions_de": [
-    "Pharisäer und Schriftgelehrte werfen Jesus vor, seine Jünger übertreten die Überlieferung; Jesus lehrt: Unrein macht, was aus dem Herzen kommt, nicht das Essen mit ungewaschenen Händen.",
-    "Die kanaanäische Frau bittet für ihre Tochter; Jesus heilt sie, weil ihr Glaube gross ist.",
-    "Auf dem Berg am See von Galiläa heilt Jesus viele Kranke.",
-    "Mit sieben Broten und ein paar Fischen speist Jesus viertausend Männer, ohne Frauen und Kinder."
+    "Pharisäer und Schriftgelehrte werfen den Jüngern ungewaschene Hände vor; Jesus lehrt: Aus dem Herzen kommen böse Gedanken hervor, das macht den Menschen unrein.",
+    "Jesus sagt: Frau, dein Glaube ist gross! Dir geschehe, wie du willst; und ihre Tochter ist von jener Stunde an geheilt.",
+    "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, und er heilt sie; die Menge staunt und preist den Gott Israels.",
+    "Aus Erbarmen speist Jesus mit sieben Broten und ein paar Fischen viertausend Männer; sieben Körbe bleiben übrig."
   ],
   "captions_de": [
-    "Rein und unrein: Jesus sagt den Pharisäern: Aus dem Herzen kommt das Unreine (rotes Herz, Pfeil, brauner Fleck).",
-    "Grosser Glaube: Die kanaanäische Frau (petrolblaues Gewand) kniet bittend vor Jesus; er sagt: Dein Glaube ist gross (Herz mit Lichtstrahl).",
-    "Jesus → geheilt: Jesus ist auf dem Berg; der Pfeil führt zum Kranken auf der Matte vor ihm, den man ihm bringt: er heilt (berührende Hand mit grünem Lichtpunkt).",
-    "Dank → satt: Jesus dankt Gott für das Brot (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Pfeil zur Menge), alle werden satt (Schale mit Brot und grünem Haken); sieben Körbe bleiben übrig."
+    "Rein und unrein: Die Pharisäer (Gebetsmantel) fragen: «Warum übertreten deine Jünger die Überlieferung der Ältesten?» (Hände mit Wassertropfen); Jesus antwortet (Herz, zackiger Schatten in der Blase): «Denn aus dem Herzen kommen böse Gedanken hervor» (Merkwort).",
+    "Grosser Glaube: Die kanaanäische Frau (helles Kopftuch) kniet; Jesus: «Frau, dein Glaube ist gross!» (Herz mit Lichtstrahl); jenseits der gestrichelten Linie ist die Tochter geheilt (berührende Hand mit grünem Lichtpunkt).",
+    "Auf dem Berg: Jesus sitzt auf dem Berg; die Kranken (Kopfverband) liegen zu seinen Füssen und werden geheilt (berührende Hand mit grünem Lichtpunkt); die Menge preist Gott (zwei erhobene Hände; goldener Strahlenkranz).",
+    "Sieben Brote: Jesus dankt (gefaltete Hände) und gibt die Brote und Fische (Fladenbrot und Fisch, nicht gezählt) über die Jünger der Menge (Pfeile); alle werden satt (Schale mit Brot und grünem Haken)."
   ],
-  "interpretation_note_de": "Vier Stationen: rein und unrein ([[MAT.15.1-MAT.15.20]]), die kanaanäische Frau ([[MAT.15.21-MAT.15.28]]), die Heilungen auf dem Berg ([[MAT.15.29-MAT.15.31]]) und die Speisung der Viertausend ([[MAT.15.32-MAT.15.39]]). Die kanaanäische Frau erscheint als dieselbe Figur wie die Syrophönizierin in [[MRK.7.26]]. Der braune Fleck steht für «unrein».",
+  "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: rein und unrein ([[MAT.15.1-MAT.15.20]]), die kanaanäische Frau ([[MAT.15.21-MAT.15.28]]), die Heilungen auf dem Berg ([[MAT.15.29-MAT.15.31]]), die Speisung der Viertausend ([[MAT.15.32-MAT.15.39]]). Die Blase der Pharisäer gibt den ersten Satz von [[MAT.15.2]] wörtlich; Jesu Antwort steht als Zeichen in der Blase und im Merkwort ([[MAT.15.19]]). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-015",
       "field": "summary",
-      "fingerprint": "43af466fd2350496"
+      "fingerprint": "fc1c66376237b5e2"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -682,6 +732,885 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Inhalt überarbeitet",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.1-MAT.15.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-STAMMT-AUS",
+                  "FIG-ZEICHEN-UNREIN"
+                ]
+              }
+            ],
+            "action_de": "Pharisäer und Schriftgelehrte werfen Jesus vor, seine Jünger übertreten die Überlieferung; Jesus lehrt: Unrein macht, was aus dem Herzen kommt, nicht das Essen mit ungewaschenen Händen.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-PHARISAEER": "pensive"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.21-MAT.15.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-SYROPHOENIZIERIN"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-SYROPHOENIZIERIN",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Die kanaanäische Frau bittet für ihre Tochter; Jesus heilt sie, weil ihr Glaube gross ist.",
+            "stage": {
+              "pose": {
+                "FIG-SYROPHOENIZIERIN": "kneel"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-SYROPHOENIZIERIN": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 50,
+                "FIG-SYROPHOENIZIERIN": 122
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.15.29-MAT.15.31",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG",
+              "FIG-OBJ-KRANKENMATTE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Auf dem Berg am See von Galiläa heilt Jesus viele Kranke.",
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "back_side": "left",
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-OBJ-KRANKENMATTE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 160
+              },
+              "floor_x": {
+                "FIG-OBJ-KRANKENMATTE": 82
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KRANKENMATTE",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.15.32-MAT.15.39",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-KORB"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-OBJ-BROT"
+                ]
+              }
+            ],
+            "action_de": "Mit sieben Broten und ein paar Fischen speist Jesus viertausend Männer, ohne Frauen und Kinder.",
+            "stage": {
+              "god_side": "right",
+              "floor_side": "left",
+              "count": {
+                "FIG-OBJ-KORB": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "smile"
+              },
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BROT"
+              },
+              "floor_x": {
+                "FIG-OBJ-KORB": 22
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Pharisäer und Schriftgelehrte werfen Jesus vor, seine Jünger übertreten die Überlieferung; Jesus lehrt: Unrein macht, was aus dem Herzen kommt, nicht das Essen mit ungewaschenen Händen.",
+          "Die kanaanäische Frau bittet für ihre Tochter; Jesus heilt sie, weil ihr Glaube gross ist.",
+          "Auf dem Berg am See von Galiläa heilt Jesus viele Kranke.",
+          "Mit sieben Broten und ein paar Fischen speist Jesus viertausend Männer, ohne Frauen und Kinder."
+        ],
+        "captions_de": [
+          "Rein und unrein: Jesus sagt den Pharisäern: Aus dem Herzen kommt das Unreine (rotes Herz, Pfeil, brauner Fleck).",
+          "Grosser Glaube: Die kanaanäische Frau (petrolblaues Gewand) kniet bittend vor Jesus; er sagt: Dein Glaube ist gross (Herz mit Lichtstrahl).",
+          "Jesus → geheilt: Jesus ist auf dem Berg; der Pfeil führt zum Kranken auf der Matte vor ihm, den man ihm bringt: er heilt (berührende Hand mit grünem Lichtpunkt).",
+          "Dank → satt: Jesus dankt Gott für das Brot (Strahlenkranz; Blase: betende Hände, Brot); die Jünger teilen aus (Pfeil zur Menge), alle werden satt (Schale mit Brot und grünem Haken); sieben Körbe bleiben übrig."
+        ],
+        "interpretation_note_de": "Vier Stationen: rein und unrein ([[MAT.15.1-MAT.15.20]]), die kanaanäische Frau ([[MAT.15.21-MAT.15.28]]), die Heilungen auf dem Berg ([[MAT.15.29-MAT.15.31]]) und die Speisung der Viertausend ([[MAT.15.32-MAT.15.39]]). Die kanaanäische Frau erscheint als dieselbe Figur wie die Syrophönizierin in [[MRK.7.26]]. Der braune Fleck steht für «unrein».",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-015",
+            "field": "summary",
+            "fingerprint": "43af466fd2350496"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.1-MAT.15.20",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HAENDE-WASCHEN"
+                ],
+                "word": {
+                  "de": "Deine Jünger waschen ihre Hände nicht.",
+                  "gsw": "Dini Jünger wäsched iri Händ nöd."
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-BOESES"
+                ],
+                "word": {
+                  "de": "Aus dem Herzen kommen böse Gedanken hervor.",
+                  "gsw": "Us em Härz chömed böösi Gedanke use."
+                }
+              }
+            ],
+            "action_de": "Pharisäer und Schriftgelehrte werfen den Jüngern ungewaschene Hände vor; Jesus lehrt: Aus dem Herzen kommen böse Gedanken hervor, das macht den Menschen unrein.",
+            "keywords": {
+              "de": "Denn aus dem Herzen kommen böse Gedanken hervor",
+              "gsw": "Us em Härz chömed nämli böösi Gedanke use"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "angry",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.21-MAT.15.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-FRAU",
+              "FIG-ROLLE-KIND"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-FRAU",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-HUND",
+                  "FIG-OBJ-BROT"
+                ],
+                "word": {
+                  "de": "Auch die Hündchen essen von den Brotkrumen.",
+                  "gsw": "Au d Hündli ässed vo de Brösmeli."
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "Frau, dein Glaube ist gross!",
+                  "gsw": "Frau, din Glaube isch gross!"
+                }
+              }
+            ],
+            "action_de": "Die kanaanäische Frau antwortet: Auch die Hündchen essen von den Brotkrumen, die vom Tisch ihrer Herren fallen; Jesus sagt: Frau, dein Glaube ist gross! Dir geschehe, wie du willst; und ihre Tochter ist von jener Stunde an geheilt.",
+            "keywords": {
+              "de": "Frau, dein Glaube ist gross!",
+              "gsw": "Frau, din Glaube isch gross!"
+            },
+            "stage": {
+              "split": 2,
+              "pose": {
+                "FIG-ROLLE-FRAU": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KIND"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KIND",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-ROLLE-FRAU": "earnest",
+                "FIG-ROLLE-KIND": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-ROLLE-FRAU": 88,
+                "FIG-ROLLE-KIND": 156
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.15.29-MAT.15.31",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-KRANKE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-PREISEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, und er heilt sie; die Menge staunt und preist den Gott Israels.",
+            "keywords": {
+              "de": "sie priesen den Gott Israels",
+              "gsw": "si händ de Gott vo Israel prise"
+            },
+            "stage": {
+              "god_side": "right",
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "pose": {
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-KRANKE": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE",
+                "FIG-ZEICHEN-PREISEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-KRANKE": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-KRANKE": 98,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.15.32-MAT.15.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Aus Erbarmen speist Jesus mit sieben Broten und ein paar Fischen viertausend Männer; sieben Körbe bleiben übrig.",
+            "keywords": {
+              "de": "sieben Körbe voll",
+              "gsw": "sibe Chörb voll"
+            },
+            "stage": {
+              "count": {
+                "FIG-OBJ-BROT": 7
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Pharisäer und Schriftgelehrte werfen den Jüngern ungewaschene Hände vor; Jesus lehrt: Aus dem Herzen kommen böse Gedanken hervor, das macht den Menschen unrein.",
+          "Die kanaanäische Frau antwortet: Auch die Hündchen essen von den Brotkrumen, die vom Tisch ihrer Herren fallen; Jesus sagt: Frau, dein Glaube ist gross! Dir geschehe, wie du willst; und ihre Tochter ist von jener Stunde an geheilt.",
+          "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, und er heilt sie; die Menge staunt und preist den Gott Israels.",
+          "Aus Erbarmen speist Jesus mit sieben Broten und ein paar Fischen viertausend Männer; sieben Körbe bleiben übrig."
+        ],
+        "captions_de": [
+          "Rein und unrein: Die Pharisäer (Gebetsmantel) werfen vor: «Deine Jünger waschen ihre Hände nicht» (Hände mit Wassertropfen); Jesus: «Aus dem Herzen kommen böse Gedanken hervor» (Herz, zackiger Schatten).",
+          "Grosser Glaube: Die kanaanäische Frau (helles Kopftuch) kniet: «Auch die Hündchen essen von den Brotkrumen» (Hund, Brot); Jesus: «Frau, dein Glaube ist gross!» (Herz mit Lichtstrahl); jenseits der gestrichelten Linie ist die Tochter geheilt (berührende Hand mit grünem Lichtpunkt).",
+          "Auf dem Berg: Jesus sitzt auf dem Berg; die Kranken (Kopfverband) liegen zu seinen Füssen und werden geheilt (berührende Hand mit grünem Lichtpunkt); die Menge preist Gott (zwei erhobene Hände; goldener Strahlenkranz).",
+          "Sieben Brote: Jesus dankt (gefaltete Hände) und gibt die sieben Brote (sieben Fladenbrote) über die Jünger der Menge (Pfeile); alle werden satt (Schale mit Brot und grünem Haken)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: rein und unrein ([[MAT.15.1-MAT.15.20]]), die kanaanäische Frau ([[MAT.15.21-MAT.15.28]]), die Heilungen auf dem Berg ([[MAT.15.29-MAT.15.31]]), die Speisung der Viertausend ([[MAT.15.32-MAT.15.39]]). Die Blase der Pharisäer fasst den Vorwurf aus [[MAT.15.2]] knapp; Jesu Blase gibt [[MAT.15.19]] ohne «denn». Comic-Szenen nach dem Entscheid vom 2026-10-25."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.1-MAT.15.20",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HAENDE-WASCHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Warum übertreten deine Jünger die Überlieferung der Ältesten?",
+                  "gsw": "Werum verstoossed dini Jünger gäge d Überliferig vo de Ältischte?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-BOESES"
+                ],
+                "word": {
+                  "de": "Was aber aus dem Mund herauskommt, kommt aus dem Herzen hervor, und das macht den Menschen unrein.",
+                  "gsw": "Was aber us em Muul usechunnt, chunnt us em Härz use, und das macht de Mänsch unrein."
+                }
+              }
+            ],
+            "action_de": "Pharisäer und Schriftgelehrte werfen den Jüngern ungewaschene Hände vor; Jesus lehrt: Aus dem Herzen kommen böse Gedanken hervor, das macht den Menschen unrein.",
+            "keywords": {
+              "de": "Denn aus dem Herzen kommen böse Gedanken hervor",
+              "gsw": "Us em Härz chömed nämli böösi Gedanke use"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "angry",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.21-MAT.15.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-FRAU",
+              "FIG-ROLLE-KIND"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "Frau, dein Glaube ist gross!",
+                  "gsw": "Frau, din Glaube isch gross!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Frau, dein Glaube ist gross! Dir geschehe, wie du willst; und ihre Tochter ist von jener Stunde an geheilt.",
+            "keywords": {
+              "de": "auch die Hündchen essen von den Brotkrumen",
+              "gsw": "au d Hündli ässed vo de Brösmeli"
+            },
+            "stage": {
+              "split": 2,
+              "pose": {
+                "FIG-ROLLE-FRAU": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KIND"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KIND",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-ROLLE-FRAU": "earnest",
+                "FIG-ROLLE-KIND": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-FRAU": 96,
+                "FIG-ROLLE-KIND": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.15.29-MAT.15.31",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-KRANKE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-PREISEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, und er heilt sie; die Menge staunt und preist den Gott Israels.",
+            "keywords": {
+              "de": "sie priesen den Gott Israels",
+              "gsw": "si händ de Gott vo Israel prise"
+            },
+            "stage": {
+              "god_side": "right",
+              "back_side": "left",
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "pose": {
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-KRANKE": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE",
+                "FIG-ZEICHEN-PREISEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-KRANKE": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-KRANKE": 98,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.15.32-MAT.15.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Aus Erbarmen speist Jesus mit sieben Broten und ein paar Fischen viertausend Männer; sieben Körbe bleiben übrig.",
+            "keywords": {
+              "de": "sieben Körbe voll",
+              "gsw": "sibe Chörb voll"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "at": {
+                "FIG-ZEICHEN-BETEN": "FIG-JESUS",
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.15.1-MAT.15.20",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-PHARISAEER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-HAENDE-WASCHEN",
+                  "FIG-ZEICHEN-FRAGEN"
+                ],
+                "word": {
+                  "de": "Warum übertreten deine Jünger die Überlieferung der Ältesten?",
+                  "gsw": "Werum verstoossed dini Jünger gäge d Überliferig vo de Ältischte?"
+                }
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-HERZ",
+                  "FIG-ZEICHEN-BOESES"
+                ],
+                "word": {
+                  "de": "Was aber aus dem Mund herauskommt, kommt aus dem Herzen hervor, und das macht den Menschen unrein.",
+                  "gsw": "Was aber us em Muul usechunnt, chunnt us em Härz use, und das macht de Mänsch unrein."
+                }
+              }
+            ],
+            "action_de": "Pharisäer und Schriftgelehrte werfen den Jüngern ungewaschene Hände vor; Jesus lehrt: Aus dem Herzen kommen böse Gedanken hervor, das macht den Menschen unrein.",
+            "keywords": {
+              "de": "Denn aus dem Herzen kommen böse Gedanken hervor",
+              "gsw": "Us em Härz chömed nämli böösi Gedanke use"
+            },
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "angry",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-PHARISAEER": 50,
+                "FIG-JESUS": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.15.21-MAT.15.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-FRAU",
+              "FIG-ROLLE-KIND"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN"
+                ],
+                "word": {
+                  "de": "Frau, dein Glaube ist gross!",
+                  "gsw": "Frau, din Glaube isch gross!"
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Frau, dein Glaube ist gross! Dir geschehe, wie du willst; und ihre Tochter ist von jener Stunde an geheilt.",
+            "keywords": {
+              "de": "auch die Hündchen essen von den Brotkrumen",
+              "gsw": "au d Hündli ässed vo de Brösmeli"
+            },
+            "stage": {
+              "split": 2,
+              "pose": {
+                "FIG-ROLLE-FRAU": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-KIND"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-KIND",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-ROLLE-FRAU": "earnest",
+                "FIG-ROLLE-KIND": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 24,
+                "FIG-ROLLE-FRAU": 96,
+                "FIG-ROLLE-KIND": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.15.29-MAT.15.31",
+            "figures": [
+              "FIG-GOTT",
+              "FIG-JESUS",
+              "FIG-GRUPPE-KRANKE",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HEILEN",
+              "FIG-ZEICHEN-PREISEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus sitzt auf dem Berg am See von Galiläa; grosse Mengen legen ihm Stumme, Blinde, Lahme, Verkrüppelte und viele andere zu Füssen, und er heilt sie; die Menge staunt und preist den Gott Israels.",
+            "keywords": {
+              "de": "sie priesen den Gott Israels",
+              "gsw": "si händ de Gott vo Israel prise"
+            },
+            "stage": {
+              "god_side": "right",
+              "back_side": "left",
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "pose": {
+                "FIG-JESUS": "sit",
+                "FIG-GRUPPE-KRANKE": "lie"
+              },
+              "at": {
+                "FIG-ZEICHEN-HEILEN": "FIG-GRUPPE-KRANKE",
+                "FIG-ZEICHEN-PREISEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-KRANKE": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-KRANKE": 98,
+                "FIG-GRUPPE-MENGE": 156
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.15.32-MAT.15.39",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-BROTE-FISCHE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-SATT"
+            ],
+            "speech": [],
+            "action_de": "Aus Erbarmen speist Jesus mit sieben Broten und ein paar Fischen viertausend Männer; sieben Körbe bleiben übrig.",
+            "keywords": {
+              "de": "sieben Körbe voll",
+              "gsw": "sibe Chörb voll"
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROTE-FISCHE"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-BETEN": [
+                  "FIG-JESUS"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-SATT": "FIG-GRUPPE-MENGE"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ],
+                [
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-GRUPPE-MENGE",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "smile",
+                "FIG-GRUPPE-MENGE": "delight"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-JUENGER": 92,
+                "FIG-GRUPPE-MENGE": 154
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Rein und unrein: Die Pharisäer (Gebetsmantel) fragen: «Warum übertreten deine Jünger die Überlieferung der Ältesten?» (Hände mit Wassertropfen); Jesus: «Was aber aus dem Mund herauskommt, kommt aus dem Herzen hervor, und das macht den Menschen unrein.» (Herz, zackiger Schatten).",
+          "Grosser Glaube: Die kanaanäische Frau (helles Kopftuch) kniet; Jesus: «Frau, dein Glaube ist gross!» (Herz mit Lichtstrahl); jenseits der gestrichelten Linie ist die Tochter geheilt (berührende Hand mit grünem Lichtpunkt).",
+          "Auf dem Berg: Jesus sitzt auf dem Berg; die Kranken (Kopfverband) liegen zu seinen Füssen und werden geheilt (berührende Hand mit grünem Lichtpunkt); die Menge preist Gott (zwei erhobene Hände; goldener Strahlenkranz).",
+          "Sieben Brote: Jesus dankt (gefaltete Hände) und gibt die Brote und Fische (Fladenbrot und Fisch, nicht gezählt) über die Jünger der Menge (Pfeile); alle werden satt (Schale mit Brot und grünem Haken)."
+        ],
+        "interpretation_note_de": "Vier Comic-Szenen, ein Feld je Abschnitt: rein und unrein ([[MAT.15.1-MAT.15.20]]), die kanaanäische Frau ([[MAT.15.21-MAT.15.28]]), die Heilungen auf dem Berg ([[MAT.15.29-MAT.15.31]]), die Speisung der Viertausend ([[MAT.15.32-MAT.15.39]]). Die Blasen geben den ersten Satz von [[MAT.15.2]] und [[MAT.15.18]] wörtlich. Comic-Szenen nach dem Entscheid vom 2026-10-25."
       }
     }
   ]
