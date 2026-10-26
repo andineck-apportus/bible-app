@@ -1,0 +1,127 @@
+{
+ "id": "CORE-MAT-021-018-022",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.21.18-MAT.21.22",
+ "target": "TU-MAT-021-018-022",
+ "core_de": "Hungrig findet Jesus an einem Feigenbaum nur Blätter und sagt: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!», und der Baum verdorrt auf der Stelle; den staunenden Jüngern sagt er: Wenn ihr Glauben habt und nicht zweifelt, wird sogar geschehen, was ihr zu diesem Berg sagt, und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Hunger – nur Blätter – Wort – verdorrt – Staunen – Deutung",
+    "range": "MAT.21.18-MAT.21.22",
+    "elements": [
+     {
+      "label": "Frühmorgens hat er Hunger; am Feigenbaum nur Blätter",
+      "ref": "MAT.21.18-MAT.21.19",
+      "role": "Anlass"
+     },
+     {
+      "label": "«Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» – der Feigenbaum verdorrt auf der Stelle",
+      "ref": "MAT.21.19",
+      "role": "Wort und Folge"
+     },
+     {
+      "label": "Die Jünger staunen: «Wie ist der Feigenbaum auf der Stelle verdorrt?»",
+      "ref": "MAT.21.20",
+      "role": "Frage"
+     },
+     {
+      "label": "Antwort: Glaube und Gebet",
+      "ref": "MAT.21.21-MAT.21.22",
+      "role": "Deutung",
+      "child": "s2"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "Wenn ihr glaubt → …",
+    "range": "MAT.21.21-MAT.21.22",
+    "elements": [
+     {
+      "label": "Wenn ihr Glauben habt und nicht zweifelt",
+      "ref": "MAT.21.21",
+      "role": "Bedingung"
+     },
+     {
+      "label": "werdet ihr nicht nur das mit dem Feigenbaum tun, sondern auch zu diesem Berg sagen: «Heb dich hoch und stürz dich ins Meer!», und es wird geschehen",
+      "ref": "MAT.21.21",
+      "role": "Folge"
+     },
+     {
+      "label": "alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt",
+      "ref": "MAT.21.22",
+      "role": "Folge"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Zusage",
+       "ref": "MAT.21.21-MAT.21.22"
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.21.18-MAT.21.20",
+   "text_de": "Jesus hat Hunger, findet am Feigenbaum nichts als Blätter: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» Der Feigenbaum verdorrt auf der Stelle; die Jünger staunen: «Wie ist der Feigenbaum auf der Stelle verdorrt?»",
+   "reason_de": "Zeichenhandlung und Erkennungsmoment (Kriterien 2 und 4).",
+   "recognition_de": "Der verdorrte Feigenbaum.",
+   "keywords": [
+    "nichts an ihm als nur Blätter",
+    "Nie mehr in Ewigkeit soll aus dir Frucht wachsen!",
+    "Und der Feigenbaum verdorrte auf der Stelle"
+   ]
+  },
+  {
+   "reference": "MAT.21.21-MAT.21.22",
+   "text_de": "«Wenn ihr Glauben habt und nicht zweifelt», werdet ihr sogar zu diesem Berg sagen «Heb dich hoch und stürz dich ins Meer!», und es wird geschehen; alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.",
+   "reason_de": "Deutung als Zusage an die Glaubenden (Kriterium 1).",
+   "recognition_de": "Weiche: Glauben → es wird geschehen.",
+   "keywords": [
+    "Wenn ihr Glauben habt und nicht zweifelt",
+    "Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Eine Deutung des Feigenbaums auf Israel oder den Tempel gibt der Text nicht – Auslegung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.21.18-MAT.21.22",
+   "fingerprint": "1d0eb7611670ca8b"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

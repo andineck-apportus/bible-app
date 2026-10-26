@@ -11,48 +11,63 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.22.8-MAT.22.10",
+      "reference": "MAT.22.1-MAT.22.14",
       "figures": [
-        "FIG-GRUPPE-DIENER",
+        "FIG-ROLLE-KOENIG",
+        "FIG-ROLLE-GAST",
         "FIG-GRUPPE-GAESTE"
       ],
       "objects": [],
       "signs": [
         "FIG-ZEICHEN-HOCHZEIT",
-        "FIG-ZEICHEN-FREUDE"
+        "FIG-ZEICHEN-SCHWEIGEN"
       ],
-      "speech": [],
-      "action_de": "Der König schickt seine Knechte an die Ausgänge der Strassen; sie bringen alle zusammen, die sie finden, Böse und Gute, und das Hochzeitsfest füllt sich mit Gästen.",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-KOENIG",
+          "to": "FIG-ROLLE-GAST",
+          "icons": [
+            "FIG-OBJ-GEWAND",
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Freund, wie bist du hier hereingekommen, ohne ein Hochzeitskleid zu haben?",
+            "gsw": "Fründ, wie bisch du da inechoo, ohni es Hochziitgwand z haa?"
+          }
+        }
+      ],
+      "action_de": "Der König hat die Gäste von den Strassen, Böse und Gute, zum Hochzeitsfest holen lassen; einen Gast, der kein Hochzeitskleid anhat, fragt er: Freund, wie bist du hier hereingekommen? Er verstummt und wird hinausgeworfen; denn viele sind eingeladen, wenige aber auserwählt.",
+      "keywords": {
+        "de": "Denn viele sind eingeladen, wenige aber auserwählt",
+        "gsw": "Dänn vili sind iiglade, aber wenig userwählt"
+      },
       "stage": {
-        "arrows": [
-          [
-            "FIG-GRUPPE-DIENER",
-            "FIG-GRUPPE-GAESTE",
-            "go"
-          ]
-        ],
-        "signs_who": {
-          "FIG-ZEICHEN-FREUDE": [
-            "FIG-GRUPPE-GAESTE"
-          ]
+        "at": {
+          "FIG-ZEICHEN-SCHWEIGEN": "FIG-ROLLE-GAST",
+          "FIG-ZEICHEN-HOCHZEIT": "FIG-GRUPPE-GAESTE"
         },
         "mood": {
-          "FIG-GRUPPE-DIENER": "smile",
-          "FIG-GRUPPE-GAESTE": "delight"
+          "FIG-ROLLE-KOENIG": "earnest",
+          "FIG-ROLLE-GAST": "worried",
+          "FIG-GRUPPE-GAESTE": "smile"
+        },
+        "wear": {
+          "FIG-ROLLE-GAST": "#8E8A80"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 40,
-          "FIG-GRUPPE-GAESTE": 128
+          "FIG-ROLLE-KOENIG": 40,
+          "FIG-ROLLE-GAST": 100,
+          "FIG-GRUPPE-GAESTE": 158
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.22.21-MAT.22.22",
+      "reference": "MAT.22.15-MAT.22.22",
       "figures": [
+        "FIG-JESUS",
         "FIG-GRUPPE-PHARISAEER",
-        "FIG-GRUPPE-HERODIANER",
-        "FIG-JESUS"
+        "FIG-GRUPPE-HERODIANER"
       ],
       "objects": [
         "FIG-OBJ-DENAR"
@@ -63,36 +78,43 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
-            "FIG-ZEICHEN-GEBEN",
             "FIG-ZEICHEN-KAISER",
-            "FIG-ZEICHEN-GEBEN",
             "FIG-GOTT"
-          ]
+          ],
+          "word": {
+            "de": "Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!",
+            "gsw": "Gänd also, was em Kaiser ghört, em Kaiser, und was Gott ghört, Gott!"
+          }
         }
       ],
-      "action_de": "Jesus sagt: «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» Als sie das hören, staunen sie, lassen ihn stehen und gehen weg.",
+      "action_de": "Jesus lässt sich die Münze für die Steuer zeigen und fragt: Wessen Bild und Aufschrift ist das? – Des Kaisers. – Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!",
+      "keywords": {
+        "de": "Gebt also, was des Kaisers ist, dem Kaiser",
+        "gsw": "Gänd also, was em Kaiser ghört, em Kaiser"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-DENAR"
         },
         "mood": {
+          "FIG-JESUS": "calm",
           "FIG-GRUPPE-PHARISAEER": "surprised",
           "FIG-GRUPPE-HERODIANER": "surprised"
         },
         "x": {
-          "FIG-JESUS": 30,
-          "FIG-GRUPPE-HERODIANER": 96,
-          "FIG-GRUPPE-PHARISAEER": 152
+          "FIG-JESUS": 46,
+          "FIG-GRUPPE-PHARISAEER": 110,
+          "FIG-GRUPPE-HERODIANER": 160
         }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.22.31-MAT.22.33",
+      "reference": "MAT.22.23-MAT.22.40",
       "figures": [
         "FIG-GRUPPE-SADDUZAEER",
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-ROLLE-SCHRIFTGELEHRTER"
       ],
       "objects": [],
       "signs": [],
@@ -101,88 +123,110 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-SADDUZAEER",
           "icons": [
-            "FIG-GOTT",
-            "FIG-ABRAHAM",
             "FIG-ZEICHEN-LEBEN"
-          ]
+          ],
+          "word": {
+            "de": "Er ist nicht der Gott von Toten, sondern von Lebenden.",
+            "gsw": "Er isch nöd de Gott vo Tote, sondern vo Läbige."
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-ROLLE-SCHRIFTGELEHRTER",
+          "icons": [
+            "FIG-ZEICHEN-LIEBE"
+          ],
+          "word": {
+            "de": "Du sollst deinen Nächsten lieben wie dich selbst.",
+            "gsw": "Du söllsch din Nächschte liebe wie di sälber."
+          }
         }
       ],
-      "action_de": "Zur Auferstehung der Toten verweist Jesus auf Gottes Wort: «Ich bin der Gott Abrahams und der Gott Isaaks und der Gott Jakobs.» Er ist nicht der Gott von Toten, sondern von Lebenden. Die Menschenmengen sind überwältigt von seiner Lehre.",
+      "action_de": "Den Sadduzäern antwortet Jesus: Gott ist nicht der Gott von Toten, sondern von Lebenden; dem Gesetzeslehrer nennt er das grösste Gebot, Gott zu lieben, und das zweite, den Nächsten zu lieben wie sich selbst.",
+      "keywords": {
+        "de": "Du sollst den Herrn, deinen Gott, lieben",
+        "gsw": "Du söllsch de Herr, din Gott, liebe"
+      },
       "stage": {
         "mood": {
-          "FIG-GRUPPE-SADDUZAEER": "surprised",
-          "FIG-GRUPPE-MENGE": "surprised",
-          "FIG-JESUS": "calm"
+          "FIG-GRUPPE-SADDUZAEER": "pensive",
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-SCHRIFTGELEHRTER": "pensive"
         },
         "x": {
-          "FIG-GRUPPE-SADDUZAEER": 36,
+          "FIG-GRUPPE-SADDUZAEER": 34,
           "FIG-JESUS": 96,
-          "FIG-GRUPPE-MENGE": 152
+          "FIG-ROLLE-SCHRIFTGELEHRTER": 158
         }
       }
     },
     {
       "n": 4,
-      "reference": "MAT.22.37-MAT.22.40",
+      "reference": "MAT.22.41-MAT.22.46",
       "figures": [
         "FIG-JESUS",
-        "FIG-ROLLE-PHARISAEER"
+        "FIG-GRUPPE-PHARISAEER"
       ],
       "objects": [],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-SCHWEIGEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-PHARISAEER",
+          "to": "FIG-GRUPPE-PHARISAEER",
           "icons": [
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-GOTT"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-PHARISAEER",
-          "icons": [
-            "FIG-ZEICHEN-LIEBE",
-            "FIG-ROLLE-MENSCH"
-          ]
+            "FIG-DAVID",
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Wenn nun David ihn «Herr» nennt, wie ist er dann sein Sohn?",
+            "gsw": "Wänn also de David en «Herr» nännt, wie isch er dänn sin Sohn?"
+          }
         }
       ],
-      "action_de": "Jesus antwortet: «Du sollst den Herrn, deinen Gott, lieben mit deinem ganzen Herzen, mit deiner ganzen Seele und mit deinem ganzen Denken. Das ist das grösste und erste Gebot. Das zweite ist ihm gleich: Du sollst deinen Nächsten lieben wie dich selbst. An diesen zwei Geboten hängen das ganze Gesetz und die Propheten.»",
+      "action_de": "Jesus fragt die Pharisäer, wie der Christus Davids Sohn sein kann, wenn David ihn «Herr» nennt; niemand kann ihm antworten, und keiner wagt mehr, ihn zu fragen.",
+      "keywords": {
+        "de": "Und niemand konnte ihm ein Wort antworten",
+        "gsw": "Und niemer hät ihm es Wort chöne antworte"
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-SCHWEIGEN": "FIG-GRUPPE-PHARISAEER"
+        },
         "mood": {
-          "FIG-ROLLE-PHARISAEER": "pensive",
-          "FIG-JESUS": "smile"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-PHARISAEER": "pensive"
         },
         "x": {
-          "FIG-JESUS": 42,
-          "FIG-ROLLE-PHARISAEER": 140
+          "FIG-JESUS": 54,
+          "FIG-GRUPPE-PHARISAEER": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Der König schickt seine Knechte an die Ausgänge der Strassen; sie bringen alle zusammen, die sie finden, Böse und Gute, und das Hochzeitsfest füllt sich mit Gästen.",
-    "Jesus sagt: «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» Als sie das hören, staunen sie, lassen ihn stehen und gehen weg.",
-    "Zur Auferstehung der Toten verweist Jesus auf Gottes Wort: «Ich bin der Gott Abrahams und der Gott Isaaks und der Gott Jakobs.» Er ist nicht der Gott von Toten, sondern von Lebenden. Die Menschenmengen sind überwältigt von seiner Lehre.",
-    "Jesus antwortet: «Du sollst den Herrn, deinen Gott, lieben mit deinem ganzen Herzen, mit deiner ganzen Seele und mit deinem ganzen Denken. Das ist das grösste und erste Gebot. Das zweite ist ihm gleich: Du sollst deinen Nächsten lieben wie dich selbst. An diesen zwei Geboten hängen das ganze Gesetz und die Propheten.»"
+    "Der König hat die Gäste von den Strassen, Böse und Gute, zum Hochzeitsfest holen lassen; einen Gast, der kein Hochzeitskleid anhat, fragt er: Freund, wie bist du hier hereingekommen? Er verstummt und wird hinausgeworfen; denn viele sind eingeladen, wenige aber auserwählt.",
+    "Jesus lässt sich die Münze für die Steuer zeigen und fragt: Wessen Bild und Aufschrift ist das? – Des Kaisers. – Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!",
+    "Den Sadduzäern antwortet Jesus: Gott ist nicht der Gott von Toten, sondern von Lebenden; dem Gesetzeslehrer nennt er das grösste Gebot, Gott zu lieben, und das zweite, den Nächsten zu lieben wie sich selbst.",
+    "Jesus fragt die Pharisäer, wie der Christus Davids Sohn sein kann, wenn David ihn «Herr» nennt; niemand kann ihm antworten, und keiner wagt mehr, ihn zu fragen."
   ],
   "captions_de": [
-    "Das Fest füllt sich: Die Knechte holen alle von den Strassen (gestrichelter Weg); die Gäste in hellen Festgewändern feiern (grüne Girlande mit roten Blüten, strahlendes Gesicht).",
-    "Dem Kaiser – und Gott: Gebt dem Kaiser, was des Kaisers ist (offene Hände, goldener Lorbeerkranz), und Gott, was Gottes ist (offene Hände, Strahlenkranz).",
-    "Gott der Lebenden: Gott ist der Gott Abrahams (Strahlenkranz, alter Mann mit weissem Bart) – ein Gott der Lebenden (Keimling mit Unendlichzeichen); die Menschenmengen staunen.",
-    "Die zwei Gebote: erste Blase: Gott lieben (rotes Herz, Strahlenkranz); zweite Blase: den Nächsten lieben wie sich selbst (Herz, Mensch)."
+    "Hochzeitsfest: Der König (Krone) bei den Gästen (Hochzeit) fragt den Gast ohne Hochzeitskleid: «Freund, wie bist du hier hereingekommen, ohne ein Hochzeitskleid zu haben?» (Gewand, fragen); der Gast schweigt.",
+    "Der Denar: Jesus hält die Steuermünze (Denar) und sagt zu den Pharisäern und Herodianern: «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» (Kaiser, Gott).",
+    "Zwei Antworten: Jesus spricht zu den Sadduzäern und zum Gesetzeslehrer (Schriftgelehrter): «Er ist nicht der Gott von Toten, sondern von Lebenden.» (Leben) und «Du sollst deinen Nächsten lieben wie dich selbst.» (Liebe).",
+    "Sohn oder Herr? Jesus fragt die Pharisäer: «Wenn nun David ihn ‹Herr› nennt, wie ist er dann sein Sohn?» (David, fragen); sie schweigen (schweigen)."
   ],
-  "interpretation_note_de": "Je ein Feld zum Hochzeitsfest, zur Steuerfrage, zur Frage der Sadduzäer und zum grössten Gebot; die Frage nach Davids Sohn ([[MAT.22.41-MAT.22.46]]) und der Gast ohne Hochzeitskleid ([[MAT.22.11-MAT.22.13]]) sind nur in den Abschnittsbildern gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen für fünf Abschnitte ([[MAT.22.1-MAT.22.46]]): Feld 1 das Hochzeitsfest, Feld 2 der Denar, Feld 3 bündelt die Antworten an die Sadduzäer und den Gesetzeslehrer ([[MAT.22.23-MAT.22.40]]), Feld 4 die Davidsfrage. Die drei Einladungen, die sieben Brüder und die zwei Gebote im Wortlaut stehen in den Abschnittsbildern. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-022",
       "field": "summary",
-      "fingerprint": "f24833c3465b3ef7"
+      "fingerprint": "e0465095b890f531"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -358,6 +402,186 @@
           "Gott der Lebenden: Gott ist der Gott Abrahams (Strahlenkranz, alter Mann mit weissem Bart) – ein Gott der Lebenden (grüner Baum in einem goldenen Ring); die Menschenmengen staunen.",
           "Die zwei Gebote: erste Blase: Gott lieben (zwei ineinandergreifende rote Herzen, Strahlenkranz); zweite Blase: den Nächsten lieben wie sich selbst (Herzen, Mensch)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.22.8-MAT.22.10",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-GRUPPE-GAESTE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-HOCHZEIT",
+              "FIG-ZEICHEN-FREUDE"
+            ],
+            "speech": [],
+            "action_de": "Der König schickt seine Knechte an die Ausgänge der Strassen; sie bringen alle zusammen, die sie finden, Böse und Gute, und das Hochzeitsfest füllt sich mit Gästen.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-DIENER",
+                  "FIG-GRUPPE-GAESTE",
+                  "go"
+                ]
+              ],
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-GAESTE"
+                ]
+              },
+              "mood": {
+                "FIG-GRUPPE-DIENER": "smile",
+                "FIG-GRUPPE-GAESTE": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 40,
+                "FIG-GRUPPE-GAESTE": 128
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.22.21-MAT.22.22",
+            "figures": [
+              "FIG-GRUPPE-PHARISAEER",
+              "FIG-GRUPPE-HERODIANER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-DENAR"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-ZEICHEN-KAISER",
+                  "FIG-ZEICHEN-GEBEN",
+                  "FIG-GOTT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» Als sie das hören, staunen sie, lassen ihn stehen und gehen weg.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-DENAR"
+              },
+              "mood": {
+                "FIG-GRUPPE-PHARISAEER": "surprised",
+                "FIG-GRUPPE-HERODIANER": "surprised"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-HERODIANER": 96,
+                "FIG-GRUPPE-PHARISAEER": 152
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.22.31-MAT.22.33",
+            "figures": [
+              "FIG-GRUPPE-SADDUZAEER",
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-SADDUZAEER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-ABRAHAM",
+                  "FIG-ZEICHEN-LEBEN"
+                ]
+              }
+            ],
+            "action_de": "Zur Auferstehung der Toten verweist Jesus auf Gottes Wort: «Ich bin der Gott Abrahams und der Gott Isaaks und der Gott Jakobs.» Er ist nicht der Gott von Toten, sondern von Lebenden. Die Menschenmengen sind überwältigt von seiner Lehre.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-SADDUZAEER": "surprised",
+                "FIG-GRUPPE-MENGE": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-SADDUZAEER": 36,
+                "FIG-JESUS": 96,
+                "FIG-GRUPPE-MENGE": 152
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.22.37-MAT.22.40",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-PHARISAEER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-GOTT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-PHARISAEER",
+                "icons": [
+                  "FIG-ZEICHEN-LIEBE",
+                  "FIG-ROLLE-MENSCH"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: «Du sollst den Herrn, deinen Gott, lieben mit deinem ganzen Herzen, mit deiner ganzen Seele und mit deinem ganzen Denken. Das ist das grösste und erste Gebot. Das zweite ist ihm gleich: Du sollst deinen Nächsten lieben wie dich selbst. An diesen zwei Geboten hängen das ganze Gesetz und die Propheten.»",
+            "stage": {
+              "mood": {
+                "FIG-ROLLE-PHARISAEER": "pensive",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 42,
+                "FIG-ROLLE-PHARISAEER": 140
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Der König schickt seine Knechte an die Ausgänge der Strassen; sie bringen alle zusammen, die sie finden, Böse und Gute, und das Hochzeitsfest füllt sich mit Gästen.",
+          "Jesus sagt: «Gebt also, was des Kaisers ist, dem Kaiser, und was Gottes ist, Gott!» Als sie das hören, staunen sie, lassen ihn stehen und gehen weg.",
+          "Zur Auferstehung der Toten verweist Jesus auf Gottes Wort: «Ich bin der Gott Abrahams und der Gott Isaaks und der Gott Jakobs.» Er ist nicht der Gott von Toten, sondern von Lebenden. Die Menschenmengen sind überwältigt von seiner Lehre.",
+          "Jesus antwortet: «Du sollst den Herrn, deinen Gott, lieben mit deinem ganzen Herzen, mit deiner ganzen Seele und mit deinem ganzen Denken. Das ist das grösste und erste Gebot. Das zweite ist ihm gleich: Du sollst deinen Nächsten lieben wie dich selbst. An diesen zwei Geboten hängen das ganze Gesetz und die Propheten.»"
+        ],
+        "captions_de": [
+          "Das Fest füllt sich: Die Knechte holen alle von den Strassen (gestrichelter Weg); die Gäste in hellen Festgewändern feiern (grüne Girlande mit roten Blüten, strahlendes Gesicht).",
+          "Dem Kaiser – und Gott: Gebt dem Kaiser, was des Kaisers ist (offene Hände, goldener Lorbeerkranz), und Gott, was Gottes ist (offene Hände, Strahlenkranz).",
+          "Gott der Lebenden: Gott ist der Gott Abrahams (Strahlenkranz, alter Mann mit weissem Bart) – ein Gott der Lebenden (Keimling mit Unendlichzeichen); die Menschenmengen staunen.",
+          "Die zwei Gebote: erste Blase: Gott lieben (rotes Herz, Strahlenkranz); zweite Blase: den Nächsten lieben wie sich selbst (Herz, Mensch)."
+        ],
+        "interpretation_note_de": "Je ein Feld zum Hochzeitsfest, zur Steuerfrage, zur Frage der Sadduzäer und zum grössten Gebot; die Frage nach Davids Sohn ([[MAT.22.41-MAT.22.46]]) und der Gast ohne Hochzeitskleid ([[MAT.22.11-MAT.22.13]]) sind nur in den Abschnittsbildern gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-022",
+            "field": "summary",
+            "fingerprint": "f24833c3465b3ef7"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

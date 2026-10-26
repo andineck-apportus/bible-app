@@ -1,0 +1,205 @@
+{
+ "id": "CORE-MAT-019-016-022",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.19.16-MAT.19.22",
+ "target": "TU-MAT-019-016-022",
+ "core_de": "Ein junger Mann fragt Jesus, was er Gutes tun soll, um ewiges Leben zu erlangen; Jesus sagt, einer ist der Gute, und nennt ihm die Gebote – nicht töten, nicht ehebrechen, nicht stehlen, nicht falsch aussagen, Vater und Mutter ehren, den Nächsten lieben wie sich selbst; als der junge Mann sagt, das alles habe er gehalten, und fragt, was ihm noch fehle, antwortet Jesus: Wenn du vollkommen sein willst, verkaufe deinen Besitz, gib es den Armen, und du wirst einen Schatz in den Himmeln haben, und folge mir nach; da geht er traurig davon, denn er hatte viele Güter.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "drei Fragen, drei Antworten",
+    "range": "MAT.19.16-MAT.19.22",
+    "elements": [
+     {
+      "label": "Frage 1: «Lehrer, was Gutes soll ich tun, damit ich ewiges Leben erlange?» – «Einer ist der Gute … halte die Gebote!»",
+      "ref": "MAT.19.16-MAT.19.17",
+      "role": "Runde 1"
+     },
+     {
+      "label": "Frage 2: «Welche?» – die Gebote",
+      "ref": "MAT.19.18-MAT.19.19",
+      "role": "Runde 2",
+      "child": "s2"
+     },
+     {
+      "label": "Frage 3: «Das alles habe ich gehalten. Was fehlt mir noch?» – Wenn du vollkommen sein willst …",
+      "ref": "MAT.19.20-MAT.19.21",
+      "role": "Runde 3",
+      "child": "s3"
+     },
+     {
+      "label": "Er ging traurig davon; denn er hatte viele Güter",
+      "ref": "MAT.19.22",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-JUNGER-MANN",
+       "to": "FIG-JESUS",
+       "ref": "MAT.19.16-MAT.19.20"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-ROLLE-JUNGER-MANN",
+       "ref": "MAT.19.17-MAT.19.21"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "sechs Gebote",
+    "range": "MAT.19.18-MAT.19.19",
+    "elements": [
+     {
+      "label": "Du sollst nicht töten",
+      "ref": "MAT.19.18"
+     },
+     {
+      "label": "du sollst nicht ehebrechen",
+      "ref": "MAT.19.18"
+     },
+     {
+      "label": "du sollst nicht stehlen",
+      "ref": "MAT.19.18"
+     },
+     {
+      "label": "du sollst nicht falsch aussagen",
+      "ref": "MAT.19.18"
+     },
+     {
+      "label": "ehre Vater und Mutter",
+      "ref": "MAT.19.19"
+     },
+     {
+      "label": "du sollst deinen Nächsten lieben wie dich selbst",
+      "ref": "MAT.19.19"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "EXO.20.12-EXO.20.16",
+       "kind": "Zitat"
+      },
+      {
+       "ref": "LEV.19.18",
+       "kind": "Zitat"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "condition",
+    "subtype": "Wenn du vollkommen sein willst → …",
+    "range": "MAT.19.21",
+    "elements": [
+     {
+      "label": "Wenn du vollkommen sein willst",
+      "ref": "MAT.19.21",
+      "role": "Bedingung"
+     },
+     {
+      "label": "geh, verkaufe deinen Besitz und gib es den Armen",
+      "ref": "MAT.19.21",
+      "role": "Weisung"
+     },
+     {
+      "label": "und du wirst einen Schatz in den Himmeln haben",
+      "ref": "MAT.19.21",
+      "role": "Folge"
+     },
+     {
+      "label": "und komm, folge mir nach!",
+      "ref": "MAT.19.21",
+      "role": "Ruf"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Einladung, nicht Bericht",
+       "ref": "MAT.19.21",
+       "note": "Der junge Mann folgt nicht."
+      }
+     ]
+    },
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.19.16-MAT.19.17",
+   "text_de": "«Lehrer, was Gutes soll ich tun, damit ich ewiges Leben erlange?» – «Einer ist der Gute. Wenn du aber in das Leben hineingehen willst, halte die Gebote!»",
+   "reason_de": "Frage und erste Antwort (Kriterium 2).",
+   "recognition_de": "Der junge Mann fragt Jesus.",
+   "keywords": [
+    "was Gutes soll ich tun, damit ich ewiges Leben erlange?",
+    "Einer ist der Gute",
+    "halte die Gebote!"
+   ]
+  },
+  {
+   "reference": "MAT.19.18-MAT.19.20",
+   "text_de": "«Welche?» – Du sollst nicht töten, nicht ehebrechen, nicht stehlen, nicht falsch aussagen; ehre Vater und Mutter; du sollst deinen Nächsten lieben wie dich selbst. – «Das alles habe ich gehalten. Was fehlt mir noch?»",
+   "reason_de": "Reihe der sechs Gebote vollständig (Kriterium 2).",
+   "recognition_de": "Raster der sechs Gebote.",
+   "keywords": [
+    "Du sollst nicht töten",
+    "du sollst deinen Nächsten lieben wie dich selbst",
+    "Was fehlt mir noch?"
+   ]
+  },
+  {
+   "reference": "MAT.19.21-MAT.19.22",
+   "text_de": "«Wenn du vollkommen sein willst, geh, verkaufe deinen Besitz und gib es den Armen, und du wirst einen Schatz in den Himmeln haben; und komm, folge mir nach!» Als der junge Mann das hörte, ging er traurig davon; denn er hatte viele Güter.",
+   "reason_de": "Höhepunkt und Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Jesus lädt ein; der junge Mann geht traurig weg.",
+   "keywords": [
+    "Wenn du vollkommen sein willst",
+    "einen Schatz in den Himmeln haben",
+    "ging er traurig davon; denn er hatte viele Güter"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Frage, ob die Reihe bewusst nur die Gebote der zweiten Tafel nennt – Deutung"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-JUNGER-MANN"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.19.16-MAT.19.22",
+   "fingerprint": "1f881ee7032d56e2"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

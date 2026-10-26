@@ -11,80 +11,67 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.26.6-MAT.26.7",
+      "reference": "MAT.26.6-MAT.26.9",
       "figures": [
         "FIG-ROLLE-FRAU",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
-        "FIG-ORT-HAUS",
         "FIG-OBJ-SALBGEFAESS"
       ],
       "signs": [
-        "FIG-ZEICHEN-SALBUNG"
+        "FIG-ZEICHEN-SALBUNG",
+        "FIG-ZEICHEN-ZORN"
       ],
-      "speech": [],
-      "action_de": "Im Haus Simons des Aussätzigen in Betanien tritt eine Frau mit einem Alabastergefäss voll kostbarem Salböl zu Jesus und giesst es ihm über den Kopf, während er zu Tisch liegt.",
-      "stage": {
-        "hold": {
-          "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
-        },
-        "at": {
-          "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
-        },
-        "mood": {
-          "FIG-ROLLE-FRAU": "calm",
-          "FIG-JESUS": "calm"
-        },
-        "pose": {
-          "FIG-JESUS": "sit"
-        },
-        "back_side": "right",
-        "x": {
-          "FIG-ROLLE-FRAU": 48,
-          "FIG-JESUS": 86
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.26.8-MAT.26.9",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-ROLLE-FRAU"
-      ],
-      "objects": [
-        "FIG-OBJ-SALBGEFAESS"
-      ],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-GRUPPE-JUENGER",
           "to": "FIG-ROLLE-FRAU",
           "icons": [
-            "FIG-OBJ-SALBGEFAESS",
-            "FIG-OBJ-MUENZEN",
-            "FIG-GRUPPE-ARME"
-          ]
+            "FIG-ZEICHEN-VERLUST",
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Wozu diese Verschwendung?",
+            "gsw": "Für was die Verschwändig?"
+          }
         }
       ],
-      "action_de": "Die Jünger empören sich: Wozu diese Verschwendung? Man hätte das Öl für viel Geld verkaufen und den Armen geben können.",
+      "action_de": "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; die Jünger empören sich: Wozu diese Verschwendung?",
+      "keywords": {
+        "de": "Wozu diese Verschwendung?",
+        "gsw": "Für was die Verschwändig?"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
         },
+        "at": {
+          "FIG-ZEICHEN-SALBUNG": "FIG-JESUS",
+          "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-JUENGER"
+        },
+        "pose": {
+          "FIG-JESUS": "sit"
+        },
         "mood": {
-          "FIG-GRUPPE-JUENGER": "earnest",
-          "FIG-ROLLE-FRAU": "worried"
+          "FIG-ROLLE-FRAU": "calm",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "angry"
+        },
+        "x": {
+          "FIG-ROLLE-FRAU": 40,
+          "FIG-JESUS": 84,
+          "FIG-GRUPPE-JUENGER": 152
         }
       }
     },
     {
-      "n": 3,
+      "n": 2,
       "reference": "MAT.26.10-MAT.26.13",
       "figures": [
-        "FIG-JESUS",
         "FIG-GRUPPE-JUENGER",
+        "FIG-JESUS",
         "FIG-ROLLE-FRAU"
       ],
       "objects": [
@@ -96,66 +83,56 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-OBJ-SALBGEFAESS",
-            "FIG-ZEICHEN-TOD"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-WELT",
-            "FIG-ZEICHEN-VERKUENDIGEN",
-            "FIG-ROLLE-FRAU"
-          ]
+            "FIG-ZEICHEN-GUTE-WERKE"
+          ],
+          "word": {
+            "de": "Sie hat nämlich ein gutes Werk an mir getan.",
+            "gsw": "Si hät nämli es guets Wärch a mir taa."
+          }
         }
       ],
-      "action_de": "Jesus nimmt die Frau in Schutz: Sie hat ein gutes Werk an mir getan; mit dem Salböl hat sie es für mein Begräbnis getan, und wo das Evangelium verkündigt wird in der ganzen Welt, wird man erzählen, was sie getan hat.",
+      "action_de": "Jesus sagt: Sie hat ein gutes Werk an mir getan; die Armen habt ihr immer bei euch, mich aber nicht immer; sie hat es für mein Begräbnis getan, und wo das Evangelium verkündigt wird, wird man erzählen, was sie getan hat.",
+      "keywords": {
+        "de": "hat sie es für mein Begräbnis getan",
+        "gsw": "hät si s für mini Beerdigung gmacht"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
         },
         "mood": {
-          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-JUENGER": "pensive",
+          "FIG-JESUS": "earnest",
           "FIG-ROLLE-FRAU": "calm"
         },
         "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-JUENGER": 104,
-          "FIG-ROLLE-FRAU": 158
+          "FIG-GRUPPE-JUENGER": 38,
+          "FIG-JESUS": 100,
+          "FIG-ROLLE-FRAU": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Im Haus Simons des Aussätzigen in Betanien tritt eine Frau mit einem Alabastergefäss voll kostbarem Salböl zu Jesus und giesst es ihm über den Kopf, während er zu Tisch liegt.",
-    "Die Jünger empören sich: Wozu diese Verschwendung? Man hätte das Öl für viel Geld verkaufen und den Armen geben können.",
-    "Jesus nimmt die Frau in Schutz: Sie hat ein gutes Werk an mir getan; mit dem Salböl hat sie es für mein Begräbnis getan, und wo das Evangelium verkündigt wird in der ganzen Welt, wird man erzählen, was sie getan hat."
+    "In Betanien giesst eine Frau Jesus kostbares Salböl über den Kopf; die Jünger empören sich: Wozu diese Verschwendung?",
+    "Jesus sagt: Sie hat ein gutes Werk an mir getan; die Armen habt ihr immer bei euch, mich aber nicht immer; sie hat es für mein Begräbnis getan, und wo das Evangelium verkündigt wird, wird man erzählen, was sie getan hat."
   ],
   "captions_de": [
-    "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
-    "Empörung: Die Jünger sagen zur Frau: Das Salböl hätte Geld für die Armen gebracht (Gefäss, Münzen, Arme in grauen Kleidern).",
-    "Für mein Begräbnis: Jesus sagt den Jüngern: Das Salböl ist für mein Begräbnis (Gefäss, Totenkopf); in der ganzen Welt wird man von ihr erzählen (Erdkugel, Rufer, Frau)."
+    "Salbung: Die Frau giesst Salböl aus dem Alabastergefäss über Jesu Kopf (Salbung); die Jünger empören sich: «Wozu diese Verschwendung?» (Zorn).",
+    "Ein gutes Werk: Jesus nimmt die Frau gegen die Jünger in Schutz: «Sie hat nämlich ein gutes Werk an mir getan.» (gute Werke); die Frau mit dem Salbgefäss."
   ],
-  "interpretation_note_de": "Die Frau bleibt namenlos wie im Text ([[MAT.26.7]]); sie wird nicht mit Maria von Betanien ([[JHN.12.3]]) gleichgesetzt. Matthäus sagt «die Jünger» ([[MAT.26.8]]), deshalb hier die Gruppe der Jünger. Das Liegen zu Tisch zeigt das Bild als Sitzen.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.26.6-MAT.26.13]]): Salbung und Einwand der Jünger, dann Jesu Antwort. Den Namen der Frau nennt Matthäus nicht; sie ist als Rolle gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-026-006-013",
       "field": "summary",
-      "fingerprint": "1566b66244c599bf"
+      "fingerprint": "92782a21dc19272f"
     },
     {
       "record": "TRANS-MAT-026-001-075-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.26.6-MAT.26.7",
-      "fingerprint": "cad6065dd00a5a6f"
-    },
-    {
-      "record": "TRANS-MAT-026-001-075-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.26.8-MAT.26.9",
-      "fingerprint": "2ca6434f9382f73f"
+      "reference": "MAT.26.6-MAT.26.9",
+      "fingerprint": "9901e005805e6ec8"
     },
     {
       "record": "TRANS-MAT-026-001-075-DE-WORKING",
@@ -165,7 +142,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -314,6 +291,200 @@
           "Empörung: Die Jünger sagen zur Frau: Das Salböl hätte Geld für die Armen gebracht (Gefäss, Münzen, Arme in grauen Kleidern).",
           "Für mein Begräbnis: Jesus sagt den Jüngern: Das Salböl ist für mein Begräbnis (Gefäss, verschlossenes Grab); in der ganzen Welt wird man von ihr erzählen (Erdscheibe, Rufer, Frau)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-026-006-013",
+            "field": "summary",
+            "fingerprint": "1566b66244c599bf"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.6-MAT.26.7",
+            "fingerprint": "cad6065dd00a5a6f"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.8-MAT.26.9",
+            "fingerprint": "2ca6434f9382f73f"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.10-MAT.26.13",
+            "fingerprint": "bd2633a8f6eb9592"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.6-MAT.26.7",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS",
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [],
+            "action_de": "Im Haus Simons des Aussätzigen in Betanien tritt eine Frau mit einem Alabastergefäss voll kostbarem Salböl zu Jesus und giesst es ihm über den Kopf, während er zu Tisch liegt.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm",
+                "FIG-JESUS": "calm"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-FRAU": 48,
+                "FIG-JESUS": 86
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.8-MAT.26.9",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-ROLLE-FRAU",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-GRUPPE-ARME"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger empören sich: Wozu diese Verschwendung? Man hätte das Öl für viel Geld verkaufen und den Armen geben können.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "earnest",
+                "FIG-ROLLE-FRAU": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.10-MAT.26.13",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-ROLLE-FRAU"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SALBGEFAESS",
+                  "FIG-ZEICHEN-TOD"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WELT",
+                  "FIG-ZEICHEN-VERKUENDIGEN",
+                  "FIG-ROLLE-FRAU"
+                ]
+              }
+            ],
+            "action_de": "Jesus nimmt die Frau in Schutz: Sie hat ein gutes Werk an mir getan; mit dem Salböl hat sie es für mein Begräbnis getan, und wo das Evangelium verkündigt wird in der ganzen Welt, wird man erzählen, was sie getan hat.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-ROLLE-FRAU": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 104,
+                "FIG-ROLLE-FRAU": 158
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Im Haus Simons des Aussätzigen in Betanien tritt eine Frau mit einem Alabastergefäss voll kostbarem Salböl zu Jesus und giesst es ihm über den Kopf, während er zu Tisch liegt.",
+          "Die Jünger empören sich: Wozu diese Verschwendung? Man hätte das Öl für viel Geld verkaufen und den Armen geben können.",
+          "Jesus nimmt die Frau in Schutz: Sie hat ein gutes Werk an mir getan; mit dem Salböl hat sie es für mein Begräbnis getan, und wo das Evangelium verkündigt wird in der ganzen Welt, wird man erzählen, was sie getan hat."
+        ],
+        "captions_de": [
+          "Salbung: Eine Frau giesst Jesus Salböl aus dem Alabastergefäss über den Kopf (Gefäss in ihrer Hand; Ölhorn mit goldenem Tropfen über Jesus); hinten das Haus.",
+          "Empörung: Die Jünger sagen zur Frau: Das Salböl hätte Geld für die Armen gebracht (Gefäss, Münzen, Arme in grauen Kleidern).",
+          "Für mein Begräbnis: Jesus sagt den Jüngern: Das Salböl ist für mein Begräbnis (Gefäss, Totenkopf); in der ganzen Welt wird man von ihr erzählen (Erdkugel, Rufer, Frau)."
+        ],
+        "interpretation_note_de": "Die Frau bleibt namenlos wie im Text ([[MAT.26.7]]); sie wird nicht mit Maria von Betanien ([[JHN.12.3]]) gleichgesetzt. Matthäus sagt «die Jünger» ([[MAT.26.8]]), deshalb hier die Gruppe der Jünger. Das Liegen zu Tisch zeigt das Bild als Sitzen.",
+        "basis": [
+          {
+            "record": "TU-MAT-026-006-013",
+            "field": "summary",
+            "fingerprint": "92782a21dc19272f"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.6-MAT.26.7",
+            "fingerprint": "cad6065dd00a5a6f"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.8-MAT.26.9",
+            "fingerprint": "2ca6434f9382f73f"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.10-MAT.26.13",
+            "fingerprint": "bd2633a8f6eb9592"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -1,0 +1,158 @@
+{
+ "id": "CORE-MAT-027-032-044",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.27.32-MAT.27.44",
+ "target": "TU-MAT-027-032-044",
+ "core_de": "Simon aus Kyrene wird gezwungen, Jesu Kreuz zu tragen; auf Golgota kreuzigen sie Jesus, verlosen seine Kleider und bringen über seinem Kopf die Anklage an: «Dies ist Jesus, der König der Juden»; mit ihm werden zwei Räuber gekreuzigt; die Vorübergehenden lästern: «Rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!», die Hohepriester mit den Schriftgelehrten und Ältesten spotten: «Andere hat er gerettet, sich selbst kann er nicht retten», und auch die Räuber beschimpfen ihn.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "subtype": "Kreuzweg – Kreuzigung – Inschrift – Spott",
+    "range": "MAT.27.32-MAT.27.44",
+    "elements": [
+     {
+      "label": "Simon aus Kyrene muss das Kreuz tragen",
+      "ref": "MAT.27.32",
+      "role": "Weg"
+     },
+     {
+      "label": "Golgota; Wein mit Galle – er will ihn nicht trinken",
+      "ref": "MAT.27.33-MAT.27.34",
+      "role": "Ort"
+     },
+     {
+      "label": "Gekreuzigt; Kleider verlost; bewacht",
+      "ref": "MAT.27.35-MAT.27.36",
+      "role": "Kreuzigung"
+     },
+     {
+      "label": "Anklage über dem Kopf: «Dies ist Jesus, der König der Juden»; zwei Räuber rechts und links",
+      "ref": "MAT.27.37-MAT.27.38",
+      "role": "Inschrift"
+     },
+     {
+      "label": "Dreifacher Spott",
+      "ref": "MAT.27.39-MAT.27.44",
+      "role": "Spott",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "PSA.22.7",
+       "kind": "Bezug (Kopfschütteln)"
+      },
+      {
+       "ref": "PSA.22.18",
+       "kind": "Bezug (Kleider verlost)"
+      },
+      {
+       "ref": "PSA.22.8",
+       "kind": "Bezug («Er hat auf Gott vertraut»)"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Gruppen von Spöttern",
+    "range": "MAT.27.39-MAT.27.44",
+    "elements": [
+     {
+      "label": "Die Vorübergehenden: «Du, der du den Tempel niederreisst … rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!»",
+      "ref": "MAT.27.39-MAT.27.40",
+      "role": "1"
+     },
+     {
+      "label": "Die Hohepriester mit den Schriftgelehrten und Ältesten: «Andere hat er gerettet, sich selbst kann er nicht retten … Er hat auf Gott vertraut»",
+      "ref": "MAT.27.41-MAT.27.43",
+      "role": "2"
+     },
+     {
+      "label": "Die Räuber, die mit ihm gekreuzigt waren, beschimpfen ihn ebenso",
+      "ref": "MAT.27.44",
+      "role": "3"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.27.32-MAT.27.34",
+   "text_de": "Sie zwingen einen Mann aus Kyrene namens Simon, sein Kreuz zu tragen; an dem Ort Golgota, «Schädelstätte», geben sie ihm Wein mit Galle; er will ihn nicht trinken.",
+   "reason_de": "Weg zum Kreuz (Kriterium 3).",
+   "recognition_de": "Simon trägt das Kreuz.",
+   "keywords": [
+    "diesen zwangen sie, sein Kreuz zu tragen",
+    "Golgota"
+   ]
+  },
+  {
+   "reference": "MAT.27.35-MAT.27.38",
+   "text_de": "Sie kreuzigen ihn und verteilen seine Kleider, indem sie das Los werfen; sie bewachen ihn; über seinem Kopf die Anklage: «Dies ist Jesus, der König der Juden»; mit ihm zwei Räuber, einer zur Rechten und einer zur Linken.",
+   "reason_de": "Kreuzigung, Erkennungsmoment (Kriterien 1 und 4).",
+   "recognition_de": "Jesus am Kreuz mit der Inschrift.",
+   "keywords": [
+    "Als sie ihn aber gekreuzigt hatten",
+    "indem sie das Los warfen",
+    "Dies ist Jesus, der König der Juden"
+   ]
+  },
+  {
+   "reference": "MAT.27.39-MAT.27.44",
+   "text_de": "Die Vorübergehenden lästern: «Rette dich selbst! Wenn du Gottes Sohn bist, steig herab vom Kreuz!»; die Hohepriester mit den Schriftgelehrten und Ältesten: «Andere hat er gerettet, sich selbst kann er nicht retten»; ebenso die Räuber.",
+   "reason_de": "Dreifacher Spott (Kriterium 2).",
+   "recognition_de": "Spötter unter dem Kreuz.",
+   "keywords": [
+    "Wenn du Gottes Sohn bist, steig herab vom Kreuz!",
+    "Andere hat er gerettet, sich selbst kann er nicht retten",
+    "Auf dieselbe Weise aber beschimpften ihn auch die Räuber"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Einzelheiten der Kreuzigung werden nicht ausgemalt (BILDSPRACHE.md)",
+  "Die Anspielungen auf Ps 22 (Kleider, Kopfschütteln) nennt der Text nicht ausdrücklich – Bezug (in structure)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-SIMON-KYRENE",
+  "FIG-GRUPPE-SOLDATEN",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-GRUPPE-SCHRIFTGELEHRTE",
+  "FIG-GRUPPE-AELTESTE",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-GOLGOTA"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.27.32-MAT.27.44",
+   "fingerprint": "9906f7021501821d"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

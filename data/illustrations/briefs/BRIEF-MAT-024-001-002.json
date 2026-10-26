@@ -11,103 +11,75 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.24.1",
+      "reference": "MAT.24.1-MAT.24.2",
       "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-ORT-TEMPEL"
       ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-JUENGER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-ZEICHEN-ZEIGEN"
-          ]
-        }
+      "signs": [
+        "FIG-ZEICHEN-ZEIGEN"
       ],
-      "action_de": "Jesus kommt aus dem Tempel und geht weg; seine Jünger treten heran, um ihm die Bauten des Tempels zu zeigen.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "delight",
-          "FIG-JESUS": "calm"
-        },
-        "back_side": "left",
-        "x": {
-          "FIG-GRUPPE-JUENGER": 96,
-          "FIG-JESUS": 154
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.24.2",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-TEMPEL"
-      ],
-      "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ORT-TEMPEL",
-            "FIG-ZEICHEN-UMSTURZ"
-          ]
+            "FIG-OBJ-STEINE",
+            "FIG-ZEICHEN-NIEDERREISSEN"
+          ],
+          "word": {
+            "de": "Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.",
+            "gsw": "Amen, ich säg eu: Da bliibt kei Stei uf em andere, wo nöd abbroche wird."
+          }
         }
       ],
-      "action_de": "Jesus antwortet: «Seht ihr nicht all das? Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.»",
+      "action_de": "Die Jünger wollen Jesus die Bauten des Tempels zeigen; er sagt: Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.",
+      "keywords": {
+        "de": "um ihm die Bauten des Tempels zu zeigen",
+        "gsw": "für ihm d Bauwärch vom Tämpel z zeige"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "surprised",
-          "FIG-JESUS": "earnest"
+        "back_side": "right",
+        "before": true,
+        "beside": {
+          "FIG-ZEICHEN-ZEIGEN": "FIG-GRUPPE-JUENGER"
         },
-        "back_side": "left",
+        "mood": {
+          "FIG-JESUS": "earnest",
+          "FIG-GRUPPE-JUENGER": "surprised"
+        },
         "x": {
-          "FIG-GRUPPE-JUENGER": 84,
-          "FIG-JESUS": 160
+          "FIG-JESUS": 34,
+          "FIG-GRUPPE-JUENGER": 96
         }
       }
     }
   ],
   "actions_de": [
-    "Jesus kommt aus dem Tempel und geht weg; seine Jünger treten heran, um ihm die Bauten des Tempels zu zeigen.",
-    "Jesus antwortet: «Seht ihr nicht all das? Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.»"
+    "Die Jünger wollen Jesus die Bauten des Tempels zeigen; er sagt: Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird."
   ],
   "captions_de": [
-    "Die Bauten: Die Jünger zeigen Jesus staunend die Bauten des Tempels (Tempel hinten; in der Blase Tempel, Funken).",
-    "Kein Stein auf dem anderen: Jesus kündigt an, der Tempel werde abgebrochen (Tempel, kippende Mauern mit Riss und fallenden Steinen)."
+    "Kein Stein auf dem anderen: Die Jünger zeigen auf den Tempel (zeigen); Jesus kündigt an: «Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.» (Steine, niederreissen)."
   ],
-  "interpretation_note_de": "Ankündigung, kein Bericht: Die Zerstörung des Tempels erscheint nur in der Sprechblase.",
+  "interpretation_note_de": "Ein Feld: Hinweis der Jünger und Jesu Ankündigung ([[MAT.24.1-MAT.24.2]]). Es ist eine Ankündigung; der Tempel ist unversehrt gezeichnet, weil Matthäus die Erfüllung nicht berichtet.",
   "basis": [
     {
       "record": "TU-MAT-024-001-002",
       "field": "summary",
-      "fingerprint": "d2a2c0229b6ac925"
+      "fingerprint": "28e26217a91cecd3"
     },
     {
       "record": "TRANS-MAT-024-001-051-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.24.1",
-      "fingerprint": "b012248b18caa62d"
-    },
-    {
-      "record": "TRANS-MAT-024-001-051-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.24.2",
-      "fingerprint": "f9a82fd65e445e44"
+      "reference": "MAT.24.1-MAT.24.2",
+      "fingerprint": "ab0734701e23f7ed"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -274,6 +246,136 @@
             }
           }
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-024-001-002",
+            "field": "summary",
+            "fingerprint": "d2a2c0229b6ac925"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.1",
+            "fingerprint": "b012248b18caa62d"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.2",
+            "fingerprint": "f9a82fd65e445e44"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.24.1",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-ZEICHEN-ZEIGEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus kommt aus dem Tempel und geht weg; seine Jünger treten heran, um ihm die Bauten des Tempels zu zeigen.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "delight",
+                "FIG-JESUS": "calm"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 96,
+                "FIG-JESUS": 154
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.24.2",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-TEMPEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-ZEICHEN-UMSTURZ"
+                ]
+              }
+            ],
+            "action_de": "Jesus antwortet: «Seht ihr nicht all das? Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-JESUS": "earnest"
+              },
+              "back_side": "left",
+              "x": {
+                "FIG-GRUPPE-JUENGER": 84,
+                "FIG-JESUS": 160
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus kommt aus dem Tempel und geht weg; seine Jünger treten heran, um ihm die Bauten des Tempels zu zeigen.",
+          "Jesus antwortet: «Seht ihr nicht all das? Amen, ich sage euch: Hier wird kein Stein auf dem anderen gelassen, der nicht abgebrochen wird.»"
+        ],
+        "captions_de": [
+          "Die Bauten: Die Jünger zeigen Jesus staunend die Bauten des Tempels (Tempel hinten; in der Blase Tempel, Funken).",
+          "Kein Stein auf dem anderen: Jesus kündigt an, der Tempel werde abgebrochen (Tempel, kippende Mauern mit Riss und fallenden Steinen)."
+        ],
+        "interpretation_note_de": "Ankündigung, kein Bericht: Die Zerstörung des Tempels erscheint nur in der Sprechblase.",
+        "basis": [
+          {
+            "record": "TU-MAT-024-001-002",
+            "field": "summary",
+            "fingerprint": "28e26217a91cecd3"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.1",
+            "fingerprint": "b012248b18caa62d"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.2",
+            "fingerprint": "f9a82fd65e445e44"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

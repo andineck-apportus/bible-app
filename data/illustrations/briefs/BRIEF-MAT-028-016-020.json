@@ -23,17 +23,24 @@
         "FIG-ZEICHEN-UNGLAUBE"
       ],
       "speech": [],
-      "action_de": "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat. Als sie ihn sehen, werfen sie sich nieder; einige aber zweifeln.",
+      "action_de": "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat; als sie ihn sehen, werfen sie sich nieder, einige aber zweifeln.",
+      "keywords": {
+        "de": "warfen sie sich nieder; einige aber zweifelten",
+        "gsw": "händ si sich nidergworfe; es paar aber händ zwiiflet"
+      },
       "stage": {
         "pose": {
           "FIG-GRUPPE-JUENGER": "kneel"
         },
         "at": {
-          "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-ZWOELF"
+          "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-JUENGER"
+        },
+        "on": {
+          "FIG-JESUS": "FIG-ORT-BERG"
         },
         "mood": {
           "FIG-JESUS": "calm",
-          "FIG-GRUPPE-JUENGER": "calm"
+          "FIG-GRUPPE-JUENGER": "pensive"
         },
         "back_side": "right",
         "before": true,
@@ -45,127 +52,104 @@
     },
     {
       "n": 2,
-      "reference": "MAT.28.18",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
+      "reference": "MAT.28.18-MAT.28.20",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-VOLLMACHT",
-            "FIG-ZEICHEN-HIMMEL-OFFEN",
-            "FIG-ZEICHEN-WELT"
-          ]
-        }
-      ],
-      "action_de": "Jesus tritt heran und sagt: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "calm",
-          "FIG-GRUPPE-JUENGER": "surprised"
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.28.19-MAT.28.20",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-GRUPPE-VOELKER",
-            "FIG-ZEICHEN-TAUFE"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-GOTT",
-            "FIG-JESUS",
-            "FIG-HEILIGER-GEIST"
-          ]
-        }
-      ],
-      "action_de": "Geht hin und macht alle Völker zu Jüngern: Tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes und lehrt sie, alles zu halten, was ich euch geboten habe.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest",
-          "FIG-GRUPPE-JUENGER": "pensive"
-        },
-        "x": {
-          "FIG-JESUS": 40
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.28.20",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-GRUPPE-JUENGER",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE",
-            "FIG-ZEICHEN-TAGE"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-VOLLBRACHT"
-          ]
-        }
-      ],
-      "action_de": "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
-      "stage": {
-        "mood": {
-          "FIG-JESUS": "smile",
-          "FIG-GRUPPE-JUENGER": "smile"
-        }
+      "speech": [],
+      "action_de": "Jesus sagt: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde; geht nun hin und macht alle Völker zu Jüngern, tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes und lehrt sie alles zu halten; und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+      "keywords": {
+        "de": "macht alle Völker zu Jüngern",
+        "gsw": "mached alli Völker zu Jünger"
+      },
+      "diagram": {
+        "visual": "arrows",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "cells": [
+          {
+            "a": {
+              "de": "Mir ist alle Vollmacht gegeben im Himmel und auf der Erde.",
+              "gsw": "Mir isch alli Vollmacht gää worde im Himel und uf de Ärde."
+            },
+            "icons": [
+              "FIG-ZEICHEN-VOLLMACHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "Geht nun hin und macht alle Völker zu Jüngern:",
+              "gsw": "Gönd also hii und mached alli Völker zu Jünger:"
+            },
+            "icons": [
+              "FIG-GRUPPE-VOELKER",
+              "FIG-ZEICHEN-AUSBREITEN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes",
+              "gsw": "Taufed si uf de Name vom Vatter und vom Sohn und vom heilige Geischt"
+            },
+            "icons": [
+              "FIG-ZEICHEN-TAUFE"
+            ]
+          },
+          {
+            "a": {
+              "de": "und lehrt sie, alles zu halten, was ich euch geboten habe.",
+              "gsw": "und lehred si, alles z halte, won ich eu befole han."
+            },
+            "icons": [
+              "FIG-ZEICHEN-LEHREN"
+            ]
+          },
+          {
+            "a": {
+              "de": "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+              "gsw": "Und lueg, ich bi bi eu alli Täg bis zur Vollendig vo de Wältziit."
+            },
+            "icons": [
+              "FIG-ZEICHEN-GEMEINSCHAFT",
+              "FIG-ZEICHEN-TAGE"
+            ]
+          }
+        ],
+        "links": [
+          {
+            "de": "nun",
+            "gsw": "also"
+          },
+          {
+            "de": "taufen",
+            "gsw": "taufe"
+          },
+          {
+            "de": "lehren",
+            "gsw": "lehre"
+          },
+          {
+            "de": "und siehe",
+            "gsw": "und lueg"
+          }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat. Als sie ihn sehen, werfen sie sich nieder; einige aber zweifeln.",
-    "Jesus tritt heran und sagt: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde.",
-    "Geht hin und macht alle Völker zu Jüngern: Tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes und lehrt sie, alles zu halten, was ich euch geboten habe.",
-    "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit."
+    "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat; als sie ihn sehen, werfen sie sich nieder, einige aber zweifeln.",
+    "Jesus sagt: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde; geht nun hin und macht alle Völker zu Jüngern, tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes und lehrt sie alles zu halten; und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit."
   ],
   "captions_de": [
-    "Auf dem Berg in Galiläa: Jesus kommt zu den Jüngern (Berg hinten); sie werfen sich nieder, einige zweifeln (graues Herz mit Riss).",
-    "Vollmacht: Jesus sagt: Mir ist alle Vollmacht gegeben (Schriftrolle mit Krone) im Himmel und auf der Erde (offene Wolken, Erdkugel).",
-    "Sendung: Macht alle Völker zu Jüngern und tauft sie (Völker, Muschel mit Wasser) – auf den Namen des Vaters, des Sohnes und des heiligen Geistes (Strahlenkranz, Jesus, Taube).",
-    "Zusage: Ich bin bei euch alle Tage (Jesus, Jünger, Reihe von Sonnen) bis zum Ende der Weltzeit (Zielpfosten mit grünem Kranz)."
+    "Auf dem Berg: Die Jünger knien vor Jesus (knien); einige zweifeln (Zweifel).",
+    "Pfeilkette (Bild Jesus): Vollmacht im Himmel und auf der Erde (Vollmacht) → geht nun hin, macht alle Völker zu Jüngern (Völker, ausbreiten) → tauft sie (taufen) → lehrt sie (lehren) → ich bin bei euch alle Tage (Gemeinschaft, Tage)."
   ],
-  "interpretation_note_de": "Die Gruppe der Zwölf steht hier für die elf Jünger ([[MAT.28.16]]). Der Strahlenkranz, Jesus und die Taube in der Sprechblase geben den dreifachen Namen wieder ([[MAT.28.19]]); sie sind kein Bild der Dreieinigkeit als solcher. Dass «einige zweifeln» ([[MAT.28.17]]), zeigt das Zeichen bei der Gruppe; wer gemeint ist, lässt der Text offen.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.28.16-MAT.28.20]]): die Elf auf dem Berg, dann Jesu Schlusswort als Pfeilkette Vollmacht → Auftrag (taufen, lehren) → Zusage. Es ist Auftrag und Zusage, kein Bericht einer Ausführung; das Buch endet hier. Die Zusage nimmt «Gott mit uns» auf ([[MAT.1.23]]).",
   "basis": [
     {
       "record": "TU-MAT-028-016-020",
       "field": "summary",
-      "fingerprint": "d5c3df6943073723"
+      "fingerprint": "ea5262877abd03e4"
     },
     {
       "record": "TRANS-MAT-028-001-020-DE-WORKING",
@@ -176,24 +160,12 @@
     {
       "record": "TRANS-MAT-028-001-020-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.28.18",
-      "fingerprint": "f6fc7df17d3be39b"
-    },
-    {
-      "record": "TRANS-MAT-028-001-020-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.28.19-MAT.28.20",
-      "fingerprint": "c99c0c6cf51faea2"
-    },
-    {
-      "record": "TRANS-MAT-028-001-020-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.28.20",
-      "fingerprint": "a22cef3e1b71bd74"
+      "reference": "MAT.28.18-MAT.28.20",
+      "fingerprint": "c069c3cdb615e641"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -513,6 +485,234 @@
           "Sendung: Macht alle Völker zu Jüngern und tauft sie (Völker, Muschel mit Wasser) – auf den Namen des Vaters, des Sohnes und des heiligen Geistes (Strahlenkranz, Jesus, Taube).",
           "Zusage: Ich bin bei euch alle Tage (Jesus, Jünger, Reihe von Sonnen) bis zum Ende der Weltzeit (Zielpfosten mit grünem Kranz)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-028-016-020",
+            "field": "summary",
+            "fingerprint": "d5c3df6943073723"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.16-MAT.28.17",
+            "fingerprint": "8fbe8554de41b79e"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.18",
+            "fingerprint": "f6fc7df17d3be39b"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.19-MAT.28.20",
+            "fingerprint": "c99c0c6cf51faea2"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.20",
+            "fingerprint": "a22cef3e1b71bd74"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.28.16-MAT.28.17",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-UNGLAUBE"
+            ],
+            "speech": [],
+            "action_de": "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat. Als sie ihn sehen, werfen sie sich nieder; einige aber zweifeln.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-JUENGER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-UNGLAUBE": "FIG-GRUPPE-ZWOELF"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "calm"
+              },
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 128,
+                "FIG-GRUPPE-JUENGER": 48
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.28.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLMACHT",
+                  "FIG-ZEICHEN-HIMMEL-OFFEN",
+                  "FIG-ZEICHEN-WELT"
+                ]
+              }
+            ],
+            "action_de": "Jesus tritt heran und sagt: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "surprised"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.28.19-MAT.28.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-VOELKER",
+                  "FIG-ZEICHEN-TAUFE"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GOTT",
+                  "FIG-JESUS",
+                  "FIG-HEILIGER-GEIST"
+                ]
+              }
+            ],
+            "action_de": "Geht hin und macht alle Völker zu Jüngern: Tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes und lehrt sie, alles zu halten, was ich euch geboten habe.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-JUENGER": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 40
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.28.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE",
+                  "FIG-ZEICHEN-TAGE"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-VOLLBRACHT"
+                ]
+              }
+            ],
+            "action_de": "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-JUENGER": "smile"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Die elf Jünger gehen nach Galiläa auf den Berg, wohin Jesus sie bestellt hat. Als sie ihn sehen, werfen sie sich nieder; einige aber zweifeln.",
+          "Jesus tritt heran und sagt: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde.",
+          "Geht hin und macht alle Völker zu Jüngern: Tauft sie auf den Namen des Vaters und des Sohnes und des heiligen Geistes und lehrt sie, alles zu halten, was ich euch geboten habe.",
+          "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit."
+        ],
+        "captions_de": [
+          "Auf dem Berg in Galiläa: Jesus kommt zu den Jüngern (Berg hinten); sie werfen sich nieder, einige zweifeln (graues Herz mit Riss).",
+          "Vollmacht: Jesus sagt: Mir ist alle Vollmacht gegeben (Schriftrolle mit Krone) im Himmel und auf der Erde (offene Wolken, Erdkugel).",
+          "Sendung: Macht alle Völker zu Jüngern und tauft sie (Völker, Muschel mit Wasser) – auf den Namen des Vaters, des Sohnes und des heiligen Geistes (Strahlenkranz, Jesus, Taube).",
+          "Zusage: Ich bin bei euch alle Tage (Jesus, Jünger, Reihe von Sonnen) bis zum Ende der Weltzeit (Zielpfosten mit grünem Kranz)."
+        ],
+        "interpretation_note_de": "Die Gruppe der Zwölf steht hier für die elf Jünger ([[MAT.28.16]]). Der Strahlenkranz, Jesus und die Taube in der Sprechblase geben den dreifachen Namen wieder ([[MAT.28.19]]); sie sind kein Bild der Dreieinigkeit als solcher. Dass «einige zweifeln» ([[MAT.28.17]]), zeigt das Zeichen bei der Gruppe; wer gemeint ist, lässt der Text offen.",
+        "basis": [
+          {
+            "record": "TU-MAT-028-016-020",
+            "field": "summary",
+            "fingerprint": "ea5262877abd03e4"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.16-MAT.28.17",
+            "fingerprint": "8fbe8554de41b79e"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.18",
+            "fingerprint": "f6fc7df17d3be39b"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.19-MAT.28.20",
+            "fingerprint": "c99c0c6cf51faea2"
+          },
+          {
+            "record": "TRANS-MAT-028-001-020-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.28.20",
+            "fingerprint": "a22cef3e1b71bd74"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

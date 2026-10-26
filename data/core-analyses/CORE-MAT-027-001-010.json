@@ -1,0 +1,147 @@
+{
+ "id": "CORE-MAT-027-001-010",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.27.1-MAT.27.10",
+ "target": "TU-MAT-027-001-010",
+ "core_de": "Am Morgen beschliessen die Hohepriester und Ältesten Jesu Tod und liefern ihn gefesselt dem Statthalter Pilatus aus; Judas bereut, bringt die dreissig Silberstücke zurück und sagt: «Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe», doch sie weisen ihn ab; er wirft das Geld in den Tempel, geht weg und erhängt sich; die Hohepriester kaufen mit dem Blutgeld den Acker des Töpfers als Begräbnisplatz für Fremde, und so wird erfüllt, was durch den Propheten Jeremia gesagt ist.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "interleave",
+    "subtype": "Jesus an Pilatus ↔ Ende des Judas",
+    "range": "MAT.27.1-MAT.27.10",
+    "elements": [
+     {
+      "label": "Beschluss am Morgen; gefesselt an Pilatus ausgeliefert",
+      "ref": "MAT.27.1-MAT.27.2",
+      "role": "Strang Jesus"
+     },
+     {
+      "label": "Judas bereut, bringt das Geld zurück: «Ich habe gesündigt …» – «Was geht uns das an?»",
+      "ref": "MAT.27.3-MAT.27.4",
+      "role": "Strang Judas"
+     },
+     {
+      "label": "Er wirft das Geld in den Tempel und erhängt sich",
+      "ref": "MAT.27.5",
+      "role": "Strang Judas"
+     },
+     {
+      "label": "Blutgeld: Acker des Töpfers – «Blutacker»; erfüllt, was durch Jeremia gesagt ist",
+      "ref": "MAT.27.6-MAT.27.10",
+      "role": "Erfüllung",
+      "child": "s2"
+     }
+    ],
+    "visual": "lanes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "fulfilment",
+    "subtype": "Erfüllungszitat ↔ Ereignis",
+    "range": "MAT.27.6-MAT.27.10",
+    "elements": [
+     {
+      "label": "Sie kauften davon den Acker des Töpfers als Begräbnisplatz für die Fremden",
+      "ref": "MAT.27.7",
+      "role": "Ereignis"
+     },
+     {
+      "label": "«Und sie nahmen die dreissig Silberstücke … und sie gaben sie für den Acker des Töpfers»",
+      "ref": "MAT.27.9-MAT.27.10",
+      "role": "Zitat"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "ZEC.11.12-ZEC.11.13",
+       "kind": "Zitat (dem Wortlaut nach)"
+      },
+      {
+       "ref": "JER.32.6-JER.32.9",
+       "kind": "Bezug (Ackerkauf)"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Matthäus nennt Jeremia; der Wortlaut steht vor allem Sach 11,12–13 nahe – Befund der Auslegung."
+      }
+     ]
+    },
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.27.1-MAT.27.2",
+   "text_de": "Am Morgen fassen alle Hohepriester und die Ältesten einen Beschluss gegen Jesus, um ihn zu töten; sie fesseln ihn und liefern ihn Pilatus, dem Statthalter, aus.",
+   "reason_de": "Übergang zur römischen Gewalt (Kriterium 3).",
+   "recognition_de": "Jesus gefesselt vor Pilatus.",
+   "keywords": [
+    "einen Beschluss gegen Jesus, um ihn zu töten",
+    "lieferten ihn Pilatus, dem Statthalter, aus"
+   ]
+  },
+  {
+   "reference": "MAT.27.3-MAT.27.5",
+   "text_de": "Judas reut es; er bringt die dreissig Silberstücke zurück: «Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe.» – «Was geht uns das an? Sieh du zu!» Er wirft die Silberstücke in den Tempel, geht weg und erhängt sich.",
+   "reason_de": "Ende des Judas (Kriterien 2 und 4; Tod nicht ausblenden).",
+   "recognition_de": "Judas wirft die Silberstücke hin.",
+   "keywords": [
+    "Ich habe gesündigt, indem ich unschuldiges Blut ausgeliefert habe",
+    "Was geht uns das an? Sieh du zu!",
+    "und er ging weg und erhängte sich"
+   ]
+  },
+  {
+   "reference": "MAT.27.6-MAT.27.10",
+   "text_de": "Die Hohepriester: «Es ist nicht erlaubt, sie in den Tempelschatz zu legen, denn es ist der Preis für Blut»; sie kaufen den Acker des Töpfers als Begräbnisplatz für die Fremden – «Blutacker»; da wurde erfüllt, was durch Jeremia, den Propheten, gesagt ist.",
+   "reason_de": "Erfüllungszitat, vom Text gesetzt (Kriterium 2).",
+   "recognition_de": "Acker des Töpfers.",
+   "keywords": [
+    "denn es ist der Preis für Blut",
+    "den Acker des Töpfers",
+    "Da wurde erfüllt, was durch Jeremia, den Propheten, gesagt ist"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Dass das Zitat vor allem Sach 11,12–13 entspricht, ist Befund der Auslegung (in structure)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-GRUPPE-AELTESTE",
+  "FIG-PILATUS",
+  "FIG-JUDAS-ISKARIOT"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL",
+  "FIG-ORT-ACKER"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.27.1-MAT.27.10",
+   "fingerprint": "9f3e92efc80b25db"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,215 @@
+{
+ "id": "CORE-MAT-019-023-030",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.19.23-MAT.19.30",
+ "target": "TU-MAT-019-023-030",
+ "core_de": "Jesus sagt seinen Jüngern, ein Reicher komme schwer in das Reich der Himmel – leichter geht ein Kamel durch ein Nadelöhr; auf ihre Frage, wer dann gerettet werden könne, antwortet er: Bei Menschen ist das unmöglich, bei Gott aber ist alles möglich; Petrus fragt, was ihnen, die alles verlassen haben, zuteil wird, und Jesus verheisst: In der Neuschöpfung werden sie auf zwölf Thronen sitzen und die zwölf Stämme Israels richten, und jeder, der um seines Namens willen Häuser, Geschwister, Eltern, Frau, Kinder oder Äcker verlassen hat, wird Hundertfaches empfangen und ewiges Leben erben; viele Erste aber werden Letzte sein, und Letzte Erste.",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Wort – Frage – Antwort – Frage – Verheissung – Schlusssatz",
+    "range": "MAT.19.23-MAT.19.30",
+    "elements": [
+     {
+      "label": "Jesus: Ein Reicher wird schwer hineinkommen; Kamel und Nadelöhr",
+      "ref": "MAT.19.23-MAT.19.24",
+      "role": "Wort"
+     },
+     {
+      "label": "Jünger: «Wer kann dann gerettet werden?» – Mensch ↔ Gott",
+      "ref": "MAT.19.25-MAT.19.26",
+      "role": "Frage",
+      "child": "s2"
+     },
+     {
+      "label": "Petrus: «Was wird uns also zuteil?» – Verheissung",
+      "ref": "MAT.19.27-MAT.19.29",
+      "role": "Frage",
+      "child": "s3"
+     },
+     {
+      "label": "Viele Erste werden Letzte sein, und Letzte Erste",
+      "ref": "MAT.19.30",
+      "role": "Schluss",
+      "child": "s4"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "MAT.19.23-MAT.19.24"
+      },
+      {
+       "who": "FIG-GRUPPE-JUENGER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.19.25"
+      },
+      {
+       "who": "FIG-PETRUS",
+       "to": "FIG-JESUS",
+       "ref": "MAT.19.27"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "contrast",
+    "subtype": "Mensch ↔ Gott",
+    "range": "MAT.19.26",
+    "elements": [
+     {
+      "label": "Bei Menschen ist das unmöglich",
+      "ref": "MAT.19.26",
+      "role": "Menschen"
+     },
+     {
+      "label": "bei Gott aber ist alles möglich",
+      "ref": "MAT.19.26",
+      "role": "Gott"
+     }
+    ],
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "series",
+    "subtype": "Verheissung an die, die verlassen haben",
+    "range": "MAT.19.28-MAT.19.29",
+    "elements": [
+     {
+      "label": "In der Neuschöpfung: Ihr werdet auf zwölf Thronen sitzen und die zwölf Stämme Israels richten",
+      "ref": "MAT.19.28",
+      "role": "die Zwölf"
+     },
+     {
+      "label": "Häuser oder Brüder oder Schwestern oder Vater oder Mutter oder Frau oder Kinder oder Äcker um meines Namens willen verlassen",
+      "ref": "MAT.19.29",
+      "role": "jeder: verlassen"
+     },
+     {
+      "label": "wird Hundertfaches empfangen und ewiges Leben erben",
+      "ref": "MAT.19.29",
+      "role": "jeder: Verheissung"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Verheissung",
+       "ref": "MAT.19.28-MAT.19.29"
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "MAT.19.29",
+       "note": "«oder Frau» fehlt in einigen Handschriften; die Arbeitsübersetzung hat es."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "reversal",
+    "subtype": "Erste ↔ Letzte",
+    "range": "MAT.19.30",
+    "elements": [
+     {
+      "label": "Viele Erste werden Letzte sein",
+      "ref": "MAT.19.30",
+      "role": "Erste → Letzte"
+     },
+     {
+      "label": "und Letzte Erste",
+      "ref": "MAT.19.30",
+      "role": "Letzte → Erste"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "MAT.20.16",
+       "kind": "Klammer",
+       "note": "umgekehrte Reihenfolge am Schluss des Gleichnisses"
+      }
+     ]
+    },
+    "visual": "mirror",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.19.23-MAT.19.26",
+   "text_de": "Ein Reicher wird schwer in das Reich der Himmel hineinkommen; leichter geht ein Kamel durch ein Nadelöhr; die Jünger: «Wer kann dann gerettet werden?» – «Bei Menschen ist das unmöglich, bei Gott aber ist alles möglich.»",
+   "reason_de": "Bildwort und Gegensatz Mensch ↔ Gott (Kriterien 1, 2 und 4).",
+   "recognition_de": "Kamel vor dem Nadelöhr.",
+   "keywords": [
+    "dass ein Kamel durch ein Nadelöhr geht",
+    "Wer kann dann gerettet werden?",
+    "Bei Menschen ist das unmöglich, bei Gott aber ist alles möglich"
+   ]
+  },
+  {
+   "reference": "MAT.19.27-MAT.19.29",
+   "text_de": "Petrus: «Siehe, wir haben alles verlassen und sind dir nachgefolgt. Was wird uns also zuteil?» – Ihr werdet auf zwölf Thronen sitzen und die zwölf Stämme Israels richten; jeder, der um meines Namens willen verlassen hat, wird Hundertfaches empfangen und ewiges Leben erben.",
+   "reason_de": "Frage und Verheissung (Kriterium 2).",
+   "recognition_de": "Petrus fragt; zwölf Throne; Hundertfaches.",
+   "keywords": [
+    "wir haben alles verlassen und sind dir nachgefolgt",
+    "werdet auch ihr auf zwölf Thronen sitzen",
+    "wird Hundertfaches empfangen und ewiges Leben erben"
+   ]
+  },
+  {
+   "reference": "MAT.19.30",
+   "text_de": "«Viele Erste aber werden Letzte sein, und Letzte Erste.»",
+   "reason_de": "Schlusssatz und Klammer zum folgenden Gleichnis (Kriterium 2).",
+   "recognition_de": "Umkehrung Erste ↔ Letzte.",
+   "keywords": [
+    "Viele Erste aber werden Letzte sein, und Letzte Erste"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Wechsel «Reich der Himmel» / «Reich Gottes» (19,23–24) – Hintergrund",
+  "Die einzelnen Glieder der Liste des Verlassenen stehen in der Struktur"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-PETRUS"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.19.23-MAT.19.30",
+   "fingerprint": "b3b6edd563e8bf24"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

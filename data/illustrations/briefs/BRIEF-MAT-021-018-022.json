@@ -11,47 +11,17 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.21.18-MAT.21.19",
+      "reference": "MAT.21.18-MAT.21.20",
       "figures": [
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-FEIGENBAUM-BLAETTER"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-FEHLT"
-      ],
-      "speech": [],
-      "action_de": "Frühmorgens auf dem Weg in die Stadt hat Jesus Hunger; er geht zu einem Feigenbaum am Weg und findet nichts als Blätter.",
-      "stage": {
-        "at": {
-          "FIG-ZEICHEN-FEHLT": "FIG-OBJ-FEIGENBAUM-BLAETTER"
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-OBJ-FEIGENBAUM-BLAETTER",
-            "go"
-          ]
-        ],
-        "mood": {
-          "FIG-JESUS": "pensive"
-        },
-        "x": {
-          "FIG-JESUS": 50
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.21.19",
-      "figures": [
-        "FIG-JESUS"
+        "FIG-JESUS",
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-FEIGENBAUM-VERDORRT"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-FRAGEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
@@ -59,131 +29,111 @@
           "icons": [
             "FIG-OBJ-FEIGE",
             "FIG-ZEICHEN-NICHT"
-          ]
+          ],
+          "word": {
+            "de": "Nie mehr in Ewigkeit soll aus dir Frucht wachsen!",
+            "gsw": "Nie meh i Ewigkeit söll us dir Frucht wachse!"
+          }
         }
       ],
-      "action_de": "Jesus sagt zum Feigenbaum: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» Und der Feigenbaum verdorrt auf der Stelle.",
+      "action_de": "Jesus hat Hunger und findet am Feigenbaum nur Blätter; er sagt: Nie mehr in Ewigkeit soll aus dir Frucht wachsen! Der Feigenbaum verdorrt auf der Stelle; die Jünger staunen.",
+      "keywords": {
+        "de": "Und der Feigenbaum verdorrte auf der Stelle",
+        "gsw": "Und de Fiigebaum isch uf de Stell verdorret"
+      },
       "stage": {
-        "mood": {
-          "FIG-JESUS": "earnest"
+        "at": {
+          "FIG-ZEICHEN-FRAGEN": "FIG-GRUPPE-JUENGER"
         },
-        "x": {
-          "FIG-JESUS": 44
-        },
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-OBJ-FEIGENBAUM-VERDORRT",
-            "act"
-          ]
-        ]
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.21.20",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-OBJ-FEIGENBAUM-VERDORRT"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-JUENGER",
-          "to": "FIG-JESUS",
-          "icons": [
-            "FIG-OBJ-FEIGENBAUM-VERDORRT",
-            "FIG-ZEICHEN-FRAGEN"
-          ]
-        }
-      ],
-      "action_de": "Die Jünger sehen es, staunen und fragen: «Wie ist der Feigenbaum auf der Stelle verdorrt?»",
-      "stage": {
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-JUENGER": "surprised"
         },
         "x": {
-          "FIG-GRUPPE-JUENGER": 48,
-          "FIG-JESUS": 112
+          "FIG-JESUS": 84,
+          "FIG-GRUPPE-JUENGER": 150
         },
         "floor_x": {
-          "FIG-OBJ-FEIGENBAUM-VERDORRT": 134
+          "FIG-OBJ-FEIGENBAUM-VERDORRT": 30
         }
       }
     },
     {
-      "n": 4,
+      "n": 2,
       "reference": "MAT.21.21-MAT.21.22",
-      "figures": [
-        "FIG-GRUPPE-JUENGER",
-        "FIG-JESUS"
-      ],
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
+      "speech": [],
+      "action_de": "Jesus antwortet: Wenn ihr Glauben habt und nicht zweifelt, wird sogar geschehen, wenn ihr zu diesem Berg sagt: Heb dich hoch und stürz dich ins Meer! Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.",
+      "keywords": {
+        "de": "Wenn ihr Glauben habt und nicht zweifelt",
+        "gsw": "Wänn ir Glaube händ und nöd zwiifled"
+      },
+      "diagram": {
+        "visual": "switch",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "cond": {
+          "a": {
+            "de": "Wenn ihr Glauben habt und nicht zweifelt,",
+            "gsw": "Wänn ir Glaube händ und nöd zwiifled,"
+          },
           "icons": [
-            "FIG-ZEICHEN-GLAUBEN",
+            "FIG-ZEICHEN-GLAUBEN"
+          ]
+        },
+        "yes": {
+          "a": {
+            "de": "… und zu diesem Berg sagt: «Heb dich hoch und stürz dich ins Meer!», wird es geschehen.",
+            "gsw": "… und zu dem Bärg säged: «Heb di uf und stürz di is Meer!», wird s passiere."
+          },
+          "icons": [
             "FIG-ORT-BERG",
-            "FIG-ZEICHEN-HINAB",
             "FIG-ORT-MEER-OFFEN"
           ]
-        }
-      ],
-      "action_de": "Jesus sagt: «Wenn ihr Glauben habt und nicht zweifelt, wird es geschehen, auch wenn ihr zu diesem Berg sagt: ‹Stürz dich ins Meer!› Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.»",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "calm",
-          "FIG-JESUS": "calm"
         },
-        "x": {
-          "FIG-GRUPPE-JUENGER": 40,
-          "FIG-JESUS": 150
+        "no": {
+          "a": {
+            "de": "Alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.",
+            "gsw": "Alles, wo ir im Gebät drum bitted, wärded ir übercho, wänn ir glaubed."
+          },
+          "icons": [
+            "FIG-ZEICHEN-BETEN",
+            "FIG-ZEICHEN-GEBEN"
+          ]
+        },
+        "yes_label": {
+          "de": "Berg",
+          "gsw": "Bärg"
+        },
+        "no_label": {
+          "de": "Gebet",
+          "gsw": "Gebät"
         }
       }
     }
   ],
   "actions_de": [
-    "Frühmorgens auf dem Weg in die Stadt hat Jesus Hunger; er geht zu einem Feigenbaum am Weg und findet nichts als Blätter.",
-    "Jesus sagt zum Feigenbaum: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» Und der Feigenbaum verdorrt auf der Stelle.",
-    "Die Jünger sehen es, staunen und fragen: «Wie ist der Feigenbaum auf der Stelle verdorrt?»",
-    "Jesus sagt: «Wenn ihr Glauben habt und nicht zweifelt, wird es geschehen, auch wenn ihr zu diesem Berg sagt: ‹Stürz dich ins Meer!› Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.»"
+    "Jesus hat Hunger und findet am Feigenbaum nur Blätter; er sagt: Nie mehr in Ewigkeit soll aus dir Frucht wachsen! Der Feigenbaum verdorrt auf der Stelle; die Jünger staunen.",
+    "Jesus antwortet: Wenn ihr Glauben habt und nicht zweifelt, wird sogar geschehen, wenn ihr zu diesem Berg sagt: Heb dich hoch und stürz dich ins Meer! Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt."
   ],
   "captions_de": [
-    "Nur Blätter: Jesus geht zum Feigenbaum (gestrichelter Weg) und findet keine Frucht (Baum mit Blättern ohne Früchte, kleiner leerer Kreis mit Schrägstrich).",
-    "Jesu Wort → der Baum verdorrt: Jesus spricht zum Feigenbaum (Pfeil zum Baum): Nie mehr soll Frucht aus dir wachsen (Feige, roter Kreis mit Schrägbalken); der Baum verdorrt auf der Stelle (kahle graubraune Äste).",
-    "Staunen: Die Jünger fragen Jesus, wie der Feigenbaum so schnell verdorrt ist (verdorrter Baum, Fragezeichen).",
-    "Glaube: Wer glaubt (Herz mit Lichtstrahl), kann zum Berg sagen: Stürz dich ins Meer (Berg, Pfeil nach unten, Wellen)."
+    "Verdorrt: Jesus vor dem verdorrten Feigenbaum: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» (Frucht, Verbotszeichen); die Jünger staunen (fragen).",
+    "Weiche (Bild Jesus): Wenn ihr Glauben habt und nicht zweifelt (glauben) → «Heb dich hoch und stürz dich ins Meer!» – es wird geschehen (Berg, Meer); alles, worum ihr im Gebet bittet, werdet ihr empfangen (beten, geben)."
   ],
-  "interpretation_note_de": "Bei Matthäus verdorrt der Feigenbaum sofort ([[MAT.21.19]]), bei Markus erst am nächsten Morgen ([[MRK.11.20]]). Dass Jesus Hunger hat ([[MAT.21.18]]), ist nicht eigens gezeichnet. Das Bildwort vom Berg, der ins Meer stürzt ([[MAT.21.21]]), steht nur in der Sprechblase; die Verheissung für das Gebet ([[MAT.21.22]]) ist nicht eigens gezeichnet.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.21.18-MAT.21.22]]): der verdorrte Feigenbaum, dann Jesu Zusage an die Glaubenden. Die Weiche zeigt die Bedingung «wenn ihr glaubt» mit ihren zwei Folgen (Berg und Gebet); eine Gegenfolge nennt der Text nicht. Eine Deutung des Feigenbaums gibt der Text nicht; das Bild deutet ihn auch nicht.",
   "basis": [
     {
       "record": "TU-MAT-021-018-022",
       "field": "summary",
-      "fingerprint": "9abcd6107cceca3c"
+      "fingerprint": "1c56188e118d1acc"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.21.18-MAT.21.19",
-      "fingerprint": "0135733669716ba3"
-    },
-    {
-      "record": "TRANS-MAT-021-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.21.19",
-      "fingerprint": "ea59809f4e9384cc"
-    },
-    {
-      "record": "TRANS-MAT-021-001-046-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.21.20",
-      "fingerprint": "895b9447f7f02d52"
+      "reference": "MAT.21.18-MAT.21.20",
+      "fingerprint": "c7b9eafbfcae6042"
     },
     {
       "record": "TRANS-MAT-021-001-046-DE-WORKING",
@@ -193,7 +143,7 @@
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -354,6 +304,197 @@
           "Staunen: Die Jünger fragen Jesus, wie der Feigenbaum so schnell verdorrt ist (verdorrter Baum, Fragezeichen).",
           "Glaube: Wer glaubt (Herz mit Lichtstrahl), kann zum Berg sagen: Stürz dich ins Meer (Berg, Pfeil nach unten, Wellen)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.21.18-MAT.21.19",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM-BLAETTER"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FEHLT"
+            ],
+            "speech": [],
+            "action_de": "Frühmorgens auf dem Weg in die Stadt hat Jesus Hunger; er geht zu einem Feigenbaum am Weg und findet nichts als Blätter.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-FEHLT": "FIG-OBJ-FEIGENBAUM-BLAETTER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-FEIGENBAUM-BLAETTER",
+                  "go"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.21.19",
+            "figures": [
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-OBJ-FEIGENBAUM-VERDORRT",
+                "icons": [
+                  "FIG-OBJ-FEIGE",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zum Feigenbaum: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» Und der Feigenbaum verdorrt auf der Stelle.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 44
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-OBJ-FEIGENBAUM-VERDORRT",
+                  "act"
+                ]
+              ]
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.21.20",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-FEIGENBAUM-VERDORRT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-OBJ-FEIGENBAUM-VERDORRT",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Jünger sehen es, staunen und fragen: «Wie ist der Feigenbaum auf der Stelle verdorrt?»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 48,
+                "FIG-JESUS": 112
+              },
+              "floor_x": {
+                "FIG-OBJ-FEIGENBAUM-VERDORRT": 134
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.21.21-MAT.21.22",
+            "figures": [
+              "FIG-GRUPPE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-GLAUBEN",
+                  "FIG-ORT-BERG",
+                  "FIG-ZEICHEN-HINAB",
+                  "FIG-ORT-MEER-OFFEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt: «Wenn ihr Glauben habt und nicht zweifelt, wird es geschehen, auch wenn ihr zu diesem Berg sagt: ‹Stürz dich ins Meer!› Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.»",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-JUENGER": 40,
+                "FIG-JESUS": 150
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Frühmorgens auf dem Weg in die Stadt hat Jesus Hunger; er geht zu einem Feigenbaum am Weg und findet nichts als Blätter.",
+          "Jesus sagt zum Feigenbaum: «Nie mehr in Ewigkeit soll aus dir Frucht wachsen!» Und der Feigenbaum verdorrt auf der Stelle.",
+          "Die Jünger sehen es, staunen und fragen: «Wie ist der Feigenbaum auf der Stelle verdorrt?»",
+          "Jesus sagt: «Wenn ihr Glauben habt und nicht zweifelt, wird es geschehen, auch wenn ihr zu diesem Berg sagt: ‹Stürz dich ins Meer!› Und alles, worum ihr im Gebet bittet, werdet ihr empfangen, wenn ihr glaubt.»"
+        ],
+        "captions_de": [
+          "Nur Blätter: Jesus geht zum Feigenbaum (gestrichelter Weg) und findet keine Frucht (Baum mit Blättern ohne Früchte, kleiner leerer Kreis mit Schrägstrich).",
+          "Jesu Wort → der Baum verdorrt: Jesus spricht zum Feigenbaum (Pfeil zum Baum): Nie mehr soll Frucht aus dir wachsen (Feige, roter Kreis mit Schrägbalken); der Baum verdorrt auf der Stelle (kahle graubraune Äste).",
+          "Staunen: Die Jünger fragen Jesus, wie der Feigenbaum so schnell verdorrt ist (verdorrter Baum, Fragezeichen).",
+          "Glaube: Wer glaubt (Herz mit Lichtstrahl), kann zum Berg sagen: Stürz dich ins Meer (Berg, Pfeil nach unten, Wellen)."
+        ],
+        "interpretation_note_de": "Bei Matthäus verdorrt der Feigenbaum sofort ([[MAT.21.19]]), bei Markus erst am nächsten Morgen ([[MRK.11.20]]). Dass Jesus Hunger hat ([[MAT.21.18]]), ist nicht eigens gezeichnet. Das Bildwort vom Berg, der ins Meer stürzt ([[MAT.21.21]]), steht nur in der Sprechblase; die Verheissung für das Gebet ([[MAT.21.22]]) ist nicht eigens gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-021-018-022",
+            "field": "summary",
+            "fingerprint": "9abcd6107cceca3c"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.18-MAT.21.19",
+            "fingerprint": "0135733669716ba3"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.19",
+            "fingerprint": "ea59809f4e9384cc"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.20",
+            "fingerprint": "895b9447f7f02d52"
+          },
+          {
+            "record": "TRANS-MAT-021-001-046-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.21.21-MAT.21.22",
+            "fingerprint": "d72c0e1fdf6db452"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

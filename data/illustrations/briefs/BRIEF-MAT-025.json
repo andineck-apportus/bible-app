@@ -14,27 +14,66 @@
       "reference": "MAT.25.1-MAT.25.13",
       "figures": [
         "FIG-GRUPPE-JUNGFRAUEN-KLUG",
-        "FIG-ROLLE-BRAEUTIGAM"
+        "FIG-ROLLE-BRAEUTIGAM",
+        "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
       ],
       "objects": [
-        "FIG-ORT-HAUS-OFFEN"
+        "FIG-OBJ-LAMPE",
+        "FIG-OBJ-LAMPE-AUS"
       ],
       "signs": [
-        "FIG-ZEICHEN-HOCHZEIT"
+        "FIG-ZEICHEN-VERSCHLOSSEN",
+        "FIG-ZEICHEN-ABSTAND"
       ],
-      "speech": [],
-      "action_de": "Von zehn Jungfrauen gehen nur die fünf klugen, die Öl mitgenommen haben, mit dem Bräutigam zur Hochzeit hinein; die Tür wird verschlossen.",
-      "stage": {
-        "hold": {
-          "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
+      "speech": [
+        {
+          "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+          "to": "FIG-ROLLE-BRAEUTIGAM",
+          "icons": [
+            "FIG-OBJ-TUER",
+            "FIG-ZEICHEN-BETEN"
+          ],
+          "word": {
+            "de": "Herr, Herr, mach uns auf!",
+            "gsw": "Herr, Herr, mach üs uf!"
+          }
         },
-        "mood": {
-          "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
-          "FIG-ROLLE-BRAEUTIGAM": "smile"
+        {
+          "from": "FIG-ROLLE-BRAEUTIGAM",
+          "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+          "icons": [
+            "FIG-ZEICHEN-NEIN"
+          ],
+          "word": {
+            "de": "Amen, ich sage euch: Ich kenne euch nicht.",
+            "gsw": "Amen, ich säg eu: Ich kenn eu nöd."
+          }
+        }
+      ],
+      "action_de": "Während die törichten Jungfrauen Öl kaufen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen; die übrigen rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht.",
+      "keywords": {
+        "de": "Wacht also, denn ihr kennt weder den Tag noch die Stunde",
+        "gsw": "Bliibed also wach, dänn ir wüssed wäder de Tag no d Stund"
+      },
+      "stage": {
+        "split": 2,
+        "hold": {
+          "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE",
+          "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS"
+        },
+        "at": {
+          "FIG-ZEICHEN-VERSCHLOSSEN": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
         },
         "night": true,
-        "at": {
-          "FIG-ZEICHEN-HOCHZEIT": "FIG-ORT-HAUS-OFFEN"
+        "mood": {
+          "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+          "FIG-ROLLE-BRAEUTIGAM": "earnest",
+          "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried"
+        },
+        "x": {
+          "FIG-GRUPPE-JUNGFRAUEN-KLUG": 30,
+          "FIG-ROLLE-BRAEUTIGAM": 80,
+          "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 150
         }
       }
     },
@@ -42,35 +81,59 @@
       "n": 2,
       "reference": "MAT.25.14-MAT.25.30",
       "figures": [
+        "FIG-ROLLE-GUTSHERR",
         "FIG-GRUPPE-DIENER",
-        "FIG-ROLLE-DIENER"
+        "FIG-ROLLE-SKLAVE"
       ],
       "objects": [
-        "FIG-OBJ-TALENT",
-        "FIG-OBJ-GRUBE"
+        "FIG-OBJ-TALENT"
       ],
       "signs": [
-        "FIG-ZEICHEN-GEWINN"
+        "FIG-ZEICHEN-FREUDE",
+        "FIG-ZEICHEN-FURCHT",
+        "FIG-ZEICHEN-ABSTAND"
       ],
-      "speech": [],
-      "action_de": "Ein Herr vertraut seinen Knechten Talente an; zwei vermehren sie, der dritte vergräbt sein Talent aus Furcht.",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-GUTSHERR",
+          "to": "FIG-GRUPPE-DIENER",
+          "icons": [
+            "FIG-ZEICHEN-TREUE",
+            "FIG-ZEICHEN-FREUDE"
+          ],
+          "word": {
+            "de": "Gut gemacht, du guter und treuer Knecht!",
+            "gsw": "Guet gmacht, du guete und treue Chnächt!"
+          }
+        }
+      ],
+      "action_de": "Nach langer Zeit rechnet der Herr ab; die beiden Knechte, die mit fünf und zwei Talenten weitere gewonnen haben, hören: Gut gemacht, du guter und treuer Knecht! Geh hinein in die Freude deines Herrn! Der dritte, der sein Talent vergraben hat, wird gescholten.",
+      "keywords": {
+        "de": "Gut gemacht, du guter und treuer Knecht!",
+        "gsw": "Guet gmacht, du guete und treue Chnächt!"
+      },
       "stage": {
-        "at": {
-          "FIG-ZEICHEN-GEWINN": "FIG-GRUPPE-DIENER"
-        },
+        "split": 2,
         "hold": {
           "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT"
         },
+        "signs_who": {
+          "FIG-ZEICHEN-FREUDE": [
+            "FIG-GRUPPE-DIENER"
+          ]
+        },
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-SKLAVE"
+        },
         "mood": {
+          "FIG-ROLLE-GUTSHERR": "smile",
           "FIG-GRUPPE-DIENER": "delight",
-          "FIG-ROLLE-DIENER": "worried"
+          "FIG-ROLLE-SKLAVE": "fear"
         },
         "x": {
-          "FIG-GRUPPE-DIENER": 48,
-          "FIG-ROLLE-DIENER": 112
-        },
-        "floor_x": {
-          "FIG-OBJ-GRUBE": 144
+          "FIG-ROLLE-GUTSHERR": 34,
+          "FIG-GRUPPE-DIENER": 96,
+          "FIG-ROLLE-SKLAVE": 160
         }
       }
     },
@@ -90,7 +153,11 @@
         "FIG-ZEICHEN-TRENNEN"
       ],
       "speech": [],
-      "action_de": "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken.",
+      "action_de": "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken.",
+      "keywords": {
+        "de": "Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan",
+        "gsw": "Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht"
+      },
       "stage": {
         "on": {
           "FIG-JESUS": "FIG-OBJ-THRON"
@@ -104,37 +171,38 @@
           "FIG-GRUPPE-VOELKER": 96
         },
         "floor_x": {
-          "FIG-OBJ-SCHAF": 120,
-          "FIG-OBJ-BOCK": 150
+          "FIG-OBJ-SCHAF": 130,
+          "FIG-OBJ-BOCK": 166
         },
         "mood": {
-          "FIG-GRUPPE-VOELKER": "pensive"
+          "FIG-GRUPPE-VOELKER": "pensive",
+          "FIG-JESUS": "calm"
         },
-        "air_x": 134,
-        "air_y": 70
+        "air_x": 148,
+        "air_y": 66
       }
     }
   ],
   "actions_de": [
-    "Von zehn Jungfrauen gehen nur die fünf klugen, die Öl mitgenommen haben, mit dem Bräutigam zur Hochzeit hinein; die Tür wird verschlossen.",
-    "Ein Herr vertraut seinen Knechten Talente an; zwei vermehren sie, der dritte vergräbt sein Talent aus Furcht.",
-    "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken."
+    "Während die törichten Jungfrauen Öl kaufen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen; die übrigen rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht.",
+    "Nach langer Zeit rechnet der Herr ab; die beiden Knechte, die mit fünf und zwei Talenten weitere gewonnen haben, hören: Gut gemacht, du guter und treuer Knecht! Geh hinein in die Freude deines Herrn! Der dritte, der sein Talent vergraben hat, wird gescholten.",
+    "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken."
   ],
   "captions_de": [
-    "Öl dabei → Hochzeit: Die klugen Jungfrauen gehen mit brennenden Lampen mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit (offenes Haus mit Licht, darüber die Girlande).",
-    "Arbeiten → Gewinn: Die ersten Knechte (links) haben mit dem Geld gearbeitet und es vermehrt (Sack, darüber Münzen mit grünem Pfeil nach oben); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
-    "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen)."
+    "Verschlossene Tür: Die klugen Jungfrauen mit brennenden Lampen sind beim Bräutigam (Lampe); vor der verschlossenen Tür rufen die törichten mit erloschenen Lampen: «Herr, Herr, mach uns auf!» (verschlossene Tür); der Bräutigam: «Amen, ich sage euch: Ich kenne euch nicht.»",
+    "Abrechnung: Der Herr (Gutsherr) lobt die beiden Knechte mit ihren Talenten (Talent): «Gut gemacht, du guter und treuer Knecht!» (Freude); der dritte steht mit seinem einen Talent abseits (Furcht).",
+    "Gericht über die Völker (angekündigt): Jesus sitzt auf dem Thron der Herrlichkeit (Thron, Licht); vor ihm die Völker (Völker); er scheidet wie ein Hirt die Schafe von den Böcken (Schaf, Bock, trennen)."
   ],
-  "interpretation_note_de": "Die Bilder zeigen die beiden Gleichnisse als erzählte Geschichten und das Gericht als Ankündigung Jesu ([[MAT.25.31]]); der Arme, das Feuer und das ewige Leben sind im Abschnittsbild gezeigt.",
+  "interpretation_note_de": "Drei Comic-Szenen, je eine aus den drei Abschnitten ([[MAT.25.1-MAT.25.46]]): die verschlossene Tür, die Abrechnung mit den Knechten, der Thron, vor dem die Völker geschieden werden. Gegensätze, alle drei Knechte und die sechs Werke stehen in den Abschnittsbildern. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-025",
       "field": "summary",
-      "fingerprint": "48ea7ac0c4de9a31"
+      "fingerprint": "9bc67254454ec9c3"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -276,6 +344,513 @@
           "Die klugen Jungfrauen: Mit brennenden Lampen gehen sie mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit (offenes Haus mit Licht, darüber die Girlande).",
           "Die Talente: Die ersten Knechte (links) haben das Geld vermehrt (Sack, Münzen mit grünem Pfeil nach oben); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
           "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-025",
+            "field": "summary",
+            "fingerprint": "48ea7ac0c4de9a31"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.1-MAT.25.13",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+              "FIG-ROLLE-BRAEUTIGAM"
+            ],
+            "objects": [
+              "FIG-ORT-HAUS-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HOCHZEIT"
+            ],
+            "speech": [],
+            "action_de": "Von zehn Jungfrauen gehen nur die fünf klugen, die Öl mitgenommen haben, mit dem Bräutigam zur Hochzeit hinein; die Tür wird verschlossen.",
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "smile"
+              },
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-HOCHZEIT": "FIG-ORT-HAUS-OFFEN"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.14-MAT.25.30",
+            "figures": [
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-DIENER"
+            ],
+            "objects": [
+              "FIG-OBJ-TALENT",
+              "FIG-OBJ-GRUBE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-GEWINN"
+            ],
+            "speech": [],
+            "action_de": "Ein Herr vertraut seinen Knechten Talente an; zwei vermehren sie, der dritte vergräbt sein Talent aus Furcht.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-GEWINN": "FIG-GRUPPE-DIENER"
+              },
+              "hold": {
+                "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT"
+              },
+              "mood": {
+                "FIG-GRUPPE-DIENER": "delight",
+                "FIG-ROLLE-DIENER": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-DIENER": 48,
+                "FIG-ROLLE-DIENER": 112
+              },
+              "floor_x": {
+                "FIG-OBJ-GRUBE": 144
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.31-MAT.25.46",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken.",
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-VOELKER": 96
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 120,
+                "FIG-OBJ-BOCK": 150
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive"
+              },
+              "air_x": 134,
+              "air_y": 70
+            }
+          }
+        ],
+        "actions_de": [
+          "Von zehn Jungfrauen gehen nur die fünf klugen, die Öl mitgenommen haben, mit dem Bräutigam zur Hochzeit hinein; die Tür wird verschlossen.",
+          "Ein Herr vertraut seinen Knechten Talente an; zwei vermehren sie, der dritte vergräbt sein Talent aus Furcht.",
+          "Jesus kündigt an, dass der Menschensohn als König auf dem Thron alle Völker richten und scheiden wird wie ein Hirt die Schafe von den Böcken."
+        ],
+        "captions_de": [
+          "Öl dabei → Hochzeit: Die klugen Jungfrauen gehen mit brennenden Lampen mit dem Bräutigam (violettes Festgewand, goldener Kranz) zur Hochzeit (offenes Haus mit Licht, darüber die Girlande).",
+          "Arbeiten → Gewinn: Die ersten Knechte (links) haben mit dem Geld gearbeitet und es vermehrt (Sack, darüber Münzen mit grünem Pfeil nach oben); der dritte (mit Schürze) hat seinen Sack vergraben (Grube).",
+          "Das Gericht (angekündigt): Der Menschensohn (Jesus) auf dem Thron; er scheidet die Völker wie Schafe von Böcken (Schaf, Bock, Bruch mit Pfeilen)."
+        ],
+        "interpretation_note_de": "Die Bilder zeigen die beiden Gleichnisse als erzählte Geschichten und das Gericht als Ankündigung Jesu ([[MAT.25.31]]); der Arme, das Feuer und das ewige Leben sind im Abschnittsbild gezeigt.",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.1-MAT.25.13",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+              "FIG-ROLLE-BRAEUTIGAM",
+              "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+            ],
+            "objects": [
+              "FIG-OBJ-TUER",
+              "FIG-OBJ-LAMPE",
+              "FIG-OBJ-LAMPE-AUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-HOCHZEIT",
+              "FIG-ZEICHEN-VERSCHLOSSEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "to": "FIG-ROLLE-BRAEUTIGAM",
+                "icons": [
+                  "FIG-OBJ-TUER",
+                  "FIG-ZEICHEN-BETEN"
+                ],
+                "word": {
+                  "de": "Herr, Herr, mach uns auf!",
+                  "gsw": "Herr, Herr, mach üs uf!"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-BRAEUTIGAM",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "icons": [
+                  "FIG-ZEICHEN-NEIN"
+                ],
+                "word": {
+                  "de": "Amen, ich sage euch: Ich kenne euch nicht.",
+                  "gsw": "Amen, ich säg eu: Ich kenn eu nöd."
+                }
+              }
+            ],
+            "action_de": "Während die törichten Jungfrauen Öl kaufen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen; die übrigen rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht.",
+            "keywords": {
+              "de": "Wacht also, denn ihr kennt weder den Tag noch die Stunde",
+              "gsw": "Bliibed also wach, dänn ir wüssed wäder de Tag no d Stund"
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS"
+              },
+              "at": {
+                "FIG-ZEICHEN-HOCHZEIT": "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+                "FIG-ZEICHEN-VERSCHLOSSEN": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+              },
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "earnest",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": 30,
+                "FIG-ROLLE-BRAEUTIGAM": 80,
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 150
+              },
+              "floor_x": {
+                "FIG-OBJ-TUER": 112
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.14-MAT.25.30",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-SKLAVE"
+            ],
+            "objects": [
+              "FIG-OBJ-TALENT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-TREUE",
+                  "FIG-ZEICHEN-FREUDE"
+                ],
+                "word": {
+                  "de": "Gut gemacht, du guter und treuer Knecht!",
+                  "gsw": "Guet gmacht, du guete und treue Chnächt!"
+                }
+              }
+            ],
+            "action_de": "Nach langer Zeit rechnet der Herr ab; die beiden Knechte, die mit fünf und zwei Talenten weitere gewonnen haben, hören: Gut gemacht, du guter und treuer Knecht! Geh hinein in die Freude deines Herrn! Der dritte, der sein Talent vergraben hat, wird gescholten.",
+            "keywords": {
+              "de": "Gut gemacht, du guter und treuer Knecht!",
+              "gsw": "Guet gmacht, du guete und treue Chnächt!"
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-DIENER"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-SKLAVE"
+              },
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "smile",
+                "FIG-GRUPPE-DIENER": "delight",
+                "FIG-ROLLE-SKLAVE": "fear"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 34,
+                "FIG-GRUPPE-DIENER": 96,
+                "FIG-ROLLE-SKLAVE": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.31-MAT.25.46",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken.",
+            "keywords": {
+              "de": "Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan",
+              "gsw": "Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht"
+            },
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-VOELKER": 96
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 130,
+                "FIG-OBJ-BOCK": 166
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "air_x": 148,
+              "air_y": 66
+            }
+          }
+        ],
+        "captions_de": [
+          "Verschlossene Tür: Die klugen Jungfrauen mit brennenden Lampen sind beim Bräutigam (Lampe, Hochzeit); vor der verschlossenen Tür rufen die törichten mit erloschenen Lampen: «Herr, Herr, mach uns auf!» (Tür, verschlossen); der Bräutigam: «Amen, ich sage euch: Ich kenne euch nicht.»",
+          "Abrechnung: Der Herr (Gutsherr) lobt die beiden Knechte mit ihren Talenten (Talent): «Gut gemacht, du guter und treuer Knecht!» (Freude); der dritte steht mit seinem einen Talent abseits (Furcht).",
+          "Gericht über die Völker (angekündigt): Jesus sitzt auf dem Thron der Herrlichkeit (Thron, Licht); vor ihm die Völker (Völker); er scheidet wie ein Hirt die Schafe von den Böcken (Schaf, Bock, trennen)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.25.1-MAT.25.13",
+            "figures": [
+              "FIG-GRUPPE-JUNGFRAUEN-KLUG",
+              "FIG-ROLLE-BRAEUTIGAM",
+              "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+            ],
+            "objects": [
+              "FIG-OBJ-LAMPE",
+              "FIG-OBJ-LAMPE-AUS"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-VERSCHLOSSEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "to": "FIG-ROLLE-BRAEUTIGAM",
+                "icons": [
+                  "FIG-OBJ-TUER",
+                  "FIG-ZEICHEN-BETEN"
+                ],
+                "word": {
+                  "de": "Herr, Herr, mach uns auf!",
+                  "gsw": "Herr, Herr, mach üs uf!"
+                }
+              },
+              {
+                "from": "FIG-ROLLE-BRAEUTIGAM",
+                "to": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT",
+                "icons": [
+                  "FIG-ZEICHEN-NEIN"
+                ],
+                "word": {
+                  "de": "Amen, ich sage euch: Ich kenne euch nicht.",
+                  "gsw": "Amen, ich säg eu: Ich kenn eu nöd."
+                }
+              }
+            ],
+            "action_de": "Während die törichten Jungfrauen Öl kaufen, kommt der Bräutigam; die bereit waren, gehen mit ihm hinein zur Hochzeit, und die Tür wird verschlossen; die übrigen rufen: Herr, Herr, mach uns auf! Er antwortet: Ich kenne euch nicht.",
+            "keywords": {
+              "de": "Wacht also, denn ihr kennt weder den Tag noch die Stunde",
+              "gsw": "Bliibed also wach, dänn ir wüssed wäder de Tag no d Stund"
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "FIG-OBJ-LAMPE",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "FIG-OBJ-LAMPE-AUS"
+              },
+              "at": {
+                "FIG-ZEICHEN-VERSCHLOSSEN": "FIG-GRUPPE-JUNGFRAUEN-TOERICHT"
+              },
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": "delight",
+                "FIG-ROLLE-BRAEUTIGAM": "earnest",
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": "worried"
+              },
+              "x": {
+                "FIG-GRUPPE-JUNGFRAUEN-KLUG": 30,
+                "FIG-ROLLE-BRAEUTIGAM": 80,
+                "FIG-GRUPPE-JUNGFRAUEN-TOERICHT": 150
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.25.14-MAT.25.30",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-GRUPPE-DIENER",
+              "FIG-ROLLE-SKLAVE"
+            ],
+            "objects": [
+              "FIG-OBJ-TALENT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FREUDE",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-DIENER",
+                "icons": [
+                  "FIG-ZEICHEN-TREUE",
+                  "FIG-ZEICHEN-FREUDE"
+                ],
+                "word": {
+                  "de": "Gut gemacht, du guter und treuer Knecht!",
+                  "gsw": "Guet gmacht, du guete und treue Chnächt!"
+                }
+              }
+            ],
+            "action_de": "Nach langer Zeit rechnet der Herr ab; die beiden Knechte, die mit fünf und zwei Talenten weitere gewonnen haben, hören: Gut gemacht, du guter und treuer Knecht! Geh hinein in die Freude deines Herrn! Der dritte, der sein Talent vergraben hat, wird gescholten.",
+            "keywords": {
+              "de": "Gut gemacht, du guter und treuer Knecht!",
+              "gsw": "Guet gmacht, du guete und treue Chnächt!"
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-GRUPPE-DIENER": "FIG-OBJ-TALENT"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-FREUDE": [
+                  "FIG-GRUPPE-DIENER"
+                ]
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-SKLAVE"
+              },
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "smile",
+                "FIG-GRUPPE-DIENER": "delight",
+                "FIG-ROLLE-SKLAVE": "fear"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 34,
+                "FIG-GRUPPE-DIENER": 96,
+                "FIG-ROLLE-SKLAVE": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.25.31-MAT.25.46",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-VOELKER"
+            ],
+            "objects": [
+              "FIG-OBJ-THRON",
+              "FIG-OBJ-SCHAF",
+              "FIG-OBJ-BOCK"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRENNEN"
+            ],
+            "speech": [],
+            "action_de": "Wenn der Menschensohn in seiner Herrlichkeit kommt und sich auf seinen Thron setzt, werden alle Völker vor ihm versammelt, und er scheidet sie, wie der Hirt die Schafe von den Böcken scheidet: die Schafe zur Rechten, die Böcke zur Linken.",
+            "keywords": {
+              "de": "Was ihr einem dieser meiner geringsten Brüder getan habt, das habt ihr mir getan",
+              "gsw": "Was ir eim vo dene chliinschte Brüedere vo mir gmacht händ, das händ ir mir gmacht"
+            },
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-OBJ-THRON"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-GRUPPE-VOELKER": 96
+              },
+              "floor_x": {
+                "FIG-OBJ-SCHAF": 130,
+                "FIG-OBJ-BOCK": 166
+              },
+              "mood": {
+                "FIG-GRUPPE-VOELKER": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "air_x": 148,
+              "air_y": 66
+            }
+          }
         ]
       }
     }

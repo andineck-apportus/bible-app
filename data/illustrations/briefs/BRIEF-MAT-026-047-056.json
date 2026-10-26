@@ -18,26 +18,57 @@
         "FIG-JUDAS-ISKARIOT"
       ],
       "objects": [
-        "FIG-OBJ-FESSEL"
+        "FIG-ORT-GARTEN",
+        "FIG-OBJ-SCHWERT"
       ],
       "signs": [
-        "FIG-ZEICHEN-KUSS"
+        "FIG-ZEICHEN-KUSS",
+        "FIG-ZEICHEN-AUSLIEFERN"
       ],
-      "speech": [],
-      "action_de": "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, von den Hohepriestern und Ältesten; er küsst Jesus als verabredetes Zeichen, und sie ergreifen ihn.",
+      "speech": [
+        {
+          "from": "FIG-JUDAS-ISKARIOT",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-GRUESSEN"
+          ],
+          "word": {
+            "de": "Sei gegrüsst, Rabbi!",
+            "gsw": "Grüess di, Rabbi!"
+          }
+        },
+        {
+          "from": "FIG-JESUS",
+          "to": "FIG-JUDAS-ISKARIOT",
+          "icons": [
+            "FIG-ZEICHEN-AUSLIEFERN"
+          ],
+          "word": {
+            "de": "Freund, tu, wozu du da bist!",
+            "gsw": "Fründ, mach, für was du da bisch!"
+          }
+        }
+      ],
+      "action_de": "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, sagt: Sei gegrüsst, Rabbi!, und küsst Jesus; Jesus sagt: Freund, tu, wozu du da bist! Da ergreifen sie ihn.",
+      "keywords": {
+        "de": "Wen ich küssen werde, der ist es; ergreift ihn!",
+        "gsw": "Dä, wo ich küsse, dä isch es; packed en!"
+      },
+      "names": {
+        "FIG-JUDAS-ISKARIOT": {
+          "de": "Judas",
+          "gsw": "Judas"
+        }
+      },
       "stage": {
         "hold": {
-          "FIG-JESUS": "FIG-OBJ-FESSEL"
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
         },
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JUDAS-ISKARIOT": "earnest",
-          "FIG-JESUS": "calm"
+        "beside": {
+          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
         },
-        "x": {
-          "FIG-GRUPPE-MENGE": 34,
-          "FIG-JESUS": 98,
-          "FIG-JUDAS-ISKARIOT": 150
+        "at": {
+          "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
         },
         "arrows": [
           [
@@ -46,18 +77,28 @@
             "act"
           ]
         ],
-        "beside": {
-          "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+        "back_side": "left",
+        "before": true,
+        "night": true,
+        "mood": {
+          "FIG-GRUPPE-MENGE": "angry",
+          "FIG-JESUS": "calm",
+          "FIG-JUDAS-ISKARIOT": "earnest"
         },
-        "night": true
+        "x": {
+          "FIG-GRUPPE-MENGE": 34,
+          "FIG-JESUS": 98,
+          "FIG-JUDAS-ISKARIOT": 150
+        }
       }
     },
     {
       "n": 2,
       "reference": "MAT.26.51-MAT.26.54",
       "figures": [
+        "FIG-JESUS",
         "FIG-ROLLE-JUENGER",
-        "FIG-JESUS"
+        "FIG-ROLLE-DIENER"
       ],
       "objects": [
         "FIG-OBJ-SCHWERT"
@@ -70,111 +111,107 @@
           "icons": [
             "FIG-OBJ-SCHWERT",
             "FIG-ZEICHEN-NICHT"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-ROLLE-JUENGER",
-          "icons": [
-            "FIG-GRUPPE-ENGEL",
-            "FIG-OBJ-SCHRIFTROLLE"
-          ]
+          ],
+          "word": {
+            "de": "Steck dein Schwert zurück an seinen Platz! Denn alle, die zum Schwert greifen, werden durch das Schwert umkommen.",
+            "gsw": "Steck dis Schwärt zrugg a sin Platz! Alli, wo zum Schwärt griifed, chömed nämli dur s Schwärt um."
+          }
         }
       ],
-      "action_de": "Einer von denen, die bei Jesus sind, zieht das Schwert und schlägt dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: Steck dein Schwert zurück! Ich könnte meinen Vater um mehr als zwölf Legionen Engel bitten; doch wie würden dann die Schriften erfüllt?",
+      "action_de": "Einer der Begleiter Jesu zieht das Schwert und haut dem Knecht des Hohepriesters das Ohr ab; Jesus sagt: Steck dein Schwert zurück an seinen Platz! Denn alle, die zum Schwert greifen, werden durch das Schwert umkommen.",
+      "keywords": {
+        "de": "Steck dein Schwert zurück an seinen Platz!",
+        "gsw": "Steck dis Schwärt zrugg a sin Platz!"
+      },
       "stage": {
         "hold": {
           "FIG-ROLLE-JUENGER": "FIG-OBJ-SCHWERT"
         },
+        "night": true,
         "mood": {
-          "FIG-ROLLE-JUENGER": "determined",
-          "FIG-JESUS": "earnest"
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-JUENGER": "angry",
+          "FIG-ROLLE-DIENER": "pain"
         },
         "x": {
-          "FIG-JESUS": 46,
-          "FIG-ROLLE-JUENGER": 136
-        },
-        "night": true
+          "FIG-JESUS": 34,
+          "FIG-ROLLE-JUENGER": 100,
+          "FIG-ROLLE-DIENER": 158
+        }
       }
     },
     {
       "n": 3,
       "reference": "MAT.26.55-MAT.26.56",
       "figures": [
+        "FIG-GRUPPE-MENGE",
         "FIG-JESUS",
-        "FIG-GRUPPE-MENGE"
+        "FIG-GRUPPE-JUENGER"
       ],
-      "objects": [],
-      "signs": [],
+      "objects": [
+        "FIG-OBJ-FESSEL"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FLIEHEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-ORT-TEMPEL",
             "FIG-OBJ-SCHRIFTROLLE"
-          ]
+          ],
+          "word": {
+            "de": "Das alles aber ist geschehen, damit die Schriften der Propheten erfüllt würden.",
+            "gsw": "Das alles aber isch gscheh, damit d Schrifte vo de Prophete erfüllt wärded."
+          }
         }
       ],
-      "action_de": "Jesus sagt zu den Menschenmengen: Wie gegen einen Räuber seid ihr mit Schwertern und Knüppeln ausgezogen; täglich sass ich im Tempel und lehrte. Das alles ist geschehen, damit die Schriften der Propheten erfüllt würden.",
+      "action_de": "Jesus sagt zu den Mengen: Wie gegen einen Räuber seid ihr ausgezogen; das alles ist geschehen, damit die Schriften der Propheten erfüllt würden. Da verlassen ihn alle Jünger und fliehen.",
+      "keywords": {
+        "de": "Da verliessen ihn alle Jünger und flohen",
+        "gsw": "Dänn händ en alli Jünger verlaa und sind gflüchtet"
+      },
       "stage": {
-        "mood": {
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-JESUS": "earnest"
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
         },
-        "night": true
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.26.56",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FLIEHEN"
-      ],
-      "speech": [],
-      "action_de": "Da verlassen ihn alle Jünger und fliehen.",
-      "stage": {
         "pose": {
-          "FIG-GRUPPE-ZWOELF": "away"
+          "FIG-GRUPPE-JUENGER": "away"
         },
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "worried",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-JESUS": 34,
-          "FIG-GRUPPE-ZWOELF": 134
+        "beside": {
+          "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-JUENGER"
         },
         "night": true,
-        "beside": {
-          "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+        "mood": {
+          "FIG-GRUPPE-MENGE": "earnest",
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "fear"
+        },
+        "x": {
+          "FIG-GRUPPE-MENGE": 30,
+          "FIG-JESUS": 90,
+          "FIG-GRUPPE-JUENGER": 156
         }
       }
     }
   ],
   "actions_de": [
-    "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, von den Hohepriestern und Ältesten; er küsst Jesus als verabredetes Zeichen, und sie ergreifen ihn.",
-    "Einer von denen, die bei Jesus sind, zieht das Schwert und schlägt dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: Steck dein Schwert zurück! Ich könnte meinen Vater um mehr als zwölf Legionen Engel bitten; doch wie würden dann die Schriften erfüllt?",
-    "Jesus sagt zu den Menschenmengen: Wie gegen einen Räuber seid ihr mit Schwertern und Knüppeln ausgezogen; täglich sass ich im Tempel und lehrte. Das alles ist geschehen, damit die Schriften der Propheten erfüllt würden.",
-    "Da verlassen ihn alle Jünger und fliehen."
+    "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, sagt: Sei gegrüsst, Rabbi!, und küsst Jesus; Jesus sagt: Freund, tu, wozu du da bist! Da ergreifen sie ihn.",
+    "Einer der Begleiter Jesu zieht das Schwert und haut dem Knecht des Hohepriesters das Ohr ab; Jesus sagt: Steck dein Schwert zurück an seinen Platz! Denn alle, die zum Schwert greifen, werden durch das Schwert umkommen.",
+    "Jesus sagt zu den Mengen: Wie gegen einen Räuber seid ihr ausgezogen; das alles ist geschehen, damit die Schriften der Propheten erfüllt würden. Da verlassen ihn alle Jünger und fliehen."
   ],
   "captions_de": [
-    "Kuss → Festnahme: Judas küsst Jesus als Zeichen (Lippen neben Judas); darauf ergreift ihn die Menge (Pfeil von der Menge zu Jesus; gefesselte Hände).",
-    "Kein Schwert: Ein Jünger hat ein Schwert gezogen (Schwert neben ihm); Jesus sagt: Steck es weg (Schwert, roter Kreis mit Balken) – der Vater gäbe ihm Engel, doch die Schriften müssen sich erfüllen (Engel mit Flügeln, Schriftrolle).",
-    "Antwort: Jesus sagt zu den Menschenmengen: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
-    "Flucht: Die Jünger wenden sich ab und fliehen (rennende Person); Jesus bleibt allein zurück."
+    "Der Kuss: Judas (Name) küsst Jesus: «Sei gegrüsst, Rabbi!» (Kuss); Jesus: «Freund, tu, wozu du da bist!»; die Menge mit Schwert ergreift ihn (ausliefern).",
+    "Das Schwert: Ein Jünger mit gezogenem Schwert, der Knecht des Hohepriesters hält sich das Ohr (Schmerz); Jesus: «Steck dein Schwert zurück an seinen Platz! Denn alle, die zum Schwert greifen, werden durch das Schwert umkommen.» (Schwert, Verbotszeichen).",
+    "Flucht: Jesus bleibt bei der Menge zurück (Fessel); die Jünger fliehen (fliehen)."
   ],
-  "interpretation_note_de": "Der Schwertschlag ([[MAT.26.51]]) wird nicht gezeigt; der Jünger und der Knecht bleiben bei Matthäus namenlos (Johannes nennt Petrus und Malchus, [[JHN.18.10]]). Die zwölf Legionen Engel ([[MAT.26.53]]) erscheinen nur in der Sprechblase. Knüppel sind nicht gezeichnet.",
+  "interpretation_note_de": "Drei Felder ([[MAT.26.47-MAT.26.56]]): der Kuss des Judas und die Festnahme, der Schwerthieb mit Jesu Einspruch, die Flucht der Jünger. Die Verletzung des Knechts ist nur am Ausdruck zu sehen, nicht ausgemalt. Den Namen des Schwertträgers nennt Matthäus nicht; er ist als Jünger ohne Namen gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-026-047-056",
       "field": "summary",
-      "fingerprint": "0461b5bd06c73752"
+      "fingerprint": "e0ae8993f9e9723e"
     },
     {
       "record": "TRANS-MAT-026-001-075-DE-WORKING",
@@ -193,16 +230,10 @@
       "field": "text_by_reference",
       "reference": "MAT.26.55-MAT.26.56",
       "fingerprint": "465c2b545c6cdfa3"
-    },
-    {
-      "record": "TRANS-MAT-026-001-075-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.26.56",
-      "fingerprint": "a48cd32121e1a74c"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -395,6 +426,243 @@
           "Antwort: Jesus sagt zu den Menschenmengen: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
           "Flucht: Die Jünger wenden sich ab und fliehen (Pfeil mit Bewegungsstrichen); Jesus bleibt allein zurück."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-026-047-056",
+            "field": "summary",
+            "fingerprint": "0461b5bd06c73752"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.47-MAT.26.50",
+            "fingerprint": "4030604c61e541a9"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.51-MAT.26.54",
+            "fingerprint": "ba62f347f9304ec7"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.55-MAT.26.56",
+            "fingerprint": "465c2b545c6cdfa3"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.56",
+            "fingerprint": "a48cd32121e1a74c"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.47-MAT.26.50",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS"
+            ],
+            "speech": [],
+            "action_de": "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, von den Hohepriestern und Ältesten; er küsst Jesus als verabredetes Zeichen, und sie ergreifen ihn.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-FESSEL"
+              },
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 98,
+                "FIG-JUDAS-ISKARIOT": 150
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.51-MAT.26.54",
+            "figures": [
+              "FIG-ROLLE-JUENGER",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHWERT",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-ENGEL",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Einer von denen, die bei Jesus sind, zieht das Schwert und schlägt dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: Steck dein Schwert zurück! Ich könnte meinen Vater um mehr als zwölf Legionen Engel bitten; doch wie würden dann die Schriften erfüllt?",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-JUENGER": "FIG-OBJ-SCHWERT"
+              },
+              "mood": {
+                "FIG-ROLLE-JUENGER": "determined",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 46,
+                "FIG-ROLLE-JUENGER": 136
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.55-MAT.26.56",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ORT-TEMPEL",
+                  "FIG-OBJ-SCHRIFTROLLE"
+                ]
+              }
+            ],
+            "action_de": "Jesus sagt zu den Menschenmengen: Wie gegen einen Räuber seid ihr mit Schwertern und Knüppeln ausgezogen; täglich sass ich im Tempel und lehrte. Das alles ist geschehen, damit die Schriften der Propheten erfüllt würden.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-JESUS": "earnest"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.56",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN"
+            ],
+            "speech": [],
+            "action_de": "Da verlassen ihn alle Jünger und fliehen.",
+            "stage": {
+              "pose": {
+                "FIG-GRUPPE-ZWOELF": "away"
+              },
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "worried",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-GRUPPE-ZWOELF": 134
+              },
+              "night": true,
+              "beside": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-ZWOELF"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Judas kommt mit einer grossen Menge mit Schwertern und Knüppeln, von den Hohepriestern und Ältesten; er küsst Jesus als verabredetes Zeichen, und sie ergreifen ihn.",
+          "Einer von denen, die bei Jesus sind, zieht das Schwert und schlägt dem Knecht des Hohepriesters das Ohr ab. Jesus sagt: Steck dein Schwert zurück! Ich könnte meinen Vater um mehr als zwölf Legionen Engel bitten; doch wie würden dann die Schriften erfüllt?",
+          "Jesus sagt zu den Menschenmengen: Wie gegen einen Räuber seid ihr mit Schwertern und Knüppeln ausgezogen; täglich sass ich im Tempel und lehrte. Das alles ist geschehen, damit die Schriften der Propheten erfüllt würden.",
+          "Da verlassen ihn alle Jünger und fliehen."
+        ],
+        "captions_de": [
+          "Kuss → Festnahme: Judas küsst Jesus als Zeichen (Lippen neben Judas); darauf ergreift ihn die Menge (Pfeil von der Menge zu Jesus; gefesselte Hände).",
+          "Kein Schwert: Ein Jünger hat ein Schwert gezogen (Schwert neben ihm); Jesus sagt: Steck es weg (Schwert, roter Kreis mit Balken) – der Vater gäbe ihm Engel, doch die Schriften müssen sich erfüllen (Engel mit Flügeln, Schriftrolle).",
+          "Antwort: Jesus sagt zu den Menschenmengen: Ich war täglich im Tempel – so erfüllen sich die Schriften (Tempel, Schriftrolle).",
+          "Flucht: Die Jünger wenden sich ab und fliehen (rennende Person); Jesus bleibt allein zurück."
+        ],
+        "interpretation_note_de": "Der Schwertschlag ([[MAT.26.51]]) wird nicht gezeigt; der Jünger und der Knecht bleiben bei Matthäus namenlos (Johannes nennt Petrus und Malchus, [[JHN.18.10]]). Die zwölf Legionen Engel ([[MAT.26.53]]) erscheinen nur in der Sprechblase. Knüppel sind nicht gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-026-047-056",
+            "field": "summary",
+            "fingerprint": "e0ae8993f9e9723e"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.47-MAT.26.50",
+            "fingerprint": "4030604c61e541a9"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.51-MAT.26.54",
+            "fingerprint": "ba62f347f9304ec7"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.55-MAT.26.56",
+            "fingerprint": "465c2b545c6cdfa3"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.56",
+            "fingerprint": "a48cd32121e1a74c"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

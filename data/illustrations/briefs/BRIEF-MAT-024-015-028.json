@@ -11,183 +11,177 @@
   "panels": [
     {
       "n": 1,
-      "reference": "MAT.24.15-MAT.24.18",
+      "reference": "MAT.24.15-MAT.24.22",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
+        "FIG-GRUPPE-JUENGER",
+        "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
-      "signs": [],
+      "objects": [
+        "FIG-ORT-BERG"
+      ],
+      "signs": [
+        "FIG-ZEICHEN-FLIEHEN",
+        "FIG-ZEICHEN-WINTER",
+        "FIG-ZEICHEN-ABSTAND"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-GRUPPE-MENGE",
-            "FIG-ZEICHEN-FLIEHEN",
-            "FIG-ORT-BERG"
-          ]
+            "FIG-ORT-BERG",
+            "FIG-ZEICHEN-FLIEHEN"
+          ],
+          "word": {
+            "de": "Dann sollen die in Judäa in die Berge fliehen.",
+            "gsw": "Dänn söled die z Judäa i d Bärge flüchte."
+          }
         }
       ],
-      "action_de": "Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, von dem der Prophet Daniel gesprochen hat, dann sollen die in Judäa in die Berge fliehen; wer auf dem Dach ist, steige nicht hinab, um Sachen aus dem Haus zu holen, und wer auf dem Feld ist, kehre nicht zurück.",
+      "action_de": "Jesus sagt: Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, dann sollen die in Judäa in die Berge fliehen; betet, dass die Flucht nicht im Winter geschieht, denn dann wird eine grosse Bedrängnis sein.",
+      "keywords": {
+        "de": "dann sollen die in Judäa in die Berge fliehen",
+        "gsw": "dänn söled die z Judäa i d Bärge flüchte"
+      },
       "stage": {
+        "split": 2,
+        "back_side": "right",
+        "pose": {
+          "FIG-GRUPPE-MENGE": "away"
+        },
+        "at": {
+          "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-MENGE"
+        },
         "mood": {
+          "FIG-JESUS": "earnest",
           "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-JESUS": "earnest"
+          "FIG-GRUPPE-MENGE": "fear"
         },
         "x": {
-          "FIG-JESUS": 44
+          "FIG-JESUS": 24,
+          "FIG-GRUPPE-JUENGER": 72,
+          "FIG-GRUPPE-MENGE": 150
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.24.19-MAT.24.22",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
+      "reference": "MAT.24.23-MAT.24.27",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-BETEN",
-            "FIG-ZEICHEN-FLIEHEN"
-          ]
+      "speech": [],
+      "action_de": "Wenn jemand sagt: Siehe, hier ist der Christus! – in der Wüste! – in den Kammern!, glaubt es nicht; denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein.",
+      "keywords": {
+        "de": "Siehe, hier ist der Christus!",
+        "gsw": "Lueg, da isch de Christus!"
+      },
+      "diagram": {
+        "visual": "columns",
+        "span": 2,
+        "speaker": "FIG-JESUS",
+        "head_tones": [
+          "old",
+          "new"
+        ],
+        "arrow": false,
+        "title": {
+          "de": "Siehe, ich habe es euch vorausgesagt.",
+          "gsw": "Lueg, ich han s eu voruus gseit."
         },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-WINTER",
-            "FIG-ZEICHEN-SABBAT",
-            "FIG-ZEICHEN-NICHT"
+        "head": [
+          {
+            "de": "glaubt es nicht!",
+            "gsw": "glaubed s nöd!"
+          },
+          {
+            "de": "so wird das Kommen des Menschensohns sein",
+            "gsw": "so wird d Aachunft vom Mänschesohn sii"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "«Siehe, hier ist der Christus!», oder: «Hier!» – glaubt es nicht!",
+                "gsw": "«Lueg, da isch de Christus!», oder: «Da!» – glaubed s nöd!"
+              },
+              "icons": [
+                "FIG-GRUPPE-VERFUEHRER",
+                "FIG-ZEICHEN-NICHT-GLAUBEN"
+              ],
+              "tone": "old"
+            },
+            {
+              "a": {
+                "de": "Denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet,",
+                "gsw": "Dänn wie de Blitz vom Oschte usgaat und bis in Weschte lüüchtet,"
+              },
+              "icons": [
+                "FIG-ZEICHEN-BLITZ"
+              ],
+              "tone": "new"
+            }
+          ],
+          [
+            {
+              "a": {
+                "de": "«Siehe, er ist in der Wüste!» – geht nicht hinaus; «Siehe, in den Kammern!» – glaubt es nicht!",
+                "gsw": "«Lueg, er isch i de Wüeschti!» – gönd nöd use; «Lueg, i de Chammere!» – glaubed s nöd!"
+              },
+              "icons": [
+                "FIG-ORT-WUESTE",
+                "FIG-ORT-KAMMER"
+              ],
+              "tone": "old"
+            },
+            {
+              "a": {
+                "de": "so wird das Kommen des Menschensohns sein.",
+                "gsw": "so wird d Aachunft vom Mänschesohn sii."
+              },
+              "icons": [
+                "FIG-JESUS",
+                "FIG-ZEICHEN-WOLKE"
+              ],
+              "tone": "new"
+            }
           ]
-        }
-      ],
-      "action_de": "Wehe den Schwangeren und Stillenden in jenen Tagen! Betet, dass eure Flucht nicht im Winter und nicht an einem Sabbat geschieht. Denn dann wird eine grosse Bedrängnis sein; um der Auserwählten willen aber werden jene Tage verkürzt werden.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "worried",
-          "FIG-JESUS": "earnest"
-        },
-        "x": {
-          "FIG-JESUS": 44
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.24.23-MAT.24.26",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-GRUPPE-VERFUEHRER",
-            "FIG-ZEICHEN-STERN",
-            "FIG-ZEICHEN-NICHT-GLAUBEN"
-          ]
-        }
-      ],
-      "action_de": "Wenn jemand sagt: «Hier ist der Christus!», glaubt es nicht! Falsche Christusse und falsche Propheten werden grosse Zeichen und Wunder tun, um sogar die Auserwählten irrezuführen. Sagt man: «In der Wüste!» oder «In den Kammern!», so geht nicht hinaus und glaubt es nicht.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "pensive",
-          "FIG-JESUS": "earnest"
-        },
-        "x": {
-          "FIG-JESUS": 44
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.24.27-MAT.24.28",
-      "figures": [
-        "FIG-JESUS",
-        "FIG-GRUPPE-JUENGER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-JUENGER",
-          "icons": [
-            "FIG-ZEICHEN-BLITZ",
-            "FIG-ORT-WOLKE",
-            "FIG-JESUS"
-          ]
-        }
-      ],
-      "action_de": "Denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein. Wo das Aas ist, da werden sich die Geier versammeln.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "surprised",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-JESUS": 44
-        }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, von dem der Prophet Daniel gesprochen hat, dann sollen die in Judäa in die Berge fliehen; wer auf dem Dach ist, steige nicht hinab, um Sachen aus dem Haus zu holen, und wer auf dem Feld ist, kehre nicht zurück.",
-    "Wehe den Schwangeren und Stillenden in jenen Tagen! Betet, dass eure Flucht nicht im Winter und nicht an einem Sabbat geschieht. Denn dann wird eine grosse Bedrängnis sein; um der Auserwählten willen aber werden jene Tage verkürzt werden.",
-    "Wenn jemand sagt: «Hier ist der Christus!», glaubt es nicht! Falsche Christusse und falsche Propheten werden grosse Zeichen und Wunder tun, um sogar die Auserwählten irrezuführen. Sagt man: «In der Wüste!» oder «In den Kammern!», so geht nicht hinaus und glaubt es nicht.",
-    "Denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein. Wo das Aas ist, da werden sich die Geier versammeln."
+    "Jesus sagt: Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, dann sollen die in Judäa in die Berge fliehen; betet, dass die Flucht nicht im Winter geschieht, denn dann wird eine grosse Bedrängnis sein.",
+    "Wenn jemand sagt: Siehe, hier ist der Christus! – in der Wüste! – in den Kammern!, glaubt es nicht; denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein."
   ],
   "captions_de": [
-    "Fliehen: Die Menschen sollen in die Berge fliehen (Menge, rennende Person, Berg).",
-    "Betet für die Flucht (betende Hände, rennende Person): dass sie nicht im Winter und nicht am Sabbat sei (Schneeflocke, sechs graue und ein goldener Kreis, roter Kreis mit Schrägbalken).",
-    "Nicht glauben: Verführer tun Zeichen (violettgraue Reisende, goldener Stern) – glaubt ihnen nicht (skeptisches Gesicht).",
-    "Wie der Blitz: Das Kommen des Menschensohns wird sein wie der Blitz von Osten bis Westen (goldgelber Blitz, weisse Wolke, Jesus)."
+    "Flucht in die Berge: Jesus (links) sagt den Jüngern: «Dann sollen die in Judäa in die Berge fliehen» (fliehen); rechts hinter der gestrichelten Linie fliehen Menschen zu den Bergen (Berg, Winter).",
+    "Zwei Spalten (Bild Jesus, Blase «Siehe, ich habe es euch vorausgesagt.»): links falsche Rufe – «Siehe, hier ist der Christus!» (Verführer, nicht glauben), «Siehe, er ist in der Wüste!», «Siehe, in den Kammern!» (Wüste, Kammer); rechts, hervorgehoben: wie der Blitz vom Osten bis zum Westen leuchtet (Blitz), so wird das Kommen des Menschensohns sein (Jesus, Wolke)."
   ],
-  "interpretation_note_de": "Was der «Gräuel der Verwüstung» ([[MAT.24.15]], vgl. [[DAN.9.27]]) ist, lässt der Text offen; das Bild zeigt ihn nicht. Schwangere und Stillende ([[MAT.24.19]]), die grosse Bedrängnis und die verkürzten Tage ([[MAT.24.21-MAT.24.22]]), das Haus und das Feld ([[MAT.24.17-MAT.24.18]]), «in der Wüste» und «in den Kammern» ([[MAT.24.26]]) sowie das Bildwort von Aas und Geiern ([[MAT.24.28]]) sind nicht gezeichnet. Jesus spricht vom «Menschensohn» in der dritten Person; dass er sich selbst meint, ist die gängige Deutung, deshalb steht Jesus in der Blase.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.24.15-MAT.24.28]]): die Weisung zur Flucht (Jesus als Redner links, die Flucht als Bild im Bild rechts), dann falsche Rufe ↔ Kommen wie der Blitz. Was der «Gräuel der Verwüstung» ist, lässt das Bild offen; er ist nicht gezeichnet. Das Bildwort von Aas und Geiern (24,28) ist nicht gezeichnet (Deutung unsicher). Alles ist Ankündigung und Weisung, kein Bericht.",
   "basis": [
     {
       "record": "TU-MAT-024-015-028",
       "field": "summary",
-      "fingerprint": "178e3abc2028f463"
+      "fingerprint": "a5c97075b0ad89af"
     },
     {
       "record": "TRANS-MAT-024-001-051-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.24.15-MAT.24.18",
-      "fingerprint": "cd9044123986c75b"
+      "reference": "MAT.24.15-MAT.24.22",
+      "fingerprint": "30f0dbcb2444110f"
     },
     {
       "record": "TRANS-MAT-024-001-051-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.24.19-MAT.24.22",
-      "fingerprint": "bbcf64e0c8bc1829"
-    },
-    {
-      "record": "TRANS-MAT-024-001-051-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.24.23-MAT.24.26",
-      "fingerprint": "9a159b73ce69ba7e"
-    },
-    {
-      "record": "TRANS-MAT-024-001-051-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.24.27-MAT.24.28",
-      "fingerprint": "8f9e0383c95f785a"
+      "reference": "MAT.24.23-MAT.24.27",
+      "fingerprint": "45f70089221fce07"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -340,6 +334,374 @@
           "Betet für die Flucht (betende Hände, Pfeil mit Bewegungsstrichen): dass sie nicht im Winter und nicht am Sabbat sei (Schneeflocke, sechs graue und ein goldener Kreis, roter Kreis mit Schrägbalken).",
           "Nicht glauben: Verführer tun Zeichen (violettgraue Reisende, goldener Stern) – glaubt ihnen nicht (graues Herz, rot durchgestrichen).",
           "Wie der Blitz: Das Kommen des Menschensohns wird sein wie der Blitz von Osten bis Westen (goldgelber Blitz, Wolke mit goldenem Rand, Jesus)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-024-015-028",
+            "field": "summary",
+            "fingerprint": "178e3abc2028f463"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.15-MAT.24.18",
+            "fingerprint": "cd9044123986c75b"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.19-MAT.24.22",
+            "fingerprint": "bbcf64e0c8bc1829"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.23-MAT.24.26",
+            "fingerprint": "9a159b73ce69ba7e"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.27-MAT.24.28",
+            "fingerprint": "8f9e0383c95f785a"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.24.15-MAT.24.18",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-FLIEHEN",
+                  "FIG-ORT-BERG"
+                ]
+              }
+            ],
+            "action_de": "Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, von dem der Prophet Daniel gesprochen hat, dann sollen die in Judäa in die Berge fliehen; wer auf dem Dach ist, steige nicht hinab, um Sachen aus dem Haus zu holen, und wer auf dem Feld ist, kehre nicht zurück.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 44
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.24.19-MAT.24.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-BETEN",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-WINTER",
+                  "FIG-ZEICHEN-SABBAT",
+                  "FIG-ZEICHEN-NICHT"
+                ]
+              }
+            ],
+            "action_de": "Wehe den Schwangeren und Stillenden in jenen Tagen! Betet, dass eure Flucht nicht im Winter und nicht an einem Sabbat geschieht. Denn dann wird eine grosse Bedrängnis sein; um der Auserwählten willen aber werden jene Tage verkürzt werden.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "worried",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 44
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.24.23-MAT.24.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-GRUPPE-VERFUEHRER",
+                  "FIG-ZEICHEN-STERN",
+                  "FIG-ZEICHEN-NICHT-GLAUBEN"
+                ]
+              }
+            ],
+            "action_de": "Wenn jemand sagt: «Hier ist der Christus!», glaubt es nicht! Falsche Christusse und falsche Propheten werden grosse Zeichen und Wunder tun, um sogar die Auserwählten irrezuführen. Sagt man: «In der Wüste!» oder «In den Kammern!», so geht nicht hinaus und glaubt es nicht.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-JESUS": "earnest"
+              },
+              "x": {
+                "FIG-JESUS": 44
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.24.27-MAT.24.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-BLITZ",
+                  "FIG-ORT-WOLKE",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein. Wo das Aas ist, da werden sich die Geier versammeln.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 44
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, von dem der Prophet Daniel gesprochen hat, dann sollen die in Judäa in die Berge fliehen; wer auf dem Dach ist, steige nicht hinab, um Sachen aus dem Haus zu holen, und wer auf dem Feld ist, kehre nicht zurück.",
+          "Wehe den Schwangeren und Stillenden in jenen Tagen! Betet, dass eure Flucht nicht im Winter und nicht an einem Sabbat geschieht. Denn dann wird eine grosse Bedrängnis sein; um der Auserwählten willen aber werden jene Tage verkürzt werden.",
+          "Wenn jemand sagt: «Hier ist der Christus!», glaubt es nicht! Falsche Christusse und falsche Propheten werden grosse Zeichen und Wunder tun, um sogar die Auserwählten irrezuführen. Sagt man: «In der Wüste!» oder «In den Kammern!», so geht nicht hinaus und glaubt es nicht.",
+          "Denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein. Wo das Aas ist, da werden sich die Geier versammeln."
+        ],
+        "captions_de": [
+          "Fliehen: Die Menschen sollen in die Berge fliehen (Menge, rennende Person, Berg).",
+          "Betet für die Flucht (betende Hände, rennende Person): dass sie nicht im Winter und nicht am Sabbat sei (Schneeflocke, sechs graue und ein goldener Kreis, roter Kreis mit Schrägbalken).",
+          "Nicht glauben: Verführer tun Zeichen (violettgraue Reisende, goldener Stern) – glaubt ihnen nicht (skeptisches Gesicht).",
+          "Wie der Blitz: Das Kommen des Menschensohns wird sein wie der Blitz von Osten bis Westen (goldgelber Blitz, weisse Wolke, Jesus)."
+        ],
+        "interpretation_note_de": "Was der «Gräuel der Verwüstung» ([[MAT.24.15]], vgl. [[DAN.9.27]]) ist, lässt der Text offen; das Bild zeigt ihn nicht. Schwangere und Stillende ([[MAT.24.19]]), die grosse Bedrängnis und die verkürzten Tage ([[MAT.24.21-MAT.24.22]]), das Haus und das Feld ([[MAT.24.17-MAT.24.18]]), «in der Wüste» und «in den Kammern» ([[MAT.24.26]]) sowie das Bildwort von Aas und Geiern ([[MAT.24.28]]) sind nicht gezeichnet. Jesus spricht vom «Menschensohn» in der dritten Person; dass er sich selbst meint, ist die gängige Deutung, deshalb steht Jesus in der Blase.",
+        "basis": [
+          {
+            "record": "TU-MAT-024-015-028",
+            "field": "summary",
+            "fingerprint": "a5c97075b0ad89af"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.15-MAT.24.18",
+            "fingerprint": "cd9044123986c75b"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.19-MAT.24.22",
+            "fingerprint": "bbcf64e0c8bc1829"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.23-MAT.24.26",
+            "fingerprint": "9a159b73ce69ba7e"
+          },
+          {
+            "record": "TRANS-MAT-024-001-051-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.24.27-MAT.24.28",
+            "fingerprint": "8f9e0383c95f785a"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.24.15-MAT.24.22",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FLIEHEN",
+              "FIG-ZEICHEN-WINTER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-ORT-BERG",
+                  "FIG-ZEICHEN-FLIEHEN"
+                ],
+                "word": {
+                  "de": "Dann sollen die in Judäa in die Berge fliehen.",
+                  "gsw": "Dänn söled die z Judäa i d Bärge flüchte."
+                }
+              }
+            ],
+            "action_de": "Jesus sagt: Wenn ihr den Gräuel der Verwüstung an heiliger Stätte stehen seht, dann sollen die in Judäa in die Berge fliehen; betet, dass die Flucht nicht im Winter geschieht, denn dann wird eine grosse Bedrängnis sein.",
+            "keywords": {
+              "de": "dann sollen die in Judäa in die Berge fliehen",
+              "gsw": "dänn söled die z Judäa i d Bärge flüchte"
+            },
+            "stage": {
+              "split": 1,
+              "back_side": "right",
+              "pose": {
+                "FIG-GRUPPE-MENGE": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-FLIEHEN": "FIG-GRUPPE-MENGE"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-MENGE": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 30,
+                "FIG-GRUPPE-MENGE": 110
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.24.23-MAT.24.27",
+            "figures": [],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Wenn jemand sagt: Siehe, hier ist der Christus! – in der Wüste! – in den Kammern!, glaubt es nicht; denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet, so wird das Kommen des Menschensohns sein.",
+            "keywords": {
+              "de": "Siehe, hier ist der Christus!",
+              "gsw": "Lueg, da isch de Christus!"
+            },
+            "diagram": {
+              "visual": "columns",
+              "span": 2,
+              "speaker": "FIG-JESUS",
+              "head_tones": [
+                "old",
+                "new"
+              ],
+              "arrow": false,
+              "title": {
+                "de": "Siehe, ich habe es euch vorausgesagt.",
+                "gsw": "Lueg, ich han s eu voruus gseit."
+              },
+              "head": [
+                {
+                  "de": "glaubt es nicht!",
+                  "gsw": "glaubed s nöd!"
+                },
+                {
+                  "de": "so wird das Kommen des Menschensohns sein",
+                  "gsw": "so wird d Aachunft vom Mänschesohn sii"
+                }
+              ],
+              "rows": [
+                [
+                  {
+                    "a": {
+                      "de": "«Siehe, hier ist der Christus!», oder: «Hier!» – glaubt es nicht!",
+                      "gsw": "«Lueg, da isch de Christus!», oder: «Da!» – glaubed s nöd!"
+                    },
+                    "icons": [
+                      "FIG-GRUPPE-VERFUEHRER",
+                      "FIG-ZEICHEN-NICHT-GLAUBEN"
+                    ],
+                    "tone": "old"
+                  },
+                  {
+                    "a": {
+                      "de": "Denn wie der Blitz vom Osten ausgeht und bis zum Westen leuchtet,",
+                      "gsw": "Dänn wie de Blitz vom Oschte usgaat und bis in Weschte lüüchtet,"
+                    },
+                    "icons": [
+                      "FIG-ZEICHEN-BLITZ"
+                    ],
+                    "tone": "new"
+                  }
+                ],
+                [
+                  {
+                    "a": {
+                      "de": "«Siehe, er ist in der Wüste!» – geht nicht hinaus; «Siehe, in den Kammern!» – glaubt es nicht!",
+                      "gsw": "«Lueg, er isch i de Wüeschti!» – gönd nöd use; «Lueg, i de Chammere!» – glaubed s nöd!"
+                    },
+                    "icons": [
+                      "FIG-ORT-WUESTE",
+                      "FIG-ORT-KAMMER"
+                    ],
+                    "tone": "old"
+                  },
+                  {
+                    "a": {
+                      "de": "so wird das Kommen des Menschensohns sein.",
+                      "gsw": "so wird d Aachunft vom Mänschesohn sii."
+                    },
+                    "icons": [
+                      "FIG-JESUS",
+                      "FIG-ZEICHEN-WOLKE"
+                    ],
+                    "tone": "new"
+                  }
+                ]
+              ]
+            }
+          }
         ]
       }
     }

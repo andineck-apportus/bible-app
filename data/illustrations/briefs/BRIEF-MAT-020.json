@@ -13,42 +13,55 @@
       "n": 1,
       "reference": "MAT.20.1-MAT.20.16",
       "figures": [
-        "FIG-GRUPPE-ARBEITER",
-        "FIG-ROLLE-LOHNARBEITER",
-        "FIG-ROLLE-VERWALTER"
+        "FIG-ROLLE-GUTSHERR",
+        "FIG-GRUPPE-ARBEITER"
       ],
       "objects": [
         "FIG-OBJ-DENAR"
       ],
       "signs": [
-        "FIG-ZEICHEN-ABEND"
+        "FIG-ZEICHEN-ZORN"
       ],
-      "speech": [],
-      "action_de": "Jesus erzählt vom Hausherrn, der allen Arbeitern im Weinberg denselben Lohn gibt, auch denen, die nur eine Stunde gearbeitet haben: So werden die Letzten Erste sein.",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-GUTSHERR",
+          "to": "FIG-GRUPPE-ARBEITER",
+          "icons": [
+            "FIG-ZEICHEN-GERECHT"
+          ],
+          "word": {
+            "de": "Freund, ich tue dir kein Unrecht.",
+            "gsw": "Fründ, ich tue dir kei Unrächt."
+          }
+        }
+      ],
+      "action_de": "Am Abend erhalten alle Arbeiter je einen Denar, angefangen bei den Letzten; die Ersten murren; der Hausherr antwortet: Freund, ich tue dir kein Unrecht – oder ist dein Auge böse, weil ich gütig bin?",
+      "keywords": {
+        "de": "So werden die Letzten Erste sein",
+        "gsw": "So wärded di Letschte Erschti sii"
+      },
       "stage": {
         "hold": {
-          "FIG-ROLLE-VERWALTER": "FIG-OBJ-DENAR"
+          "FIG-ROLLE-GUTSHERR": "FIG-OBJ-DENAR"
+        },
+        "at": {
+          "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-ARBEITER"
         },
         "arrows": [
           [
-            "FIG-ROLLE-VERWALTER",
-            "FIG-ROLLE-LOHNARBEITER",
+            "FIG-ROLLE-GUTSHERR",
+            "FIG-GRUPPE-ARBEITER",
             "act"
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-ARBEITER": "pensive",
-          "FIG-ROLLE-LOHNARBEITER": "delight"
+          "FIG-ROLLE-GUTSHERR": "calm",
+          "FIG-GRUPPE-ARBEITER": "angry"
         },
         "x": {
-          "FIG-GRUPPE-ARBEITER": 34,
-          "FIG-ROLLE-LOHNARBEITER": 100,
-          "FIG-ROLLE-VERWALTER": 154
-        },
-        "wear": {
-          "FIG-ROLLE-LOHNARBEITER": "#C9A060"
-        },
-        "air_x": 140
+          "FIG-ROLLE-GUTSHERR": 50,
+          "FIG-GRUPPE-ARBEITER": 136
+        }
       }
     },
     {
@@ -58,24 +71,39 @@
         "FIG-JESUS",
         "FIG-GRUPPE-ZWOELF"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-ORT-JERUSALEM"
+      ],
       "signs": [],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-ZWOELF",
           "icons": [
-            "FIG-ZEICHEN-AUSLIEFERN",
             "FIG-OBJ-KREUZ",
             "FIG-ZEICHEN-AUFERWECKEN"
-          ]
+          ],
+          "word": {
+            "de": "Am dritten Tag wird er auferweckt werden.",
+            "gsw": "Am dritte Tag wird er uferweckt."
+          }
         }
       ],
-      "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf zum dritten Mal an: Er wird ausgeliefert, gekreuzigt und am dritten Tag auferweckt.",
+      "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf an, dass der Menschensohn ausgeliefert, verurteilt und gekreuzigt und am dritten Tag auferweckt wird.",
+      "keywords": {
+        "de": "wir ziehen nach Jerusalem hinauf",
+        "gsw": "mir gönd uf Jerusalem ufe"
+      },
       "stage": {
+        "back_side": "right",
+        "before": true,
         "mood": {
           "FIG-JESUS": "earnest",
           "FIG-GRUPPE-ZWOELF": "worried"
+        },
+        "x": {
+          "FIG-JESUS": 44,
+          "FIG-GRUPPE-ZWOELF": 104
         }
       }
     },
@@ -84,33 +112,60 @@
       "reference": "MAT.20.20-MAT.20.28",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-ROLLE-MUTTER",
+        "FIG-JAKOBUS-ZEBEDAEUS",
+        "FIG-JOHANNES-ZEBEDAEUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-BECHER-VOLL"
+      ],
       "signs": [],
       "speech": [
         {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "from": "FIG-ROLLE-MUTTER",
+          "to": "FIG-JESUS",
           "icons": [
-            "FIG-JESUS",
-            "FIG-ROLLE-DIENER"
-          ]
+            "FIG-ZEICHEN-RANG",
+            "FIG-OBJ-KRONE"
+          ],
+          "word": {
+            "de": "Sag, dass diese meine zwei Söhne in deinem Reich sitzen dürfen, einer zu deiner Rechten und einer zu deiner Linken!",
+            "gsw": "Säg, dass mini zwei Söhn da i dim Riich dörfed sitze, eine a dinere Rächte und eine a dinere Linke!"
+          }
         },
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-ROLLE-MUTTER",
           "icons": [
-            "FIG-ZEICHEN-TOD",
-            "FIG-ZEICHEN-LOESEN",
-            "FIG-ZEICHEN-VIELE"
-          ]
+            "FIG-OBJ-BECHER-VOLL",
+            "FIG-ZEICHEN-FRAGEN"
+          ],
+          "word": {
+            "de": "Könnt ihr den Becher trinken, den ich trinken werde?",
+            "gsw": "Chönd ir de Bächer trinke, wo ich jetzt dänn trinke?"
+          }
         }
       ],
-      "action_de": "Die Mutter der Söhne des Zebedäus bittet um die Ehrenplätze; Jesus lehrt: Wer gross sein will, soll dienen, wie der Menschensohn, der sein Leben als Lösegeld für viele gibt.",
+      "action_de": "Die Mutter der Söhne des Zebedäus bittet kniend, dass ihre zwei Söhne zu Jesu Rechten und Linken sitzen; Jesus fragt: Könnt ihr den Becher trinken, den ich trinken werde?",
+      "keywords": {
+        "de": "der soll euer Diener sein",
+        "gsw": "dä söll eue Diener sii"
+      },
       "stage": {
+        "pose": {
+          "FIG-ROLLE-MUTTER": "kneel"
+        },
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive"
+          "FIG-JESUS": "earnest",
+          "FIG-ROLLE-MUTTER": "earnest",
+          "FIG-JAKOBUS-ZEBEDAEUS": "pensive",
+          "FIG-JOHANNES-ZEBEDAEUS": "pensive"
+        },
+        "x": {
+          "FIG-JESUS": 28,
+          "FIG-ROLLE-MUTTER": 88,
+          "FIG-JAKOBUS-ZEBEDAEUS": 132,
+          "FIG-JOHANNES-ZEBEDAEUS": 166
         }
       }
     },
@@ -124,30 +179,33 @@
       ],
       "objects": [],
       "signs": [
-        "FIG-ZEICHEN-SEHEN",
-        "FIG-ZEICHEN-HEILEN"
+        "FIG-ZEICHEN-BERUEHREN",
+        "FIG-ZEICHEN-SEHEN"
       ],
-      "speech": [],
-      "action_de": "Bei Jericho heilt Jesus zwei Blinde, die ihn als Sohn Davids anrufen; sie folgen ihm nach.",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-BLINDER",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-ZEICHEN-ERBARMEN"
+          ],
+          "word": {
+            "de": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+            "gsw": "Herr, häb Erbarme mit üs, Sohn vom David!"
+          }
+        }
+      ],
+      "action_de": "Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Jesus hat Erbarmen, berührt ihre Augen, und sogleich sehen sie wieder und folgen ihm nach.",
+      "keywords": {
+        "de": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+        "gsw": "Herr, häb Erbarme mit üs, Sohn vom David!"
+      },
       "stage": {
         "at": {
-          "FIG-ZEICHEN-SEHEN": [
-            "FIG-ROLLE-BLINDER",
-            "FIG-ROLLE-ZWEITER-BLINDER"
-          ]
+          "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-ZWEITER-BLINDER"
         },
         "beside": {
-          "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
-        },
-        "mood": {
-          "FIG-ROLLE-BLINDER": "delight",
-          "FIG-ROLLE-ZWEITER-BLINDER": "delight",
-          "FIG-JESUS": "smile"
-        },
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-ROLLE-BLINDER": 100,
-          "FIG-ROLLE-ZWEITER-BLINDER": 150
+          "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-BLINDER"
         },
         "arrows": [
           [
@@ -155,32 +213,45 @@
             "FIG-ROLLE-BLINDER",
             "act"
           ]
-        ]
+        ],
+        "mood": {
+          "FIG-JESUS": "calm",
+          "FIG-ROLLE-BLINDER": "earnest",
+          "FIG-ROLLE-ZWEITER-BLINDER": "delight"
+        },
+        "pose": {
+          "FIG-ROLLE-BLINDER": "sit"
+        },
+        "x": {
+          "FIG-JESUS": 44,
+          "FIG-ROLLE-BLINDER": 110,
+          "FIG-ROLLE-ZWEITER-BLINDER": 160
+        }
       }
     }
   ],
   "actions_de": [
-    "Jesus erzählt vom Hausherrn, der allen Arbeitern im Weinberg denselben Lohn gibt, auch denen, die nur eine Stunde gearbeitet haben: So werden die Letzten Erste sein.",
-    "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf zum dritten Mal an: Er wird ausgeliefert, gekreuzigt und am dritten Tag auferweckt.",
-    "Die Mutter der Söhne des Zebedäus bittet um die Ehrenplätze; Jesus lehrt: Wer gross sein will, soll dienen, wie der Menschensohn, der sein Leben als Lösegeld für viele gibt.",
-    "Bei Jericho heilt Jesus zwei Blinde, die ihn als Sohn Davids anrufen; sie folgen ihm nach."
+    "Am Abend erhalten alle Arbeiter je einen Denar, angefangen bei den Letzten; die Ersten murren; der Hausherr antwortet: Freund, ich tue dir kein Unrecht – oder ist dein Auge böse, weil ich gütig bin?",
+    "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf an, dass der Menschensohn ausgeliefert, verurteilt und gekreuzigt und am dritten Tag auferweckt wird.",
+    "Die Mutter der Söhne des Zebedäus bittet kniend, dass ihre zwei Söhne zu Jesu Rechten und Linken sitzen; Jesus fragt: Könnt ihr den Becher trinken, den ich trinken werde?",
+    "Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Jesus hat Erbarmen, berührt ihre Augen, und sogleich sehen sie wieder und folgen ihm nach."
   ],
   "captions_de": [
-    "Der Lohn am Abend (Sonne über Bergen): Der Verwalter (graugrünes Gewand) zahlt zuerst dem Letzten (ockerfarbenes Arbeitsgewand) einen Denar aus (Silbermünze in seiner Hand, Bogen); die Ersten warten.",
-    "Dritte Ankündigung: Jesus sagt, er werde ausgeliefert, gekreuzigt und auferweckt (Hand und Kette, Kreuz, offenes Grab mit goldenem Pfeil).",
-    "Lösegeld: Jesus ist gekommen, um zu dienen (Jesus, Diener) und sein Leben als Lösegeld für viele zu geben (Totenkopf, gesprengte Kette, Brustbilder im Schattenriss).",
-    "Berührung → sehen: Jesus hat Erbarmen und berührt ihre Augen (Pfeil von Jesus zu den Blinden, berührende Hand mit grünem Lichtpunkt); sie sehen (offene Augen über beiden) und freuen sich."
+    "Ein Denar für alle: Der Hausherr (Gutsherr) gibt den Arbeitern je einen Denar (Münze, geben); die Ersten murren (Zorn); er antwortet: «Freund, ich tue dir kein Unrecht.» (Gerechtigkeit).",
+    "Auf dem Weg: Jesus spricht zu den Zwölf (Weg nach Jerusalem): «… und am dritten Tag wird er auferweckt werden.» (Kreuz, auferwecken).",
+    "Rechts und links: Die Mutter kniet mit ihren zwei Söhnen vor Jesus: «Sag, dass diese meine zwei Söhne in deinem Reich sitzen dürfen, einer zu deiner Rechten und einer zu deiner Linken!» (Ehrenplatz, Krone); Jesus fragt nach dem Becher (Becher).",
+    "Zwei Blinde: Sie rufen «Herr, hab Erbarmen mit uns, Sohn Davids!» (Erbarmen); Jesus berührt ihre Augen (berühren), sie sehen wieder (sehen)."
   ],
-  "interpretation_note_de": "Je ein Feld zum Gleichnis von den Arbeitern im Weinberg, zur dritten Leidensankündigung, zum Dienen und zu den zwei Blinden. Dass die Geheilten Jesus nachfolgen, steht nur in der Handlung. Die Bitte der Mutter um die Ehrenplätze ([[MAT.20.20-MAT.20.23]]) ist nur im Abschnittsbild gezeichnet.",
+  "interpretation_note_de": "Vier Comic-Szenen, je eine aus den vier Abschnitten ([[MAT.20.1-MAT.20.34]]): der Denar für alle, die Ankündigung auf dem Weg, die Bitte der Mutter, die zwei Blinden. Die Zeitleiste der Anwerbung, die Stufen der Ankündigung und die Lehre vom Dienen stehen in den Abschnittsbildern. «Am dritten Tag wird er auferweckt werden» ist ein Satz aus der Ankündigung ([[MAT.20.19]]). Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-CH-MAT-020",
       "field": "summary",
-      "fingerprint": "32769d5b12bb3731"
+      "fingerprint": "573793632b1f3d6f"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -515,6 +586,184 @@
           "Lösegeld: Jesus ist gekommen, um zu dienen (Jesus, Diener) und sein Leben als Lösegeld für viele zu geben (verschlossenes Grab, gesprengte Kette, drei kleine Figuren).",
           "Berührung → sehen: Jesus hat Erbarmen und berührt ihre Augen (Pfeil von Jesus zu den Blinden, berührende Hand mit grünem Lichtpunkt); sie sehen (offenes Auge über beiden) und freuen sich."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.20.1-MAT.20.16",
+            "figures": [
+              "FIG-GRUPPE-ARBEITER",
+              "FIG-ROLLE-LOHNARBEITER",
+              "FIG-ROLLE-VERWALTER"
+            ],
+            "objects": [
+              "FIG-OBJ-DENAR"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABEND"
+            ],
+            "speech": [],
+            "action_de": "Jesus erzählt vom Hausherrn, der allen Arbeitern im Weinberg denselben Lohn gibt, auch denen, die nur eine Stunde gearbeitet haben: So werden die Letzten Erste sein.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-VERWALTER": "FIG-OBJ-DENAR"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-VERWALTER",
+                  "FIG-ROLLE-LOHNARBEITER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ARBEITER": "pensive",
+                "FIG-ROLLE-LOHNARBEITER": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-ARBEITER": 34,
+                "FIG-ROLLE-LOHNARBEITER": 100,
+                "FIG-ROLLE-VERWALTER": 154
+              },
+              "wear": {
+                "FIG-ROLLE-LOHNARBEITER": "#C9A060"
+              },
+              "air_x": 140
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.20.17-MAT.20.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-AUSLIEFERN",
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ]
+              }
+            ],
+            "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf zum dritten Mal an: Er wird ausgeliefert, gekreuzigt und am dritten Tag auferweckt.",
+            "stage": {
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.20.20-MAT.20.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-DIENER"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-TOD",
+                  "FIG-ZEICHEN-LOESEN",
+                  "FIG-ZEICHEN-VIELE"
+                ]
+              }
+            ],
+            "action_de": "Die Mutter der Söhne des Zebedäus bittet um die Ehrenplätze; Jesus lehrt: Wer gross sein will, soll dienen, wie der Menschensohn, der sein Leben als Lösegeld für viele gibt.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.20.29-MAT.20.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SEHEN",
+              "FIG-ZEICHEN-HEILEN"
+            ],
+            "speech": [],
+            "action_de": "Bei Jericho heilt Jesus zwei Blinde, die ihn als Sohn Davids anrufen; sie folgen ihm nach.",
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": [
+                  "FIG-ROLLE-BLINDER",
+                  "FIG-ROLLE-ZWEITER-BLINDER"
+                ]
+              },
+              "beside": {
+                "FIG-ZEICHEN-HEILEN": "FIG-ROLLE-BLINDER"
+              },
+              "mood": {
+                "FIG-ROLLE-BLINDER": "delight",
+                "FIG-ROLLE-ZWEITER-BLINDER": "delight",
+                "FIG-JESUS": "smile"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-ROLLE-BLINDER": 100,
+                "FIG-ROLLE-ZWEITER-BLINDER": 150
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ]
+              ]
+            }
+          }
+        ],
+        "actions_de": [
+          "Jesus erzählt vom Hausherrn, der allen Arbeitern im Weinberg denselben Lohn gibt, auch denen, die nur eine Stunde gearbeitet haben: So werden die Letzten Erste sein.",
+          "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf zum dritten Mal an: Er wird ausgeliefert, gekreuzigt und am dritten Tag auferweckt.",
+          "Die Mutter der Söhne des Zebedäus bittet um die Ehrenplätze; Jesus lehrt: Wer gross sein will, soll dienen, wie der Menschensohn, der sein Leben als Lösegeld für viele gibt.",
+          "Bei Jericho heilt Jesus zwei Blinde, die ihn als Sohn Davids anrufen; sie folgen ihm nach."
+        ],
+        "captions_de": [
+          "Der Lohn am Abend (Sonne über Bergen): Der Verwalter (graugrünes Gewand) zahlt zuerst dem Letzten (ockerfarbenes Arbeitsgewand) einen Denar aus (Silbermünze in seiner Hand, Bogen); die Ersten warten.",
+          "Dritte Ankündigung: Jesus sagt, er werde ausgeliefert, gekreuzigt und auferweckt (Hand und Kette, Kreuz, offenes Grab mit goldenem Pfeil).",
+          "Lösegeld: Jesus ist gekommen, um zu dienen (Jesus, Diener) und sein Leben als Lösegeld für viele zu geben (Totenkopf, gesprengte Kette, Brustbilder im Schattenriss).",
+          "Berührung → sehen: Jesus hat Erbarmen und berührt ihre Augen (Pfeil von Jesus zu den Blinden, berührende Hand mit grünem Lichtpunkt); sie sehen (offene Augen über beiden) und freuen sich."
+        ],
+        "interpretation_note_de": "Je ein Feld zum Gleichnis von den Arbeitern im Weinberg, zur dritten Leidensankündigung, zum Dienen und zu den zwei Blinden. Dass die Geheilten Jesus nachfolgen, steht nur in der Handlung. Die Bitte der Mutter um die Ehrenplätze ([[MAT.20.20-MAT.20.23]]) ist nur im Abschnittsbild gezeichnet.",
+        "basis": [
+          {
+            "record": "SUM-CH-MAT-020",
+            "field": "summary",
+            "fingerprint": "32769d5b12bb3731"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

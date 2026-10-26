@@ -16,7 +16,9 @@
         "FIG-PILATUS",
         "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-RICHTERSTUHL"
+      ],
       "signs": [
         "FIG-ZEICHEN-SCHWEIGEN"
       ],
@@ -25,43 +27,63 @@
           "from": "FIG-PILATUS",
           "to": "FIG-JESUS",
           "icons": [
-            "FIG-ROLLE-KOENIG",
+            "FIG-OBJ-KRONE",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Bist du der König der Juden?",
+            "gsw": "Bisch du de König vo de Jude?"
+          }
         },
         {
           "from": "FIG-JESUS",
           "to": "FIG-PILATUS",
           "icons": [
-            "FIG-ZEICHEN-WAHRHEIT"
-          ]
+            "FIG-OBJ-KRONE"
+          ],
+          "word": {
+            "de": "Du sagst es.",
+            "gsw": "Du seisch es."
+          }
         }
       ],
-      "action_de": "Der Statthalter fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er kein Wort, sodass Pilatus sich sehr wundert.",
+      "action_de": "Pilatus fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er nichts, sodass sich der Statthalter sehr wundert.",
+      "keywords": {
+        "de": "Bist du der König der Juden?",
+        "gsw": "Bisch du de König vo de Jude?"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
+        }
+      },
       "stage": {
+        "at": {
+          "FIG-ZEICHEN-SCHWEIGEN": "FIG-JESUS"
+        },
         "mood": {
           "FIG-PILATUS": "surprised",
           "FIG-JESUS": "calm"
         },
-        "at": {
-          "FIG-ZEICHEN-SCHWEIGEN": "FIG-JESUS"
-        },
         "x": {
-          "FIG-PILATUS": 34,
-          "FIG-JESUS": 110
+          "FIG-PILATUS": 50,
+          "FIG-JESUS": 136
+        },
+        "floor_x": {
+          "FIG-OBJ-RICHTERSTUHL": 20
         }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.27.15-MAT.27.21",
+      "reference": "MAT.27.15-MAT.27.23",
       "figures": [
         "FIG-PILATUS",
         "FIG-BARABBAS",
         "FIG-GRUPPE-MENGE"
       ],
       "objects": [
-        "FIG-OBJ-RICHTERSTUHL",
         "FIG-OBJ-FESSEL"
       ],
       "signs": [],
@@ -70,133 +92,142 @@
           "from": "FIG-PILATUS",
           "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-BARABBAS",
-            "FIG-JESUS",
+            "FIG-ZEICHEN-FREILASSEN",
             "FIG-ZEICHEN-FRAGEN"
-          ]
+          ],
+          "word": {
+            "de": "Wen wollt ihr, dass ich euch freilasse: Jesus Barabbas oder Jesus, den man Christus nennt?",
+            "gsw": "Wän wänd ir, dass ich eu freilaa: de Jesus Barabbas oder de Jesus, wo me Christus nännt?"
+          }
         },
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-PILATUS",
           "icons": [
-            "FIG-BARABBAS"
-          ]
+            "FIG-OBJ-KREUZ"
+          ],
+          "word": {
+            "de": "Er soll gekreuzigt werden!",
+            "gsw": "Er söll gchrüüziget wärde!"
+          }
         }
       ],
-      "action_de": "Zum Fest lässt der Statthalter einen Gefangenen frei. Auf dem Richterstuhl fragt Pilatus: Wen soll ich euch freilassen, Jesus Barabbas oder Jesus, den man Christus nennt? Von den Hohepriestern und Ältesten überredet, verlangen die Menschenmengen Barabbas.",
+      "action_de": "Pilatus fragt die Menge: Wen wollt ihr, dass ich euch freilasse: Jesus Barabbas oder Jesus, den man Christus nennt? Seine Frau warnt ihn vor jenem Gerechten; doch die von den Hohepriestern überredete Menge verlangt Barabbas und schreit: Er soll gekreuzigt werden!",
+      "keywords": {
+        "de": "Jesus Barabbas oder Jesus, den man Christus nennt?",
+        "gsw": "de Jesus Barabbas oder de Jesus, wo me Christus nännt?"
+      },
+      "names": {
+        "FIG-BARABBAS": {
+          "de": "Barabbas",
+          "gsw": "Barabbas"
+        }
+      },
       "stage": {
-        "mood": {
-          "FIG-PILATUS": "pensive",
-          "FIG-GRUPPE-MENGE": "earnest",
-          "FIG-BARABBAS": "pensive"
-        },
-        "floor_side": "left",
-        "x": {
-          "FIG-PILATUS": 52,
-          "FIG-BARABBAS": 100,
-          "FIG-GRUPPE-MENGE": 152
-        },
         "hold": {
           "FIG-BARABBAS": "FIG-OBJ-FESSEL"
+        },
+        "mood": {
+          "FIG-PILATUS": "pensive",
+          "FIG-BARABBAS": "pensive",
+          "FIG-GRUPPE-MENGE": "angry"
+        },
+        "x": {
+          "FIG-PILATUS": 40,
+          "FIG-BARABBAS": 96,
+          "FIG-GRUPPE-MENGE": 154
         }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.27.22-MAT.27.25",
+      "reference": "MAT.27.24-MAT.27.26",
       "figures": [
+        "FIG-JESUS",
         "FIG-PILATUS",
         "FIG-GRUPPE-MENGE"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-FESSEL",
+        "FIG-OBJ-WASCHSCHUESSEL"
+      ],
       "signs": [
-        "FIG-ZEICHEN-WASCHEN"
+        "FIG-ZEICHEN-HAENDE-WASCHEN"
       ],
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
           "to": "FIG-PILATUS",
           "icons": [
-            "FIG-JESUS",
             "FIG-OBJ-KREUZ"
-          ]
+          ],
+          "word": {
+            "de": "Er soll gekreuzigt werden!",
+            "gsw": "Er söll gchrüüziget wärde!"
+          }
         },
         {
-          "from": "FIG-GRUPPE-MENGE",
-          "to": "FIG-PILATUS",
+          "from": "FIG-PILATUS",
+          "to": "FIG-GRUPPE-MENGE",
           "icons": [
-            "FIG-ZEICHEN-BLUT",
-            "FIG-GRUPPE-MENGE",
-            "FIG-ZEICHEN-KIND"
-          ]
+            "FIG-ZEICHEN-HAENDE-WASCHEN"
+          ],
+          "word": {
+            "de": "Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu!",
+            "gsw": "Ich bi unschuldig am Bluet vo däm Mänsch. Lueged ir sälber!"
+          }
         }
       ],
-      "action_de": "Sie rufen alle: Er soll gekreuzigt werden! Als ein Tumult entsteht, wäscht sich Pilatus vor der Menge die Hände: Ich bin unschuldig an dem Blut dieses Menschen. Das ganze Volk antwortet: Sein Blut über uns und über unsere Kinder!",
-      "stage": {
-        "mood": {
-          "FIG-PILATUS": "worried",
-          "FIG-GRUPPE-MENGE": "earnest"
-        },
-        "at": {
-          "FIG-ZEICHEN-WASCHEN": "FIG-PILATUS"
+      "action_de": "Die Menge schreit: Er soll gekreuzigt werden!; Pilatus wäscht sich vor der Menge die Hände und sagt: Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu! Er lässt Barabbas frei, Jesus aber lässt er geisseln und liefert ihn zur Kreuzigung aus.",
+      "keywords": {
+        "de": "wusch sich vor der Menge die Hände",
+        "gsw": "hät sich vor de Mängi d Händ gwäsche"
+      },
+      "names": {
+        "FIG-PILATUS": {
+          "de": "Pilatus",
+          "gsw": "Pilatus"
         }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.27.26",
-      "figures": [
-        "FIG-PILATUS",
-        "FIG-JESUS",
-        "FIG-ROLLE-SOLDAT",
-        "FIG-BARABBAS"
-      ],
-      "objects": [],
-      "signs": [
-        "FIG-ZEICHEN-FREILASSEN"
-      ],
-      "speech": [],
-      "action_de": "Pilatus lässt Barabbas frei; Jesus lässt er geisseln und liefert ihn aus, damit er gekreuzigt wird.",
+      },
       "stage": {
-        "pose": {
-          "FIG-BARABBAS": "away"
+        "hold": {
+          "FIG-JESUS": "FIG-OBJ-FESSEL"
         },
         "at": {
-          "FIG-ZEICHEN-FREILASSEN": "FIG-BARABBAS"
+          "FIG-ZEICHEN-HAENDE-WASCHEN": "FIG-PILATUS"
         },
-        "arrows": [
-          [
-            "FIG-PILATUS",
-            "FIG-ROLLE-SOLDAT",
-            "act"
-          ]
-        ],
         "mood": {
-          "FIG-BARABBAS": "smile",
+          "FIG-JESUS": "calm",
           "FIG-PILATUS": "worried",
-          "FIG-JESUS": "calm"
+          "FIG-GRUPPE-MENGE": "angry"
+        },
+        "x": {
+          "FIG-JESUS": 26,
+          "FIG-PILATUS": 86,
+          "FIG-GRUPPE-MENGE": 152
+        },
+        "floor_x": {
+          "FIG-OBJ-WASCHSCHUESSEL": 112
         }
       }
     }
   ],
   "actions_de": [
-    "Der Statthalter fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er kein Wort, sodass Pilatus sich sehr wundert.",
-    "Zum Fest lässt der Statthalter einen Gefangenen frei. Auf dem Richterstuhl fragt Pilatus: Wen soll ich euch freilassen, Jesus Barabbas oder Jesus, den man Christus nennt? Von den Hohepriestern und Ältesten überredet, verlangen die Menschenmengen Barabbas.",
-    "Sie rufen alle: Er soll gekreuzigt werden! Als ein Tumult entsteht, wäscht sich Pilatus vor der Menge die Hände: Ich bin unschuldig an dem Blut dieses Menschen. Das ganze Volk antwortet: Sein Blut über uns und über unsere Kinder!",
-    "Pilatus lässt Barabbas frei; Jesus lässt er geisseln und liefert ihn aus, damit er gekreuzigt wird."
+    "Pilatus fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er nichts, sodass sich der Statthalter sehr wundert.",
+    "Pilatus fragt die Menge: Wen wollt ihr, dass ich euch freilasse: Jesus Barabbas oder Jesus, den man Christus nennt? Seine Frau warnt ihn vor jenem Gerechten; doch die von den Hohepriestern überredete Menge verlangt Barabbas und schreit: Er soll gekreuzigt werden!",
+    "Die Menge schreit: Er soll gekreuzigt werden!; Pilatus wäscht sich vor der Menge die Hände und sagt: Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu! Er lässt Barabbas frei, Jesus aber lässt er geisseln und liefert ihn zur Kreuzigung aus."
   ],
   "captions_de": [
-    "Verhör: Pilatus fragt: Bist du der König? (König mit Krone, Fragezeichen); Jesus: Du sagst es (Häkchen); zu den Anklagen schweigt er (Gesicht mit Finger vor dem Mund neben ihm).",
-    "Die Wahl: Pilatus (beim Richterstuhl) fragt: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge ruft: Barabbas (Barabbas, in der Mitte mit gefesselten Händen).",
-    "Händewaschen: Die Menge ruft: Ans Kreuz! (Jesus, Kreuz) und: Sein Blut über uns und unsere Kinder (Blutstropfen, Menge, Kind); Pilatus wäscht sich die Hände (Hände mit Wassertropfen).",
-    "Urteil → Auslieferung: Pilatus übergibt Jesus einem Soldaten (Pfeil von Pilatus über Jesus zum Soldaten); Barabbas geht frei weg (Pfeil)."
+    "Verhör: Pilatus (Name) fragt: «Bist du der König der Juden?» (Krone, fragen); Jesus: «Du sagst es.» und schweigt zu den Anklagen (schweigen).",
+    "Barabbas oder Jesus: Pilatus fragt die Menge: «Wen wollt ihr, dass ich euch freilasse: Jesus Barabbas oder Jesus, den man Christus nennt?» (freilassen, fragen); Barabbas (Name) gefesselt (Fessel); die Menge: «Er soll gekreuzigt werden!» (Kreuz).",
+    "Händewaschen: Jesus gefesselt (Fessel); Pilatus (Name) wäscht sich die Hände (Hände waschen): «Ich bin unschuldig an dem Blut dieses Menschen. Seht ihr zu!»; die Menge schreit: «Er soll gekreuzigt werden!» (Kreuz)."
   ],
-  "interpretation_note_de": "Der Traum der Frau des Pilatus ([[MAT.27.19]]) und das Überreden durch die Hohepriester ([[MAT.27.20]]) sind nicht gezeigt; die Geisselung ([[MAT.27.26]]) auch nicht. Der Ruf «Sein Blut über uns und über unsere Kinder» ([[MAT.27.25]]) wurde in der Geschichte missbraucht, um Juden insgesamt zu beschuldigen; das Bild zeigt die Menge in neutralen Farben wie überall und deutet den Ruf nicht über die Szene hinaus. Die Menge steht für die versammelten Menschenmengen.",
+  "interpretation_note_de": "Drei Felder ([[MAT.27.11-MAT.27.26]]): Verhör mit Jesu Schweigen, die Wahl zwischen Barabbas und Jesus, dann das Händewaschen, Geisselung und Auslieferung. Der Ruf des Volkes [[MAT.27.25]] steht in der Zusammenfassung, im Bild nicht: Er wurde in der Geschichte zur Rechtfertigung von Judenhass missbraucht und ist kein Urteil über das jüdische Volk; das Bild zeigt den entscheidenden Wortwechsel mit Pilatus. Die Warnung der Frau des Pilatus (27,19) steht in der Legende. Alle Figuren sind neutral gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-027-011-026",
       "field": "summary",
-      "fingerprint": "2b274bb930613688"
+      "fingerprint": "186709410761a54b"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
@@ -207,24 +238,18 @@
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.15-MAT.27.21",
-      "fingerprint": "5845f0fde2fc5147"
+      "reference": "MAT.27.15-MAT.27.23",
+      "fingerprint": "a87771552bd1fe18"
     },
     {
       "record": "TRANS-MAT-027-001-066-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.27.22-MAT.27.25",
-      "fingerprint": "9af952b0ae513aa5"
-    },
-    {
-      "record": "TRANS-MAT-027-001-066-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.27.26",
-      "fingerprint": "4a8a0664af771ba1"
+      "reference": "MAT.27.24-MAT.27.26",
+      "fingerprint": "d53d93e109c2ec90"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -787,6 +812,265 @@
           "Händewaschen: Die Menge ruft: Ans Kreuz! (Jesus, Kreuz) und: Sein Blut über uns und unsere Kinder (Blutstropfen, Menge, Kind); Pilatus wäscht sich die Hände (Hände mit Wassertropfen).",
           "Urteil → Auslieferung: Pilatus übergibt Jesus einem Soldaten (Pfeil von Pilatus über Jesus zum Soldaten); Barabbas geht frei weg (Pfeil)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-027-011-026",
+            "field": "summary",
+            "fingerprint": "2b274bb930613688"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.11-MAT.27.14",
+            "fingerprint": "6c41bbf5a33edc84"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.15-MAT.27.21",
+            "fingerprint": "5845f0fde2fc5147"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.22-MAT.27.25",
+            "fingerprint": "9af952b0ae513aa5"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.26",
+            "fingerprint": "4a8a0664af771ba1"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.27.11-MAT.27.14",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-SCHWEIGEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ROLLE-KOENIG",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              }
+            ],
+            "action_de": "Der Statthalter fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er kein Wort, sodass Pilatus sich sehr wundert.",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "surprised",
+                "FIG-JESUS": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-SCHWEIGEN": "FIG-JESUS"
+              },
+              "x": {
+                "FIG-PILATUS": 34,
+                "FIG-JESUS": 110
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.15-MAT.27.21",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-BARABBAS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-OBJ-RICHTERSTUHL",
+              "FIG-OBJ-FESSEL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-PILATUS",
+                "to": "FIG-GRUPPE-MENGE",
+                "icons": [
+                  "FIG-BARABBAS",
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-BARABBAS"
+                ]
+              }
+            ],
+            "action_de": "Zum Fest lässt der Statthalter einen Gefangenen frei. Auf dem Richterstuhl fragt Pilatus: Wen soll ich euch freilassen, Jesus Barabbas oder Jesus, den man Christus nennt? Von den Hohepriestern und Ältesten überredet, verlangen die Menschenmengen Barabbas.",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "pensive",
+                "FIG-GRUPPE-MENGE": "earnest",
+                "FIG-BARABBAS": "pensive"
+              },
+              "floor_side": "left",
+              "x": {
+                "FIG-PILATUS": 52,
+                "FIG-BARABBAS": 100,
+                "FIG-GRUPPE-MENGE": 152
+              },
+              "hold": {
+                "FIG-BARABBAS": "FIG-OBJ-FESSEL"
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.22-MAT.27.25",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-WASCHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-OBJ-KREUZ"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-MENGE",
+                "to": "FIG-PILATUS",
+                "icons": [
+                  "FIG-ZEICHEN-BLUT",
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-ZEICHEN-KIND"
+                ]
+              }
+            ],
+            "action_de": "Sie rufen alle: Er soll gekreuzigt werden! Als ein Tumult entsteht, wäscht sich Pilatus vor der Menge die Hände: Ich bin unschuldig an dem Blut dieses Menschen. Das ganze Volk antwortet: Sein Blut über uns und über unsere Kinder!",
+            "stage": {
+              "mood": {
+                "FIG-PILATUS": "worried",
+                "FIG-GRUPPE-MENGE": "earnest"
+              },
+              "at": {
+                "FIG-ZEICHEN-WASCHEN": "FIG-PILATUS"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.27.26",
+            "figures": [
+              "FIG-PILATUS",
+              "FIG-JESUS",
+              "FIG-ROLLE-SOLDAT",
+              "FIG-BARABBAS"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-FREILASSEN"
+            ],
+            "speech": [],
+            "action_de": "Pilatus lässt Barabbas frei; Jesus lässt er geisseln und liefert ihn aus, damit er gekreuzigt wird.",
+            "stage": {
+              "pose": {
+                "FIG-BARABBAS": "away"
+              },
+              "at": {
+                "FIG-ZEICHEN-FREILASSEN": "FIG-BARABBAS"
+              },
+              "arrows": [
+                [
+                  "FIG-PILATUS",
+                  "FIG-ROLLE-SOLDAT",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-BARABBAS": "smile",
+                "FIG-PILATUS": "worried",
+                "FIG-JESUS": "calm"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Der Statthalter fragt Jesus: Bist du der König der Juden? Jesus sagt: Du sagst es. Auf die Anklagen der Hohepriester und Ältesten antwortet er kein Wort, sodass Pilatus sich sehr wundert.",
+          "Zum Fest lässt der Statthalter einen Gefangenen frei. Auf dem Richterstuhl fragt Pilatus: Wen soll ich euch freilassen, Jesus Barabbas oder Jesus, den man Christus nennt? Von den Hohepriestern und Ältesten überredet, verlangen die Menschenmengen Barabbas.",
+          "Sie rufen alle: Er soll gekreuzigt werden! Als ein Tumult entsteht, wäscht sich Pilatus vor der Menge die Hände: Ich bin unschuldig an dem Blut dieses Menschen. Das ganze Volk antwortet: Sein Blut über uns und über unsere Kinder!",
+          "Pilatus lässt Barabbas frei; Jesus lässt er geisseln und liefert ihn aus, damit er gekreuzigt wird."
+        ],
+        "captions_de": [
+          "Verhör: Pilatus fragt: Bist du der König? (König mit Krone, Fragezeichen); Jesus: Du sagst es (Häkchen); zu den Anklagen schweigt er (Gesicht mit Finger vor dem Mund neben ihm).",
+          "Die Wahl: Pilatus (beim Richterstuhl) fragt: Barabbas oder Jesus? (Barabbas, Jesus, Fragezeichen); die Menge ruft: Barabbas (Barabbas, in der Mitte mit gefesselten Händen).",
+          "Händewaschen: Die Menge ruft: Ans Kreuz! (Jesus, Kreuz) und: Sein Blut über uns und unsere Kinder (Blutstropfen, Menge, Kind); Pilatus wäscht sich die Hände (Hände mit Wassertropfen).",
+          "Urteil → Auslieferung: Pilatus übergibt Jesus einem Soldaten (Pfeil von Pilatus über Jesus zum Soldaten); Barabbas geht frei weg (Pfeil)."
+        ],
+        "interpretation_note_de": "Der Traum der Frau des Pilatus ([[MAT.27.19]]) und das Überreden durch die Hohepriester ([[MAT.27.20]]) sind nicht gezeigt; die Geisselung ([[MAT.27.26]]) auch nicht. Der Ruf «Sein Blut über uns und über unsere Kinder» ([[MAT.27.25]]) wurde in der Geschichte missbraucht, um Juden insgesamt zu beschuldigen; das Bild zeigt die Menge in neutralen Farben wie überall und deutet den Ruf nicht über die Szene hinaus. Die Menge steht für die versammelten Menschenmengen.",
+        "basis": [
+          {
+            "record": "TU-MAT-027-011-026",
+            "field": "summary",
+            "fingerprint": "186709410761a54b"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.11-MAT.27.14",
+            "fingerprint": "6c41bbf5a33edc84"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.15-MAT.27.21",
+            "fingerprint": "5845f0fde2fc5147"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.22-MAT.27.25",
+            "fingerprint": "9af952b0ae513aa5"
+          },
+          {
+            "record": "TRANS-MAT-027-001-066-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.27.26",
+            "fingerprint": "4a8a0664af771ba1"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

@@ -11,6 +11,48 @@
   "panels": [
     {
       "n": 1,
+      "reference": "MAT.1.18-MAT.1.25",
+      "figures": [
+        "FIG-HEILIGER-GEIST",
+        "FIG-JOSEF-NAZARET",
+        "FIG-MARIA-MUTTER-JESU"
+      ],
+      "objects": [
+        "FIG-JESUS-KIND"
+      ],
+      "signs": [],
+      "speech": [],
+      "action_de": "Maria ist vom heiligen Geist schwanger; damit erfüllt wird, was der Prophet gesagt hat, heisst das Kind Immanuel, «Gott mit uns», und Josef gibt ihm den Namen Jesus.",
+      "keywords": {
+        "de": "Immanuel – Gott mit uns",
+        "gsw": "Immanuel – Gott mit üs"
+      },
+      "names": {
+        "FIG-JOSEF-NAZARET": {
+          "de": "Josef",
+          "gsw": "Josef"
+        },
+        "FIG-MARIA-MUTTER-JESU": {
+          "de": "Maria",
+          "gsw": "Maria"
+        }
+      },
+      "stage": {
+        "hold": {
+          "FIG-MARIA-MUTTER-JESU": "FIG-JESUS-KIND"
+        },
+        "mood": {
+          "FIG-JOSEF-NAZARET": "smile",
+          "FIG-MARIA-MUTTER-JESU": "smile"
+        },
+        "x": {
+          "FIG-JOSEF-NAZARET": 64,
+          "FIG-MARIA-MUTTER-JESU": 130
+        }
+      }
+    },
+    {
+      "n": 2,
       "reference": "MAT.5.1-MAT.7.29",
       "figures": [
         "FIG-JESUS",
@@ -26,111 +68,97 @@
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-OBJ-SCHRIFTROLLE",
+            "FIG-ZEICHEN-SEGNEN",
             "FIG-ZEICHEN-REICH-GOTTES"
-          ]
+          ],
+          "word": {
+            "de": "Selig sind die Armen im Geist, denn ihnen gehört das Reich der Himmel.",
+            "gsw": "Sälig sind di Arme im Geischt, dänn ine ghört s Riich vo de Himel."
+          }
         }
       ],
-      "action_de": "Auf dem Berg lehrt Jesus die Jünger und die Menge: Er erfüllt das Gesetz und die Propheten und verkündet das Himmelreich.",
+      "action_de": "Auf dem Berg lehrt Jesus die Jünger und die Menge – die erste von fünf grossen Reden: Selig sind die Armen im Geist, denn ihnen gehört das Reich der Himmel.",
+      "keywords": {
+        "de": "Er lehrte sie wie einer, der Vollmacht hat",
+        "gsw": "Er hät si glehrt wie eine, wo Vollmacht hät"
+      },
       "stage": {
         "pose": {
           "FIG-JESUS": "sit"
         },
         "back_side": "left",
         "before": true,
-        "x": {
-          "FIG-JESUS": 40,
-          "FIG-GRUPPE-JUENGER": 100,
-          "FIG-GRUPPE-MENGE": 150
+        "on": {
+          "FIG-JESUS": "FIG-ORT-BERG"
         },
         "mood": {
           "FIG-GRUPPE-JUENGER": "calm",
           "FIG-GRUPPE-MENGE": "calm"
         },
-        "on": {
-          "FIG-JESUS": "FIG-ORT-BERG"
+        "x": {
+          "FIG-JESUS": 40,
+          "FIG-GRUPPE-JUENGER": 100,
+          "FIG-GRUPPE-MENGE": 154
         }
       }
     },
     {
-      "n": 2,
-      "reference": "MAT.27.32-MAT.27.56",
+      "n": 3,
+      "reference": "MAT.27.35-MAT.27.54",
       "figures": [
         "FIG-ROLLE-HAUPTMANN",
-        "FIG-JESUS",
-        "FIG-MARIA-MAGDALA"
+        "FIG-JESUS"
       ],
-      "objects": [],
+      "objects": [
+        "FIG-OBJ-TAFEL",
+        "FIG-OBJ-TEMPELVORHANG"
+      ],
       "signs": [
-        "FIG-ZEICHEN-TRAUER"
+        "FIG-ZEICHEN-ERDBEBEN",
+        "FIG-ZEICHEN-FURCHT"
       ],
-      "speech": [],
-      "action_de": "Jesus wird gekreuzigt und stirbt; Frauen, unter ihnen Maria aus Magdala, sehen von weitem zu.",
+      "speech": [
+        {
+          "from": "FIG-ROLLE-HAUPTMANN",
+          "to": "FIG-JESUS",
+          "icons": [
+            "FIG-JESUS",
+            "FIG-ZEICHEN-CHRISTUS"
+          ],
+          "word": {
+            "de": "Wahrhaftig, dieser war Gottes Sohn!",
+            "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+          }
+        }
+      ],
+      "action_de": "Nach Jesu Tod reisst der Vorhang des Tempels, die Erde bebt; der Hauptmann und die Wachen fürchten sich und sagen: Wahrhaftig, dieser war Gottes Sohn!",
+      "keywords": {
+        "de": "Wahrhaftig, dieser war Gottes Sohn!",
+        "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+      },
       "stage": {
         "pose": {
           "FIG-JESUS": "cross"
         },
         "mood": {
           "FIG-JESUS": "dead",
-          "FIG-MARIA-MAGDALA": "pain",
-          "FIG-ROLLE-HAUPTMANN": "earnest"
+          "FIG-ROLLE-HAUPTMANN": "fear",
+          "FIG-MARIA-MAGDALA": "pain"
         },
-        "signs_who": {
-          "FIG-ZEICHEN-TRAUER": [
-            "FIG-MARIA-MAGDALA"
-          ]
+        "at": {
+          "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-HAUPTMANN"
         },
         "x": {
-          "FIG-ROLLE-HAUPTMANN": 30,
-          "FIG-JESUS": 96,
-          "FIG-MARIA-MAGDALA": 160
-        }
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.27.57-MAT.28.10",
-      "figures": [
-        "FIG-ROLLE-SOLDAT",
-        "FIG-MARIA-MAGDALA",
-        "FIG-ROLLE-ENGEL"
-      ],
-      "objects": [
-        "FIG-ORT-GRAB"
-      ],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-ENGEL",
-          "to": "FIG-MARIA-MAGDALA",
-          "icons": [
-            "FIG-JESUS",
-            "FIG-ZEICHEN-AUFERSTEHEN"
-          ]
-        }
-      ],
-      "action_de": "Jesus wird begraben; am ersten Tag der Woche wälzt ein Engel den Stein weg, die Wächter werden vor Furcht wie tot, und der Engel sagt den Frauen: Er ist nicht hier, er ist auferweckt worden.",
-      "stage": {
-        "floor_side": "left",
-        "back_side": "right",
-        "before": true,
-        "x": {
-          "FIG-ROLLE-SOLDAT": 54,
-          "FIG-MARIA-MAGDALA": 102,
-          "FIG-ROLLE-ENGEL": 146
+          "FIG-ROLLE-HAUPTMANN": 40,
+          "FIG-JESUS": 120
         },
-        "pose": {
-          "FIG-ROLLE-SOLDAT": "lie"
-        },
-        "mood": {
-          "FIG-MARIA-MAGDALA": "surprised",
-          "FIG-ROLLE-SOLDAT": "worried"
-        }
+        "air_x": 20,
+        "air_y": 104
       }
     },
     {
       "n": 4,
-      "reference": "MAT.28.16-MAT.28.20",
+      "reference": "MAT.28.1-MAT.28.20",
       "figures": [
         "FIG-JESUS",
         "FIG-GRUPPE-JUENGER"
@@ -138,56 +166,70 @@
       "objects": [
         "FIG-ORT-BERG"
       ],
-      "signs": [],
+      "signs": [
+        "FIG-ZEICHEN-AUSBREITEN"
+      ],
       "speech": [
         {
           "from": "FIG-JESUS",
           "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-ZEICHEN-AUSBREITEN",
-            "FIG-GRUPPE-VOELKER"
-          ]
+            "FIG-ZEICHEN-GEMEINSCHAFT",
+            "FIG-ZEICHEN-TAGE"
+          ],
+          "word": {
+            "de": "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+            "gsw": "Und lueg, ich bi bi eu alli Täg bis zur Vollendig vo de Wältziit."
+          }
         }
       ],
-      "action_de": "Auf einem Berg in Galiläa sendet der Auferstandene die Jünger: Macht alle Völker zu Jüngern, tauft und lehrt sie; ich bin bei euch alle Tage.",
+      "action_de": "Auf dem Berg in Galiläa sagt der Auferweckte den elf Jüngern: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde; geht nun hin und macht alle Völker zu Jüngern, tauft sie und lehrt sie; und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+      "keywords": {
+        "de": "Ich bin bei euch alle Tage",
+        "gsw": "Ich bi bi eu alli Täg"
+      },
       "stage": {
-        "back_side": "left",
-        "before": true,
-        "x": {
-          "FIG-JESUS": 60,
-          "FIG-GRUPPE-JUENGER": 130
-        },
-        "mood": {
-          "FIG-GRUPPE-JUENGER": "determined"
-        },
         "on": {
           "FIG-JESUS": "FIG-ORT-BERG"
+        },
+        "back_side": "left",
+        "before": true,
+        "at": {
+          "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
+        },
+        "mood": {
+          "FIG-JESUS": "smile",
+          "FIG-GRUPPE-JUENGER": "determined"
+        },
+        "x": {
+          "FIG-JESUS": 56,
+          "FIG-GRUPPE-JUENGER": 136
         }
       }
     }
   ],
   "actions_de": [
-    "Auf dem Berg lehrt Jesus die Jünger und die Menge: Er erfüllt das Gesetz und die Propheten und verkündet das Himmelreich.",
-    "Jesus wird gekreuzigt und stirbt; Frauen, unter ihnen Maria aus Magdala, sehen von weitem zu.",
-    "Jesus wird begraben; am ersten Tag der Woche wälzt ein Engel den Stein weg, die Wächter werden vor Furcht wie tot, und der Engel sagt den Frauen: Er ist nicht hier, er ist auferweckt worden.",
-    "Auf einem Berg in Galiläa sendet der Auferstandene die Jünger: Macht alle Völker zu Jüngern, tauft und lehrt sie; ich bin bei euch alle Tage."
+    "Maria ist vom heiligen Geist schwanger; damit erfüllt wird, was der Prophet gesagt hat, heisst das Kind Immanuel, «Gott mit uns», und Josef gibt ihm den Namen Jesus.",
+    "Auf dem Berg lehrt Jesus die Jünger und die Menge – die erste von fünf grossen Reden: Selig sind die Armen im Geist, denn ihnen gehört das Reich der Himmel.",
+    "Nach Jesu Tod reisst der Vorhang des Tempels, die Erde bebt; der Hauptmann und die Wachen fürchten sich und sagen: Wahrhaftig, dieser war Gottes Sohn!",
+    "Auf dem Berg in Galiläa sagt der Auferweckte den elf Jüngern: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde; geht nun hin und macht alle Völker zu Jüngern, tauft sie und lehrt sie; und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit."
   ],
   "captions_de": [
-    "Bergpredigt: Jesus sitzt am Berg und lehrt die Jünger und die Menge (Schriftrolle = die Schriften Israels, Krone = Himmelreich).",
-    "Kreuz: Jesus am Kreuz (Kopf geneigt, Augen zu), der Hauptmann steht dabei; Maria aus Magdala weint.",
-    "Leeres Grab: ein Wächter liegt am Boden, ein Engel sagt Maria aus Magdala: Jesus ist auferweckt (Jesus, offenes Grab mit Licht).",
-    "Sendung: Am Berg sendet Jesus die Jünger zu allen Völkern (Sprechblase: Erdkugel mit Fussspuren, Gruppe der Völker)."
+    "Ursprung: Josef und Maria (Namen) mit dem Kind Jesus; über ihnen der Geist (Taube); Band «Gott mit uns».",
+    "Bergpredigt: Jesus sitzt auf dem Berg und lehrt die Jünger und die Menge (lehren): «Selig sind die Armen im Geist, denn ihnen gehört das Reich der Himmel.» (segnen, Himmelreich).",
+    "Am Kreuz: Jesus ist am Kreuz gestorben (Kopf geneigt, Augen zu), über ihm die Inschrift (Tafel); Erdbeben und zerrissener Vorhang (Erdbeben, Tempelvorhang); der Hauptmann: «Wahrhaftig, dieser war Gottes Sohn!» (Furcht).",
+    "Sendung: Jesus auf dem Berg sendet die Jünger (ausbreiten): «Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.» (Gemeinschaft, Zeit); die Völker (Völker)."
   ],
-  "interpretation_note_de": "Matthäus ist bisher nur in Kapitel 6 übersetzt; die Felder folgen der Buchzusammenfassung. Die Schriftrolle steht für die Schriften Israels, in deren Zusammenhang Matthäus von Jesus erzählt (z. B. [[MAT.1.22]], [[MAT.5.17]]). Engel am Grab: [[MAT.28.2-MAT.28.7]]; das offene Grab mit Licht steht für «er ist auferweckt worden» (Deutung). Die Kreuzigung ist in einfacher Form gezeigt (Jesus am Kreuz, Kopf geneigt, ohne Wunden und Blut; BILDSPRACHE.md); sie steht vor dem leeren Grab, damit der Tod Jesu nicht hinter dem leeren Kreuz verschwindet (Regel «Tod und Böses nicht ausblenden», 2026-10-24).",
+  "interpretation_note_de": "Vier Comic-Szenen nach den Stationen der Buch-Kernanalyse ([[MAT.1.1-MAT.28.20]]): Ursprung mit «Gott mit uns» ([[MAT.1.23]]), die Bergpredigt als erste der fünf Reden, Kreuz und Bekenntnis des Hauptmanns, die Sendung des Auferweckten mit «Ich bin bei euch alle Tage» ([[MAT.28.20]]) – die Klammer «Gott mit uns ↔ bei euch alle Tage» ist eine Beobachtung der Auslegung. Das Bekenntnis des Petrus ([[MAT.16.16]]) und das leere Grab ([[MAT.28.6]]) stehen in der Zusammenfassung und in den Kapitelbildern. Das Band in Feld 1 fasst [[MAT.1.23]] zusammen («Immanuel, das heisst übersetzt: Gott mit uns»), das in Feld 2 [[MAT.7.29]], das in Feld 4 [[MAT.28.20]]. Der Gekreuzigte ist würdig gezeichnet; Gott ist nicht als Mensch dargestellt. Comic-Szenen nach dem Entscheid vom 2026-10-25.",
   "basis": [
     {
       "record": "SUM-BOOK-MAT",
       "field": "summary",
-      "fingerprint": "c5451a473d3bb7e7"
+      "fingerprint": "18fd04e38b73f288"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -606,6 +648,400 @@
           "Kreuz: Jesus am Kreuz (Kopf geneigt, Augen zu), der Hauptmann steht dabei; Maria aus Magdala weint.",
           "Leeres Grab: ein Wächter liegt am Boden, ein Engel sagt Maria aus Magdala: Jesus ist auferweckt (Jesus, offenes Grab mit Licht).",
           "Sendung: Am Berg sendet Jesus die Jünger zu allen Völkern (Sprechblase: Pfeile in alle Richtungen, Gruppe der Völker)."
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "SUM-BOOK-MAT",
+            "field": "summary",
+            "fingerprint": "c5451a473d3bb7e7"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.5.1-MAT.7.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-SCHRIFTROLLE",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Auf dem Berg lehrt Jesus die Jünger und die Menge: Er erfüllt das Gesetz und die Propheten und verkündet das Himmelreich.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 100,
+                "FIG-GRUPPE-MENGE": 150
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.27.32-MAT.27.56",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS",
+              "FIG-MARIA-MAGDALA"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [],
+            "action_de": "Jesus wird gekreuzigt und stirbt; Frauen, unter ihnen Maria aus Magdala, sehen von weitem zu.",
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "cross"
+              },
+              "mood": {
+                "FIG-JESUS": "dead",
+                "FIG-MARIA-MAGDALA": "pain",
+                "FIG-ROLLE-HAUPTMANN": "earnest"
+              },
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-MARIA-MAGDALA"
+                ]
+              },
+              "x": {
+                "FIG-ROLLE-HAUPTMANN": 30,
+                "FIG-JESUS": 96,
+                "FIG-MARIA-MAGDALA": 160
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.57-MAT.28.10",
+            "figures": [
+              "FIG-ROLLE-SOLDAT",
+              "FIG-MARIA-MAGDALA",
+              "FIG-ROLLE-ENGEL"
+            ],
+            "objects": [
+              "FIG-ORT-GRAB"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-ENGEL",
+                "to": "FIG-MARIA-MAGDALA",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-AUFERSTEHEN"
+                ]
+              }
+            ],
+            "action_de": "Jesus wird begraben; am ersten Tag der Woche wälzt ein Engel den Stein weg, die Wächter werden vor Furcht wie tot, und der Engel sagt den Frauen: Er ist nicht hier, er ist auferweckt worden.",
+            "stage": {
+              "floor_side": "left",
+              "back_side": "right",
+              "before": true,
+              "x": {
+                "FIG-ROLLE-SOLDAT": 54,
+                "FIG-MARIA-MAGDALA": 102,
+                "FIG-ROLLE-ENGEL": 146
+              },
+              "pose": {
+                "FIG-ROLLE-SOLDAT": "lie"
+              },
+              "mood": {
+                "FIG-MARIA-MAGDALA": "surprised",
+                "FIG-ROLLE-SOLDAT": "worried"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.28.16-MAT.28.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-AUSBREITEN",
+                  "FIG-GRUPPE-VOELKER"
+                ]
+              }
+            ],
+            "action_de": "Auf einem Berg in Galiläa sendet der Auferstandene die Jünger: Macht alle Völker zu Jüngern, tauft und lehrt sie; ich bin bei euch alle Tage.",
+            "stage": {
+              "back_side": "left",
+              "before": true,
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-GRUPPE-JUENGER": 130
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "determined"
+              },
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Auf dem Berg lehrt Jesus die Jünger und die Menge: Er erfüllt das Gesetz und die Propheten und verkündet das Himmelreich.",
+          "Jesus wird gekreuzigt und stirbt; Frauen, unter ihnen Maria aus Magdala, sehen von weitem zu.",
+          "Jesus wird begraben; am ersten Tag der Woche wälzt ein Engel den Stein weg, die Wächter werden vor Furcht wie tot, und der Engel sagt den Frauen: Er ist nicht hier, er ist auferweckt worden.",
+          "Auf einem Berg in Galiläa sendet der Auferstandene die Jünger: Macht alle Völker zu Jüngern, tauft und lehrt sie; ich bin bei euch alle Tage."
+        ],
+        "captions_de": [
+          "Bergpredigt: Jesus sitzt am Berg und lehrt die Jünger und die Menge (Schriftrolle = die Schriften Israels, Krone = Himmelreich).",
+          "Kreuz: Jesus am Kreuz (Kopf geneigt, Augen zu), der Hauptmann steht dabei; Maria aus Magdala weint.",
+          "Leeres Grab: ein Wächter liegt am Boden, ein Engel sagt Maria aus Magdala: Jesus ist auferweckt (Jesus, offenes Grab mit Licht).",
+          "Sendung: Am Berg sendet Jesus die Jünger zu allen Völkern (Sprechblase: Erdkugel mit Fussspuren, Gruppe der Völker)."
+        ],
+        "interpretation_note_de": "Matthäus ist bisher nur in Kapitel 6 übersetzt; die Felder folgen der Buchzusammenfassung. Die Schriftrolle steht für die Schriften Israels, in deren Zusammenhang Matthäus von Jesus erzählt (z. B. [[MAT.1.22]], [[MAT.5.17]]). Engel am Grab: [[MAT.28.2-MAT.28.7]]; das offene Grab mit Licht steht für «er ist auferweckt worden» (Deutung). Die Kreuzigung ist in einfacher Form gezeigt (Jesus am Kreuz, Kopf geneigt, ohne Wunden und Blut; BILDSPRACHE.md); sie steht vor dem leeren Grab, damit der Tod Jesu nicht hinter dem leeren Kreuz verschwindet (Regel «Tod und Böses nicht ausblenden», 2026-10-24).",
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.1.18-MAT.1.25",
+            "figures": [
+              "FIG-HEILIGER-GEIST",
+              "FIG-JOSEF-NAZARET",
+              "FIG-MARIA-MUTTER-JESU",
+              "FIG-JESUS-KIND"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [],
+            "action_de": "Maria ist vom heiligen Geist schwanger; damit erfüllt wird, was der Prophet gesagt hat, heisst das Kind Immanuel, «Gott mit uns», und Josef gibt ihm den Namen Jesus.",
+            "keywords": {
+              "de": "Immanuel – Gott mit uns",
+              "gsw": "Immanuel – Gott mit üs"
+            },
+            "names": {
+              "FIG-JOSEF-NAZARET": {
+                "de": "Josef",
+                "gsw": "Josef"
+              },
+              "FIG-MARIA-MUTTER-JESU": {
+                "de": "Maria",
+                "gsw": "Maria"
+              }
+            },
+            "stage": {
+              "mood": {
+                "FIG-JOSEF-NAZARET": "smile",
+                "FIG-MARIA-MUTTER-JESU": "smile"
+              },
+              "x": {
+                "FIG-JOSEF-NAZARET": 50,
+                "FIG-MARIA-MUTTER-JESU": 104,
+                "FIG-JESUS-KIND": 146
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.5.1-MAT.7.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER",
+              "FIG-GRUPPE-MENGE"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-SEGNEN",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ],
+                "word": {
+                  "de": "Selig sind die Armen im Geist, denn ihnen gehört das Reich der Himmel.",
+                  "gsw": "Sälig sind di Arme im Geischt, dänn ine ghört s Riich vo de Himel."
+                }
+              }
+            ],
+            "action_de": "Auf dem Berg lehrt Jesus die Jünger und die Menge – die erste von fünf grossen Reden: Selig sind die Armen im Geist, denn ihnen gehört das Reich der Himmel.",
+            "keywords": {
+              "de": "Er lehrte sie wie einer, der Vollmacht hat",
+              "gsw": "Er hät si glehrt wie eine, wo Vollmacht hät"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "back_side": "left",
+              "before": true,
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "mood": {
+                "FIG-GRUPPE-JUENGER": "calm",
+                "FIG-GRUPPE-MENGE": "calm"
+              },
+              "x": {
+                "FIG-JESUS": 40,
+                "FIG-GRUPPE-JUENGER": 100,
+                "FIG-GRUPPE-MENGE": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.27.35-MAT.27.54",
+            "figures": [
+              "FIG-ROLLE-HAUPTMANN",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-OBJ-TAFEL",
+              "FIG-OBJ-TEMPELVORHANG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ERDBEBEN",
+              "FIG-ZEICHEN-FURCHT"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-HAUPTMANN",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-JESUS",
+                  "FIG-ZEICHEN-CHRISTUS"
+                ],
+                "word": {
+                  "de": "Wahrhaftig, dieser war Gottes Sohn!",
+                  "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+                }
+              }
+            ],
+            "action_de": "Nach Jesu Tod reisst der Vorhang des Tempels, die Erde bebt; der Hauptmann und die Wachen fürchten sich und sagen: Wahrhaftig, dieser war Gottes Sohn!",
+            "keywords": {
+              "de": "Wahrhaftig, dieser war Gottes Sohn!",
+              "gsw": "Würkli, dä isch Gottes Sohn gsii!"
+            },
+            "stage": {
+              "pose": {
+                "FIG-JESUS": "cross"
+              },
+              "mood": {
+                "FIG-JESUS": "dead",
+                "FIG-ROLLE-HAUPTMANN": "fear",
+                "FIG-MARIA-MAGDALA": "pain"
+              },
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-ROLLE-HAUPTMANN"
+              },
+              "x": {
+                "FIG-ROLLE-HAUPTMANN": 40,
+                "FIG-JESUS": 120
+              },
+              "air_x": 20,
+              "air_y": 104
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.28.1-MAT.28.20",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-AUSBREITEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-GEMEINSCHAFT",
+                  "FIG-ZEICHEN-TAGE"
+                ],
+                "word": {
+                  "de": "Und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+                  "gsw": "Und lueg, ich bi bi eu alli Täg bis zur Vollendig vo de Wältziit."
+                }
+              }
+            ],
+            "action_de": "Auf dem Berg in Galiläa sagt der Auferweckte den elf Jüngern: Mir ist alle Vollmacht gegeben im Himmel und auf der Erde; geht nun hin und macht alle Völker zu Jüngern, tauft sie und lehrt sie; und siehe, ich bin bei euch alle Tage bis zur Vollendung der Weltzeit.",
+            "keywords": {
+              "de": "Ich bin bei euch alle Tage",
+              "gsw": "Ich bi bi eu alli Täg"
+            },
+            "stage": {
+              "on": {
+                "FIG-JESUS": "FIG-ORT-BERG"
+              },
+              "back_side": "left",
+              "before": true,
+              "at": {
+                "FIG-ZEICHEN-AUSBREITEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "smile",
+                "FIG-GRUPPE-JUENGER": "determined"
+              },
+              "x": {
+                "FIG-JESUS": 56,
+                "FIG-GRUPPE-JUENGER": 136
+              }
+            }
+          }
         ]
       }
     }

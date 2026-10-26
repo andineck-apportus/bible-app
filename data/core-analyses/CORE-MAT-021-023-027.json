@@ -1,0 +1,148 @@
+{
+ "id": "CORE-MAT-021-023-027",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [],
+ "level": "section",
+ "reference": "MAT.21.23-MAT.21.27",
+ "target": "TU-MAT-021-023-027",
+ "core_de": "Die Hohepriester und Ältesten fragen Jesus im Tempel, in welcher Vollmacht er das tut; er stellt die Gegenfrage, ob die Taufe des Johannes vom Himmel oder von Menschen war; sie überlegen: Sagen sie «vom Himmel», fragt er, warum sie Johannes nicht geglaubt haben, sagen sie «von Menschen», fürchten sie die Menge – darum antworten sie «Wir wissen es nicht», und Jesus sagt: «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "Frage – Gegenfrage – Beratung – Antwort – Antwort",
+    "range": "MAT.21.23-MAT.21.27",
+    "elements": [
+     {
+      "label": "«In welcher Vollmacht tust du das? Und wer hat dir diese Vollmacht gegeben?»",
+      "ref": "MAT.21.23",
+      "role": "Frage"
+     },
+     {
+      "label": "«Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?»",
+      "ref": "MAT.21.24-MAT.21.25",
+      "role": "Gegenfrage"
+     },
+     {
+      "label": "Beratung untereinander",
+      "ref": "MAT.21.25-MAT.21.26",
+      "role": "Abwägung",
+      "child": "s2"
+     },
+     {
+      "label": "«Wir wissen es nicht.» – «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+      "ref": "MAT.21.27",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-HOHEPRIESTER",
+       "to": "FIG-JESUS",
+       "ref": "MAT.21.23",
+       "note": "mit den Ältesten des Volkes"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-HOHEPRIESTER",
+       "ref": "MAT.21.24-MAT.21.25"
+      },
+      {
+       "who": "FIG-GRUPPE-HOHEPRIESTER",
+       "to": "FIG-GRUPPE-HOHEPRIESTER",
+       "ref": "MAT.21.25-MAT.21.26",
+       "note": "untereinander"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "subtype": "zwei Antworten, zwei Folgen",
+    "range": "MAT.21.25-MAT.21.26",
+    "elements": [
+     {
+      "label": "Wenn wir sagen: «Vom Himmel»",
+      "ref": "MAT.21.25",
+      "role": "Bedingung 1"
+     },
+     {
+      "label": "wird er zu uns sagen: «Warum habt ihr ihm dann nicht geglaubt?»",
+      "ref": "MAT.21.25",
+      "role": "Folge 1"
+     },
+     {
+      "label": "Wenn wir aber sagen: «Von Menschen»",
+      "ref": "MAT.21.26",
+      "role": "Bedingung 2"
+     },
+     {
+      "label": "fürchten wir die Menge; denn alle halten Johannes für einen Propheten",
+      "ref": "MAT.21.26",
+      "role": "Folge 2"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "MAT.21.23-MAT.21.25",
+   "text_de": "«In welcher Vollmacht tust du das? Und wer hat dir diese Vollmacht gegeben?» – Gegenfrage: «Die Taufe des Johannes – woher war sie? Vom Himmel oder von Menschen?»",
+   "reason_de": "Frage und Gegenfrage (Kriterien 1 und 2).",
+   "recognition_de": "Hohepriester fragen; Jesus fragt zurück.",
+   "keywords": [
+    "In welcher Vollmacht tust du das?",
+    "Vom Himmel oder von Menschen?"
+   ]
+  },
+  {
+   "reference": "MAT.21.25-MAT.21.27",
+   "text_de": "Sie überlegen: Wenn wir sagen «Vom Himmel», wird er sagen: «Warum habt ihr ihm dann nicht geglaubt?»; wenn wir sagen «Von Menschen», fürchten wir die Menge. – «Wir wissen es nicht.» – «Auch ich sage euch nicht, in welcher Vollmacht ich das tue.»",
+   "reason_de": "Abwägung mit beiden Zweigen und Ausgang (Kriterien 2 und 3).",
+   "recognition_de": "Weiche im Kopf der Fragenden.",
+   "keywords": [
+    "Warum habt ihr ihm dann nicht geglaubt?",
+    "fürchten wir die Menge",
+    "Wir wissen es nicht"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was «das» meint (Tempelaustreibung, Lehre), sagt der Text nicht genauer"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-HOHEPRIESTER",
+  "FIG-GRUPPE-AELTESTE",
+  "FIG-GRUPPE-MENGE"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "MAT.21.23-MAT.21.27",
+   "fingerprint": "66972dddcd149a82"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Mt 19–28 und Buch nach dem Pilot Mt 5–7; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

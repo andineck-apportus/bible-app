@@ -14,7 +14,7 @@
       "reference": "MAT.26.26",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-BROT"
@@ -23,14 +23,21 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
-            "FIG-OBJ-BROT",
-            "FIG-JESUS"
-          ]
+            "FIG-OBJ-BROT"
+          ],
+          "word": {
+            "de": "Nehmt, esst! Das ist mein Leib.",
+            "gsw": "Nämed, ässed! Das isch min Liib."
+          }
         }
       ],
-      "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es den Jüngern: Nehmt, esst! Das ist mein Leib.",
+      "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es, gibt es den Jüngern und sagt: Nehmt, esst! Das ist mein Leib.",
+      "keywords": {
+        "de": "Nehmt, esst! Das ist mein Leib",
+        "gsw": "Nämed, ässed! Das isch min Liib"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BROT"
@@ -38,22 +45,28 @@
         "arrows": [
           [
             "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-GRUPPE-JUENGER",
             "act"
           ]
         ],
+        "night": true,
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "pensive",
+          "FIG-PETRUS": "determined"
         },
-        "night": true
+        "x": {
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-JUENGER": 132
+        }
       }
     },
     {
       "n": 2,
-      "reference": "MAT.26.27-MAT.26.29",
+      "reference": "MAT.26.27-MAT.26.30",
       "figures": [
         "FIG-JESUS",
-        "FIG-GRUPPE-ZWOELF"
+        "FIG-GRUPPE-JUENGER"
       ],
       "objects": [
         "FIG-OBJ-BECHER-VOLL"
@@ -62,23 +75,22 @@
       "speech": [
         {
           "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
-          "icons": [
-            "FIG-ZEICHEN-BLUT",
-            "FIG-ZEICHEN-VIELE",
-            "FIG-ZEICHEN-VERGEBEN"
-          ]
-        },
-        {
-          "from": "FIG-JESUS",
-          "to": "FIG-GRUPPE-ZWOELF",
+          "to": "FIG-GRUPPE-JUENGER",
           "icons": [
             "FIG-OBJ-BECHER-VOLL",
-            "FIG-ZEICHEN-REICH-GOTTES"
-          ]
+            "FIG-ZEICHEN-VERGEBUNG"
+          ],
+          "word": {
+            "de": "Trinkt alle daraus! Denn das ist mein Blut des Bundes, das für viele vergossen wird zur Vergebung der Sünden.",
+            "gsw": "Trinked alli drus! Dänn das isch mis Bluet vom Bund, wo für vili vergosse wird zur Vergäbig vo de Sünde."
+          }
         }
       ],
-      "action_de": "Er nimmt einen Becher, spricht das Dankgebet und gibt ihn ihnen: Trinkt alle daraus, denn das ist mein Blut des Bundes, vergossen für viele zur Vergebung der Sünden. Erst im Reich seines Vaters werde er wieder davon trinken.",
+      "action_de": "Jesus nimmt den Becher, spricht das Dankgebet und gibt ihn den Jüngern: Trinkt alle daraus! Denn das ist mein Blut des Bundes, das für viele vergossen wird zur Vergebung der Sünden; danach gehen sie zum Ölberg.",
+      "keywords": {
+        "de": "Trinkt alle daraus!",
+        "gsw": "Trinked alli drus!"
+      },
       "stage": {
         "hold": {
           "FIG-JESUS": "FIG-OBJ-BECHER-VOLL"
@@ -86,69 +98,36 @@
         "arrows": [
           [
             "FIG-JESUS",
-            "FIG-GRUPPE-ZWOELF",
+            "FIG-GRUPPE-JUENGER",
             "act"
           ]
         ],
+        "night": true,
         "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive"
+          "FIG-JESUS": "calm",
+          "FIG-GRUPPE-JUENGER": "pensive"
         },
         "x": {
-          "FIG-JESUS": 50
-        },
-        "night": true
-      }
-    },
-    {
-      "n": 3,
-      "reference": "MAT.26.30",
-      "figures": [
-        "FIG-GRUPPE-ZWOELF",
-        "FIG-JESUS"
-      ],
-      "objects": [
-        "FIG-ORT-BERG"
-      ],
-      "signs": [],
-      "speech": [],
-      "action_de": "Nachdem sie den Lobgesang gesungen haben, gehen sie hinaus zum Ölberg.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-JESUS",
-            "FIG-ORT-BERG",
-            "go"
-          ]
-        ],
-        "back_side": "right",
-        "mood": {
-          "FIG-GRUPPE-ZWOELF": "pensive",
-          "FIG-JESUS": "calm"
-        },
-        "x": {
-          "FIG-GRUPPE-ZWOELF": 26,
-          "FIG-JESUS": 64
-        },
-        "night": true
+          "FIG-JESUS": 50,
+          "FIG-GRUPPE-JUENGER": 132
+        }
       }
     }
   ],
   "actions_de": [
-    "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es den Jüngern: Nehmt, esst! Das ist mein Leib.",
-    "Er nimmt einen Becher, spricht das Dankgebet und gibt ihn ihnen: Trinkt alle daraus, denn das ist mein Blut des Bundes, vergossen für viele zur Vergebung der Sünden. Erst im Reich seines Vaters werde er wieder davon trinken.",
-    "Nachdem sie den Lobgesang gesungen haben, gehen sie hinaus zum Ölberg."
+    "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es, gibt es den Jüngern und sagt: Nehmt, esst! Das ist mein Leib.",
+    "Jesus nimmt den Becher, spricht das Dankgebet und gibt ihn den Jüngern: Trinkt alle daraus! Denn das ist mein Blut des Bundes, das für viele vergossen wird zur Vergebung der Sünden; danach gehen sie zum Ölberg."
   ],
   "captions_de": [
-    "Brot: Jesus gibt den Jüngern das Brot: Das ist mein Leib (Brot, Jesus).",
-    "Becher: Jesus gibt den Becher: Mein Blut für viele zur Vergebung (Blutstropfen, Menge, zerrissener Schuldschein); neu im Reich des Vaters (Becher, Krone mit Wolke).",
-    "Hinaus: Jesus und die Jünger gehen in der Nacht zum Ölberg (gestrichelter Weg zum Berg)."
+    "Brot: Jesus bricht das Brot und gibt es den Jüngern (Brot): «Nehmt, esst! Das ist mein Leib.»",
+    "Becher: Jesus reicht den Jüngern den Becher (Becher): «Trinkt alle daraus! Denn das ist mein Blut des Bundes, das für viele vergossen wird zur Vergebung der Sünden.» (Vergebung)."
   ],
-  "interpretation_note_de": "Das Liegen zu Tisch ist nicht gezeigt. Brot und Becher stehen in der Sprechblase für Jesu Deutung («mein Leib», «mein Blut des Bundes»); wie diese Worte zu verstehen sind, ist unter den Kirchen umstritten. Der Lobgesang ([[MAT.26.30]]) ist nicht eigens gezeigt.",
+  "interpretation_note_de": "Zwei Felder ([[MAT.26.26-MAT.26.30]]): Brot und Becher, je mit Jesu Deutungswort im Wortlaut (Handlung → Deutung). Kirchliche Deutungen des Mahls zeigt das Bild nicht; der Ausblick auf das Reich des Vaters (26,29) steht in der Legende.",
   "basis": [
     {
       "record": "TU-MAT-026-026-030",
       "field": "summary",
-      "fingerprint": "aa73ec17db9f635a"
+      "fingerprint": "590ba7f3bd17bdf0"
     },
     {
       "record": "TRANS-MAT-026-001-075-DE-WORKING",
@@ -159,18 +138,12 @@
     {
       "record": "TRANS-MAT-026-001-075-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.26.27-MAT.26.29",
-      "fingerprint": "dbfb577e57ed89d2"
-    },
-    {
-      "record": "TRANS-MAT-026-001-075-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.26.30",
-      "fingerprint": "2690ef0fb63ee552"
+      "reference": "MAT.26.27-MAT.26.30",
+      "fingerprint": "3b274cf24dbe7ce5"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -447,6 +420,205 @@
           "Becher: Jesus gibt den Becher: Mein Blut für viele zur Vergebung (Blutstropfen, Menge, zerrissener Schuldschein); neu im Reich des Vaters (Becher, Krone mit Strahlen).",
           "Hinaus: Jesus und die Jünger gehen in der Nacht zum Ölberg (gestrichelter Weg zum Berg)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "basis": [
+          {
+            "record": "TU-MAT-026-026-030",
+            "field": "summary",
+            "fingerprint": "aa73ec17db9f635a"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.26",
+            "fingerprint": "7adb6b0b90338c15"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.27-MAT.26.29",
+            "fingerprint": "dbfb577e57ed89d2"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.30",
+            "fingerprint": "2690ef0fb63ee552"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.26",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BROT",
+                  "FIG-JESUS"
+                ]
+              }
+            ],
+            "action_de": "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es den Jüngern: Nehmt, esst! Das ist mein Leib.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.27-MAT.26.29",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-ZEICHEN-BLUT",
+                  "FIG-ZEICHEN-VIELE",
+                  "FIG-ZEICHEN-VERGEBEN"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-ZEICHEN-REICH-GOTTES"
+                ]
+              }
+            ],
+            "action_de": "Er nimmt einen Becher, spricht das Dankgebet und gibt ihn ihnen: Trinkt alle daraus, denn das ist mein Blut des Bundes, vergossen für viele zur Vergebung der Sünden. Erst im Reich seines Vaters werde er wieder davon trinken.",
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BECHER-VOLL"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-ZWOELF",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 50
+              },
+              "night": true
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.30",
+            "figures": [
+              "FIG-GRUPPE-ZWOELF",
+              "FIG-JESUS"
+            ],
+            "objects": [
+              "FIG-ORT-BERG"
+            ],
+            "signs": [],
+            "speech": [],
+            "action_de": "Nachdem sie den Lobgesang gesungen haben, gehen sie hinaus zum Ölberg.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ORT-BERG",
+                  "go"
+                ]
+              ],
+              "back_side": "right",
+              "mood": {
+                "FIG-GRUPPE-ZWOELF": "pensive",
+                "FIG-JESUS": "calm"
+              },
+              "x": {
+                "FIG-GRUPPE-ZWOELF": 26,
+                "FIG-JESUS": 64
+              },
+              "night": true
+            }
+          }
+        ],
+        "actions_de": [
+          "Während sie essen, nimmt Jesus Brot, spricht den Lobpreis, bricht es und gibt es den Jüngern: Nehmt, esst! Das ist mein Leib.",
+          "Er nimmt einen Becher, spricht das Dankgebet und gibt ihn ihnen: Trinkt alle daraus, denn das ist mein Blut des Bundes, vergossen für viele zur Vergebung der Sünden. Erst im Reich seines Vaters werde er wieder davon trinken.",
+          "Nachdem sie den Lobgesang gesungen haben, gehen sie hinaus zum Ölberg."
+        ],
+        "captions_de": [
+          "Brot: Jesus gibt den Jüngern das Brot: Das ist mein Leib (Brot, Jesus).",
+          "Becher: Jesus gibt den Becher: Mein Blut für viele zur Vergebung (Blutstropfen, Menge, zerrissener Schuldschein); neu im Reich des Vaters (Becher, Krone mit Wolke).",
+          "Hinaus: Jesus und die Jünger gehen in der Nacht zum Ölberg (gestrichelter Weg zum Berg)."
+        ],
+        "interpretation_note_de": "Das Liegen zu Tisch ist nicht gezeigt. Brot und Becher stehen in der Sprechblase für Jesu Deutung («mein Leib», «mein Blut des Bundes»); wie diese Worte zu verstehen sind, ist unter den Kirchen umstritten. Der Lobgesang ([[MAT.26.30]]) ist nicht eigens gezeigt.",
+        "basis": [
+          {
+            "record": "TU-MAT-026-026-030",
+            "field": "summary",
+            "fingerprint": "590ba7f3bd17bdf0"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.26",
+            "fingerprint": "7adb6b0b90338c15"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.27-MAT.26.29",
+            "fingerprint": "dbfb577e57ed89d2"
+          },
+          {
+            "record": "TRANS-MAT-026-001-075-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.26.30",
+            "fingerprint": "2690ef0fb63ee552"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]

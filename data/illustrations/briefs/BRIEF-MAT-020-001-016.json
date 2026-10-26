@@ -12,190 +12,220 @@
     {
       "n": 1,
       "reference": "MAT.20.1-MAT.20.7",
+      "figures": [],
+      "objects": [],
+      "signs": [],
+      "speech": [],
+      "action_de": "Der Hausherr wirbt frühmorgens Arbeiter für einen Denar an und schickt um die dritte, sechste, neunte und elfte Stunde weitere in seinen Weinberg; die letzten stehen untätig, weil niemand sie angeworben hat.",
+      "keywords": {
+        "de": "was recht ist, werde ich euch geben",
+        "gsw": "was rächt isch, gib ich eu"
+      },
+      "diagram": {
+        "visual": "timeline",
+        "span": 2,
+        "speaker": "FIG-ROLLE-GUTSHERR",
+        "title": {
+          "de": "Geht auch ihr in den Weinberg!",
+          "gsw": "Gönd au ir in Wiibärg!"
+        },
+        "cells": [
+          {
+            "a": {
+              "de": "frühmorgens",
+              "gsw": "am Morge früe"
+            },
+            "b": {
+              "de": "auf einen Denar für den Tag geeinigt",
+              "gsw": "uf en Denar für de Tag einig worde"
+            },
+            "icons": [
+              "FIG-ZEICHEN-MORGEN",
+              "FIG-OBJ-DENAR"
+            ]
+          },
+          {
+            "a": {
+              "de": "dritte Stunde",
+              "gsw": "dritti Stund"
+            },
+            "b": {
+              "de": "«was recht ist, werde ich euch geben»",
+              "gsw": "«was rächt isch, gib ich eu»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-GERECHT"
+            ]
+          },
+          {
+            "a": {
+              "de": "sechste Stunde",
+              "gsw": "sächsti Stund"
+            },
+            "b": {
+              "de": "ebenso",
+              "gsw": "s gliich"
+            },
+            "icons": [
+              "FIG-ZEICHEN-STUNDE"
+            ]
+          },
+          {
+            "a": {
+              "de": "neunte Stunde",
+              "gsw": "nüünti Stund"
+            },
+            "b": {
+              "de": "ebenso",
+              "gsw": "s gliich"
+            },
+            "icons": [
+              "FIG-ZEICHEN-STUNDE"
+            ]
+          },
+          {
+            "a": {
+              "de": "elfte Stunde",
+              "gsw": "elfti Stund"
+            },
+            "b": {
+              "de": "«Weil niemand uns angeworben hat.»",
+              "gsw": "«Wil üs niemer aagstellt hät.»"
+            },
+            "icons": [
+              "FIG-ZEICHEN-ABEND",
+              "FIG-GRUPPE-ARBEITER"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "reference": "MAT.20.8-MAT.20.15",
       "figures": [
         "FIG-ROLLE-GUTSHERR",
         "FIG-GRUPPE-ARBEITER"
       ],
       "objects": [
-        "FIG-ORT-WEINBERG"
+        "FIG-OBJ-DENAR"
       ],
       "signs": [
-        "FIG-ZEICHEN-STUNDE"
+        "FIG-ZEICHEN-ZORN"
       ],
       "speech": [
         {
           "from": "FIG-ROLLE-GUTSHERR",
           "to": "FIG-GRUPPE-ARBEITER",
           "icons": [
-            "FIG-ORT-WEINBERG",
-            "FIG-OBJ-DENAR"
-          ]
+            "FIG-ZEICHEN-GERECHT"
+          ],
+          "word": {
+            "de": "Freund, ich tue dir kein Unrecht.",
+            "gsw": "Fründ, ich tue dir kei Unrächt."
+          }
         }
       ],
-      "action_de": "Das Reich der Himmel gleicht einem Hausherrn, der frühmorgens Arbeiter für einen Denar am Tag in seinen Weinberg schickt; um die dritte, sechste, neunte und elfte Stunde schickt er weitere hin.",
-      "stage": {
-        "arrows": [
-          [
-            "FIG-GRUPPE-ARBEITER",
-            "FIG-ORT-WEINBERG",
-            "go"
-          ]
-        ],
-        "back_side": "right",
-        "x": {
-          "FIG-ROLLE-GUTSHERR": 30,
-          "FIG-GRUPPE-ARBEITER": 84
-        },
-        "mood": {
-          "FIG-GRUPPE-ARBEITER": "calm"
-        },
-        "at": {
-          "FIG-ZEICHEN-STUNDE": "FIG-ROLLE-GUTSHERR"
-        }
-      }
-    },
-    {
-      "n": 2,
-      "reference": "MAT.20.8-MAT.20.10",
-      "figures": [
-        "FIG-GRUPPE-ARBEITER",
-        "FIG-ROLLE-LOHNARBEITER",
-        "FIG-ROLLE-VERWALTER"
-      ],
-      "objects": [
-        "FIG-OBJ-DENAR"
-      ],
-      "signs": [
-        "FIG-ZEICHEN-ABEND"
-      ],
-      "speech": [],
-      "action_de": "Am Abend lässt der Herr des Weinbergs durch seinen Verwalter den Lohn auszahlen, bei den Letzten angefangen: Alle erhalten je einen Denar; auch die Ersten, die mehr erwartet haben.",
+      "action_de": "Am Abend erhalten alle Arbeiter je einen Denar, angefangen bei den Letzten; die Ersten murren; der Hausherr antwortet: Freund, ich tue dir kein Unrecht – oder ist dein Auge böse, weil ich gütig bin?",
+      "keywords": {
+        "de": "erhielten je einen Denar",
+        "gsw": "händ je en Denar übercho"
+      },
       "stage": {
         "hold": {
-          "FIG-ROLLE-VERWALTER": "FIG-OBJ-DENAR"
+          "FIG-ROLLE-GUTSHERR": "FIG-OBJ-DENAR"
+        },
+        "at": {
+          "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-ARBEITER"
         },
         "arrows": [
           [
-            "FIG-ROLLE-VERWALTER",
-            "FIG-ROLLE-LOHNARBEITER",
+            "FIG-ROLLE-GUTSHERR",
+            "FIG-GRUPPE-ARBEITER",
             "act"
           ]
         ],
         "mood": {
-          "FIG-GRUPPE-ARBEITER": "pensive",
-          "FIG-ROLLE-LOHNARBEITER": "delight"
+          "FIG-ROLLE-GUTSHERR": "calm",
+          "FIG-GRUPPE-ARBEITER": "angry"
         },
         "x": {
-          "FIG-GRUPPE-ARBEITER": 34,
-          "FIG-ROLLE-LOHNARBEITER": 100,
-          "FIG-ROLLE-VERWALTER": 154
-        },
-        "wear": {
-          "FIG-ROLLE-LOHNARBEITER": "#C9A060"
-        },
-        "air_x": 140
+          "FIG-ROLLE-GUTSHERR": 50,
+          "FIG-GRUPPE-ARBEITER": 136
+        }
       }
     },
     {
       "n": 3,
-      "reference": "MAT.20.11-MAT.20.12",
-      "figures": [
-        "FIG-GRUPPE-ARBEITER",
-        "FIG-ROLLE-GUTSHERR"
-      ],
+      "reference": "MAT.20.15-MAT.20.16",
+      "figures": [],
       "objects": [],
       "signs": [],
-      "speech": [
-        {
-          "from": "FIG-GRUPPE-ARBEITER",
-          "to": "FIG-ROLLE-GUTSHERR",
-          "icons": [
-            "FIG-ROLLE-LOHNARBEITER",
-            "FIG-ZEICHEN-STUNDE"
-          ]
+      "speech": [],
+      "action_de": "Der Hausherr: Ist es mir nicht erlaubt, mit dem Meinen zu tun, was ich will? Oder ist dein Auge böse, weil ich gütig bin? So werden die Letzten Erste sein und die Ersten Letzte.",
+      "keywords": {
+        "de": "So werden die Letzten Erste sein und die Ersten Letzte",
+        "gsw": "So wärded di Letschte Erschti sii und di Erschte Letschti"
+      },
+      "diagram": {
+        "visual": "mirror",
+        "span": 2,
+        "speaker": "FIG-ROLLE-GUTSHERR",
+        "title": {
+          "de": "Oder ist dein Auge böse, weil ich gütig bin?",
+          "gsw": "Oder isch dis Aug böös, wil ich guet bi?"
         },
-        {
-          "from": "FIG-GRUPPE-ARBEITER",
-          "to": "FIG-ROLLE-GUTSHERR",
-          "icons": [
-            "FIG-ZEICHEN-HITZE",
-            "FIG-OBJ-DENAR",
-            "FIG-ZEICHEN-FRAGEN"
+        "head": [
+          {
+            "de": "Letzte",
+            "gsw": "Letschti"
+          },
+          {
+            "de": "Erste",
+            "gsw": "Erschti"
+          }
+        ],
+        "rows": [
+          [
+            {
+              "a": {
+                "de": "So werden die Letzten Erste sein",
+                "gsw": "So wärded di Letschte Erschti sii"
+              },
+              "icons": [
+                "FIG-ZEICHEN-HINAUF"
+              ]
+            },
+            {
+              "a": {
+                "de": "und die Ersten Letzte.",
+                "gsw": "und di Erschte Letschti."
+              },
+              "icons": [
+                "FIG-ZEICHEN-HINAB"
+              ]
+            }
           ]
-        }
-      ],
-      "action_de": "Die Ersten murren gegen den Hausherrn: Diese Letzten haben eine Stunde gearbeitet, und du hast sie uns gleichgestellt, die wir die Last des Tages und die Hitze getragen haben.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ARBEITER": "earnest",
-          "FIG-ROLLE-GUTSHERR": "calm"
-        }
-      }
-    },
-    {
-      "n": 4,
-      "reference": "MAT.20.13-MAT.20.16",
-      "figures": [
-        "FIG-GRUPPE-ARBEITER",
-        "FIG-ROLLE-GUTSHERR",
-        "FIG-ROLLE-LOHNARBEITER"
-      ],
-      "objects": [],
-      "signs": [],
-      "speech": [
-        {
-          "from": "FIG-ROLLE-GUTSHERR",
-          "to": "FIG-GRUPPE-ARBEITER",
-          "icons": [
-            "FIG-OBJ-DENAR",
-            "FIG-ZEICHEN-WAHRHEIT"
-          ]
-        },
-        {
-          "from": "FIG-ROLLE-GUTSHERR",
-          "to": "FIG-GRUPPE-ARBEITER",
-          "icons": [
-            "FIG-OBJ-DENAR",
-            "FIG-ROLLE-LOHNARBEITER"
-          ]
-        }
-      ],
-      "action_de": "Der Hausherr antwortet einem von ihnen: Freund, ich tue dir kein Unrecht; du hast dich mit mir auf einen Denar geeinigt. Ich will aber diesem Letzten geben wie dir. Ist dein Auge böse, weil ich gütig bin? So werden die Letzten Erste sein und die Ersten Letzte.",
-      "stage": {
-        "mood": {
-          "FIG-GRUPPE-ARBEITER": "pensive",
-          "FIG-ROLLE-GUTSHERR": "smile",
-          "FIG-ROLLE-LOHNARBEITER": "smile"
-        },
-        "x": {
-          "FIG-GRUPPE-ARBEITER": 34,
-          "FIG-ROLLE-GUTSHERR": 100,
-          "FIG-ROLLE-LOHNARBEITER": 156
-        },
-        "wear": {
-          "FIG-ROLLE-LOHNARBEITER": "#C9A060"
-        }
+        ]
       }
     }
   ],
   "actions_de": [
-    "Das Reich der Himmel gleicht einem Hausherrn, der frühmorgens Arbeiter für einen Denar am Tag in seinen Weinberg schickt; um die dritte, sechste, neunte und elfte Stunde schickt er weitere hin.",
-    "Am Abend lässt der Herr des Weinbergs durch seinen Verwalter den Lohn auszahlen, bei den Letzten angefangen: Alle erhalten je einen Denar; auch die Ersten, die mehr erwartet haben.",
-    "Die Ersten murren gegen den Hausherrn: Diese Letzten haben eine Stunde gearbeitet, und du hast sie uns gleichgestellt, die wir die Last des Tages und die Hitze getragen haben.",
-    "Der Hausherr antwortet einem von ihnen: Freund, ich tue dir kein Unrecht; du hast dich mit mir auf einen Denar geeinigt. Ich will aber diesem Letzten geben wie dir. Ist dein Auge böse, weil ich gütig bin? So werden die Letzten Erste sein und die Ersten Letzte."
+    "Der Hausherr wirbt frühmorgens Arbeiter für einen Denar an und schickt um die dritte, sechste, neunte und elfte Stunde weitere in seinen Weinberg; die letzten stehen untätig, weil niemand sie angeworben hat.",
+    "Am Abend erhalten alle Arbeiter je einen Denar, angefangen bei den Letzten; die Ersten murren; der Hausherr antwortet: Freund, ich tue dir kein Unrecht – oder ist dein Auge böse, weil ich gütig bin?",
+    "Der Hausherr: Ist es mir nicht erlaubt, mit dem Meinen zu tun, was ich will? Oder ist dein Auge böse, weil ich gütig bin? So werden die Letzten Erste sein und die Ersten Letzte."
   ],
   "captions_de": [
-    "Angeworben: Der Hausherr (dunkelroter Mantel) schickt Arbeiter für einen Denar in seinen Weinberg (Weinberg, Silbermünze, Weg) – frühmorgens und zu weiteren Stunden (Sanduhr).",
-    "Der Lohn am Abend (Sonne über Bergen): Der Verwalter (graugrünes Gewand) zahlt zuerst dem Letzten (ockerfarbenes Arbeitsgewand) einen Denar aus (Silbermünze in seiner Hand, Bogen); die Ersten warten.",
-    "Murren: Die Ersten beklagen sich: Der Letzte hat nur eine Stunde gearbeitet (Arbeiter, Sanduhr), wir aber die Hitze getragen – und alle bekommen einen Denar? (stechende Sonne, Silbermünze, Fragezeichen).",
-    "Gütig: Der Hausherr sagt: Wir hatten einen Denar abgemacht (Silbermünze, grünes Häkchen); ich will dem Letzten geben wie dir (Silbermünze, Arbeiter)."
+    "Zeitleiste der Anwerbungen (Bild Hausherr, Blase «Geht auch ihr in den Weinberg!»): frühmorgens – ein Denar für den Tag (Morgen, Denar); dritte Stunde – «was recht ist, werde ich euch geben» (gerecht); sechste und neunte Stunde – ebenso (Stunde); elfte Stunde – «Weil niemand uns angeworben hat.» (Abend, Arbeiter).",
+    "Ein Denar für alle: Der Hausherr (Gutsherr) gibt den Arbeitern je einen Denar (Münze, geben); die Ersten murren (Zorn); er antwortet: «Freund, ich tue dir kein Unrecht.» (Gerechtigkeit).",
+    "Spiegel (Bild Hausherr, Blase «Oder ist dein Auge böse, weil ich gütig bin?»): Die Letzten werden Erste sein (aufwärts) ↔ die Ersten Letzte (abwärts)."
   ],
-  "interpretation_note_de": "Der Hausherr ist als Gutsherr der Gleichnisse gezeichnet, die zuerst Angeworbenen als Gruppe von Arbeitern, die Letzten (von der elften Stunde) als einzelner Arbeiter. Die Stunden (dritte, sechste, neunte, elfte) zeigt die Sanduhr, ohne Zahlen. Der Verwalter ([[MAT.20.8]]) hält den Denar; der Letzte trägt ein ockerfarbenes Arbeitsgewand. Dass alle «je» einen Denar erhalten ([[MAT.20.9-MAT.20.10]]), zeigt das Bild nur am Letzten. Das Schlusswort über Letzte und Erste ([[MAT.20.16]]) ist nicht eigens gezeichnet.",
+  "interpretation_note_de": "Drei Felder ([[MAT.20.1-MAT.20.16]]): alle fünf Anwerbungen als Zeitleiste, die Auszahlung mit dem Murren und der Antwort des Hausherrn, dann die Pointe als Spiegel. Das Gleichnis spricht vom Reich der Himmel; eine Gleichsetzung des Hausherrn mit Gott macht der Text nicht ausdrücklich, darum ist er als Rolle gezeichnet.",
   "basis": [
     {
       "record": "TU-MAT-020-001-016",
       "field": "summary",
-      "fingerprint": "54d7aeab09a76482"
+      "fingerprint": "bf1b2c61824a708b"
     },
     {
       "record": "TRANS-MAT-020-001-034-DE-WORKING",
@@ -206,24 +236,18 @@
     {
       "record": "TRANS-MAT-020-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.20.8-MAT.20.10",
-      "fingerprint": "c9f1103d8c2ad5ca"
+      "reference": "MAT.20.8-MAT.20.15",
+      "fingerprint": "3ca71123a6373a90"
     },
     {
       "record": "TRANS-MAT-020-001-034-DE-WORKING",
       "field": "text_by_reference",
-      "reference": "MAT.20.11-MAT.20.12",
-      "fingerprint": "93b42e74b8af131a"
-    },
-    {
-      "record": "TRANS-MAT-020-001-034-DE-WORKING",
-      "field": "text_by_reference",
-      "reference": "MAT.20.13-MAT.20.16",
-      "fingerprint": "6809c9bf6001e686"
+      "reference": "MAT.20.15-MAT.20.16",
+      "fingerprint": "193031cb5f8b68d0"
     }
   ],
   "basis_note_de": "Fingerabdrücke des Textes, gegen den der Auftrag geprüft wurde (Verse der hochdeutschen Arbeitsübersetzung, sofern angegeben, und Zusammenfassung des Ziels). Bei Abweichung gilt der Auftrag als veraltet, bis er erneut geprüft ist.",
-  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-17",
     "supersedes": null
@@ -415,6 +439,227 @@
           "Murren: Die Ersten beklagen sich: Der Letzte hat nur eine Stunde gearbeitet (Arbeiter, Sanduhr), wir aber die Hitze getragen – und alle bekommen einen Denar? (stechende Sonne, Silbermünze, Fragezeichen).",
           "Gütig: Der Hausherr sagt: Wir hatten einen Denar abgemacht (Silbermünze, grünes Häkchen); ich will dem Letzten geben wie dir (Silbermünze, Arbeiter)."
         ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Struktur zuerst: neu aus der Kernanalyse",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.20.1-MAT.20.7",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-GRUPPE-ARBEITER"
+            ],
+            "objects": [
+              "FIG-ORT-WEINBERG"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-STUNDE"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-ARBEITER",
+                "icons": [
+                  "FIG-ORT-WEINBERG",
+                  "FIG-OBJ-DENAR"
+                ]
+              }
+            ],
+            "action_de": "Das Reich der Himmel gleicht einem Hausherrn, der frühmorgens Arbeiter für einen Denar am Tag in seinen Weinberg schickt; um die dritte, sechste, neunte und elfte Stunde schickt er weitere hin.",
+            "stage": {
+              "arrows": [
+                [
+                  "FIG-GRUPPE-ARBEITER",
+                  "FIG-ORT-WEINBERG",
+                  "go"
+                ]
+              ],
+              "back_side": "right",
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 30,
+                "FIG-GRUPPE-ARBEITER": 84
+              },
+              "mood": {
+                "FIG-GRUPPE-ARBEITER": "calm"
+              },
+              "at": {
+                "FIG-ZEICHEN-STUNDE": "FIG-ROLLE-GUTSHERR"
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.20.8-MAT.20.10",
+            "figures": [
+              "FIG-GRUPPE-ARBEITER",
+              "FIG-ROLLE-LOHNARBEITER",
+              "FIG-ROLLE-VERWALTER"
+            ],
+            "objects": [
+              "FIG-OBJ-DENAR"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ABEND"
+            ],
+            "speech": [],
+            "action_de": "Am Abend lässt der Herr des Weinbergs durch seinen Verwalter den Lohn auszahlen, bei den Letzten angefangen: Alle erhalten je einen Denar; auch die Ersten, die mehr erwartet haben.",
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-VERWALTER": "FIG-OBJ-DENAR"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-VERWALTER",
+                  "FIG-ROLLE-LOHNARBEITER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-GRUPPE-ARBEITER": "pensive",
+                "FIG-ROLLE-LOHNARBEITER": "delight"
+              },
+              "x": {
+                "FIG-GRUPPE-ARBEITER": 34,
+                "FIG-ROLLE-LOHNARBEITER": 100,
+                "FIG-ROLLE-VERWALTER": 154
+              },
+              "wear": {
+                "FIG-ROLLE-LOHNARBEITER": "#C9A060"
+              },
+              "air_x": 140
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.20.11-MAT.20.12",
+            "figures": [
+              "FIG-GRUPPE-ARBEITER",
+              "FIG-ROLLE-GUTSHERR"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-ARBEITER",
+                "to": "FIG-ROLLE-GUTSHERR",
+                "icons": [
+                  "FIG-ROLLE-LOHNARBEITER",
+                  "FIG-ZEICHEN-STUNDE"
+                ]
+              },
+              {
+                "from": "FIG-GRUPPE-ARBEITER",
+                "to": "FIG-ROLLE-GUTSHERR",
+                "icons": [
+                  "FIG-ZEICHEN-HITZE",
+                  "FIG-OBJ-DENAR",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Ersten murren gegen den Hausherrn: Diese Letzten haben eine Stunde gearbeitet, und du hast sie uns gleichgestellt, die wir die Last des Tages und die Hitze getragen haben.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ARBEITER": "earnest",
+                "FIG-ROLLE-GUTSHERR": "calm"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.20.13-MAT.20.16",
+            "figures": [
+              "FIG-GRUPPE-ARBEITER",
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-ROLLE-LOHNARBEITER"
+            ],
+            "objects": [],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-ARBEITER",
+                "icons": [
+                  "FIG-OBJ-DENAR",
+                  "FIG-ZEICHEN-WAHRHEIT"
+                ]
+              },
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-ARBEITER",
+                "icons": [
+                  "FIG-OBJ-DENAR",
+                  "FIG-ROLLE-LOHNARBEITER"
+                ]
+              }
+            ],
+            "action_de": "Der Hausherr antwortet einem von ihnen: Freund, ich tue dir kein Unrecht; du hast dich mit mir auf einen Denar geeinigt. Ich will aber diesem Letzten geben wie dir. Ist dein Auge böse, weil ich gütig bin? So werden die Letzten Erste sein und die Ersten Letzte.",
+            "stage": {
+              "mood": {
+                "FIG-GRUPPE-ARBEITER": "pensive",
+                "FIG-ROLLE-GUTSHERR": "smile",
+                "FIG-ROLLE-LOHNARBEITER": "smile"
+              },
+              "x": {
+                "FIG-GRUPPE-ARBEITER": 34,
+                "FIG-ROLLE-GUTSHERR": 100,
+                "FIG-ROLLE-LOHNARBEITER": 156
+              },
+              "wear": {
+                "FIG-ROLLE-LOHNARBEITER": "#C9A060"
+              }
+            }
+          }
+        ],
+        "actions_de": [
+          "Das Reich der Himmel gleicht einem Hausherrn, der frühmorgens Arbeiter für einen Denar am Tag in seinen Weinberg schickt; um die dritte, sechste, neunte und elfte Stunde schickt er weitere hin.",
+          "Am Abend lässt der Herr des Weinbergs durch seinen Verwalter den Lohn auszahlen, bei den Letzten angefangen: Alle erhalten je einen Denar; auch die Ersten, die mehr erwartet haben.",
+          "Die Ersten murren gegen den Hausherrn: Diese Letzten haben eine Stunde gearbeitet, und du hast sie uns gleichgestellt, die wir die Last des Tages und die Hitze getragen haben.",
+          "Der Hausherr antwortet einem von ihnen: Freund, ich tue dir kein Unrecht; du hast dich mit mir auf einen Denar geeinigt. Ich will aber diesem Letzten geben wie dir. Ist dein Auge böse, weil ich gütig bin? So werden die Letzten Erste sein und die Ersten Letzte."
+        ],
+        "captions_de": [
+          "Angeworben: Der Hausherr (dunkelroter Mantel) schickt Arbeiter für einen Denar in seinen Weinberg (Weinberg, Silbermünze, Weg) – frühmorgens und zu weiteren Stunden (Sanduhr).",
+          "Der Lohn am Abend (Sonne über Bergen): Der Verwalter (graugrünes Gewand) zahlt zuerst dem Letzten (ockerfarbenes Arbeitsgewand) einen Denar aus (Silbermünze in seiner Hand, Bogen); die Ersten warten.",
+          "Murren: Die Ersten beklagen sich: Der Letzte hat nur eine Stunde gearbeitet (Arbeiter, Sanduhr), wir aber die Hitze getragen – und alle bekommen einen Denar? (stechende Sonne, Silbermünze, Fragezeichen).",
+          "Gütig: Der Hausherr sagt: Wir hatten einen Denar abgemacht (Silbermünze, grünes Häkchen); ich will dem Letzten geben wie dir (Silbermünze, Arbeiter)."
+        ],
+        "interpretation_note_de": "Der Hausherr ist als Gutsherr der Gleichnisse gezeichnet, die zuerst Angeworbenen als Gruppe von Arbeitern, die Letzten (von der elften Stunde) als einzelner Arbeiter. Die Stunden (dritte, sechste, neunte, elfte) zeigt die Sanduhr, ohne Zahlen. Der Verwalter ([[MAT.20.8]]) hält den Denar; der Letzte trägt ein ockerfarbenes Arbeitsgewand. Dass alle «je» einen Denar erhalten ([[MAT.20.9-MAT.20.10]]), zeigt das Bild nur am Letzten. Das Schlusswort über Letzte und Erste ([[MAT.20.16]]) ist nicht eigens gezeichnet.",
+        "basis": [
+          {
+            "record": "TU-MAT-020-001-016",
+            "field": "summary",
+            "fingerprint": "54d7aeab09a76482"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.1-MAT.20.7",
+            "fingerprint": "79e09a2d538a79a5"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.8-MAT.20.10",
+            "fingerprint": "c9f1103d8c2ad5ca"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.11-MAT.20.12",
+            "fingerprint": "93b42e74b8af131a"
+          },
+          {
+            "record": "TRANS-MAT-020-001-034-DE-WORKING",
+            "field": "text_by_reference",
+            "reference": "MAT.20.13-MAT.20.16",
+            "fingerprint": "6809c9bf6001e686"
+          }
+        ],
+        "authorship_de": "KI-Entwurf (Claude) vom 2026-10-17 auf Wunsch von Andi Neck; keine fachliche Prüfung."
       }
     }
   ]
