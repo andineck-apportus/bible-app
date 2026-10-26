@@ -67,8 +67,6 @@ def prompt_fuer(szene, stil, regie, stile):
     if "FIG-JESUS" in szene["figuren"]:
         teile.append(f"Jesus: {regie['gesichter']['jesus_en']}.")
     teile.append(stile["allgemein_en"])
-    teile.append(szene["vermeiden_en"][0].upper() + szene["vermeiden_en"][1:] + ".")
-    teile.append(f"Avoid: {stile['negativ_en']}.")
     return " ".join(teile)
 
 
