@@ -1,4 +1,7 @@
 // Optionale Bedienungsprüfung: npm install --no-save jsdom, dann mit Node ausführen.
+// Die App mit allen Paketen braucht in jsdom mehr als den Standard-Speicher: bei Bedarf mit grösserem Heap neu starten.
+if(!process.execArgv.some(x=>x.startsWith('--max-old-space-size'))&&!/max-old-space-size/.test(process.env.NODE_OPTIONS||'')){
+  const r=require('node:child_process').spawnSync(process.execPath,['--max-old-space-size=6144',__filename],{stdio:'inherit'});process.exit(r.status??1);}
 const {JSDOM}=require('jsdom'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 let model;
 const dom=new JSDOM(fs.readFileSync(path.join(__dirname,'../app/bible/index.html'),'utf8'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.__BIBLE_TEST__=x=>model=x;}});
@@ -212,7 +215,7 @@ click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-back
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');
-assert.equal(Object.keys(M().layers.gsw.text).length,3059,'Mundart für alle 3059 Verse');
+assert.equal(Object.keys(M().layers.gsw.text).length,4204,'Mundart für alle 4204 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');sheetHost.querySelector('.grid.nums [data-go]').click();
