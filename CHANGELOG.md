@@ -2,6 +2,11 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.122 — 2026-10-26 — Markus vollständig nach «Struktur zuerst»
+
+- **Mk 9–16 und das Buch Markus neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): drei Leidensankündigungen als Steigerung, Getsemani dreimal, Verleugnung als Treppe, dreifacher Spott am Kreuz, Markusschluss 16,8 als ursprüngliches offenes Ende und 16,9–20 als späterer Schluss gekennzeichnet; keine Details aus den anderen Evangelien (junger Mann statt Engel, keine Handwaschung, keine Grabwache; Simon trägt nicht «hinter Jesus»). Korrigiert u. a.: «den Becher trinken, mit der Taufe getauft werden» im Wortlaut, «Du sagst es» ohne Bejahung, Schrei 15,34 an Gott.
+- Damit ist Markus ganz fertig. Noch 130 Bilder in alter Verdichtung (Johannes, Lk 11).
+
 ## v0.121 — 2026-10-26 — Markus 1–4 und 6–8 nach «Struktur zuerst»
 
 - **41 Abschnitte und 7 Kapitel neu** (Kernanalysen mit Struktur, unabhängig geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Sandwich-Erzählungen 3,20–35 und 6,7–30 als Rahmen, Zwölferliste in der Reihenfolge des Markus, vier Böden in Gleichnis und Deutung, Lasterliste 7,21–22 vollständig, zweistufige Heilung 8,22–26; nichts aus Matthäus oder Lukas übernommen. Korrigiert u. a.: «beraten, wie sie ihn umbringen könnten» (3,6) statt Tötungsbeschluss, Herodes nicht erschrocken (6,14–16), kein Hochzeitszeichen beim Geburtstagsmahl, Schweigegebot an die Leute (7,36).
