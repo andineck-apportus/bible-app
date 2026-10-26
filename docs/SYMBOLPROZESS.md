@@ -607,8 +607,15 @@ Erkennungszeichen deshalb mittlere, eindeutig «textile» Töne wählen (olivgr�
 einer Szene vorkommt, wird am sichersten über ihre Handlung im Text erkannt (Simeon mit dem Kind); Säulen allein machen einen
 alten Mann zu «Eli am Heiligtum». Eine helle Schreibfläche liest sich als Gesetzestafel, eine dunkle Wachsfläche mit Griffel als
 Schreibtafel. Nebenbefund an bestehenden Figuren (nicht geändert): in 32 px las sich das Fläschchen der Maria von Betanien als
-Säugling, die Kelle der Marta als Hammer, der Ölkrug der Salome als Wasserkrug. Offen: Prüfung im Gesamtbild (Schritt 8), sobald
-die Lukas-Bildaufträge die neuen Einträge verwenden.
+Säugling, die Kelle der Marta als Hammer, der Ölkrug der Salome als Wasserkrug.
+
+Nachtrag Gesamtbild (Schritt 8, 2026-10-26, v0.130): Die elf Einträge stehen in den Bildaufträgen zu Lk 1–2 und 8 (zehn Bilder).
+Sechs Bilder hat je eine getrennte Instanz ohne Auftrag und ohne Legende beschrieben (`reports/bild-blindtest-2026-10-26-lukas-figuren.json`,
+Befund im Feld `check` der Bilder): Gabriel, Zacharias als Priester, Elisabet, Hanna, Johanna und Susanna (über das Namensschild),
+die Hirten als Gruppe, die Krippe mit dem gewickelten Kind, die Schreibtafel und der zwölfjährige Jesus wurden erkannt. Grenzen: Ein
+gehaltenes Kind (Simeon, Maria) und der Räucheraltar des Zacharias liegen tief vor der Brust und werden vom Namensschild am unteren
+Rand weitgehend verdeckt; Simeons Schild steht deshalb erst im Bild, in dem er das Kind nicht trägt. Simeon trägt das Kind nur, wo
+der Text es sagt ([[LUK.2.28]]); sonst `stage.hold` `"LEER"`.
 
 ### Reihenfolge der Überarbeitung
 
