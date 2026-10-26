@@ -2,6 +2,12 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.125 — 2026-10-26 — Johannes 15–21, Buch Johannes und Lk 11 nach «Struktur zuerst», geprüft
+
+- **Joh 15–21, Buch Johannes, Lk 11,1–4 mit Kapitel und Buch** (Kernanalysen mit Struktur, von einer getrennten KI-Instanz geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder). Abschiedsrede 15–16 mit allen Gliedern (Weinstock, Liebeskette, drei «überführen», Trauer → Freude), Gebet Joh 17 in Kreisen nach aussen, Passion und Ostern nur nach Johannes (kein Simon von Kyrene, kein Judaskuss, kein Knien der Soldaten), Joh 21 als Nachtrag nur als Forschungsthese.
+- **Prüfung:** Zeitform Joh 17,18 («habe gesandt»); fehlende Abschnitte in den Kapitelzusammenfassungen Joh 18 und 19 ergänzt; Zeichen «glauben» und «Trauer» nur bei den Figuren, die der Text nennt; «Es ist der Herr!» zu Petrus, nicht zu Jesus.
+- **Lukas:** Kapitel- und Buchzusammenfassung beruhen nur auf dem übersetzten Abschnitt Lk 11,1–4 und sagen das; der Satz aus dem noch nicht übersetzten Vorwort ist entfernt.
+
 ## v0.124 — 2026-10-26 — Johannes 7,53–14 nach «Struktur zuerst»; Prüfung der Sprechblasen-Spitzen
 
 - **Joh 7,53–14 neu** (Kernanalysen mit Struktur, von einer getrennten Instanz geprüft; Zusammenfassungen Hochdeutsch und Züridüütsch; Bilder): Ehebrecherin 7,53–8,11 als später eingefügter Abschnitt gekennzeichnet, Streitgespräche Joh 8, Blindgeborener mit Verhören in Stufen, Hirtenrede, Lazarus, Salbung und Einzug, Fusswaschung, Abschiedsrede Joh 14. Neues Bildzeichen «geheilter Blinder».
