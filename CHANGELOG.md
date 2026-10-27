@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.136 — 2026-10-27 — Bildstil «Visuelle Bibel» V1.2; Johannes 2 als Aquarell-Comic
+
+Entscheid von Andi Neck (2026-10-27): Styleguide «Visuelle Bibel» V1.2 (minimalistischer Aquarell-Comic) ins Konzept aufnehmen und auf Johannes 2 anwenden; die bisherigen Bilder ersetzen.
+- **Konzept:** [docs/BILDSTIL.md](docs/BILDSTIL.md) gibt den Styleguide wieder (Gestaltung, Formen, Evidenz B/R/I, Figuren- und Objektkonsistenz, Kana-Fixpunkte, Freigabe) und ergänzt ihn: Stilreferenz nur für die Bildsprache, Erzählszenen gemalt und Masse/Strukturen aus Daten, B/R/I in der Legende, unsere Übersetzung als Textbasis, weiter geltende Darstellungsregeln (Jesus mit Gesicht, Gott nie als Mensch, «die Juden» neutral, Gewalt ohne Ausmalen), Einzelfelder mit Worten als Text. PDFs und Stilreferenz unter `docs/referenz/`; Verweise in AGENTS.md und BILDSPRACHE.md.
+- **Herstellung:** Szenenplan und Figurenblatt (`scripts/authoring/bilder_aquarell_daten/`), Malwerkzeug `bilder_aquarell_gen.py` mit Action «bilder-aquarell» (OpenAI-Bildmodell, Vorlagen: Stilreferenz und Figurenblatt), Ablage `bilder_aquarell.py`: je Bildfeld ein gemaltes Bild (3 : 2), Sprechblasen als Text je Sprache (Hochdeutsch, Züridüütsch) darüber, Stichwortband aus dem Bildauftrag darunter; das Werkzeug prüft jede Blase wörtlich gegen den Lesetext (Kürzungen mit …).
+- **Johannes 2:** sieben gemalte Felder (Kana 3, Tempel 2, Jerusalem 2) auf Abschnittsebene, dieselben drei Hauptszenen auf Kapitelebene; auf der Versebene neben ihren Versen. Sechs zählbare Steinkrüge, Maria sichtbar älter als Jesus, der Speisemeister spricht zum Bräutigam, keine Verwandlungsszene, Geissel erhoben ohne Schlag.
+- **App:** Aquarellbilder ersetzen Anime und Symbol, wo vorhanden (kein Stilumschalter); gemalte Felder auf breiten Bildschirmen untereinander (höchstens 480 px); Legende mit «Was ist belegt?» (B/R/I je Feld mit Stelle), Herkunft als KI-Bild.
+- **Prüfung:** zwei Blindrunden durch getrennte KI-Instanzen (nur Bilder, ohne Auftrag); nach Runde 1 fünf Felder neu gemalt (Krüge im Hintergrund, Alter Marias, erwachsene Diener, Fragende ohne Frauen/Kinder und ohne heutige Gebetsschals, Tauben im Käfig, Abstand Jesu zur Menge). Keine fachliche und keine muttersprachliche Prüfung.
+
 ## v0.135 — 2026-10-27 — Umschalter Text | Bild auf allen Ebenen; Bilder auf Vershöhe
 
 Entscheid von Andi Neck (2026-10-27): «Der ‹nur Text›-Modus entfällt, Bilder auf allen Ebenen bleiben. Auf der Versebene sollen die Bilder im Desktop auf der richtigen Vershöhe sein. Ein Umschalter Text | Bild, wobei man auch beide einblenden kann.»
