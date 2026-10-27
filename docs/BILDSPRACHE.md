@@ -2,6 +2,8 @@
 
 Bilder fassen auf den Zoomstufen (Buch, Kapitel, Abschnitt) bildlich, was die Zusammenfassung in Worten sagt. Sie sind **Deutung, nicht Text**: Sie legen mehr fest als der Text (Kleidung, Anordnung, Gewichtung), stehen neben der Zusammenfassung und ersetzen sie nicht. Die App kennzeichnet jedes Bild entsprechend («Legende und Hinweise»). Datenfelder: [DATENMODELL.md](DATENMODELL.md#bildsprache-seit-v055-lexikon-und-bildaufträge-seit-v056).
 
+
+**Bildstil:** Für neue Bilder gilt der minimalistische Aquarell-Comic nach [BILDSTIL.md](BILDSTIL.md) (Styleguide V1.2, 2026-10-27). Die Stile «Symbol» und «Anime» bleiben, bis die jeweiligen Stellen im Aquarellstil vorliegen; wo ein Aquarellbild vorhanden ist, ersetzt es sie in der App.
 ## Drei Schichten
 
 1. **Bildlexikon** (`data/illustrations/lexicon/FIG-*.json`, stilunabhängig): Wer oder was ist das, woran erkennt man es (Pflichtmerkmale mit Grundlage: Text, Tradition oder eigene Gestaltung), womit darf es nicht verwechselt werden. Gilt für die ganze Bibel; so trägt Maria überall Blau, Jesus überall den Kreuznimbus, ein Diener überall die Schürze. Werkzeug: `scripts/authoring/bildlexikon.py`.
