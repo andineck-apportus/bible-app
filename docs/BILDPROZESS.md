@@ -213,6 +213,7 @@ Gegenstand; Blasen überlappen; Spitze hinter einer anderen Blase):
 | Spitze zu flach | ab 25 Einheiten Länge nicht flacher als 35° zur Waagrechten | wie oben; kurze Spitzen zur Seite (z. B. in den Strahlenkranz) bleiben erlaubt |
 | Wichtige Teile | keine Blase und keine Spitze über der Kreuzestafel und anderen Teilen mit `class="ill-wichtig"`; keine Spitze über Zeichen und Gegenständen (ausser dem, an dem sie endet) | Rechtecke im Feld |
 | Jede Sprech-Angabe gezeichnet | Zahl der Blasen je Feld = Zahl der `speech`-Einträge im Bildauftrag | `<g class="ill-sp" data-n>` je Feld, `data-speech` (Index) an jeder Blase; auch Denkblasen |
+| Jedes Zeichen in der Blase (seit 2026-10-26) | jedes Zeichen einer Sprech-Angabe (`icons`) steht in ihrer Blase, auch wenn sie ein Wort trägt | `data-icons` («Index:ID,ID|…») am Zähler `ill-sp`, `<g class="sp-icon" data-fig>` um jedes Zeichen in der Blase |
 
 Die Schwellen sind nach Ansicht gerenderter Beispiele gesetzt: Vorher massen 90 % der Spitzen höchstens 44 Einheiten,
 die bemängelten 41–62 Einheiten; 36 lässt kurze Spitzen über dem Kopf zu.
@@ -228,10 +229,10 @@ Kreuz steht die Tafel über dem Kopf). Unter den gültigen Lagen gewinnt die kü
 (spätere Blase nicht links über einer früheren). Ist kein Platz, wird das Wort schmaler umbrochen (zwei oder drei Zeilen),
 die Blase kleiner (bis 54 %) oder die Blasen stehen nebeneinander statt übereinander. Felder mit zwei Sprech-Angaben zeichnen
 die Personen etwas kleiner (wie bei drei Personen), damit über den Köpfen Platz bleibt. Reicht das nicht, gelten zwei
-Ausweichstufen: Gruppen nur mit dem vorderen Kopf und Spitzen bis knapp unter die Prüfgrenze; zuletzt Wortblasen ohne die
-Zeichen daneben (Kernwort genügt), bis 50 % und vier Zeilen. Freie Zeichen (z. B. Wolken der Finsternis) weichen den
-Spitzen aus. Stand 2026-10-26: alle Felder finden eine regelgerechte Lage, 13 Felder in Matthäus nur auf der letzten Stufe
-(Zeichen neben dem Wort entfallen dort). Befunde vorher 146 je Sprache (126 zu lange Spitzen, 2 zu flache, 9 Blasen und
+Ausweichstufen: Gruppen nur mit dem vorderen Kopf und Spitzen bis knapp unter die Prüfgrenze; zuletzt stehen die Zeichen unter
+dem Wort statt daneben (Blase schmaler und höher), bis 50 % und vier Zeilen. Freie Zeichen (z. B. Wolken der Finsternis) weichen den
+Spitzen aus. Bis 2026-10-26 fielen auf der letzten Stufe die Zeichen weg (13 Felder in Matthäus, Lk 12,13–21 und Lk 13,31–35);
+Entscheid Andi Neck 2026-10-26: Platz schaffen statt Zeichen weglassen, seither feste Prüfung «Jedes Zeichen in der Blase». Befunde vorher 146 je Sprache (126 zu lange Spitzen, 2 zu flache, 9 Blasen und
 3 Spitzen über der Kreuzestafel, 4 Spitzen über Zeichen, 1 hinter einer Blase, 1 fehlende Blase), nachher 0.
 
 Neue Hinweise an den Zeichner: `twin: {FIG: x}` zeichnet eine zweite gleiche Figur (die zwei Mitgekreuzigten, [[JHN.19.18]]),
@@ -240,3 +241,33 @@ Neue Hinweise an den Zeichner: `twin: {FIG: x}` zeichnet eine zweite gleiche Fig
 Grenzen: Die Prüfung misst Rechtecke und gerade Strecken, nicht den Eindruck; ob eine Blase gut zum Sprecher gehört, zeigt
 nur die Sichtprüfung. Die von Hand gezeichneten Bilder (Kana, obere Ebenen) haben keine Zählmarke; dort prüft nur die
 Länge und Lage der Spitzen.
+
+## Zeichen in Sprechblasen und Namensschilder: feste Prüfungen (seit 2026-10-26, Entscheide Andi Neck)
+
+**Zeichen in Sprechblasen nie weglassen.** Fehlt der Platz, stehen die Zeichen unter dem Wort (Blase schmaler und höher), statt dass
+sie entfallen. `pruefe_bilder.py` meldet jedes Zeichen einer Sprech-Angabe, das nicht in ihrer Blase steht (Tabelle oben). Vorher
+(mit der neuen Prüfung gemessen, je Sprache): 28 Blasen in 15 Feldern ohne ihre Zeichen (13 Felder in Matthäus, Lk 12,13–21,
+Lk 13,31–35); nachher 0.
+
+**Namensschilder ohne Verdeckung.** Am unteren Feldrand verdeckte das Schild, was die Figur vor der Brust trägt (das Kind bei Simeon
+und Maria, den Räucheraltar bei Zacharias). Der Zeichner (`Composer.place_name`) sucht die Lage jetzt in dieser Reihenfolge: auf der
+Brust, wenn die Figur dort nichts trägt (kein Erkennungszeichen, nichts Gehaltenes, keine gefalteten Hände); neben dem Kopf auf der
+Seite mit mehr Abstand zum Nachbarn; über dem Kopf; auf Schulterhöhe aussen; tiefer neben dem, was die Figur trägt; sonst die nächste
+freie Lage, die näher bei dieser Figur liegt als bei einer anderen. Nie über Gesicht (mit Haar, Schleier, Bart), Gehaltenem,
+Zeichen, Gegenständen, Strahlenkranz, Blasen, Spitzen oder anderen Schildern. Kniende Figuren: Der Zeichner rechnet mit dem
+vorgeneigten Kopf (auch Blasen und Pfeile).
+
+| Prüfung (`pruefe_bilder.py`, de und gsw) | Regel | Messung |
+|---|---|---|
+| Schild über Gesicht | höchstens 4 % des Gesichts | `g.ill-face` (ohne Hals) |
+| Schild über dem, was die Figur vor der Brust trägt | höchstens 8 % | `g.ill-attr` (Erkennungszeichen, gehaltenes Kind, Räucheraltar …) |
+| Schild über Zeichen oder Gegenstand | höchstens 10 % | `use.ill-obj` (Zeichen und Gegenstände unter 100 Einheiten) |
+| Schild über Sprechblase | keine Überlappung | Rahmen `data-box` |
+| Schilder überlappen sich | keine Überlappung | `g.ill-name` |
+
+Vorher (alte Lage am unteren Rand, mit der ersten Fassung der Prüfung gemessen, Hochdeutsch): 361 Befunde in 184 Bildern – 287 Schilder
+über dem, was die Figur vor der Brust trägt, 58 über einem Gesicht (meist kniende, liegende oder kleine Figuren), 5 über Zeichen oder
+Gegenständen, 11 Paare überlappender Schilder; nachher 0. Grenzen: Die Prüfung misst Rechtecke; ob ein Schild eindeutig zu seiner
+Figur gehört, zeigt nur die Sichtprüfung (im Blindtest Runde 16 standen in zwei Bildern zwei Schilder zwischen zwei Figuren; danach
+kam die Lage auf der Brust dazu).
+

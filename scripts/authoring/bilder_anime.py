@@ -213,14 +213,17 @@ def head_inner(key, expr="calm", look=0.0, tears=False):
         hair = OLD_HAIR
     o = []
     if c.get("halo"):
-        o.append(f'<circle r="15.5" fill="#F7DB9A" stroke="#D9A441" stroke-width="1.2"/><path d="M0-15.5v5M-15.5 0h5M15.5 0h-5" stroke="#C08A2A" stroke-width="2.2"/>')
+        # Kreuznimbus im Verhältnis zum Kopf: beim Kind (kurzes Haar, rundes Gesicht) kleiner, sonst wirkte er überdimensional
+        # (Hinweis Andi Neck 2026-10-26, Lk 2,41–52); Erwachsener 1,55 Kopfradien, Kind 1,3
+        hr = 13 if child else 15.5
+        o.append(f'<circle r="{hr}" fill="#F7DB9A" stroke="#D9A441" stroke-width="1.2"/><path d="M0-{hr}v4.4M-{hr} 0h4.4M{hr} 0h-4.4" stroke="#C08A2A" stroke-width="2"/>')
     if c.get("cowl"):  # Kapuze eines Reisemantels: spitz, mit dickem Rand, liegt auf den Schultern (Schleierform las sich als Frauenkopftuch)
         o.append(f'<path d="M-12.8 17Q-14.6-1-10-9.6Q-5-17.6 1.6-20Q4-16.6 9.8-9.6Q14.6-1 12.8 17z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
     elif c.get("veil"):
         o.append(f'<path d="M-13 18Q-14.6-4-9.4-10.6Q0-17 9.4-10.6Q14.6-4 13 18z" fill="{c["veil"]}" stroke="{INK}" stroke-width=".7"/>')
     if c.get("back"):
         o.append(f'<path d="{c["back"]}" fill="{hair}"/>')
-    o.append(f'<path d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN if c.get("female") or child else SKIN_D}"/>')  # Hals (bei Frauen hell: dunkler Hals las sich mit dunklem Schleier als Bart)
+    o.append(f'<path class="ill-hals" d="M-2.4 11h4.8v6h-4.8z" fill="{SKIN if c.get("female") or child else SKIN_D}"/>')  # Hals (bei Frauen hell: dunkler Hals las sich mit dunklem Schleier als Bart)
     o.append(f'<path d="{FACE_CHILD if child else FACE}" fill="{SKIN}" stroke="{INK}" stroke-width=".7"/>')
     if expr == "dead":  # tot: fahle, gräuliche Haut (Unterschied zu schlafend)
         o.append(f'<path d="{FACE_CHILD if child else FACE}" fill="#8E9AA0" opacity=".45"/>')
@@ -492,15 +495,15 @@ def person(key, x, y, s, expr="calm", look=0.0, arm=None, flip=False, tears=Fals
         y += 9 * s
     if hold and (hold.startswith("an-a-") or big):  # Erkennungszeichen (Schlüssel, Kasse …) gross auf der Brust, mit Kontur
         bx = CHAR[key].get("attr_box") if hold == CHAR[key].get("attr") else None  # eigene Lage, z. B. Tablett über der Schürze
-        held = f'<g filter="url(#an-kontur)">{use(hold, *(bx or (-8, 17, 16, 16)))}</g>'
+        held = f'<g class="ill-attr" filter="url(#an-kontur)">{use(hold, *(bx or (-8, 17, 16, 16)))}</g>'
     else:
-        held = use(hold, -4, 13, 16, 12) if hold else ""  # vor der Brust, nicht am unteren Rand
+        held = f'<g class="ill-attr">{use(hold, -4, 13, 16, 12)}</g>' if hold else ""  # vor der Brust, nicht am unteren Rand
     if hold and "posaune" in hold:  # Blasinstrument am Mund, Schalltrichter von der Figur weg in Blickrichtung (Hinweis Andi Neck)
         dr = -1 if (look or 0) < 0 else 1
         held = f'<g transform="translate({(look or 0) * 1.0 + .8 * dr:.1f} 9.2) scale({dr} 1) rotate(16)">{use(hold, -1.8, -11.6, 24, 24)}</g>'
     # abgewandt: gespiegelt und mit Blick deutlich zur Seite (Dreiviertelansicht, Ohr verdeckt). Das Gesicht bleibt
     # sichtbar, damit die Figur wie in der Legende erkennbar ist (früher Hinterkopf; Hinweis Andi Neck: «Händler ohne Gesicht»)
-    head = head_inner(key, expr, 2.6 if flip else look, tears)
+    head = f'<g class="ill-face">{head_inner(key, expr, 2.6 if flip else look, tears)}</g>'  # Klasse für die Prüfung der Namensschilder
     return f'<g transform="translate({x:.1f} {y:.1f}) scale({s:.3g}){fl}">{body_inner(key, arm, ext, staff=not hold)}{head}{held}</g>'
 
 
@@ -526,7 +529,8 @@ GROUP_SPEC = {
     "FIG-GRUPPE-ZWOELF": dict(mix="m", n=3, color="#9C7A4C", mantle=None, every={"belt": "#5B4630", "jstaff": None}, hold={0: "an-a-g-zwoelf"}),  # Zahl 12 statt Stäben (wurden als Hirten gelesen)
     "FIG-GRUPPE-JUENGER": dict(mix="m", n=3, color="#A0825A", mantle=None, every={"belt": "#5B4630", "jstaff": None}, hold={0: "an-a-fussspuren"}),  # «folgt mir nach» wie die Jünger-Rolle
     # wie der Täufer: Fellkragen und Ledergurt (Mk 1,6), jüngere Männer
-    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=3, color="#8A6A3A", mantle=None, every={"fur": True, "belt": "#5B4630", "old": None}, hold={0: "an-a-kreuzstab"}),  # Zeichen ihres Lehrers
+    # ohne den Kreuzstab ihres Lehrers (traditionelles Zeichen ohne Anhalt im Text, Entscheid Andi Neck 2026-10-26)
+    "FIG-GRUPPE-JOHANNES-JUENGER": dict(mix="m", n=3, color="#8A6A3A", mantle=None, every={"fur": True, "belt": "#5B4630", "old": None}),
     "FIG-GRUPPE-BRUEDER-JESU": dict(mix="m", n=4, alike=True, color="#B8A27A", mantle=None, sash="#6A7A5A"),  # vier Brüder (Mk 6,3), gleicher Haarschnitt
     # Pharisäer: Gebetsmantel mit Streifen über den Schultern, Quasten und Gebetskapsel (Mt 23,5); Kopf frei, Bart
     "FIG-GRUPPE-PHARISAEER": dict(mix="m", n=3, beards=True, every={"tallit": True, "tefillin": True, "veil": None, "hood": None, "front": "short"}),
@@ -1467,15 +1471,37 @@ class AniComposer(_auto.Composer):
         elif getattr(self, "_rec", False):
             self.soft = getattr(self, "soft", []) + [(x, y, w, h)]
         sym = OBJ.get(t) or self.vbmap[t][0]
+        cl = ' class="ill-obj"' if w < 100 else ""  # Zeichen und Gegenstände (Prüfung der Namensschilder)
         if flip:
-            return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(sym, 0, 0, w, h)}</g>'
-        return use(sym, round(x, 1), round(y, 1), w, h)
+            return f'<g transform="translate({x + w:.1f} {y:.1f}) scale(-1 1)">{use(sym, 0, 0, w, h, cl)}</g>'
+        return use(sym, round(x, 1), round(y, 1), w, h, cl)
 
     def r_icon(self, t, x, y, w, h):
         return use(self.vbmap[t][0], round(x, 1), round(y, 1), round(w, 1), round(h, 1))
 
     def r_bubble(self, x, y, w, h, tx, ty, inner, attrs=""):
         return bubble(round(x, 1), round(y, 1), round(w, 1), round(h, 1), round(tx, 1), round(ty, 1), inner, attrs)
+
+    def face_bottom(self, fid):
+        c = CHAR.get(KEY.get(fid, ""), {})
+        ys = [float(v) for v in re.findall(r"-?\d+\.?\d*", c.get("beard") or "")]  # Bartpfad: grösste Zahl = unterster Punkt
+        if c.get("veil") or c.get("cowl"):  # Schleier bzw. Kapuze reicht bis auf die Schultern
+            ys.append(18)
+        if c.get("back"):  # langes Haar
+            ys.append(17)
+        return max([12.6] + ys) / 12
+
+    def has_chest(self, fid, p):
+        st = p.get("stage") or {}
+        h = (st.get("hold") or {}).get(fid)
+        if h == "LEER":
+            return False
+        if h or fid.startswith("FIG-GRUPPE-") or (st.get("pose") or {}).get(fid) == "kneel":
+            return True
+        if any(sp["from"] == fid and sp["to"] in ("FIG-GOTT", "FIG-HEILIGER-GEIST") for sp in p.get("speech") or []):
+            return True  # betet mit gefalteten Händen
+        a = CHAR.get(KEY.get(fid, ""), {}).get("attr")
+        return bool(a) and a not in SCENE_NO_ATTR
 
     def r_head_sign_native(self, t):
         return t in ("FIG-ZEICHEN-TRAUER", "FIG-ZEICHEN-FREUDE")
@@ -1508,6 +1534,10 @@ class AniComposer(_auto.Composer):
         leer = hold == "LEER"  # stage.hold {FIG: "LEER"}: leere Hände, ohne Erkennungszeichen (z. B. Joh 4,28 Krug stehen gelassen)
         if leer:
             hold = None
+            if CHAR[key].get("staff") or CHAR[key].get("jstaff"):  # auch ohne Stab (z. B. Mose bei der Verklärung, 2026-10-26)
+                if key + "~leer" not in CHAR:
+                    CHAR[key + "~leer"] = {a: v for a, v in CHAR[key].items() if a not in ("staff", "jstaff", "attr")}
+                key = key + "~leer"
         if hold is None and pose == "kneel" and not leer:  # Knien: gefaltete Hände machen die Haltung lesbar
             hold = "an-z-beten"
         if hold is None and not leer and CHAR[key].get("attr") and CHAR[key]["attr"] not in SCENE_NO_ATTR:
@@ -1613,6 +1643,8 @@ class AniComposer(_auto.Composer):
             return (x - 18 * sc, y + 22 * sc)
         if pose == "fall":
             return (x + 8 * sc, y + 4 * sc)
+        if pose == "kneel":  # vorgeneigt (26° um die Hüfte): Kopf liegt seitlich versetzt (Namensschild, Blasen; 2026-10-26)
+            return (x + (13.2 if (look or 0) >= 0 else -13.2) * sc, y + 3 * sc)
         return (x, y)
 
     def r_inside(self, fid, cx, cy, w, p, out):
@@ -1738,6 +1770,8 @@ def run():
                 rec["check_previous" if newer else "check"] = ck
         n += write(old, rec, "Bild im Stil Anime nach Bildauftrag gezeichnet")
         n += localize(rid, rec, {"alt_de": alt_g}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026", AUTH_GSW, DATE)
+    if _auto.NAME_FAIL:  # Namensschild ohne freie Lage (die Prüfung meldet die Überdeckung)
+        print("OFFEN: Namensschilder ohne freie Lage:", ", ".join(sorted({f"{b} {f}" for b, f in _auto.NAME_FAIL})))
     if _auto.BUBBLE_FAIL:  # keine Blasenlage erfüllt alle Regeln (die Prüfung meldet die Befunde einzeln)
         print("OFFEN: Sprechblasen ohne regelgerechte Lage:", ", ".join(sorted({str(f) for f, _ in _auto.BUBBLE_FAIL})))
     print(f"PASS: Bildstil Anime – {len(vb)} Darstellungen, {len(ILL)} Bilder; {n} Dateien geschrieben")

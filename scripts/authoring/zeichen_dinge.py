@@ -341,9 +341,84 @@ def salz(v):
         + L("M13 12.6l1 1.4M16 12.2l1 1.6", .5, "#9A6A30")
 
 
+def synagoge3():
+    """Runde 16 (Entscheid Andi Neck 2026-10-26: kein Davidstern – anachronistisch, erinnert an die heutige Staatsflagge):
+    Steinbau mit Giebel und Säulenfront wie die Synagogen in Galiläa (Kafarnaum, Gamla), grosse offene Torarolle im Giebel."""
+    s = P("M4 57H86V62H4Z", STONE2, 1.4)
+    s += P("M9 26H81V57H9Z", "#E4D9C2", 1.8)
+    s += P("M5 27L45 4.6L85 27Z", "#D6CCB6", 1.8)
+    for x in (14, 26, 58, 70):
+        s += P(f"M{x} 31h6v26h-6z", "#F2EBDC", 1.1) + P(f"M{x - 1.6} 28h9.2v3h-9.2z", STONE, 1)
+    s += P("M37 57V42Q45 34 53 42V57Z", "#5A4632", 1.4)
+    t = (P("M-7 -5H7V5H-7Z", CREAM, 1) + L("M-4.6 -2.2h9.2M-4.6 0h9.2M-4.6 2.2h9.2", .7, "#7A6E60")
+         + P("M-10.6 -7.4h3.6V7.4h-3.6Z", WOOD, 1) + P("M7 -7.4h3.6V7.4H7Z", WOOD, 1)
+         + P("M-9.6 -9.4h1.6v2h-1.6zM8 -9.4h1.6v2H8zM-9.6 7.4h1.6v2h-1.6zM8 7.4h1.6v2H8z", WOOD2, .6))
+    return s + G(t, "translate(45 19) scale(.9)")
+
+
+def _rolle_offen(cx, cy, k=1.0):
+    """Offene Torarolle: zwei Holzstäbe mit Griffen, dazwischen das Blatt mit Schriftzeilen."""
+    t = (P("M-11 -6.4H11V6.4H-11Z", CREAM, 1) + L("M-8 -3.2h6M-8 0h6M-8 3.2h6M2 -3.2h6M2 0h6M2 3.2h6", .8, "#7A6E60")
+         + P("M-15.4 -8.4h4.4V8.4h-4.4Z", WOOD, 1) + P("M11 -8.4h4.4V8.4H11Z", WOOD, 1)
+         + P("M-14.2 -11h2v2.6h-2zM12.2 -11h2v2.6h-2zM-14.2 8.4h2v2.6h-2zM12.2 8.4h2v2.6h-2z", WOOD2, .6))
+    return G(t, f"translate({cx} {cy}) scale({k})")
+
+
+def synagoge4():
+    """Runde 16, @4: schlichtes Versammlungshaus aus Stein (Flachdach wie in Galiläa, kein Säulentempel), über der Tür gross die
+    offene Torarolle: das Haus, in dem die Schrift gelesen wird."""
+    s = P("M4 58H86V62H4Z", STONE2, 1.4)
+    s += P("M12 16H78V58H12Z", "#D9CCB0", 1.8) + P("M8 11H82V17H8Z", "#B9A88A", 1.6)
+    s += L("M12 30H78M12 44H78M30 16V30M58 16V30M22 30V44M45 30V44M68 30V44M34 44V58M56 44V58", .6, "#A8987A")
+    s += P("M38 58V45Q45 39 52 45V58Z", "#5A4632", 1.4)
+    s += P("M16 46h7v7h-7zM67 46h7v7h-7z", "#6E5A44", 1)
+    return s + P("M24 20H66V40H24Z", "#E9DDC4", 0) + _rolle_offen(45, 30, 1.25)
+
+
+def synagoge5():
+    """Runde 16, @5: Blick ins Versammlungshaus – ein Mann liest am Lesepult aus der offenen Rolle, davor sitzen Zuhörer."""
+    s = P("M6 24L45 4L84 24V60H6Z", "#B9A88A", 1.8) + P("M12 26H78V60H12Z", "#F2E8D2", 1)
+    s += P("M41 38h8v12h-8z", WOOD, 1)  # Lesepult
+    s += P("M37 56Q37 40 45 38Q53 40 53 56Z", "#5E7FA0", 1) + C(45, 32, 5, SKIN, 1)  # Leser
+    s += _rolle_offen(45, 40, .62)
+    for x in (22, 34, 56, 68):  # Zuhörer (Köpfe und Schultern)
+        s += P(f"M{x - 6} 60Q{x - 6} 52 {x} 51Q{x + 6} 52 {x + 6} 60Z", "#9C7B55", 1) + C(x, 47, 4, SKIN, .9)
+    return s
+
+
+def ausschluss():
+    """Runde 16: Ausschluss aus der Synagoge ([[JHN.9.22]]) – die neue Synagoge (@4, ohne Davidstern) mit rotem Verbotszeichen."""
+    return (synagoge4() + C(72, 48, 13, "#D32F2F", 1.4)
+            + f'<rect x="63.4" y="45.4" width="17.2" height="5.2" rx="1" fill="#FFFFFF"/>')
+
+
+def rabe(v):
+    """Runde 16 ([[LUK.12.24]]): Rabe als schwarzer Vogel mit kräftigem Schnabel; @1 sitzt auf einem Zweig, @2 fliegt."""
+    if v == 1:
+        s = L("M3 18.4H25", 1.6, WOOD2) + L("M18 18.4l3-2.4", 1, WOOD2)
+        s += L("M13.2 13.6v4.4M16 13.4v4.6", .9, INK)
+        s += P("M3.6 12.6Q5.6 7 12.6 6.4Q17.4 6 19.6 4.4Q22.2 2.6 24.4 3.8L27.6 5.4L24.6 6.6Q23.6 9.6 20 11.8Q16 14.2 10.8 14.2L3.6 16.4Q2.8 14.4 3.6 12.6Z", "#2A2622", .9)
+        s += P("M7.6 10.4Q11.6 7.8 17.6 8.4Q15.4 12.4 9.4 12.8Z", "#4A4E58", .6)
+        s += C(23.4, 4.8, .7, "#FFFFFF", 0) + L("M24.6 5.9L27.6 5.4", .5, "#5A5650")
+        return s
+    if v == 2:
+        s = P("M2.4 12.2Q6.4 9.6 12 10Q16.6 10 19.2 8.6Q21.4 7.4 23 8.4L26.4 9.8L23.2 10.8Q21.4 13.4 16.4 14.2Q11 14.8 7 13.8L2 16Q1.6 14 2.4 12.2Z", "#2A2622", .9)
+        s += P("M9 11Q7.4 5 3.4 1.6Q10 2 14.4 6Q16.4 8 16.4 10.6Z", "#3A3C44", .8)
+        s += P("M12.6 10.6Q14.6 5 19.4 2.4Q19.6 7.4 17.4 10.8Z", "#2A2622", .8)
+        s += C(21.8, 9.1, .6, "#FFFFFF", 0)
+        return s
+    return None
+
+
 def synagoge(v):
     """Vorbild: Synagoge von Kafarnaum (Steinbau, Giebelfront mit Bogenfenster; im Fries ein Davidstern) bzw. 🕍; das
     Erkennungszeichen gross: Torarolle (@1) oder Davidstern (@2) im Giebel."""
+    if v == 3:
+        return synagoge3()
+    if v == 4:
+        return synagoge4()
+    if v == 5:
+        return synagoge5()
     if v not in (1, 2):
         return None
     s = P("M8 26H82V58H8Z", "#E4D9C2", 1.8) + P("M4 58H86V62H4Z", STONE2, 1.4)
@@ -707,7 +782,9 @@ SPEC = {  # Lexikon-ID: (Funktion, viewBox, Bedeutung kurz, gezeichnet je Fassun
     "FIG-ORT-FELD": (feld, "0 0 186 70", "Feld (Acker, Felder reif zur Ernte)", {1: "Feldflur: gepflügter, grüner und reifer Acker mit Furchen", 2: "Feldflur mit Furchen und Bäumen"}),
     "FIG-OBJ-SPLITTER": (splitter, "0 0 32 18", "Splitter (im Auge des Bruders)", {1: "Auge mit Holzsplitter im Augenweiss", 2: "Auge mit Holzsplitter, Zeigefinger weist darauf"}),
     "FIG-OBJ-SALZ": (salz, "0 0 20 16", "Salz", {1: "Salzstreuer, aus dem weisse Körner rieseln", 2: "Salzstreuer würzt ein Brot"}),
-    "FIG-ORT-SYNAGOGE": (synagoge, "0 0 90 64", "Synagoge (Versammlungshaus)", {1: "Steinbau mit Giebel, grosse Torarolle im Giebel", 2: "Steinbau mit Giebel, Davidstern im Giebel"}),
+    "FIG-ORT-SYNAGOGE": (synagoge, "0 0 90 64", "Synagoge (Versammlungshaus)", {1: "Steinbau mit Giebel, grosse Torarolle im Giebel", 2: "Steinbau mit Giebel, Davidstern im Giebel", 3: "Steinbau mit Giebel und Säulenfront, grosse Torarolle im Giebel (Runde 16, ohne Davidstern)", 4: "schlichtes Steinhaus mit Flachdach, gross die offene Torarolle über der Tür", 5: "Blick ins Haus: Mann liest am Pult aus offener Rolle, Zuhörer sitzen davor"}),
+    "FIG-ZEICHEN-AUSSCHLUSS": (lambda v: ausschluss() if v == 1 else None, "0 0 90 64", "aus der Synagoge ausgeschlossen", {1: "Synagoge (Steinhaus mit Torarolle) mit rotem Verbotszeichen"}),
+    "FIG-OBJ-RABE": (rabe, "0 0 30 20", "Rabe", {1: "schwarzer Vogel mit kräftigem Schnabel auf einem Zweig", 2: "fliegender schwarzer Vogel"}),
     "FIG-ORT-JORDAN": (jordan, "0 0 186 70", "Jordan (Fluss)", {1: "grünes Flussband mit Bäumen, gewunden durch Wüstenhügel zum Horizont", 2: "Fluss mit grünem Ufer, Bäumen und Schilf in Wüstenhügeln"}),
     "FIG-OBJ-VOGEL": (vogel, "0 0 24 16", "Vogel (Vögel des Himmels)", {1: "fliegender Vogel", 2: "drei fliegende Vögel"}),
     "FIG-OBJ-SAMEN": (samen, "0 0 24 22", "Samen / Saat (säen)", {1: "Hand von oben streut Körner auf Erde", 2: "offene Hand voller Saatkörner, Körner fallen"}),
@@ -729,7 +806,7 @@ SPEC = {  # Lexikon-ID: (Funktion, viewBox, Bedeutung kurz, gezeichnet je Fassun
 def variants(fid):
     fn, vb, bed, gez = SPEC[fid]
     out = {}
-    for n in (1, 2, 3):
+    for n in (1, 2, 3, 4, 5):
         svg = fn(n)
         if svg:
             out[n] = {"vb": vb, "svg": svg, "bedeutung": bed, "gezeichnet": gez.get(n, "")}

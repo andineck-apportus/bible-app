@@ -617,6 +617,46 @@ gehaltenes Kind (Simeon, Maria) und der Räucheraltar des Zacharias liegen tief 
 Rand weitgehend verdeckt; Simeons Schild steht deshalb erst im Bild, in dem er das Kind nicht trägt. Simeon trägt das Kind nur, wo
 der Text es sagt ([[LUK.2.28]]); sonst `stage.hold` `"LEER"`.
 
+### Runde 16 (Synagoge, Rabe, Marta und Maria in Lukas 10, grosse Wolke, 2026-10-26)
+
+Anlass (Entscheide Andi Neck, 2026-10-26): Das Lexikonzeichen der Synagoge trug einen Davidstern (Twemoji) – zur Zeit Jesu kein
+Zeichen der Synagoge und heute an die Staatsflagge erinnernd; die Raben in [[LUK.12.24]] standen als kleiner roter Vogel; Marta und
+Maria in [[LUK.10.38-LUK.10.42]] trugen die Erkennungszeichen aus Johannes (Nardenfläschchen, Betanien); bei der Verklärung war die
+Wolke klein und die Stimme kam sichtbar aus dem Strahlenkranz. Gemessen wie Runde 15 (`zeichen_test.py --entwuerfe … --frage abbild
+--befragen 4 --bewerten`, 32 px; Porträts und ganze Bilder mit `claude -p`, nur Lesezugriff, ohne Auftrag und Legende). Daten:
+`reports/zeichen-blindtest-2026-10-26-runde16.json`.
+
+| Eintrag | Fassungen | Ergebnis (32 px, Bedeutung) | gewählt |
+|---|---|---|---|
+| Synagoge (`FIG-ORT-SYNAGOGE`) | @3 Steinbau mit Giebel, Säulen, Torarolle im Giebel · @4 schlichtes Steinhaus mit Flachdach, offene Torarolle über der Tür · @5 Blick ins Haus: Leser am Pult, Zuhörer | @3: Satz A 0/8 (als «Tempel» gelesen), Satz B 4/4 · @4: 4/4, auf einem Blatt neben dem Tempel 4/4 · @5: «Lehre in der Synagoge» (Tätigkeit statt Ort) | @4 |
+| Ausschluss aus der Synagoge (`FIG-ZEICHEN-AUSSCHLUSS`) | Synagoge mit rotem Verbotszeichen | auf @3 0/4 («Tempel verboten»), auf @4 4/4 | auf @4 |
+| Rabe (`FIG-OBJ-RABE`, neu) | @1 schwarzer Vogel mit kräftigem Schnabel auf einem Zweig · @2 fliegend | je 4/4 «Rabe» | @1 |
+| Schüssel mit Schöpfkelle (Zeichen der Marta in Lk 10) | Schüssel, Kelle, Dampf | Bild 8/8 erkannt, Bedeutung allein 0/8 («Linsengericht») | als Erkennungszeichen (im Porträt 3/3 «Marta») |
+
+**Figuren** `FIG-MARTA-LK` und `FIG-MARIA-LK` (eigene Lukas-Figuren, ohne Betanien-Zeichen, Entscheid Andi Neck): Marta in ockerfarbenem
+Gewand mit braunem Kopftuch und der Schüssel mit Schöpfkelle, die nur in Feldern erscheint, deren Verse das Bedienen nennen
+([[LUK.10.40]]); Maria in olivgrünem Gewand mit ockerfarbenem Kopftuch, ohne Zeichen. Porträt ohne Namen: Marta 3/3 «Marta
+(Gastgeberin, Lk 10,38–42)»; Maria 3/3 «junge Frau, am ehesten Maria, die Mutter Jesu, aber ohne deren Merkmale» – gewollt neutral,
+im Bild über Namensschild, Sitzen und Ohr zugeordnet. `FIG-MARTA` (Johannes) gilt nur noch für Johannes.
+
+**Grosse Wolke** (`stage.wolke`, kein neues Lexikonzeichen): eine breite Wolke oben im Feld umhüllt den Strahlenkranz, die Szene liegt
+leicht im Schatten. Eingesetzt in [[LUK.9.34-LUK.9.36]], [[MAT.17.5-MAT.17.6]], im Kapitelbild Mt 17, in [[MRK.9.7-MRK.9.8]] und im
+Kapitelbild Mk 9 (die Markus-Bilder hatten keine Wolke). Ganze Bilder Lk 9,28–36, Mt 17,1–8, Mk 9,2–13: 6 von 6 Instanzen lesen
+«oben eine grosse Wolke, darin der Strahlenkranz; die Stimme kommt aus der Wolke, von Gott».
+
+Lehren: Säulen und Giebel machen jedes Gebäude zum Tempel; erst das schlichte Haus mit der Rolle wird als Synagoge gelesen, auch
+neben dem Tempel. Eine Szene im Haus (Leser und Zuhörer) liest sich als Tätigkeit, nicht als Ort. Ein Gegenstand in den Händen trägt
+eine Person (Marta mit Schüssel), allein bedeutet er etwas anderes. Grenzen: Die ganzen Bilder wurden mit der Säulen-Synagoge (@3)
+beschrieben, vor der Umstellung auf @4 (dort: «Gebäude mit Säulen (Synagoge)»); kein Test mit Menschen.
+
+**Erkennungszeichen nur, wo der Text sie stützt** (Entscheid Andi Neck 2026-10-26, für alle Bücher): `scripts/authoring/erkennungszeichen.py`
+prüft je Feld das gezeigte Zeichen gegen den Versbereich. Lauf vom 2026-10-26 (`reports/erkennungszeichen-2026-10-26.json`; ohne
+`LUK.json` und `LUK-3.json`): 336 gezeigte Zeichen, 255 nicht gestützt (u. a. Schlüssel des Petrus 63 von 64, Richterstuhl 18 von 22,
+Alabastergefäss 17 von 20, Hammer des Josef 17 von 17, Kreuzstab 16 von 16, X-Kreuz 14, Kelch 12, Jakobsmuschel 11, Kasse 10 von 12);
+dort `stage.hold` `"LEER"`, Legende gekürzt und, wo die Figur im Bild sonst nirgends benannt ist, ein Namensschild. Dazu von Hand:
+Mose ohne Stab bei der Verklärung, die Jünger des Johannes ohne Kreuzstab (Gruppe), die Legende «Kreuzstab» beim Täufer in Mt 3 (er
+hält dort die Taufmuschel). Die Erkennungszeichen bleiben im Lexikon-Porträt.
+
 ### Reihenfolge der Überarbeitung
 
 1. Die 20 meistverwendeten schwachen Zeichen (rund die Hälfte aller schwachen Verwendungen).

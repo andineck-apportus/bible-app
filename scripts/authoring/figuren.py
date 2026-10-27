@@ -36,6 +36,11 @@ ATTR = {
              '<path d="M7.6 1.6l.5 4.6" stroke="#5B3A20" stroke-width="1"/><path d="M6.4 14.2q1.8 1 3.4 0" fill="none" stroke="#5B3A20" stroke-width="1.2"/></g>',
     "salbgefaess": '<path d="M5 6h6l1 8H4z" fill="#E9D8B4" stroke="#3B3226" stroke-width=".8"/><path d="M6 6V4h4v2" fill="#C9B48E" stroke="#3B3226" stroke-width=".8"/><path d="M5 3h6v1.4H5z" fill="#8E3B5E"/>',
     "flaeschchen": '<path d="M6.5 3h3v3l1.5 2v7h-6V8l1.5-2z" fill="#E9D8B4" stroke="#3B3226" stroke-width=".8"/><path d="M6.5 2h3v1.4h-3z" fill="#6B8E7A"/>',
+    # Schüssel mit Schöpfkelle und Dampf: Marta bedient ([[LUK.10.40]]); Runde 16 statt der Kelle allein (in 32 px als Hammer gelesen)
+    "schuessel-kelle": '<path d="M10.6 8.6L14.4 1.6" stroke="#3B3226" stroke-width="2.4" stroke-linecap="round"/><path d="M10.6 8.6L14.4 1.6" stroke="#9A6A3A" stroke-width="1.3" stroke-linecap="round"/>'
+                       '<path d="M1 8.4h14q-.6 6.4-7 6.4T1 8.4z" fill="#B07A3E" stroke="#3B3226" stroke-width=".9" stroke-linejoin="round"/>'
+                       '<ellipse cx="8" cy="8.4" rx="7" ry="1.6" fill="#D9B27A" stroke="#3B3226" stroke-width=".8"/>'
+                       '<g fill="none" stroke="#8A847A" stroke-width=".9" stroke-linecap="round"><path d="M4.6 5.6q-1.2-1.4 0-2.8"/><path d="M7.6 5.4q-1.2-1.6 0-3.2"/></g>',
     "kelle": '<path d="M12 2L6 9" stroke="#7A5A34" stroke-width="1.6" stroke-linecap="round"/><path d="M2 10a4 3 0 0 0 7 0z" fill="#8C8070" stroke="#3B3226" stroke-width=".8"/>',
     "lampe": '<path d="M2 10q6-5 11 0l2-1v2q-7 4-13-1z" fill="#B07A3E" stroke="#3B3226" stroke-width=".8"/><path d="M13 9q2-4 0-7-1 3 0 7z" fill="#F2B53A"/>',
     "netz": '<path d="M2 3h12l-2 11H4z" fill="none" stroke="#8A6A3A" stroke-width="1"/><path d="M2 3l10 11M6 3l8 8M10 3l4 4M14 3L4 14M10 3l-8 8M6 3L2 7" stroke="#8A6A3A" stroke-width=".6"/>',
