@@ -407,6 +407,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('JHN.6.7', 'Denar', 'literal', 'δηναρίων', None, None, 'En Denar isch de üblich Taglohn vomene Arbeiter gsii ([[MAT.20.2]]); zweihundert Denar sind öppe zweihundert Taglöhn. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("JHN.6.1", "vom See", "adapted", "τῆς θαλάσσης", "vom Meer", None, "De Johannes säit em See Gennesaret wie de Markus und de Matthäus θάλασσα («Meer»)."),
  ("JHN.6.2", "d Zeiche", "literal", "τὰ σημεῖα", None, ["d Wunder"], "σημεῖον isch überall «Zeiche», nöd «Wunder»: De Johannes nännt d Tate vom Jesus Zeiche, wo über sich use zeiged ([[JHN.2.11]], [[JHN.20.30]]). Grundentscheid nach scripts/authoring/johannes_text_01_03.py."),
  ("JHN.6.9", "Gerschtebroot", "literal", "ἄρτους κριθίνους", None, None, "Gerschtebroot isch billiger gsii als Weizebroot (vgl. [[2KI.4.42]]–[[2KI.4.44]])."),

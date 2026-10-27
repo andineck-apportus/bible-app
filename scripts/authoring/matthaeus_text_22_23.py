@@ -402,6 +402,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MAT.22.19', 'en Denar', 'literal', 'δηνάριον', None, None, 'Römischi Silbermünz mit Bild und Ufschrift vom Kaiser, öppe en Taglohn ([[MAT.20.2]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MAT.22.1", "hät gantwortet", "literal", "ἀποκριθεὶς", None, ["hät s Wort gnoo"],
   "Es Frag gaat nöd voruus; s Gliichnis gaat uf d Laag vo [[MAT.21.45]]–[[MAT.21.46]] ii."),
  ("MAT.22.2", "S Riich vo de Himel", "literal", "ἡ βασιλεία τῶν οὐρανῶν", None, ["s Himelriich", "s Riich vo Gott"],

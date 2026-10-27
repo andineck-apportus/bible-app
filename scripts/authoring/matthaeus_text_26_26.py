@@ -367,6 +367,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MAT.26.15', 'driissg Silberstück', 'literal', 'τριάκοντα ἀργύρια', None, ['driissg Silberling'], 'Welchi Münze gmeint sind, seit de Text nöd; öppe Schekel oder Tetradrachme (je vier Drachme). Vgl. [[ZEC.11.12]]. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MAT.26.1", "Und es isch gscheh", "literal", "Καὶ ἐγένετο", None, None,
   "Mit dere Formle schlüüsst de Matthäus sini füüf grosse Rede ab ([[MAT.7.28]], [[MAT.11.1]], [[MAT.13.53]], [[MAT.19.1]]); nu da staat «all»."),
  ("MAT.26.2", "wird usgliferet", "literal", "παραδίδοται", None, ["wird verrate"],

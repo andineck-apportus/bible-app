@@ -84,7 +84,7 @@ DE = {
  # ------------------------------------------------------------ Kapitel 9
  "LUK.9.1": "[Er rief]{1} [die Zwölf]{3,4} [zusammen]{1} und [gab]{5} [ihnen]{6} [Kraft]{7} und{8} [Vollmacht]{9} [über]{10} [alle]{11} [Dämonen]{12,13} und{14} [zum Heilen]{16} [von Krankheiten]{15}, ~2",
  "LUK.9.2": "und{1} [er sandte]{2} [sie]{3} [aus]{2}, [das Reich]{5,6} [Gottes]{7,8} [zu verkündigen]{4} und{9} [die Kranken]{11,12} [zu heilen]{10}.",
- "LUK.9.3": "Und{1} [er sagte]{2} [zu]{3} [ihnen]{4}: «[Nehmt]{6} [nichts]{5} [mit]{6} [auf]{7} [den Weg]{8,9}, [weder]{10} [Stab]{11} [noch]{12} [Tasche]{13} [noch]{14} [Brot]{15} [noch]{16} [Geld]{17}; [ihr sollt]{22} [auch nicht]{18} [je]{19} [zwei]{20} [Untergewänder]{21} [haben]{22}.",
+ "LUK.9.3": "Und{1} [er sagte]{2} [zu]{3} [ihnen]{4}: «[Nehmt]{6} [nichts]{5} [mit]{6} [auf]{7} [den Weg]{8,9}, [weder]{10} [Stab]{11} [noch]{12} [Tasche]{13} [noch]{14} [Brot]{15} [noch]{16} [Silber]{17}; [ihr sollt]{22} [auch nicht]{18} [je]{19} [zwei]{20} [Untergewänder]{21} [haben]{22}.",
  "LUK.9.4": "Und{1} [in]{2} [welches]{3} [Haus]{5} [ihr]{6} [auch]{4} [hineingeht]{6}: [Dort]{7} [bleibt]{8}, und{9} [von dort]{10} [zieht weiter]{11}.",
  "LUK.9.5": "Und{1} [alle, die]{2,3} [euch]{6} [nicht]{4} [aufnehmen]{5}: [Wenn ihr]{7} [aus]{8} [jener]{11} [Stadt]{9,10} [hinausgeht]{7}, [schüttelt]{18} [den Staub]{12,13} [von]{14} [euren]{17} [Füssen]{15,16} [ab]{18}, [zum]{19} [Zeugnis]{20} [gegen]{21} [sie]{22}.»",
  "LUK.9.6": "[Da]{2} [gingen sie hinaus]{1} und [zogen]{3} [von Dorf zu Dorf]{4-6}; [sie verkündigten das Evangelium]{7} und{8} [heilten]{9} [überall]{10}.",
@@ -244,7 +244,7 @@ DE = {
  "LUK.12.3": "[Darum]{1,2} [wird]{11} [alles, was]{3} [ihr]{7} [im]{4,5} [Dunkeln]{6} [gesagt habt]{7}, [im]{8,9} [Licht]{10} [gehört werden]{11}, und{12} [was]{13} [ihr]{17} [in]{18} [den Kammern]{19,20} [ins]{14,15} [Ohr]{16} [geflüstert habt]{17}, [wird]{21} [auf]{22} [den Dächern]{23,24} [verkündigt werden]{21}.",
  "LUK.12.4": "[Ich sage]{1} [aber]{2} [euch]{3}, [meinen]{4,6} [Freunden]{5}: [Fürchtet euch]{8} [nicht]{7} [vor]{9} [denen, die]{10} [den Leib]{12,13} [töten]{11} und{14} [danach]{15,16} [nichts]{17} [Weiteres]{19,20} [tun]{21} [können]{18}.",
  "LUK.12.5": "[Ich werde]{1} [euch]{3} [aber]{2} [zeigen]{1}, [wen]{4} [ihr fürchten sollt]{5}: [Fürchtet]{6} [den]{7}, [der]{11} [nach]{8} [dem Töten]{9,10} [die Vollmacht]{12} [hat]{11}, [in]{14} [die Hölle]{15,16} [zu werfen]{13}. [Ja]{17}, [ich sage]{18} [euch]{19}: [Den]{20} [fürchtet]{21}!",
- "LUK.12.6": "[Werden]{4} [nicht]{1} [fünf]{2} [Spatzen]{3} für [zwei]{6} [Groschen]{5} [verkauft]{4}? Und{7} [nicht]{11} [einer]{8} [von]{9} [ihnen]{10} [ist]{12} [vor]{14} [Gott]{15,16} [vergessen]{13}.",
+ "LUK.12.6": "[Werden]{4} [nicht]{1} [fünf]{2} [Spatzen]{3} für [zwei]{6} [Asse]{5} [verkauft]{4}? Und{7} [nicht]{11} [einer]{8} [von]{9} [ihnen]{10} [ist]{12} [vor]{14} [Gott]{15,16} [vergessen]{13}.",
  "LUK.12.7": "[Ja]{1}, [sogar]{2} [die Haare]{3,4} [auf eurem Kopf]{5-7} [sind]{9} [alle]{8} [gezählt]{9}. [Fürchtet euch]{11} [nicht]{10}! [Ihr seid mehr wert]{14} [als viele]{12} [Spatzen]{13}.",
  "LUK.12.8": "[Ich sage]{1} [euch]{3} [aber]{2}: [Jeder, der]{4,5} [sich]{7} [vor]{10} [den Menschen]{11,12} [zu]{8} [mir]{9} [bekennt]{7}, [zu]{19} [dem]{20} [wird sich]{18} [auch]{13} [der Menschensohn]{14-17} [bekennen]{18} [vor]{21} [den Engeln]{22,23} [Gottes]{24,25}. ~6",
  "LUK.12.9": "[Wer]{1} [mich]{4} [aber]{2} [vor]{5} [den Menschen]{6,7} [verleugnet]{3}, [der wird]{8} [vor]{9} [den Engeln]{10,11} [Gottes]{12,13} [verleugnet werden]{8}.",
@@ -297,14 +297,14 @@ DE = {
  "LUK.12.56": "[Ihr Heuchler]{1}! [Das Aussehen]{2,3} [der Erde]{4,5} und{6} [des Himmels]{7,8} [könnt ihr]{9} [deuten]{10}; [diese]{11,14} [Zeit]{13} [aber]{12} – [warum]{15} [könnt ihr]{17} sie [nicht]{16} [deuten]{18}?",
  "LUK.12.57": "[Warum]{1} [urteilt ihr]{7} [aber]{2} [nicht]{6} [auch]{3} [von euch selbst aus]{4,5}, [was recht ist]{8,9}?",
  "LUK.12.58": "[Wenn]{1} [du]{3} [nämlich]{2} [mit]{4} [deinem]{5,7} [Gegner]{6} [vor]{8} [die Behörde]{9} [gehst]{3}, [so bemühe dich]{13,14} [auf]{10} [dem Weg]{11,12}, [von]{16} [ihm]{17} [loszukommen]{15}, [damit]{18} [er]{19} [dich]{20} [nicht]{18} [zum]{21,22} [Richter]{23} [schleppt]{19}, und{24} [der Richter]{25,26} [dich]{27} [dem Gerichtsvollzieher]{29,30} [übergibt]{28}, und{31} [der Gerichtsvollzieher]{32,33} [dich]{34} [ins]{36} [Gefängnis]{37} [wirft]{35}.",
- "LUK.12.59": "[Ich sage]{1} [dir]{2}: [Du wirst]{5} [von dort]{6} [gewiss nicht]{3,4} [herauskommen]{5}, [bis]{7} [du]{12} [auch]{8} [den letzten]{9,10} [Rappen]{11} [bezahlt hast]{12}.»",
+ "LUK.12.59": "[Ich sage]{1} [dir]{2}: [Du wirst]{5} [von dort]{6} [gewiss nicht]{3,4} [herauskommen]{5}, [bis]{7} [du]{12} [auch]{8} [das letzte]{9,10} [Lepton]{11} [bezahlt hast]{12}.»",
 }
 
 GSW = {
  # ------------------------------------------------------------ Kapitel 9
  "LUK.9.1": "[Er hät]{1} [di Zwölf]{3,4} [zämegrüeft]{1} und [hät]{5} [ine]{6} [Chraft]{7} und{8} [Vollmacht]{9} [ggää]{5} [über]{10} [alli]{11} [Dämone]{12,13} und{14} [zum]{16} [Chrankete]{15} [heile]{16}, ~2",
  "LUK.9.2": "und{1} [er hät]{2} [si]{3} [usgschickt]{2}, [zum]{4} [s Riich]{5,6} [vo Gott]{7,8} [verchünde]{4} und{9} [d Chranke]{11,12} [heile]{10}.",
- "LUK.9.3": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Nämed]{6} [nüüt]{5} [mit]{6} [uf]{7} [de Wäg]{8,9}, [kei]{10} [Stäcke]{11}, [kei]{12} [Täsche]{13}, [kei]{14} [Broot]{15}, [kei]{16} [Gäld]{17}; und [ir söled]{22} [au nöd]{18} [je]{19} [zwei]{20} [Underchleider]{21} [haa]{22}.",
+ "LUK.9.3": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Nämed]{6} [nüüt]{5} [mit]{6} [uf]{7} [de Wäg]{8,9}, [kei]{10} [Stäcke]{11}, [kei]{12} [Täsche]{13}, [kei]{14} [Broot]{15}, [kei]{16} [Silber]{17}; und [ir söled]{22} [au nöd]{18} [je]{19} [zwei]{20} [Underchleider]{21} [haa]{22}.",
  "LUK.9.4": "Und{1} [i]{2} [weles]{3} [Huus]{5} [ir]{6} [au]{4} [inegönd]{6}: [Dört]{7} [bliibed]{8}, und{9} [vo dört]{10} [gönd wiiter]{11}.",
  "LUK.9.5": "Und{1} [alli, wo]{2,3} [eu]{6} [nöd]{4} [ufnämed]{5}: [Wänn ir]{7} [us]{8} [säbere]{11} [Stadt]{9,10} [usegönd]{7}, [schüttled]{18} [de Staub]{12,13} [vo]{14} [eune]{17} [Füess]{15,16} [ab]{18}, [als]{19} [Zügnis]{20} [gäge]{21} [si]{22}.»",
  "LUK.9.6": "[Dänn]{2} [sind si usezoge]{1} und [sind]{3} [vo Dorf zu Dorf]{4-6} [gwanderet]{3}; [si händ s Evangelium verchündet]{7} und{8} [händ]{9} [überall]{10} [gheilt]{9}.",
@@ -464,7 +464,7 @@ GSW = {
  "LUK.12.3": "[Drum]{1,2} [wird]{11} [alles, wo]{3} [ir]{7} [im]{4,5} [Fischtere]{6} [gseit händ]{7}, [im]{8,9} [Liecht]{10} [ghört]{11}, und{12} [was]{13} [ir]{17} [i]{18} [de Chammere]{19,20} [is]{14,15} [Ohr]{16} [gflüschteret händ]{17}, [wird]{21} [uf]{22} [de Dächer]{23,24} [verchündet]{21}.",
  "LUK.12.4": "[Ich säg]{1} [eu]{3} [aber]{2}, [mine]{4,6} [Fründe]{5}: [Händ]{8} [kei]{7} [Angscht]{8} [vor]{9} [dene, wo]{10} [de Liib]{12,13} [töded]{11} und{14} [nachher]{15,16} [nüüt]{17} [Wiiters]{19,20} [mache]{21} [chönd]{18}.",
  "LUK.12.5": "[Ich wird]{1} [eu]{3} [aber]{2} [zeige]{1}, [vor wem]{4} [ir eu fürchte söled]{5}: [Fürchted eu]{6} [vor dem]{7}, [wo]{11} [nach]{8} [em Töde]{9,10} [d Vollmacht]{12} [hät]{11}, [i]{14} [d Höll]{15,16} [z wärfe]{13}. [Ja]{17}, [ich säg]{18} [eu]{19}: [Vor dem]{20} [fürchted eu]{21}!",
- "LUK.12.6": "[Wärded]{4} [nöd]{1} [föif]{2} [Spatze]{3} für [zwee]{6} [Batze]{5} [verchauft]{4}? Und{7} [nöd]{11} [eine]{8} [vo]{9} [ine]{10} [isch]{12} [bi]{14} [Gott]{15,16} [vergässe]{13}.",
+ "LUK.12.6": "[Wärded]{4} [nöd]{1} [föif]{2} [Spatze]{3} für [zwee]{6} [As]{5} [verchauft]{4}? Und{7} [nöd]{11} [eine]{8} [vo]{9} [ine]{10} [isch]{12} [bi]{14} [Gott]{15,16} [vergässe]{13}.",
  "LUK.12.7": "[Ja]{1}, [sogar]{2} [d Haar]{3,4} [uf eurem Chopf]{5-7} [sind]{9} [alli]{8} [zellt]{9}. [Händ]{11} [kei]{10} [Angscht]{11}! [Ir sind meh wärt]{14} [als vil]{12} [Spatze]{13}.",
  "LUK.12.8": "[Ich säg]{1} [eu]{3} [aber]{2}: [Jede, wo]{4,5} [sich]{7} [vor]{10} [de Mänsche]{11,12} [zu]{8} [mir]{9} [bekännt]{7}, [zu]{19} [dem]{20} [wird sich]{18} [au]{13} [de Mänschesohn]{14-17} [bekänne]{18} [vor]{21} [de Ängel]{22,23} [vo Gott]{24,25}. ~6",
  "LUK.12.9": "[Wär]{1} [mich]{4} [aber]{2} [vor]{5} [de Mänsche]{6,7} [verleugnet]{3}, [dä wird]{8} [vor]{9} [de Ängel]{10,11} [vo Gott]{12,13} [verleugnet]{8}.",
@@ -517,11 +517,12 @@ GSW = {
  "LUK.12.56": "[Ir Hüüchler]{1}! [S Usgseh]{2,3} [vo de Ärde]{4,5} und{6} [vom Himmel]{7,8} [chönd ir]{9} [düüte]{10}; [die]{11,14} [Ziit]{13} [aber]{12} – [werum]{15} [chönd ir]{17} si [nöd]{16} [düüte]{18}?",
  "LUK.12.57": "[Werum]{1} [urteiled ir]{7} [aber]{2} [nöd]{6} [au]{3} [vo eu us]{4,5}, [was rächt isch]{8,9}?",
  "LUK.12.58": "[Wänn]{1} [du]{3} [nämli]{2} [mit]{4} [dim]{5,7} [Gägner]{6} [vor]{8} [d Behörde]{9} [gaasch]{3}, [so gib dir Müe]{13,14} [uf]{10} [em Wäg]{11,12}, [vo]{16} [ihm]{17} [loszchoo]{15}, [demit]{18} [er]{19} [dich]{20} [nöd]{18} [zum]{21,22} [Richter]{23} [schleipft]{19}, und{24} [de Richter]{25,26} [dich]{27} [em Betriibigsbeamte]{29,30} [übergit]{28}, und{31} [de Betriibigsbeamt]{32,33} [dich]{34} [is]{36} [Gfängnis]{37} [wirft]{35}.",
- "LUK.12.59": "[Ich säg]{1} [dir]{2}: [Du chunnsch]{5} [sicher nöd]{3,4} [vo dört]{6} [use]{5}, [bis]{7} [du]{12} [au]{8} [de letscht]{9,10} [Rappe]{11} [zaalt häsch]{12}.»",
+ "LUK.12.59": "[Ich säg]{1} [dir]{2}: [Du chunnsch]{5} [sicher nöd]{3,4} [vo dört]{6} [use]{5}, [bis]{7} [du]{12} [au]{8} [s letscht]{9,10} [Lepton]{11} [zaalt häsch]{12}.»",
 }
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
 DEC_DE = [
+ ('LUK.9.3', 'Silber', 'literal', 'ἀργύριον', None, ['Geld'], 'ἀργύριον heisst «Silber» und steht für Geld in Silbermünzen. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  # ------------------------------------------------------------ Kapitel 9
  ("LUK.9.1", "Vollmacht", "literal", "ἐξουσίαν", None, ["Befugnis"], "ἐξουσία ist die verliehene, rechtmässige Befugnis (wie bei Markus und Matthäus «Vollmacht»); δύναμις «Kraft» ist das Vermögen, etwas zu bewirken. Lukas nennt beides zusammen (vgl. [[LUK.4.36]])."),
  ("LUK.9.3", "Untergewänder", "literal", "χιτῶνας", None, ["Hemden", "Röcke"], "χιτών ist das Untergewand, über dem man den Mantel trug. Lukas schliesst hier auch den Stab aus (anders [[MRK.6.8]]); die Übersetzung gleicht nicht an."),
@@ -632,7 +633,7 @@ DEC_DE = [
  ("LUK.12.1", "Sauerteig", "literal", "ζύμης", None, None, "Bild für eine unscheinbare, aber alles durchdringende Wirkung; Lukas deutet ihn selbst als Heuchelei."),
  ("LUK.12.3", "Darum", "interpretive", "ἀνθʼ ὧν", None, ["weil"], "ἀνθʼ ὧν heisst sonst meist «weil»; hier eher folgernd «darum»."),
  ("LUK.12.5", "Hölle", "traditional", "γέενναν", "Gehenna", None, "Wie bei Markus und Matthäus: γέεννα gibt hebräisch gê hinnōm wieder, das Hinnomtal bei Jerusalem, das zum Bild für den Ort des endzeitlichen Gerichts wurde."),
- ("LUK.12.6", "Groschen", "adapted", "ἀσσαρίων", "Asse", ["Pfennige"], "Der As war eine kleine römische Kupfermünze, ein Sechzehntel eines Denars."),
+ ('LUK.12.6', 'Asse', 'literal', 'ἀσσαρίων', None, ['Groschen', 'Pfennige'], 'Der As (griechisch ἀσσάριον, Mehrzahl «Asse») war eine kleine römische Kupfermünze im Wert eines Sechzehntels Denar; ein Denar war der übliche Tageslohn eines Arbeiters ([[MAT.20.2]]). Matthäus nennt zwei Spatzen für einen As ([[MAT.10.29]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.12.8", "zu mir bekennt", "literal", "ὁμολογήσῃ ἐν ἐμοὶ", "in mir bekennt", None, "Die Verbindung mit ἐν ist eine semitische Ausdrucksweise."),
  ("LUK.12.10", "lästert", "literal", "βλασφημήσαντι", None, None, "Wie [[MRK.3.29]]."),
  ("LUK.12.14", "Mensch", "literal", "Ἄνθρωπε", None, ["Mann", "Freund"], "Eine distanzierte, leicht abweisende Anrede."),
@@ -668,10 +669,12 @@ DEC_DE = [
  ("LUK.12.56", "diese Zeit", "interpretive", "τὸν καιρὸν τοῦτον", None, ["diesen Zeitpunkt", "diese Stunde"], "καιρός ist die entscheidende, gefüllte Zeit."),
  ("LUK.12.58", "die Behörde", "adapted", "ἄρχοντα", "einen Vorsteher", ["den Richter", "den Beamten"], None),
  ("LUK.12.58", "Gerichtsvollzieher", "interpretive", "πράκτορι", None, ["Gerichtsdiener", "Schuldeintreiber"], "Der πράκτωρ trieb Schulden ein und vollzog die Schuldhaft."),
- ("LUK.12.59", "Rappen", "adapted", "λεπτὸν", "Lepton", ["Pfennig"], "Das Lepton war die kleinste Münze; «Rappen» ist das schweizerische Gegenstück."),
+ ('LUK.12.59', 'Lepton', 'literal', 'λεπτὸν', None, ['Rappen', 'Pfennig'], 'Das Lepton (Mehrzahl «Lepta») war die kleinste Kupfermünze im Land, ein halber Quadrans ([[MRK.12.42]]), also ein Hundertachtundzwanzigstel Denar, des Tageslohns eines Arbeiters ([[MAT.20.2]]). Gemeint ist: bis auf den letzten Rest; Matthäus nennt den Quadrans ([[MAT.5.26]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
 ]
 
 DEC_GSW = [
+ ('LUK.10.35', 'Denar', 'literal', 'δηνάρια', None, None, 'En Denar (Mehrzahl «Denar») isch e römischi Silbermünz und de üblich Taglohn vomene Arbeiter gsii ([[MAT.20.2]]); zwee Denar sind zwee Taglöhn. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
+ ('LUK.9.3', 'Silber', 'literal', 'ἀργύριον', None, ['Gäld'], 'ἀργύριον heisst «Silber» und staat für Gäld i Silbermünze. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.9.1", "Vollmacht", "literal", "ἐξουσίαν", None, None, "ἐξουσία isch d Befuegnis, wo eim ggää wird; δύναμις «Chraft» isch s Vermöge."),
  ("LUK.9.3", "Underchleider", "literal", "χιτῶνας", None, ["Hemmli"], "Wie bim Markus. De Lukas schlüüsst au de Stäcke us; d Übersetzig glicht nöd aa."),
  ("LUK.9.7", "de Tetrarch", "literal", "ὁ τετραάρχης", None, ["de Landesfürscht"], "De Herodes Antipas, Landesfürscht über Galiläa und Peräa."),
@@ -720,7 +723,7 @@ DEC_GSW = [
  ("LUK.12.1", "fascht vertrampet", "adapted", "καταπατεῖν", "vertrampet", None, "Übertriibig; «fascht» isch ergänzt."),
  ("LUK.12.4", "Händ kei Angscht", "adapted", "μὴ φοβηθῆτε", "Fürchted eu nöd", None, FURCHT_GSW + " Ebenso [[LUK.12.7]], [[LUK.12.32]]."),
  ("LUK.12.5", "Höll", "traditional", "γέενναν", "Gehenna", None, "Wie bim Markus und Matthäus."),
- ("LUK.12.6", "Batze", "adapted", "ἀσσαρίων", "As", None, "De As isch e chliini römischi Chupfermünz gsii; «Batze» wie bim Matthäus."),
+ ('LUK.12.6', 'As', 'literal', 'ἀσσαρίων', None, ['Batze'], 'De As (Mehrzahl «As») isch e chliini römischi Chupfermünz gsii, en Sächzähntel vomene Denar; en Denar isch de Taglohn vomene Arbeiter gsii ([[MAT.20.2]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.12.19", "Seel", "literal", "ψυχῇ", None, ["mir sälber"], None),
  ("LUK.12.20", "forderet me", "adapted", "ἀπαιτοῦσιν", "fordered si", None, None),
  ("LUK.12.33", "Schabe", "adapted", "σὴς", "Motte", None, "«Schabe» isch i de Mundart d Chleidermotte."),
@@ -729,7 +732,7 @@ DEC_GSW = [
  ("LUK.12.49", "wie fescht wett ich, es wär scho aazündt", "interpretive", "τί θέλω εἰ ἤδη ἀνήφθη", "was wott ich, wänn s scho aazündt isch", None, "De churz Satz isch schwär z düüte; d Übersetzig verstaat en als Wunsch."),
  ("LUK.12.51", "z bringe", "adapted", "δοῦναι", "z gää", None, None),
  ("LUK.12.58", "Betriibigsbeamte", "adapted", "πράκτορι", "Iitriiber", ["Gerichtsdiener"], "De πράκτωρ hät Schulde iitribe und d Schuldhaft vollzoge; «Betriibigsbeamt» isch s schwiizerisch Gägestück."),
- ("LUK.12.59", "Rappe", "adapted", "λεπτὸν", "Lepton", None, "Di chliinscht Münz; «Rappe» wie bim Matthäus."),
+ ('LUK.12.59', 'Lepton', 'literal', 'λεπτὸν', None, ['Rappe'], 'S Lepton (Mehrzahl «Lepta») isch di chliinscht Chupfermünz im Land gsii, en halbe Quadrans ([[MRK.12.42]]); gmeint isch: bis ufs Letscht. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
 ]
 
 # (Lesart, Stelle, von de, zu de, von gsw, zu gsw, Wirkung, Hinweis de, Hinweis gsw, Wortlaute de, Wortlaute gsw,
@@ -1020,7 +1023,7 @@ UNITS = [
  ("TU-LUK-012-049-053", "LUK.12.49-LUK.12.53", "discourse", "Feuer und Spaltung", None,
   "Jesus ist gekommen, Feuer auf die Erde zu werfen, und muss mit einer Taufe getauft werden; er ist bedrängt, bis sie vollzogen ist. Er bringt nicht Frieden, sondern Spaltung: Selbst in einem Haus werden Vater und Sohn, Mutter und Tochter, Schwiegermutter und Schwiegertochter gegeneinander stehen.", None),
  ("TU-LUK-012-054-059", "LUK.12.54-LUK.12.59", "discourse", "Die Zeichen dieser Zeit deuten", None,
-  "Zu den Menschenmengen sagt Jesus: Das Wetter könnt ihr an Wolke und Wind deuten, warum nicht diese Zeit? Urteilt selbst, was recht ist: Wer mit seinem Gegner unterwegs ist, soll sich mit ihm einigen, bevor er vor den Richter geschleppt wird und ins Gefängnis kommt, aus dem er erst nach Bezahlung des letzten Rappens herauskommt.", None),
+  "Zu den Menschenmengen sagt Jesus: Das Wetter könnt ihr an Wolke und Wind deuten, warum nicht diese Zeit? Urteilt selbst, was recht ist: Wer mit seinem Gegner unterwegs ist, soll sich mit ihm einigen, bevor er vor den Richter geschleppt wird und ins Gefängnis kommt, aus dem er erst nach Bezahlung des letzten Leptons herauskommt.", None),
 ]
 
 UNITS_GSW = {
@@ -1057,7 +1060,7 @@ UNITS_GSW = {
  "TU-LUK-012-022-034": ("Mached eu kei Sorge", "De Jesus seit de Jünger: Mached eu kei Sorge um Ässe und Chleider. Gott git de Rabe z ässe und leit d Lilie schöner aa als de Salomo; wie vil meh eu, ir Chliigläubige. De Vatter weiss, was ir bruuched: Sueched sis Riich, dänn wird eu s ander dezueggää. Häb kei Angscht, chliini Herde; verchaufed eue Bsitz, gänd Almose und sammled en Schatz im Himmel, dänn wo eue Schatz isch, isch au eues Härz."),
  "TU-LUK-012-035-048": ("Wachi Chnächt", "De Jesus mahnt, parat z sii wie Chnächt, wo znacht uf iren Herr warted: Sälig die, won er wach aatrifft – er wird si sälber bediene. De Mänschesohn chunnt zu ere unerwartete Stund. Uf d Frag vom Petrus redt er vom treue Verwalter, wo de Herr über alles setzt, und vom Chnächt, wo d Diener und d Mägd schlaat und vom unerwartete Choo vom Herr überrascht wird. Wär de Wille vom Herr kännt und nöd dernaa ghandlet hät, überchunnt vil Schleg, wär en nöd kännt hät, wenig; vo dem, wo em vil ggää worde isch, wird vil verlangt."),
  "TU-LUK-012-049-053": ("Füür und Spaltig", "De Jesus isch choo, zum Füür uf d Ärde wärfe, und mues mit ere Taufi tauft wärde; er isch bedrängt, bis si vollzoge isch. Er bringt nöd Fride, sondern Spaltig: Sogar i eim Huus stönd Vatter und Sohn, Mueter und Tochter, Schwigermueter und Schwigertochter gägenand."),
- "TU-LUK-012-054-059": ("D Zeiche vo dere Ziit düüte", "Zu de Lüüt seit de Jesus: S Wätter chönd ir a Wolche und Wind düüte, werum nöd die Ziit? Urteiled sälber, was rächt isch: Wär mit sim Gägner understwägs isch, söll sich mit ihm einige, bevor er vor de Richter gschleipft wird und is Gfängnis chunnt, won er erscht nach em letschte Rappe wider usechunnt."),
+ "TU-LUK-012-054-059": ("D Zeiche vo dere Ziit düüte", "Zu de Lüüt seit de Jesus: S Wätter chönd ir a Wolche und Wind düüte, werum nöd die Ziit? Urteiled sälber, was rächt isch: Wär mit sim Gägner understwägs isch, söll sich mit ihm einige, bevor er vor de Richter gschleipft wird und is Gfängnis chunnt, won er erscht nach em letschte Lepton wider usechunnt."),
 }
 
 NOTES_DE = [
@@ -1101,7 +1104,7 @@ NOTES_GSW = [
   "«Schriftgleerte», «Gsetzeslehrer», «Generation» (γενεά), «Hüüchler», «Höll», «Totereich», «Machttate», «Chnächt», «lueg»/«lueged» (ἰδού), «Häb kei Angscht» (μὴ φοβοῦ), "
   "«uslifere», «d Mängi», «d Lüüt» (οἱ ὄχλοι), «s Volk»; nu bim Lukas: «Meischter» (ἐπιστάτα), «wahrhaftig» (ἀληθῶς)."),
  ("Mundart: Näme mit Artikel («de Jesus», «d Marta»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Riich vo Gott»); "
-  "s griechisch Futur oft mit em Präsens; Münze und Ämter mit schwiizerische Wörter («Batze», «Rappe», «Betriibigsbeamt»)."),
+  "s griechisch Futur oft mit em Präsens; Ämter mit schwiizerische Wörter («Betriibigsbeamt»); Münze mit em damalige Name («As», «Lepton»), de Wärt staat i de Erkläärig."),
  "D Übersetzig folgt a allne Apparatstelle em SBLGNT. I Lukas 9–12 fäält im SBLGNT kei Vers.",
 ]
 

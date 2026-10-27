@@ -404,7 +404,7 @@ GSW = {
  "LUK.7.38": "und{1} [isch]{2} [vo hine]{3} [zu]{4} [sine]{7} [Füess]{5,6} [gstande]{2} [und hät briegget]{8}; [si hät aagfange]{11}, [sini]{15} [Füess]{13,14} [mit irne Träne]{9,10} [nass z mache]{12}, und{16} [hät si]{22} [mit de Haar]{17,18} [vo irem]{21} [Chopf]{19,20} [abtröchnet]{22}, und{23} [hät]{24} [sini]{27} [Füess]{25,26} [küsst]{24} und{28} [mit em Salböl]{30,31} [gsalbet]{29}.",
  "LUK.7.39": "[Wo]{1} [de Pharisäer]{3,4} [aber]{2}, [wo]{5} [en]{7} [iiglade hät]{6}, [das gseh hät]{1}, [hät er]{8} [bi]{9} [sich]{10} [dänkt]{8}: «[Wänn]{13} [dä]{12} [en Prophet]{15} [wär]{14}, [wüsst er]{16,17}, [wär]{18} und{19} [was für e]{20} [Frau]{21,22} das isch, [wo]{23} [en]{25} [aalangt]{24}: [dass]{26} si [e Sünderin]{27} [isch]{28}.» ~11(λέγων leitet di diräkt Red ii)",
  "LUK.7.40": "Und{1} [de Jesus]{3,4} [hät s Wort gnoo]{2} und [zu]{6} [ihm]{7} [gseit]{5}: «[Simon]{8}, [ich ha]{9} [dir]{10} [öppis]{11} [z säge]{12}.» [Er]{13} [aber]{14} [seit]{17}: «[Lehrer]{15}, [säg]{16}!»",
- "LUK.7.41": "«[En]{5} [Gältverleiher]{4} [hät]{3} [zwei]{1} [Schuldner]{2} [gha]{3}; [de eint]{6,7} [hät]{8} [föifhundert]{10} [Denar]{9} [gschuldet]{8}, [de ander]{11,13} [aber]{12} [föifzg]{14}.",
+ "LUK.7.41": "«[En]{5} [Gäldverleiher]{4} [hät]{3} [zwei]{1} [Schuldner]{2} [gha]{3}; [de eint]{6,7} [hät]{8} [föifhundert]{10} [Denar]{9} [gschuldet]{8}, [de ander]{11,13} [aber]{12} [föifzg]{14}.",
  "LUK.7.42": "[Wil]{2} [si]{3} [nöd]{1} [händ chöne]{2} [zruggzale]{4}, [hät er]{6} [beidne]{5} d Schuld [gschänkt]{6}. [Wär]{7} [vo ine]{9} [wird]{11} [en]{12} [also]{8} [meh]{10} [liebe]{11}?»",
  "LUK.7.43": "[De Simon]{2} [hät gantwortet]{1} [und gseit]{3}: «[Ich nimm aa]{4}: [dä]{6}, won [er]{9} [em]{6} [am meischte]{7,8} [gschänkt hät]{9}.» [Er]{10} [aber]{11} [hät]{12} [zu ihm]{13} [gseit]{12}: «[Du häsch]{15} [richtig]{14} [gurteilt]{15}.» ~5(ὅτι nöd eigens widergää)",
  "LUK.7.44": "Und{1} [er hät sich]{2} [zu]{3} [de Frau]{4,5} [umdräit]{2} [und hät]{8} [zum Simon]{6,7} [gseit]{8}: «[Gsehsch]{9} [die]{10} [Frau]{11,12}? [Ich bi]{13} [i]{15} [dis]{14} [Huus]{16,17} [choo]{13}; [Wasser]{18} [für]{20} [d Füess]{21} [häsch]{23} [mir]{19} [keis]{22} [ggää]{23}; [si]{24} [aber]{25} [hät]{28} [mini]{29} [Füess]{30,31} [mit irne Träne]{26,27} [nass gmacht]{28} und{32} [mit irne Haar]{33-35} [abtröchnet]{36}.",
@@ -598,6 +598,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('LUK.7.41', 'Denar', 'literal', 'δηνάρια', None, None, 'En Denar isch de üblich Taglohn vomene Arbeiter gsii ([[MAT.20.2]]); föifhundert Denar sind meh als de Verdienst vomene Jahr. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.5.1", "Es isch aber gsii", "literal", "Ἐγένετο δὲ", None, ["Einisch"], EGEN_GSW),
  ("LUK.5.5", "Meischter", "interpretive", "Ἐπιστάτα", "Vorsteher", ["Herr", "Lehrer"], "ἐπιστάτης staat nu bim Lukas als Aared a de Jesus; διδάσκαλε isch «Lehrer» ([[LUK.7.40]], [[LUK.8.49]])."),
  ("LUK.5.10", "Mänsche fange", "literal", "ἀνθρώπους ἔσῃ ζωγρῶν", "Mänsche läbig fange", None, "ζωγρέω heisst «läbig fange»."),

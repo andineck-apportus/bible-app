@@ -331,7 +331,7 @@ DEC_GSW = [
  ("MAT.6.23", "schlächt", "interpretive", "πονηρὸς", "bös", ["neidisch"], None),
  ("MAT.6.24", "hasst er", "interpretive", "μισήσει", None, ["setzt er hinde"], "«Hasse» und «liebe» chönd semitisch au «hindesetze» und «vorzie» heisse (vgl. [[LUK.14.26]])."),
  ("MAT.6.24", "er hanget am eint aa", "adapted", "ἑνὸς ἀνθέξεται", "er wird am eint aahange", ["er haltet zum eint"], "S griechisch Futur isch i de Mundart mit em Präsens wiedergää, wie me s seit."),
- ("MAT.6.24", "em Mammon", "traditional", "μαμωνᾷ", "em Bsitz", ["em Gält"], "Aramäischs Wort für Bsitz, Vermöge; da wie en Herr, wo me em dient."),
+ ("MAT.6.24", "em Mammon", "traditional", "μαμωνᾷ", "em Bsitz", ["em Gäld"], "Aramäischs Wort für Bsitz, Vermöge; da wie en Herr, wo me em dient."),
  ("MAT.6.25", "Mached eu kei Sorge", "interpretive", "μὴ μεριμνᾶτε", "Sorged eu nöd", None,
   "μεριμνάω isch s ängschtlich, aagspannt Sorge; Leitwort vo [[MAT.6.25-MAT.6.34]]. Zur Läsart «oder was ir trinked» lueg d Alternative."),
  ("MAT.6.25", "Läbe", "interpretive", "ψυχῇ", "Seel", None, None),

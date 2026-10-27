@@ -243,7 +243,7 @@ UNITS = [
 UNITS_GSW = {
  "TU-TIT-001-001-016": ("Ornig für d Gmeinde uf Kreta", "De Paulus git em Titus de Uftrag, i de Stedt vo Kreta Ältischti iizsetze, wo sälber glaubwürdig läbed und a de gsunde Lehr feschthalted, und gäge Lehrer vorzgaa, wo Familie durenand bringed."),
  "TU-TIT-001-001-004": ("Gruess: Apostel für de Glaube", "En ungwöönlich usfüerliche Briefaafang a de Titus: De Paulus beschriibt sin Uftrag als Dienscht am Glaube, a de Erchänntnis vo de Wahrheit und a de Hoffnig uf ewigs Läbe."),
- "TU-TIT-001-005-009": ("Wär d Gmeind söll leite", "De Titus söll Ältischti iisetze. Si – im Text au «de Ufseher» gnännt – söled i de Ee und i de Familie und im Umgang mit Gält, Wii und Macht untadelig läbe und a de verlässliche Lehr feschthalte."),
+ "TU-TIT-001-005-009": ("Wär d Gmeind söll leite", "De Titus söll Ältischti iisetze. Si – im Text au «de Ufseher» gnännt – söled i de Ee und i de Familie und im Umgang mit Gäld, Wii und Macht untadelig läbe und a de verlässliche Lehr feschthalte."),
  "TU-TIT-001-010-016": ("Gäge lääri Schnurrerei", "Lehrer, wo us Gwünnsucht Familie durenand bringed, söll de Titus schaarf zrächtwiise. Es Wort vo irem eigete «Prophet» über d Kreter wird zitiert und bestätiget. Si behaupted, si kännted Gott, aber mit irne Wärch verleugned si en."),
  "TU-TIT-002-001-015": ("Gsundi Lehr im Alltag", "Was de gsunde Lehr entspricht, zeigt sich im Alltag vo Alte und Junge, Fraue, Mane und Sklave. Begründet wird s mit de Gnad vo Gott, wo erschine isch und zu me nöie Läbe erziet."),
  "TU-TIT-002-001-010": ("Was zu wem passt", "E Huustafle: Wiisige für älteri Mane und Fraue, jungi Fraue und Mane, für de Titus sälber und für Sklave. Meermals wird begründet, dass d Gmeind gäge usse kein Aastoss söll gää."),

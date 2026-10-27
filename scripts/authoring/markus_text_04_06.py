@@ -120,7 +120,7 @@ DE = {
  "MRK.6.5": "Und{1} [er konnte]{3} [dort]{4} [keine]{2,6} [Machttat]{7} [tun]{5}, [ausser]{8,9} dass er [wenigen]{10} [Kranken]{11} [die Hände]{13,14} [auflegte]{12} und [sie heilte]{15}.",
  "MRK.6.6": "Und{1} [er wunderte sich]{2} [über]{3} [ihren]{6} [Unglauben]{4,5}. Und{7} [er durchzog]{8} [die Dörfer]{9,10} [ringsum]{11} [und lehrte]{12}.",
  "MRK.6.7": "Und{1} [er ruft]{2} [die Zwölf]{3,4} [zu sich]{2} und{5} [begann]{6}, [sie]{7} [zu zweit]{9,10} [auszusenden]{8}, und{11} [gab]{12} [ihnen]{13} [Vollmacht]{14} [über die]{15} [unreinen Geister]{16-18}.",
- "MRK.6.8": "Und{1} [er gebot]{2} [ihnen]{3}, [dass]{4} sie [nichts]{5} [auf]{7} [den Weg]{8} [mitnehmen]{6} sollten [ausser]{9,10} [nur]{12} [einen Stab]{11}: [kein]{13} [Brot]{14}, [keinen]{15} [Beutel]{16}, [kein]{17} [Geld]{21} [im]{18,19} [Gürtel]{20},",
+ "MRK.6.8": "Und{1} [er gebot]{2} [ihnen]{3}, [dass]{4} sie [nichts]{5} [auf]{7} [den Weg]{8} [mitnehmen]{6} sollten [ausser]{9,10} [nur]{12} [einen Stab]{11}: [kein]{13} [Brot]{14}, [keinen]{15} [Beutel]{16}, [kein]{17} [Kupfergeld]{21} [im]{18,19} [Gürtel]{20},",
  "MRK.6.9": "[sondern]{1} [Sandalen]{3} [tragen]{2}; «und{4} [zieht]{6} [nicht]{5} [zwei]{7} [Untergewänder]{8} [an]{6}!»",
  "MRK.6.10": "Und{1} [er sagte]{2} [zu ihnen]{3}: «[Wo]{4} [immer]{5} ihr [in]{7} [ein Haus]{8} [eintretet]{6}, [dort]{9} [bleibt]{10}, [bis]{11,12} ihr [von dort]{14} [weiterzieht]{13}.",
  "MRK.6.11": "Und{1} [wenn]{2,3} [ein Ort]{4} [euch]{7} [nicht]{5} [aufnimmt]{6} [und]{8} man [euch]{10} [nicht]{8} [anhört]{9}, [dann geht]{11} [von dort]{12} [weg]{11} und [schüttelt]{13} [den Staub]{14,15}, [der]{16} [unter]{17} [euren]{20} [Füssen]{18,19} ist, [ab]{13}, [ihnen]{23} [zum]{21} [Zeugnis]{22}.»",
@@ -266,7 +266,7 @@ GSW = {
  "MRK.6.5": "Und{1} [er hät]{3} [dört]{4} [kei]{2,6} [Chrafttat]{7} [tue]{5} [chöne]{3}, [usser]{8,9} dass er [es paar]{10} [Chranke]{11} [d Händ]{13,14} [ufgleit]{12} und [si gheilt hät]{15}.",
  "MRK.6.6": "Und{1} [er hät sich]{2} [über]{3} [iren]{6} [Unglaube]{4,5} [gwunderet]{2}. Und{7} [er isch]{8} [i de Dörfer]{9,10} [rundum]{11} [umegange]{8} [und hät gleert]{12}.",
  "MRK.6.7": "Und{1} [er rüeft]{2} [di Zwölf]{3,4} [zu sich]{2} und{5} [hät aagfange]{6}, [si]{7} [je zwei]{9,10} [uszschicke]{8}, und{11} [hät]{12} [ine]{13} [Vollmacht]{14} [über]{15} [di unreine Geischter]{16-18} [ggää]{12}.",
- "MRK.6.8": "Und{1} [er hät]{2} [ine]{3} [befole]{2}, [dass]{4} si [nüüt]{5} [uf]{7} [de Wäg]{8} [mitnämed]{6} [usser]{9,10} [nu]{12} [en Stäcke]{11}: [kei]{13} [Broot]{14}, [kei]{15} [Täsche]{16}, [kei]{17} [Gäld]{21} [im]{18,19} [Gurt]{20},",
+ "MRK.6.8": "Und{1} [er hät]{2} [ine]{3} [befole]{2}, [dass]{4} si [nüüt]{5} [uf]{7} [de Wäg]{8} [mitnämed]{6} [usser]{9,10} [nu]{12} [en Stäcke]{11}: [kei]{13} [Broot]{14}, [kei]{15} [Täsche]{16}, [kei]{17} [Chupfergäld]{21} [im]{18,19} [Gurt]{20},",
  "MRK.6.9": "[sondern]{1} [Sandale]{3} [aahaa]{2}; «und{4} [leged]{6} [nöd]{5} [zwei]{7} [Underchleider]{8} [aa]{6}!»",
  "MRK.6.10": "Und{1} [er hät]{2} [ine]{3} [gseit]{2}: «[Wo]{4} [immer]{5} er [in]{7} [es Huus]{8} [inegönd]{6}, [dört]{9} [bliibed]{10}, [bis]{11,12} er [vo dört]{14} [wiiterziehnd]{13}.",
  "MRK.6.11": "Und{1} [wänn]{2,3} [en Ort]{4} [eu]{7} [nöd]{5} [ufnimmt]{6} [und]{8} me [eu]{10} [nöd]{8} [zuelost]{9}, [dänn gönd]{11} [vo dört]{12} [furt]{11} und [schüttled]{13} [de Staub]{14,15}, [wo]{16} [under]{17} [eune]{20} [Füess]{18,19} isch, [ab]{13}, [ine]{23} [zum]{21} [Züügnis]{22}.»",
@@ -369,7 +369,7 @@ DEC_DE = [
  ("MRK.6.3", "sie nahmen Anstoss", "literal", "ἐσκανδαλίζοντο", None, ["kamen zu Fall", "lehnten ihn ab"], "Dasselbe Verb wie in [[MRK.4.17]]."),
  ("MRK.6.5", "er konnte", "literal", "ἐδύνατο", None, None, "Markus sagt ausdrücklich «konnte nicht»; [[MAT.13.58]] formuliert «tat nicht viele»."),
  ("MRK.6.7", "zu zweit", "adapted", "δύο δύο", "zwei zwei", ["je zwei"], "Distributive Verdoppelung."),
- ("MRK.6.8", "Geld", "interpretive", "χαλκόν", "Kupfer", ["Kupfermünzen", "Kleingeld"], "χαλκός ist Kupfer, hier Kleingeld, das man im Gürtel trug."),
+ ('MRK.6.8', 'Kupfergeld', 'adapted', 'χαλκόν', 'Kupfer', ['Kupfermünzen', 'Kleingeld', 'Geld'], 'χαλκός ist Kupfer, hier Kleingeld in Kupfermünzen, das man im Gürtel trug; gleich wiedergegeben wie [[MAT.10.9]] und [[MRK.12.41]]. Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  ("MRK.6.9", "Untergewänder", "interpretive", "χιτῶνας", None, ["Hemden", "Leibröcke"], "χιτών ist das Gewand, das man unter dem Mantel auf dem Leib trug. Mitten im Satz wechselt Markus in die direkte Rede."),
  ("MRK.6.11", "ihnen zum Zeugnis", "interpretive", "εἰς μαρτύριον αὐτοῖς", None, ["als Zeugnis gegen sie", "als Zeichen für sie"], "Der Dativ kann «gegen sie» oder «für sie» bedeuten; die Geste kann Warnung oder Anklage sein."),
  ("MRK.6.12", "umkehren", "interpretive", "μετανοῶσιν", "umdenken", ["Busse tun", "sich ändern"], "μετανοέω: Sinn und Richtung des Lebens ändern; vgl. [[MRK.1.15]]."),
@@ -402,6 +402,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MRK.6.8', 'Chupfergäld', 'adapted', 'χαλκόν', 'Chupfer', ['Gäld'], 'χαλκός isch Chupfer, da Chliigäld i Chupfermünze, wo me im Gurt treit hät; gliich wie [[MAT.10.9]] und [[MRK.12.41]]. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MRK.4.1", "See", "adapted", "θάλασσαν", "Meer", ["Meer"], "De Markus seit em See Gennesaret θάλασσα («Meer»). Uf Düütsch isch es en See; das gilt für Kapitel 4–6 dur."),
  ("MRK.4.2", "Gliichnis", "traditional", "παραβολαῖς", "Vergliich", ["Bildwort", "Rätselwort"], "παραβολή isch en Vergliich, es Bildwort, au es rätselhafts Wort. «Gliichnis» wie i [[MRK.3.23]]."),
  ("MRK.4.3", "Lueged", "adapted", "ἰδοὺ", "Lueg!", ["Gsehnd"], "Es Wort, wo uf öppis ufmerksam macht; i de Mundart wie i [[MRK.3.34]] mit «lueg» widergää."),

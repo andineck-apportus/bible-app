@@ -17,7 +17,7 @@
         "FIG-GRUPPE-ARBEITER"
       ],
       "objects": [
-        "FIG-OBJ-DENAR"
+        "FIG-OBJ-MUENZEN"
       ],
       "signs": [
         "FIG-ZEICHEN-ZORN"
@@ -42,7 +42,7 @@
       },
       "stage": {
         "hold": {
-          "FIG-ROLLE-GUTSHERR": "FIG-OBJ-DENAR"
+          "FIG-ROLLE-GUTSHERR": "FIG-OBJ-MUENZEN"
         },
         "at": {
           "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-ARBEITER"
@@ -243,7 +243,7 @@
     "Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Jesus hat Erbarmen, berührt ihre Augen, und sogleich sehen sie wieder und folgen ihm nach."
   ],
   "captions_de": [
-    "Ein Denar für alle: Der Hausherr (Gutsherr) gibt den Arbeitern je einen Denar (Münze, geben); die Ersten murren (Zorn); er antwortet: «Freund, ich tue dir kein Unrecht.» (Gerechtigkeit).",
+    "Ein Denar für alle: Der Hausherr (Gutsherr) gibt den Arbeitern je einen Denar (Münzen, geben); die Ersten murren (Zorn); er antwortet: «Freund, ich tue dir kein Unrecht.» (Gerechtigkeit).",
     "Auf dem Weg: Jesus spricht zu den Zwölf (Weg nach Jerusalem): «… und am dritten Tag wird er auferweckt werden.» (Kreuz, auferwecken).",
     "Rechts und links: Die Mutter kniet mit ihren zwei Söhnen vor Jesus: «Sag, dass diese meine zwei Söhne in deinem Reich sitzen dürfen, einer zu deiner Rechten und einer zu deiner Linken!» (Ehrenplatz, Krone); Jesus fragt: «Könnt ihr den Becher trinken, den ich trinken werde?» (Becher, Fragezeichen). Beide Sprechblasen nur mit Zeichen (Wortlaut im Text), damit die Spitzen der Blasen sich nicht kreuzen.",
     "Zwei Blinde: Sie rufen «Herr, hab Erbarmen mit uns, Sohn Davids!» (Erbarmen); Jesus berührt ihre Augen (berühren), sie sehen wieder (sehen)."
@@ -1676,6 +1676,246 @@
               }
             }
           }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "change_de": "Münznamen: damalige Namen im Text, Wert in der Erklärung (Entscheid Andi Neck); ein Geld-Zeichen im Bild",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.20.1-MAT.20.16",
+            "figures": [
+              "FIG-ROLLE-GUTSHERR",
+              "FIG-GRUPPE-ARBEITER"
+            ],
+            "objects": [
+              "FIG-OBJ-DENAR"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-ZORN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-GUTSHERR",
+                "to": "FIG-GRUPPE-ARBEITER",
+                "icons": [
+                  "FIG-ZEICHEN-GERECHT"
+                ],
+                "word": {
+                  "de": "Freund, ich tue dir kein Unrecht.",
+                  "gsw": "Fründ, ich tue dir kei Unrächt."
+                }
+              }
+            ],
+            "action_de": "Am Abend erhalten alle Arbeiter je einen Denar, angefangen bei den Letzten; die Ersten murren; der Hausherr antwortet: Freund, ich tue dir kein Unrecht – oder ist dein Auge böse, weil ich gütig bin?",
+            "keywords": {
+              "de": "So werden die Letzten Erste sein",
+              "gsw": "So wärded di Letschte Erschti sii"
+            },
+            "stage": {
+              "hold": {
+                "FIG-ROLLE-GUTSHERR": "FIG-OBJ-DENAR"
+              },
+              "at": {
+                "FIG-ZEICHEN-ZORN": "FIG-GRUPPE-ARBEITER"
+              },
+              "arrows": [
+                [
+                  "FIG-ROLLE-GUTSHERR",
+                  "FIG-GRUPPE-ARBEITER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-ROLLE-GUTSHERR": "calm",
+                "FIG-GRUPPE-ARBEITER": "angry"
+              },
+              "x": {
+                "FIG-ROLLE-GUTSHERR": 50,
+                "FIG-GRUPPE-ARBEITER": 136
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.20.17-MAT.20.19",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-ZWOELF"
+            ],
+            "objects": [
+              "FIG-ORT-JERUSALEM"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-ZWOELF",
+                "icons": [
+                  "FIG-OBJ-KREUZ",
+                  "FIG-ZEICHEN-AUFERWECKEN"
+                ],
+                "word": {
+                  "de": "Am dritten Tag wird er auferweckt werden.",
+                  "gsw": "Am dritte Tag wird er uferweckt."
+                }
+              }
+            ],
+            "action_de": "Auf dem Weg nach Jerusalem kündigt Jesus den Zwölf an, dass der Menschensohn ausgeliefert, verurteilt und gekreuzigt und am dritten Tag auferweckt wird.",
+            "keywords": {
+              "de": "wir ziehen nach Jerusalem hinauf",
+              "gsw": "mir gönd uf Jerusalem ufe"
+            },
+            "stage": {
+              "back_side": "right",
+              "before": true,
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-GRUPPE-ZWOELF": "worried"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-GRUPPE-ZWOELF": 104
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.20.20-MAT.20.28",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-MUTTER",
+              "FIG-JAKOBUS-ZEBEDAEUS",
+              "FIG-JOHANNES-ZEBEDAEUS"
+            ],
+            "objects": [
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-MUTTER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RANG",
+                  "FIG-OBJ-KRONE"
+                ]
+              },
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-ROLLE-MUTTER",
+                "icons": [
+                  "FIG-OBJ-BECHER-VOLL",
+                  "FIG-ZEICHEN-FRAGEN"
+                ]
+              }
+            ],
+            "action_de": "Die Mutter der Söhne des Zebedäus bittet kniend, dass ihre zwei Söhne zu Jesu Rechten und Linken sitzen; Jesus fragt: Könnt ihr den Becher trinken, den ich trinken werde?",
+            "keywords": {
+              "de": "der soll euer Diener sein",
+              "gsw": "dä söll eue Diener sii"
+            },
+            "names": {
+              "FIG-JAKOBUS-ZEBEDAEUS": {
+                "de": "Jakobus",
+                "gsw": "Jakobus"
+              },
+              "FIG-JOHANNES-ZEBEDAEUS": {
+                "de": "Johannes",
+                "gsw": "Johannes"
+              }
+            },
+            "stage": {
+              "pose": {
+                "FIG-ROLLE-MUTTER": "kneel"
+              },
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-ROLLE-MUTTER": "earnest",
+                "FIG-JAKOBUS-ZEBEDAEUS": "pensive",
+                "FIG-JOHANNES-ZEBEDAEUS": "pensive"
+              },
+              "x": {
+                "FIG-JESUS": 28,
+                "FIG-ROLLE-MUTTER": 88,
+                "FIG-JAKOBUS-ZEBEDAEUS": 132,
+                "FIG-JOHANNES-ZEBEDAEUS": 166
+              },
+              "hold": {
+                "FIG-JAKOBUS-ZEBEDAEUS": "LEER",
+                "FIG-JOHANNES-ZEBEDAEUS": "LEER"
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.20.29-MAT.20.34",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-ROLLE-BLINDER",
+              "FIG-ROLLE-ZWEITER-BLINDER"
+            ],
+            "objects": [],
+            "signs": [
+              "FIG-ZEICHEN-BERUEHREN",
+              "FIG-ZEICHEN-SEHEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-ROLLE-BLINDER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-ERBARMEN"
+                ],
+                "word": {
+                  "de": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+                  "gsw": "Herr, häb Erbarme mit üs, Sohn vom David!"
+                }
+              }
+            ],
+            "action_de": "Zwei Blinde am Weg schreien: Herr, hab Erbarmen mit uns, Sohn Davids! Jesus hat Erbarmen, berührt ihre Augen, und sogleich sehen sie wieder und folgen ihm nach.",
+            "keywords": {
+              "de": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+              "gsw": "Herr, häb Erbarme mit üs, Sohn vom David!"
+            },
+            "stage": {
+              "at": {
+                "FIG-ZEICHEN-SEHEN": "FIG-ROLLE-ZWEITER-BLINDER"
+              },
+              "beside": {
+                "FIG-ZEICHEN-BERUEHREN": "FIG-ROLLE-BLINDER"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-ROLLE-BLINDER",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-ROLLE-BLINDER": "earnest",
+                "FIG-ROLLE-ZWEITER-BLINDER": "delight"
+              },
+              "pose": {
+                "FIG-ROLLE-BLINDER": "sit"
+              },
+              "x": {
+                "FIG-JESUS": 44,
+                "FIG-ROLLE-BLINDER": 110,
+                "FIG-ROLLE-ZWEITER-BLINDER": 160
+              }
+            }
+          }
+        ],
+        "captions_de": [
+          "Ein Denar für alle: Der Hausherr (Gutsherr) gibt den Arbeitern je einen Denar (Münze, geben); die Ersten murren (Zorn); er antwortet: «Freund, ich tue dir kein Unrecht.» (Gerechtigkeit).",
+          "Auf dem Weg: Jesus spricht zu den Zwölf (Weg nach Jerusalem): «… und am dritten Tag wird er auferweckt werden.» (Kreuz, auferwecken).",
+          "Rechts und links: Die Mutter kniet mit ihren zwei Söhnen vor Jesus: «Sag, dass diese meine zwei Söhne in deinem Reich sitzen dürfen, einer zu deiner Rechten und einer zu deiner Linken!» (Ehrenplatz, Krone); Jesus fragt: «Könnt ihr den Becher trinken, den ich trinken werde?» (Becher, Fragezeichen). Beide Sprechblasen nur mit Zeichen (Wortlaut im Text), damit die Spitzen der Blasen sich nicht kreuzen.",
+          "Zwei Blinde: Sie rufen «Herr, hab Erbarmen mit uns, Sohn Davids!» (Erbarmen); Jesus berührt ihre Augen (berühren), sie sehen wieder (sehen)."
         ]
       }
     }

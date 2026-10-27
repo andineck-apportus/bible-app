@@ -443,7 +443,7 @@ DEC_GSW = [
  ("2JN.1.10", "grüessed", "adapted", "χαίρειν λέγετε", "säged em nöd «Sig grüesst»", None, "χαίρειν («fröi dich») isch di üblich Gruessformle; gliich i [[2JN.1.11]]."),
  ("2JN.1.12", "vo Muul zu Muul", "literal", "στόμα πρὸς στόμα", None, ["persönlich", "Aug in Aug"], "Gliich [[3JN.1.14]]."),
  ("3JN.1.2", "ich wünsch", "interpretive", "εὔχομαί", None, ["ich bätt"], "εὔχεσθαι heisst bätte oder wünsche; de Satz folgt em übliche Gsundheitswunsch vo antike Brief."),
- ("3JN.1.6", "für d Wiiterreis uusrüschtisch", "interpretive", "προπέμψας", "voruusschicksch", ["uf de Wäg bringsch"], "προπέμπειν isch es Fachwort vo de früechrischtliche Mission: Reisendi mit Proviant und Gält uusrüschte und wiiterschicke."),
+ ("3JN.1.6", "für d Wiiterreis uusrüschtisch", "interpretive", "προπέμψας", "voruusschicksch", ["uf de Wäg bringsch"], "προπέμπειν isch es Fachwort vo de früechrischtliche Mission: Reisendi mit Proviant und Gäld uusrüschte und wiiterschicke."),
  ("3JN.1.7", "Heide", "interpretive", "ἐθνικῶν", None, ["Nöd-Chrischte", "Unglöibigi"], "ἐθνικός bezeichnet Mänsche us de Völker, da wohl Nöd-Chrischte. D Wandermissionar händ vo ine kein Underhalt aagnoo."),
  ("3JN.1.9", "de Erscht sii wott", "interpretive", "φιλοπρωτεύων", "gern de Erscht isch", ["d Füerig beaasprucht"], "De Diotrephes chunnt nu da vor. Er isch offebar iiflussriich i de Gmeind und wiist d Bote vom Ältischte ab. Öb s um Macht, um d Sälbständigkeit vo de Gmeind oder um Lehrfrage gange isch, seit de Brief nöd."),
  ("3JN.1.9", "nimmt üs nöd aa", "interpretive", "ἐπιδέχεται", "nimmt üs nöd uf", ["anerchännt üs nöd"], "ἐπιδέχεσθαι cha d Ufnaam vo Gäscht oder d Anerchännig vo ere Autorität meine; i [[3JN.1.10]] staat s für d Ufnaam vo de Gschwüschterti."),

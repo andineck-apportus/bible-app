@@ -353,6 +353,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MAT.18.28', 'hundert Denar', 'literal', 'ἑκατὸν δηνάρια', None, None, 'Öppe hundert Taglöhn ([[MAT.20.2]]), en Bruchteil vo de zäätuusig Talänt (es Talänt öppe 6000 Denar). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MAT.18.1", "de Gröscht", "interpretive", "μείζων", "de Grösser", None, "D Steigerigsform staat oft für de Superlativ."),
  ("MAT.18.1", "im Riich vo de Himel", "literal", "ἐν τῇ βασιλείᾳ τῶν οὐρανῶν", None, ["im Himmelriich"],
   "Grundentscheid fürs ganz Matthäusevangelium: «s Riich vo de Himel», mit de Mehrzahl vom Griechische. De Matthäus brucht d Wändig 32-mal, «Riich vo Gott» nu 4-mal; vili gsehnd drin e jüdischi Schüüchi, de Gottesname uuszspräche."),

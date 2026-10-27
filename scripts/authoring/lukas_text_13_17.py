@@ -579,6 +579,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('LUK.15.8', 'Drachme', 'literal', 'δραχμὰς', None, None, 'D Drachme (Mehrzahl «Drachme») isch e griechischi Silbermünz gsii, öppe so vil wärt wie en Denar, de Taglohn vomene Arbeiter ([[MAT.20.2]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.13.3", "umchered", "interpretive", "μετανοῆτε", None, ["Buess tüend"], "μετανοέω heisst wörtlich «umdänke»; gmeint isch d Umkehr zu Gott mit Dänke und Läbe. Gliich i [[LUK.13.5]], [[LUK.15.7]], [[LUK.15.10]], [[LUK.16.30]], [[LUK.17.3]]."),
  ("LUK.13.4", "schuldiger", "adapted", "ὀφειλέται", "Schuldner", None, "Parallel zu «Sünder» i [[LUK.13.2]]."),
  ("LUK.13.15", "Ir Hüüchler", "literal", "Ὑποκριταί", None, None, "ὑποκριτής hät ursprünglich «Schauspiler» gheisse."),

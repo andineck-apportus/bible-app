@@ -81,7 +81,7 @@ DE = {
  "LUK.22.2": "Und{1} [die Hohepriester]{3,4} und{5} [die Schriftgelehrten]{6,7} [suchten]{2}, [wie]{8,9} [sie]{10} [ihn]{11} [beseitigen könnten]{10}; [denn]{13} [sie fürchteten]{12} [das Volk]{14,15}.",
  "LUK.22.3": "[Da]{2} [fuhr]{1} [der Satan]{3} [in]{4} [Judas]{5}, [genannt]{6,7} [Iskariot]{8}, [der]{9} [zur]{10,11} [Zahl]{12} [der Zwölf]{13,14} [gehörte]{9}.",
  "LUK.22.4": "Und{1} [er ging hin]{2} und [besprach sich]{3} [mit den]{4} [Hohepriestern]{5} und{6} [Hauptleuten]{7}, [wie]{8,9} [er]{11} [ihn]{12} [ihnen]{10} [ausliefern könnte]{11}.",
- "LUK.22.5": "Und{1} [sie freuten sich]{2} und{3} [kamen überein]{4}, [ihm]{5} [Geld]{6} [zu geben]{7}.",
+ "LUK.22.5": "Und{1} [sie freuten sich]{2} und{3} [kamen überein]{4}, [ihm]{5} [Silber]{6} [zu geben]{7}.",
  "LUK.22.6": "Und{1} [er willigte ein]{2} und{3} [suchte]{4} [eine günstige Gelegenheit]{5}, [ihn]{8} [ihnen]{11} [abseits]{9} [der Menge]{10} [auszuliefern]{6,7}.",
  "LUK.22.7": "[Es kam]{1} [aber]{2} [der Tag]{3,4} [der Ungesäuerten Brote]{5,6}, [an dem]{7} [das Passalamm]{10,11} [geschlachtet werden musste]{8,9}.",
  "LUK.22.8": "Und{1} [er sandte]{2} [Petrus]{3} und{4} [Johannes]{5} [und sagte]{6}: «[Geht]{7} und [bereitet]{8} [uns]{9} [das Passamahl]{10,11} [vor]{8}, [damit]{12} [wir es essen können]{13}.»",
@@ -266,7 +266,7 @@ GSW = {
  "LUK.22.2": "Und{1} [d Hoheprieschter]{3,4} und{5} [d Schriftgleerte]{6,7} [händ gsuecht]{2}, [wie]{8,9} [si]{10} [en]{11} [chönted us em Wäg rume]{10}; [dänn]{13} [si händ]{12} [vor em Volk]{14,15} [Angscht gha]{12}.",
  "LUK.22.3": "[Dänn]{2} [isch]{1} [de Satan]{3} [in]{4} [de Judas]{5} [gfahre]{1}, [wo mer]{6} [Iskariot]{8} [gseit hät]{7} [und wo]{9} [zum]{10,11} [Chreis]{12} [vo de Zwölf]{13,14} [ghört hät]{9}.",
  "LUK.22.4": "Und{1} [er isch gange]{2} und [hät]{3} [mit de]{4} [Hoheprieschter]{5} und{6} [Hauptlüüt]{7} [bsproche]{3}, [wie]{8,9} [er]{11} [en]{12} [ine]{10} [chönt uslifere]{11}.",
- "LUK.22.5": "Und{1} [si händ sich gfreut]{2} und{3} [sind überiicho]{4}, [ihm]{5} [Gäld]{6} [z gää]{7}.",
+ "LUK.22.5": "Und{1} [si händ sich gfreut]{2} und{3} [sind überiicho]{4}, [ihm]{5} [Silber]{6} [z gää]{7}.",
  "LUK.22.6": "Und{1} [er hät iigwilliget]{2} und{3} [hät]{4} [e gueti Glägeheit]{5} [gsuecht]{4}, [zum]{6} [en]{8} [ine]{11} [uszliefere]{7}, [ohni dass]{9} [d Mängi]{10} [debii isch]{9}.",
  "LUK.22.7": "[Es isch]{1} [aber]{2} [de Tag]{3,4} [vo de ungsüürete Broot]{5,6} [choo]{1}, [wo]{7} [mer]{9} [s Passalamm]{10,11} [hät müese]{8} [schlachte]{9}.",
  "LUK.22.8": "Und{1} [er hät]{2} [de Petrus]{3} und{4} [de Johannes]{5} [gschickt]{2} [und gseit]{6}: «[Gönd]{7} und [mached]{8} [üs]{9} [s Passamaal]{10,11} [parat]{8}, [dass]{12} [mer s chönd ässe]{13}.»",
@@ -451,6 +451,7 @@ KLAMMER = ("Der SBLGNT setzt diese Worte in eckige Klammern [ ] und kennzeichnet
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
 DEC_DE = [
+ ('LUK.22.5', 'Silber', 'literal', 'ἀργύριον', None, ['Geld'], 'ἀργύριον «Silber», Geld in Silbermünzen; wie [[MRK.14.11]]; die Summe nennt nur Matthäus ([[MAT.26.15]]). ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.22.1", "Das Fest der Ungesäuerten Brote", "adapted", "ἡ ἑορτὴ τῶν ἀζύμων", "das Fest der Ungesäuerten", ["das Fest der Mazzot"], "τὰ ἄζυμα («die ungesäuerten [Brote]») ist der Name des siebentägigen Festes, das an das Passa anschliesst ([[LEV.23.5]]–[[LEV.23.6]]). Lukas setzt beides gleich («das Passa genannt wird»)."),
  ("LUK.22.2", "beseitigen könnten", "literal", "ἀνέλωσιν", None, ["töten könnten"], "ἀναιρέω: aus dem Weg räumen, töten. Dasselbe Verb steht in [[LUK.23.32]] («hingerichtet zu werden»)."),
  ("LUK.22.3", "fuhr der Satan in Judas", "literal", "Εἰσῆλθεν δὲ Σατανᾶς εἰς Ἰούδαν", "ging der Satan in Judas hinein", None, "Lukas deutet die Tat des Judas als Werk des Satans; vgl. [[LUK.4.13]], wo der Teufel «bis zu gelegener Zeit» von Jesus ablässt, und [[JHN.13.27]]."),
@@ -609,6 +610,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('LUK.22.5', 'Silber', 'literal', 'ἀργύριον', None, ['Gäld'], 'ἀργύριον «Silber», Gäld i Silbermünze; wie [[MRK.14.11]]; d Summe nännt nu de Matthäus ([[MAT.26.15]]). ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.22.1", "S Fäscht vo de ungsüürete Broot", "adapted", "ἡ ἑορτὴ τῶν ἀζύμων", "s Fäscht vo de Ungsüürete", None, "Name vom siebetägige Fäscht, wo as Passa aaschlüsst ([[LEV.23.5]]–[[LEV.23.6]]); de Lukas setzt beides gliich."),
  ("LUK.22.3", "isch de Satan in de Judas gfahre", "literal", "Εἰσῆλθεν δὲ Σατανᾶς εἰς Ἰούδαν", None, None, "Vgl. [[LUK.4.13]] und [[JHN.13.27]]."),
  ("LUK.22.4", "Hauptlüüt", "interpretive", "στρατηγοῖς", None, ["Kommandante vo de Tämpelwach"], "Wohl d Kommandante vo de Tämpelwach ([[LUK.22.52]])."),

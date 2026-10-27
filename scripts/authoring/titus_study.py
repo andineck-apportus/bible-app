@@ -127,7 +127,7 @@ APPLICATIONS = [
  ("APP-TIT-0001", "PRIN-TIT-0001",
   "Heute kann das heissen: Glaubwürdigkeit entsteht weniger durch richtige Sätze als durch Verlässlichkeit im Kleinen, am Arbeitsplatz, in der Familie, im Umgang mit Geld. Gemeinden können sich fragen, wie sie von aussen wahrgenommen werden.",
   "Der Text gibt keine Liste heutiger Tugenden vor. Die Haustafel selbst ist an die damalige Ordnung des Hauses gebunden und lässt sich nicht einfach übertragen, besonders nicht in Fragen von Frauen und Sklaverei.",
-  "Hüt cha das heisse: Glaubwürdigkeit entstaat weniger dur richtigi Sätz als dur Verlässlichkeit im Chliine, am Arbetsplatz, i de Familie, im Umgang mit Gält. Gmeinde chönd sich frage, wie si vo usse wahrgnoo wärded.",
+  "Hüt cha das heisse: Glaubwürdigkeit entstaat weniger dur richtigi Sätz als dur Verlässlichkeit im Chliine, am Arbetsplatz, i de Familie, im Umgang mit Gäld. Gmeinde chönd sich frage, wie si vo usse wahrgnoo wärded.",
   "De Text git kei Lischte vo hütige Tugende vor. D Huustafle sälber isch a di damalig Ornig vom Huus bunde und laat sich nöd eifach übertrage, bsunders nöd i Frage vo Fraue und Sklaverei."),
  ("APP-TIT-0002", "PRIN-TIT-0002",
   "Wer sich daran erinnert, selbst auf Erbarmen angewiesen zu sein, kann Menschen mit anderen Überzeugungen gelassener und freundlicher begegnen, auch in öffentlichen Debatten.",

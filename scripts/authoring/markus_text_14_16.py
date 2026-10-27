@@ -45,7 +45,7 @@ DE = {
  "MRK.14.8": "[Was]{1} [sie konnte]{2}, [hat sie getan]{3}: [Sie hat]{4} [meinen]{8} [Leib]{6,7} [im Voraus]{4} [gesalbt]{5} [für]{9} [das]{10} [Begräbnis]{11}.",
  "MRK.14.9": "[Amen]{1}, [ich sage]{3} [euch]{4}: [Wo]{5} [immer]{6} [das]{8} [Evangelium]{9} [verkündigt wird]{7} [in]{10} [der ganzen]{11,12} [Welt]{13}, [wird]{18} [auch]{14} [erzählt werden]{18}, [was]{15} [sie]{17} [getan hat]{16}, [zu]{19} [ihrem]{21} [Gedächtnis]{20}.» ~2(δέ «aber» nach ἀμήν; nicht eigens wiedergegeben)",
  "MRK.14.10": "Und{1} [Judas]{2} [Iskariot]{3}, [der]{4} [eine]{5} [der Zwölf]{6,7}, [ging]{8} [zu]{9} [den Hohepriestern]{10,11}, [um]{12} [ihn]{13} [ihnen]{15} [auszuliefern]{14}.",
- "MRK.14.11": "[Sie]{1} [aber]{2} [freuten sich]{4}, [als sie es hörten]{3}, und{5} [versprachen]{6} [ihm]{7} [Geld]{8} [zu geben]{9}. Und{10} [er suchte]{11}, [wie]{12} [er]{15} [ihn]{13} [bei guter Gelegenheit]{14} [ausliefern könnte]{15}.",
+ "MRK.14.11": "[Sie]{1} [aber]{2} [freuten sich]{4}, [als sie es hörten]{3}, und{5} [versprachen]{6} [ihm]{7} [Silber]{8} [zu geben]{9}. Und{10} [er suchte]{11}, [wie]{12} [er]{15} [ihn]{13} [bei guter Gelegenheit]{14} [ausliefern könnte]{15}.",
  "MRK.14.12": "Und{1} [am]{2} [ersten]{3} [Tag]{4} [der Ungesäuerten Brote]{5,6}, [als]{7} [man]{10} [das Passalamm]{8,9} [schlachtete]{10}, [sagen]{11} [seine]{15} [Jünger]{13,14} [zu ihm]{12}: «[Wo]{16} [willst du]{17}, [dass wir]{19} [hingehen]{18} und [es vorbereiten]{19}, [damit]{20} [du]{21} [das Passa]{22,23} [essen kannst]{21}?»",
  "MRK.14.13": "Und{1} [er sendet]{2} [zwei]{3} [seiner]{4,6} [Jünger]{5} und{7} [sagt]{8} [zu ihnen]{9}: «[Geht]{10} [in]{11} [die]{12} [Stadt]{13}, und{14} [es wird]{15} [euch]{16} [ein Mensch]{17} [begegnen]{15}, [der]{20} [einen Wasserkrug]{18,19} [trägt]{20}; [folgt]{21} [ihm]{22},",
  "MRK.14.14": "und{1} [wo]{2} [immer]{3} [er hineingeht]{4}, [sagt]{5} [dem Hausherrn]{6,7}: ‹[Der Lehrer]{9,10} [sagt]{11}: Wo{12} [ist]{13} [mein]{16} [Gastraum]{14,15}, [wo]{17} [ich]{24} [mit]{20} [meinen]{21,23} [Jüngern]{22} [das Passa]{18,19} [essen kann]{24}?›  ~8(ὅτι leitet die direkte Rede ein)",
@@ -189,7 +189,7 @@ GSW = {
  "MRK.14.8": "[Was]{1} [si hät chöne]{2}, [hät si gmacht]{3}: [Si hät]{4} [min]{8} [Liib]{6,7} [zum voruus]{4} [gsalbet]{5} [für]{9} [d]{10} [Beerdigung]{11}.",
  "MRK.14.9": "[Amen]{1}, [ich säg s]{3} [eu]{4}: [Wo]{5} [immer]{6} [s]{8} [Evangelium]{9} [verchündet wird]{7} [i]{10} [de ganze]{11,12} [Wält]{13}, [dört wird]{18} [au]{14} [verzellt]{18}, [was]{15} [die]{17} [gmacht hät]{16}, [zur Erinnerig]{19,20} [a si]{21}.» ~2(δέ «aber» nach ἀμήν; nöd eigens widergää)",
  "MRK.14.10": "Und{1} [de Judas]{2} [Iskariot]{3}, [dä]{4} [eint]{5} [vo de Zwölf]{6,7}, [isch]{8} [zu]{9} [de Hoheprieschter]{10,11} [gange]{8}, [zum]{12} [en]{13} [ine]{15} [uslifere]{14}.",
- "MRK.14.11": "[Si]{1} [aber]{2} [händ sich gfröit]{4}, [wo si das ghört händ]{3}, und{5} [händ]{6} [em]{7} [Gält]{8} [z gää]{9} [versproche]{6}. Und{10} [er hät gsuecht]{11}, [wie]{12} [er]{15} [en]{13} [bi günschtiger Glägeheit]{14} [chönt uslifere]{15}.",
+ "MRK.14.11": "[Si]{1} [aber]{2} [händ sich gfröit]{4}, [wo si das ghört händ]{3}, und{5} [händ]{6} [em]{7} [Silber]{8} [z gää]{9} [versproche]{6}. Und{10} [er hät gsuecht]{11}, [wie]{12} [er]{15} [en]{13} [bi günschtiger Glägeheit]{14} [chönt uslifere]{15}.",
  "MRK.14.12": "Und{1} [am]{2} [erschte]{3} [Tag]{4} [vo de ungsüürete Broot]{5,6}, [wo]{7} [mer]{10} [s Passalamm]{8,9} [gschlachtet hät]{10}, [säged]{11} [sini]{15} [Jünger]{13,14} [zu ihm]{12}: «[Wo]{16} [wottsch]{17}, [dass mer]{19} [hiigönd]{18} und [s vorbereited]{19}, [demit]{20} [du]{21} [s Passa]{22,23} [chasch ässe]{21}?»",
  "MRK.14.13": "Und{1} [er schickt]{2} [zwei]{3} [vo sine]{4,6} [Jünger]{5} und{7} [seit]{8} [zu ine]{9}: «[Gönd]{10} [i]{11} [d]{12} [Stadt]{13}, und{14} [es wird]{15} [eu]{16} [en Mänsch]{17} [begägne]{15}, [wo]{20} [en Wasserchrueg]{18,19} [treit]{20}; [gönd]{21} [ihm]{22} [nache]{21},",
  "MRK.14.14": "und{1} [wo]{2} [er au]{3} [ine gaat]{4}, [säged]{5} [em Huusherr]{6,7}: ‹[De Lehrer]{9,10} [seit]{11}: Wo{12} [isch]{13} [mis]{16} [Gaschtzimmer]{14,15}, [wo]{17} [ich]{24} [mit]{20} [mine]{21,23} [Jünger]{22} [s Passa]{18,19} [chan ässe]{24}?› ~8(ὅτι leitet di diräkt Red ii)",
@@ -323,6 +323,7 @@ GSW = {
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
 DEC_DE = [
+ ('MRK.14.11', 'Silber', 'literal', 'ἀργύριον', None, ['Geld'], 'ἀργύριον «Silber», Geld in Silbermünzen; die Summe nennt nur Matthäus ([[MAT.26.15]]). ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  ("MRK.14.1", "das Fest der Ungesäuerten Brote", "adapted", "τὰ ἄζυμα", "die Ungesäuerten", ["die Mazzot"], "τὰ ἄζυμα («die ungesäuerten [Brote]») ist der Name des siebentägigen Festes, das an das Passa anschliesst ([[LEV.23.5]]–[[LEV.23.6]]); Markus nennt beides zusammen."),
  ("MRK.14.3", "aus reiner Narde", "interpretive", "νάρδου πιστικῆς", None, ["aus echter Narde", "aus Pistazien-Narde"], "πιστικός ist selten. Meist wird es als «echt, unverfälscht» verstanden (von πίστις); andere leiten es von einem Pflanzennamen ab. Die Bedeutung bleibt unsicher."),
  ("MRK.14.5", "Denare", "literal", "δηναρίων", None, None, "Ein Denar war der übliche Tageslohn eines Arbeiters (vgl. [[MAT.20.2]]); dreihundert Denare entsprechen also ungefähr dem Verdienst eines Jahres."),
@@ -401,6 +402,8 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MRK.14.5', 'Denar', 'literal', 'δηναρίων', None, None, 'En Denar isch de üblich Taglohn vomene Arbeiter gsii ([[MAT.20.2]]); drüühundert Denar sind öppe de Verdienst vomene Jahr. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
+ ('MRK.14.11', 'Silber', 'literal', 'ἀργύριον', None, ['Gäld'], 'ἀργύριον «Silber», Gäld i Silbermünze; d Summe nännt nu de Matthäus ([[MAT.26.15]]). ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MRK.14.1", "s Fäscht vo de ungsüürete Broot", "adapted", "τὰ ἄζυμα", "di Ungsüürete", None, "Name vom siebetägige Fäscht, wo as Passa aaschlüsst ([[LEV.23.5]]–[[LEV.23.6]])."),
  ("MRK.14.10", "uslifere", "literal", "παραδοῖ", None, ["verrate"], "παραδίδωμι heisst «übergää, uslifere». Es staat für de Judas, für d Hoheprieschter ([[MRK.15.1]]) und für de Pilatus ([[MRK.15.15]]); drum überall «uslifere»."),
  ("MRK.14.21", "de Mänschesohn", "traditional", "υἱὸς τοῦ ἀνθρώπου", "de Sohn vom Mänsch", ["de Mänsch"], "«Sohn vo me Mänsch» heisst hebräisch und aramäisch eifach «Mänsch»; bim Jesus e Bezeichnig für sich sälber, mit Aaklang a [[DAN.7.13]]."),

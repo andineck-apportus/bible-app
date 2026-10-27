@@ -349,6 +349,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MAT.17.27', 'en Stater', 'literal', 'στατῆρα', None, None, 'Silbermünz im Wärt vo vier Drachme, also d Abgab für zwei Persone ([[MAT.17.24]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MAT.16.1", "sind härechoo", "literal", "προσελθόντες", None, ["sind zue choo"],
   "Einheitlich fürs Matthäusevangelium: προσέρχομαι «härechoo» (bim Matthäus 51-mal)."),
  ("MAT.16.1", "zum en uf d Prob stelle", "interpretive", "πειράζοντες", "versuechend", ["zum en versueche"],

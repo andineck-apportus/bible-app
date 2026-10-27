@@ -134,7 +134,7 @@ DE = {
  "LUK.19.12": "[Er sagte]{1} [also]{2}: «[Ein]{4} [Mann]{3} [von vornehmer Herkunft]{5} [reiste]{6} [in]{7} [ein fernes]{9} [Land]{8}, um [sich]{11} [die Königswürde]{12} [zu holen]{10} und{13} [zurückzukehren]{14}.",
  "LUK.19.13": "[Er rief]{1} [aber]{2} [zehn]{3} [seiner]{5} [Knechte]{4} [zu sich]{1}, [gab]{6} [ihnen]{7} [zehn]{8} [Minen]{9} und{10} [sagte]{11} [zu ihnen]{12,13}: ‹[Macht Geschäfte damit]{14}, [bis]{15,16} [ich komme]{17}!›",
  "LUK.19.14": "[Seine]{4} [Mitbürger]{1,3} [aber]{2} [hassten]{5} [ihn]{6} und{7} [schickten]{8} [eine Gesandtschaft]{9} [hinter]{10} [ihm]{11} [her]{10} [und liessen sagen]{12}: ‹[Wir wollen]{14} [nicht]{13}, dass [dieser]{15} [über]{17} [uns]{18} [König wird]{16}!›",
- "LUK.19.15": "Und{1} [als]{3,4} [er]{6} [zurückkam]{5}, nachdem er [die Königswürde]{8,9} [empfangen hatte]{7}, [da]{10} [liess er]{11} [diese]{16} [Knechte]{14,15}, [denen]{17} er [das Geld]{19,20} [gegeben hatte]{18}, [zu sich]{13} [rufen]{12}, [um]{21} [zu erfahren]{22}, [was]{23} [sie erwirtschaftet hatten]{24}. ~2(" + EGEN + ")",
+ "LUK.19.15": "Und{1} [als]{3,4} [er]{6} [zurückkam]{5}, nachdem er [die Königswürde]{8,9} [empfangen hatte]{7}, [da]{10} [liess er]{11} [diese]{16} [Knechte]{14,15}, [denen]{17} er [das Silber]{19,20} [gegeben hatte]{18}, [zu sich]{13} [rufen]{12}, [um]{21} [zu erfahren]{22}, [was]{23} [sie erwirtschaftet hatten]{24}. ~2(" + EGEN + ")",
  "LUK.19.16": "[Da]{2} [kam]{1} [der]{3} [erste]{4} [und sagte]{5}: ‹[Herr]{6}, [deine]{9} [Mine]{7,8} [hat]{11} [zehn]{10} [Minen]{12} [dazugewonnen]{11}.›",
  "LUK.19.17": "Und{1} [er sagte]{2} [zu ihm]{3}: ‹[Gut gemacht]{4}, [du guter]{5} [Knecht]{6}! [Weil]{7} [du]{11} [im]{8} [Kleinsten]{9} [treu]{10} [gewesen bist]{11}, [sollst du]{12} [Macht]{13} [haben]{14} [über]{15} [zehn]{16} [Städte]{17}.›",
  "LUK.19.18": "Und{1} [der]{3} [zweite]{4} [kam]{2} [und sagte]{5}: ‹[Deine]{8} [Mine]{6,7}, [Herr]{9}, [hat]{10} [fünf]{11} [Minen]{12} [eingebracht]{10}.›",
@@ -142,7 +142,7 @@ DE = {
  "LUK.19.20": "Und{1} [der]{2} [andere]{3} [kam]{4} [und sagte]{5}: ‹[Herr]{6}, [sieh]{7}, hier ist [deine]{10} [Mine]{8,9}, [die]{11} [ich]{12} [in]{14} [einem Tuch]{15} [verwahrt]{13} [hatte]{12}.",
  "LUK.19.21": "[Ich fürchtete mich]{1} [nämlich]{2} [vor dir]{3}, [weil]{4} [du]{7} [ein strenger]{6} [Mann]{5} [bist]{7}: [Du nimmst]{8}, [was]{9} du [nicht]{10} [hingelegt hast]{11}, und{12} [erntest]{13}, [was]{14} du [nicht]{15} [gesät hast]{16}.›",
  "LUK.19.22": "[Er sagt]{1} [zu ihm]{2}: ‹[Nach]{3} [deinen eigenen Worten]{4-6} [richte ich]{7} [dich]{8}, [du böser]{9} [Knecht]{10}! [Du wusstest]{11}, [dass]{12} [ich]{13} [ein strenger]{15} [Mann]{14} [bin]{16}: [Ich nehme]{17}, [was]{18} ich [nicht]{19} [hingelegt habe]{20}, und{21} [ernte]{22}, [was]{23} ich [nicht]{24} [gesät habe]{25}?",
- "LUK.19.23": "Und{1} [warum]{2,3} [hast du]{5} [mein]{6} [Geld]{7,8} [nicht]{4} [auf]{9} [die Bank]{10} [gebracht]{5}? [Dann]{11} [hätte]{15} [ich]{11} [es]{16} [bei meiner Rückkehr]{12} [mit]{13} [Zinsen]{14} [eingefordert]{17}.›",
+ "LUK.19.23": "Und{1} [warum]{2,3} [hast du]{5} [mein]{6} [Silber]{7,8} [nicht]{4} [auf]{9} [die Bank]{10} [gebracht]{5}? [Dann]{11} [hätte]{15} [ich]{11} [es]{16} [bei meiner Rückkehr]{12} [mit]{13} [Zinsen]{14} [eingefordert]{17}.›",
  "LUK.19.24": "Und{1} [zu den Umstehenden]{2,3} [sagte er]{4}: ‹[Nehmt]{5} [ihm]{6,7} [die Mine]{8,9} [weg]{5} und{10} [gebt sie]{11} [dem]{12}, [der]{16} [die zehn]{13,14} [Minen]{15} [hat]{16}!› –",
  "LUK.19.25": "– und{1} [sie sagten]{2} [zu ihm]{3}: ‹[Herr]{4}, [er hat]{5} [zehn]{6} [Minen]{7}!› –",
  "LUK.19.26": "‹[Ich sage]{1} [euch]{2}: [Jedem]{4,5}, [der hat]{6}, [wird gegeben werden]{7}; [von]{8} [dem]{10} [aber]{9}, der [nicht]{11} [hat]{12}, [wird]{16} [auch]{13} [das, was]{14} [er hat]{15}, [weggenommen werden]{16}. ~3(" + RIGHT + ")",
@@ -317,7 +317,7 @@ GSW = {
  "LUK.19.12": "[Er hät]{1} [also]{2} [gseit]{1}: «[En]{4} [Maa]{3} [us vornähmer Familie]{5} [isch]{6} [in]{7} [es wiit entfernts]{9} [Land]{8} [greist]{6}, zum [sich]{11} [d Königswürde]{12} [z hole]{10} und{13} [zrugg z choo]{14}.",
  "LUK.19.13": "[Er hät]{1} [aber]{2} [zää]{3} [vo sine]{5} [Chnächt]{4} [grüeft]{1}, [hät]{6} [ine]{7} [zää]{8} [Mine]{9} [ggää]{6} und{10} [hät]{11} [zu ine]{12,13} [gseit]{11}: ‹[Mached Gschäft demit]{14}, [bis]{15,16} [ich chume]{17}!›",
  "LUK.19.14": "[Sini]{4} [Mitbürger]{1,3} [aber]{2} [händ]{5} [en]{6} [ghasst]{5} und{7} [händ]{8} [e Gsandtschaft]{9} [hinder]{10} [ihm]{11} [nache]{10} [gschickt]{8} [und händ la säge]{12}: ‹[Mir wänd]{14} [nöd]{13}, dass [dä]{15} [über]{17} [üs]{18} [König wird]{16}!›",
- "LUK.19.15": "Und{1} [wo]{3,4} [er]{6} [zruggchoo isch]{5}, nachdem er [d Königswürde]{8,9} [übercho hät]{7}, [dänn]{10} [hät er]{11} [die]{16} [Chnächt]{14,15}, [won er ine]{17} [s Gält]{19,20} [ggää gha hät]{18}, [zu sich]{13} [la rüefe]{12}, [demit er]{21} [erfahrt]{22}, [was]{23} [si erwirtschaftet händ]{24}. ~2(" + EGEN_G + ")",
+ "LUK.19.15": "Und{1} [wo]{3,4} [er]{6} [zruggchoo isch]{5}, nachdem er [d Königswürde]{8,9} [übercho hät]{7}, [dänn]{10} [hät er]{11} [die]{16} [Chnächt]{14,15}, [won er ine]{17} [s Silber]{19,20} [ggää gha hät]{18}, [zu sich]{13} [la rüefe]{12}, [demit er]{21} [erfahrt]{22}, [was]{23} [si erwirtschaftet händ]{24}. ~2(" + EGEN_G + ")",
  "LUK.19.16": "[Da]{2} [isch]{1} [de]{3} [erscht]{4} [choo]{1} [und hät gseit]{5}: ‹[Herr]{6}, [dini]{9} [Mine]{7,8} [hät]{11} [zää]{10} [Mine]{12} [dezue verdient]{11}.›",
  "LUK.19.17": "Und{1} [er hät]{2} [zu ihm]{3} [gseit]{2}: ‹[Guet gmacht]{4}, [du guete]{5} [Chnächt]{6}! [Wil]{7} [du]{11} [im]{8} [Chliinschte]{9} [tröi]{10} [gsii bisch]{11}, [söllsch du]{12} [Macht]{13} [ha]{14} [über]{15} [zää]{16} [Städt]{17}.›",
  "LUK.19.18": "Und{1} [de]{3} [zweit]{4} [isch choo]{2} [und hät gseit]{5}: ‹[Dini]{8} [Mine]{6,7}, [Herr]{9}, [hät]{10} [föif]{11} [Mine]{12} [iibracht]{10}.›",
@@ -325,7 +325,7 @@ GSW = {
  "LUK.19.20": "Und{1} [de]{2} [ander]{3} [isch choo]{4} [und hät gseit]{5}: ‹[Herr]{6}, [lueg]{7}, da isch [dini]{10} [Mine]{8,9}; [die]{11} [han ich]{12} [i]{14} [eme Tüechli]{15} [ufbewahrt]{13}.",
  "LUK.19.21": "[Ich han]{1} [nämli]{2} [Angscht gha]{1} [vor dir]{3}, [wil]{4} [du]{7} [en stränge]{6} [Maa]{5} [bisch]{7}: [Du nimmsch]{8}, [was]{9} du [nöd]{10} [anegleit häsch]{11}, und{12} [ärntisch]{13}, [was]{14} du [nöd]{15} [gsäit häsch]{16}.›",
  "LUK.19.22": "[Er seit]{1} [zu ihm]{2}: ‹[Nach]{3} [dine eigete Wort]{4-6} [richt ich]{7} [dich]{8}, [du böse]{9} [Chnächt]{10}! [Du häsch gwüsst]{11}, [dass]{12} [ich]{13} [en stränge]{15} [Maa]{14} [bi]{16}: [Ich nimm]{17}, [was]{18} ich [nöd]{19} [anegleit ha]{20}, und{21} [ärnte]{22}, [was]{23} ich [nöd]{24} [gsäit ha]{25}?",
- "LUK.19.23": "Und{1} [werum]{2,3} [häsch]{5} [mis]{6} [Gält]{7,8} [nöd]{4} [uf]{9} [d Bank]{10} [bracht]{5}? [Dänn]{11} [hett]{15} [ich]{11} [s]{16} [bi minere Rückchehr]{12} [mit]{13} [Zins]{14} [iizoge]{17}.›",
+ "LUK.19.23": "Und{1} [werum]{2,3} [häsch]{5} [mis]{6} [Silber]{7,8} [nöd]{4} [uf]{9} [d Bank]{10} [bracht]{5}? [Dänn]{11} [hett]{15} [ich]{11} [s]{16} [bi minere Rückchehr]{12} [mit]{13} [Zins]{14} [iizoge]{17}.›",
  "LUK.19.24": "Und{1} [zu de Umstehende]{2,3} [hät er gseit]{4}: ‹[Nämed]{5} [em]{6,7} [d Mine]{8,9} [wäg]{5} und{10} [gänd si]{11} [dem]{12}, [wo]{16} [di zää]{13,14} [Mine]{15} [hät]{16}!› –",
  "LUK.19.25": "– und{1} [si händ]{2} [zu ihm]{3} [gseit]{2}: ‹[Herr]{4}, [er hät]{5} [zää]{6} [Mine]{7}!› –",
  "LUK.19.26": "‹[Ich säg]{1} [eu]{2}: [Jedem]{4,5}, [wo hät]{6}, [wird ggää]{7}; [vo]{8} [dem]{10} [aber]{9}, wo [nüüt]{11} [hät]{12}, [wird]{16} [au]{13} [das, wo]{14} [er hät]{15}, [wäggnoo]{16}. ~3(" + RIGHT_G + ")",
@@ -442,6 +442,9 @@ GSW = {
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
 DEC_DE = [
+ ('LUK.20.24', 'Denar', 'literal', 'δηνάριον', None, None, 'Römische Silbermünze mit Bild und Aufschrift des Kaisers, etwa der übliche Tageslohn eines Arbeiters ([[MAT.20.2]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
+ ('LUK.19.23', 'Silber', 'literal', 'τὸ ἀργύριον', None, ['Geld'], 'Wie [[LUK.19.15]]. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
+ ('LUK.19.15', 'das Silber', 'literal', 'τὸ ἀργύριον', None, ['das Geld'], 'Gemeint sind die Minen ([[LUK.19.13]]), ein Gewicht Silber von hundert Drachmen, etwa hundert Tageslöhnen. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  # Kapitel 18
  ("LUK.18.1", "den Mut verlieren", "literal", "ἐγκακεῖν", None, ["nachlassen", "müde werden"], "ἐγκακέω heisst «müde werden, aufgeben». Lukas nennt den Zweck des Gleichnisses, bevor er es erzählt."),
  ("LUK.18.3", "Verschaffe mir Recht", "literal", "Ἐκδίκησόν με", None, ["Hilf mir zu meinem Recht"], "ἐκδικέω ist hier ein Wort aus dem Rechtsleben: jemandem zu seinem Recht verhelfen, nicht «rächen». Dasselbe Wortfeld steht in [[LUK.18.5]], [[LUK.18.7]] und [[LUK.18.8]]."),
@@ -571,6 +574,10 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('LUK.21.2', 'Lepta', 'literal', 'λεπτὰ', None, None, 'S Lepton (Mehrzahl «Lepta») isch di chliinscht Chupfermünz gsii, en halbe Quadrans ([[MRK.12.42]]); zwei Lepta sind en Bruchteil vomene Taglohn. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
+ ('LUK.20.24', 'Denar', 'literal', 'δηνάριον', None, None, 'Römischi Silbermünz mit Bild und Ufschrift vom Kaiser, öppe de üblich Taglohn vomene Arbeiter ([[MAT.20.2]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
+ ('LUK.19.23', 'Silber', 'literal', 'τὸ ἀργύριον', None, ['Gäld'], 'Wie [[LUK.19.15]]. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
+ ('LUK.19.15', 's Silber', 'literal', 'τὸ ἀργύριον', None, ['s Gäld'], 'Gmeint sind d Mine ([[LUK.19.13]]), es Gwicht Silber vo hundert Drachme, öppe hundert Taglöhn. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.18.3", "Verschaff mir Rächt", "literal", "Ἐκδίκησόν με", None, None, "ἐκδικέω isch es Wort us em Rächt: öpperem zu sim Rächt verhälfe, nöd «räche»."),
  ("LUK.18.5", "fertig macht", "interpretive", "ὑπωπιάζῃ", "under d Auge schlaat", ["is Gsicht schlaat", "blossstellt"], "S Wort chunnt us em Fuschtkampf («es blaus Aug schlaa»); übertreit «fertig mache» oder «blamiere»."),
  ("LUK.18.6", "ungrächt Richter", "adapted", "ὁ κριτὴς τῆς ἀδικίας", "Richter vo de Ungrächtigkeit", None, None),

@@ -31,6 +31,30 @@ Zusammenfassung oder im Bild, sondern in der Anwendung, gekennzeichnet und für 
 - **Heute:** immer mit Zielgruppe (`context`), mit Grenze (`limitations_de`: was der Text nicht sagt) und als
   Anwendung gekennzeichnet. Mehrere Anwendungen nebeneinander sind erwünscht; keine gilt als die richtige.
 
+## Münzen und Gewichte
+
+Entscheid Andi Neck 2026-10-26: «Geld ist ein Wertmittel (von dem her braucht es bildlich keine Unterscheidung); die damaligen Münznamen in den Text und die Umrechnung in die Erklärung.»
+
+- **Bibeltext:** die damaligen Namen, nie heutige oder Schweizer Geldwörter («Rappen», «Batzen», «Groschen», «Franken»). Einheitliche Schreibung, Hochdeutsch / Züridüütsch (Mehrzahl in Klammern):
+
+  | Urtext | Hochdeutsch | Züridüütsch | Wert (für die Erklärung) |
+  |---|---|---|---|
+  | δηνάριον | Denar (Denare) | Denar (Denar) | römische Silbermünze, üblicher Tageslohn eines Arbeiters ([[MAT.20.2]]) |
+  | ἀσσάριον | As, der (Asse) | As, de (As) | Kupfermünze, 1/16 Denar |
+  | κοδράντης | Quadrans, der | Quadrans, de | kleinste römische Münze, 1/4 As = 1/64 Denar |
+  | λεπτόν | Lepton, das (Lepta) | Lepton, s (Lepta) | kleinste Kupfermünze im Land, 1/2 Quadrans = 1/128 Denar ([[MRK.12.42]]) |
+  | δραχμή | Drachme (Drachmen) | Drachme (Drachme) | griechische Silbermünze, etwa ein Denar |
+  | δίδραχμον | Doppeldrachme | Doppeldrachme | zwei Drachmen, der halbe Schekel der Tempelabgabe ([[EXO.30.13]]) |
+  | στατήρ | Stater | Stater | Silbermünze zu vier Drachmen |
+  | μνᾶ | Mine (Minen) | Mine (Mine) | Rechnungseinheit von 100 Drachmen, etwa 100 Tageslöhne |
+  | τάλαντον | Talent (Talente) | Talänt (Talänt) | Gewicht von rund 26–36 kg Silber, etwa 6000 Denare |
+  | ἀργύριον | Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» | «Silber», «Silberstück» | Geld in Silbermünzen; welche, sagt der Text meist nicht |
+  | χαλκός | Kupfergeld | Chupfergäld | Kleingeld in Kupfermünzen |
+
+  Allgemeines Geld heisst in der Mundart einheitlich «Gäld» (nicht «Gält»).
+- **Erklärung:** Der Wert steht in der Übersetzungsentscheidung der Stelle (`decisions`) und, wo es hilft, in einer Hintergrundnotiz (z. B. BG-LUK-0019, BG-MAT-3017, BG-MAT-4014). Ein heutiger Vergleich (etwa in Franken) gehört höchstens in eine Anwendung mit Zielgruppe und Grenze, nie in den Bibeltext, die Zusammenfassung oder das Bild.
+- **Bild:** ein einziges Geld-Zeichen für alle Münzen; die Menge zeigt, wo nötig, die Zahl der Zeichen ([BILDSPRACHE.md](BILDSPRACHE.md)).
+
 ## Zielgruppen
 
 Zielgruppen sind `context`-Datensätze mit `label_de` (kurzer Name für die Auswahl in der App), `audience` und `situation_de`

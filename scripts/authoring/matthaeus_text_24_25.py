@@ -105,7 +105,7 @@ DE = {
  "MAT.25.15": "Und{1} [dem einen]{2,3} [gab er]{4} [fünf]{5} [Talente]{6}, [dem anderen]{7,8} [zwei]{9}, [dem dritten]{10,11} [eines]{12}, [jedem]{13} [nach]{14} [seiner eigenen]{15,16} [Fähigkeit]{17}, und{18} [reiste ab]{19}. [Sogleich]{20}",
  "MAT.25.16": "[ging]{1} [der]{2}, [der]{6} [die fünf]{3,4} [Talente]{5} [empfangen hatte]{6}, [hin]{1} und [arbeitete]{7} [damit]{8,9}, und{10} [er gewann]{11} [weitere]{12} [fünf]{13}.",
  "MAT.25.17": "[Ebenso]{1} [gewann]{5} [der]{2} [mit den zwei]{3,4} [weitere]{6} [zwei]{7}.",
- "MAT.25.18": "[Der]{1} [aber]{2}, [der]{5} [das eine]{3,4} [empfangen hatte]{5}, [ging hin]{6}, [grub]{7} ein Loch [in die Erde]{8} und{9} [verbarg]{10} [das Geld]{11,12} [seines]{15} [Herrn]{13,14}.",
+ "MAT.25.18": "[Der]{1} [aber]{2}, [der]{5} [das eine]{3,4} [empfangen hatte]{5}, [ging hin]{6}, [grub]{7} ein Loch [in die Erde]{8} und{9} [verbarg]{10} [das Silber]{11,12} [seines]{15} [Herrn]{13,14}.",
  "MAT.25.19": "[Nach]{1} [langer]{3} [Zeit]{4} [aber]{2} [kommt]{5} [der Herr]{6,7} [jener]{10} [Knechte]{8,9} und{11} [rechnet]{12,13} [mit]{14} [ihnen]{15} [ab]{12,13}.",
  "MAT.25.20": "Und{1} [der]{3}, [der]{7} [die fünf]{4,5} [Talente]{6} [empfangen hatte]{7}, [trat heran]{2}, [brachte]{8} [weitere]{9} [fünf]{10} [Talente]{11} und [sagte]{12}: «[Herr]{13}, [fünf]{14} [Talente]{15} [hast du]{17} [mir]{16} [übergeben]{17}; [sieh]{18}, [weitere]{19} [fünf]{20} [Talente]{21} [habe ich gewonnen]{22}.»",
  "MAT.25.21": "[Sein]{5} [Herr]{3,4} [sagte]{1} [zu ihm]{2}: «[Gut gemacht]{6}, du [guter]{8} und{9} [treuer]{10} [Knecht]{7}! [Über]{11} [wenigem]{12} [warst du]{13} [treu]{14}, [über]{15} [vieles]{16} [werde ich]{18} [dich]{17} [setzen]{18}. [Geh hinein]{19} [in]{20} [die Freude]{21,22} [deines]{25} [Herrn]{23,24}!»",
@@ -114,7 +114,7 @@ DE = {
  "MAT.25.24": "[Es trat]{1} [aber]{2} [auch]{3} [der]{4} [heran]{1}, [der]{8} [das eine]{5,6} [Talent]{7} [empfangen hatte]{8}, und [sagte]{9}: «[Herr]{10}, [ich wusste]{11} [von dir]{12}, [dass]{13} [du]{15} [ein harter]{14} [Mensch]{16} [bist]{15}: [Du erntest]{17}, [wo]{18} [du]{20} [nicht]{19} [gesät hast]{20}, und{21} [sammelst]{22}, [wo]{23} [du]{25} [nicht]{24} [ausgestreut hast]{25}.",
  "MAT.25.25": "Und{1} [weil ich mich fürchtete]{2}, [ging ich hin]{3} und [verbarg]{4} [dein]{7} [Talent]{5,6} [in]{8} [der Erde]{9,10}. [Sieh]{11}, [da hast du]{12} [das Deine]{13,14}.»",
  "MAT.25.26": "[Sein]{5} [Herr]{3,4} [aber]{2} [antwortete]{1} und [sagte]{6} [zu ihm]{7}: «[Du böser]{8} und{10} [fauler]{11} [Knecht]{9}! [Du wusstest]{12}, [dass]{13} [ich ernte]{14}, [wo]{15} [ich]{17} [nicht]{16} [gesät habe]{17}, und{18} [sammle]{19}, [wo]{20} [ich]{22} [nicht]{21} [ausgestreut habe]{22}?",
- "MAT.25.27": "[So]{3} [hättest]{1} [du]{2} [mein]{7} [Geld]{5,6} [den Geldwechslern]{8,9} [bringen]{4} [sollen]{1}, und{10} [ich]{12} [hätte]{14} [bei meiner Rückkehr]{11} [das Meine]{15,16} [mit]{17} [Zinsen]{18} [zurückerhalten]{13}.",
+ "MAT.25.27": "[So]{3} [hättest]{1} [du]{2} [meine]{7} [Silberstücke]{5,6} [den Geldwechslern]{8,9} [bringen]{4} [sollen]{1}, und{10} [ich]{12} [hätte]{14} [bei meiner Rückkehr]{11} [das Meine]{15,16} [mit]{17} [Zinsen]{18} [zurückerhalten]{13}.",
  "MAT.25.28": "[Nehmt]{1} [ihm]{4} [also]{2} [das Talent]{5,6} [weg]{3} und{7} [gebt es]{8} [dem, der]{9} [die zehn]{11,12} [Talente]{13} [hat]{10}.",
  "MAT.25.29": "[Denn]{2} [jedem]{4}, [der]{1} [hat]{3}, [wird gegeben werden]{5}, und{6} [er wird Überfluss haben]{7}; [wer]{8} [aber]{9} [nicht]{10} [hat]{11}, [dem]{16,17} [wird]{15} [auch]{12} [das, was]{13} [er hat]{14}, [weggenommen werden]{15}.",
  "MAT.25.30": "Und{1} [den nutzlosen]{2,3} [Knecht]{4} [werft hinaus]{5} [in]{6} [die]{7} [äussere]{9,10} [Finsternis]{8}. [Dort]{11} [wird]{12} [das Weinen]{13,14} und{15} [das Zähneknirschen]{16-19} [sein]{12}.",
@@ -207,7 +207,7 @@ GSW = {
  "MAT.25.15": "Und{1} [em eint]{2,3} [hät er]{4} [föif]{5} [Talänt]{6} [gää]{4}, [em andere]{7,8} [zwei]{9}, [em dritte]{10,11} [eis]{12}, [jedem]{13} [nach]{14} [sim eigete]{15,16} [Chönne]{17}, und{18} [isch verreist]{19}. [Grad]{20}",
  "MAT.25.16": "[isch]{1} [dä]{2}, [wo]{6} [di föif]{3,4} [Talänt]{5} [übercho hät]{6}, [ggange]{1} und [hät]{7} [damit]{8,9} [gschaffet]{7}, und{10} [er hät]{11} [föif]{13} [anderi]{12} [gwunne]{11}.",
  "MAT.25.17": "[Ebeso]{1} [hät]{5} [dä]{2} [mit de zwei]{3,4} [zwei]{7} [anderi]{6} [gwunne]{5}.",
- "MAT.25.18": "[Dä]{1} [aber]{2}, [wo]{5} [s eint]{3,4} [übercho hät]{5}, [isch ggange]{6}, [hät]{7} es Loch [in Bode]{8} [ggrabe]{7} und{9} [s Gäld]{11,12} [vo sim]{15} [Herr]{13,14} [versteckt]{10}.",
+ "MAT.25.18": "[Dä]{1} [aber]{2}, [wo]{5} [s eint]{3,4} [übercho hät]{5}, [isch ggange]{6}, [hät]{7} es Loch [in Bode]{8} [ggrabe]{7} und{9} [s Silber]{11,12} [vo sim]{15} [Herr]{13,14} [versteckt]{10}.",
  "MAT.25.19": "[Nach]{1} [langer]{3} [Ziit]{4} [aber]{2} [chunnt]{5} [de Herr]{6,7} [vo dene]{10} [Chnächt]{8,9} und{11} [rächnet]{12,13} [mit]{14} [ine]{15} [ab]{12,13}.",
  "MAT.25.20": "Und{1} [dä]{3}, [wo]{7} [di föif]{4,5} [Talänt]{6} [übercho hät]{7}, [isch härechoo]{2}, [hät]{8} [föif]{10} [anderi]{9} [Talänt]{11} [brocht]{8} und [gseit]{12}: «[Herr]{13}, [föif]{14} [Talänt]{15} [häsch]{17} [mir]{16} [übergää]{17}; [lueg]{18}, [föif]{20} [anderi]{19} [Talänt]{21} [han ich gwunne]{22}.»",
  "MAT.25.21": "[Sin]{5} [Herr]{3,4} [hät]{1} [zu ihm]{2} [gseit]{1}: «[Guet gmacht]{6}, du [guete]{8} und{9} [treue]{10} [Chnächt]{7}! [Über]{11} [wenig]{12} [bisch]{13} [treu]{14} [gsii]{13}, [über]{15} [vil]{16} [setz ich]{18} [dich]{17}. [Chumm ine]{19} [i]{20} [d Fröid]{21,22} [vo dim]{25} [Herr]{23,24}!»",
@@ -216,7 +216,7 @@ GSW = {
  "MAT.25.24": "[Es isch]{1} [aber]{2} [au]{3} [dä]{4} [härechoo]{1}, [wo]{8} [s eint]{5,6} [Talänt]{7} [übercho hät]{8}, und [hät gseit]{9}: «[Herr]{10}, [ich han]{11} [vo dir]{12} [gwüsst]{11}, [dass]{13} [du]{15} [en harte]{14} [Mänsch]{16} [bisch]{15}: [Du ärntisch]{17}, [wo]{18} [du]{20} [nöd]{19} [gsäit häsch]{20}, und{21} [sammlisch]{22}, [wo]{23} [du]{25} [nöd]{24} [usgstreut häsch]{25}.",
  "MAT.25.25": "Und{1} [wil ich Angscht gha han]{2}, [bin ich ggange]{3} und [han]{4} [dis]{7} [Talänt]{5,6} [im]{8,9} [Bode]{10} [versteckt]{4}. [Lueg]{11}, [da häsch]{12} [s Dini]{13,14}.»",
  "MAT.25.26": "[Sin]{5} [Herr]{3,4} [aber]{2} [hät gantwortet]{1} und [zu ihm]{7} [gseit]{6}: «[Du bööse]{8} und{10} [fuule]{11} [Chnächt]{9}! [Du häsch gwüsst]{12}, [dass]{13} [ich ärnte]{14}, [wo]{15} [ich]{17} [nöd]{16} [gsäit han]{17}, und{18} [sammle]{19}, [wo]{20} [ich]{22} [nöd]{21} [usgstreut han]{22}?",
- "MAT.25.27": "[Also]{3} [hettisch]{1} [du]{2} [mis]{7} [Gäld]{5,6} [de Gäldwächsler]{8,9} [söle]{1} [bringe]{4}, und{10} [ich]{12} [hett]{14} [bi minere Rückkehr]{11} [s Mii]{15,16} [mit]{17} [Zins]{18} [zrugg übercho]{13}.",
+ "MAT.25.27": "[Also]{3} [hettisch]{1} [du]{2} [mini]{7} [Silberstück]{5,6} [de Gäldwächsler]{8,9} [söle]{1} [bringe]{4}, und{10} [ich]{12} [hett]{14} [bi minere Rückkehr]{11} [s Mii]{15,16} [mit]{17} [Zins]{18} [zrugg übercho]{13}.",
  "MAT.25.28": "[Nämed]{1} [ihm]{4} [also]{2} [s Talänt]{5,6} [wäg]{3} und{7} [gänd s]{8} [däm, wo]{9} [di zäh]{11,12} [Talänt]{13} [hät]{10}.",
  "MAT.25.29": "[Dänn]{2} [jedem]{4}, [wo]{1} [hät]{3}, [wird gää]{5}, und{6} [er wird meh als gnueg ha]{7}; [wer]{8} [aber]{9} [nöd]{10} [hät]{11}, [däm]{16,17} [wird]{15} [au]{12} [das, wo]{13} [er hät]{14}, [wäggnoo]{15}.",
  "MAT.25.30": "Und{1} [de unnütz]{2,3} [Chnächt]{4} [rüered use]{5} [i]{6} [d]{7} [üsseri]{9,10} [Fiischteri]{8}. [Det]{11} [wird]{12} [s Hüüle]{13,14} und{15} [s Zändchnirsche]{16-19} [sii]{12}.",
@@ -240,6 +240,8 @@ GSW = {
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
 DEC_DE = [
+ ('MAT.25.27', 'meine Silberstücke', 'literal', 'τὰ ἀργύριά μου', None, ['mein Geld', 'mein Silber'], 'Mehrzahl ἀργύρια. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
+ ('MAT.25.18', 'das Silber', 'literal', 'τὸ ἀργύριον', None, ['das Geld'], 'Gemeint ist das Talent ([[MAT.25.15]]), ein Gewicht Silber. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstücke» ([[MAT.26.15]]). Damaliger Münzname im Text, Wert in der Erklärung (Entscheid Andi Neck 2026-10-26).'),
  ("MAT.24.1", "traten heran", "literal", "προσῆλθον", None, ["kamen herbei", "traten herzu"],
   "Gemeinsame Wiedergabe für das Matthäusevangelium: προσέρχομαι «herantreten». Ebenso [[MAT.24.3]], [[MAT.25.20]], [[MAT.25.22]] und [[MAT.25.24]]."),
  ("MAT.24.2", "kein Stein auf dem anderen gelassen", "literal", "οὐ μὴ ἀφεθῇ ὧδε λίθος ἐπὶ λίθον", None, ["kein Stein auf dem anderen bleiben"],
@@ -431,6 +433,8 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ('MAT.25.27', 'mini Silberstück', 'literal', 'τὰ ἀργύριά μου', None, ['mis Gäld'], 'Mehrzahl ἀργύρια. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
+ ('MAT.25.18', 's Silber', 'literal', 'τὸ ἀργύριον', None, ['s Gäld'], 'Gmeint isch s Talänt ([[MAT.25.15]]), es Gwicht Silber. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ("MAT.24.1", "sind härechoo", "literal", "προσῆλθον", None, ["sind zuen em choo"],
   "Gmeinsami Widergab fürs Matthäusevangelium: προσέρχομαι «härechoo». Gliich i [[MAT.24.3]], [[MAT.25.20]], [[MAT.25.22]] und [[MAT.25.24]]."),
  ("MAT.24.2", "bliibt", "adapted", "ἀφεθῇ", "wird glaa", ["wird glaa"],

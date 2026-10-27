@@ -1048,13 +1048,19 @@ E("FIG-OBJ-TAUBE", "object", "Taube (Tier)", "Dove (animal)",
   ["Nie mit Nimbus oder Lichtschein und nie von oben herabkommend; das bleibt dem Heiligen Geist vorbehalten"],
   find=[(r"Taube", ["JHN.2", "MRK.11"])], distinct=["FIG-HEILIGER-GEIST"])
 
-E("FIG-OBJ-MUENZEN", "object", "Münzen", "Coins",
-  "Geld in Münzen, etwa beim Tisch der Geldwechsler oder die zwei Lepta der Witwe ([[JHN.2.15]], [[MRK.12.42]]).",
-  "Gäld i Münze, öppe uf em Tisch vo de Gäldwächsler oder di zwei Lepta vo de Witwe ([[JHN.2.15]], [[MRK.12.42]]).",
+E("FIG-OBJ-MUENZEN", "object", "Münzen (Geld)", "Coins (money)",
+  "Geld in Münzen jeder Art, etwa beim Tisch der Geldwechsler, die zwei Lepta der Witwe, der Denar als Tageslohn, die Talente im Gleichnis oder die dreissig Silberstücke ([[JHN.2.15]], [[MRK.12.42]], [[MAT.20.2]], [[MAT.25.15]], [[MAT.26.15]]).",
+  "Gäld i Münze vo jeder Art, öppe uf em Tisch vo de Gäldwächsler, di zwei Lepta vo de Witwe, de Denar als Taglohn, d Talänt im Gliichnis oder di driissg Silberstück ([[JHN.2.15]], [[MRK.12.42]], [[MAT.20.2]], [[MAT.25.15]], [[MAT.26.15]]).",
   [T("Zwei Goldmünzen (Twemoji coin + coin, nebeneinander)", "design", note="Twemoji, Runde 12")],
   ("#D9A441", "#B4B2A9"),
-  ["Nicht mit dem Zeichen-Stern verwechselbar (rund, ohne Zacken)"],
-  find=[(r"Münze|Denar|Lepta|Geld", None)], distinct=["FIG-ZEICHEN-STERN"])
+  ["Nicht mit dem Zeichen-Stern verwechselbar (rund, ohne Zacken)",
+   "Ein Geld-Zeichen für alle Münzen und Geldmengen (Denar, As, Quadrans, Lepton, Drachme, Doppeldrachme, Stater, Mine, Talent, "
+   "Silberstücke): Geld ist ein Wertmittel, bildlich braucht es keine Unterscheidung (Entscheid Andi Neck 2026-10-26). Den Namen "
+   "der Münze trägt das Wort im Bild, den Wert die Erklärung. Muss die Menge sichtbar sein, zeigt die Zahl der Zeichen sie "
+   "(`stage.count` oder mehrere Zeichen in einer Zelle, höchstens 7); sonst ein Zeichen",
+   "Ausnahme: Wo der Text Bild und Aufschrift der Münze nennt (Kaisersteuer), zeigt FIG-OBJ-DENAR die Münze mit Kopf"],
+  find=[(r"Münze|Denar|Lepta|Lepton|Quadrans|\bAsse?\b|Drachme|Stater|\bMinen?\b|Talent|Silberstück|\bSilber\b|Geld", None)],
+  distinct=["FIG-ZEICHEN-STERN", "FIG-OBJ-DENAR"])
 
 E("FIG-OBJ-PEITSCHE", "object", "Geissel aus Stricken", "Whip of cords",
   "Die Geissel aus Stricken, mit der Jesus die Händler aus dem Tempel treibt ([[JHN.2.15]]).",
