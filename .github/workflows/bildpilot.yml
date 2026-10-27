@@ -1,0 +1,76 @@
+# Pilot «malerische Bilder» (Johannes 2): erzeugt Bilder über die Replicate-API.
+# Start von Hand: GitHub → Actions → «bildpilot» → Run workflow (geht auch in der GitHub-App auf dem Smartphone).
+# Geheimnis im Repo (Settings → Secrets and variables → Actions):
+#   REPLICATE_API_TOKEN   API-Token von replicate.com (Account → API tokens)
+# Ergebnis: als Download (Artefakt «bildpilot-…») und auf dem Branch «bildpilot-ausgabe» (Ordner ausgabe/<lauf>/,
+# darin kontaktbogen.html zum Vergleichen). Der Branch berührt main und das Deployment nicht.
+name: bildpilot
+
+on:
+  workflow_dispatch:
+    inputs:
+      modell:
+        description: "tiefe = folgt der Kompositionsvorlage · pro = nur Text, beste Qualität · schnell = nur Text, günstiger Vorversuch"
+        type: choice
+        options: [tiefe, pro, schnell]
+        default: tiefe
+      stile:
+        description: "Stile, mit Komma getrennt (oel, aquarell, holzschnitt)"
+        default: "oel,aquarell,holzschnitt"
+      szenen:
+        description: "Szenen A–E, mit Komma getrennt, oder «alle»"
+        default: "alle"
+      varianten:
+        description: "Bilder je Szene und Stil"
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bildpilot
+  cancel-in-progress: false
+
+jobs:
+  bilder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bilder erzeugen
+        env:
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          MODELL: ${{ inputs.modell }}
+          STILE: ${{ inputs.stile }}
+          SZENEN: ${{ inputs.szenen }}
+          VARIANTEN: ${{ inputs.varianten }}
+        run: python3 pilot/malerisch/generate.py --modell "$MODELL" --stile "$STILE" --szenen "$SZENEN" --varianten "$VARIANTEN"
+
+      - name: Als Download bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: bildpilot-${{ github.run_number }}
+          path: pilot/malerisch/ausgabe/
+
+      - name: Auf Branch bildpilot-ausgabe sichern
+        env:
+          LAUF: ${{ github.run_number }}
+          MODELL: ${{ inputs.modell }}
+        run: |
+          set -e
+          mv pilot/malerisch/ausgabe "$RUNNER_TEMP/ausgabe"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
+            git fetch --depth 1 origin bildpilot-ausgabe
+            git checkout -B bildpilot-ausgabe FETCH_HEAD
+          else
+            git checkout --orphan bildpilot-ausgabe
+            git rm -rfq .
+          fi
+          mkdir -p ausgabe
+          cp -r "$RUNNER_TEMP/ausgabe/." ausgabe/
+          git add ausgabe
+          git commit -qm "Bildpilot: Lauf $LAUF ($MODELL)"
+          git push origin bildpilot-ausgabe

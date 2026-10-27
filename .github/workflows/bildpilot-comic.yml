@@ -1,0 +1,65 @@
+# Pilot «Comic-Seite je Abschnitt» (Johannes 2, Stil 4) mit dem Bildmodell von OpenAI.
+# Start von Hand: Actions → «bildpilot-comic» → Run workflow.
+# Geheimnis: OPENAI_API_KEY (API-Schlüssel von platform.openai.com; das ChatGPT-Abo gilt dafür nicht).
+# Optional als Repository-Variable: OPENAI_IMAGE_MODEL, um ein bestimmtes Bildmodell zu erzwingen.
+# Ergebnis: Download (Artefakt) und Branch «bildpilot-ausgabe», Ordner ausgabe/<lauf>/.
+name: bildpilot-comic
+
+on:
+  workflow_dispatch:
+    inputs:
+      abschnitte:
+        description: "Abschnitte von Johannes 2 (001-012, 013-022, 023-025), mit Komma getrennt"
+        default: "001-012,013-022,023-025"
+      varianten:
+        description: "leer = Sprechblasen ohne Text · de = Hochdeutsch im Bild · gsw = Züridüütsch im Bild"
+        default: "leer,de"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bildpilot
+  cancel-in-progress: false
+
+jobs:
+  comic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Comic-Seiten erzeugen
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          ABSCHNITTE: ${{ inputs.abschnitte }}
+          VARIANTEN: ${{ inputs.varianten }}
+        run: python3 pilot/comic/comic.py --abschnitte "$ABSCHNITTE" --varianten "$VARIANTEN"
+
+      - name: Als Download bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: bildpilot-comic-${{ github.run_number }}
+          path: pilot/comic/ausgabe/
+
+      - name: Auf Branch bildpilot-ausgabe sichern
+        env:
+          LAUF: ${{ github.run_number }}
+        run: |
+          set -e
+          mv pilot/comic/ausgabe "$RUNNER_TEMP/ausgabe"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
+            git fetch --depth 1 origin bildpilot-ausgabe
+            git checkout -B bildpilot-ausgabe FETCH_HEAD
+          else
+            git checkout --orphan bildpilot-ausgabe
+            git rm -rfq .
+          fi
+          mkdir -p ausgabe
+          cp -r "$RUNNER_TEMP/ausgabe/." ausgabe/
+          git add ausgabe
+          git commit -qm "Bildpilot Comic: Lauf $LAUF"
+          git push origin bildpilot-ausgabe
