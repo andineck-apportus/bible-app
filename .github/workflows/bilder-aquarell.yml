@@ -1,0 +1,70 @@
+# Bilder im Aquarellstil malen lassen (docs/BILDSTIL.md) mit dem Bildmodell von OpenAI.
+# Start von Hand: Actions → «bilder-aquarell» → Run workflow. Geheimnis: OPENAI_API_KEY.
+# Ergebnis: Branch «bildpilot-ausgabe», Ordner ausgabe/aquarell/<lauf>/ (Auswahl und Ablage danach mit
+# scripts/authoring/bilder_aquarell.py). Berührt main und das Deployment nicht.
+name: bilder-aquarell
+
+on:
+  workflow_dispatch:
+    inputs:
+      schritt:
+        description: "figurenblatt oder felder"
+        type: choice
+        options: [felder, figurenblatt]
+        default: felder
+      szenen:
+        description: "Szenen (z. B. JHN-002-K1,JHN-002-T1) oder «alle»"
+        default: "alle"
+      varianten:
+        description: "Bilder je Szene"
+        default: "2"
+      hinweis:
+        description: "Zusätzliche Anweisung für diesen Lauf (Englisch, optional)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bildpilot
+  cancel-in-progress: false
+
+jobs:
+  malen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bilder malen
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          SCHRITT: ${{ inputs.schritt }}
+          SZENEN: ${{ inputs.szenen }}
+          VARIANTEN: ${{ inputs.varianten }}
+          HINWEIS: ${{ inputs.hinweis }}
+        run: python3 scripts/authoring/bilder_aquarell_gen.py "$SCHRITT" --szenen "$SZENEN" --varianten "$VARIANTEN" --hinweis "$HINWEIS"
+
+      - name: Auf Branch bildpilot-ausgabe sichern
+        if: always()
+        env:
+          LAUF: ${{ github.run_number }}
+        run: |
+          set -e
+          [ -d ausgabe/aquarell ] || exit 0
+          mv ausgabe/aquarell "$RUNNER_TEMP/aquarell"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
+            git fetch --depth 1 origin bildpilot-ausgabe
+            git checkout -B bildpilot-ausgabe FETCH_HEAD
+          else
+            git checkout --orphan bildpilot-ausgabe
+            git rm -rfq .
+          fi
+          mkdir -p ausgabe/aquarell
+          cp -r "$RUNNER_TEMP/aquarell/." ausgabe/aquarell/
+          git add ausgabe
+          git commit -qm "Bilder Aquarell: Lauf $LAUF"
+          git push origin bildpilot-ausgabe
