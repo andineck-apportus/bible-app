@@ -11,7 +11,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.click('[data-action=index]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(800);}
     assert(await p.$$eval('.has-ill',x=>x.length)>=3,'Bilder bei den Abschnitten von Johannes 2 (und den geladenen Nachbarn)');
-    await p.evaluate(()=>{const b=document.querySelector('.has-ill [data-view=image]');b&&b.click();});
+    assert.equal(await p.evaluate(()=>document.querySelector('.app').dataset.show),'both','Text und Bild zusammen als Vorgabe');
     {const tb=p.locator('.has-ill .tile-box[data-tilecap]:visible').first();await tb.click();await p.waitForTimeout(200);  // Legende je Kachel einblenden (Hinweis Andi Neck 2026-10-25)
       assert.equal(await tb.getAttribute('aria-expanded'),'true','Kachel-Legende eingeblendet');assert(await tb.locator('.tile-cap:not([hidden])').count(),'Kachel-Legende sichtbar');
       await tb.click();await p.waitForTimeout(200);assert.equal(await tb.getAttribute('aria-expanded'),'false','Kachel-Legende wieder aus');}
@@ -25,12 +25,10 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);
     await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(500);}
-    await p.evaluate(()=>{const b=document.querySelector('.has-ill [data-view=text]');b&&b.click();});
     const nLi=await p.evaluate(()=>{const e=[...document.querySelectorAll('.stream-entry')].find(x=>/Seligpreisungen/.test(x.querySelector('h2')?.textContent||''));return e?e.querySelectorAll('.sum-list li').length:0;});
     assert(nLi>=8,'Seligpreisungen als Liste aller Glieder ('+nLi+')');
     assert(await p.$('.ill-tiles svg.ill-tile'),'Bilder als einzelne Kacheln');
     // Abschnitt ohne Worte (Knopf oben beim Umschalter): Worte verdeckt, Zellen zeigen Zeichen gross; Antippen deckt stufenweise auf
-    await p.evaluate(()=>{const b=document.querySelector('.has-ill [data-view=image]');b&&b.click();});
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(400);
     assert(await p.$('.ill.nowords'),'Abschnittsbild ohne Worte');
     const nw=await p.evaluate(()=>{const c=document.querySelector('.ill.nowords g.dg-cell');return {full:getComputedStyle(c.querySelector('.dg-full')).display,nw:getComputedStyle(c.querySelector('.dg-nw')).display};});
@@ -43,16 +41,19 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
       assert(box,'Feld vorhanden: '+sel);await p.mouse.click(box.x,box.y);
       assert(await p.evaluate(()=>{const g=document.querySelector('[data-t="1"]');const ok=g.classList.contains('r1')||g.classList.contains('r2');delete g.dataset.t;return ok;}),'Antippen der Feldecke deckt auf: '+sel);}
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(300);assert(!await p.$('.ill.nowords'),'wieder mit Worten');
-    // Bilder bei den Versen: je Abschnitt ein- und ausblendbar (Schalter beim Abschnittstitel)
+    // Umschalter Text | Bild (Entscheid Andi Neck 2026-10-27): beide unabhängig, mindestens einer an, gilt für alle Ebenen; auf Versebene
+    // stehen die Felder des Abschnittsbilds bei ihren Versen
     await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
     await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,33');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
-    assert(!await p.$('.verse-ill'),'ohne Schalter keine Bilder bei den Versen');
-    await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
-    await p.locator('[data-vill]:visible').first().click();await p.waitForTimeout(500);
-    assert(await p.$('.verse-ill svg.ill-tile'),'Feld des Abschnittsbilds beim Vers');
-    assert(await p.$$eval('button[data-vill]',x=>x.length>0&&x.every(b=>b.getAttribute('aria-pressed')==='true')),'Schalter gilt für alle Abschnitte');
-    await p.locator('[data-vill][aria-pressed=true]:visible').first().click();await p.waitForTimeout(500);
-    assert(!await p.$('.verse-ill'),'wieder ausgeblendet');
+    assert(await p.$('.verse-ill svg.ill-tile'),'Feld des Abschnittsbilds beim Vers (Text und Bild)');
+    const tog=async k=>{await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.locator(`[data-show-t=${k}]:visible`).first().click();await p.waitForTimeout(500);};
+    await tog('img');assert(!await p.$('.verse-ill'),'nur Text: keine Bilder bei den Versen');
+    assert(await p.$$eval('button[data-show-t=img]',x=>x.length>0&&x.every(b=>b.getAttribute('aria-pressed')==='false')),'Umschalter gilt für alle Abschnitte');
+    await tog('text');assert.equal(await p.evaluate(()=>document.querySelector('.app').dataset.show),'img','letzter Knopf aus: wechselt auf den anderen statt beide aus');
+    assert(await p.$('.verse-ill svg.ill-tile'),'nur Bild: Felder sichtbar');
+    assert(!await p.evaluate(()=>[...document.querySelectorAll('.stream-entry.verse.in-ill .verse-line')].some(e=>e.getBoundingClientRect().height>0)),'nur Bild: kein Verstext, wo ein Bild steht');
+    await tog('text');assert.equal(await p.evaluate(()=>document.querySelector('.app').dataset.show),'both','beide wieder an');
+    assert(!await p.$('.set [data-seg=ill] [data-val=off]'),'keine Einstellung «keine Bilder» mehr');
     assert.deepEqual(errs,[],'keine Skriptfehler');
-    console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon, Kacheln, strukturierte Zusammenfassung, Kapitel ohne Worte, Bilder bei den Versen.');
+    console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon, Kacheln, strukturierte Zusammenfassung, Kapitel ohne Worte, Umschalter Text | Bild, Bilder bei den Versen.');
   }finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});

@@ -407,9 +407,18 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ill.nowords g.dg-label,#bible-stream .ill.nowords g.ill-name{display:none}
 #bible-stream .ill.nowords .ill-img{cursor:pointer}
 #bible-stream .ill-wrap.nowords .ill-text:not(.shown){filter:blur(6px);cursor:pointer;user-select:none}
-#bible-stream .app .vill-btn[aria-pressed=true]{color:var(--ink);font-weight:600}
 #bible-stream .app .nowords-btn[aria-pressed=true]{background:var(--ink);color:var(--bg);border-radius:999px;padding:4px 10px!important}
-#bible-stream .app[data-view=image] .ill-text{display:none}
+/* Text | Bild (S.show): nur Text blendet die Bilder aus, nur Bild den Text der Einträge mit Bild; auf Versebene ohne Verstext,
+   wo der Abschnitt ein Bild mit Feldern hat */
+#bible-stream .app[data-show=img] .ill-wrap .ill-text{display:none}
+#bible-stream .app[data-show=text] .ill-wrap>.ill{display:none}
+#bible-stream .app[data-show=img] .stream-entry.verse.in-ill .verse-line,#bible-stream .app[data-show=img] .stream-entry.verse.in-ill .merk{display:none}
+#bible-stream .app[data-show=img] .stream-entry.has-ill>.actions-under{display:flex!important}
+#bible-stream .app.flow[data-show=img] .stream-entry.verse.in-ill .verse-ill{display:block;margin:10px 0 18px}
+#bible-stream .vill-break{display:none}
+#bible-stream .app[data-show=text] .nowords-btn{display:none!important}
+#bible-stream .entry-tools .ill-toggle,#bible-stream .part-tools .ill-toggle{margin-left:auto}
+#bible-stream .part-head .part-tools{display:flex;align-items:center;width:100%}
 #bible-stream .legend-figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 #bible-stream .legend-fig{display:flex;align-items:center;gap:10px;font-size:14px}
 #bible-stream .legend-fig svg{width:30px!important;height:44px!important;flex:0 0 30px}
@@ -427,8 +436,6 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 @media (min-width:760px){
   #bible-stream .app[data-ill]:not([data-level="6"]) .reader .column{max-width:calc(100% - 48px)}
   #bible-stream .app[data-ill]:not([data-level="6"]) .stream-entry:not(.has-ill){max-width:36em}
-  #bible-stream .ill-toggle{display:none!important}
-  #bible-stream .app .ill,#bible-stream .app .ill-text{display:block!important}
 }
 /* Bild neben dem Text erst, wenn es mindestens 460 px breit bleibt (Hinweis Andi Neck 2026-10-25: Bilder wurden zu klein
    zum Lesen); darunter steht es in voller Breite unter dem Text */
@@ -438,16 +445,19 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 @container (min-width:770px){
   /* «eine Ebene tiefer» gleich unter dem Text statt unter dem Bild (Hinweis Andi Neck 2026-10-25) */
   #bible-stream .actions-side{display:flex}
-  #bible-stream .stream-entry.has-ill>.actions-under{display:none}
+  #bible-stream .app:not([data-show=img]) .stream-entry.has-ill>.actions-under{display:none}
   #bible-stream .ill-wrap.nowords .actions-side{display:none}
   #bible-stream .stream-entry.has-ill:has(.ill-wrap.nowords)>.actions-under{display:flex}
   #bible-stream .ill-wrap .ill-tiles,#bible-stream .ill-wrap .ill figcaption{margin-left:0}
-  #bible-stream .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(460px,1fr);gap:32px;align-items:start}
+  #bible-stream .app[data-show=both] .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(460px,1fr);gap:32px;align-items:start}
 }
 /* Versbilder rechts neben den Versen: Lesebereich (ohne Seitenleiste) braucht Platz für 36em Text und 400 px Bild */
 @media (min-width:1300px){
-  #bible-stream .app[data-vill][data-level="6"] .reader .column{--vg:clamp(400px,44vw,700px);max-width:calc(36em + var(--vg) + 28px);padding-right:calc(var(--vg) + 28px)}
-  #bible-stream .app[data-vill] .verse-ill{float:right;clear:right;width:var(--vg);margin:4px calc(-1 * var(--vg) - 28px) 10px 0}
+  #bible-stream .app[data-vill][data-show=both][data-level="6"] .reader .column{--vg:clamp(400px,44vw,700px);max-width:calc(36em + var(--vg) + 28px);padding-right:calc(var(--vg) + 28px)}
+  #bible-stream .app[data-vill][data-show=both] .verse-ill{float:right;clear:right;width:var(--vg);margin:4px calc(-1 * var(--vg) - 28px) 10px 0}
+  /* Bild auf Vershöhe (Hinweis Andi Neck 2026-10-27): der erste Vers eines Feldes beginnt erst unter dem vorigen Bild, damit
+     jedes Feld neben seinem Vers steht und die Bilder nicht nach unten wegrutschen */
+  #bible-stream .app[data-vill][data-show=both][data-level="6"] .vill-break{display:block;clear:right;height:0}
 }
 @media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}}
 </style></head><body>
@@ -621,7 +631,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',view:'text',merk:'mark',villOn:false,nowords:false};
+let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',show:'both',merk:'mark',nowords:false};
 try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 S.nowords=false;  // «ohne Worte» startet immer ausgeschaltet (Hinweis Andi Neck 2026-10-25)
 /* Feste Darstellung (Andi Neck, 2026-10-23; docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details, Umschrift an;
@@ -709,7 +719,7 @@ const GRUN=/[\u0370-\u03ff\u1f00-\u1fff][\u0370-\u03ff\u1f00-\u1fff\s\u02bc\u201
 const rich=text=>linkRefs(esc(String(text??'')),refCtx).replace(HEB,h=>`<span class="heb" lang="he" dir="rtl">${h}</span>${S.translit?` <i class="tr-inline">${esc(heTr(h))}</i>`:''}${playHe(h)}`).replace(GRUN,g=>S.advanced?`<span class="grc">${g}</span>${S.translit?` <i class="tr-inline">${esc(translit(g))}</i>`:''}${play(g)}`:`<i class="tr-inline">${esc(translit(g))}</i>${play(g)}`);
 const termsLine=terms=>(terms&&terms.length)?`<p class="terms">${terms.map(tm=>{const tl=tm.translit||translit(tm.word),kind=tm.lang==='grc'?'el':(tm.lang==='arc'?'arc':'he');return `<span class="term"><span class="lang">${LANGNAME[tm.lang]?LANGNAME[tm.lang][lang==='de'?0:1]:tm.lang}</span> ${S.advanced?`<span class="${tm.lang==='grc'?'grc':'heb'}" lang="${tm.lang==='grc'?'grc':'he'}">${esc(tm.word)}</span> `:''}${!S.advanced||S.translit||tm.lang!=='grc'?`<i class="tr-inline">${esc(tl)}</i>`:''}<button type="button" class="play" data-speak="${esc(tm.word)}" data-speak-lang="${kind}" data-speak-tr="${esc(tl)}" aria-label="${lang==='de'?'Anhören':'Listen'}">${icon('speak')}</button> «${esc(tm.de)}»</span>`;}).join('')}</p>`:'';
 if(synth&&synth.addEventListener)synth.addEventListener('voiceschanged',()=>{if(sheet==='settings')settingsSheet();});
-function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(S.ill!=='off'&&!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';app.dataset.view=S.view==='image'?'image':'text';app.dataset.tl=S.text||'de';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;if(S.ill!=='off'&&S.villOn)app.dataset.vill='1';else delete app.dataset.vill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
+function applyPrefs(){app.classList.toggle('flow',!!S.flow);if(!(ILL.styles||{})[S.ill])S.ill=Object.keys(ILL.styles||{})[0]||'off';if(!['text','img','both'].includes(S.show))S.show='both';app.dataset.show=S.show;app.dataset.tl=S.text||'de';if(S.ill!=='off')app.dataset.ill='1';else delete app.dataset.ill;if(S.ill!=='off'&&S.show!=='text')app.dataset.vill='1';else delete app.dataset.vill;app.dataset.theme=S.theme==='auto'?(mq&&mq.matches?'dark':'light'):S.theme;app.style.setProperty('--read',S.read+'px');}
 mq&&mq.addEventListener&&mq.addEventListener('change',applyPrefs);
 const remembered=new Map(),savedStreams=new Map();let readerStart=0,readerEnd=0;
 app.innerHTML=`<header class="bar top"><button type="button" class="icon-btn" data-action="home" aria-label="">${logo}</button><button type="button" class="location" data-action="index"></button><button type="button" class="icon-btn" data-action="menu"></button></header><div class="jump"></div><aside aria-label="Navigation"></aside><main class="reader" tabindex="0" role="region"></main><nav class="bar dock"><div class="path"></div><button type="button" data-action="down" class="pick"></button></nav><div class="sheet-host"></div><span class="live" aria-live="polite"></span>`;
@@ -852,7 +862,7 @@ function bgOne(id){const b=LOC(BG.find(x=>x.id===id));openSheet('background',hea
 
 /* ---------- Bildsprache ----------
    Bilder je Zoomstufe und Stil (data/illustrations): Buch «JHN», Kapitel «JHN.2», Abschnitt = Texteinheit. Breite Ansicht:
-   Text und Bild nebeneinander; schmal: Umschalter Text | Bild (für alle Einträge gleich, S.view). Bilder sind Deutung. */
+   Text und Bild nebeneinander, schmal untereinander; Umschalter Text | Bild auf allen Breiten (S.show, beides möglich). Bilder sind Deutung. */
 function illFor(n){if(!ILL||S.ill==='off'||n.level>5)return null;const code=n.b!==undefined?DATA[n.b].code:null;
   const key=n.level===0?'SUM-BIBLE':n.level===1?(n.id==='ot'?'SUM-OT':'SUM-NT'):n.level===2?'SUM-GROUP-'+String(n.gi+1).padStart(2,'0'):n.level===3?code:n.level===4?code+'.'+n.c:(n.part?n.part.id:null);const it=key&&illItem(key);return it?{...LOC(it),key}:null;}
 // Bild im gewählten Stil; fehlt es dort, das Symbolbild (damit keine Ebene leer bleibt)
@@ -880,15 +890,19 @@ function illTileBoxes(il,tap){const tiles=illTiles(il.svg);if(!tiles)return null
     return `<div class="tile-box${narrow?' narrow':''}" data-span="${span}"${tap&&c?` role="button" tabindex="0" data-tilecap aria-expanded="false" title="${T().tileHint}"`:''}>${t}${c?`<div class="tile-cap" hidden>${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}</div>`:''}</div>`;}).join('')}</div>`;}
 const illFigure=(il,nw)=>{const off=nw&&S.nowords,boxes=illTileBoxes(il,!off);if(boxes)return `<figure class="ill${off?' nowords':''}"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${boxes}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legendTitle}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
   return `<figure class="ill${off?' nowords':''}"><div class="ill-img${illNarrow(il.svg)}" ${off?`role="img" aria-label="${esc(il.alt)}"`:`role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}"`}>${illSvg(il.svg)}</div>${illStyles(il.key,il.style)?`<figcaption>${illStyles(il.key,il.style)}</figcaption>`:''}</figure>`;};
-// Bilder auf Versebene (Hinweis Andi Neck 2026-10-26: für alle Abschnitte zusammen ein- und ausblendbar, Schalter bei jedem Abschnittstitel; S.villOn):
+// Bilder auf Versebene (Hinweis Andi Neck 2026-10-26/27: mit dem Umschalter Text | Bild beim Abschnittstitel, für alle Abschnitte zusammen):
 // zum ersten Vers eines Feldes das Feld des Abschnittsbilds (mit schmaler Fassung fürs Handy)
 const refV=r=>{const a=String(r||'').split('-')[0].split('.');return {c:+a[1],v:+a[2]};};
-const villBtn=p=>{if(!ILL||S.ill==='off'||!p.part||!illFor(p))return '';const on=!!S.villOn,L=lang==='de';
-  return `<button type="button" class="tool vill-btn" data-vill="1" aria-pressed="${on}" title="${L?'Bilder bei den Versen (alle Abschnitte)':'Pictures at the verses (all sections)'}">${icon('image')}<span>${on?(L?'Bilder aus':'Hide pictures'):(L?'Bilder':'Pictures')}</span></button>`;};
-function verseIll(n){if(!ILL||S.ill==='off')return '';const p=nodes.get(n.parent);if(!p||p.level!==5||!p.part||!S.villOn)return '';const il=illFor(p);if(!il||!il.panels)return '';
+// Umschalter Text | Bild (Entscheid Andi Neck 2026-10-27): beide Knöpfe unabhängig, mindestens einer an; gilt für alle Ebenen
+// und Einträge gemeinsam (S.show: 'text' | 'img' | 'both'). Auf Versebene: Felder des Abschnittsbilds bei den Versen.
+const viewToggle=()=>{const t=T(),on=k=>S.show==='both'||S.show===k;
+  return `<span class="ill-toggle" role="group" aria-label="${t.viewText} | ${t.viewImage}">${[['text',t.viewText,'text'],['img',t.viewImage,'image']].map(([k,l,ic])=>`<button type="button" data-show-t="${k}" aria-label="${l}" title="${l}" aria-pressed="${on(k)}">${icon(ic)}</button>`).join('')}</span>`;};
+const villBtn=p=>{if(!ILL||S.ill==='off'||!p.part)return '';const il=illFor(p);return il&&il.panels&&illTiles(il.svg)?viewToggle():'';};
+const inIll=n=>{const p=nodes.get(n.parent);if(!ILL||S.ill==='off'||!p||p.level!==5||!p.part)return false;const il=illFor(p);return !!(il&&il.panels&&illTiles(il.svg));};
+function verseIll(n){if(!ILL||S.ill==='off'||S.show==='text')return '';const p=nodes.get(n.parent);if(!p||p.level!==5||!p.part)return '';const il=illFor(p);if(!il||!il.panels)return '';
   const tiles=illTiles(il.svg);if(!tiles)return '';const groups=[];tiles.forEach(t=>{if(t.includes('ill-narrow')&&groups.length)groups[groups.length-1].push(t);else groups.push([t]);});
   const out=[];il.panels.forEach((pn,i)=>{const r=refV(pn.ref);if(r.c===n.c&&r.v===n.v&&groups[i])out.push(groups[i].join(''));});
-  if(!out.length)return '';return `<figure class="ill verse-ill"><div class="ill-tiles" role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}">${out.join('')}</div></figure>`;}
+  if(!out.length)return '';return `<span class="vill-break"></span><figure class="ill verse-ill"><div class="ill-tiles" role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}">${out.join('')}</div></figure>`;}
 function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];if(!st||!it0)return;const it=LOC(it0),t=T(),L=lang==='de';
   const acts=it.actions||it.panels.map(p=>p.action),ORDER=['divine','people','thing','place','action','concept'],grp=l=>l.group||l.kind;
   // Bildhilfe je Feld: Nummer wie im Bild, Kurztitel fett, was man sieht und wofür die Zeichen stehen, Stelle klein dahinter
@@ -909,7 +923,7 @@ function entry(id){
   const heading=n.level===5&&n.part?pTitle(n.part):(n.level===5?(lang==='de'?'Verse ':'Verses ')+n.v+'–'+n.last:title(n));
   const copy=text?sumHtml(text):`<p class="stream-copy quiet">${n.level===5?t.noPart:t.noSummary}</p>`;
   const il=illFor(n);
-  const tg=il?`<span class="ill-toggle" role="group" aria-label="${t.viewText} / ${t.viewImage}">${['text','image'].map(v=>`<button type="button" data-view="${v}" aria-label="${v==='text'?t.viewText:t.viewImage}" title="${v==='text'?t.viewText:t.viewImage}" aria-pressed="${(S.view==='image'?'image':'text')===v}">${icon(v)}</button>`).join('')}</span>`:'';
+  const tg=il?viewToggle():'';
   const tl=tools(id);
   const nw=il&&/dg-nw/.test(il.svg);  // «ohne Worte» auf allen Bildern mit Worten (Hinweis Andi Neck 2026-10-25: hilft beim Lernen)
   const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}${deep?`<div class="actions actions-side">${deep}</div>`:''}</div>${illFigure(il,nw)}</div>`:copy;
@@ -926,7 +940,8 @@ function verseEntry(n){
   const bgs=bgFor(n);
   const has=worked(n);
   const vno=`<button type="button" class="vno${has?' more':' plain'}" data-more="${n.id}" aria-label="${t.more} ${n.v}">${n.v}</button>`;
-  return `<article class="stream-entry verse" data-stream="${n.id}">${lead}${verseIll(n)}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${decorate(text,LAYER().decisions[n.canonicalRef],alts,n.id)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
+  const vi=verseIll(n),brk=vi.startsWith('<span class="vill-break"></span>')&&lead?'<span class="vill-break"></span>':'';
+  return `<article class="stream-entry verse${inIll(n)?' in-ill':''}" data-stream="${n.id}">${brk}${lead}${brk?vi.slice(brk.length):vi}<p class="verse-line">${vno}<span class="stream-copy" data-ref="${n.canonicalRef}">${decorate(text,LAYER().decisions[n.canonicalRef],alts,n.id)}</span>${merkMark(n)}</p>${merkCard(n,text)}</article>`;
 }
 // ---------- Merkverse und Lernen ----------
 // Merkverse: Bilder der Ebene «verse» (ILL.merk). Anzeige im Lesetext nach Einstellung S.merk: 'mark' (kleines Zeichen am Vers,
@@ -1368,7 +1383,7 @@ function settingsSheet(){
   <h4 class="set-group">${t.grpView}</h4>
   <div class="set"><span>${t.colors}</span>${seg('theme',[['auto',t.auto],['light',t.light],['dark',t.dark]],S.theme)}</div>
   <div class="set"><span>${t.size}</span>${seg('read',[[17,'A−'],[19,'A'],[22,'A+']],S.read)}</div>
-  ${Object.keys(ILL.styles||{}).length?`<div class="set"><span>${t.ill}<span class="sub">${t.illSub}</span></span>${seg('ill',[['off',t.illOff],...Object.entries(ILL.styles).map(([k,st])=>[k,lang==='de'?st.label.de:st.label.en])],S.ill)}</div>`:''}
+  ${Object.keys(ILL.styles||{}).length>1?`<div class="set"><span>${t.ill}<span class="sub">${t.illSub}</span></span>${seg('ill',[...Object.entries(ILL.styles).map(([k,st])=>[k,lang==='de'?st.label.de:st.label.en])],S.ill)}</div>`:''}
   ${MERK().length?`<div class="set"><span>${lang==='de'?'Merkverse':'Memory verses'}<span class="sub">${lang==='de'?'Bild und Wortlaut ausgewählter Kernverse. «Zeichen»: kleines Lesezeichen am Vers, Karte auf Antippen – stört den Lesefluss nicht.':'Picture and wording of selected key verses. «Mark»: small bookmark at the verse, card on tap.'}</span></span>${seg('merk',[['off',t.illOff],['mark',lang==='de'?'Zeichen':'Mark'],['card',lang==='de'?'Karte':'Card']],S.merk||'mark')}</div>`:''}
   <h4 class="set-group">${t.grpOrig}</h4>
   <div class="set"><span>${t.pron}<span class="sub">${t.pronSub}</span></span>${seg('pron',[['modern',t.pronModern],['school',t.pronSchool]],S.pron)}</div>
@@ -1527,12 +1542,12 @@ app.addEventListener('click',e=>{
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
   if(b.dataset.read){e.stopPropagation();if(RA.on&&RA.activeBtn===b.dataset.read)raControl('toggle');else readStart(b.dataset.read);return;}
   if(b.dataset.ra){raControl(b.dataset.ra);return;}
-  if(b.dataset.view){S.view=b.dataset.view;save();applyPrefs();app.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.view===S.view)));return;}
+  if(b.dataset.showT){const k=b.dataset.showT,o=k==='text'?'img':'text',on={text:S.show!=='img',img:S.show!=='text'};on[k]=!on[k];if(!on.text&&!on.img)on[o]=true;
+    S.show=on.text&&on.img?'both':on.text?'text':'img';save();applyPrefs();rerenderKeep();return;}
   if(b.dataset.legend){legendSheet(b.dataset.legend);return;}
   if(b.dataset.nowords){S.nowords=!S.nowords;save();rerenderKeep();return;}
   if(b.dataset.explain){legendSheet(b.dataset.explain);return;}
   if(b.hasAttribute('data-tilecap')){if(e.target.closest('.tile-cap'))return;const c=b.querySelector('.tile-cap');if(c){c.hidden=!c.hidden;b.setAttribute('aria-expanded',String(!c.hidden));}return;}
-  if(b.dataset.vill){S.villOn=!S.villOn;save();applyPrefs();rerenderKeep();return;}  // für alle Abschnitte zusammen (Hinweis Andi Neck 2026-10-26)
   if(b.dataset.illStyle){S.ill=b.dataset.illStyle;save();rerenderKeep();if(sheet==='legend')legendSheet(b.dataset.illKey);return;}
   if(b.hasAttribute('data-ra-sample')){if(speakToggle(b))return;if(synth){synth.cancel();synth.speak(readUtter(T().readSampleText));speakWatch(b);}return;}
   if(b.dataset.speak!==undefined){e.preventDefault();e.stopPropagation();if(speakToggle(b))return;speak(b.dataset.speak,b.dataset.speakLang,b.dataset.speakTr);speakWatch(b);return;}

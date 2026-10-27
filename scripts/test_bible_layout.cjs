@@ -18,7 +18,6 @@ const srv = http.createServer((q, r) => {const f = path.join(ROOT, decodeURIComp
   for (const [w, stage] of [[390, 'handy'], [600, 'handy'], [700, 'mittel'], [800, 'mittel'], [1000, 'breit'], [1200, 'breit'], [1400, 'breit'], [1800, 'breit']]) {
     const p = await b.newPage({viewport: {width: w, height: 900}});
     await p.goto(url); await p.waitForSelector('.stream-entry .ill-wrap', {timeout: 15000}); await p.waitForTimeout(300);
-    if (w < 760) await p.click('[data-view=image]');  // schmal: Umschalter Text/Bild
     const r = await p.evaluate(() => {
       const wrap = document.querySelector('.stream-entry .ill-wrap'), tiles = [...wrap.querySelectorAll('svg.ill-tile')].filter(t => t.getBoundingClientRect().width > 0);
       const R = e => e.getBoundingClientRect(), txt = R(wrap.querySelector('.ill-text')), t0 = R(tiles[0]);

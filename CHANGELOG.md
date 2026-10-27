@@ -2,6 +2,14 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.135 — 2026-10-27 — Umschalter Text | Bild auf allen Ebenen; Bilder auf Vershöhe
+
+Entscheid von Andi Neck (2026-10-27): «Der ‹nur Text›-Modus entfällt, Bilder auf allen Ebenen bleiben. Auf der Versebene sollen die Bilder im Desktop auf der richtigen Vershöhe sein. Ein Umschalter Text | Bild, wobei man auch beide einblenden kann.»
+- **Umschalter Text | Bild** (`S.show`: `text`, `img`, `both`): zwei unabhängige Knöpfe, mindestens einer bleibt an (wer den letzten ausschaltet, wechselt auf den anderen). Gilt für alle Ebenen und Einträge gemeinsam und auf allen Bildschirmbreiten; Vorgabe: beides. Er steht bei jedem Eintrag mit Bild und auf Versebene beim Abschnittstitel (ersetzt den Knopf «Bilder» bzw. «Bilder aus»).
+- **Versebene:** Mit Bild stehen die Felder des Abschnittsbilds bei ihren Versen. Auf dem Desktop (Lesebereich mit Platz rechts) beginnt der erste Vers eines Feldes erst unter dem vorigen Bild, sodass jedes Feld auf der Höhe seines Verses steht und die Bilder nicht mehr nach unten wegrutschen. «Nur Bild» zeigt auf Versebene die Felder ohne Verstext, wo der Abschnitt ein Bild hat.
+- **Einstellung «Bildstil»:** Wahl «keine Bilder» entfernt; gespeicherte Einstellung «keine Bilder» wird auf den ersten Bildstil umgestellt. Die Zeile erscheint nur noch, wenn es mehrere Bildstile gibt.
+- Tests nachgeführt (`test_bible_bilder.cjs`, `test_bible_layout.cjs`).
+
 ## v0.134 — 2026-10-27 — Münznamen: damalige Namen im Bibeltext, Wert in der Erklärung; ein Geld-Zeichen im Bild
 
 Entscheid von Andi Neck (2026-10-26): «Geld ist ein Wertmittel (von dem her braucht es bildlich keine Unterscheidung); die damaligen Münznamen in den Text und die Umrechnung in die Erklärung.» Umgesetzt nach AGENTS.md und [DAMALS-PRINZIP-HEUTE.md](docs/DAMALS-PRINZIP-HEUTE.md) (neuer Abschnitt «Münzen und Gewichte» mit Tabelle Name – Mehrzahl – Wert):
