@@ -65,7 +65,9 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 - **Bildtyp nach Textart** (`mode` der Kernanalyse): Erzählung als Szene; Rede, Lehre, Gleichnis mit dem Redner klein am Rand
   und dem Inhalt gross; Auftrag im Brief mit `letter: true` und Absender/Empfänger als Figuren (Paulus links, Titus rechts) –
   das Verlangte als Zeichen in der Sprechblase, nicht als geschehene Szene; Aufzählung als wenige Zeichen nebeneinander.
-- **Namensschild** nur beim ersten Auftreten einer benannten Hauptfigur im Bild (nicht bei Gott, Jesus, Gruppen und Rollen).
+- **Namensschild** nur beim ersten Auftreten einer benannten Hauptfigur im Bild (nicht bei Gott, Jesus, Gruppen und Rollen); seit
+  2026-10-26 auch, wo sonst ein nicht gestütztes Erkennungszeichen die Figur unterscheiden müsste. Der Zeichner setzt es auf die
+  Brust, wenn die Figur dort nichts trägt, sonst neben oder über den Kopf (nie über Gesicht, Gehaltenes, Zeichen, Blasen).
 - Höchstens zwei abstrakte Zeichen je Feld; Wörter statt Zeichenketten.
 - **Thema benennen** (Hinweis Andi Neck 2026-10-24): Band oder Sprechblase nennen das Thema der Stelle mit Worten aus dem Text
   (z. B. «Wenn ihr fastet», nicht nur «Wasche dein Gesicht»). Zeichen, die man ohne Legende nicht versteht, ersetzt ein Wort
@@ -99,7 +101,7 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 |---|---|
 | `mood: {FIG: expr}` | Ausdruck im Stil Anime: calm, smile, delight, worried, surprised, earnest, determined, pensive, question (fragend), sleep, angry (Zorn), fear (Angst), pain (Schmerz), dead (tot, fahle Haut) |
 | `pose: {FIG: p}` | lie, sleep, sit, kneel, fall, away (abgewandt: gespiegelt, Blick zur Seite, Gesicht bleibt sichtbar wie in der Legende) |
-| `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand; `"LEER"` = leere Hände ohne das feste Erkennungszeichen der Figur (z. B. die Frau aus Samarien, nachdem sie den Krug stehen gelassen hat, [[JHN.4.28]]) |
+| `hold: {FIG: OBJ}` | Figur hält Gegenstand (Gegenstand muss in `objects` stehen); lange Gegenstände (Schwert, Rohr, Kreuz) stehen seitlich mit sichtbarer Hand; `"LEER"` = leere Hände ohne das feste Erkennungszeichen der Figur und ohne Stab (z. B. die Frau aus Samarien, nachdem sie den Krug stehen gelassen hat, [[JHN.4.28]]; Erkennungszeichen, die der Text der Stelle nicht stützt, siehe unten) |
 | `in: {FIG: OBJ}`, `in_pos: {FIG: [x, y]}` | Figur im Gegenstand (Boot, Fisch, Grab …), Lage relativ 0–1 |
 | `at: {ZEICHEN: FIG}` oder `{ZEICHEN: [FIG, …]}` | Zeichen bei einer oder mehreren Figuren (z. B. Zorn, Schlafen, Nebel); Krone und Dornenkrone sitzen auf dem Kopf |
 | `signs_who: {ZEICHEN: [FIG…]}` | wer Tränen/Freude/Herz trägt (Standard: alle Personen ausser Jesus) |
@@ -121,6 +123,7 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 | `twin: {FIG: x}` | zweite gleiche Figur bei x (z. B. die zwei Mitgekreuzigten links und rechts von Jesus, [[JHN.19.18]]); sie spricht nicht und trägt Pose und Ausdruck der ersten (seit 2026-10-26) |
 | `far: [FIG]` | Figur weiter hinten: etwas kleiner und höher (z. B. die Mitgekreuzigten neben Jesus am Kreuz) |
 | `night: true` | dunkler Himmel mit Sternen (automatisch, wenn das Zeichen Nacht im Feld steht) |
+| `wolke: true` | grosse Wolke oben im Feld, die den Strahlenkranz umhüllt; die Szene darunter liegt leicht im Schatten («eine Wolke überschattete sie, und eine Stimme kam aus der Wolke», [[LUK.9.34-LUK.9.35]], [[MAT.17.5]], [[MRK.9.7]]). Braucht `FIG-GOTT` in `figures` und `FIG-ORT-WOLKE` in `objects` (die kleine Wolke entfällt dann); der Strahlenkranz steht in der Mitte, die Blase Gottes kommt aus der Wolke (seit 2026-10-26) |
 | Sprechblase `"think": true` | Denkblase (Wolke mit kleinen Kreisen) statt Sprechblase: «sagt sich im Herzen», überlegt |
 
 Automatisch (seit dem Blindtest vom 2026-10-17): Wer zuerst spricht, steht links vom zweiten Sprecher (ausser `x`, `split` oder
@@ -129,6 +132,16 @@ Sprech-Angabe ihre eigene Blase; vorher fasste der Zeichner sie zusammen und das
 in [BILDPROZESS.md](BILDPROZESS.md), «Sprechblasen: feste Prüfungen»);
 Gruppen erscheinen als Menge (drei Figuren vorn, zwei dahinter). Die Legende (`caption_de`) muss beschreiben, was das Zeichen im
 Bild tatsächlich zeigt (gleiche Wörter wie das Merkmal im Bildlexikon), sonst sucht man vergeblich.
+
+**Erkennungszeichen nur, wo der Text sie stützt** (Entscheid Andi Neck 2026-10-26): Das Erkennungszeichen einer Figur aus dem
+Lexikon (Schlüssel des Petrus, Kreuzstab des Täufers, Muschel und Kelch der Zebedäussöhne, Alabastergefäss der Maria aus Magdala,
+Feuerwagen Elijas, Stab des Mose, aber auch Hammer des Josef, Kasse des Judas, Richterstuhl des Pilatus) steht nur in Feldern,
+deren Verse es stützen (z. B. der Schlüssel in [[MAT.16.19]], die Kasse in [[JHN.12.6]]); sonst `stage.hold` `"LEER"`. Wer sich
+dann nicht mehr unterscheiden lässt (gleich aussehende Jünger), bekommt ein Namensschild statt eines nicht gestützten Zeichens.
+Die Legende nennt das Zeichen nur, wo es gezeichnet ist. Prüfhilfe: `python3 scripts/authoring/erkennungszeichen.py [--anwenden]`
+listet je Feld Figur, Zeichen und ob ein Suchmuster im Versbereich es stützt; `--anwenden` setzt `"LEER"`, kürzt die Legende und
+ergänzt ein Namensschild (Lauf vom 2026-10-26: `reports/erkennungszeichen-2026-10-26.json`, 336 gezeigte Zeichen, 255 nicht
+gestützt).
 
 Platzierung je Eintrag (in `bildsymbole_daten`: `place`): `band` (Hintergrund über die ganze Breite: Meer, See, Feld),
 `back` (Gebäude im Hintergrund), `big` (gross in der Mitte: Schiff, Fisch, Grab), `floor` (am Boden), `hand` (klein, in der Hand),

@@ -54,7 +54,8 @@
         "split": 2,
         "hold": {
           "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
-          "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
+          "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN",
+          "FIG-JUDAS-ISKARIOT": "LEER"
         },
         "at": {
           "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
@@ -128,7 +129,8 @@
       },
       "stage": {
         "hold": {
-          "FIG-JESUS": "FIG-OBJ-BROT"
+          "FIG-JESUS": "FIG-OBJ-BROT",
+          "FIG-PETRUS": "LEER"
         },
         "arrows": [
           [
@@ -193,7 +195,8 @@
       },
       "stage": {
         "hold": {
-          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+          "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT",
+          "FIG-JUDAS-ISKARIOT": "LEER"
         },
         "beside": {
           "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
@@ -290,7 +293,10 @@
         "floor_x": {
           "FIG-OBJ-HAHN": 134
         },
-        "trenner": true
+        "trenner": true,
+        "hold": {
+          "FIG-PETRUS": "LEER"
+        }
       }
     }
   ],
@@ -1625,6 +1631,298 @@
               "floor_x": {
                 "FIG-OBJ-HAHN": 134
               }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Runde 16 (Andi Neck 2026-10-26): neutrale Marta/Maria in Lk 10, Synagoge ohne Davidstern, Rabe, grosse Wolke bei der Stimme Gottes, Erkennungszeichen nur wo der Text sie stützt (sonst leere Hände, Namensschild)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.26.1-MAT.26.16",
+            "figures": [
+              "FIG-ROLLE-FRAU",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT",
+              "FIG-GRUPPE-HOHEPRIESTER"
+            ],
+            "objects": [
+              "FIG-OBJ-SALBGEFAESS",
+              "FIG-OBJ-MUENZEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-SALBUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JUDAS-ISKARIOT",
+                "to": "FIG-GRUPPE-HOHEPRIESTER",
+                "icons": [
+                  "FIG-OBJ-MUENZEN",
+                  "FIG-ZEICHEN-AUSLIEFERN"
+                ],
+                "word": {
+                  "de": "Was wollt ihr mir geben? Dann werde ich ihn euch ausliefern.",
+                  "gsw": "Was wänd ir mir gää? Dänn lifere ich en eu us."
+                }
+              }
+            ],
+            "action_de": "In Betanien salbt eine Frau Jesus für sein Begräbnis; Judas geht zu den Hohepriestern, die ihm dreissig Silberstücke abwägen, damit er Jesus ausliefert.",
+            "keywords": {
+              "de": "dreissig Silberstücke",
+              "gsw": "driissg Silberstück"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "split": 2,
+              "hold": {
+                "FIG-ROLLE-FRAU": "FIG-OBJ-SALBGEFAESS",
+                "FIG-GRUPPE-HOHEPRIESTER": "FIG-OBJ-MUENZEN"
+              },
+              "at": {
+                "FIG-ZEICHEN-SALBUNG": "FIG-JESUS"
+              },
+              "pose": {
+                "FIG-JESUS": "sit"
+              },
+              "mood": {
+                "FIG-ROLLE-FRAU": "calm",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest",
+                "FIG-GRUPPE-HOHEPRIESTER": "earnest"
+              },
+              "x": {
+                "FIG-ROLLE-FRAU": 22,
+                "FIG-JESUS": 60,
+                "FIG-JUDAS-ISKARIOT": 118,
+                "FIG-GRUPPE-HOHEPRIESTER": 164
+              },
+              "trenner": true
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.26.17-MAT.26.35",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BROT",
+              "FIG-OBJ-BECHER-VOLL"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-OBJ-BROT"
+                ],
+                "word": {
+                  "de": "Nehmt, esst! Das ist mein Leib.",
+                  "gsw": "Nämed, ässed! Das isch min Liib."
+                }
+              },
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-VERLEUGNEN",
+                  "FIG-ZEICHEN-NICHT"
+                ],
+                "word": {
+                  "de": "Selbst wenn ich mit dir sterben müsste, werde ich dich gewiss nicht verleugnen!",
+                  "gsw": "Au wänn ich mit dir sterbe müesst, ich wirde dich sicher nöd verleugne!"
+                }
+              }
+            ],
+            "action_de": "Beim Passamahl kündigt Jesus an, dass einer ihn ausliefern wird; er gibt den Jüngern Brot und Becher: Nehmt, esst! Das ist mein Leib. Petrus beteuert, er werde ihn nicht verleugnen.",
+            "keywords": {
+              "de": "Nehmt, esst! Das ist mein Leib",
+              "gsw": "Nämed, ässed! Das isch min Liib"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-JESUS": "FIG-OBJ-BROT"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-GRUPPE-JUENGER",
+                  "act"
+                ]
+              ],
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "pensive",
+                "FIG-PETRUS": "determined"
+              },
+              "x": {
+                "FIG-JESUS": 34,
+                "FIG-PETRUS": 94,
+                "FIG-GRUPPE-JUENGER": 154
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.26.36-MAT.26.56",
+            "figures": [
+              "FIG-GRUPPE-MENGE",
+              "FIG-JESUS",
+              "FIG-JUDAS-ISKARIOT"
+            ],
+            "objects": [
+              "FIG-ORT-GARTEN",
+              "FIG-OBJ-SCHWERT"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KUSS",
+              "FIG-ZEICHEN-AUSLIEFERN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GOTT",
+                "icons": [
+                  "FIG-ZEICHEN-WILLE-GOTTES"
+                ],
+                "think": true,
+                "word": {
+                  "de": "Doch nicht, wie ich will, sondern wie du willst.",
+                  "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch."
+                }
+              }
+            ],
+            "action_de": "In Getsemani betet Jesus: Doch nicht, wie ich will, sondern wie du willst; dann kommt Judas mit einer bewaffneten Menge und küsst Jesus, und sie ergreifen ihn.",
+            "keywords": {
+              "de": "Doch nicht, wie ich will, sondern wie du willst",
+              "gsw": "Aber nöd, wie ich wott, sondern wie du wottsch"
+            },
+            "names": {
+              "FIG-JUDAS-ISKARIOT": {
+                "de": "Judas",
+                "gsw": "Judas"
+              }
+            },
+            "stage": {
+              "hold": {
+                "FIG-GRUPPE-MENGE": "FIG-OBJ-SCHWERT"
+              },
+              "beside": {
+                "FIG-ZEICHEN-KUSS": "FIG-JUDAS-ISKARIOT"
+              },
+              "at": {
+                "FIG-ZEICHEN-AUSLIEFERN": "FIG-JESUS"
+              },
+              "arrows": [
+                [
+                  "FIG-GRUPPE-MENGE",
+                  "FIG-JESUS",
+                  "act"
+                ]
+              ],
+              "back_side": "left",
+              "before": true,
+              "night": true,
+              "mood": {
+                "FIG-GRUPPE-MENGE": "angry",
+                "FIG-JESUS": "calm",
+                "FIG-JUDAS-ISKARIOT": "earnest"
+              },
+              "x": {
+                "FIG-GRUPPE-MENGE": 34,
+                "FIG-JESUS": 98,
+                "FIG-JUDAS-ISKARIOT": 150
+              }
+            }
+          },
+          {
+            "n": 4,
+            "reference": "MAT.26.57-MAT.26.75",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-KAJAFAS",
+              "FIG-GRUPPE-HOHER-RAT",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-OBJ-HAHN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-TRAUER"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-HOHER-RAT",
+                "to": "FIG-KAJAFAS",
+                "icons": [
+                  "FIG-ZEICHEN-GERICHT",
+                  "FIG-ZEICHEN-TOD"
+                ],
+                "word": {
+                  "de": "Er hat den Tod verdient!",
+                  "gsw": "Er hät de Tod verdient!"
+                }
+              }
+            ],
+            "action_de": "Vor dem Hohen Rat sagt Jesus auf die Frage, ob er der Christus sei: Du hast es gesagt; der Rat urteilt: Er hat den Tod verdient! Im Hof verleugnet Petrus Jesus dreimal; ein Hahn kräht, und er weint bitterlich.",
+            "keywords": {
+              "de": "Er hat den Tod verdient!",
+              "gsw": "Er hät de Tod verdient!"
+            },
+            "names": {
+              "FIG-KAJAFAS": {
+                "de": "Kajafas",
+                "gsw": "Kajafas"
+              },
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "split": 3,
+              "signs_who": {
+                "FIG-ZEICHEN-TRAUER": [
+                  "FIG-PETRUS"
+                ]
+              },
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-KAJAFAS": "angry",
+                "FIG-GRUPPE-HOHER-RAT": "angry",
+                "FIG-PETRUS": "pain"
+              },
+              "x": {
+                "FIG-JESUS": 18,
+                "FIG-KAJAFAS": 56,
+                "FIG-GRUPPE-HOHER-RAT": 96,
+                "FIG-PETRUS": 162
+              },
+              "floor_x": {
+                "FIG-OBJ-HAHN": 134
+              },
+              "trenner": true
             }
           }
         ]

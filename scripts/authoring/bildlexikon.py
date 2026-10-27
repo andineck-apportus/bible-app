@@ -391,7 +391,7 @@ E("FIG-MARTA", "person", "Marta", "Martha",
   [T("Schöpfkelle", "tradition", note="Anknüpfend an ihr Dienen beim Mahl ([[JHN.12.2]])."), T("Terrakottafarbenes Gewand", "design")],
   ("#B4704A", "#E9D8B4"),
   [FACE, "Nicht als Dienerin im Sinn der Rolle FIG-ROLLE-DIENER (keine Schürze)"],
-  era="nt", find=[(r"Marta", None)], distinct=["FIG-MARIA-BETANIEN", "FIG-ROLLE-DIENER"])
+  era="nt", find=[(r"Marta", ["JHN"])], distinct=["FIG-MARIA-BETANIEN", "FIG-ROLLE-DIENER", "FIG-MARTA-LK"])  # Lk 10: FIG-MARTA-LK (2026-10-26)
 
 E("FIG-LAZARUS", "person", "Lazarus", "Lazarus",
   "Bruder von Marta und Maria in Betanien, den Jesus aus dem Grab ruft ([[JHN.11.1]], [[JHN.11.43-JHN.11.44]]).",

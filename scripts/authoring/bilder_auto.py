@@ -105,6 +105,8 @@ def plan(p, lex, extra):
     things = as_place + list(p["objects"]) + list(p["signs"])
     if "cross" in (st.get("pose") or {}).values():  # Jesus am Kreuz: das Kreuz zeichnet die Figur selbst
         things = [x for x in things if x != "FIG-OBJ-KREUZ"]
+    if st.get("wolke") and "FIG-GOTT" in p["figures"]:  # grosse Wolke um den Strahlenkranz (stage.wolke): zeichnet panel selbst
+        things = [x for x in things if x != "FIG-ORT-WOLKE"]
     inside = st.get("in", {})
     row = [h for h in humans if h not in inside]
     place = lambda t: meta(t, lex, extra)[0]  # noqa: E731
@@ -418,6 +420,7 @@ def zeichen(comp, wo, v, cands=(), auto=True):
 
 NW_FEHLT = []  # (Bild, Worte) ohne Zeichen im Modus «ohne Worte»
 CUR_ID = [""]
+NAME_FAIL = []  # Namensschilder ohne freie Lage (Ausgabe in bilder_anime.run)
 BUBBLE_FAIL = []  # Felder, in denen keine Blasenlage alle Regeln erfüllt (Ausgabe in bilder_anime.run)
 
 
@@ -512,7 +515,8 @@ def word_band(v, letter=False, comp=None, cands=()):
 
 
 def name_tag(x, y, v):
-    """Namensschild beim ersten Auftreten einer Hauptfigur (unter dem Kinn, auf der Brust)."""
+    """Namensschild beim ersten Auftreten einer Hauptfigur; y = Grundlinie der Schrift (Rahmen y-7.5 bis y+2.5). Die Lage
+    sucht Composer.place_name (neben oder über dem Kopf)."""
     fs = 7.5
     w = lwidth(v, fs) + 8
     x = min(W - 3 - w / 2, max(3 + w / 2, x))
@@ -544,6 +548,24 @@ def think_bubble(x, y, w, h, tx, ty, inner, attrs=""):
     dots = "".join(f'<circle cx="{ox + (tx - ox) * f:.1f}" cy="{oy + (ty - 4 - oy) * f:.1f}" r="{rr}" fill="#FFFFFF" stroke="{col}" stroke-width="1.6"/>'
                    for f, rr in ((.22, 4.6), (.55, 3.2), (.85, 2.0)))
     return f'<g>{dots}{ring}{fill}{core}{inner}</g>'
+
+
+def big_cloud(gx, gy):
+    """Grosse Wolke, die den Strahlenkranz umhüllt (stage.wolke, Entscheid Andi Neck 2026-10-26: «eine Wolke überschattete
+    sie … und eine Stimme kam aus der Wolke», [[LUK.9.34-LUK.9.35]]). Breite Wolke oben im Feld, darunter ein leichter
+    Schatten über der Szene (überschatten). Der Strahlenkranz wird danach darauf gezeichnet."""
+    cw, ch = 158, 50
+    cx = min(max(gx, 4 + cw / 2), W - 4 - cw / 2)
+    cy = max(ch / 2 - 1, gy + 3)
+    puffs = [(-.8, .22, .5), (-.55, -.12, .66), (-.22, -.36, .72), (.18, -.38, .72), (.52, -.14, .66), (.8, .22, .5),
+             (-.42, .36, .62), (0, .42, .66), (.42, .36, .62)]
+    circ = [(cx + dx * cw / 2, cy + dy * ch / 2, k * ch * .5) for dx, dy, k in puffs]
+    shade = f'<rect x="0" y="0" width="{W}" height="{H}" fill="#4A5266" opacity=".13"/>'
+    ink = "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="{r_ + 1.3:.1f}" fill="#6E6A62"/>' for a, b, r_ in circ)
+    body = "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="{r_:.1f}" fill="#F4F2EE"/>' for a, b, r_ in circ)
+    low = "".join(f'<circle cx="{a:.1f}" cy="{b + r_ * .45:.1f}" r="{r_ * .55:.1f}" fill="#DCD8D0"/>' for a, b, r_ in circ if b > cy)
+    glow = f'<ellipse cx="{gx:.1f}" cy="{gy:.1f}" rx="34" ry="20" fill="#F7E3A8" opacity=".55"/>'
+    return f'<g class="ill-wolke">{shade}{ink}{body}{low}{glow}</g>'
 
 
 # ------------------------------------------------------------------ gemeinsame Zeichner-Logik
@@ -684,8 +706,9 @@ class Composer:
             sp = dict(sp)
             if sp.get("word") and "§W" not in sp["icons"]:  # Kernwort in der Sprechblase, vor höchstens zwei Zeichen
                 sp["icons"] = ["§W"] + list(sp["icons"])
-            if strip and sp.get("word"):  # letzte Stufe: nur das Wort, ohne Zeichen daneben
-                sp["icons"] = ["§W"]
+            # letzte Stufe: Zeichen unter dem Wort statt daneben (Entscheid Andi Neck 2026-10-26: Zeichen nie weglassen,
+            # sondern Platz schaffen; früher entfielen hier die Zeichen)
+            stack = bool(strip and sp.get("word") and len(sp["icons"]) > 1)
             # Fassungen des Worts: Zeilenbreite und höchstens 2 oder 3 Zeilen (schmaler und höher statt kleiner)
             ws, hb = {}, {}
             for V in VARIANTS + [V4]:
@@ -703,7 +726,7 @@ class Composer:
                 tg = [(tx, ty - self.m(f)[1][1] * .4, 0)]
             else:
                 continue
-            items.append(dict(sp=sp, si=si, ws=ws, hb=hb, tg=tg, f=f))
+            items.append(dict(sp=sp, si=si, ws=ws, hb=hb, tg=tg, f=f, stack=stack))
           units, used = [], set()
           for k, it in enumerate(items):
             if k in used:
@@ -719,6 +742,10 @@ class Composer:
         items, units = build(False)
 
         def dims(it, V, sc):
+            if it.get("stack"):  # Wort oben, Zeichen in einer Reihe darunter
+                ws_ = it["ws"][V]
+                row = sum(ws_[1:]) + 5 * (len(ws_) - 2)
+                return max(ws_[0], row) * sc + 12, (it["hb"][V] + 3 + ih0) * sc + 12
             return sum(it["ws"][V]) * sc + 5 * (len(it["ws"][V]) - 1) + 12, it["hb"][V] * sc + 12
 
         # Grössen: Massstab und Zeilenbreite des Worts (schmaler umbrochen, zweizeilig, statt kleiner)
@@ -998,20 +1025,100 @@ class Composer:
             th = b["it"]["hb"][V] * sc  # Textfeld (bis drei Zeilen)
             bx, by, bw, bh = b["x"], b["y"], b["w"], b["h"]
             inner, x = [], bx + 6
-            for i, w in zip(sp["icons"], ws):
+            stack = b["it"].get("stack")
+            for k_, (i, w) in enumerate(zip(sp["icons"], ws)):
+                if stack and k_ == 1:  # Zeichenreihe unter dem Wort, mittig
+                    x = bx + (bw - (sum(ws[1:]) + 5 * sc * (len(ws) - 2))) / 2
+                yi = by + 6 + th + 3 * sc if stack and i != "§W" else by + 6 + (th - ih) / 2
                 if i == "§W":
                     fs_ = min(10, 10 * w / max(1, lwrap(sp["word"], 10, wm, nl)[1]))
                     own = [j for j in sp["icons"] if j != "§W"]
                     mi = [j for j in zeichen(self, "sprechblase", sp["word"], panel_icons(p)) if j not in own]
-                    inner.append(sw(ltext_ml(x + w / 2, by + 6 + th / 2, sp["word"], fs_, wm * fs_ / 10, n=nl),
-                                    nw_fill(self, x, by + 5 + (th - ih) / 2, w, ih + 2, mi, sp["word"])))
+                    if stack and not mi:  # Zeichen stehen schon unter dem Wort: ohne Worte bleibt das Wortfeld nicht leer
+                        mi = own[:2]
+                    xw = bx + bw / 2 - w / 2 if stack else x
+                    inner.append(sw(ltext_ml(xw + w / 2, by + 6 + th / 2, sp["word"], fs_, wm * fs_ / 10, n=nl),
+                                    nw_fill(self, xw, by + 5 + (th - ih) / 2, w, ih + 2, mi, sp["word"])))
                 else:
-                    inner.append(self.r_icon(i, x, by + 6 + (th - ih) / 2, w, ih))
-                x += w + 5
+                    inner.append(f'<g class="sp-icon" data-fig="{i}">' + self.r_icon(i, x, yi, w, ih) + "</g>")
+                x += w + 5 * (sc if stack else 1)
             tx, ty = b["tip"]
             drawn.append((bx, by, bw, bh, tx, ty, "".join(inner), bool(sp.get("think")), si) + ((True,) if b.get("link") else ()))
             placed.append((bx, bw, by + bh, bh))
         return placed, drawn
+
+    def face_bottom(self, fid):
+        """Unterkante von Gesicht und Bart unter der Kopfmitte, in Kopfradien (Stil kann genauer antworten)."""
+        return 1.7
+
+    def has_chest(self, fid, p):
+        """Trägt die Figur etwas vor der Brust (Erkennungszeichen, Gehaltenes, gefaltete Hände)? Der Stil kann genauer antworten."""
+        return True
+
+    def place_name(self, fid, v, heads, sky, bubs, tails, free_boxes, tags):
+        """Namensschild einer Figur: zuerst seitlich neben dem Kopf, dann darüber, dann auf Schulterhöhe aussen, sonst die
+        nächste freie Lage im Feld (2026-10-26). tags sammelt die gesetzten Schilder (keine Überlappung)."""
+        fs, th = 7.5, 10
+        tw = lwidth(v, fs) + 8
+        r = self.head_r()
+        hx, hy = heads[fid]
+        obst = []
+        grp = lambda f_: f_.split("#")[0].startswith("FIG-GRUPPE-") or f_ in GROUPS  # noqa: E731
+        for f_, (ox, oy) in heads.items():  # Gesicht (mit Haar) und Brust (Erkennungszeichen) jeder Figur; Gruppen mit den hinteren Köpfen
+            if grp(f_):
+                obst.append((ox - r * 2.2, oy - r * 2.3, r * 4.4, r * 3.5))
+            else:
+                obst.append((ox - r * 1.2, oy - r * 1.45, r * 2.4, r * (1.45 + self.face_bottom(f_.split('#')[0]))))  # bis unter Kinn bzw. Bart
+            if f_ != fid:  # Oberkörper einer anderen Figur: ein Schild dort läse sich als ihr Name
+                obst.append((ox - r * 1.15, oy + r * 1.0, r * 2.3, r * 3))
+            if self.has_chest(f_.split("#")[0], self._panel):  # Erkennungszeichen bzw. Gehaltenes vor der Brust
+                obst.append((ox - r * .8, oy + r * 1.25, r * 1.6, r * 1.65))
+            if (self._poses.get(f_) or "") in ("lie", "sleep", "fall", "kneel"):  # gedrehter Körper: Brust seitlich bzw. schräg
+                obst.append((ox - r * 1.3, oy - r * 1.6, r * 5.2, r * 3.6))
+        obst += list(getattr(self, "ess", [])) + list(free_boxes) + list(sky.values()) + list(bubs) + list(tags)
+        obst.append((0, 0, 27, 25))  # Feldnummer
+
+        def ok(cx, cy):
+            x, y = cx - tw / 2, cy - th / 2
+            if x < 3 or x + tw > W - 3 or y < 3 or y + th > H - 3:
+                return False
+            if any(x < ox + ow + .8 and x + tw > ox - .8 and y < oy + oh + .8 and y + th > oy - .8 for ox, oy, ow, oh in obst):
+                return False
+            return not any(self._seg_hits(a, b, c, d, (x, y, tw, th)) for a, b, c, d in tails)
+        # zuerst die Seite, auf der der nächste andere Kopf weiter weg ist (das Schild soll eindeutig zu dieser Figur gehören)
+        def room(sd):
+            d = [abs(ox - hx) for f_, (ox, oy) in heads.items() if f_ != fid and (ox - hx) * sd > 0 and abs(oy - hy) < r * 3]
+            return min(d) if d else 999
+        sides = sorted((1, -1), key=lambda sd: (-room(sd), sd if hx >= W / 2 else -sd))
+        cands = []
+        if not self.has_chest(fid.split("#")[0], self._panel) and self._poses.get(fid) in (None, "sit"):
+            cands.append((hx, min(hy + r * 2.35, H - 8.2)))  # auf der Brust, wenn die Figur dort nichts trägt
+        for side in sides:
+            cands.append((hx + side * (r * 1.2 + tw / 2 + 1.5), hy - r * .1))
+            cands.append((hx + side * (r * 1.2 + tw / 2 + 1.5), hy - r * .7))
+        for side in sides:  # am Feldrand: seitlich, ans Feld gerückt (nicht über das Gesicht, das prüft ok)
+            cx_ = min(W - 3.5 - tw / 2, max(3.5 + tw / 2, hx + side * (r * 1.2 + tw / 2 + 1.5)))
+            cands += [(cx_, hy - r * .1), (cx_, hy - r * .7), (cx_, hy + r * .5)]
+        cands.append((hx, hy - r * 1.45 - th / 2 - 1.5))
+        for side in sides:
+            cands.append((hx + side * (r * 1.05 + tw / 2 + 1.5), hy + r * 1.2))
+        for side in sides:  # tiefer, seitlich neben dem, was die Figur vor der Brust trägt (am Feldrand ans Feld gerückt)
+            cx_ = min(W - 3.5 - tw / 2, max(3.5 + tw / 2, hx + side * (r * .8 + tw / 2 + 3)))
+            cands.append((cx_, min(hy + r * 2.1, H - 9)))
+        best = next((c for c in cands if ok(*c)), None)
+        if best is None:  # nächste freie Lage im Feld
+            grid = [(cx, cy) for cy in range(8, H - 7, 2) for cx in range(int(tw / 2) + 3, int(W - tw / 2 - 3) + 1, 2)]
+            # nur Lagen, die näher bei dieser Figur liegen als bei einer anderen (sonst gehört das Schild scheinbar zu ihr)
+            near = lambda c: min(heads, key=lambda f_: math.hypot(c[0] - heads[f_][0], (c[1] - heads[f_][1]) * 1.6)) == fid  # noqa: E731
+            free = [c for c in grid if ok(*c) and near(c)] or [c for c in grid if ok(*c)]
+            if free:
+                best = min(free, key=lambda c: math.hypot(c[0] - hx, (c[1] - hy) * 1.6))
+            else:
+                best = (hx, H - 9)
+                NAME_FAIL.append((CUR_ID[0], fid))
+        cx, cy = best
+        tags.append((cx - tw / 2, cy - th / 2, tw, th))
+        return name_tag(cx, cy + 2.5, v)
 
     def m(self, t):
         if t.startswith("_"):
@@ -1090,9 +1197,11 @@ class Composer:
                 x = 26 if (d in spk or st.get("god_side") == "left") else W - w - 6
                 if st.get("god_side") == "right":
                     x = W - w - 6
-                if st.get("god_side") == "center":
+                if st.get("god_side") == "center" or (st.get("wolke") and not st.get("god_side")):
                     x = (W - w) / 2
                 y = 3
+                if st.get("wolke"):  # Gott in der Wolke, aus der die Stimme kommt (Lk 9,34–35; Mt 17,5; Mk 9,7)
+                    out.append(big_cloud(x + w / 2, y + h / 2))
             else:
                 x, y = (W - w) / 2, 4
             sky[d] = (x, y, w, h)
@@ -1336,7 +1445,9 @@ class Composer:
         placed_now = [(px, pb - ph, pw, ph) for px, pw, pb, ph in placed]
         arrows(False)  # nach der Lage der Blasen berechnet (weichen ihnen aus), aber unter ihnen gezeichnet
         if L["speech"]:  # Prüfung: Zahl der Sprech-Angaben im Feld (pruefe_bilder.py vergleicht mit data-speech der Blasen)
-            out.append(f'<g class="ill-sp" data-n="{len(L["speech"])}"/>')
+            # und die Zeichen je Sprech-Angabe (data-icons «Index:ID,ID|…»; jedes muss in seiner Blase stehen, 2026-10-26)
+            ic_ = "|".join(f'{k}:{",".join(sp_.get("icons") or [])}' for k, sp_ in enumerate(L["speech"]))
+            out.append(f'<g class="ill-sp" data-n="{len(L["speech"])}" data-icons="{ic_}"/>')
         for d_ in drawn:
             at_ = f' data-speech="{d_[8]}"' + (' data-link="1"' if len(d_) > 9 else "")
             if d_[7]:
@@ -1344,6 +1455,7 @@ class Composer:
             else:
                 out.append(self.r_bubble(*d_[:7], at_))
         # 11. freie Zeichen oben (unter den Blasen)
+        free_boxes = []
         top = max([b[2] for b in placed] + [6]) + 4
         free = list(L["air"])
         if free:
@@ -1402,15 +1514,23 @@ class Composer:
                 pos[t] = (x + w / 2, y + h / 2)
                 for q in range(min(int(cnt.get(t, 1)), 6)):
                     out.append(self.r_sym(t, x, y, w, h))
+                    free_boxes.append((x, y, w, h))
                     x += w + 3 * k
                 x += 6 * k
         placed_now = [(px, pb - ph, pw, ph) for px, pw, pb, ph in placed]
         arrows(True)  # Handlungslinien zu freien Zeichen erst, wenn deren Lage feststeht
         # 12. Worte im Bild: Namensschilder (erstes Auftreten) und Stichwortband
+        # Lage neben oder über dem Kopf (Entscheid Andi Neck 2026-10-26: am unteren Rand verdeckte das Schild, was die Figur
+        # vor der Brust trägt, z. B. das Kind bei Simeon, den Räucheraltar bei Zacharias); nicht über Gesichtern, Brust,
+        # Zeichen, Gegenständen, Blasen, Spitzen oder anderen Schildern (pruefe_bilder.py prüft es im Browser)
+        tags = []
+        self._poses = st.get("pose") or {}
+        self._panel = p
+        bubs = [(d_[0], d_[1], d_[2], d_[3]) for d_ in drawn]
+        tails = [(*self._tail(d_[0], d_[1], d_[2], d_[3], d_[4], d_[5])[:2], d_[4], d_[5]) for d_ in drawn]
         for fid, v in (p.get("names") or {}).items():
             if fid in heads:
-                hx, hy = heads[fid]
-                out.append(name_tag(hx, H - 7, v))  # am unteren Rand: verdeckt weder Gesicht noch das Zeichen auf der Brust
+                out.append(self.place_name(fid, v, heads, sky, bubs, tails, free_boxes, tags))
         # Stichwortband unter dem Feld (nicht im Bild: es verdeckte Hände, Gegenstände und Kniende; Pilot 2026-10-23)
         self.bands = getattr(self, "bands", [])
         self.bands.append(word_band(p["keywords"], letter=bool(p.get("letter")), comp=self, cands=panel_icons(p)) if p.get("keywords") else "")

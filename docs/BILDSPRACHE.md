@@ -50,7 +50,8 @@ Bilder ohne Text taugen vorerst für alle Sprachen. Später soll es Bildsprachen
     ([[TIT.1.12]]). «Vorgeschichte», «Ausschmückung» oder «unangenehm» sind kein Grund.
 - **Personen** im Stil «Symbol» ohne ausgeführtes Gesicht (im Stil «Anime» mit Gesicht und Ausdruck, siehe oben), erkennbar an Farbe, Kleidung und Zeichen. Keine Karikatur, keine «typisierten» Merkmale einer Volksgruppe; «die Juden» im Johannesevangelium als neutrale Menge, nie eingefärbt oder vereinheitlicht.
 - Was der Text offenlässt (z. B. ob die Geissel Menschen traf, [[JHN.2.15]]), bleibt im Bild offen oder wird im Auftrag (`interpretation_note_de`) als Deutung benannt. Nicht erzählte Vorgänge (der Wechsel von Wasser zu Wein) werden nicht als Vorgang gezeigt.
-- Symbole, die an nationale, politische oder kirchliche Sonderzeichen erinnern, vermeiden (z. B. Adler nicht mit weissem Kopf und Schwanz).
+- Symbole, die an nationale, politische oder kirchliche Sonderzeichen erinnern, vermeiden (z. B. Adler nicht mit weissem Kopf und Schwanz; die Synagoge ohne Davidstern, der zur Zeit Jesu kein Zeichen der Synagoge war und heute an die Staatsflagge erinnert – sie ist ein schlichtes Steinhaus mit der Torarolle, Entscheid Andi Neck 2026-10-26).
+- **Erkennungszeichen nur, wo der Text sie stützt** (Andi Neck, 2026-10-26): Traditionelle Attribute (Schlüssel des Petrus, Kreuzstab des Täufers, Muschel, Kelch, Alabastergefäss, Feuerwagen) und Zeichen aus einer bestimmten Szene (Hammer des Josef, Kasse des Judas, Richterstuhl) zeigt eine Figur nur, wo die Verse des Felds sie nennen; sonst leere Hände (`stage.hold` `"LEER"`) und, wenn nötig, ein Namensschild. Im Lexikon-Porträt bleiben sie. Gleiches Prinzip bei gleichnamigen Personen: Marta und Maria in Lukas 10 sind eigene Figuren ohne die Zeichen aus Johannes.
 
 ## Zeichner für alle Stellen (seit v0.65)
 

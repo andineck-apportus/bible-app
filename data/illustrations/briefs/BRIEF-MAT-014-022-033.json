@@ -136,6 +136,9 @@
         "x": {
           "FIG-JESUS": 60,
           "FIG-PETRUS": 128
+        },
+        "hold": {
+          "FIG-PETRUS": "LEER"
         }
       }
     },
@@ -1392,6 +1395,204 @@
                 "word": {
                   "de": "Seid getrost, ich bin es; fürchtet euch nicht!",
                   "gsw": "Nu Muet, ich bi s; händ kei Angscht!"
+                }
+              }
+            ],
+            "action_de": "Jesus betet allein auf dem Berg; das Boot wird von den Wellen bedrängt. In der vierten Nachtwache kommt er auf dem See zu ihnen; die Jünger schreien vor Furcht: Es ist ein Gespenst! Jesus sagt: Seid getrost, ich bin es; fürchtet euch nicht!",
+            "keywords": {
+              "de": "kam er zu ihnen und ging dabei auf dem See",
+              "gsw": "isch er zu ine choo und isch debii uf em See gloffe"
+            },
+            "stage": {
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "in_water": true,
+              "big_side": "right",
+              "in": {
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-GRUPPE-JUENGER": [
+                  0.4,
+                  0.42
+                ]
+              },
+              "night": true,
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 48
+              }
+            }
+          },
+          {
+            "n": 2,
+            "reference": "MAT.14.28-MAT.14.31",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-PETRUS"
+            ],
+            "objects": [
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-FURCHT",
+              "FIG-ZEICHEN-RETTUNG"
+            ],
+            "speech": [
+              {
+                "from": "FIG-PETRUS",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-RETTUNG"
+                ],
+                "word": {
+                  "de": "Herr, rette mich!",
+                  "gsw": "Herr, rett mich!"
+                }
+              }
+            ],
+            "action_de": "Petrus geht auf Jesu Wort auf dem Wasser, sieht den starken Wind, fürchtet sich und beginnt zu versinken; er schreit: Herr, rette mich! Sogleich ergreift ihn Jesus: Du Kleingläubiger, warum hast du gezweifelt?",
+            "keywords": {
+              "de": "Du Kleingläubiger, warum hast du gezweifelt?",
+              "gsw": "Du Chliigläubige, werum häsch zwiiflet?"
+            },
+            "names": {
+              "FIG-PETRUS": {
+                "de": "Petrus",
+                "gsw": "Petrus"
+              }
+            },
+            "stage": {
+              "on_water": [
+                "FIG-JESUS"
+              ],
+              "in_water": true,
+              "night": true,
+              "at": {
+                "FIG-ZEICHEN-FURCHT": "FIG-PETRUS"
+              },
+              "arrows": [
+                [
+                  "FIG-JESUS",
+                  "FIG-PETRUS",
+                  "act"
+                ]
+              ],
+              "mood": {
+                "FIG-JESUS": "earnest",
+                "FIG-PETRUS": "fear"
+              },
+              "x": {
+                "FIG-JESUS": 60,
+                "FIG-PETRUS": 128
+              }
+            }
+          },
+          {
+            "n": 3,
+            "reference": "MAT.14.32-MAT.14.33",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-SEE"
+            ],
+            "signs": [
+              "FIG-ZEICHEN-KNIEN"
+            ],
+            "speech": [
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-GOTT"
+                ],
+                "word": {
+                  "de": "Wahrhaftig, du bist Gottes Sohn!",
+                  "gsw": "Würkli, du bisch de Sohn vo Gott!"
+                }
+              }
+            ],
+            "action_de": "Als sie ins Boot steigen, legt sich der Wind; die im Boot werfen sich vor ihm nieder: Wahrhaftig, du bist Gottes Sohn!",
+            "keywords": {
+              "de": "legte sich der Wind",
+              "gsw": "hät sich de Wind gleit"
+            },
+            "stage": {
+              "in": {
+                "FIG-JESUS": "FIG-OBJ-BOOT",
+                "FIG-GRUPPE-JUENGER": "FIG-OBJ-BOOT"
+              },
+              "in_pos": {
+                "FIG-JESUS": [
+                  0.3,
+                  0.42
+                ],
+                "FIG-GRUPPE-JUENGER": [
+                  0.7,
+                  0.42
+                ]
+              },
+              "sea": "calm",
+              "pose": {
+                "FIG-GRUPPE-JUENGER": "kneel"
+              },
+              "at": {
+                "FIG-ZEICHEN-KNIEN": "FIG-GRUPPE-JUENGER"
+              },
+              "mood": {
+                "FIG-JESUS": "calm",
+                "FIG-GRUPPE-JUENGER": "delight"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "change_de": "Runde 16 (Andi Neck 2026-10-26): neutrale Marta/Maria in Lk 10, Synagoge ohne Davidstern, Rabe, grosse Wolke bei der Stimme Gottes, Erkennungszeichen nur wo der Text sie stützt (sonst leere Hände, Namensschild)",
+      "previous": {
+        "panels": [
+          {
+            "n": 1,
+            "reference": "MAT.14.22-MAT.14.27",
+            "figures": [
+              "FIG-JESUS",
+              "FIG-GRUPPE-JUENGER"
+            ],
+            "objects": [
+              "FIG-OBJ-BOOT",
+              "FIG-ORT-MEER-OFFEN"
+            ],
+            "signs": [],
+            "speech": [
+              {
+                "from": "FIG-JESUS",
+                "to": "FIG-GRUPPE-JUENGER",
+                "icons": [
+                  "FIG-ZEICHEN-FRIEDE"
+                ],
+                "word": {
+                  "de": "Seid getrost, ich bin es; fürchtet euch nicht!",
+                  "gsw": "Nu Muet, ich bi s; händ kei Angscht!"
+                }
+              },
+              {
+                "from": "FIG-GRUPPE-JUENGER",
+                "to": "FIG-JESUS",
+                "icons": [
+                  "FIG-ZEICHEN-FURCHT"
+                ],
+                "word": {
+                  "de": "Es ist ein Gespenst!",
+                  "gsw": "Es isch es Gspängscht!"
                 }
               }
             ],

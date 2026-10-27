@@ -1,0 +1,873 @@
+{
+ "titel": "Runde 16: Synagoge ohne Davidstern, Rabe, Marta und Maria (Lk 10), grosse Wolke (2026-10-26)",
+ "methode_de": "Zeichen: scripts/authoring/zeichen_test.py --entwuerfe … --frage abbild --befragen 4 --bewerten (32 px, Pixeldichte 2; getrennte Instanzen claude -p, Modell claude-opus-5-5, nur Lesezugriff auf das Blatt; eine weitere Instanz bewertet 0/1/2). Satz A (verteilt): Synagoge @3, Ausschluss (auf @3), Rabe @1/@2, Schüssel mit Kelle; Satz B (verteilt, Seed 11): Synagoge @3/@4/@5; Satz C (ein Blatt, Seed 5): Synagoge @4, Ausschluss (auf @4), Tempel zum Vergleich. Porträts FIG-MARTA-LK und FIG-MARIA-LK (300 px, ohne Namen) je drei Instanzen mit {abbild, wer, merkmale, sicherheit}. Ganze Bilder (900 px, ohne Auftrag und Legende, nur Buch und Ebene) je zwei Instanzen mit {stelle, felder, oben, unklar}: Lk 9,28–36, Mt 17,1–8, Mk 9,2–13 (grosse Wolke), Lk 10,38–42, Mk 1,21–28 (Synagoge im Hintergrund), Lk 12,22–34 (Rabe). Abgleich der Porträt- und Bildantworten mit Lexikon und Auftrag durch die bearbeitende Instanz (nicht getrennt).",
+ "grenzen_de": "Beschreibungen einzelner KI-Instanzen; kein Test mit Menschen, keine fachliche Prüfung. Die KI-Testpersonen kennen die Bibel gut; ganze Bilder erkennen sie auch über Stichwortband und Sprechblasen. Die Säulen-Synagoge (@3) wurde je nach Blatt als Tempel (Satz A) oder als Synagoge (Satz B) gelesen; das Ergebnis hängt vom Zusammenhang des Blatts ab.",
+ "zeichen_satz_a": {
+  "FIG-MARTA-LK-ZEICHEN@1": {
+   "antworten": [
+    {
+     "abbild": "Dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    },
+    {
+     "abbild": "Dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    },
+    {
+     "abbild": "Dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    },
+    {
+     "abbild": "Dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    },
+    {
+     "abbild": "dampfende Schüssel mit Löffel",
+     "bedeutung": "Essen"
+    },
+    {
+     "abbild": "Dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    },
+    {
+     "abbild": "dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    },
+    {
+     "abbild": "dampfende Schüssel mit Löffel",
+     "bedeutung": "Linsengericht"
+    }
+   ],
+   "bewertung_bedeutung": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "Schüssel richtig erkannt, aber als Linsengericht (Esau) gedeutet statt als Bedienen/Auftragen"
+  },
+  "FIG-ZEICHEN-AUSSCHLUSS@1": {
+   "antworten": [
+    {
+     "abbild": "Säulengebäude mit Verbotszeichen",
+     "bedeutung": "Tempel verboten"
+    },
+    {
+     "abbild": "Säulengebäude mit Verbotszeichen",
+     "bedeutung": "Tempel geschlossen"
+    },
+    {
+     "abbild": "Säulengebäude mit Verbotszeichen",
+     "bedeutung": "Tempel verschlossen"
+    },
+    {
+     "abbild": "Tempel mit Verbotszeichen",
+     "bedeutung": "Tempel verboten"
+    },
+    {
+     "abbild": "Säulengebäude mit Verbotszeichen",
+     "bedeutung": "kein Tempel"
+    },
+    {
+     "abbild": "Säulengebäude mit Verbotszeichen",
+     "bedeutung": "Tempelzerstörung"
+    },
+    {
+     "abbild": "Tempel mit Verbotszeichen",
+     "bedeutung": "Tempelzerstörung"
+    },
+    {
+     "abbild": "Tempel mit Verbotszeichen",
+     "bedeutung": "Tempelzerstörung"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "bewerter_notiz": "Synagoge als Tempel gelesen; Bedeutung meist Tempel verboten/geschlossen oder Tempelzerstörung statt Ausschluss aus der Synagoge"
+  },
+  "FIG-ORT-SYNAGOGE@3": {
+   "antworten": [
+    {
+     "abbild": "Säulengebäude",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Säulengebäude",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Säulengebäude",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Säulengebäude, Tempel",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Gebäude mit Säulen",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Säulengebäude",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Säulengebäude, Tempel",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Säulengebäude, Tempel",
+     "bedeutung": "Tempel"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "bewerter_notiz": "Durchgehend als Tempel gedeutet, Torarolle macht die Synagoge nicht erkennbar"
+  },
+  "FIG-OBJ-RABE@1": {
+   "antworten": [
+    {
+     "abbild": "Schwarzer Vogel auf Ast",
+     "bedeutung": "Rabe"
+    },
+    {
+     "abbild": "Schwarzer Vogel auf Ast",
+     "bedeutung": "Rabe"
+    },
+    {
+     "abbild": "Schwarzer Vogel auf Ast",
+     "bedeutung": "Rabe"
+    },
+    {
+     "abbild": "Schwarzer Vogel auf Ast",
+     "bedeutung": "Rabe"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung"
+  },
+  "FIG-OBJ-RABE@2": {
+   "antworten": [
+    {
+     "abbild": "fliegender schwarzer Vogel",
+     "bedeutung": "Rabe"
+    },
+    {
+     "abbild": "Schwarzer Vogel fliegend",
+     "bedeutung": "Rabe"
+    },
+    {
+     "abbild": "fliegender schwarzer Vogel",
+     "bedeutung": "Rabe"
+    },
+    {
+     "abbild": "fliegender schwarzer Vogel",
+     "bedeutung": "Rabe"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung"
+  }
+ },
+ "zeichen_satz_b": {
+  "FIG-ORT-SYNAGOGE@3": {
+   "antworten": [
+    {
+     "abbild": "Säulengebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Säulengebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Säulengebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Säulengebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung, alle erkennen Synagoge"
+  },
+  "FIG-ORT-SYNAGOGE@4": {
+   "antworten": [
+    {
+     "abbild": "Gebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Steingebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Steingebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Gebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung, alle erkennen Synagoge"
+  },
+  "FIG-ORT-SYNAGOGE@5": {
+   "antworten": [
+    {
+     "abbild": "Lehrer vor Menschen",
+     "bedeutung": "Lehre in Synagoge"
+    },
+    {
+     "abbild": "Lehrer vor Zuhörern im Haus",
+     "bedeutung": "Lehren in Synagoge"
+    },
+    {
+     "abbild": "Lehrender vor Zuhörern",
+     "bedeutung": "Synagoge, Lehre"
+    },
+    {
+     "abbild": "Lehrender vor Zuhörern im Haus",
+     "bedeutung": "Lehre in Synagoge"
+    }
+   ],
+   "bewertung_bedeutung": [
+    1,
+    1,
+    2,
+    1
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "als Tätigkeit 'Lehre in Synagoge' statt als Ort gelesen"
+  }
+ },
+ "zeichen_satz_c": {
+  "FIG-ORT-SYNAGOGE@4": {
+   "antworten": [
+    {
+     "abbild": "Steingebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Steingebäude mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Steinhaus mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    },
+    {
+     "abbild": "Steinhaus mit Schriftrolle",
+     "bedeutung": "Synagoge"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung, alle erkennen Steinhaus mit Torarolle als Synagoge"
+  },
+  "FIG-ZEICHEN-AUSSCHLUSS@1": {
+   "antworten": [
+    {
+     "abbild": "Steingebäude mit Verbotszeichen",
+     "bedeutung": "Ausschluss aus Synagoge"
+    },
+    {
+     "abbild": "Steingebäude mit Verbotszeichen",
+     "bedeutung": "Aus Synagoge ausgeschlossen"
+    },
+    {
+     "abbild": "Steinhaus mit Verbotszeichen",
+     "bedeutung": "Ausschluss aus Synagoge"
+    },
+    {
+     "abbild": "Steinhaus mit Verbotszeichen",
+     "bedeutung": "Synagogenausschluss"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung, Synagoge mit Verbotszeichen wird einhellig als Ausschluss gelesen"
+  },
+  "FIG-ORT-TEMPEL@1": {
+   "antworten": [
+    {
+     "abbild": "Weißes Gebäude auf Mauer",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Weißgoldener Tempel auf Mauer",
+     "bedeutung": "Tempel Jerusalem"
+    },
+    {
+     "abbild": "Weißes Gebäude, goldenes Dach",
+     "bedeutung": "Tempel"
+    },
+    {
+     "abbild": "Weißes Gebäude mit Goldverzierung",
+     "bedeutung": "Tempel"
+    }
+   ],
+   "bewertung_bedeutung": [
+    2,
+    2,
+    2,
+    2
+   ],
+   "bild_erkannt": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "bewerter_notiz": "keine Fehldeutung; meist nur als 'weisses Gebäude' beschrieben, Jerusalem nur einmal genannt"
+  }
+ },
+ "portraets": {
+  "FIG-MARTA-LK": {
+   "1": {
+    "abbild": "Eine junge Frau mit langen braunen Haaren, die von einem braunen Kopftuch bzw. Schleier bedeckt sind, in einem schlichten ockerfarbenen Gewand. Vor ihr steht eine dampfende Schüssel, in der ein Holzlöffel oder Rührstab steckt, also offenbar gerade gekochtes Essen.",
+    "wer": "Am wahrscheinlichsten ist es Marta, die Schwester von Maria und Lazarus (Lk 10,38–42). Als Jesus bei ihr zu Gast ist, kümmert sie sich um die Bewirtung, während Maria ihm zuhört. Die Kochschüssel ist das typische Erkennungszeichen für Marta als Gastgeberin. Denkbar sind auch die Witwe von Sarepta, die für Elija Brot backt (1 Kön 17), oder Rebekka, die für Isaak das Essen zubereitet (Gen 27). Bei Jakobs Linsengericht (Gen 25) wäre dagegen ein Mann zu sehen.",
+    "merkmale": [
+     "weibliche Figur mit Kopftuch bzw. Schleier",
+     "schlichtes Alltagsgewand, keine Krone und kein Schmuck",
+     "dampfende Schüssel mit Kochlöffel",
+     "freundlicher, hausfraulicher Ausdruck",
+     "steht für Gastfreundschaft und Bewirtung"
+    ],
+    "sicherheit": "mittel"
+   },
+   "3": {
+    "abbild": "Eine junge Frau mit langen braunen Haaren oder einem braunen Kopftuch, das bis auf die Schultern fällt. Sie trägt ein schlichtes ockerfarbenes Gewand. Vor sich hält sie eine braune Schüssel mit dampfendem Essen (Suppe oder Brei), in der ein Kochlöffel steckt.",
+    "wer": "Wahrscheinlich Marta, die Schwester von Maria und Lazarus (Lukas 10,38–42). Sie nimmt Jesus in ihr Haus auf und ist ganz mit dem Bewirten und Kochen beschäftigt. Das frisch gekochte, dampfende Essen mit dem Kochlöffel passt gut zu dieser Rolle der fleißigen Gastgeberin. Möglich wären auch andere Frauen, die kochen oder bewirten, zum Beispiel die Witwe von Sarepta (1 Kön 17) oder ganz allgemein eine dienende Gastgeberin. Ein Name, eine Beschriftung oder eine eindeutige Szene fehlt aber.",
+    "merkmale": [
+     "weibliche Figur",
+     "lange braune Haare bzw. Kopftuch",
+     "schlichtes ockerfarbenes Gewand",
+     "Schüssel mit dampfendem Essen",
+     "Kochlöffel in der Schüssel",
+     "Rolle als Gastgeberin, die kocht und bewirtet"
+    ],
+    "sicherheit": "mittel"
+   },
+   "2": {
+    "abbild": "Eine junge Frau im Comicstil mit langen braunen Haaren, die ihr Gesicht umrahmen, und einem schlichten ockerbraunen Gewand. Vor ihr steht eine braune Schüssel mit einem hellen Gericht (Suppe oder Brei). Ein Kochlöffel oder Stößel steckt darin, und Dampflinien zeigen, dass das Essen heiß ist.",
+    "wer": "Wahrscheinlich Marta von Betanien, die Schwester von Maria und Lazarus. In Lk 10,38-42 nimmt sie Jesus auf und ist ganz mit Bewirtung und Kochen beschäftigt. In Joh 12,2 heißt es ausdrücklich: 'Marta bediente.' Eine Frau mit frisch gekochtem, dampfendem Essen ist in Bilderbibeln das typische Erkennungszeichen für Marta als Gastgeberin. Andere Deutungen sind möglich, etwa die Witwe von Sarepta (1 Kön 17), Rebekka beim Linsengericht (Gen 25/27), Petrus' Schwiegermutter, die nach der Heilung bedient (Mk 1,31), oder allgemein eine dienende Gastgeberin.",
+    "merkmale": [
+     "Frau mit langen, offenen braunen Haaren ohne Kopftuch",
+     "schlichtes, einfarbiges braunes Gewand",
+     "Schüssel mit heißem, dampfendem Essen",
+     "Kochlöffel oder Stößel in der Schüssel",
+     "Attribut der Hausarbeit, Bewirtung und Gastfreundschaft",
+     "freundlicher, ruhiger Gesichtsausdruck"
+    ],
+    "sicherheit": "mittel"
+   }
+  },
+  "FIG-MARIA-LK": {
+   "3": {
+    "abbild": "Brustbild einer jungen Frau im Comicstil mit freundlichem, leicht lächelndem Gesicht, großen dunklen Augen und Wimpern. Sie trägt ein hellbraunes bzw. ockerfarbenes Kopftuch, das Haar, Ohren und Schultern bedeckt und bis über die Schultern fällt, dazu ein schlichtes olivgrünes Gewand. Gegenstände, Schmuck oder Hintergrund sind nicht zu sehen.",
+    "wer": "Eine junge biblische Frau aus dem Neuen Testament, möglicherweise Maria, die Mutter Jesu (zum Beispiel bei der Verkündigung oder als junge Frau in Nazaret). Für diese Deutung sprechen die Jugendlichkeit, der sanfte, demütige Ausdruck und das einfache, sittsame Kopftuch. Es fehlen aber die typischen Marienmerkmale wie ein blauer Mantel, ein weißer Schleier, ein Kind oder ein Heiligenschein. Deshalb passt die Figur ebenso gut zu einer anderen jungen Frau wie Rut, Rahel, Marta, Maria von Betanien oder zu einer allgemeinen Frau aus dem Volk.",
+    "merkmale": [
+     "junge Frau",
+     "hellbraunes, langes Kopftuch über Haar und Schultern",
+     "olivgrünes, schlichtes Gewand",
+     "freundlicher, sanfter Gesichtsausdruck",
+     "keine Attribute oder Gegenstände",
+     "kein Heiligenschein",
+     "einfache, bescheidene Kleidung"
+    ],
+    "sicherheit": "tief"
+   },
+   "1": {
+    "abbild": "Brustbild einer jungen Frau im flachen Comicstil, frontal und freundlich lächelnd. Sie hat mittlere bis dunkle Haut, große dunkle Augen mit betonten Wimpern und einen kleinen Mund. Kopf und Schultern bedeckt ein hellbraunes, ockerfarbenes Kopftuch oder ein Schleier/Umhang, der seitlich bis auf die Schultern fällt. Darunter ist ein Stirnband oder der Rand des Tuchs zu sehen. Sie trägt ein schlichtes olivgrünes Gewand. Gegenstände, Attribute oder Hintergrund sind nicht zu sehen.",
+    "wer": "Wahrscheinlich eine junge Frau aus dem Neuen Testament, am ehesten Maria, die Mutter Jesu, etwa in der Verkündigungsszene (Lk 1). Gründe: Jugendliches, sanftes Aussehen, Kopfbedeckung und einfache Kleidung passen zur üblichen Darstellung der jungen Maria in Kinder- und Bilderbibeln. Allerdings fehlen die typischen Merkmale wie ein blauer Mantel, ein Kind im Arm oder ein Heiligenschein. Deshalb kommen auch andere junge Frauen in Frage, zum Beispiel Maria Magdalena, Marta oder Maria von Betanien, Rut, Ester oder Rebekka, oder einfach eine allgemeine Frauenfigur. Hinweis: Auch der Ordnername ('FIG-MARIA-LK-1') deutet auf Maria nach Lukas 1 hin. Das Bild allein lässt diese Zuordnung aber nicht eindeutig zu.",
+    "merkmale": [
+     "junge Frau, freundlicher Gesichtsausdruck",
+     "hellbraunes/ockerfarbenes Kopftuch bzw. Schleier über Kopf und Schultern",
+     "schlichtes olivgrünes Gewand",
+     "mittlere bis dunkle Hautfarbe (Darstellung als Frau aus dem Nahen Osten)",
+     "keine Attribute wie Kind, Krug, Salbgefäß, Krone oder Heiligenschein",
+     "kein Hintergrund, kein Text"
+    ],
+    "sicherheit": "tief"
+   },
+   "2": {
+    "abbild": "Brustbild einer jungen Frau im flachen Comicstil: freundliches Gesicht mit großen dunklen Augen, langen Wimpern und leichtem Lächeln. Ein hellbraunes bis ockerfarbenes Kopftuch (eventuell auch langes, glattes Haar) rahmt das Gesicht und fällt bis über die Schultern. Sie trägt ein schlichtes olivgrünes Gewand mit rundem Ausschnitt. Gegenstände, Kind, Heiligenschein oder Hintergrund sind nicht zu sehen.",
+    "wer": "Eine junge Frau aus dem Neuen Testament, am ehesten Maria, die Mutter Jesu. Dafür sprechen das jugendliche, sanfte Aussehen und das Kopftuch über einem einfachen Gewand, so wie Maria in Kinder- und Bilderbibeln oft gezeigt wird. Ihre typischen Merkmale fehlen aber: kein blaues Gewand bzw. kein blauer Schleier und kein Jesuskind. Deshalb passt die Figur ebenso gut zu anderen Frauen der Bibel, etwa Marta, Maria von Betanien, Maria Magdalena, Rut oder Elisabet, oder sie ist einfach eine allgemeine Frauenfigur.",
+    "merkmale": [
+     "weibliche Figur (lange Wimpern, weiche Gesichtszüge)",
+     "jugendliches Alter",
+     "hellbraunes Kopftuch oder lange glatte Haare bis über die Schultern",
+     "schlichtes olivgrünes Gewand mit rundem Ausschnitt",
+     "keine Gegenstände oder Attribute (kein Kind, kein Krug, kein Salbgefäß, kein Heiligenschein)",
+     "keine Farbsymbolik wie Marienblau",
+     "freundlicher, ruhiger Gesichtsausdruck"
+    ],
+    "sicherheit": "tief"
+   }
+  }
+ },
+ "ganze_bilder": {
+  "LUK-009-028-036": {
+   "1": {
+    "stelle": "Lukas 9,28-36 (Die Verklärung Jesu auf dem Berg)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "In der Mitte ist Jesus zu sehen. Man erkennt ihn am Heiligenschein, an den Lichtstrahlen und am weißen Gewand. Links steht ein Mann mit weißem Haar und Bart, rechts ein Mann mit grauem Bart. Für die beiden gibt es die Namensschilder „Mose“ und „Elija“. Im Hintergrund ist ein grauer Berg.",
+      "geschieht": "Die linke Gestalt (Mose oder Elija) spricht mit Jesus: „Dein Weggang in Jerusalem“. Im Sprechblasen-Bild ist eine Stadt gezeichnet. Die Bildunterschrift lautet: „seine Kleidung wurde blitzend weiss“ (V. 29-31)."
+     },
+     {
+      "n": 2,
+      "wer": "Links ist Jesus mit Heiligenschein. Daneben steht Petrus mit grauem, lockigem Haar; er ist am Schild „Petrus“ zu erkennen. Rechts stehen zwei weitere Jünger, wohl Johannes und Jakobus. Im Hintergrund ist eine runde Hütte mit Strohdach.",
+      "geschieht": "Petrus lacht und zeigt auf Jesus. Er sagt: „Wir wollen drei Hütten machen!“ (V. 33). Die Bildunterschrift mit einem Fragezeichen-Symbol lautet: „Er wusste nicht, was er sagte“."
+     },
+     {
+      "n": 3,
+      "wer": "Unten steht Jesus mit Heiligenschein neben drei erschrockenen Jüngern (Petrus, Johannes, Jakobus) mit großen Augen und offenen Mündern. Mose und Elija sind nicht mehr da.",
+      "geschieht": "Eine Stimme aus der Wolke sagt: „Dieser ist mein Sohn, der Erwählte; hört auf ihn!“ (V. 35). Es ist Gott selbst, der zu den Jüngern spricht. Die Bildunterschrift lautet: „war Jesus allein da“ (V. 36)."
+     }
+    ],
+    "oben": "In Feld 3 ist oben eine große weiß-graue Wolke. In ihrer Mitte ist eine leuchtende Sonne mit dem hebräischen Gottesnamen יהוה (JHWH). Von dort kommt die Sprechblase, also spricht Gott aus der Wolke.",
+    "unklar": [
+     "In Feld 1 stehen die Namensschilder „Mose“ und „Elija“ beide rechts beim grauhaarigen Mann. Deshalb ist nicht klar, wer von beiden links und wer rechts steht.",
+     "In Feld 1 ist nicht eindeutig, ob die linke Gestalt spricht oder ob der Satz für das Gespräch beider Männer mit Jesus steht.",
+     "Johannes und Jakobus haben keine Namensschilder. Man erkennt sie nur aus dem Bibeltext.",
+     "In Feld 2 fehlt im Bild, dass die Jünger vorher geschlafen haben (V. 32).",
+     "Die Bildunterschriften sind kurze Zitate aus Teilsätzen, z. B. „war Jesus allein da“ ohne den Anfang des Satzes."
+    ]
+   },
+   "2": {
+    "stelle": "Lukas 9,28-36 (Verklärung Jesu auf dem Berg)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "In der Mitte Jesus: Heiligenschein, Strahlenkranz und weißes Gewand. Links ein alter Mann mit weißem Haar und Bart, rechts ein Mann mit grauem Bart. Die Namensschilder „Mose“ und „Elija“ stehen beide rechts neben dem rechten Mann. Im Hintergrund ist ein grauer Berg.",
+      "geschieht": "Der weißhaarige Mann links (Mose oder Elija) spricht mit Jesus über seinen „Weggang in Jerusalem“; in der Sprechblase ist eine kleine Stadt mit Mauer gezeichnet. Die Bildunterschrift sagt: „seine Kleidung wurde blitzend weiss“ (V. 29-31)."
+     },
+     {
+      "n": 2,
+      "wer": "Links Jesus mit Heiligenschein. Daneben Petrus: graue Locken und Bart, das Schild „Petrus“ steht darunter. Rechts zwei weitere Jünger ohne Namen, vermutlich Johannes und Jakobus. Im Hintergrund steht eine Hütte mit Strohdach.",
+      "geschieht": "Petrus lächelt, berührt Jesus vermutlich mit der Hand und sagt zu ihm: „Wir wollen drei Hütten machen!“ (in der Sprechblase ist eine Hütte gezeichnet). Die beiden anderen Jünger schauen erstaunt zu. Die Bildunterschrift mit einem Wolken-Fragezeichen-Symbol lautet: „Er wusste nicht, was er sagte“ (V. 33)."
+     },
+     {
+      "n": 3,
+      "wer": "Jesus mit Heiligenschein, jetzt wieder in normaler Kleidung mit rotem Tuch. Daneben Petrus und die zwei anderen Jünger, alle mit großen, erschrockenen Augen. Mose und Elija sind nicht mehr da.",
+      "geschieht": "Aus der Wolke spricht Gott zu den Jüngern: „Dieser ist mein Sohn, der Erwählte; hört auf ihn!“ Die Bildunterschrift sagt: „war Jesus allein da“ (V. 35-36)."
+     }
+    ],
+    "oben": "Oben in Feld 3 ist eine große, graue und weiße Wolke. In ihrer Mitte steht in einem goldenen Strahlenkranz der Gottesname JHWH in hebräischer Schrift (יהוה). Die Sprechblase zeigt auf dieses Zeichen: Die Stimme kommt also von Gott aus der Wolke.",
+    "unklar": [
+     "Feld 1: Beide Namensschilder stehen beim rechten Mann. Man kann nicht sicher sagen, wer Mose und wer Elija ist und wer von beiden spricht.",
+     "Feld 2: Das Schild „Petrus“ steht unter den Figuren zwischen dem grauhaarigen Sprecher und dem Jünger rechts daneben. Die Zuordnung zum Sprecher ist wahrscheinlich, aber nicht ganz eindeutig.",
+     "Die zwei anderen Jünger (Johannes und Jakobus, V. 28) haben keine Namen.",
+     "Das Hinaufsteigen auf den Berg zum Beten (V. 28), der Schlaf der Jünger (V. 32) und ihre Angst beim Eintreten in die Wolke (V. 34) sind nicht dargestellt.",
+     "Feld 2: Ein gelb-brauner, länglicher Gegenstand zwischen Jesus und Petrus ist unklar. Er könnte der Arm von Petrus sein."
+    ]
+   }
+  },
+  "MRK-009-002-013": {
+   "1": {
+    "stelle": "Markus 9,2–13 (Verklärung Jesu und das Gespräch beim Abstieg vom Berg über Elija; die Bildunterschriften zitieren V. 2, 7 und 9, die Sprechblasen V. 5, 7 und 13)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Petrus (Namensschild, graue Locken, zeigt mit der Hand), Elija (Namensschild, grau, langer Bart, grobes Fellgewand), Jesus (Heiligenschein, Strahlen hinter dem Kopf, weißes Gewand mit rotem Überwurf), Mose (Namensschild, weißes Haar und weißer Bart); dahinter ein grauer Berg",
+      "geschieht": "Jesus wird vor ihnen verwandelt (Bildunterschrift mit Strahlen-Symbol). Petrus sagt erschrocken (ängstliches Emoji) zu Jesus: „Wir wollen drei Hütten machen: dir eine und Mose eine und Elija eine.“ In der Sprechblase sind dazu kleine Symbolbilder von Jesus, Mose und Elija zu sehen."
+     },
+     {
+      "n": 2,
+      "wer": "Jakobus und Johannes (Namensschilder), dazu ein dritter Jünger mit grauen Locken, wohl Petrus; rechts Jesus (Heiligenschein, rot-weißes Gewand). Elija und Mose sind nicht mehr zu sehen",
+      "geschieht": "Eine Wolke kommt und überschattet sie (Bildunterschrift mit Wolken-Symbol). Aus der Wolke spricht Gott zu den Jüngern: „Dieser ist mein Sohn, der Geliebte; hört auf ihn!“ Ein Pfeil zeigt von der Wolke auf Jesus, und in der Sprechblase ist ein kleines Jesusbild. Die Jünger schauen erstaunt."
+     },
+     {
+      "n": 3,
+      "wer": "Jesus (Heiligenschein) zusammen mit drei Jüngern (Petrus mit grauen Locken, zwei jüngere Jünger, wohl Jakobus und Johannes); dahinter der Berg",
+      "geschieht": "Auf dem Weg vom Berg herab gebietet Jesus ihnen, niemandem etwas zu erzählen (Bildunterschrift und Emoji mit Finger auf den Lippen). Jesus sagt zu den Jüngern: „Elija ist auch gekommen, und sie haben mit ihm gemacht, was sie wollten.“ Über den Jüngern schwebt eine Wolke mit Fragezeichen: Sie sind ratlos und fragen sich, was das Auferstehen von den Toten bedeuten soll."
+     }
+    ],
+    "oben": "Feld 2 zeigt oben eine große graue Wolke. In ihrer Mitte ist eine leuchtende Sonne mit dem Gottesnamen JHWH in hebräischen Buchstaben (יהוה). Die Stimme kommt von dort aus der Wolke, also von Gott. Ihr Sprechblasen-Zeiger zeigt nach oben zur Wolke, und ein Pfeil führt von der Wolke zu Jesus.",
+    "unklar": [
+     "Die Namensschilder in Feld 1 stehen etwas versetzt über den Figuren. Elija ist wahrscheinlich der grauhaarige Mann im Fellgewand und Mose der Mann mit weißem Bart. Diese Zuordnung ist aber nicht ganz sicher.",
+     "Der grauhaarige Jünger in Feld 2 und 3 ist wohl Petrus, hat dort aber kein Namensschild. In Feld 3 hat keiner der Jünger ein Namensschild.",
+     "Die Sprechblase in Feld 3 gibt nur V. 13 wieder. Die Frage der Jünger nach Elija (V. 11) und das Wort über das Auferstehen von den Toten (V. 9–10) deutet das Bild nur durch die Fragezeichen-Wolke an."
+    ]
+   },
+   "2": {
+    "stelle": "Markus 9,2–13 (Verklärung Jesu auf dem Berg und das Gespräch beim Abstieg über Elija)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Petrus (beschriftet; grauhaarig, Lockenbart, zeigt mit der Hand). Elija (beschriftet; grauer Bart, grobes, zotteliges Gewand wie aus Fell). Jesus in der Mitte (Heiligenschein, weißes Gewand mit rotem Überwurf, hinter ihm Lichtstrahlen als Zeichen der Verwandlung). Mose (beschriftet; weißer Bart und weiße Haare). Im Hintergrund ein grauer Berg.",
+      "geschieht": "Jesus wird vor den Jüngern verwandelt (Bildunterschrift: „Und er wurde vor ihnen verwandelt“). Petrus spricht zu Jesus: „Wir wollen drei Hütten machen: dir eine und Mose eine und Elija eine.“ In der Sprechblase stehen kleine Bilder von Jesus, Mose und Elija. Das Emoji neben Petrus zeigt Angst und Verlegenheit (V. 6: Er wusste nicht, was er sagen sollte, denn sie waren voller Furcht)."
+     },
+     {
+      "n": 2,
+      "wer": "Die Jünger Jakobus (beschriftet), Johannes (beschriftet) und daneben Petrus (grauhaarig wie in Feld 1). Sie schauen mit großen Augen und offenem Mund. Rechts Jesus (Heiligenschein, rot-weißes Gewand). Oben eine Wolke mit leuchtendem Gottesnamen.",
+      "geschieht": "Eine Wolke kommt und überschattet sie (Bildunterschrift). Aus der Wolke spricht Gott zu den Jüngern: „Dieser ist mein Sohn, der Geliebte; hört auf ihn!“ Ein Pfeil führt von der Wolke zu Jesus, und ein kleines Jesusbild in der Sprechblase zeigt, wer gemeint ist."
+     },
+     {
+      "n": 3,
+      "wer": "Jesus links (Heiligenschein, rot-weißes Gewand). Rechts die drei Jünger: Petrus (grauhaarig, gelbes Gewand), Jakobus (dunkler Bart, grünes Gewand) und Johannes (bartlos, blaues Gewand). Sie sind an Frisur und Aussehen aus Feld 2 zu erkennen. Im Hintergrund der Berg mit einer Denkwolke, in der ein Fragezeichen steht.",
+      "geschieht": "Auf dem Weg vom Berg herab gebietet Jesus den Jüngern, niemandem davon zu erzählen (Bildunterschrift; das Emoji mit dem Finger auf dem Mund steht für Schweigen). Jesus sagt zu den Jüngern: „Elija ist auch gekommen, und sie haben mit ihm gemacht, was sie wollten.“ Das ist seine Antwort auf ihre Frage nach dem Kommen Elijas (V. 11–13). Das Fragezeichen zeigt, dass die Jünger rätseln, zum Beispiel darüber, was mit der Auferstehung von den Toten gemeint ist (V. 10)."
+     }
+    ],
+    "oben": "In Feld 2 ist oben eine große graue Wolke. In ihrer Mitte steht in einer leuchtenden Sonne der hebräische Gottesname JHWH (יהוה). Die Stimme Gottes kommt aus dieser Wolke, und der Zeiger der Sprechblase führt dorthin.",
+    "unklar": [
+     "Es ist nicht ganz sicher, wer in Mose und wer in Elija abgebildet ist. Die Namensschilder stehen jeweils über der Figur, aber die kleinen Bilder in Petrus' Sprechblase stehen in einer anderen Reihenfolge (Jesus, ein weißbärtiger Mann, ein grauhaariger Mann mit braunem Gewand und Flamme oder Fackel?).",
+     "In Feld 1 ist nur Petrus zu sehen, Jakobus und Johannes fehlen dort.",
+     "In Feld 3 sind die Jünger nicht beschriftet. Sie sind nur über Haare, Bart und Kleidung aus Feld 2 zugeordnet.",
+     "Unklar ist, wofür das Fragezeichen über dem Berg in Feld 3 genau steht: für das Rätseln über die Auferstehung von den Toten (V. 10) oder für die Frage nach Elija (V. 11).",
+     "Nicht im Bild zu sehen sind: das weiße Leuchten der Kleider (V. 3), das plötzliche Verschwinden von Mose und Elija (V. 8) und der Hinweis auf die Leiden des Menschensohns (V. 12)."
+    ]
+   }
+  },
+  "MAT-017-001-008": {
+   "2": {
+    "stelle": "Matthäus 17,1–8 (Die Verklärung Jesu)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Jesus in der Mitte (Heiligenschein, weißes Gewand mit rotem Überwurf). Links Mose: Er ist mit „Mose“ beschriftet, hat einen weißen Bart und Lichtstrahlen über dem Kopf. Neben Jesus Elija: Die Beschriftung „Elija“ steht über ihm, er hat einen grauen Bart, Lichtstrahlen und ein Fellgewand. Rechts Petrus, beschriftet mit „Petrus“ und mit grauem Lockenhaar. Im Hintergrund ist ein Berg zu sehen.",
+      "geschieht": "Jesus wird verklärt. Die Bildunterschrift lautet: „sein Gesicht leuchtete wie die Sonne“. Mose und Elija erscheinen. Petrus spricht mit Jesus und zeigt dabei auf ihn: „Herr, es ist gut, dass wir hier sind.“ Das Hütten-Symbol in der Sprechblase steht für seinen Vorschlag, Hütten zu bauen (V. 4)."
+     },
+     {
+      "n": 2,
+      "wer": "Petrus (graues Lockenhaar, über ihm ein Emoji mit ängstlichem Gesicht), Jesus mit Heiligenschein in der Mitte. Rechts Jakobus und Johannes, beide beschriftet. Mose und Elija sind nicht mehr zu sehen.",
+      "geschieht": "Eine Stimme spricht aus der Wolke zu den Jüngern. Die Sprechblase zeigt Symbole: ein Jesus-Bild, ein Herz und ein Ohr. Das bedeutet: „Dies ist mein geliebter Sohn … hört auf ihn!“ Die Bildunterschrift lautet: „[Jesus-Symbol, Ohr] hört auf ihn!“. Die Jünger erschrecken und haben Angst."
+     },
+     {
+      "n": 3,
+      "wer": "Jesus (Heiligenschein, lächelnd) links. Rechts die drei Jünger: Petrus (graues Haar), Jakobus und Johannes. Sie sind am Aussehen aus Feld 2 zu erkennen. Im Hintergrund ist der Berg zu sehen.",
+      "geschieht": "Jesus streckt die Hand nach den Jüngern aus und berührt sie; ein Pfeil zeigt zu ihnen. Er sagt: „Steht auf und fürchtet euch nicht!“ Dazu zeigt die Sprechblase ein Angst-Emoji und ein Verbotszeichen. Die Bildunterschrift lautet: „sahen sie niemanden ausser Jesus allein“."
+     }
+    ],
+    "oben": "In Feld 2 ist oben eine große helle Wolke zu sehen. Darin strahlt eine Sonne mit dem hebräischen Gottesnamen יהוה (JHWH). Von dort geht die Sprechblase aus. Die Stimme kommt also von Gott aus der Wolke.",
+    "unklar": [
+     "Ob die Beschriftung „Elija“ zur Figur mit dem grauen Bart in der Mitte rechts gehört, ist nicht ganz sicher. Das Schild schwebt zwischen ihr und Petrus.",
+     "Dass die Jünger sich niederwerfen und auf ihr Gesicht fallen (V. 6), wird nicht gezeigt. Nur das Angst-Emoji und die erschrockenen Gesichter deuten darauf hin.",
+     "Der Aufstieg auf den hohen Berg nach sechs Tagen (V. 1) und die weißen Kleider wie Licht (V. 2) sind nur angedeutet: durch den Berg im Hintergrund und Jesu weißes Gewand.",
+     "Die leuchtende Wolke, die die Jünger überschattet (V. 5), erscheint nur als Wolke oben im Bild. Ein Schatten über den Jüngern ist nicht zu sehen.",
+     "Wer in Feld 1 neben dem Text spricht, wird nur durch die zeigende Hand von Petrus nahegelegt. Sonst ist es aus der Platzierung der Sprechblase zu erschließen."
+    ]
+   },
+   "1": {
+    "stelle": "Matthäus 17,1-8 (Die Verklärung Jesu auf dem Berg)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Mose (Namensschild, weißer Bart, Lichtstrahlen über dem Kopf); Jesus in der Mitte (Heiligenschein, weißes Gewand mit rotem Tuch, Lichtstrahlen); Elija (Namensschild über ihm, grauer Bart, Lichtstrahlen, Fellgewand); Petrus rechts (Namensschild, graues Lockenhaar, grauer Bart); im Hintergrund ein grauer Berg",
+      "geschieht": "Jesus wird vor den Jüngern verwandelt, Mose und Elija erscheinen bei ihm. Petrus sagt lachend zu Jesus: »Herr, es ist gut, dass wir hier sind.« Das Hütten-Symbol in der Sprechblase steht für sein Angebot, Hütten zu bauen. Bildunterschrift: »sein Gesicht leuchtete wie die Sonne«"
+     },
+     {
+      "n": 2,
+      "wer": "Petrus (graues Haar und Bart, darüber ein Angst-Emoji); Jesus (Heiligenschein); Jakobus und Johannes (Namensschilder); Mose und Elija sind nicht mehr zu sehen",
+      "geschieht": "Aus der Wolke spricht Gott zu den Jüngern. Die Sprechblase zeigt Jesus, ein Herz (geliebter Sohn, an dem Gott Gefallen hat) und ein Ohr. Die Jünger erschrecken und reißen Augen und Mund auf. Bildunterschrift: Symbole für Jesus und Ohr, dazu »hört auf ihn!«"
+     },
+     {
+      "n": 3,
+      "wer": "Jesus links (Heiligenschein, rotes Tuch); rechts Petrus (graues Haar und Bart), Jakobus und Johannes (gleiche Haare und Gewänder wie in Feld 2, aber ohne Namensschilder); Berg im Hintergrund",
+      "geschieht": "Jesus streckt die Hand zu den Jüngern aus (Pfeil zu ihnen), berührt sie und sagt: »Steht auf und fürchtet euch nicht!« Die Symbole dazu: ein Angst-Emoji und ein Verbotszeichen. Bildunterschrift: »sahen sie niemanden ausser Jesus allein«"
+     }
+    ],
+    "oben": "In Feld 2 ist oben eine große graue Wolke. Darin steht eine leuchtende Sonne mit dem hebräischen Gottesnamen יהוה (JHWH). Von dort zeigt der Zipfel der Sprechblase nach unten: Die Stimme kommt aus der Wolke, von Gott.",
+    "unklar": [
+     "Das Schild »Elija« hängt zwischen Jesus und der dritten Figur. Wahrscheinlich gehört es zur Figur mit grauem Bart und Fellgewand, sicher ist das nicht.",
+     "Das Herz in der Sprechblase der Gottesstimme kann »geliebter Sohn« bedeuten oder »an ihm habe ich Gefallen«.",
+     "Die Jünger fallen nicht sichtbar auf ihr Angesicht (V. 6), obwohl Jesus sagt »Steht auf«. Sie wirken nur erschrocken.",
+     "Dass Jesu Kleider weiß wie das Licht werden, zeigt das Bild nicht eigens. Das Gewand ist weiß, leuchtet aber nicht deutlich.",
+     "Was Petrus in Feld 1 in der Hand hält (braunes Ding, vielleicht ein Stock oder Holz), ist nicht klar zu erkennen.",
+     "In Feld 3 haben die drei Jünger keine Namensschilder. Erkennbar sind sie nur an Haaren und Kleidung."
+    ]
+   }
+  },
+  "LUK-010-038-042": {
+   "1": {
+    "stelle": "Lukas 10,38–42 (Jesus bei Marta und Maria)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Links Maria: Namensschild „Maria“, über ihr ein Ohr-Symbol fürs Zuhören. In der Mitte Jesus: Heiligenschein, Bart, weißes Gewand mit rotem Überwurf. Rechts Marta: Namensschild „Marta“ über der Sprechblase, sie hält einen Kochtopf mit Kochlöffel.",
+      "geschieht": "Marta beschwert sich verärgert (zusammengezogene Augenbrauen) bei Jesus: „Sag ihr doch, dass sie mir helfen soll!“ Sie zeigt mit dem Löffel auf Maria. Laut Textkasten mit Ohr-Symbol hat sich Maria zu Jesu Füßen gesetzt und hört seinem Wort zu."
+     },
+     {
+      "n": 2,
+      "wer": "Dieselben drei Personen: Maria links (lächelt mit geschlossenen Augen), Jesus in der Mitte mit Heiligenschein, Marta rechts (ohne Topf) mit besorgtem Gesicht und einem Sorgen-Emoji über dem Kopf.",
+      "geschieht": "Jesus sagt zu Marta: „Marta, Marta, du sorgst dich um vieles.“ Das Sorgen-Emoji steht in der Sprechblase. Dabei zeigt Jesus mit der Hand zu Marta. Im Textkasten (Ohr-Symbol und Diamant für das Wertvolle) steht: „Maria hat nämlich den guten Teil gewählt“."
+     }
+    ],
+    "oben": "Oben sind nur Sprechblasen, ein Namensschild, Symbole (Ohr, Emoji) und die Feldnummern zu sehen. Es gibt keine Stimme von oben bzw. vom Himmel. Die Stimmen kommen von Marta (Feld 1) und Jesus (Feld 2), jeweils durch den Sprechblasenschwanz zugeordnet.",
+    "unklar": [
+     "Maria sitzt im Bild nicht deutlich zu Jesu Füßen, sondern auf gleicher Höhe neben ihm.",
+     "Die Verse 41b–42a („nur eines ist notwendig“) fehlen im Bild.",
+     "Im Bild ist nicht dargestellt, wie Jesus ins Dorf kommt und Marta ihn aufnimmt (V. 38).",
+     "Der Diamant steht vermutlich für den „guten Teil“, das ist aber nicht sicher."
+    ]
+   },
+   "2": {
+    "stelle": "Lukas 10,38–42 (Jesus bei Marta und Maria; im Bild v. a. V. 39–42)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Links Maria (Namensschild „Maria“, Ohr-Symbol über dem Kopf steht für das Zuhören), in der Mitte Jesus (Heiligenschein, weißes Gewand mit rotem Überwurf), rechts Marta (Namensschild „Marta“ am Sprechblasenrand, hält einen dampfenden Kochtopf)",
+      "geschieht": "Marta beschwert sich verärgert bei Jesus, zeigt dabei mit der Hand und sagt: „Sag ihr doch, dass sie mir helfen soll!“ (V. 40). Die Bildunterschrift mit Ohr-Symbol sagt über Maria: „setzte sich auch zu den Füßen Jesu und hörte seinem Wort zu“ (V. 39)."
+     },
+     {
+      "n": 2,
+      "wer": "Dieselben drei Personen: Maria links (lächelt zufrieden), Jesus in der Mitte (Heiligenschein), Marta rechts (besorgtes Gesicht, besorgtes Emoji über ihr)",
+      "geschieht": "Jesus antwortet Marta freundlich und zeigt dabei mit der Hand auf sie: „Marta, Marta, du sorgst dich um vieles.“ (V. 41). Das besorgte Emoji in der Sprechblase zeigt Martas Sorge. Die Bildunterschrift mit Ohr- und Edelstein-Symbol sagt: „Maria hat nämlich den guten Teil gewählt“ (V. 42); der Edelstein steht für den „guten Teil“."
+     }
+    ],
+    "oben": "Oben gibt es nur die Feldnummern, das Namensschild „Marta“ und die Sprechblasen. Es ist keine Stimme von oben (z. B. vom Himmel) zu sehen. Die Stimmen kommen von Personen im Bild: in Feld 1 von Marta (rechts), in Feld 2 von Jesus (Mitte). Die Szene spielt in einem Innenraum mit heller Wand.",
+    "unklar": [
+     "Das Namensschild „Maria“ steht unten zwischen der linken Frau und Jesus. Wegen des Ohr-Symbols ist die linke Frau sehr wahrscheinlich Maria.",
+     "Maria sitzt neben Jesus und nicht zu seinen Füßen. Das stimmt nicht ganz mit dem Bibeltext überein.",
+     "Vers 38 (Jesus kommt in das Dorf und Marta nimmt ihn auf) und der Teil von Vers 42 „eins ist not … soll nicht von ihr genommen werden“ werden nicht ausdrücklich gezeigt.",
+     "Die Schreibweise in der Bildunterschrift ist „Füssen“ statt „Füßen“."
+    ]
+   }
+  },
+  "MRK-001-021-028": {
+   "1": {
+    "stelle": "Markus 1,21–28 (Jesus lehrt in der Synagoge von Kafarnaum und heilt einen Mann mit einem unreinen Geist)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Jesus (Heiligenschein, rot-weißes Gewand) vor einem Gebäude mit Säulen (Synagoge); rechts staunende Zuhörer, Männer und eine Frau mit Kopftuch, dahinter graue Silhouetten einer Menge",
+      "geschieht": "Jesus lehrt. Über ihm ein Symbol aus Schriftrolle und Krone (Vollmacht). Die Leute staunen mit offenem Mund. Die Bildunterschrift erklärt, dass er wie einer lehrt, der Vollmacht hat, und nicht wie die Schriftgelehrten (dazu Symbole für Schriftrolle/Vollmacht und für einen Schriftgelehrten)."
+     },
+     {
+      "n": 2,
+      "wer": "Jesus (Heiligenschein) links vor der Synagoge; rechts ein Mann mit zornigem Gesicht, um seinen Kopf dunkler Rauch und eine schwarze Geistgestalt mit gelben Augen (der unreine Geist)",
+      "geschieht": "Der Mann bzw. der Geist in ihm ruft Jesus zu: „Ich weiß, wer du bist: der Heilige Gottes!“ Jesus streckt die Hand aus und gebietet dem Geist: „Verstumme und geh aus ihm heraus!“ (dazu ein Symbol: Geist mit Pfeil nach außen). Bildunterschrift: „und fuhr aus ihm heraus“."
+     },
+     {
+      "n": 3,
+      "wer": "Die staunende Menge aus Feld 1 (dieselben Figuren, Frau mit Kopftuch, bärtige Männer); links ein Globus-Symbol mit Fußspuren",
+      "geschieht": "Die Leute sagen staunend zueinander: „Eine neue Lehre mit Vollmacht!“ (in der Sprechblase ein kleines Jesus-Bild: Gemeint ist seine Lehre). Bildunterschrift: „Und die Kunde von ihm verbreitete sich sogleich überall“ (dazu Globus mit Fußspuren)."
+     }
+    ],
+    "oben": "Am oberen Rand sind keine Himmelserscheinung und keine Stimme von oben zu sehen. Die Stimmen kommen aus Sprechblasen der Figuren: in Feld 2 von Jesus und vom besessenen Mann bzw. dem Geist in ihm, in Feld 3 von der Menge. Über Jesus in Feld 1 schwebt nur ein Symbol aus Schriftrolle und Krone.",
+    "unklar": [
+     "Ob in Feld 2 der Mann selbst spricht oder der Geist durch ihn. Die Sprechblase zeigt auf den Mann, die Geistgestalt schwebt neben ihm.",
+     "Ob der Mann in Feld 1 mit dem Symbol neben dem Bildtext einen Schriftgelehrten darstellt (Figur mit erhobenem Finger und kleinerer Zuhörer).",
+     "Ob die Geistgestalt im Text-Symbol von Feld 2 zeigt, dass der Geist ausfährt, oder dass er weggeschickt wird (Pfeil nach rechts).",
+     "Das Zerren des Geistes am Mann und dessen lautes Schreien (Mk 1,26) werden nicht eigens dargestellt."
+    ]
+   },
+   "2": {
+    "stelle": "Markus 1,21–28 (Jesus lehrt in der Synagoge von Kapernaum und treibt einen unreinen Geist aus)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Links Jesus: Heiligenschein, rotes Gewand mit weißem Überwurf, vor einem Gebäude mit Säulen (Synagoge). Rechts eine staunende Menge aus drei Personen im Vordergrund (Frau mit Kopftuch, bärtige Männer) und weiteren angedeuteten Köpfen dahinter. Über Jesus sind eine Schriftrolle mit Krone (Vollmacht) und ein kleiner Schriftgelehrter zu sehen.",
+      "geschieht": "Jesus lehrt in der Synagoge, und die Leute staunen mit offenem Mund. Bildunterschrift: „wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten“. Die Symbole zeigen den Unterschied zwischen seiner Vollmacht und den Schriftgelehrten."
+     },
+     {
+      "n": 2,
+      "wer": "Links Jesus mit Heiligenschein vor der Synagoge, rechts ein Mann mit verzerrtem Gesicht in grauem Gewand. Hinter ihm eine dunkle Rauchwolke und ein dunkles Geistwesen mit gelben Augen (der unreine Geist, also ein Besessener).",
+      "geschieht": "Der Besessene bzw. der Geist in ihm ruft Jesus zu: „Ich weiss, wer du bist: der Heilige Gottes!“ Jesus streckt den Arm aus und befiehlt dem Geist: „Verstumme und geh aus ihm heraus!“. In seiner Sprechblase ist das Symbol eines Geistes mit Pfeil nach draußen zu sehen. Bildunterschrift: „und fuhr aus ihm heraus“."
+     },
+     {
+      "n": 3,
+      "wer": "Die staunende Menge: eine Frau mit Kopftuch und bärtige Männer, im Hintergrund weitere Köpfe. Daneben eine Weltkugel mit Füßen als Symbol dafür, dass sich die Kunde verbreitet.",
+      "geschieht": "Ein Mann aus der Menge sagt zu den anderen: „Eine neue Lehre mit Vollmacht!“. Das kleine Jesusbild in der Sprechblase zeigt, dass es um Jesus geht. Bildunterschrift: „Und die Kunde von ihm verbreitete sich sogleich überall“."
+     }
+    ],
+    "oben": "Oben im Bild ist keine Stimme vom Himmel zu sehen. In Feld 1 schweben über Jesus eine Schriftrolle mit Krone und ein Schriftgelehrter als Symbole. In Feld 2 kommen die Stimmen aus Sprechblasen: links von Jesus, rechts vom Besessenen bzw. dem Geist in ihm. In Feld 3 kommt die Stimme aus der Menge.",
+    "unklar": [
+     "Es ist nicht sicher, wer in Feld 3 spricht: ein einzelner Mann oder die Menge insgesamt.",
+     "Das Zerren des Geistes und den lauten Schrei beim Ausfahren (V. 26) zeigt das Bild nicht ausdrücklich.",
+     "Ob in Feld 2 der Mann selbst oder der Geist spricht, bleibt im Bild offen, auch wenn der Text es dem Geist zuschreibt.",
+     "Die kleine Figur über Jesus in Feld 1 ist wohl ein Schriftgelehrter mit Zuhörer, aber das ist nicht eindeutig."
+    ]
+   }
+  },
+  "LUK-012-022-034": {
+   "1": {
+    "stelle": "Lukas 12,22–34 (Vom Sorgen und vom Schätzesammeln)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Jesus (rundes Porträt mit Heiligenschein, Bart, weißes Gewand mit rotem Überwurf); eine Sprechblase geht von ihm aus. Daneben stehen nur Symbole: ein besorgtes Gesicht und ein Verbotszeichen, ein Rabe, eine Lilie/Tulpe und ein Pluszeichen",
+      "geschieht": "Jesus spricht zu seinen Jüngern: „Sorgt euch nicht um das Leben, was ihr essen sollt.“ Eine Pfeilkette folgt: Das Leben ist mehr als die Nahrung → Die Raben: Gott ernährt sie – wie viel mehr seid ihr wert! → Die Lilien: Nicht einmal Salomo war so gekleidet → „wie viel mehr“ → Wie viel mehr euch, ihr Kleingläubigen! Das Zwischenbanner mit Blumensymbol lautet: „Betrachtet die Lilien, wie sie wachsen“"
+     },
+     {
+      "n": 2,
+      "wer": "Jesus (dasselbe Porträt mit Heiligenschein) ohne Sprechblase. Symbole: eine Krone mit Wolke für das Reich Gottes, ein Schaf für die kleine Herde, eine Hand mit Münze und ein Diamant für Almosen und Schatz",
+      "geschieht": "Jesus spricht weiter: „Sucht vielmehr sein Reich, und das wird euch dazugegeben werden“ → „Fürchte dich nicht, du kleine Herde! Denn es hat eurem Vater gefallen, euch das Reich zu geben“ → „Verkauft euren Besitz und gebt Almosen“ – ein unerschöpflicher Schatz im Himmel. Das Schlussbanner mit Diamant und Herz lautet: „Wo euer Schatz ist, da wird auch euer Herz sein“"
+     }
+    ],
+    "oben": "Oben ist keine Himmelsszene zu sehen und es kommt keine Stimme von oben. Ganz oben steht die Kopfzeile von Feld 1: das Jesus-Porträt mit einer Sprechblase („Sorgt euch nicht …“). Die einzige Stimme ist die von Jesus.",
+    "unklar": [
+     "Die Zuhörer (Jünger, V. 22) sind nicht abgebildet; der Adressat ergibt sich nur aus dem Text.",
+     "In Feld 2 fehlt eine Sprechblase; dass Jesus weiterspricht, ergibt sich nur aus dem Porträt.",
+     "Mehrere Verse fehlen im Bild: V. 25–26 (Lebenslänge um eine Elle verlängern), V. 28 (Gras auf dem Feld), V. 29–30 (die Heiden trachten danach) und die Geldbeutel, die nicht veralten (V. 33).",
+     "Die Blume ähnelt eher einer Tulpe als einer Lilie."
+    ]
+   },
+   "2": {
+    "stelle": "Lukas 12,22–34 (Vom Sorgen und vom Schätzesammeln)",
+    "felder": [
+     {
+      "n": 1,
+      "wer": "Jesus (rundes Porträt mit Heiligenschein, langes Haar und Bart, weißes Gewand mit rotem Überwurf), daneben eine Sprechblase",
+      "geschieht": "Jesus spricht zu seinen Jüngern: „Sorgt euch nicht um das Leben, was ihr essen sollt.“ (Emojis: besorgtes Gesicht + Verbotszeichen). Darunter folgt eine Kette aus vier Kästchen mit Pfeilen: (a) besorgtes Gesicht + Verbotszeichen: „Denn das Leben ist mehr als die Nahrung“ → (b) Rabe auf einem Zweig: „Die Raben: Gott ernährt sie – Wie viel mehr seid ihr wert!“ → (c) Lilie/Tulpe: „Die Lilien: nicht einmal Salomo war so gekleidet“ → Pfeil mit der Beschriftung „wie viel mehr“ → (d) hervorgehobenes Kästchen mit Pluszeichen: „Wie viel mehr euch, ihr Kleingläubigen!“ (V. 22–28)"
+     },
+     {
+      "n": 2,
+      "wer": "Kein Personenbild, nur ein Banner mit einem Blumen-Emoji (Lilie)",
+      "geschieht": "Zwischenbanner mit der Überschrift: „Betrachtet die Lilien, wie sie wachsen“ (V. 27)"
+     },
+     {
+      "n": 3,
+      "wer": "Jesus (dasselbe Porträt mit Heiligenschein, Bart und rotem Überwurf), diesmal ohne Sprechblase",
+      "geschieht": "Jesus redet weiter zu den Jüngern. Eine Kette aus drei Kästchen: (a) Krone mit Wolke: „Sucht vielmehr sein Reich – und das wird euch dazugegeben werden“ (V. 31) → (b) Schaf: „Fürchte dich nicht, du kleine Herde! Denn es hat eurem Vater gefallen, euch das Reich zu geben“ (V. 32) → (c) offene Hand mit Münze und Diamant: „Verkauft euren Besitz und gebt Almosen – ein unerschöpflicher Schatz im Himmel“ (V. 33)"
+     },
+     {
+      "n": 4,
+      "wer": "Kein Personenbild, ein Banner mit Diamant und Herz",
+      "geschieht": "Abschlussbanner mit dem Merksatz: „wo euer Schatz ist, da wird auch euer Herz sein“ (V. 34)"
+     }
+    ],
+    "oben": "Oben links ist das runde Porträt von Jesus mit Heiligenschein. Von ihm geht eine Sprechblase aus („Sorgt euch nicht um das Leben, was ihr essen sollt.“). Die Stimme ist also die von Jesus selbst. Eine Himmelsstimme oder eine Stimme von oben gibt es nicht.",
+    "unklar": [
+     "Die Zuhörer (Jünger) sind nicht abgebildet. Dass Jesus zu den Jüngern spricht, folgt nur aus dem Bibeltext (V. 22).",
+     "Die Blume ist eher als Tulpe gezeichnet, nicht als Lilie.",
+     "Einige Verse sind nicht dargestellt: V. 25–26 (Lebenslänge eine Elle zusetzen), V. 28 (Gras im Feld, das in den Ofen geworfen wird), V. 29–30 (die Völker der Welt trachten danach) und V. 33b (Geldbeutel, die nicht veralten; kein Dieb, keine Motten).",
+     "Die Wolke neben der Krone in Feld 3 steht wahrscheinlich für das himmlische Reich Gottes."
+    ]
+   }
+  }
+ },
+ "gewaehlt": {
+  "FIG-ORT-SYNAGOGE": "@4 schlichtes Steinhaus mit Flachdach, offene Torarolle über der Tür (Satz B 4/4, Satz C 4/4 neben dem Tempel; @3 mit Säulen und Giebel in Satz A 0/8 Bedeutung, als Tempel gelesen)",
+  "FIG-ZEICHEN-AUSSCHLUSS": "Synagoge @4 mit rotem Verbotszeichen (Satz C 4/4; auf @3 in Satz A 0/4, als «Tempel verboten» gelesen)",
+  "FIG-OBJ-RABE": "@1 schwarzer Vogel auf einem Zweig (4/4; @2 fliegend ebenfalls 4/4)",
+  "FIG-MARTA-LK": "Schüssel mit Schöpfkelle (Porträt 3/3 «Marta», Zeichen allein 32 px 0/8 Bedeutung «Linsengericht», Bild erkannt 8/8)",
+  "FIG-MARIA-LK": "ohne Zeichen; Porträt 3/3 «junge Frau, am ehesten Maria, die Mutter Jesu» (gewollt neutral, Unterscheidung nur über Namensschild und Szene)"
+ },
+ "abgleich_ganze_bilder_de": "Alle vier Instanzen zu den Verklärungsbildern nennen die Stelle und lesen oben «eine grosse Wolke, darin der Strahlenkranz; die Stimme kommt aus der Wolke, von Gott». Lk 10,38–42: Stelle, Marta (mit «Kochtopf») und Maria (Ohr, Namensschild) und das Wer-zu-wem erkannt; beide nennen, dass Maria nicht zu Jesu Füssen sitzt (offen seit v0.131). Mk 1,21–28: das Gebäude im Hintergrund als «Gebäude mit Säulen (Synagoge)» gelesen (noch mit der Zeichnung @3). Lk 12,22–34: «Rabe auf einem Zweig» erkannt. Unklar genannt: Namensschilder von Mose und Elija standen in Lk 9,28–36 beide beim rechten Mann (danach Lage des Schilds auf der Brust ergänzt, siehe BILDPROZESS) und in Mt 17,1–8 «zwischen» zwei Figuren.",
+ "folgen_de": "Synagoge und Ausschluss auf @4 umgestellt (bildsymbole_daten/ueberarbeitet/dinge.json), aus der Twemoji-Zuordnung entfernt; Rabe @1; Marta behält die Schüssel nur in Feldern, deren Verse das Bedienen nennen. Die ganzen Bilder wurden nach der Umstellung auf @4 nicht nochmals blind beschrieben."
+}

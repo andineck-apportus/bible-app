@@ -82,7 +82,30 @@ for(const mode of ['','nw'])for(const lang of ['de','gsw']){
           // fehlte). Der Zeichner setzt je Feld <g class="ill-sp" data-n="Anzahl"> und an jede Blase data-speech="Index".
           const want=[...tile.querySelectorAll('g.ill-sp')].reduce((s,g)=>s+Number(g.dataset.n||0),0);
           if(tile.querySelector('g.ill-sp')){const got=new Set([...tile.querySelectorAll('[data-speech]')].map(e=>e.dataset.speech));
-            if(got.size!==want)res.push(`${id} ${nm} [${lang}]: ${got.size} von ${want} Sprech-Angaben als Blase gezeichnet`);}}
+            if(got.size!==want)res.push(`${id} ${nm} [${lang}]: ${got.size} von ${want} Sprech-Angaben als Blase gezeichnet`);}
+          // Namensschilder (Entscheid Andi Neck 2026-10-26): verdecken kein Gesicht, nichts, was eine Figur vor der Brust trägt
+          // (Erkennungszeichen, gehaltenes Kind, Räucheraltar), keine Zeichen und Gegenstände, keine Blase und kein anderes Schild.
+          {const R=e=>e.getBoundingClientRect();const area=B=>B.width*B.height;const ovr=(a,b)=>Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top));
+            const nms=[...tile.querySelectorAll('g.ill-name > rect')].map(e=>[e,R(e)]).filter(x=>x[1].width>0);
+            const lab=e=>e.parentNode.textContent.slice(0,20);
+            const sets=[['ein Gesicht','g.ill-face',.04],['ein Zeichen auf der Brust','g.ill-attr',.08],['ein Zeichen oder einen Gegenstand','use.ill-obj',.1],];
+            const loc=e=>{const x=+e.getAttribute('x'),y=+e.getAttribute('y');return {left:x,top:y,right:x+ +e.getAttribute('width'),bottom:y+ +e.getAttribute('height')};};
+            const bxs=[...tile.querySelectorAll('[data-box]')].map(e=>{const [x,y,w,h]=e.dataset.box.split(',').map(Number);return {left:x,top:y,right:x+w,bottom:y+h};});
+            for(const e of tile.querySelectorAll('g.ill-name > rect'))for(const B of bxs)if(ovr(loc(e),B)>.5)res.push(`${id} ${nm} [${lang}]: Namensschild «${lab(e)}» verdeckt eine Sprechblase`);
+            for(const [e,N] of nms){
+              const RU=o=>{if(!o.matches('g.ill-face'))return R(o);const bs=[...o.children].filter(k=>!k.classList.contains('ill-hals')).map(R).filter(B=>B.width>0);  // Gesicht ohne Hals
+                if(!bs.length)return R(o);const l=Math.min(...bs.map(B=>B.left)),t=Math.min(...bs.map(B=>B.top)),r=Math.max(...bs.map(B=>B.right)),b=Math.max(...bs.map(B=>B.bottom));return {left:l,top:t,right:r,bottom:b,width:r-l,height:b-t};};
+              for(const [was,sel,fr] of sets)for(const o of tile.querySelectorAll(sel)){const O=RU(o);if(!O.width)continue;const v=ovr(N,O);
+                if(v>Math.max(.5,fr*Math.min(area(O),area(N)*4)))res.push(`${id} ${nm} [${lang}]: Namensschild «${lab(e)}» verdeckt ${was} (${o.getAttribute('href')||o.querySelector('use')?.getAttribute('href')||''})`);}
+              for(const [f,M] of nms.slice(nms.findIndex(x=>x[0]===e)+1))if(ovr(N,M)>.5)res.push(`${id} ${nm} [${lang}]: Namensschilder überlappen «${lab(e)}» / «${lab(f)}»`);}}
+          // Jedes Zeichen einer Sprech-Angabe (icons) steht in ihrer Blase, auch neben oder unter dem Wort (Entscheid Andi Neck
+          // 2026-10-26: Zeichen nie aus Platzgründen weglassen). data-icons «Index:ID,ID|…» am Zähler, data-fig an jedem Zeichen.
+          for(const g of tile.querySelectorAll('g.ill-sp[data-icons]')){const par=g.parentNode;
+            for(const ent of g.dataset.icons.split('|')){const [k,ids]=ent.split(':');const want_=(ids||'').split(',').filter(Boolean);if(!want_.length)continue;
+              const pth=[...par.querySelectorAll(`[data-speech="${k}"]`)].find(e=>e.parentNode.parentNode===par||e.closest('g')?.parentNode===par);if(!pth)continue;
+              const have=[...pth.parentNode.querySelectorAll('g.sp-icon')].filter(e=>!e.closest('.dg-nw')).map(e=>e.dataset.fig);
+              const miss=want_.filter(x=>{const i=have.indexOf(x);if(i<0)return true;have.splice(i,1);return false;});
+              if(miss.length)res.push(`${id} ${nm} [${lang}]: Sprechblase ${+k+1} ohne Zeichen ${miss.join(', ')}`);}}}
         // Kästen mit Rahmen (Stichwortband, Titelblase, Spaltenköpfe, Namensschild): Text und Zeichen bleiben im Rahmen und
         // überdecken sich nicht (Hinweis Andi Neck 2026-10-25: Text ragte über das Stichwortband)
         const sv=e=>{const B=e.getBoundingClientRect();return B.width>0&&B.height>0?B:null;};
