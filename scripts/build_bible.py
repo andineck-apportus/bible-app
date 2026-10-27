@@ -18,6 +18,7 @@ import base64
 import gzip
 import json
 import pathlib
+import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -238,17 +239,32 @@ for rid, r in ill_recs.items():
         ill_core["lexicon"][rid] = {"kind": r["kind"], "group": r.get("display_group", r["kind"]), "name": r["names"], "traits": [t["trait_de"] for t in r.get("traits", [])], **({"legend": r["legend"]} if r.get("legend") else {})}
     elif r["type"] == "illustration_style":
         ill_core["styles"][r["key"]] = {"id": rid, "label": r["labels"], "description": r.get("description_de"),
-                                        "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8")}
+                                        "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8") if r.get("library") else ""}
 ill_l10n = _l10n.load(ill_recs)
+
+
+def _ill_svg(fp):
+    """SVG eines Bildes; gemalte Bilder (<image href="img/…">) als data:-Adresse einbetten, damit Einzeldatei und Pakete sie tragen."""
+    svg = fp.read_text(encoding="utf-8").strip()
+    def _emb(m):
+        f = fp.parent / m.group(1)
+        typ = {"webp": "image/webp", "jpg": "image/jpeg", "png": "image/png"}[f.suffix[1:]]
+        return f'href="data:{typ};base64,{base64.b64encode(f.read_bytes()).decode()}"'
+    return re.sub(r'href="(img/[^"]+)"', _emb, svg)
+
+
 for rid, r in ill_recs.items():
     if r["type"] != "illustration" or r["style"] not in ill_recs:  # eingestellter Stil (deprecated, z. B. «Symbol» seit 2026-10-23)
         continue
     st, br = ill_recs[r["style"]], ill_recs[r["brief"]]
     key = r["target"] if r["level"] in ("section", "bible", "testament", "group") else r["reference"]
     item = {"id": rid, "brief": br["id"], "style": st["key"], "level": r["level"], "ref": r.get("reference"), "depicts": r.get("depicts", []),
-            "alt": r["alt_de"], "note": br.get("interpretation_note_de"), "check": (r.get("check") or {}).get("result_de"),
+            "alt": r["alt_de"], "note": r.get("note_de") or br.get("interpretation_note_de"), "check": (r.get("check") or {}).get("result_de"),
             "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]], "captions": br.get("captions_de"),
-            "svg": (ROOT / r["file"]).read_text(encoding="utf-8").strip()}
+            "svg": _ill_svg(ROOT / r["file"])}
+    if r.get("evidence"):  # Aquarellstil (docs/BILDSTIL.md): Belege je Feld (B/R/I) und Herkunft des KI-Bilds für die Legende
+        item["evidence"] = r["evidence"]
+        item["made"] = r.get("authorship_de")
     bname = "b/_overview" if r["level"] in ("bible", "testament", "group", "book") else f"b/{ref_book(r['reference'])}"
     bundle(bname).setdefault("ill", {}).setdefault(key, {})[st["key"]] = item
     for lg, f in ill_l10n.get(rid, {}).items():

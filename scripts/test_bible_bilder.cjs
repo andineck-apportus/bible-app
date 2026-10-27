@@ -16,7 +16,10 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
       assert.equal(await tb.getAttribute('aria-expanded'),'true','Kachel-Legende eingeblendet');assert(await tb.locator('.tile-cap:not([hidden])').count(),'Kachel-Legende sichtbar');
       await tb.click();await p.waitForTimeout(200);assert.equal(await tb.getAttribute('aria-expanded'),'false','Kachel-Legende wieder aus');}
     await p.locator('.has-ill [data-legend]:visible').first().click();await p.waitForTimeout(400);  // ganze Erklärung zum Bild
-    assert(await p.evaluate(()=>!!document.querySelector('.sheet .legend-img use[href^="#an-"]')),'Legende im Stil Anime');
+    // Johannes 2 im Aquarellstil (docs/BILDSTIL.md): gemalte Felder, Worte als Text je Sprache, Belege B/R/I in der Legende
+    assert(await p.evaluate(()=>!!document.querySelector('.sheet .legend-img svg.ill-tile[data-scene] image')),'Legende zeigt das Aquarellbild');
+    assert(await p.evaluate(()=>document.querySelectorAll('.sheet .legend-ev .ev').length>=6),'Belege B/R/I je Feld');
+    assert(await p.evaluate(()=>[...document.querySelectorAll('.sheet .legend-img .lw-de')].some(t=>/Sie haben keinen/.test(t.textContent))),'Worte der Mutter Jesu als Text');
     assert(!await p.$('[data-settings]'),'Legende öffnet nicht das Menü');
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=menu]');await p.click('[data-figindex]');await p.waitForTimeout(300);
     const nAni=await p.$$eval('.sheet .legend-fig',x=>x.length);assert(nAni>300,'Bildlexikon Anime ('+nAni+')');
