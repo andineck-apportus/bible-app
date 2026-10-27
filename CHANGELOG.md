@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.137 — 2026-10-27 — Johannes 2: Aquarellbilder reduziert, nichts mehr angeschnitten
+
+Hinweis von Andi Neck (2026-10-27): Die Bilder waren am Rand abgeschnitten und zu detailliert, nicht wie im Styleguide beschrieben; gewünscht sind reduziertere Grafiken mit weniger Details.
+- **Aufträge** (`scripts/authoring/bilder_aquarell_daten/`): Stil als lockere Aquarellskizze (viel leeres Papier, wenige unterbrochene Linien, blasse Flächen ohne Schattierung und Falten, einfache Gesichter, Hintergrund weggelassen oder als eine Lavierung, Mengen nur angedeutet); Bildaufbau mit Rand rundherum, niemand vom Bildrand angeschnitten, Lavierung läuft ins Papier aus; je Szene weniger Personen. Das Figurenblatt dient nur noch der Zuordnung (wer ist wer), nicht als Detailvorlage.
+- **Johannes 2:** alle sieben Felder neu gemalt und ausgewählt; offene Punkte aus dem Blindtest eingearbeitet (Maria in Kana 1 sichtbar älter, Jesus spricht die Taubenhändler an, Fragende als ältere Tempelobere, Abstand in 2,23–25). Sprechblasen mit feinerer Linie.
+- **Prüfung:** Blindtest der reduzierten Fassung; Ergebnis und offene Punkte im Feld `check` (u. a. Maria in der Totale von Kana 2 kaum älter wirkend – ein Neumalen ergab nur fünf Krüge und wurde verworfen). Keine fachliche und keine muttersprachliche Prüfung.
+
 ## v0.136 — 2026-10-27 — Bildstil «Visuelle Bibel» V1.2; Johannes 2 als Aquarell-Comic
 
 Entscheid von Andi Neck (2026-10-27): Styleguide «Visuelle Bibel» V1.2 (minimalistischer Aquarell-Comic) ins Konzept aufnehmen und auf Johannes 2 anwenden; die bisherigen Bilder ersetzen.
