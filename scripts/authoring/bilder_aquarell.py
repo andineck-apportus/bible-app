@@ -114,8 +114,8 @@ def blase(b, sp, n):
         base, shift = [(cx - 11, y + 1), (cx + 11, y + 1)], (0, 2)
     pts = " ".join(f"{u:.0f},{v:.0f}" for u, v in base) + f" {tx:.0f},{ty:.0f}"
     out = [f'<g class="ill-bubble" data-speech="{n}">',
-           f'<polygon points="{pts}" fill="{PAPER}" stroke="{INK}" stroke-width="1.6" stroke-linejoin="round"/>',
-           f'<rect x="{x}" y="{y}" width="{w}" height="{h:.0f}" rx="18" fill="{PAPER}" fill-opacity=".96" stroke="{INK}" stroke-width="1.6"/>',
+           f'<polygon points="{pts}" fill="{PAPER}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>',
+           f'<rect x="{x}" y="{y}" width="{w}" height="{h:.0f}" rx="18" fill="{PAPER}" fill-opacity=".94" stroke="{INK}" stroke-width="1.2"/>',
            f'<polygon points="{pts}" fill="{PAPER}" stroke="none" transform="translate({shift[0]} {shift[1]})"/>']
     for lg, ls in lines.items():
         y0 = y + pad + fs * 0.82 + (h - 2 * pad - (lh * len(ls) - (lh - fs))) / 2
