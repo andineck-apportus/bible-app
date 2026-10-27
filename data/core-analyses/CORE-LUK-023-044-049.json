@@ -1,0 +1,146 @@
+{
+ "id": "CORE-LUK-023-044-049",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.23.44-LUK.23.49",
+ "target": "TU-LUK-023-044-049",
+ "core_de": "Um die sechste Stunde kommt eine Finsternis über das ganze Land bis zur neunten Stunde, weil die Sonne ihren Schein verliert, und der Vorhang des Tempels reisst mitten entzwei; Jesus ruft mit lauter Stimme: «Vater, in deine Hände übergebe ich meinen Geist!» und stirbt; der Hauptmann preist Gott: «Dieser Mensch war wirklich gerecht!», die Menschenmengen schlagen sich an die Brust und kehren zurück, und alle, die ihn kannten, auch die Frauen aus Galiläa, stehen von ferne und sehen das.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "range": "LUK.23.44-LUK.23.49",
+    "elements": [
+     {
+      "label": "Sechste bis neunte Stunde: Finsternis über das ganze Land, weil die Sonne ihren Schein verliert",
+      "ref": "LUK.23.44-LUK.23.45",
+      "role": "Zeichen 1"
+     },
+     {
+      "label": "Der Vorhang des Tempels reisst mitten entzwei",
+      "ref": "LUK.23.45",
+      "role": "Zeichen 2"
+     },
+     {
+      "label": "Mit lauter Stimme: «Vater, in deine Hände übergebe ich meinen Geist!» – er verschied",
+      "ref": "LUK.23.46",
+      "role": "Tod"
+     },
+     {
+      "label": "Reaktionen",
+      "ref": "LUK.23.47-LUK.23.49",
+      "role": "Reaktionen",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "chronology": [
+      {
+       "ref": "LUK.23.44",
+       "note": "sechste bis neunte Stunde"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "PSA.31.5",
+       "note": "«In deine Hände befehle ich meinen Geist»"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Reaktionen",
+    "range": "LUK.23.47-LUK.23.49",
+    "elements": [
+     {
+      "label": "Der Hauptmann preist Gott: «Dieser Mensch war wirklich gerecht!»",
+      "ref": "LUK.23.47"
+     },
+     {
+      "label": "Die Menschenmengen schlagen sich an die Brust und kehren zurück",
+      "ref": "LUK.23.48"
+     },
+     {
+      "label": "Alle, die ihn kannten, auch die Frauen aus Galiläa, stehen von ferne und sehen das",
+      "ref": "LUK.23.49"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.23.44-LUK.23.45",
+   "text_de": "Finsternis über das ganze Land – der Vorhang des Tempels reisst.",
+   "reason_de": "Zeichen (Kriterien 2 und 4).",
+   "recognition_de": "Finsternis und Vorhang.",
+   "keywords": [
+    "eine Finsternis kam über das ganze Land",
+    "Der Vorhang des Tempels aber riss mitten entzwei"
+   ]
+  },
+  {
+   "reference": "LUK.23.46",
+   "text_de": "«Vater, in deine Hände übergebe ich meinen Geist!» – er stirbt.",
+   "reason_de": "Höhepunkt (Kriterien 1 und 2).",
+   "recognition_de": "Jesus stirbt am Kreuz.",
+   "keywords": [
+    "Vater, in deine Hände übergebe ich meinen Geist!",
+    "verschied er"
+   ]
+  },
+  {
+   "reference": "LUK.23.47-LUK.23.49",
+   "text_de": "Der Hauptmann: «Dieser Mensch war wirklich gerecht!» – die Mengen schlagen sich an die Brust – die Bekannten und Frauen stehen von ferne.",
+   "reason_de": "Reaktionen (Kriterium 3).",
+   "recognition_de": "Der Hauptmann unter dem Kreuz.",
+   "keywords": [
+    "Dieser Mensch war wirklich gerecht!",
+    "schlugen sich an die Brust",
+    "standen von ferne"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Tod wird gezeigt, nicht ausgemalt (Kopf geneigt, Augen zu)",
+  "Namen der Frauen nennt Lukas hier nicht"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GOTT",
+  "FIG-ROLLE-HAUPTMANN",
+  "FIG-GRUPPE-VOLK",
+  "FIG-GRUPPE-FRAUEN"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.23.44-LUK.23.49",
+   "fingerprint": "07d15b537caa387e"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

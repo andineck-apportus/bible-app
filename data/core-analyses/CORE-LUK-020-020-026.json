@@ -1,0 +1,142 @@
+{
+ "id": "CORE-LUK-020-020-026",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.20.20-LUK.20.26",
+ "target": "TU-LUK-020-020-026",
+ "core_de": "Die Gegner schicken Spitzel, die sich als Gerechte ausgeben, um Jesus bei einem Wort zu fassen und dem Statthalter auszuliefern; sie fragen: «Ist es uns erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»; er durchschaut ihre Verschlagenheit, lässt sich einen Denar zeigen und fragt, wessen Bild und Aufschrift er trägt – «Des Kaisers» –: «Dann gebt dem Kaiser zurück, was des Kaisers ist, und Gott, was Gottes ist!»; sie können ihn vor dem Volk nicht fassen, staunen über seine Antwort und schweigen.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "range": "LUK.20.20-LUK.20.26",
+    "elements": [
+     {
+      "label": "Spitzel, die sich als Gerechte ausgeben, sollen ihn bei einem Wort fassen, um ihn dem Statthalter auszuliefern",
+      "ref": "LUK.20.20",
+      "role": "Absicht"
+     },
+     {
+      "label": "«Lehrer, wir wissen, dass du … den Weg Gottes in Wahrheit lehrst. Ist es uns erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»",
+      "ref": "LUK.20.21-LUK.20.22",
+      "role": "Frage"
+     },
+     {
+      "label": "Er durchschaut ihre Verschlagenheit: «Zeigt mir einen Denar! Wessen Bild und Aufschrift trägt er?» – «Des Kaisers.»",
+      "ref": "LUK.20.23-LUK.20.24",
+      "role": "Gegenfrage"
+     },
+     {
+      "label": "Antwort in zwei Gliedern",
+      "ref": "LUK.20.25",
+      "role": "Antwort",
+      "child": "s2"
+     },
+     {
+      "label": "Sie können ihn vor dem Volk nicht fassen, staunen über seine Antwort und schweigen",
+      "ref": "LUK.20.26",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-GEGNER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.20.21-LUK.20.22"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-GEGNER",
+       "ref": "LUK.20.24-LUK.20.25"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "balance",
+    "subtype": "zwei gültige Seiten",
+    "range": "LUK.20.25",
+    "elements": [
+     {
+      "label": "Gebt dem Kaiser zurück, was des Kaisers ist",
+      "ref": "LUK.20.25",
+      "role": "Seite 1"
+     },
+     {
+      "label": "und Gott, was Gottes ist",
+      "ref": "LUK.20.25",
+      "role": "Seite 2"
+     }
+    ],
+    "visual": "balance",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.20.20-LUK.20.22",
+   "text_de": "Spitzel wollen ihn bei einem Wort fassen: «Ist es uns erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?»",
+   "reason_de": "Fangfrage (Kriterien 2 und 3).",
+   "recognition_de": "Die Spitzel fragen.",
+   "keywords": [
+    "um ihn bei einem Wort zu fassen",
+    "Ist es uns erlaubt, dem Kaiser Steuer zu zahlen, oder nicht?"
+   ]
+  },
+  {
+   "reference": "LUK.20.24-LUK.20.25",
+   "text_de": "Der Denar – «Dann gebt dem Kaiser zurück, was des Kaisers ist, und Gott, was Gottes ist!»",
+   "reason_de": "Antwort mit zwei Gliedern (Kriterien 1 und 4).",
+   "recognition_de": "Der Denar mit dem Bild des Kaisers.",
+   "keywords": [
+    "Zeigt mir einen Denar!",
+    "Dann gebt dem Kaiser zurück, was des Kaisers ist, und Gott, was Gottes ist!"
+   ]
+  },
+  {
+   "reference": "LUK.20.26",
+   "text_de": "Sie können ihn nicht fassen, staunen und schweigen.",
+   "reason_de": "Ausgang (Kriterium 3).",
+   "recognition_de": "Die Gegner schweigen.",
+   "keywords": [
+    "sie staunten über seine Antwort und schwiegen"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Schmeichelei der Frager ([[LUK.20.21]]) – in der Zusammenfassung knapp",
+  "Was «was Gottes ist» im Einzelnen meint, deutet der Text nicht; nicht ausgelegt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-GEGNER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.20.20-LUK.20.26",
+   "fingerprint": "98cab8a6f1bc0455"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,246 @@
+{
+ "id": "CORE-LUK-017-020-037",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.17.20-LUK.17.37",
+ "target": "TU-LUK-017-020-037",
+ "core_de": "Auf die Frage der Pharisäer, wann das Reich Gottes kommt, antwortet Jesus: Es kommt nicht so, dass man es beobachten könnte, «denn seht, das Reich Gottes ist mitten unter euch»; den Jüngern kündigt er an: Man wird sagen «Seht, dort!», doch wie der Blitz wird der Menschensohn an seinem Tag sein, zuerst aber muss er viel leiden und verworfen werden; wie in den Tagen Noahs und Lots assen und tranken die Menschen, bis das Verderben kam, so wird es an dem Tag sein, an dem der Menschensohn offenbart wird: Wer sein Leben zu bewahren sucht, wird es verlieren, und von zweien wird der eine mitgenommen und der andere zurückgelassen; auf die Frage «Wo, Herr?» antwortet er: «Wo der Leichnam ist, dort werden sich auch die Geier sammeln.»",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "subtype": "zwei Fragen, zwei Antworten",
+    "range": "LUK.17.20-LUK.17.37",
+    "elements": [
+     {
+      "label": "Pharisäer: Wann kommt das Reich Gottes?",
+      "ref": "LUK.17.20",
+      "role": "Frage 1"
+     },
+     {
+      "label": "Jesus: nicht so, dass man es beobachten könnte; nicht «Seht, hier!» oder «Dort!» – «das Reich Gottes ist mitten unter euch»",
+      "ref": "LUK.17.20-LUK.17.21",
+      "role": "Antwort 1"
+     },
+     {
+      "label": "Zu den Jüngern: der Tag des Menschensohns",
+      "ref": "LUK.17.22-LUK.17.35",
+      "role": "Rede",
+      "child": "s2"
+     },
+     {
+      "label": "Jünger: «Wo, Herr?»",
+      "ref": "LUK.17.37",
+      "role": "Frage 2"
+     },
+     {
+      "label": "Jesus: «Wo der Leichnam ist, dort werden sich auch die Geier sammeln.»",
+      "ref": "LUK.17.37",
+      "role": "Antwort 2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-PHARISAEER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.17.20"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-PHARISAEER",
+       "ref": "LUK.17.20-LUK.17.21"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.17.22-LUK.17.37"
+      }
+     ],
+     "modality": [
+      {
+       "kind": "Ankündigung",
+       "ref": "LUK.17.22-LUK.17.35",
+       "note": "Alles über den Tag des Menschensohns ist Ankündigung in der Zukunft, kein Bericht."
+      }
+     ],
+     "text_forms": [
+      {
+       "ref": "LUK.17.35",
+       "note": "[[LUK.17.36]] («Zwei werden auf dem Feld sein …», vgl. [[MAT.24.40]]) steht nicht im SBLGNT, der Grundlage der Arbeitsübersetzung; spätere Handschriften haben ihn. Verdichtet wird ohne ihn."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "sequence",
+    "subtype": "Ablauf der Ankündigung",
+    "range": "LUK.17.22-LUK.17.35",
+    "elements": [
+     {
+      "label": "Tage kommen, da werdet ihr euch sehnen, einen der Tage des Menschensohns zu sehen; «Seht, dort!» – geht nicht hin",
+      "ref": "LUK.17.22-LUK.17.23",
+      "role": "Warnung"
+     },
+     {
+      "label": "Wie der Blitz von einem Ende des Himmels bis zum anderen – so der Menschensohn an seinem Tag",
+      "ref": "LUK.17.24",
+      "role": "Vergleich"
+     },
+     {
+      "label": "Zuerst aber muss er viel leiden und von diesem Geschlecht verworfen werden",
+      "ref": "LUK.17.25",
+      "role": "zuerst"
+     },
+     {
+      "label": "Wie in den Tagen Noahs und Lots",
+      "ref": "LUK.17.26-LUK.17.30",
+      "role": "Vergleich",
+      "child": "s3"
+     },
+     {
+      "label": "An jenem Tag nicht zurückkehren – «Denkt an die Frau Lots!» – wer sein Leben zu bewahren sucht, wird es verlieren; wer es verliert, wird es am Leben erhalten",
+      "ref": "LUK.17.31-LUK.17.33",
+      "role": "Mahnung"
+     },
+     {
+      "label": "Zwei und zwei: mitgenommen ↔ zurückgelassen",
+      "ref": "LUK.17.34-LUK.17.35",
+      "role": "Scheidung",
+      "child": "s4"
+     }
+    ],
+    "visual": "timeline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parallel",
+    "subtype": "zwei gleich gebaute Beispiele",
+    "range": "LUK.17.26-LUK.17.30",
+    "elements": [
+     {
+      "label": "Tage Noahs: sie assen, tranken, heirateten … bis Noah in die Arche ging; die Flut kam und vernichtete alle",
+      "ref": "LUK.17.26-LUK.17.27",
+      "role": "Beispiel 1"
+     },
+     {
+      "label": "Tage Lots: sie assen, tranken, kauften, verkauften, pflanzten, bauten; als Lot aus Sodom wegging, regnete es Feuer und Schwefel und vernichtete alle",
+      "ref": "LUK.17.28-LUK.17.29",
+      "role": "Beispiel 2"
+     },
+     {
+      "label": "«Genauso wird es an dem Tag sein, an dem der Menschensohn offenbart wird»",
+      "ref": "LUK.17.30",
+      "role": "Sache"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "GEN.7",
+       "note": "Noah und die Flut"
+      },
+      {
+       "ref": "GEN.19",
+       "note": "Lot und Sodom"
+      }
+     ]
+    },
+    "visual": "columns",
+    "basis": "text"
+   },
+   {
+    "id": "s4",
+    "pattern": "contrast",
+    "subtype": "Paarreihe",
+    "range": "LUK.17.34-LUK.17.35",
+    "elements": [
+     {
+      "label": "Zwei in einem Bett: der eine mitgenommen ↔ der andere zurückgelassen",
+      "ref": "LUK.17.34"
+     },
+     {
+      "label": "Zwei Frauen mahlen Korn: die eine mitgenommen ↔ die andere zurückgelassen",
+      "ref": "LUK.17.35"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.17.20-LUK.17.21",
+   "text_de": "Das Reich Gottes kommt nicht so, dass man es beobachten könnte – «das Reich Gottes ist mitten unter euch».",
+   "reason_de": "Erste Frage und Antwort (Kriterien 1 und 2).",
+   "recognition_de": "Pharisäer fragen nach dem Wann.",
+   "keywords": [
+    "Das Reich Gottes kommt nicht so, dass man es beobachten könnte",
+    "das Reich Gottes ist mitten unter euch"
+   ]
+  },
+  {
+   "reference": "LUK.17.24-LUK.17.30",
+   "text_de": "Wie der Blitz – zuerst muss er viel leiden; wie in den Tagen Noahs und Lots, so am Tag des Menschensohns.",
+   "reason_de": "Kern der Ankündigung mit den zwei Beispielen (Kriterien 1 und 4).",
+   "recognition_de": "Noah und Lot.",
+   "keywords": [
+    "wie der Blitz",
+    "Zuerst aber muss er viel leiden",
+    "wie es in den Tagen Noahs war",
+    "wie es in den Tagen Lots war"
+   ]
+  },
+  {
+   "reference": "LUK.17.32-LUK.17.37",
+   "text_de": "«Denkt an die Frau Lots!» – der eine mitgenommen, der andere zurückgelassen – «Wo, Herr?»",
+   "reason_de": "Mahnung, Scheidung und Schlusswort (Kriterien 2 und 3).",
+   "recognition_de": "Zwei im Bett, zwei an der Mühle.",
+   "keywords": [
+    "Denkt an die Frau Lots!",
+    "der eine wird mitgenommen und der andere zurückgelassen",
+    "Wo der Leichnam ist, dort werden sich auch die Geier sammeln"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Mahnungen für Dach und Feld ([[LUK.17.31]]) – in der Zusammenfassung knapp, im Bild nicht eigens",
+  "Wohin «mitgenommen» wird und was «zurückgelassen» heisst, sagt der Text nicht; nicht gedeutet",
+  "Das Bildwort vom Leichnam und den Geiern bleibt ungedeutet",
+  "[[LUK.17.36]] fehlt in der Grundlage der Arbeitsübersetzung (siehe Textfassungen); nicht verdichtet"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-PHARISAEER",
+  "FIG-GRUPPE-JUENGER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.17.20-LUK.17.37",
+   "fingerprint": "ffbe07a4e5cc322a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "id": "CORE-LUK-020-001-008",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.20.1-LUK.20.8",
+ "target": "TU-LUK-020-001-008",
+ "core_de": "Als Jesus im Tempel das Volk lehrt, fragen ihn die Hohepriester und die Schriftgelehrten mit den Ältesten: «Mit welcher Vollmacht tust du das?»; er stellt die Gegenfrage, ob die Taufe des Johannes vom Himmel oder von Menschen war; sie überlegen: Sagen sie «vom Himmel», wird er fragen, warum sie ihm nicht geglaubt haben, sagen sie «von Menschen», wird das Volk sie steinigen; so antworten sie, sie wüssten nicht, woher sie stamme, und Jesus sagt: «Dann sage auch ich euch nicht, mit welcher Vollmacht ich das tue.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "dialogue",
+    "range": "LUK.20.1-LUK.20.8",
+    "elements": [
+     {
+      "label": "Hohepriester, Schriftgelehrte, Älteste: «Mit welcher Vollmacht tust du das? Oder wer … hat dir diese Vollmacht gegeben?»",
+      "ref": "LUK.20.1-LUK.20.2",
+      "role": "Frage"
+     },
+     {
+      "label": "Jesus: «Die Taufe des Johannes, war sie vom Himmel oder von Menschen?»",
+      "ref": "LUK.20.3-LUK.20.4",
+      "role": "Gegenfrage"
+     },
+     {
+      "label": "Sie überlegen miteinander",
+      "ref": "LUK.20.5-LUK.20.6",
+      "role": "Beratung",
+      "child": "s2"
+     },
+     {
+      "label": "Sie antworten, sie wüssten nicht, woher sie stamme",
+      "ref": "LUK.20.7",
+      "role": "Antwort"
+     },
+     {
+      "label": "Jesus: «Dann sage auch ich euch nicht, mit welcher Vollmacht ich das tue.»",
+      "ref": "LUK.20.8",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "FIG-JESUS",
+       "ref": "LUK.20.2"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-HOHER-RAT",
+       "ref": "LUK.20.3-LUK.20.4"
+      },
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "einander",
+       "ref": "LUK.20.5-LUK.20.6"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-HOHER-RAT",
+       "ref": "LUK.20.8"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "range": "LUK.20.5-LUK.20.6",
+    "elements": [
+     {
+      "label": "Wenn wir sagen «Vom Himmel» → er wird sagen: «Warum habt ihr ihm nicht geglaubt?»",
+      "ref": "LUK.20.5",
+      "role": "Zweig 1"
+     },
+     {
+      "label": "Wenn wir sagen «Von Menschen» → das ganze Volk wird uns steinigen, denn es ist überzeugt, dass Johannes ein Prophet war",
+      "ref": "LUK.20.6",
+      "role": "Zweig 2"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.20.1-LUK.20.4",
+   "text_de": "«Mit welcher Vollmacht tust du das?» – Gegenfrage: die Taufe des Johannes, vom Himmel oder von Menschen?",
+   "reason_de": "Frage und Gegenfrage (Kriterien 1 und 2).",
+   "recognition_de": "Die Führenden fragen Jesus im Tempel.",
+   "keywords": [
+    "Mit welcher Vollmacht tust du das?",
+    "Die Taufe des Johannes, war sie vom Himmel oder von Menschen?"
+   ]
+  },
+  {
+   "reference": "LUK.20.5-LUK.20.8",
+   "text_de": "Ihre Überlegung in zwei Zweigen – «wir wissen nicht» – «Dann sage auch ich euch nicht».",
+   "reason_de": "Bedingung mit beiden Zweigen und Ausgang (Kriterien 1 und 3).",
+   "recognition_de": "Die Führenden beraten.",
+   "keywords": [
+    "sie wüssten nicht, woher sie stamme",
+    "Dann sage auch ich euch nicht, mit welcher Vollmacht ich das tue"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was «das» meint, wofür er Vollmacht hat, sagt die Frage nicht; nicht ergänzt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-HOHER-RAT"
+ ],
+ "places": [
+  "FIG-ORT-TEMPEL"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.20.1-LUK.20.8",
+   "fingerprint": "1c252f3b9cee6523"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

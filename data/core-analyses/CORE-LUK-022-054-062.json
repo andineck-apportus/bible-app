@@ -1,0 +1,160 @@
+{
+ "id": "CORE-LUK-022-054-062",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.22.54-LUK.22.62",
+ "target": "TU-LUK-022-054-062",
+ "core_de": "Sie nehmen Jesus fest und bringen ihn in das Haus des Hohepriesters; Petrus folgt von ferne und sitzt im Hof am Feuer; eine Magd und zwei andere sagen, er sei mit ihm gewesen, und dreimal leugnet er: «Ich kenne ihn nicht, Frau!» – «Mensch, ich bin es nicht!» – «Mensch, ich weiss nicht, was du sagst!»; sofort kräht ein Hahn, der Herr wendet sich um und blickt Petrus an, Petrus erinnert sich an sein Wort, geht hinaus und weint bitterlich.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "range": "LUK.22.54-LUK.22.62",
+    "elements": [
+     {
+      "label": "Festgenommen, in das Haus des Hohepriesters gebracht; Petrus folgt von ferne, sitzt im Hof am Feuer",
+      "ref": "LUK.22.54-LUK.22.55",
+      "role": "Ort"
+     },
+     {
+      "label": "Dreimal geleugnet",
+      "ref": "LUK.22.56-LUK.22.60",
+      "role": "Reihe",
+      "child": "s2"
+     },
+     {
+      "label": "Sofort kräht ein Hahn; der Herr wendet sich um und blickt Petrus an; Petrus erinnert sich an das Wort des Herrn",
+      "ref": "LUK.22.60-LUK.22.61",
+      "role": "Wende"
+     },
+     {
+      "label": "Er geht hinaus und weint bitterlich",
+      "ref": "LUK.22.62",
+      "role": "Ausgang"
+     }
+    ],
+    "features": {
+     "crossref": [
+      {
+       "ref": "LUK.22.34",
+       "note": "Ankündigung erfüllt"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "numbered",
+    "subtype": "dreimal, wie angekündigt ([[LUK.22.34]], [[LUK.22.61]])",
+    "range": "LUK.22.56-LUK.22.60",
+    "elements": [
+     {
+      "label": "1. Eine Magd: «Auch der war mit ihm!» – «Ich kenne ihn nicht, Frau!»",
+      "ref": "LUK.22.56-LUK.22.57"
+     },
+     {
+      "label": "2. Ein anderer: «Auch du bist einer von ihnen!» – «Mensch, ich bin es nicht!»",
+      "ref": "LUK.22.58"
+     },
+     {
+      "label": "3. Nach einer Stunde ein anderer: «Wirklich, auch der war mit ihm; er ist ja auch ein Galiläer!» – «Mensch, ich weiss nicht, was du sagst!»",
+      "ref": "LUK.22.59-LUK.22.60"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-MAGD",
+       "to": "FIG-PETRUS",
+       "ref": "LUK.22.56"
+      },
+      {
+       "who": "FIG-PETRUS",
+       "to": "FIG-ROLLE-MAGD",
+       "ref": "LUK.22.57"
+      },
+      {
+       "who": "ein anderer",
+       "to": "FIG-PETRUS",
+       "ref": "LUK.22.58"
+      },
+      {
+       "who": "ein anderer",
+       "to": "FIG-PETRUS",
+       "ref": "LUK.22.59"
+      },
+      {
+       "who": "FIG-PETRUS",
+       "to": "ein anderer",
+       "ref": "LUK.22.60"
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.22.54-LUK.22.60",
+   "text_de": "Am Feuer im Hof leugnet Petrus dreimal: «Ich kenne ihn nicht, Frau!» – «Mensch, ich bin es nicht!» – «Mensch, ich weiss nicht, was du sagst!»",
+   "reason_de": "Dreierreihe vollständig (Kriterien 1 und 4).",
+   "recognition_de": "Petrus am Feuer.",
+   "keywords": [
+    "Petrus aber folgte von ferne",
+    "Ich kenne ihn nicht, Frau!",
+    "Mensch, ich bin es nicht!",
+    "Mensch, ich weiss nicht, was du sagst!"
+   ]
+  },
+  {
+   "reference": "LUK.22.60-LUK.22.62",
+   "text_de": "Der Hahn kräht, der Herr blickt Petrus an; er weint bitterlich.",
+   "reason_de": "Wendepunkt und Ausgang (Kriterien 2 und 3).",
+   "recognition_de": "Der Blick und die Tränen.",
+   "keywords": [
+    "krähte ein Hahn",
+    "Und der Herr wandte sich um und blickte Petrus an",
+    "Und er ging hinaus und weinte bitterlich"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Fragenden ausser der Magd nennt Lukas nur «ein anderer»; nicht ausgemalt",
+  "Der Schlüssel des Petrus (nach [[MAT.16.19]]) ist hier nicht gezeigt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-PETRUS",
+  "FIG-ROLLE-MAGD",
+  "FIG-ROLLE-MENSCH"
+ ],
+ "places": [
+  "FIG-ORT-HAUS"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.22.54-LUK.22.62",
+   "fingerprint": "a1c7e9be34264e2a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "id": "CORE-LUK-022-063-071",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.22.63-LUK.22.71",
+ "target": "TU-LUK-022-063-071",
+ "core_de": "Die Männer, die Jesus bewachen, verspotten und schlagen ihn, verbinden ihm die Augen und fragen: «Weissage! Wer ist es, der dich geschlagen hat?»; als es Tag wird, führen ihn die Ältesten, Hohepriester und Schriftgelehrten vor ihren Hohen Rat: «Wenn du der Christus bist, sag es uns!»; er antwortet: Wenn ich es euch sage, werdet ihr es gewiss nicht glauben, «Von nun an aber wird der Menschensohn zur Rechten der Macht Gottes sitzen»; auf die Frage «Du bist also der Sohn Gottes?» sagt er: «Ihr sagt, dass ich es bin», und sie sagen: «Wozu brauchen wir noch ein Zeugnis? Wir haben es ja selbst aus seinem Mund gehört.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "range": "LUK.22.63-LUK.22.71",
+    "elements": [
+     {
+      "label": "In der Nacht: Die Wachen verspotten und schlagen ihn, verbinden ihm die Augen: «Weissage! Wer ist es, der dich geschlagen hat?»",
+      "ref": "LUK.22.63-LUK.22.65",
+      "role": "Spott"
+     },
+     {
+      "label": "Am Tag: vor dem Hohen Rat",
+      "ref": "LUK.22.66-LUK.22.71",
+      "role": "Verhör",
+      "child": "s2"
+     }
+    ],
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "dialogue",
+    "range": "LUK.22.66-LUK.22.71",
+    "elements": [
+     {
+      "label": "Rat: «Wenn du der Christus bist, sag es uns!»",
+      "ref": "LUK.22.67",
+      "role": "Frage 1"
+     },
+     {
+      "label": "Jesus: «Wenn ich es euch sage, werdet ihr es gewiss nicht glauben; wenn ich aber frage, werdet ihr gewiss nicht antworten.»",
+      "ref": "LUK.22.67-LUK.22.68",
+      "role": "Antwort 1"
+     },
+     {
+      "label": "«Von nun an aber wird der Menschensohn zur Rechten der Macht Gottes sitzen.»",
+      "ref": "LUK.22.69",
+      "role": "Ankündigung"
+     },
+     {
+      "label": "Alle: «Du bist also der Sohn Gottes?» – «Ihr sagt, dass ich es bin.»",
+      "ref": "LUK.22.70",
+      "role": "Frage 2 und Antwort"
+     },
+     {
+      "label": "«Wozu brauchen wir noch ein Zeugnis? Wir haben es ja selbst aus seinem Mund gehört.»",
+      "ref": "LUK.22.71",
+      "role": "Schluss"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "FIG-JESUS",
+       "ref": "LUK.22.67"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-HOHER-RAT",
+       "ref": "LUK.22.67-LUK.22.69"
+      },
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "FIG-JESUS",
+       "ref": "LUK.22.70"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-HOHER-RAT",
+       "ref": "LUK.22.70"
+      },
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "einander",
+       "ref": "LUK.22.71"
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "PSA.110.1",
+       "note": "zur Rechten"
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.22.63-LUK.22.65",
+   "text_de": "Verspottet und geschlagen: «Weissage! Wer ist es, der dich geschlagen hat?»",
+   "reason_de": "Spott in der Nacht (Kriterien 3 und 4).",
+   "recognition_de": "Jesus mit verbundenen Augen.",
+   "keywords": [
+    "verspotteten ihn und schlugen ihn",
+    "Weissage! Wer ist es, der dich geschlagen hat?"
+   ]
+  },
+  {
+   "reference": "LUK.22.66-LUK.22.71",
+   "text_de": "Vor dem Hohen Rat: «Wenn du der Christus bist, sag es uns!» – «zur Rechten der Macht Gottes» – «Ihr sagt, dass ich es bin.»",
+   "reason_de": "Verhör mit dem Bekenntnis (Kriterien 1 und 2).",
+   "recognition_de": "Jesus vor dem Hohen Rat.",
+   "keywords": [
+    "Wenn du der Christus bist, sag es uns!",
+    "Von nun an aber wird der Menschensohn zur Rechten der Macht Gottes sitzen",
+    "Du bist also der Sohn Gottes?",
+    "Ihr sagt, dass ich es bin"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Ein Todesurteil spricht der Rat bei Lukas nicht aus; er bringt ihn zu Pilatus ([[LUK.23.1]])",
+  "Die Lästerungen ([[LUK.22.65]]) werden nicht ausgeführt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-GEGNER",
+  "FIG-GRUPPE-HOHER-RAT"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.22.63-LUK.22.71",
+   "fingerprint": "3bba434adecd6ed2"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

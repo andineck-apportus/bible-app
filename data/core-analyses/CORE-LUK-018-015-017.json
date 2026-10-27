@@ -1,0 +1,124 @@
+{
+ "id": "CORE-LUK-018-015-017",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.18.15-LUK.18.17",
+ "target": "TU-LUK-018-015-017",
+ "core_de": "Man bringt kleine Kinder zu Jesus, damit er sie berühre; die Jünger weisen die Leute zurecht, Jesus aber ruft sie zu sich und sagt: «Lasst die Kinder zu mir kommen und hindert sie nicht; denn solchen gehört das Reich Gottes», und wer das Reich Gottes nicht annimmt wie ein Kind, wird ganz gewiss nicht hineinkommen.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "range": "LUK.18.15-LUK.18.17",
+    "elements": [
+     {
+      "label": "Man bringt die kleinen Kinder, damit er sie berühre",
+      "ref": "LUK.18.15",
+      "role": "Anlass"
+     },
+     {
+      "label": "Die Jünger weisen die Leute zurecht",
+      "ref": "LUK.18.15",
+      "role": "Widerstand"
+     },
+     {
+      "label": "Jesus ruft sie zu sich: Wort an die Jünger",
+      "ref": "LUK.18.16-LUK.18.17",
+      "role": "Wort",
+      "child": "s2"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.18.16-LUK.18.17"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "range": "LUK.18.16-LUK.18.17",
+    "elements": [
+     {
+      "label": "«Lasst die Kinder zu mir kommen und hindert sie nicht»",
+      "ref": "LUK.18.16",
+      "role": "Weisung"
+     },
+     {
+      "label": "«denn solchen gehört das Reich Gottes»",
+      "ref": "LUK.18.16",
+      "role": "Begründung"
+     },
+     {
+      "label": "Wer das Reich Gottes nicht annimmt wie ein Kind → wird ganz gewiss nicht hineinkommen",
+      "ref": "LUK.18.17",
+      "role": "Bedingung → Folge"
+     }
+    ],
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.18.15",
+   "text_de": "Man bringt die kleinen Kinder, damit er sie berühre; die Jünger weisen die Leute zurecht.",
+   "reason_de": "Anlass und Widerstand (Kriterium 3).",
+   "recognition_de": "Kinder werden gebracht.",
+   "keywords": [
+    "Man brachte aber auch die kleinen Kinder zu ihm, damit er sie berühre",
+    "wiesen sie die Leute zurecht"
+   ]
+  },
+  {
+   "reference": "LUK.18.16-LUK.18.17",
+   "text_de": "«Lasst die Kinder zu mir kommen …; denn solchen gehört das Reich Gottes» – annehmen wie ein Kind.",
+   "reason_de": "Wort Jesu mit Begründung (Kriterien 1 und 2).",
+   "recognition_de": "Jesus mit den Kindern.",
+   "keywords": [
+    "Lasst die Kinder zu mir kommen und hindert sie nicht",
+    "denn solchen gehört das Reich Gottes",
+    "Wer das Reich Gottes nicht annimmt wie ein Kind"
+   ],
+   "mode": "speech"
+  }
+ ],
+ "omitted_de": [
+  "Ob Jesus die Kinder berührt, erzählt Lukas nicht; das Bild zeigt sie nur bei ihm"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-GRUPPE-KINDER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.18.15-LUK.18.17",
+   "fingerprint": "672a416480a72585"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

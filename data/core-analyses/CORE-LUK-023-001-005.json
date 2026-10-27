@@ -1,0 +1,160 @@
+{
+ "id": "CORE-LUK-023-001-005",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.23.1-LUK.23.5",
+ "target": "TU-LUK-023-001-005",
+ "core_de": "Die ganze Versammlung führt Jesus vor Pilatus und klagt ihn an: Er wiegle das Volk auf, verbiete, dem Kaiser Steuern zu zahlen, und sage, er sei Christus, ein König; Pilatus fragt: «Bist du der König der Juden?», und er antwortet: «Du sagst es»; Pilatus sagt zu den Hohepriestern und den Menschenmengen: «Ich finde keine Schuld an diesem Menschen», sie aber bestehen darauf: «Er wiegelt das Volk auf … von Galiläa an bis hierher!»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "form",
+    "subtype": "erste Station des Verfahrens",
+    "form_type": "lawsuit",
+    "range": "LUK.23.1-LUK.23.5",
+    "elements": [
+     {
+      "label": "Vorführung: Die ganze Versammlung führt ihn vor Pilatus",
+      "ref": "LUK.23.1",
+      "role": "Vorladung"
+     },
+     {
+      "label": "Anklage in drei Punkten",
+      "ref": "LUK.23.2",
+      "role": "Anklage",
+      "child": "s2"
+     },
+     {
+      "label": "Verhör: «Bist du der König der Juden?» – «Du sagst es.»",
+      "ref": "LUK.23.3",
+      "role": "Frage und Antwort"
+     },
+     {
+      "label": "Urteil: «Ich finde keine Schuld an diesem Menschen.»",
+      "ref": "LUK.23.4",
+      "role": "Urteil"
+     },
+     {
+      "label": "Sie bestehen darauf: «Er wiegelt das Volk auf … von Galiläa an bis hierher!»",
+      "ref": "LUK.23.5",
+      "role": "Widerspruch"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "FIG-PILATUS",
+       "ref": "LUK.23.2"
+      },
+      {
+       "who": "FIG-PILATUS",
+       "to": "FIG-JESUS",
+       "ref": "LUK.23.3"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-PILATUS",
+       "ref": "LUK.23.3"
+      },
+      {
+       "who": "FIG-PILATUS",
+       "to": "FIG-GRUPPE-HOHEPRIESTER",
+       "ref": "LUK.23.4"
+      },
+      {
+       "who": "FIG-GRUPPE-HOHER-RAT",
+       "to": "FIG-PILATUS",
+       "ref": "LUK.23.5"
+      }
+     ],
+     "genre": [
+      {
+       "note": "«Verfahren» (Instanzenweg) ist Einordnung; der Text nennt die Schritte, nicht die Gattung."
+      }
+     ]
+    },
+    "visual": "outline",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "drei Anklagepunkte",
+    "range": "LUK.23.2",
+    "elements": [
+     {
+      "label": "er wiegelt unser Volk auf",
+      "ref": "LUK.23.2"
+     },
+     {
+      "label": "er verbietet, dem Kaiser Steuern zu zahlen",
+      "ref": "LUK.23.2"
+     },
+     {
+      "label": "er sagt, er sei Christus, ein König",
+      "ref": "LUK.23.2"
+     }
+    ],
+    "visual": "grid",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.23.1-LUK.23.3",
+   "text_de": "Die Anklage vor Pilatus – «Bist du der König der Juden?» – «Du sagst es.»",
+   "reason_de": "Anklage und Verhör (Kriterien 1 und 4).",
+   "recognition_de": "Jesus vor Pilatus.",
+   "keywords": [
+    "wie er unser Volk aufwiegelt",
+    "Bist du der König der Juden?",
+    "Du sagst es"
+   ]
+  },
+  {
+   "reference": "LUK.23.4-LUK.23.5",
+   "text_de": "«Ich finde keine Schuld an diesem Menschen» – sie bestehen darauf.",
+   "reason_de": "Erstes Urteil (Kriterien 1 und 2).",
+   "recognition_de": "Pilatus findet keine Schuld.",
+   "keywords": [
+    "Ich finde keine Schuld an diesem Menschen",
+    "Er wiegelt das Volk auf"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Der Amtsstuhl, ein Erkennungszeichen des Pilatus im Lexikon, kommt bei Lukas nicht vor; nicht gezeigt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-HOHER-RAT",
+  "FIG-PILATUS"
+ ],
+ "places": [
+  "FIG-ORT-PRAETORIUM"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.23.1-LUK.23.5",
+   "fingerprint": "d8e02032c3ba0013"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

@@ -9,14 +9,37 @@
  "reference": "LUK",
  "target": "SUM-BOOK-LUK",
  "children": [
-  "CORE-LUK-011"
+  "CORE-LUK-001",
+  "CORE-LUK-002",
+  "CORE-LUK-003",
+  "CORE-LUK-004",
+  "CORE-LUK-005",
+  "CORE-LUK-006",
+  "CORE-LUK-007",
+  "CORE-LUK-008",
+  "CORE-LUK-009",
+  "CORE-LUK-010",
+  "CORE-LUK-011",
+  "CORE-LUK-012",
+  "CORE-LUK-013",
+  "CORE-LUK-014",
+  "CORE-LUK-015",
+  "CORE-LUK-016",
+  "CORE-LUK-017",
+  "CORE-LUK-018",
+  "CORE-LUK-019",
+  "CORE-LUK-020",
+  "CORE-LUK-021",
+  "CORE-LUK-022",
+  "CORE-LUK-023",
+  "CORE-LUK-024"
  ],
- "core_de": "Vom Lukasevangelium ist bisher nur der Anfang von Kapitel 11 übersetzt: Ein Jünger bittet Jesus: «Herr, lehre uns beten», und Jesus lehrt das Gebet zum Vater – dein Name werde geheiligt, dein Reich komme, gib uns das tägliche Brot, vergib uns unsere Sünden, führe uns nicht in Versuchung.",
- "purpose_de": "Lukas nennt den Zweck seines Buches im Vorwort ([[LUK.1.1-LUK.1.4]], in der Arbeitsübersetzung noch nicht übersetzt): ein geordneter Bericht für Theophilus, damit er die Zuverlässigkeit der Lehre erkennt, in der er unterwiesen wurde. Übersetzt ist bisher nur [[LUK.11.1-LUK.11.4]]; die Buchebene verdichtet deshalb nur diesen Abschnitt (redaktionelle Entscheidung beim Ausrollen 2026-10-26, offen für Andi Neck).",
- "mode": "prayer",
+ "core_de": "Lukas schreibt Theophilus der Reihe nach auf, was sich erfüllt hat: Geburt Johannes des Täufers und Jesu, den der Engel den Hirten als Retter, Christus und Herrn ankündigt; das Wirken in Galiläa, das in Nazaret mit «Heute hat sich dieses Schriftwort erfüllt» beginnt; den Weg nach Jerusalem, auf dem Jesus lehrt, Verlorene sucht und Gleichnisse erzählt; in Jerusalem Lehre im Tempel, Passamahl, Auslieferung, Verurteilung trotz «keiner Schuld» und Tod am Kreuz mit «Vater, in deine Hände übergebe ich meinen Geist!»; am dritten Tag das Grab ohne den Leib, Emmaus, die Öffnung der Schriften und der Auftrag an die Zeugen; das Buch schliesst mit dem Segen und den Jüngern, die im Tempel Gott preisen.",
+ "purpose_de": "Lukas nennt seinen Zweck im Vorwort selbst: Viele haben schon einen Bericht über die Ereignisse verfasst, «die sich unter uns erfüllt haben», wie es die Augenzeugen und Diener des Wortes überliefert haben; er ist allem von Anfang an genau nachgegangen und schreibt es dem hochverehrten Theophilus der Reihe nach auf, «damit du erkennst, wie zuverlässig die Worte sind, über die du unterrichtet worden bist» ([[LUK.1.1-LUK.1.4]]). Seinen Namen nennt der Verfasser nicht; die Zuschreibung an Lukas ist kirchliche Überlieferung, und dass dasselbe Werk in der Apostelgeschichte weitergeht ([[ACT.1.1]]), steht dort, nicht hier.",
+ "mode": "narrative",
  "voice": {
-  "speaker": "FIG-JESUS",
-  "addressee": "FIG-GRUPPE-JUENGER"
+  "speaker": "narrator",
+  "addressee": "Theophilus"
  },
  "structure": {
   "root": "s1",
@@ -24,159 +47,343 @@
    {
     "id": "s1",
     "pattern": "sequence",
-    "subtype": "Bisher übersetzt: Bitte und Gebet ([[LUK.11.1-LUK.11.4]])",
+    "subtype": "Vorwort – Anfang – Galiläa – Weg nach Jerusalem – Jerusalem – Passion – Ostern",
     "range": "LUK",
     "elements": [
      {
-      "label": "Ein Jünger: «Herr, lehre uns beten»",
-      "ref": "LUK.11.1",
-      "role": "Bitte"
+      "label": "Vorwort an Theophilus: der Reihe nach aufgeschrieben, damit er die Zuverlässigkeit erkennt",
+      "ref": "LUK.1.1-LUK.1.4",
+      "role": "Vorwort"
      },
      {
-      "label": "Das Gebet zum Vater mit fünf Bitten",
-      "ref": "LUK.11.2-LUK.11.4",
-      "role": "Gebet",
+      "label": "Ankündigung und Geburt: Johannes und Jesus; der Knabe im Tempel",
+      "ref": "LUK.1.5-LUK.2.52",
+      "role": "Anfang"
+     },
+     {
+      "label": "Johannes der Täufer, Taufe, Stammbaum, Versuchung",
+      "ref": "LUK.3.1-LUK.4.13",
+      "role": "Vorbereitung"
+     },
+     {
+      "label": "Wirken in Galiläa: Nazaret, Heilungen, die Zwölf, Petrusbekenntnis, Verklärung",
+      "ref": "LUK.4.14-LUK.9.50",
+      "role": "Galiläa"
+     },
+     {
+      "label": "Weg nach Jerusalem: Nachfolge, Gleichnisse, Gebet, Reichtum, das Verlorene",
+      "ref": "LUK.9.51-LUK.19.27",
+      "role": "Weg",
       "child": "s2"
      },
      {
-      "label": "Übriges Buch (noch nicht übersetzt)",
-      "role": "offen",
-      "empty": true
+      "label": "In Jerusalem: Einzug, Tempel, Streitgespräche, Rede über die Zukunft",
+      "ref": "LUK.19.28-LUK.21.38",
+      "role": "Jerusalem"
+     },
+     {
+      "label": "Passion: Mahl, Ölberg, Verhör, Pilatus und Herodes, Kreuz, Begräbnis",
+      "ref": "LUK.22.1-LUK.23.56",
+      "role": "Passion"
+     },
+     {
+      "label": "Auferstehung: Grab, Emmaus, Erscheinung, Auftrag, Segen",
+      "ref": "LUK.24.1-LUK.24.53",
+      "role": "Ostern"
+     },
+     {
+      "label": "Rahmen: Tempel am Anfang und am Schluss",
+      "ref": "LUK.1.9-LUK.24.53",
+      "role": "Rahmen",
+      "child": "s3"
      }
     ],
     "features": {
-     "interpretation": [
+     "speakers": [
       {
-       "note": "Die Buchstruktur (z. B. Weg nach Jerusalem [[LUK.9.51]]) wird erst mit der Übersetzung bestimmt."
-      }
-     ]
-    },
-    "visual": "scenes",
-    "basis": "text"
-   },
-   {
-    "id": "s2",
-    "pattern": "series",
-    "subtype": "Anrede «Vater» und fünf Bitten",
-    "range": "LUK.11.2-LUK.11.4",
-    "elements": [
-     {
-      "label": "Vater, dein Name werde geheiligt",
-      "ref": "LUK.11.2",
-      "role": "Du-Bitte 1"
-     },
-     {
-      "label": "dein Reich komme",
-      "ref": "LUK.11.2",
-      "role": "Du-Bitte 2"
-     },
-     {
-      "label": "Unser tägliches Brot gib uns Tag für Tag",
-      "ref": "LUK.11.3",
-      "role": "Wir-Bitte 1"
-     },
-     {
-      "label": "Vergib uns unsere Sünden, denn auch wir selbst vergeben jedem, der uns etwas schuldet",
-      "ref": "LUK.11.4",
-      "role": "Wir-Bitte 2 mit Begründung"
-     },
-     {
-      "label": "Führe uns nicht in Versuchung",
-      "ref": "LUK.11.4",
-      "role": "Wir-Bitte 3"
-     }
-    ],
-    "features": {
-     "crossref": [
-      {
-       "ref": "MAT.6.9-MAT.6.13",
-       "note": "längere Fassung bei Matthäus"
+       "who": "Erzähler",
+       "to": "Theophilus",
+       "note": "Ich-Vorwort [[LUK.1.1-LUK.1.4]], dann Er-Bericht"
       }
      ],
-     "text_forms": [
+     "leitwort": [
       {
-       "ref": "LUK.11.2-LUK.11.4",
-       "note": "Viele spätere Handschriften gleichen die Bitten an die längere Fassung bei Matthäus an; die Arbeitsübersetzung folgt der kürzeren Fassung."
+       "word": "heute",
+       "refs": [
+        "LUK.2.11",
+        "LUK.4.21",
+        "LUK.19.9",
+        "LUK.23.43"
+       ]
+      },
+      {
+       "word": "erfüllen",
+       "refs": [
+        "LUK.1.1",
+        "LUK.4.21",
+        "LUK.24.44"
+       ]
+      },
+      {
+       "word": "Jerusalem (Weg dorthin)",
+       "refs": [
+        "LUK.9.51",
+        "LUK.13.22",
+        "LUK.17.11",
+        "LUK.19.28"
+       ]
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "Text sind nur das Vorwort ([[LUK.1.1-LUK.1.4]]) und der Entschluss, nach Jerusalem zu gehen ([[LUK.9.51]]); die übrige Gliederung, besonders der «Reisebericht» bis [[LUK.19.27]] oder [[LUK.19.44]], ist ein verbreiteter Vorschlag der Forschung."
+      },
+      {
+       "note": "Dass «heute» ein Leitwort des Buches ist, ist Beobachtung; die Stellen stehen im Text."
       }
      ]
     },
     "visual": "grid",
     "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "route",
+    "subtype": "die Wegnotizen des Textes",
+    "range": "LUK.9.51-LUK.19.28",
+    "elements": [
+     {
+      "label": "«fasste er den festen Entschluss, nach Jerusalem zu gehen»",
+      "ref": "LUK.9.51"
+     },
+     {
+      "label": "«er nahm seinen Weg nach Jerusalem»",
+      "ref": "LUK.13.22"
+     },
+     {
+      "label": "«auf dem Weg nach Jerusalem … mitten durch Samarien und Galiläa»",
+      "ref": "LUK.17.11"
+     },
+     {
+      "label": "«Der Menschensohn ist gekommen, um zu suchen und zu retten, was verloren ist»",
+      "ref": "LUK.19.10"
+     },
+     {
+      "label": "«ging hinauf nach Jerusalem»",
+      "ref": "LUK.19.28"
+     }
+    ],
+    "visual": "timeline",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "frame",
+    "range": "LUK.1.9-LUK.24.53",
+    "elements": [
+     {
+      "label": "Zacharias im Tempel des Herrn",
+      "ref": "LUK.1.9",
+      "role": "A"
+     },
+     {
+      "label": "Die Jünger die ganze Zeit im Tempel; sie preisen Gott",
+      "ref": "LUK.24.53",
+      "role": "A'"
+     }
+    ],
+    "visual": "outline",
+    "basis": "proposal",
+    "source_de": "Verbreitete Beobachtung der Lukasforschung (Anfang und Schluss im Tempel)"
    }
   ]
  },
  "moments": [
   {
-   "reference": "LUK.11.1",
-   "text_de": "«Herr, lehre uns beten.»",
-   "reason_de": "Anlass (Kriterium 3).",
-   "recognition_de": "Station 1: die Bitte.",
+   "reference": "LUK.1.3-LUK.1.4",
+   "text_de": "Der Reihe nach aufgeschrieben, «damit du erkennst, wie zuverlässig die Worte sind».",
+   "reason_de": "Zweck des Buches (Kriterium 1).",
+   "recognition_de": "Im Begleittext; im Buchbild nicht gezeichnet (keine Lexikonfigur für Lukas oder Theophilus).",
    "keywords": [
-    "Herr, lehre uns beten"
-   ],
-   "mode": "narrative"
-  },
-  {
-   "reference": "LUK.11.2",
-   "text_de": "«Vater, dein Name werde geheiligt; dein Reich komme.»",
-   "reason_de": "Du-Bitten (Kriterium 1).",
-   "recognition_de": "Station 2: Name und Reich.",
-   "keywords": [
-    "Vater, dein Name werde geheiligt",
-    "dein Reich komme"
+    "es dir der Reihe nach aufzuschreiben",
+    "damit du erkennst, wie zuverlässig die Worte sind"
    ]
   },
   {
-   "reference": "LUK.11.3",
-   "text_de": "«Unser tägliches Brot gib uns Tag für Tag.»",
-   "reason_de": "Wir-Bitte (Kriterium 1).",
-   "recognition_de": "Station 2: Brot.",
+   "reference": "LUK.2.7-LUK.2.11",
+   "text_de": "In der Futterkrippe – «heute ist euch in der Stadt Davids ein Retter geboren».",
+   "reason_de": "Anfang Jesu (Kriterien 1 und 4).",
+   "recognition_de": "Station 1: die Krippe.",
    "keywords": [
-    "Unser tägliches Brot gib uns Tag für Tag"
+    "und legte ihn in eine Futterkrippe",
+    "heute ist euch in der Stadt Davids ein Retter geboren"
    ]
   },
   {
-   "reference": "LUK.11.4",
-   "text_de": "«Vergib uns unsere Sünden … und führe uns nicht in Versuchung.»",
-   "reason_de": "Wir-Bitten (Kriterium 1).",
-   "recognition_de": "Station 2: Vergebung und Versuchung.",
+   "reference": "LUK.4.18-LUK.4.21",
+   "text_de": "In Nazaret: «Heute hat sich dieses Schriftwort erfüllt.»",
+   "reason_de": "Programm des Wirkens (Kriterien 1 und 2).",
+   "recognition_de": "Station 2: Nazaret.",
    "keywords": [
-    "Und vergib uns unsere Sünden",
-    "und führe uns nicht in Versuchung"
+    "um Armen die gute Botschaft zu bringen",
+    "Heute hat sich dieses Schriftwort erfüllt"
+   ]
+  },
+  {
+   "reference": "LUK.9.51",
+   "text_de": "Er fasst den festen Entschluss, nach Jerusalem zu gehen.",
+   "reason_de": "Wende des Buches (Kriterium 3).",
+   "recognition_de": "Station 3: der Weg.",
+   "keywords": [
+    "fasste er den festen Entschluss, nach Jerusalem zu gehen"
+   ]
+  },
+  {
+   "reference": "LUK.23.43-LUK.23.46",
+   "text_de": "«Heute wirst du mit mir im Paradies sein» – «Vater, in deine Hände übergebe ich meinen Geist!»",
+   "reason_de": "Kreuz (Kriterien 1 und 4).",
+   "recognition_de": "Station 4: das Kreuz.",
+   "keywords": [
+    "Heute wirst du mit mir im Paradies sein",
+    "Vater, in deine Hände übergebe ich meinen Geist!"
+   ]
+  },
+  {
+   "reference": "LUK.24.44-LUK.24.53",
+   "text_de": "Die Schriften erfüllt – «Ihr seid Zeugen dafür» – Segen – im Tempel.",
+   "reason_de": "Schluss (Kriterien 1 und 3).",
+   "recognition_de": "Station 4: im Band.",
+   "keywords": [
+    "Alles muss erfüllt werden",
+    "Ihr seid Zeugen dafür",
+    "im Tempel und priesen Gott"
    ]
   }
  ],
  "omitted_de": [
-  "Der übrige Text des Lukasevangeliums ist in der Arbeitsübersetzung noch nicht übersetzt; die Verdichtung beruht nur auf [[LUK.11.1-LUK.11.4]] (oben nichts, was unten fehlt)",
-  "Die Hauptstationen des ganzen Buches (Kindheit, Galiläa, Weg nach Jerusalem, Passion, Ostern) – erst nach der Übersetzung; bis dahin nicht verdichtet"
+  "Die einzelnen Heilungen, Gleichnisse und Streitgespräche – in den Kapiteln",
+  "Wer Lukas und Theophilus waren, sagt das Buch nicht; der Name Lukas steht nicht im Text, die Zuschreibung ist kirchliche Überlieferung",
+  "Die Fortsetzung in der Apostelgeschichte – nicht Teil dieses Buches",
+  "Textkritisch unsichere Stellen ([[LUK.22.43-LUK.22.44]], [[LUK.23.34]], Kapitel 24) – in den Kapiteln"
  ],
  "persons": [
   "FIG-JESUS",
-  "FIG-ROLLE-JUENGER",
-  "FIG-GRUPPE-JUENGER",
-  "FIG-GOTT"
+  "FIG-GOTT",
+  "FIG-JOHANNES-TAEUFER",
+  "FIG-MARIA-MUTTER-JESU",
+  "FIG-GRUPPE-ZWOELF",
+  "FIG-PETRUS",
+  "FIG-PILATUS",
+  "FIG-ROLLE-MITGEKREUZIGTER",
+  "FIG-GRUPPE-JUENGER"
  ],
- "places": [],
+ "places": [
+  "FIG-ORT-TEMPEL",
+  "FIG-ORT-JERUSALEM",
+  "FIG-ORT-GOLGOTA",
+  "FIG-ORT-GRAB"
+ ],
  "basis": [
   {
+   "record": "CORE-LUK-001",
+   "fingerprint": "867b5efafa726890"
+  },
+  {
+   "record": "CORE-LUK-002",
+   "fingerprint": "cde46bcc05c812cd"
+  },
+  {
+   "record": "CORE-LUK-003",
+   "fingerprint": "dbe1be122f473194"
+  },
+  {
+   "record": "CORE-LUK-004",
+   "fingerprint": "d3c64522307e26a2"
+  },
+  {
+   "record": "CORE-LUK-005",
+   "fingerprint": "5c4c94eac021b660"
+  },
+  {
+   "record": "CORE-LUK-006",
+   "fingerprint": "cadeaace2a6ac69a"
+  },
+  {
+   "record": "CORE-LUK-007",
+   "fingerprint": "a75144ca0f64968f"
+  },
+  {
+   "record": "CORE-LUK-008",
+   "fingerprint": "af5e751668019f10"
+  },
+  {
+   "record": "CORE-LUK-009",
+   "fingerprint": "275fda95627835ac"
+  },
+  {
+   "record": "CORE-LUK-010",
+   "fingerprint": "0714452c89117981"
+  },
+  {
    "record": "CORE-LUK-011",
-   "fingerprint": "c07b78817f9094c2"
+   "fingerprint": "06704a3a0a84ee4c"
+  },
+  {
+   "record": "CORE-LUK-012",
+   "fingerprint": "f82af9da2b2468b5"
+  },
+  {
+   "record": "CORE-LUK-013",
+   "fingerprint": "af641ff24dcf70ad"
+  },
+  {
+   "record": "CORE-LUK-014",
+   "fingerprint": "ba85f129c7a5598d"
+  },
+  {
+   "record": "CORE-LUK-015",
+   "fingerprint": "f0c8113d1f79f3ab"
+  },
+  {
+   "record": "CORE-LUK-016",
+   "fingerprint": "761e29e29088be22"
+  },
+  {
+   "record": "CORE-LUK-017",
+   "fingerprint": "acb95fba6e2e3426"
+  },
+  {
+   "record": "CORE-LUK-018",
+   "fingerprint": "72715334a9fadc7b"
+  },
+  {
+   "record": "CORE-LUK-019",
+   "fingerprint": "c014d701438b292c"
+  },
+  {
+   "record": "CORE-LUK-020",
+   "fingerprint": "86e90be91cb5a5b2"
+  },
+  {
+   "record": "CORE-LUK-021",
+   "fingerprint": "d19a4284dfb8d63f"
+  },
+  {
+   "record": "CORE-LUK-022",
+   "fingerprint": "8f771a3d75d0f15c"
+  },
+  {
+   "record": "CORE-LUK-023",
+   "fingerprint": "5509295905b36cbe"
+  },
+  {
+   "record": "CORE-LUK-024",
+   "fingerprint": "a02c3d07c77cf959"
   }
  ],
- "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Joh 15–21, Buch Johannes und Lk 11 nach Joh 1–14; keine fachliche Prüfung.",
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
  "knowledge": {
   "asserted_at": "2026-10-26",
   "supersedes": null
- },
- "review": {
-  "date": "2026-10-26",
-  "by_de": "KI-Instanz (getrennt) (Claude), Prüfung «Struktur zuerst» (Kernaussage, Momente, Textart, Sprecher, Strukturtreue) gegen die hochdeutsche Arbeitsübersetzung, Züridüütsch gegen die Mundart-Übersetzungsschicht; Zusammenfassungen und Bildaufträge mitgeprüft, Bilder gerendert und angesehen; nicht gegen den griechischen Text geprüft, kein Blindtest ohne Legende; keine fachliche und keine muttersprachliche Prüfung durch eine Person",
-  "result": "bestanden nach Korrektur",
-  "summary_de": "Auf [[LUK.11.1-LUK.11.4]] beschränkt (redaktionelle Entscheidung beim Ausrollen, offen für Andi Neck); der Zweck aus dem Vorwort steht nur in `purpose_de`, dort als noch nicht übersetzt gekennzeichnet.",
-  "changes_de": [
-   "Zusammenfassung: Der Satz über Theophilus und den Zweck stammte aus dem noch nicht übersetzten Vorwort [[LUK.1.1-LUK.1.4]] und stand ohne Kennzeichnung neben dem übersetzten Text; entfernt, die Zusammenfassung sagt jetzt, dass sie nur auf dem übersetzten Abschnitt beruht.",
-   "Zusammenfassung: «er vergebe die Sünden, wie auch sie … vergeben» gab die Begründung «denn auch wir selbst vergeben» ([[LUK.11.4]]) als Vergleich wieder (Fassung des Matthäus); jetzt im Wortlaut.",
-   "Bild Feld 1: Zeichen «beten» bei Jesus wie im Abschnitt."
-  ]
  }
 }

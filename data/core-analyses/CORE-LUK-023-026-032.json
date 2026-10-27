@@ -1,0 +1,156 @@
+{
+ "id": "CORE-LUK-023-026-032",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.23.26-LUK.23.32",
+ "target": "TU-LUK-023-026-032",
+ "core_de": "Als sie Jesus abführen, ergreifen sie Simon aus Kyrene, der vom Feld kommt, und legen ihm das Kreuz auf, um es hinter Jesus herzutragen; eine grosse Menge folgt ihm, auch Frauen, die um ihn klagen; Jesus wendet sich zu ihnen um: «Töchter Jerusalems, weint nicht über mich! Weint vielmehr über euch selbst und über eure Kinder!», denn es kommen Tage, an denen man die Unfruchtbaren selig preisen und zu den Bergen sagen wird: «Fallt auf uns!» – «Denn wenn sie das am grünen Holz tun, was wird dann am dürren geschehen?»; mit ihm werden zwei Verbrecher zur Hinrichtung abgeführt.",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "range": "LUK.23.26-LUK.23.32",
+    "elements": [
+     {
+      "label": "Simon aus Kyrene, vom Feld kommend, trägt das Kreuz hinter Jesus her",
+      "ref": "LUK.23.26",
+      "role": "Weg"
+     },
+     {
+      "label": "Eine grosse Menge folgt, auch Frauen, die sich an die Brust schlagen und um ihn klagen",
+      "ref": "LUK.23.27",
+      "role": "Klage"
+     },
+     {
+      "label": "Wort an die Frauen",
+      "ref": "LUK.23.28-LUK.23.31",
+      "role": "Wort",
+      "child": "s2"
+     },
+     {
+      "label": "Zwei andere, Verbrecher, werden mit ihm zur Hinrichtung abgeführt",
+      "ref": "LUK.23.32",
+      "role": "Überleitung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-FRAUEN",
+       "ref": "LUK.23.28-LUK.23.31"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "cause",
+    "range": "LUK.23.28-LUK.23.31",
+    "elements": [
+     {
+      "label": "«Töchter Jerusalems, weint nicht über mich! Weint vielmehr über euch selbst und über eure Kinder!»",
+      "ref": "LUK.23.28",
+      "role": "Weisung"
+     },
+     {
+      "label": "Denn es kommen Tage: «Selig die Unfruchtbaren …» – zu den Bergen: «Fallt auf uns!»",
+      "ref": "LUK.23.29-LUK.23.30",
+      "role": "Begründung"
+     },
+     {
+      "label": "Denn: «wenn sie das am grünen Holz tun, was wird dann am dürren geschehen?»",
+      "ref": "LUK.23.31",
+      "role": "Begründung (Bildwort)"
+     }
+    ],
+    "features": {
+     "modality": [
+      {
+       "kind": "Ankündigung",
+       "ref": "LUK.23.29-LUK.23.30",
+       "note": "Zukunft."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "HOS.10.8",
+       "note": "«Fallt auf uns!»"
+      }
+     ]
+    },
+    "visual": "arrows",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.23.26",
+   "text_de": "Simon aus Kyrene trägt das Kreuz hinter Jesus her.",
+   "reason_de": "Erkennungsmoment (Kriterien 3 und 4).",
+   "recognition_de": "Simon mit dem Kreuz hinter Jesus.",
+   "keywords": [
+    "einen Simon aus Kyrene",
+    "um es hinter Jesus herzutragen"
+   ]
+  },
+  {
+   "reference": "LUK.23.27-LUK.23.31",
+   "text_de": "Die klagenden Frauen – «Töchter Jerusalems, weint nicht über mich!» – grünes und dürres Holz.",
+   "reason_de": "Wort an die Frauen (Kriterien 1 und 2).",
+   "recognition_de": "Jesus wendet sich zu den Frauen.",
+   "keywords": [
+    "Frauen, die sich an die Brust schlugen und um ihn klagten",
+    "Töchter Jerusalems, weint nicht über mich!",
+    "Denn wenn sie das am grünen Holz tun, was wird dann am dürren geschehen?"
+   ],
+   "mode": "speech"
+  },
+  {
+   "reference": "LUK.23.32",
+   "text_de": "Zwei Verbrecher werden mit ihm zur Hinrichtung abgeführt.",
+   "reason_de": "Überleitung (Kriterium 3).",
+   "recognition_de": "Die zwei Verbrecher.",
+   "keywords": [
+    "zwei andere, Verbrecher, mit ihm abgeführt"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Was das Bild vom grünen und dürren Holz meint, deutet der Text nicht; nicht ausgelegt",
+  "Eine Geisselung oder Dornenkrone erzählt Lukas nicht; nicht gezeigt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-SIMON-KYRENE",
+  "FIG-GRUPPE-FRAUEN",
+  "FIG-GRUPPE-VOLK",
+  "FIG-ROLLE-MITGEKREUZIGTER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.23.26-LUK.23.32",
+   "fingerprint": "497168e44b5a6f87"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

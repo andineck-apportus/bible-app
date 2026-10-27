@@ -1,0 +1,230 @@
+{
+ "id": "CORE-LUK-023-033-043",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.23.33-LUK.23.43",
+ "target": "TU-LUK-023-033-043",
+ "core_de": "Am Ort, der «Schädel» genannt wird, kreuzigen sie Jesus und die Verbrecher, einen zur Rechten, einen zur Linken; Jesus sagt: «Vater, vergib ihnen, denn sie wissen nicht, was sie tun!» – eine Bitte, die in einem Teil der alten Handschriften fehlt –, und sie verteilen seine Kleider durch das Los; das Volk schaut zu, die führenden Männer und die Soldaten spotten: «rette dich selbst!», über ihm steht die Aufschrift «Das ist der König der Juden»; einer der Verbrecher lästert ihn, der andere weist ihn zurecht – «dieser aber hat nichts Unrechtes getan» – und bittet: «Jesus, denk an mich, wenn du mit deiner Königsherrschaft kommst!», und Jesus antwortet: «Amen, ich sage dir: Heute wirst du mit mir im Paradies sein.»",
+ "mode": "narrative",
+ "voice": {
+  "speaker": "narrator"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "sequence",
+    "range": "LUK.23.33-LUK.23.43",
+    "elements": [
+     {
+      "label": "Am Ort «Schädel»: gekreuzigt, die Verbrecher zur Rechten und zur Linken",
+      "ref": "LUK.23.33",
+      "role": "Kreuzigung"
+     },
+     {
+      "label": "«Vater, vergib ihnen, denn sie wissen nicht, was sie tun!» (textkritisch unsicher)",
+      "ref": "LUK.23.34",
+      "role": "Bitte"
+     },
+     {
+      "label": "Sie verteilen seine Kleider und werfen Lose",
+      "ref": "LUK.23.34",
+      "role": "Kleider"
+     },
+     {
+      "label": "Spott",
+      "ref": "LUK.23.35-LUK.23.39",
+      "role": "Spott",
+      "child": "s2"
+     },
+     {
+      "label": "Die zwei Verbrecher",
+      "ref": "LUK.23.39-LUK.23.43",
+      "role": "Wende",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "text_forms": [
+      {
+       "ref": "LUK.23.34",
+       "note": "Die Bitte «Vater, vergib ihnen, denn sie wissen nicht, was sie tun!» steht im SBLGNT im Text, Westcott-Hort setzt sie in Doppelklammern; sie fehlt in einem Teil der alten Handschriften. In Zusammenfassung und Kernanalyse als unsicher gekennzeichnet, im Bild nicht gezeigt."
+      }
+     ],
+     "crossref": [
+      {
+       "ref": "PSA.22.18",
+       "note": "Kleider verlost"
+      }
+     ]
+    },
+    "visual": "scenes",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "series",
+    "subtype": "dreimal «rette dich selbst»",
+    "range": "LUK.23.35-LUK.23.39",
+    "elements": [
+     {
+      "label": "Das Volk steht da und schaut zu",
+      "ref": "LUK.23.35",
+      "role": "Zuschauer"
+     },
+     {
+      "label": "Die führenden Männer: «Andere hat er gerettet; er soll sich selbst retten, wenn dieser der Christus Gottes ist, der Erwählte!»",
+      "ref": "LUK.23.35",
+      "role": "Spott 1"
+     },
+     {
+      "label": "Die Soldaten, mit Essig: «Wenn du der König der Juden bist, rette dich selbst!»",
+      "ref": "LUK.23.36-LUK.23.37",
+      "role": "Spott 2"
+     },
+     {
+      "label": "Die Aufschrift: «Das ist der König der Juden.»",
+      "ref": "LUK.23.38",
+      "role": "Aufschrift"
+     },
+     {
+      "label": "Einer der Verbrecher: «Bist du nicht der Christus? Rette dich selbst und uns!»",
+      "ref": "LUK.23.39",
+      "role": "Spott 3"
+     }
+    ],
+    "features": {
+     "leitwort": [
+      {
+       "word": "retten",
+       "refs": [
+        "LUK.23.35",
+        "LUK.23.37",
+        "LUK.23.39"
+       ]
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "contrast",
+    "range": "LUK.23.39-LUK.23.43",
+    "elements": [
+     {
+      "label": "Der eine lästert: «Rette dich selbst und uns!»",
+      "ref": "LUK.23.39",
+      "role": "der eine"
+     },
+     {
+      "label": "Der andere: «Fürchtest du nicht einmal Gott …? … dieser aber hat nichts Unrechtes getan.» – «Jesus, denk an mich, wenn du mit deiner Königsherrschaft kommst!»",
+      "ref": "LUK.23.40-LUK.23.42",
+      "role": "der andere"
+     },
+     {
+      "label": "Jesus: «Amen, ich sage dir: Heute wirst du mit mir im Paradies sein.»",
+      "ref": "LUK.23.43",
+      "role": "Verheissung"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-ROLLE-MITGEKREUZIGTER",
+       "to": "FIG-JESUS",
+       "ref": "LUK.23.39"
+      },
+      {
+       "who": "der andere Verbrecher",
+       "to": "FIG-ROLLE-MITGEKREUZIGTER",
+       "ref": "LUK.23.40-LUK.23.41"
+      },
+      {
+       "who": "der andere Verbrecher",
+       "to": "FIG-JESUS",
+       "ref": "LUK.23.42"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "der andere Verbrecher",
+       "ref": "LUK.23.43"
+      }
+     ],
+     "interpretation": [
+      {
+       "note": "«Heute» ([[LUK.23.43]]) wird fast immer auf «wirst du … sein» bezogen; eine Minderheitsdeutung zieht es zu «ich sage dir»."
+      }
+     ]
+    },
+    "visual": "dialogue",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.23.33-LUK.23.34",
+   "text_de": "Gekreuzigt zwischen zwei Verbrechern – «Vater, vergib ihnen» (unsicher überliefert) – die Kleider verlost.",
+   "reason_de": "Erkennungsmoment (Kriterien 1 und 4).",
+   "recognition_de": "Drei Kreuze.",
+   "keywords": [
+    "kreuzigten sie ihn dort und die Verbrecher",
+    "Vater, vergib ihnen, denn sie wissen nicht, was sie tun!"
+   ]
+  },
+  {
+   "reference": "LUK.23.35-LUK.23.38",
+   "text_de": "Spott: «er soll sich selbst retten» – die Aufschrift «Das ist der König der Juden».",
+   "reason_de": "Reihe der Spötter (Kriterien 2 und 4).",
+   "recognition_de": "Die Aufschrift.",
+   "keywords": [
+    "er soll sich selbst retten",
+    "Das ist der König der Juden"
+   ]
+  },
+  {
+   "reference": "LUK.23.39-LUK.23.43",
+   "text_de": "Der eine lästert, der andere bittet: «Jesus, denk an mich» – «Heute wirst du mit mir im Paradies sein.»",
+   "reason_de": "Wende und Verheissung (Kriterien 1 und 2).",
+   "recognition_de": "Jesus und der bittende Verbrecher.",
+   "keywords": [
+    "Jesus, denk an mich, wenn du mit deiner Königsherrschaft kommst!",
+    "Heute wirst du mit mir im Paradies sein"
+   ]
+  }
+ ],
+ "omitted_de": [
+  "Die Bitte «Vater, vergib ihnen» ([[LUK.23.34]]) ist textkritisch unsicher; in Zusammenfassung und Kernanalyse gekennzeichnet, im Bild nicht gezeigt",
+  "Wie die Verbrecher heissen, sagt Lukas nicht; keine Namen aus der Überlieferung",
+  "Die Kreuzigung ohne Wunden im Detail (Regel BILDSPRACHE)"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-ROLLE-MITGEKREUZIGTER",
+  "FIG-GRUPPE-VOLK",
+  "FIG-GRUPPE-OBERE",
+  "FIG-GRUPPE-SOLDATEN"
+ ],
+ "places": [
+  "FIG-ORT-GOLGOTA"
+ ],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.23.33-LUK.23.43",
+   "fingerprint": "6f3b706696da3e8a"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}

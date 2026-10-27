@@ -1,0 +1,178 @@
+{
+ "id": "CORE-LUK-017-001-010",
+ "type": "core_analysis",
+ "status": "draft",
+ "tags": [
+  "TAG-LUKE"
+ ],
+ "level": "section",
+ "reference": "LUK.17.1-LUK.17.10",
+ "target": "TU-LUK-017-001-010",
+ "core_de": "Jesus sagt seinen Jüngern: Verführungen kommen unvermeidlich, doch weh dem, durch den sie kommen; wenn der Bruder sündigt, soll man ihn zurechtweisen, und wenn er umkehrt, ihm vergeben, auch siebenmal am Tag; auf die Bitte der Apostel «Gib uns mehr Glauben!» sagt er, mit Glauben wie ein Senfkorn würden sie einem Maulbeerbaum gebieten, und er würde gehorchen; und wie ein Knecht, der getan hat, was ihm aufgetragen war, sollen sie sagen: «Wir sind unnütze Knechte; wir haben getan, was wir zu tun schuldig waren.»",
+ "mode": "speech",
+ "voice": {
+  "speaker": "FIG-JESUS",
+  "addressee": "FIG-GRUPPE-JUENGER"
+ },
+ "structure": {
+  "root": "s1",
+  "units": [
+   {
+    "id": "s1",
+    "pattern": "series",
+    "subtype": "vier Worte an die Jünger",
+    "range": "LUK.17.1-LUK.17.10",
+    "elements": [
+     {
+      "label": "Verführungen kommen unvermeidlich – doch weh dem, durch den sie kommen; besser ein Mühlstein um den Hals, als einen dieser Kleinen zu Fall bringen",
+      "ref": "LUK.17.1-LUK.17.2",
+      "role": "1"
+     },
+     {
+      "label": "Der Bruder: zurechtweisen und vergeben",
+      "ref": "LUK.17.3-LUK.17.4",
+      "role": "2",
+      "child": "s2"
+     },
+     {
+      "label": "Die Apostel: «Gib uns mehr Glauben!» – Jesus: Glaube wie ein Senfkorn, und der Maulbeerbaum würde gehorchen",
+      "ref": "LUK.17.5-LUK.17.6",
+      "role": "3"
+     },
+     {
+      "label": "Der Knecht und die unnützen Knechte",
+      "ref": "LUK.17.7-LUK.17.10",
+      "role": "4",
+      "child": "s3"
+     }
+    ],
+    "features": {
+     "speakers": [
+      {
+       "who": "FIG-JESUS",
+       "to": "FIG-GRUPPE-JUENGER",
+       "ref": "LUK.17.1-LUK.17.4"
+      },
+      {
+       "who": "die Apostel",
+       "to": "FIG-JESUS",
+       "ref": "LUK.17.5"
+      },
+      {
+       "who": "FIG-JESUS",
+       "to": "die Apostel",
+       "ref": "LUK.17.6-LUK.17.10"
+      }
+     ],
+     "modality": [
+      {
+       "kind": "Irrealis",
+       "ref": "LUK.17.6",
+       "note": "«Wenn ihr Glauben hättet …, würdet ihr … sagen» – ein Bildwort, kein Bericht."
+      }
+     ]
+    },
+    "visual": "grid",
+    "basis": "text"
+   },
+   {
+    "id": "s2",
+    "pattern": "condition",
+    "range": "LUK.17.3-LUK.17.4",
+    "elements": [
+     {
+      "label": "Wenn dein Bruder sündigt → weise ihn zurecht",
+      "ref": "LUK.17.3",
+      "role": "Bedingung → Folge"
+     },
+     {
+      "label": "Wenn er umkehrt → vergib ihm",
+      "ref": "LUK.17.3",
+      "role": "Bedingung → Folge"
+     },
+     {
+      "label": "Auch wenn er siebenmal am Tag sündigt und siebenmal sagt «Es tut mir leid» → sollst du ihm vergeben",
+      "ref": "LUK.17.4",
+      "role": "Steigerung"
+     }
+    ],
+    "visual": "switch",
+    "basis": "text"
+   },
+   {
+    "id": "s3",
+    "pattern": "parable",
+    "range": "LUK.17.7-LUK.17.10",
+    "elements": [
+     {
+      "label": "Bild: Der Herr sagt dem Knecht nicht «setz dich zu Tisch», sondern «bediene mich»; er dankt ihm nicht dafür",
+      "ref": "LUK.17.7-LUK.17.9",
+      "role": "Bildhälfte"
+     },
+     {
+      "label": "Sache: «So auch ihr: … Wir sind unnütze Knechte; wir haben getan, was wir zu tun schuldig waren»",
+      "ref": "LUK.17.10",
+      "role": "Sachhälfte"
+     }
+    ],
+    "visual": "levels",
+    "basis": "text"
+   }
+  ]
+ },
+ "moments": [
+  {
+   "reference": "LUK.17.1-LUK.17.4",
+   "text_de": "Weh dem, durch den Verführungen kommen; dem Bruder, der umkehrt, vergeben – auch siebenmal am Tag.",
+   "reason_de": "Erste zwei Worte der Reihe (Kriterien 1 und 2).",
+   "recognition_de": "Mühlstein und siebenmal vergeben.",
+   "keywords": [
+    "doch weh dem, durch den sie kommen",
+    "und wenn er umkehrt, vergib ihm"
+   ]
+  },
+  {
+   "reference": "LUK.17.5-LUK.17.6",
+   "text_de": "«Gib uns mehr Glauben!» – Glaube wie ein Senfkorn, und der Maulbeerbaum würde gehorchen.",
+   "reason_de": "Bitte der Apostel und Antwort (Kriterien 1 und 4).",
+   "recognition_de": "Senfkorn und Maulbeerbaum.",
+   "keywords": [
+    "Gib uns mehr Glauben!",
+    "Wenn ihr Glauben hättet wie ein Senfkorn"
+   ]
+  },
+  {
+   "reference": "LUK.17.7-LUK.17.10",
+   "text_de": "Der Knecht dient zuerst seinem Herrn – «Wir sind unnütze Knechte».",
+   "reason_de": "Schlussglied der Reihe (Kriterien 1 und 2).",
+   "recognition_de": "Der Knecht mit der Schürze.",
+   "keywords": [
+    "Wir sind unnütze Knechte"
+   ],
+   "mode": "parable"
+  }
+ ],
+ "omitted_de": [
+  "Die Einzelheiten der Bildworte (Pflügen, Vieh hüten, Abendessen) – nur so weit genannt, wie sie die Aussage tragen",
+  "Wie die vier Worte zusammenhängen, sagt der Text nicht; sie stehen als Reihe nebeneinander, ohne verbindendes «denn»",
+  "Das Senfkorn-Wort ist ein Bildwort im Irrealis; ein versetzter Baum wird nicht als Geschehen gezeigt"
+ ],
+ "persons": [
+  "FIG-JESUS",
+  "FIG-GRUPPE-JUENGER",
+  "FIG-ROLLE-DIENER"
+ ],
+ "places": [],
+ "basis": [
+  {
+   "field": "text_de",
+   "reference": "LUK.17.1-LUK.17.10",
+   "fingerprint": "26ba317dba800faa"
+  }
+ ],
+ "authorship_de": "KI-Entwurf (Claude) vom 2026-10-26 nach docs/VERDICHTUNG.md und docs/STRUKTURKATALOG.md («Struktur zuerst»), Ausrollen Lk 17–24 und Buch Lukas; keine fachliche Prüfung.",
+ "knowledge": {
+  "asserted_at": "2026-10-26",
+  "supersedes": null
+ }
+}
