@@ -54,7 +54,7 @@ def auftrag_feld(sz, fig):
     leute = "\n".join(f"- {fig['figuren'][k]}" for k in ids if k in fig["figuren"])
     sprecher = "".join(f"\n- {fig['figuren'][sp['from']].split(':')[0]} is speaking to {fig['figuren'][sp['to']].split(':')[0].lower()} (shown through gaze and gesture)." for sp in sz["speech"])
     vorlagen = ("The first attached image shows the drawing style (use only its style). "
-                + ("The second attached image is the character sheet: draw every person exactly as there (face, hair, beard, age, clothing colours)." if FIGBLATT.is_file() else ""))
+                + ("The second attached image is the character sheet: use it only to know who is who (face shape, hair, beard, age, clothing colours) – not for its level of detail; paint everyone much simpler and looser than on the sheet." if FIGBLATT.is_file() else ""))
     return (f"{sz['bild_en']}\n\nPEOPLE AND OBJECTS (keep exactly):\n{leute}\n"
             + (f"\nWHO SPEAKS:{sprecher}\n" if sprecher else "")
             + f"\nPICTURE: {fig['bild_en']}\n\nSTYLE: {fig['stil_en']}\n\n{vorlagen}")
@@ -98,6 +98,7 @@ def main():
     ap.add_argument("--plan", default="szenen-jhn-002.json")
     ap.add_argument("--varianten", type=int, default=1)
     ap.add_argument("--hinweis", default="", help="zusätzliche Anweisung für diesen Lauf (Englisch)")
+    ap.add_argument("--ohne-figurenblatt", action="store_true", help="nur die Stilreferenz als Vorlage (z. B. für einen neuen Stilversuch)")
     ap.add_argument("--trocken", action="store_true")
     a = ap.parse_args()
     fig = lade("figuren.json")
@@ -109,7 +110,7 @@ def main():
         fehlt = [s for s in wahl if s not in plan]
         if fehlt:
             sys.exit(f"Unbekannte Szenen: {fehlt}")
-        vorlagen = [STILREF] + ([FIGBLATT] if FIGBLATT.is_file() else [])
+        vorlagen = [STILREF] + ([FIGBLATT] if FIGBLATT.is_file() and not a.ohne_figurenblatt else [])
         auftraege = [(s, auftrag_feld(plan[s], fig), vorlagen) for s in wahl]
     if a.hinweis:
         auftraege = [(i, p + f"\n\nADDITIONAL INSTRUCTION FOR THIS RUN: {a.hinweis}", v) for i, p, v in auftraege]
