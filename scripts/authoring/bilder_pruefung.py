@@ -118,10 +118,55 @@ def bild_url(pfad_oder_bytes, breite=1024):
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
-def frage(schluessel, system, text, bild=None, versuche=3):
+def gitter(pfad_oder_bytes):
+    """Kopie des Bildes mit feinem Koordinatengitter (0–1000) für den Ortungsschritt (nur dort, damit die Regelfragen ein
+    unverändertes Bild sehen). Ohne Gitter lagen die Kopfrahmen bis zu einer Kopfhöhe daneben (Lauf 15, Lk 15 L3, Joh 2 T2)."""
+    from PIL import Image, ImageDraw
+    daten = pfad_oder_bytes if isinstance(pfad_oder_bytes, bytes) else pathlib.Path(pfad_oder_bytes).read_bytes()
+    im = Image.open(io.BytesIO(daten)).convert("RGB")
+    im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
+    d = ImageDraw.Draw(im, "RGBA")
+    for k in range(0, 1001, 50):
+        x, y = k * (im.width - 1) / 1000, k * (im.height - 1) / 1000
+        st = (200, 0, 120, 150 if k % 100 == 0 else 60)
+        d.line([(x, 0), (x, im.height)], fill=st, width=1)
+        d.line([(0, y), (im.width, y)], fill=st, width=1)
+        if k % 100 == 0 and 0 < k < 1000:
+            d.text((x + 2, 2), str(k), fill=(200, 0, 120, 255))
+            d.text((2, y + 2), str(k), fill=(200, 0, 120, 255))
+    buf = io.BytesIO()
+    im.save(buf, "PNG")
+    return buf.getvalue()
+
+
+SYS_ORT = ("You locate people in a picture precisely. The picture has a magenta coordinate grid: lines every 50 units, labelled every 100, "
+           "from 0 to 1000 in x (left to right) and y (top to bottom). Read coordinates from the grid. Answer in JSON.")
+
+
+def txt_ort(figuren):
+    fg = "\n".join(f"- {f}: {k}" for f, k in figuren) or "- (none)"
+    return f"""1. List EVERY person (also small or faint ones), left to right: {{"nr", "who": short description, "head": [x0, y0, x1, y1] tight box around the head including hair and head covering, read from the grid}}.
+2. For each expected figure give the nr of the matching person (for a group: the member who speaks or the most prominent one), or null:
+{fg}
+Return JSON: {{"persons": [...], "figures": {{id: nr or null}}}}"""
+
+
+def orte(schluessel, bild, figuren):
+    r = frage(schluessel, SYS_ORT, txt_ort(figuren), gitter(bild), breite=1200)
+    pers = [p for p in r.get("persons", []) if isinstance(p.get("head"), list) and len(p["head"]) == 4]
+    nach_nr = {p.get("nr"): p for p in pers}
+    zu = {}
+    for f, _ in figuren:
+        n = (r.get("figures") or {}).get(f)
+        if n in nach_nr:
+            zu[f] = {"kopf": [round(v) for v in nach_nr[n]["head"]], "sicher": "gitter"}
+    return pers, zu
+
+
+def frage(schluessel, system, text, bild=None, versuche=3, breite=1024):
     inhalt = [{"type": "text", "text": text}]
     if bild is not None:
-        inhalt.append({"type": "image_url", "image_url": {"url": bild_url(bild), "detail": "high"}})
+        inhalt.append({"type": "image_url", "image_url": {"url": bild_url(bild, breite), "detail": "high"}})
     body = {"model": modell(schluessel), "response_format": {"type": "json_object"},
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": inhalt}]}
     letzter = None
@@ -207,6 +252,30 @@ def bewerte(regeln, antworten):
     return out
 
 
+def zweitmeinung(schluessel, bild, regeln, erg, figuren, blind, runden=2):
+    """Verfehlte Pflichtregeln noch zweimal einzeln fragen; es gilt die Mehrheit der drei Antworten. Dasselbe Bild bestand im
+    einen Lauf und war im nächsten «unklar» (Lauf 15, Mk 4 S1): ein einzelnes Urteil ist nicht stabil genug."""
+    offen = [e["id"] for e in erg if e["stufe"] == "pflicht" and e["ergebnis"] != "ok"]
+    if not offen:
+        return erg
+    nach = [r for r in regeln if r["id"] in offen]
+    stimmen = {i: [next(e for e in erg if e["id"] == i)] for i in offen}
+    for _ in range(runden):
+        r = frage(schluessel, SYS_REGELN, txt_regeln(nach, [], blind), bild)
+        for e in bewerte(nach, r.get("questions", {})):
+            stimmen[e["id"]].append(e)
+    out = []
+    for e in erg:
+        if e["id"] in stimmen:
+            st = stimmen[e["id"]]
+            ok = [x for x in st if x["ergebnis"] == "ok"]
+            nein = [x for x in st if x["ergebnis"] == "fehler"]
+            wahl = ok[0] if len(ok) * 2 > len(st) else (nein[0] if len(nein) * 2 > len(st) else next(x for x in st if x["ergebnis"] != "ok"))
+            e = {**wahl, "stimmen": [x["ergebnis"] for x in st]}
+        out.append(e)
+    return out
+
+
 def gesamt(ergebnisse, kern=None, kern_pflicht=None):
     pfl = [e for e in ergebnisse if e["stufe"] == "pflicht"]
     if any(e["ergebnis"] == "fehler" for e in pfl) or (kern_pflicht is not None and kern is not None and kern < kern_pflicht):
@@ -225,14 +294,16 @@ def pruefe_feld(schluessel, bild, sz, fig, allg, moment_de):
     regeln = regeln_fuer(sz, fig, allg)
     figuren = figuren_fuer(sz, fig)
     r = frage(schluessel, SYS_REGELN, txt_regeln(regeln, figuren, blind), bild)
-    erg = bewerte(regeln, r.get("questions", {}))
-    koepfe, fehlt = {}, []
+    erg = zweitmeinung(schluessel, bild, regeln, bewerte(regeln, r.get("questions", {})), figuren, blind)
+    personen, koepfe = orte(schluessel, bild, figuren)
+    fehlt = []
     for f, _ in figuren:
-        x = (r.get("figures") or {}).get(f) or {}
-        if x.get("head") and len(x["head"]) == 4:
-            koepfe[f] = {"kopf": [round(v) for v in x["head"]], "sicher": x.get("certainty")}
-        else:
-            fehlt.append(f)
+        if f not in koepfe:
+            x = (r.get("figures") or {}).get(f) or {}
+            if x.get("head") and len(x["head"]) == 4:
+                koepfe[f] = {"kopf": [round(v) for v in x["head"]], "sicher": x.get("certainty")}
+            else:
+                fehlt.append(f)
     for f in fehlt:  # Sprecher und Angesprochene müssen gefunden werden
         pfl = any(f in (sp["from"], sp["to"]) for sp in sz.get("speech", []))
         erg.append({"id": f"FIG-GEFUNDEN:{f}", "ebene": "figur", "stufe": "pflicht" if pfl else "soll", "de": f"Figur im Bild gefunden: {f}",
@@ -243,7 +314,7 @@ def pruefe_feld(schluessel, bild, sz, fig, allg, moment_de):
     bytes_ = bild if isinstance(bild, bytes) else pathlib.Path(bild).read_bytes()
     return {"ergebnis": e, "punkte": punkte, "kern": kern, "kern_fehlt_de": k.get("missing_de", ""), "regeln": erg, "koepfe": koepfe,
             "blind": {k_: blind.get(k_) for k_ in ("action", "story_guess", "cut_off", "text_in_picture", "style")},
-            "personen": blind.get("persons", []), "modell": modell(schluessel), "bild_sha": sha(bytes_)}
+            "personen": personen or blind.get("persons", []), "modell": modell(schluessel), "bild_sha": sha(bytes_)}
 
 
 SYS_SCHLUSS = ("You are a strict checker of a finished comic panel for a Bible app (painting with speech bubbles and a caption band). "
@@ -273,6 +344,23 @@ def pruefe_kachel(schluessel, png, sprech, fig, moment_de):
     regeln += [{"id": "S-GESICHT", "art": "nicht", "stufe": "pflicht", "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand", "ebene": "kachel"},
                {"id": "S-LESBAR", "art": "muss", "stufe": "pflicht", "de": "Alle Worte vollständig und lesbar", "ebene": "kachel"}]
     erg = bewerte(regeln, q.get("questions", {}))
+    offen = [e["id"] for e in erg if e["ergebnis"] != "ok"]
+    if offen:  # Zweitmeinung (Mehrheit aus drei)
+        stimmen = {i: [next(e for e in erg if e["id"] == i)] for i in offen}
+        nur = "\n".join(l for l in txt_schluss(sprech, fig).split("\n") if l.split(":")[0].strip("- ") in offen)
+        for _ in range(2):
+            q2 = frage(schluessel, SYS_SCHLUSS, "Answer each question separately:\n" + nur
+                       + '\nReturn JSON: {"questions": {id: {"answer": "yes" | "no" | "unclear", "reason"}}}', png)
+            for e in bewerte([r for r in regeln if r["id"] in offen], q2.get("questions", {})):
+                stimmen[e["id"]].append(e)
+        neu = []
+        for e in erg:
+            if e["id"] in stimmen:
+                st = stimmen[e["id"]]
+                ok = [x for x in st if x["ergebnis"] == "ok"]
+                e = {**(ok[0] if len(ok) * 2 > len(st) else next(x for x in st if x["ergebnis"] != "ok")), "stimmen": [x["ergebnis"] for x in st]}
+            neu.append(e)
+        erg = neu
     k = frage(schluessel, SYS_KERN, txt_kern(moment_de, blind))
     e, punkte = gesamt(erg, k.get("score"), kern_pflicht=1)
     return {"ergebnis": e, "punkte": punkte, "kern": k.get("score"), "kern_fehlt_de": k.get("missing_de", ""), "regeln": erg,

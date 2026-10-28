@@ -146,15 +146,20 @@ def _schneidet(a, b, rand=0):
     return not (a[2] + rand <= b[0] or b[2] + rand <= a[0] or a[3] + rand <= b[1] or b[3] + rand <= a[1])
 
 
-def blasen_auto(speech, koepfe, weitere=()):
+def blasen_auto(speech, koepfe, weitere=(), streng=False):
     """Blasen nach den Köpfen setzen: über (oder neben) dem Kopf der sprechenden Person, kurze Spitze zum Kopf, keine Blase über
     einem Kopf oder einer anderen Blase, Lesereihenfolge links→rechts bzw. oben→unten. Köpfe: {Figur: {"kopf": [x0,y0,x1,y1]}} in
     0–1000. weitere: Kopfrahmen aller anderen Personen aus der Blindbeschreibung (werden ebenfalls nie verdeckt).
     Gibt (Blasen, Fehler) zurück; eine Blase ohne gültigen Platz ist ein Fehler."""
+    rand = 0.6 if streng else 0.25   # Köpfe grosszügig meiden: die Ortung ist ungenau
+
     def px(b):
-        return (b[0] * W / 1000, b[1] * H / 1000, b[2] * W / 1000, b[3] * H / 1000)
+        x0, y0, x1, y1 = b[0] * W / 1000, b[1] * H / 1000, b[2] * W / 1000, b[3] * H / 1000
+        dx, dy = (x1 - x0) * rand, (y1 - y0) * rand
+        return (x0 - dx, y0 - dy, x1 + dx, y1 + dy)
     kb = {f: px(k["kopf"]) for f, k in koepfe.items()}
     hindernisse = list(kb.values()) + [px(b) for b in weitere if b and len(b) == 4]
+    oben = min([k[1] for k in hindernisse] or [H])      # oberes Band: über allen Köpfen
 
     def setze(n, gesetzt):
         sp = speech[n]
@@ -173,6 +178,8 @@ def blasen_auto(speech, koepfe, weitere=()):
                             continue
                         if any(_schneidet(box, (g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), 8) for g in gesetzt.values()):
                             continue
+                        if streng and y + h > oben - 6:
+                            continue
                         if y + h <= hy0 - 10:          # über dem Kopf: Spitze nach unten zur Kopfmitte oben
                             tail = (hx, hy0 - 3)
                             lang = hy0 - 3 - (y + h)
@@ -187,8 +194,8 @@ def blasen_auto(speech, koepfe, weitere=()):
                             seit = 220            # neben dem Kopf nur, wenn darüber kein Platz ist
                         else:
                             continue
-                        kosten = (seit * 0.5 + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6 + y * 0.25 + (21 - fs) * 12
-                                  + (h - 2 * 14) * 0.6 + (w - 170) * 0.05)
+                        kosten = (seit * 0.5 + (0 if y + h <= oben - 6 else 90) + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6 + y * 0.25 + (21 - fs) * 12
+                                  + (h - 2 * 14) * 1.2 + (w - 170) * 0.05)
                         for m, v in gesetzt.items():  # Lesereihenfolge: frühere Rede links bzw. oben
                             vor = m < n
                             links = x + w / 2 < v["x"] + v["w"] / 2 - 20 and y < v["y"] + v["h"] / 2

@@ -66,14 +66,15 @@ def schreibe_auswahl(aus):
     (DATEN / "auswahl.json").write_text(json.dumps(aus, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht):
+def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht, streng=False):
+    zweiter = []
     for sid in sids:
         _, sz = szenen[sid]
         a = aus[sid]
         e = bericht.setdefault(sid, {})
         if a.get("blasen") != "hand" and sz.get("speech"):
             pr_ = a.get("pruefung") or {}
-            bl, fehler = BA.blasen_auto(sz["speech"], pr_.get("koepfe", {}), [p_.get("head") for p_ in pr_.get("personen", [])])
+            bl, fehler = BA.blasen_auto(sz["speech"], pr_.get("koepfe", {}), [p_.get("head") for p_ in pr_.get("personen", [])], streng=streng)
             a["blasen_auto"] = bl
             e["blasen_fehler"] = fehler
         png = kachel_png(sid, sz, a, band[sid])
@@ -87,10 +88,19 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
                 a["schluss"]["regeln"].append({"id": "S-PLATZ", "ebene": "kachel", "stufe": "pflicht", "de": "Platz für alle Blasen",
                                                 "ergebnis": "fehler", "antwort": None, "grund": "; ".join(e["blasen_fehler"])})
             e["schluss"] = a["schluss"]
-            print(f"schluss {sid}: {a['schluss']['ergebnis']} (Kern {a['schluss'].get('kern')})")
+            print(f"schluss {sid}: {a['schluss']['ergebnis']} (Kern {a['schluss'].get('kern')}){' streng' if streng else ''}")
+            blasen_falsch = any(r["ergebnis"] != "ok" and (r["id"].startswith("B") or r["id"] in ("S-GESICHT", "S-PLATZ")) for r in a["schluss"]["regeln"])
+            if blasen_falsch and not streng and a.get("blasen") != "hand" and sz.get("speech"):
+                zweiter.append(sid)
         except Exception as ex:
             BP.melde(f"{sid} Schlussprüfung: {ex}")
             e["schluss_fehler"] = str(ex)
+    if zweiter:  # zweiter Versuch: Blasen nur im oberen Band, Köpfe mit grossem Rand
+        alt = {s: (aus[s].get("blasen_auto"), aus[s].get("schluss")) for s in zweiter}
+        blasen_und_schluss(zweiter, aus, fig, szenen, momente, band, schluessel, out, {}, streng=True)
+        for s in zweiter:
+            if (aus[s].get("schluss") or {}).get("ergebnis") != "bestanden" and (alt[s][1] or {}).get("punkte", 0) > (aus[s].get("schluss") or {}).get("punkte", 0):
+                aus[s]["blasen_auto"], aus[s]["schluss"] = alt[s]
 
 
 def pruefen(a, schluessel, out):
