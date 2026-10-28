@@ -84,7 +84,11 @@ jobs:
         run: |
           extra=""
           [ "$ERZWINGEN" = "true" ] && extra="--erzwingen"
-          python3 scripts/authoring/bilder_aquarell_lauf.py "${SCHRITT#auto-}" --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$RUNDEN" --hinweis "$HINWEIS" $extra
+          rc=0
+          python3 scripts/authoring/bilder_aquarell_lauf.py "${SCHRITT#auto-}" --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$RUNDEN" --hinweis "$HINWEIS" $extra || rc=$?
+          # Bericht sofort sichern: nach der Übernahme in main fehlte ausgabe/ (Läufe 30 und 33 ohne Bericht)
+          if [ -d ausgabe/aquarell ]; then cp -r ausgabe/aquarell "$RUNNER_TEMP/aquarell"; fi
+          exit $rc
 
       - name: Daten auf Branch bilder-auto/<Lauf>
         id: daten
@@ -128,8 +132,10 @@ jobs:
           LAUF: ${{ github.run_number }}
         run: |
           set -e
-          [ -d ausgabe/aquarell ] || exit 0
-          mv ausgabe/aquarell "$RUNNER_TEMP/aquarell"
+          if [ -d ausgabe/aquarell ] && [ ! -d "$RUNNER_TEMP/aquarell" ]; then mv ausgabe/aquarell "$RUNNER_TEMP/aquarell"; fi
+          [ -d "$RUNNER_TEMP/aquarell" ] || { echo "kein Bericht"; exit 0; }
+          git merge --abort 2>/dev/null || true
+          git reset -q --hard
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
           if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
