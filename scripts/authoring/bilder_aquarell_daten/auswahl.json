@@ -1629,29 +1629,24 @@
   },
   "JHN-002-J2": {
     "datei": "img/JHN-002-J2.webp",
-    "lauf": "20261028-110104-auto-neu",
+    "lauf": "20261028-220138-auto-neu",
     "variante": "r1v1",
     "modell": "gpt-image-2.5-flare",
     "uebernommen": "2026-10-28",
     "pruefung": {
-      "ergebnis": "durchgefallen",
+      "ergebnis": "bestanden",
       "punkte": 5,
       "kern": 1,
-      "kern_fehlt_de": "Der Glaube aufgrund der Zeichen sowie Jesu fehlendes Vertrauen und seine Kenntnis der Menschen bleiben unklar.",
+      "kern_fehlt_de": "Der Glaube aufgrund der Zeichen sowie Jesu Zurückhaltung und seine Kenntnis des menschlichen Inneren sind nicht erkennbar.",
       "regeln": [
         {
           "id": "G-RAND",
           "ebene": "allgemein",
           "stufe": "pflicht",
           "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
-          "ergebnis": "fehler",
-          "antwort": "yes",
-          "grund": "The blue-clad figure at the left is cut by the picture edge.",
-          "stimmen": [
-            "fehler",
-            "fehler",
-            "unklar"
-          ]
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and ground fade softly into the paper."
         },
         {
           "id": "G-SCHRIFT",
@@ -1696,7 +1691,7 @@
           "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clear anatomical abnormality is visible; some limbs are obscured."
+          "grund": "No clear anatomical abnormalities are visible; some limbs are obscured."
         },
         {
           "id": "G-DOPPELT",
@@ -1705,7 +1700,7 @@
           "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No individual is clearly repeated."
+          "grund": "No clearly identical individual appears twice."
         },
         {
           "id": "G-KARIKATUR",
@@ -1723,7 +1718,7 @@
           "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The visible adults have broadly natural proportions."
+          "grund": "The prominent adults have natural adult proportions."
         },
         {
           "id": "G-REDUKTION",
@@ -1732,7 +1727,7 @@
           "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The image is a light watercolour with extensive white paper and a simple background."
+          "grund": "The light watercolour has ample white paper and a simple background."
         },
         {
           "id": "G-OBEN",
@@ -1741,7 +1736,7 @@
           "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The upper quarter is mostly pale empty space."
+          "grund": "The upper quarter is mostly empty pale paper."
         },
         {
           "id": "G-ROT",
@@ -1750,7 +1745,7 @@
           "de": "Nur Jesus trägt Terrakottarot",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "No other person is visibly wearing terracotta-red."
+          "grund": "Only the prominent man wears terracotta-red."
         },
         {
           "id": "F-JESUS-GESICHT",
@@ -1759,7 +1754,7 @@
           "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "His eyes, nose and mouth are visible in three-quarter view."
+          "grund": "His facial features are visible in a three-quarter view."
         },
         {
           "id": "J2-NAH",
@@ -1768,7 +1763,7 @@
           "de": "Jesus nah, ruhig und ernst, wissender Blick",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "He is large in the foreground and has a calm, attentive expression."
+          "grund": "He is large and close, with a calm, attentive expression."
         },
         {
           "id": "J2-GEGENUEBER",
@@ -1777,7 +1772,7 @@
           "de": "Menschen ihm gegenüber, die ihn bewundern",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Several people face him with eager, pleased expressions."
+          "grund": "Several people face him with smiling or animated expressions."
         },
         {
           "id": "J2-NICHT-BOESE",
@@ -1786,7 +1781,7 @@
           "de": "Die Menschen nicht abgewertet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The group does not clearly look mocking or hostile."
+          "grund": "The group does not clearly appear mocking or hostile."
         },
         {
           "id": "J2-KEINE-KINDER",
@@ -1795,7 +1790,7 @@
           "de": "Erwachsene Festpilger, keine Kinder im Mittelpunkt (sonst als Kindersegnung gelesen: Blindbeschreibung Lauf 11, 19)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The prominent group consists of adults; no child blessing is visible."
+          "grund": "The prominent group consists of adults; no children are being welcomed or blessed."
         },
         {
           "id": "J2-ZURUECK",
@@ -1804,190 +1799,162 @@
           "de": "Jesus geht nicht auf sie zu, hält sich zurück",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "He is turned partly away and is not embracing the group."
+          "grund": "He is not embracing the group or visibly stepping toward them."
         }
       ],
       "koepfe": {
         "FIG-JESUS": {
           "kopf": [
-            736,
-            236,
-            873,
-            447
+            767,
+            195,
+            907,
+            406
           ],
           "sicher": "gitter"
         },
         "FIG-GRUPPE-MENGE": {
           "kopf": [
-            165,
+            400,
             490,
-            297,
-            663
+            496,
+            625
           ],
           "sicher": "gitter"
         }
       },
       "blind": {
-        "action": "Several people on the left lean and gesture toward the robed man on the right. He turns his head back toward them, while smaller figures appear in the distance.",
-        "story_guess": "The robed man may be Jesus addressing or being approached by followers, but the picture does not identify a particular Bible story or exact moment.",
-        "cut_off": "A faint figure and part of the foreground woman's clothing are cut off at the left edge.",
+        "action": "A group on the left leans toward the robed man, gesturing and appearing to speak; one man points at him. The robed man looks back toward them, while several small figures stand or walk in the distance.",
+        "story_guess": "The robed man appears to represent Jesus approached by a crowd, but the picture does not identify a specific Bible story or moment.",
+        "cut_off": "The clothing of the woman at the far left touches the picture edge.",
         "text_in_picture": "",
-        "style": "A softly colored watercolor-style illustration with moderately detailed foreground figures and a loosely suggested background."
+        "style": "A softly colored watercolor-style illustration with detailed foreground faces and clothing and loosely suggested background figures."
       },
       "personen": [
         {
           "nr": 1,
-          "who": "faint person at far left",
+          "who": "Woman in a white head covering",
           "head": [
             3,
             432,
-            35,
-            487
+            127,
+            602
           ]
         },
         {
           "nr": 2,
-          "who": "woman in blue with a pale headscarf",
+          "who": "Bearded man raising his hand",
           "head": [
-            45,
-            370,
-            156,
-            532
+            82,
+            323,
+            197,
+            480
           ]
         },
         {
           "nr": 3,
-          "who": "partly hidden person behind the woman",
+          "who": "Woman in blue with a white veil",
           "head": [
-            160,
-            418,
-            189,
-            465
+            207,
+            435,
+            349,
+            605
           ]
         },
         {
           "nr": 4,
-          "who": "bearded man pointing, with a headband",
+          "who": "Bearded man in a gray head covering",
           "head": [
-            179,
-            330,
-            282,
-            490
+            308,
+            375,
+            400,
+            514
           ]
         },
         {
           "nr": 5,
-          "who": "foreground bearded man in blue",
+          "who": "Bearded man pointing",
           "head": [
-            165,
+            400,
             490,
-            297,
-            663
+            496,
+            625
           ]
         },
         {
           "nr": 6,
-          "who": "faint person behind the pointing man",
+          "who": "Small distant figure",
           "head": [
-            276,
-            421,
-            305,
-            488
+            528,
+            701,
+            542,
+            726
           ]
         },
         {
           "nr": 7,
-          "who": "woman in a pale headscarf, gesturing",
+          "who": "Distant figure in gray",
           "head": [
-            293,
-            446,
-            396,
-            604
+            557,
+            678,
+            578,
+            718
           ]
         },
         {
           "nr": 8,
-          "who": "distant gray-clad person",
+          "who": "Small distant figure",
           "head": [
-            400,
-            500,
-            434,
-            566
+            591,
+            685,
+            605,
+            714
           ]
         },
         {
           "nr": 9,
-          "who": "distant person in muted brown",
+          "who": "Distant figure in blue-gray",
           "head": [
-            447,
-            504,
-            476,
-            565
+            624,
+            663,
+            646,
+            706
           ]
         },
         {
           "nr": 10,
-          "who": "faint beige-clad person in the background",
+          "who": "Faint distant figure",
           "head": [
-            480,
-            594,
-            508,
-            657
+            654,
+            652,
+            680,
+            690
           ]
         },
         {
           "nr": 11,
-          "who": "distant blue-gray-clad person",
+          "who": "Jesus in a cream tunic and red mantle",
           "head": [
-            512,
-            571,
-            545,
-            629
-          ]
-        },
-        {
-          "nr": 12,
-          "who": "distant beige-clad person",
-          "head": [
-            561,
-            606,
-            585,
-            653
-          ]
-        },
-        {
-          "nr": 13,
-          "who": "distant blue-clad person",
-          "head": [
-            594,
-            630,
-            617,
-            675
-          ]
-        },
-        {
-          "nr": 14,
-          "who": "Jesus, in a cream tunic and red mantle",
-          "head": [
-            736,
-            236,
-            873,
-            447
+            767,
+            195,
+            907,
+            406
           ]
         }
       ],
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "520a130c0f26f5dd",
+      "bild_sha": "9555efd4b769009b",
       "datum": "2026-10-28",
       "plan_sha": "6943a4e02c616c32",
       "regeln_version": "2026-10-28d",
-      "prozess": "PROC-BILD-AQUARELL@2.3"
+      "prozess": "PROC-BILD-AQUARELL@2.3",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
     },
     "schluss": {
       "ergebnis": "bestanden",
       "punkte": 1,
       "kern": 1,
-      "kern_fehlt_de": "Der Glaube aufgrund der Zeichen sowie Jesu Zurückhaltung und seine Kenntnis des menschlichen Inneren sind nicht erkennbar.",
+      "kern_fehlt_de": "Der Glaube aufgrund der Zeichen und Jesu fehlendes Vertrauen in die Menschen sind nicht erkennbar.",
       "regeln": [
         {
           "id": "S-GESICHT",
@@ -2005,25 +1972,27 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The caption lettering is readable and not cut off or overlapping."
+          "grund": "The caption lettering is complete and readable."
         }
       ],
       "blind": {
-        "action": "A group faces the robed man on the right, with several people gesturing or appearing to speak. He looks back toward them as other figures stand in the distance.",
-        "story_guess": "The caption echoes John 2:25, where Jesus is said to know what was in people. The image may illustrate Jesus among those who believed in him in Jerusalem, but it does not visibly establish a more exact moment.",
+        "action": "A group of people gesture and call toward the robed man on the right; one points at him. He looks back toward them, while several smaller figures stand in the distance.",
+        "story_guess": "The bearded man in white and red appears to represent Jesus. The German caption echoes John 2:25, about Jesus knowing what was in people; the picture does not establish a more specific moment.",
         "text_in_picture": [
           {
             "text": "2",
-            "location": "Bottom left, inside a circle"
+            "location": "Circled at bottom left",
+            "speech_bubble_owner": null
           },
           {
             "text": "er selbst erkannte nämlich, was im Menschen war",
-            "location": "Caption along the bottom"
+            "location": "Caption along the bottom",
+            "speech_bubble_owner": null
           }
         ]
       },
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "d62d4bc550d5690b",
+      "bild_sha": "5e5e4e2fa2f6a265",
       "datum": "2026-10-28",
       "prozess": "PROC-BILD-AQUARELL@2.3"
     }
