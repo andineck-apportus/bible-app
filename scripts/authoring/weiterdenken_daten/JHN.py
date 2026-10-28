@@ -1,6 +1,15 @@
 """Weiterdenken zu Johannes (Entscheid Andi Neck 2026-10-28, «Vertiefen»): Fragen zum Weiterdenken für jeden Abschnitt,
 jedes Kapitel und das Buch, dazu «Wie man es gelesen hat». KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen
-Ausgaben nachgeschlagen (source_check), Mundart nach scripts/authoring/lukas_einheitlich.py, Zitate nach der Arbeitsübersetzung."""
+Ausgaben nachgeschlagen (source_check), Mundart nach scripts/authoring/lukas_einheitlich.py, Zitate nach der Arbeitsübersetzung.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 250 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+nicht moralisierend, kein Glaube vorausgesetzt, keine christologische oder konfessionelle Streitfrage entschieden, Umgang
+mit «die Juden» in Kap. 1, 5–10, 16 und 18–19; Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach
+pruefe_mundart; Quellen aller 15 Einträge «Wie man es gelesen hat» erneut nachgeschlagen (Vermerk im source_check), bei
+der Johannes-Passion die Wirkungsfrage nach Judenfeindschaft ergänzt. Grenzen: nicht gegen den griechischen Text geprüft;
+Eusebius und Augustinus über andere frei zugängliche Ausgaben als die verlinkten; Mundart-Zitate nur gegen die
+Mundart-Arbeitsübersetzung verglichen; keine fachliche und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-JOHN"]
@@ -29,11 +38,12 @@ REFLECTIONS = [
      "note_de": "Die ersten Worte erinnern an den Anfang der Bibel ([[GEN.1.1]]); von Jesus ist erst später mit Namen die Rede ([[JHN.1.17]]).",
      "gsw": {"question_de": "Wieso fangt das Buech nöd mit ere Geburt aa, sondern «im Aafang»?", "note_de": "Di erschte Wort erinnered a de Aafang vo de Bible ([[GEN.1.1]]); vom Jesus isch erscht spöter mit Name d Red ([[JHN.1.17]])."}},
     {"id": "REFL-JHN-0006", "subject": "TU-JHN-001-001-018", "order": 2,
-     "question_de": "Was bedeutet es, dass das Wort «Fleisch» wurde – nicht nur Mensch?",
-     "gsw": {"question_de": "Was bedüütet s, dass s Wort «Fleisch» worde isch – nöd nu Mänsch?"}},
+     "question_de": "Das Wort wurde «Fleisch»: Warum wohl dieses Wort und nicht einfach «Mensch»?",
+     "gsw": {"question_de": "S Wort isch «Fleisch» worde: Wieso ächt grad das Wort und nöd eifach «Mänsch»?"}},
     {"id": "REFL-JHN-0007", "subject": "TU-JHN-001-001-018", "order": 3,
-     "question_de": "Die Seinen nahmen ihn nicht auf: Wer ist hier gemeint, und wie liest man das heute, ohne jemanden anzuklagen?",
-     "gsw": {"question_de": "Di Sine händ en nöd ufgnoo: Wer isch da gmeint, und wie lisst mer das hüt, ohni öpper aazchlage?"}},
+     "question_de": "«Die Seinen nahmen ihn nicht auf»: Wer ist mit «den Seinen» gemeint – und was ändert sich, je nachdem, wie man es versteht?",
+     "note_de": "Manche verstehen darunter Israel, andere die Menschen überhaupt; kurz zuvor heisst es, die Welt habe ihn nicht erkannt ([[JHN.1.10-JHN.1.11]]).",
+     "gsw": {"question_de": "«Di Sine händ ihn nöd ufgnoo»: Wer isch mit «de Sine» gmeint – und was änderet sich, je nachdem, wie mer s verstaat?", "note_de": "Di eine verstönd drunder Israel, anderi d Mänsche überhaupt; churz vorher heisst s, d Wält heig en nöd erchännt ([[JHN.1.10-JHN.1.11]])."}},
     # TU-JHN-001-019-028
     {"id": "REFL-JHN-0008", "subject": "TU-JHN-001-019-028", "order": 1,
      "question_de": "Johannes sagt dreimal, wer er nicht ist: Warum ist das wichtig?",
@@ -87,9 +97,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wieso isch grad es Fäscht de «Aafang vo de Zeiche»?"}},
     # TU-JHN-002-013-022
     {"id": "REFL-JHN-0021", "subject": "TU-JHN-002-013-022", "order": 1,
-     "question_de": "Die Jünger verstehen das Wort vom Tempel erst nach Ostern: Was versteht man oft erst im Rückblick?",
+     "question_de": "Die Jünger verstehen das Wort vom Tempel erst nach seiner Auferweckung: Was versteht man oft erst im Rückblick?",
      "note_de": "«Als er nun von den Toten auferweckt worden war, erinnerten sich seine Jünger» ([[JHN.2.22]]).",
-     "gsw": {"question_de": "D Jünger verstönd s Wort vom Tämpel erscht nach Oschtere: Was verstaht mer oft erscht im Ruggblick?", "note_de": "«Wo er dänn vo de Tote uferweckt worde isch, händ sich sini Jünger erinneret» ([[JHN.2.22]])."}},
+     "gsw": {"question_de": "D Jünger verstönd s Wort vom Tämpel erscht nach sinere Uferweckig: Was verstaht mer oft erscht im Ruggblick?", "note_de": "«Wo er dänn vo de Tote uferweckt worde isch, händ sich sini Jünger erinneret» ([[JHN.2.22]])."}},
     {"id": "REFL-JHN-0022", "subject": "TU-JHN-002-013-022", "order": 2,
      "question_de": "Was mögen die Händler und Geldwechsler empfunden haben, deren Arbeit doch dem Tempel diente?",
      "gsw": {"question_de": "Was händ ächt d Händler und Gäldwächsler gfühlt, wo mit irer Arbet doch em Tämpel dient händ?"}},
@@ -121,10 +131,10 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0029", "subject": "TU-JHN-003-016-021", "order": 1,
      "question_de": "Was heisst es, dass Gott «die Welt» liebt – und nicht nur einige?",
      "note_de": "Im selben Abschnitt liebt «die Welt» die Finsternis mehr als das Licht ([[JHN.3.16]], [[JHN.3.19]]).",
-     "gsw": {"question_de": "Was heisst s, dass Gott «d Wält» liebt – und nöd nu es paar?", "note_de": "Im gliiche Abschnitt het «d Wält» d Fischternis lieber als s Liecht ([[JHN.3.16]], [[JHN.3.19]])."}},
+     "gsw": {"question_de": "Was heisst s, dass Gott «d Wält» liebt – und nöd nu es paar?", "note_de": "Im gliiche Abschnitt hät «d Wält» d Fiischteri lieber als s Liecht ([[JHN.3.16]], [[JHN.3.19]])."}},
     {"id": "REFL-JHN-0030", "subject": "TU-JHN-003-016-021", "order": 2,
-     "question_de": "Wenn das Gericht darin besteht, Licht oder Finsternis zu wählen: Was bedeutet dann «gerichtet»?",
-     "gsw": {"question_de": "Wänn s Gricht drin bestaat, Liecht oder Fischternis zwähle: Was bedüütet dänn «grichtet»?"}},
+     "question_de": "«Das aber ist das Gericht: Das Licht ist in die Welt gekommen …»: Was heisst «Gericht», wenn es so beschrieben wird?",
+     "gsw": {"question_de": "«Das aber isch s Gricht: S Liecht isch i d Wält choo …»: Was heisst «Gricht», wänn s eso beschribe wird?"}},
     # TU-JHN-003-022-030
     {"id": "REFL-JHN-0031", "subject": "TU-JHN-003-022-030", "order": 1,
      "question_de": "Wie gelingt es Johannes, sich zu freuen, während alle zu einem anderen gehen?",
@@ -271,9 +281,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "«Wer zu mir chunnt, dä rüer ich sicher nöd use»: Wem chönt dä Satz gälte?"}},
     # TU-JHN-006-041-051
     {"id": "REFL-JHN-0067", "subject": "TU-JHN-006-041-051", "order": 1,
-     "question_de": "Sie kennen seine Eltern – und gerade das hindert sie: Kann Vertrautheit blind machen?",
+     "question_de": "Sie berufen sich darauf, seine Eltern zu kennen: Kann Vertrautheit den Blick verstellen – oder auch schärfen?",
      "note_de": "«Ist das nicht Jesus, der Sohn Josefs, dessen Vater und Mutter wir kennen?» ([[JHN.6.42]])",
-     "gsw": {"question_de": "Si känned sini Eltere – und grad das hinderet si: Chan Vertrautheit blind mache?", "note_de": "«Isch das nöd de Jesus, de Sohn vom Josef, vo däm mir de Vatter und d Mueter känned?» ([[JHN.6.42]])"}},
+     "gsw": {"question_de": "Si beruefed sich druf, dass si sini Eltere känned: Chan Vertrautheit de Blick verstelle – oder au schärfe?", "note_de": "«Isch das nöd de Jesus, de Sohn vom Josef, vo däm mir de Vatter und d Mueter känned?» ([[JHN.6.42]])"}},
     {"id": "REFL-JHN-0068", "subject": "TU-JHN-006-041-051", "order": 2,
      "question_de": "Niemand kann kommen, wenn der Vater ihn nicht «zieht»: Was löst dieses Wort bei dir aus?",
      "gsw": {"question_de": "Niemer chan choo, wänn de Vatter en nöd «zieht»: Was löst das Wort bi dir us?"}},
@@ -298,9 +308,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Weles Wort isch für dich «hert», dass d s chuum chasch ghöre?"}},
     # SUM-CH-JHN-007
     {"id": "REFL-JHN-0074", "subject": "SUM-CH-JHN-007", "order": 1,
-     "question_de": "Alle reden über Jesus, kaum jemand mit ihm: Welche Stimmen hörst du in diesem Kapitel?",
+     "question_de": "Viele reden über Jesus, nur manche mit ihm: Welche Stimmen hörst du in diesem Kapitel?",
      "note_de": "«Er ist gut» – «Nein, sondern er verführt das Volk» ([[JHN.7.12]]).",
-     "gsw": {"question_de": "Alli redet über de Jesus, chuum öpper mit ihm: Weli Stimme ghörsch du i dem Kapitel?", "note_de": "«Er isch guet» – «Nei, sondern er verfüert s Volk» ([[JHN.7.12]])."}},
+     "gsw": {"question_de": "Vil redet über de Jesus, nu es paar mit ihm: Weli Stimme ghörsch du i dem Kapitel?", "note_de": "«Er isch guet» – «Nei, sondern er verfüert s Volk» ([[JHN.7.12]])."}},
     # TU-JHN-007-001-009
     {"id": "REFL-JHN-0075", "subject": "TU-JHN-007-001-009", "order": 1,
      "question_de": "Seine Brüder glauben nicht an ihn und raten ihm doch, sich zu zeigen: Was wollen sie?",
@@ -367,9 +377,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Was nämed d Mänsche nach eme lange Striittag mit hei?"}},
     # SUM-CH-JHN-008
     {"id": "REFL-JHN-0091", "subject": "SUM-CH-JHN-008", "order": 1,
-     "question_de": "Steine werden aufgehoben, am Anfang und am Ende des Kapitels: Was hat sich dazwischen verändert?",
+     "question_de": "Am Anfang des Kapitels ist vom ersten Stein die Rede, am Ende heben sie Steine auf: Was hat sich dazwischen verändert?",
      "note_de": "Zuerst geht es um eine Frau ([[JHN.8.7]]), am Ende um Jesus selbst ([[JHN.8.59]]).",
-     "gsw": {"question_de": "Stei wärded ufgläse, am Aafang und am Schluss vom Kapitel: Was hät sich dezwüsche veränderet?", "note_de": "Zerscht gaat s um e Frau ([[JHN.8.7]]), am Schluss um de Jesus sälber ([[JHN.8.59]])."}},
+     "gsw": {"question_de": "Am Aafang vom Kapitel isch vom erschte Stei d Red, am Schluss läsed si Stei uf: Was hät sich dezwüsche veränderet?", "note_de": "Zerscht gaat s um e Frau ([[JHN.8.7]]), am Schluss um de Jesus sälber ([[JHN.8.59]])."}},
     # TU-JHN-008-001-011
     {"id": "REFL-JHN-0092", "subject": "TU-JHN-008-001-011", "order": 1,
      "question_de": "Was schreibt Jesus auf die Erde?",
@@ -403,8 +413,9 @@ REFLECTIONS = [
      "note_de": "Jesus sagt es zu Juden, die ihm geglaubt hatten; sie antworten, sie seien nie Sklaven gewesen ([[JHN.8.31-JHN.8.33]]).",
      "gsw": {"question_de": "«D Wahrheit wird eu frei mache»: Frei vo was, frei für was?", "note_de": "De Jesus seit s zu Jude, wo ihm glaubt händ; si antworted, si seied nie Sklave gsii ([[JHN.8.31-JHN.8.33]])."}},
     {"id": "REFL-JHN-0100", "subject": "TU-JHN-008-031-047", "order": 2,
-     "question_de": "Der Streit wird hart bis zu schweren Vorwürfen: Wie liest man solche Worte, ohne daraus ein Urteil über ein Volk zu machen?",
-     "gsw": {"question_de": "De Striit wird hert bis zu schwäre Vorwürf: Wie lisst mer söttigi Wort, ohni drus es Urteil über es Volk zmache?"}},
+     "question_de": "Der Streit wird hart bis zum Vorwurf, ihr Vater sei der Teufel: Was ändert es am Lesen, dass hier Juden mit dem Juden Jesus streiten?",
+     "note_de": "Das Gespräch beginnt mit Juden, «die ihm geglaubt hatten» ([[JHN.8.31]], [[JHN.8.44]]); Jesus selbst wird im Buch «ein Jude» genannt ([[JHN.4.9]]).",
+     "gsw": {"question_de": "De Striit wird hert bis zum Vorwurf, ire Vatter seig de Tüüfel: Was änderet s am Läse, dass da Jude mit em Jud Jesus strited?", "note_de": "S Gspröch fangt mit Jude aa, «wo ihm glaubt händ» ([[JHN.8.31]], [[JHN.8.44]]); de Jesus sälber wird im Buech «en Jud» gnännt ([[JHN.4.9]])."}},
     # TU-JHN-008-048-059
     {"id": "REFL-JHN-0101", "subject": "TU-JHN-008-048-059", "order": 1,
      "question_de": "«Bevor Abraham wurde, bin ich» – warum heben sie gerade bei diesem Satz Steine auf?",
@@ -477,8 +488,8 @@ REFLECTIONS = [
     # TU-JHN-010-019-021
     {"id": "REFL-JHN-0118", "subject": "TU-JHN-010-019-021", "order": 1,
      "question_de": "Dieselben Worte – und die einen sagen «von Sinnen», die andern nicht: Woran messen sie?",
-     "note_de": "Die einen verweisen auf den geheilten Blinden ([[JHN.10.21]]).",
-     "gsw": {"question_de": "Di gliiche Wort – und di eine säged «vo Sinne», di andere nöd: A was mässed si?", "note_de": "Di eine verwiised uf de gheilt Blind ([[JHN.10.21]])."}},
+     "note_de": "Die einen sagen, er habe einen Dämon und sei «von Sinnen»; die anderen verweisen auf den geheilten Blinden ([[JHN.10.20-JHN.10.21]]).",
+     "gsw": {"question_de": "Di gliiche Wort – und di eine säged «vo Sinne», di andere nöd: A was mässed si?", "note_de": "Di eine säged, er heig en Dämon und seig «vo Sinne»; di andere verwiised uf de gheilt Blind ([[JHN.10.20-JHN.10.21]])."}},
     {"id": "REFL-JHN-0119", "subject": "TU-JHN-010-019-021", "order": 2,
      "question_de": "Wie gehst du mit Menschen um, die dieselbe Person ganz anders sehen als du?",
      "gsw": {"question_de": "Wie gaasch du mit Mänsche um, wo di gliich Person ganz anders gsehnd als du?"}},
@@ -496,18 +507,18 @@ REFLECTIONS = [
      "note_de": "«Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr» ([[JHN.10.41]]).",
      "gsw": {"question_de": "De Johannes hät kei Zeiche gmacht – und glich glaubed d Lüüt sim Wort: Was macht es Zügnis glaubwürdig?", "note_de": "«De Johannes hät zwar kei Zeiche gmacht, aber alles, was de Johannes über dä gseit hät, isch wahr gsii» ([[JHN.10.41]])."}},
     {"id": "REFL-JHN-0123", "subject": "TU-JHN-010-040-042", "order": 2,
-     "question_de": "Warum geht Jesus gerade an den Ort zurück, wo alles begann?",
-     "gsw": {"question_de": "Wieso gaat de Jesus grad a de Ort zrugg, wo alles aagfange hät?"}},
+     "question_de": "Warum geht Jesus gerade an den Ort zurück, wo Johannes zuerst getauft hatte?",
+     "gsw": {"question_de": "Wieso gaat de Jesus grad a de Ort zrugg, wo de Johannes zerscht tauft hät?"}},
     # SUM-CH-JHN-011
     {"id": "REFL-JHN-0124", "subject": "SUM-CH-JHN-011", "order": 1,
-     "question_de": "Jesus kommt zu spät – und sagt doch, die Krankheit führe nicht zum Tod: Wie hält das Kapitel diese Spannung aus?",
+     "question_de": "Jesus sagt, die Krankheit führe nicht zum Tod – und als er kommt, liegt Lazarus schon vier Tage im Grab: Wie hält das Kapitel diese Spannung aus?",
      "note_de": "Marta und Maria sagen beide: «Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben» ([[JHN.11.21]], [[JHN.11.32]]).",
-     "gsw": {"question_de": "De Jesus chunnt z spaat – und seit glich, d Chranket füeri nöd zum Tod: Wie haltet s Kapitel die Spannig us?", "note_de": "D Marta und d Maria säged beidi: «Herr, wänn du da gsii wärsch, wär min Brüeder nöd gstorbe» ([[JHN.11.21]], [[JHN.11.32]])."}},
+     "gsw": {"question_de": "De Jesus seit, d Chranket füeri nöd zum Tod – und won er chunnt, liit de Lazarus scho vier Täg im Grab: Wie haltet s Kapitel die Spannig us?", "note_de": "D Marta und d Maria säged beidi: «Herr, wänn du da gsii wärsch, wär min Brüeder nöd gstorbe» ([[JHN.11.21]], [[JHN.11.32]])."}},
     # TU-JHN-011-001-016
     {"id": "REFL-JHN-0125", "subject": "TU-JHN-011-001-016", "order": 1,
      "question_de": "Jesus liebt die drei Geschwister – und wartet trotzdem zwei Tage: Wie passt das zusammen?",
      "note_de": "Der Text stellt beides direkt nebeneinander ([[JHN.11.5-JHN.11.6]]).",
-     "gsw": {"question_de": "De Jesus het di drüü Gschwüschterti gärn – und wartet glich zwei Täg: Wie passt das zäme?", "note_de": "De Text stellt beides diräkt näbenand ([[JHN.11.5-JHN.11.6]])."}},
+     "gsw": {"question_de": "De Jesus hät di drüü Gschwüschterti gärn – und wartet glich zwei Täg: Wie passt das zäme?", "note_de": "De Text stellt beides diräkt näbenand ([[JHN.11.5-JHN.11.6]])."}},
     {"id": "REFL-JHN-0126", "subject": "TU-JHN-011-001-016", "order": 2,
      "question_de": "Thomas will mit Jesus sterben: Ist das Mut, Trotz oder Verzweiflung?",
      "gsw": {"question_de": "De Thomas wott mit em Jesus stärbe: Isch das Muet, Trotz oder Verzwiiflig?"}},
@@ -541,16 +552,17 @@ REFLECTIONS = [
      "note_de": "«… dass es besser für euch ist, dass ein Mensch für das Volk stirbt» ([[JHN.11.50-JHN.11.51]]).",
      "gsw": {"question_de": "De Kajafas redt nüechtern politisch – und de Verzeller ghört drin e Wiissagig: Wie lisisch du die doppleti Bedüütig?", "note_de": "«… dass es besser für eu isch, dass ein Mänsch für s Volk stirbt» ([[JHN.11.50-JHN.11.51]])."}},
     {"id": "REFL-JHN-0134", "subject": "TU-JHN-011-045-053", "order": 2,
-     "question_de": "Wovor fürchtet sich der Hohe Rat – und war die Furcht unbegründet?",
-     "gsw": {"question_de": "Vor was fürcht sich de Hoch Root – und isch d Angscht unbegründet gsii?"}},
+     "question_de": "Wovor fürchtet sich der Hohe Rat, und wie sieht die Lage aus seiner Sicht aus?",
+     "note_de": "«… und die Römer werden kommen und uns sowohl den Ort als auch die Nation wegnehmen» ([[JHN.11.48]]).",
+     "gsw": {"question_de": "Vor was fürcht sich de Hoch Root, und wie gseht d Lag us sinere Sicht us?", "note_de": "«… und d Römer wärded choo und wärded üs de Ort und d Nation wägnää» ([[JHN.11.48]])."}},
     # TU-JHN-011-054-057
     {"id": "REFL-JHN-0135", "subject": "TU-JHN-011-054-057", "order": 1,
      "question_de": "«Dass er gewiss nicht zum Fest kommt?» – was erwarten die Leute, die im Tempel nach ihm fragen?",
      "note_de": "Gleichzeitig ist angeordnet, jeden Hinweis zu melden, damit man ihn festnehmen kann ([[JHN.11.56-JHN.11.57]]).",
-     "gsw": {"question_de": "«Dass er sicher nöd as Fäscht chunnt?» – was erwarted d Lüüt, wo im Tämpel nach ihm fröged?", "note_de": "Glichziitig isch aagornet, jede Hiiwiis zmälde, damit mer en chan feschtnää ([[JHN.11.56-JHN.11.57]])."}},
+     "gsw": {"question_de": "«Dass er sicher nöd as Fäscht chunnt?» – was erwarted d Lüüt, wo im Tämpel nach ihm fröged?", "note_de": "Glichziitig isch aagornet, jede Hiiwiis zmälde, demit mer en chan feschtnää ([[JHN.11.56-JHN.11.57]])."}},
     {"id": "REFL-JHN-0136", "subject": "TU-JHN-011-054-057", "order": 2,
      "question_de": "Jesus zieht sich zurück: Wann ist Rückzug klug?",
-     "gsw": {"question_de": "De Jesus zieht sich zrugg: Wänn isch Rückzug gschiid?"}},
+     "gsw": {"question_de": "De Jesus zieht sich zrugg: Wänn isch Ruggzug gschiid?"}},
     # SUM-CH-JHN-012
     {"id": "REFL-JHN-0137", "subject": "SUM-CH-JHN-012", "order": 1,
      "question_de": "Salbung, Jubel, Weizenkorn: Wie bereitet dieses Kapitel auf die «Stunde» vor?",
@@ -566,9 +578,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "S ganz Huus wird vom Duft erfüllt: Was bliibt vo nere söttige Tat?"}},
     # TU-JHN-012-012-019
     {"id": "REFL-JHN-0140", "subject": "TU-JHN-012-012-019", "order": 1,
-     "question_de": "Die Menge ruft «König Israels», und Jesus wählt einen jungen Esel: Was für ein König ist das?",
+     "question_de": "Die Menge ruft «König Israels», und Jesus setzt sich auf einen jungen Esel: Was für ein König ist das?",
      "note_de": "Der Erzähler zitiert: «Siehe, dein König kommt, er sitzt auf dem Fohlen eines Esels» ([[JHN.12.15]]).",
-     "gsw": {"question_de": "D Mängi rüeft «König vo Israel», und de Jesus wählt en junge Esel: Was isch das für en König?", "note_de": "De Verzeller zitiert: «Lueg, din König chunnt, er sitzt uf em Füli vo me Esel» ([[JHN.12.15]])."}},
+     "gsw": {"question_de": "D Mängi rüeft «König vo Israel», und de Jesus setzt sich uf es Eseli: Was isch das für en König?", "note_de": "De Verzeller zitiert: «Lueg, din König chunnt, er sitzt uf em Füli vo me Esel» ([[JHN.12.15]])."}},
     {"id": "REFL-JHN-0141", "subject": "TU-JHN-012-012-019", "order": 2,
      "question_de": "Die Jünger verstehen es erst später: Was hast du erst im Nachhinein verstanden?",
      "gsw": {"question_de": "D Jünger verstönd s erscht spöter: Was häsch du erscht im Nachhinein verstande?"}},
@@ -589,7 +601,7 @@ REFLECTIONS = [
      "note_de": "Sie fürchten, aus der Synagoge ausgeschlossen zu werden ([[JHN.12.42]]).",
      "gsw": {"question_de": "Vil glaubed, säged s aber nöd: Was choschtet es Bekenntnis?", "note_de": "Si fürchted, us de Synagoge usgschlosse zwärde ([[JHN.12.42]])."}},
     {"id": "REFL-JHN-0146", "subject": "TU-JHN-012-037-043", "order": 2,
-     "question_de": "Wie gehst du mit der Erklärung um, dass Unglaube «erfüllt» was Jesaja sagte?",
+     "question_de": "Wie gehst du mit der Erklärung um, dass Unglaube «erfüllt», was Jesaja sagte?",
      "gsw": {"question_de": "Wie gaasch du mit de Erklärig um, dass de Unglaube erfüllt, was de Jesaja gseit hät?"}},
     # TU-JHN-012-044-050
     {"id": "REFL-JHN-0147", "subject": "TU-JHN-012-044-050", "order": 1,
@@ -610,8 +622,9 @@ REFLECTIONS = [
      "note_de": "«Nie in Ewigkeit sollst du mir die Füsse waschen!» ([[JHN.13.8]])",
      "gsw": {"question_de": "Wieso wehrt sich de Petrus degäge, dass ihm de Jesus d Füess wäscht?", "note_de": "«Nie im Läbe wäschisch du mir d Füess!» ([[JHN.13.8]])"}},
     {"id": "REFL-JHN-0151", "subject": "TU-JHN-013-001-011", "order": 2,
-     "question_de": "Jesus wäscht auch Judas die Füsse: Was bedeutet das für dich?",
-     "gsw": {"question_de": "De Jesus wäscht au em Judas d Füess: Was bedüütet das für dich?"}},
+     "question_de": "Jesus weiss, wer ihn ausliefern wird, und wäscht doch den Jüngern die Füsse: Was bedeutet das für dich?",
+     "note_de": "«Er kannte nämlich den, der ihn ausliefert» ([[JHN.13.5]], [[JHN.13.11]]).",
+     "gsw": {"question_de": "De Jesus weiss, wer en usliferet, und wäscht glich de Jünger d Füess: Was bedüütet das für dich?", "note_de": "«Er hät nämli dä kännt, wo en usliferet» ([[JHN.13.5]], [[JHN.13.11]])."}},
     {"id": "REFL-JHN-0152", "subject": "TU-JHN-013-001-011", "order": 3,
      "question_de": "Fällt es dir leichter, anderen zu dienen, oder dir dienen zu lassen?",
      "gsw": {"question_de": "Fallt s dir liechter, andere zdiene, oder dir la zdiene?"}},
@@ -625,17 +638,17 @@ REFLECTIONS = [
      "gsw": {"question_de": "Sälig, «wänn ir s mached»: Was isch de Unterschiid zwüsche wüsse und tue?"}},
     # TU-JHN-013-021-030
     {"id": "REFL-JHN-0155", "subject": "TU-JHN-013-021-030", "order": 1,
-     "question_de": "Keiner der Jünger ahnt, wer es ist: Was sagt das über Judas – und über die anderen?",
+     "question_de": "Die Jünger blicken einander ratlos an, und auch nach dem Bissen versteht keiner am Tisch, wozu Jesus Judas das sagt: Was sagt das über Judas – und über die anderen?",
      "note_de": "Die Jünger blicken einander ratlos an ([[JHN.13.22]], [[JHN.13.28]]).",
-     "gsw": {"question_de": "Kein vo de Jünger ahnt, wer s isch: Was seit das über de Judas – und über di andere?", "note_de": "D Jünger luegeds enand ratlos aa ([[JHN.13.22]], [[JHN.13.28]])."}},
+     "gsw": {"question_de": "D Jünger lueged enand ratlos aa, und au nach em Bisse verstaht kein am Tisch, für was de Jesus em Judas das seit: Was seit das über de Judas – und über di andere?", "note_de": "D Jünger lueged enand ratlos aa ([[JHN.13.22]], [[JHN.13.28]])."}},
     {"id": "REFL-JHN-0156", "subject": "TU-JHN-013-021-030", "order": 2,
      "question_de": "«Es war aber Nacht» – was trägt dieser kurze Satz?",
      "gsw": {"question_de": "«Es isch aber Nacht gsii» – was treit dä churz Satz?"}},
     # TU-JHN-013-031-038
     {"id": "REFL-JHN-0157", "subject": "TU-JHN-013-031-038", "order": 1,
      "question_de": "Was ist «neu» an dem Gebot, einander zu lieben?",
-     "note_de": "Neu ist der Massstab: «Wie ich euch geliebt habe» ([[JHN.13.34]]).",
-     "gsw": {"question_de": "Was isch «nöi» a dem Gebot, enand gärn zha?", "note_de": "Nöi isch de Massstab: «Wie ich eu gliebt ha» ([[JHN.13.34]])."}},
+     "note_de": "Jesus fügt hinzu: «Wie ich euch geliebt habe» ([[JHN.13.34]]).",
+     "gsw": {"question_de": "Was isch «nöi» a dem Gebot, enand gärn zha?", "note_de": "De Jesus seit derzue: «Wie ich eu gliebt han» ([[JHN.13.34]])."}},
     {"id": "REFL-JHN-0158", "subject": "TU-JHN-013-031-038", "order": 2,
      "question_de": "Petrus verspricht viel und meint es ernst: Wie geht es dir mit Versprechen, die grösser sind als du?",
      "gsw": {"question_de": "De Petrus verspricht vil und meint s ärnscht: Wie gaat s dir mit Verspräche, wo grösser sind als du?"}},
@@ -711,8 +724,9 @@ REFLECTIONS = [
      "note_de": "Jesus sagt es voraus und nennt den Grund: «weil sie weder den Vater noch mich erkannt haben» ([[JHN.16.2-JHN.16.3]]).",
      "gsw": {"question_de": "Wie chan öpper meine, er dieni Gott, wänn er anderi verfolgt?", "note_de": "De Jesus seit s voruus und nännt de Grund: «wil si weder de Vatter no mich erchännt händ» ([[JHN.16.2-JHN.16.3]])."}},
     {"id": "REFL-JHN-0176", "subject": "TU-JHN-016-001-004", "order": 2,
-     "question_de": "Für die ersten Leser war der Ausschluss aus der Synagoge vielleicht Erfahrung: Wie liest man solche Sätze heute fair?",
-     "gsw": {"question_de": "Für di erschte Läser isch de Usschluss us de Synagoge villicht Erfahrig gsii: Wie lisst mer söttigi Sätz hüt fair?"}},
+     "question_de": "Jesus kündigt an, man werde die Jünger aus der Synagoge ausschliessen: Wie klingt dieser Satz für die Ausgeschlossenen, und wie aus der Sicht der Synagoge?",
+     "note_de": "Manche Forschende sehen darin Erfahrungen der ersten Leser, andere halten das für unsicher ([[JHN.16.2]]).",
+     "gsw": {"question_de": "De Jesus chündt aa, mer wärdi d Jünger us de Synagoge usschlüüsse: Wie tönt dä Satz für die, wo usgschlosse wärded, und wie us de Sicht vo de Synagoge?", "note_de": "Es paar Forschendi gsehnd drin Erfahrige vo de erschte Läser, anderi haltet das für unsicher ([[JHN.16.2]])."}},
     # TU-JHN-016-005-015
     {"id": "REFL-JHN-0177", "subject": "TU-JHN-016-005-015", "order": 1,
      "question_de": "«Es ist gut für euch, dass ich weggehe» – wie kann ein Abschied gut sein?",
@@ -739,33 +753,34 @@ REFLECTIONS = [
      "gsw": {"question_de": "«I de Wält händ ir Not; aber händ Muet»: Was macht dä Troscht glaubwürdig – oder nöd?"}},
     # SUM-CH-JHN-017
     {"id": "REFL-JHN-0183", "subject": "SUM-CH-JHN-017", "order": 1,
-     "question_de": "Jesus betet für sich, für die Jünger und für spätere Glaubende: Für wän würdest du so beten?",
+     "question_de": "Jesus betet für sich, für die Jünger und für spätere Glaubende: Für wen würdest du – im Gebet oder in Gedanken – so eintreten?",
      "note_de": "Der Kreis weitet sich: «Ich bitte aber nicht nur für diese, sondern auch für die, die durch ihr Wort an mich glauben» ([[JHN.17.20]]).",
-     "gsw": {"question_de": "De Jesus bättet für sich, für d Jünger und für spöteri Glaubendi: Für wän würdsch du eso bätte?", "note_de": "De Chreis wird wiiter: «Ich bitte aber nöd nu für die, sondern au für die, wo dur ires Wort a mich glaubed» ([[JHN.17.20]])."}},
+     "gsw": {"question_de": "De Jesus bättet für sich, für d Jünger und für spöteri Glaubendi: Für wän würdsch du – im Gebätt oder i Gedanke – eso iiträte?", "note_de": "De Chreis wird wiiter: «Ich bitte aber nöd nu für die, sondern au für die, wo dur ires Wort a mich glaubed» ([[JHN.17.20]])."}},
     # TU-JHN-017-001-005
     {"id": "REFL-JHN-0184", "subject": "TU-JHN-017-001-005", "order": 1,
      "question_de": "«Das aber ist das ewige Leben: dass sie dich … erkennen» – ist ewiges Leben hier eine Zeitdauer oder eine Beziehung?",
      "note_de": "So bestimmt Jesus im Gebet, was ewiges Leben ist ([[JHN.17.3]]).",
      "gsw": {"question_de": "«Das aber isch s ewig Läbe: dass si dich … erchänned» – isch ewigs Läbe da e Ziitduur oder e Beziehig?", "note_de": "So bestimmt de Jesus im Gebätt, was ewigs Läbe isch ([[JHN.17.3]])."}},
     {"id": "REFL-JHN-0185", "subject": "TU-JHN-017-001-005", "order": 2,
-     "question_de": "Mitbeten: Bei welcher Aufgabe in deinem Leben möchtest du am Ende sagen können, sie sei vollendet?",
-     "gsw": {"question_de": "Mitbätte: Bi welere Ufgab i dim Läbe möchtisch du am Schluss chöne säge, si seig volländet?"}},
+     "question_de": "Bei welcher Aufgabe in deinem Leben möchtest du am Ende sagen können, sie sei vollendet?",
+     "note_de": "Jesus betet: «… indem ich das Werk vollendet habe, das du mir gegeben hast» ([[JHN.17.4]]).",
+     "gsw": {"question_de": "Bi welere Ufgab i dim Läbe möchtisch du am Schluss chöne säge, si seig volländet?", "note_de": "De Jesus bättet: «… indem ich s Wärch volländet han, wo du mir gää häsch» ([[JHN.17.4]])."}},
     # TU-JHN-017-006-019
     {"id": "REFL-JHN-0186", "subject": "TU-JHN-017-006-019", "order": 1,
      "question_de": "Jesus bittet nicht, die Jünger aus der Welt zu nehmen, sondern sie zu bewahren: Warum nicht?",
      "note_de": "«Ich bitte nicht, dass du sie aus der Welt wegnimmst, sondern dass du sie vor dem Bösen bewahrst» ([[JHN.17.15]]).",
      "gsw": {"question_de": "De Jesus bittet nöd, d Jünger us de Wält znää, sondern si zbewahre: Wieso nöd?", "note_de": "«Ich bitte nöd, dass du si us de Wält wägnimmsch, sondern dass du si vor em Böse bhüetisch» ([[JHN.17.15]])."}},
     {"id": "REFL-JHN-0187", "subject": "TU-JHN-017-006-019", "order": 2,
-     "question_de": "Mitbeten: Für wän möchtest du bitten, er oder sie möge bewahrt bleiben?",
-     "gsw": {"question_de": "Mitbätte: Für wän möchtisch du bitte, er oder si söll bewahrt bliibe?"}},
+     "question_de": "Wen möchtest du bewahrt wissen – und wovor?",
+     "gsw": {"question_de": "Wän möchtisch du bhüetet wüsse – und vor was?"}},
     # TU-JHN-017-020-026
     {"id": "REFL-JHN-0188", "subject": "TU-JHN-017-020-026", "order": 1,
      "question_de": "«Damit alle eins sind» – was hiesse Einheit unter Menschen, die verschieden glauben?",
      "note_de": "Jesus bittet um Einheit, «damit die Welt glaubt» ([[JHN.17.21]]).",
      "gsw": {"question_de": "«Demit alli eis sind» – was hiess Einheit under Mänsche, wo verschide glaubed?", "note_de": "De Jesus bittet um Einheit, «demit d Wält glaubt» ([[JHN.17.21]])."}},
     {"id": "REFL-JHN-0189", "subject": "TU-JHN-017-020-026", "order": 2,
-     "question_de": "Mitbeten: Was würdest du an diesem Gebet für Menschen, die nach dir glauben, mitsprechen?",
-     "gsw": {"question_de": "Mitbätte: Was würdsch du a dem Gebätt für Mänsche, wo nach dir glaubed, mitspräche?"}},
+     "question_de": "Jesus bittet auch für die, die später glauben werden: Welcher Satz dieses Gebets spricht dich an, welcher bleibt dir fremd?",
+     "gsw": {"question_de": "De Jesus bittet au für die, wo spöter glaubed: Wele Satz vo dem Gebätt redt dich aa, wele bliibt dir frömd?"}},
     # SUM-CH-JHN-018
     {"id": "REFL-JHN-0190", "subject": "SUM-CH-JHN-018", "order": 1,
      "question_de": "Jesus sagt «Ich bin es», Petrus «Ich bin es nicht»: Was zeigt dieser Gegensatz?",
@@ -793,8 +808,8 @@ REFLECTIONS = [
      "note_de": "Knechte und Diener haben ein Kohlenfeuer gemacht, weil es kalt ist ([[JHN.18.18]]).",
      "gsw": {"question_de": "De Petrus staat bim Füür vo de andere und wärmt sich: Wo staasch du, wänn s chalt wird?", "note_de": "Chnächt und Diener händ es Cholefüür gmacht, wil s chalt isch ([[JHN.18.18]])."}},
     {"id": "REFL-JHN-0196", "subject": "TU-JHN-018-015-018", "order": 2,
-     "question_de": "Die Frage der Magd ist harmlos gestellt: Warum fällt die Antwort trotzdem so aus?",
-     "gsw": {"question_de": "D Frag vo de Magd isch harmlos gstellt: Wieso fallt d Antwort glich eso us?"}},
+     "question_de": "Die Magd fragt nur: «Bist du etwa auch einer der Jünger dieses Menschen?» Warum fällt die Antwort so aus?",
+     "gsw": {"question_de": "D Magd frögt nu: «Bisch du öppe au eine vo de Jünger vo däm Mänsch?» Wieso fallt d Antwort eso us?"}},
     # TU-JHN-018-019-024
     {"id": "REFL-JHN-0197", "subject": "TU-JHN-018-019-024", "order": 1,
      "question_de": "«Wenn aber recht, warum schlägst du mich?» – wie widersteht Jesus hier?",
@@ -813,12 +828,13 @@ REFLECTIONS = [
      "gsw": {"question_de": "En Verwandte vom Malchus erchännt en: Holt d Vergangeheit de Petrus ii?"}},
     # TU-JHN-018-028-032
     {"id": "REFL-JHN-0201", "subject": "TU-JHN-018-028-032", "order": 1,
-     "question_de": "Sie achten darauf, rein zu bleiben, während sie einen Menschen ausliefern: Kennst du solche Widersprüche, auch bei dir selbst?",
+     "question_de": "Sie bleiben vor dem Prätorium, um das Passa essen zu können: Warum erzählt der Text dieses Detail gerade hier?",
      "note_de": "Sie gehen nicht ins Prätorium, «um nicht unrein zu werden, sondern das Passa essen zu können» ([[JHN.18.28]]).",
-     "gsw": {"question_de": "Si lueged, dass si rein bliibed, während si en Mänsch usliefered: Kännsch du söttigi Widersprüch, au bi dir sälber?", "note_de": "Si gönd nöd is Prätorium, «demit si nöd unrein wärded, sondern s Passa chönd ässe» ([[JHN.18.28]])."}},
+     "gsw": {"question_de": "Si bliibed vor em Prätorium, demit si s Passa chönd ässe: Wieso verzellt de Text das Detail grad da?", "note_de": "Si gönd nöd is Prätorium, «demit si nöd unrein wärded, sondern s Passa chönd ässe» ([[JHN.18.28]])."}},
     {"id": "REFL-JHN-0202", "subject": "TU-JHN-018-028-032", "order": 2,
-     "question_de": "Wie sieht die Lage aus der Sicht des Pilatus aus, der vor allem Ruhe will?",
-     "gsw": {"question_de": "Wie gseht d Lag us de Sicht vom Pilatus us, wo vor allem Rueh wott?"}},
+     "question_de": "Wie sieht die Lage aus der Sicht des Pilatus aus?",
+     "note_de": "Zuerst will er den Fall abgeben: «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» ([[JHN.18.31]])",
+     "gsw": {"question_de": "Wie gseht d Lag us de Sicht vom Pilatus us?", "note_de": "Zerscht wott er de Fall abgää: «Nämed ir en und richted en nach euem Gsetz!» ([[JHN.18.31]])"}},
     # TU-JHN-018-033-038
     {"id": "REFL-JHN-0203", "subject": "TU-JHN-018-033-038", "order": 1,
      "question_de": "«Was ist Wahrheit?» – fragt Pilatus spöttisch, müde oder ernsthaft?",
@@ -842,7 +858,8 @@ REFLECTIONS = [
      "gsw": {"question_de": "De Pilatus findet kei Schuld und lieferet de Jesus glich us: Was entscheidet am Schluss?", "note_de": "Er seit drüü Mal, er findi kei Schuld a ihm ([[JHN.18.38]], [[JHN.19.4]], [[JHN.19.6]])."}},
     {"id": "REFL-JHN-0208", "subject": "SUM-CH-JHN-019", "order": 2,
      "question_de": "Dieses Kapitel wurde oft gegen Juden gewendet: Was steht im Text, und was haben Leser daraus gemacht?",
-     "gsw": {"question_de": "Das Kapitel isch oft gäge Jude gwändet worde: Was staat im Text, und was händ Läser drus gmacht?"}},
+     "note_de": "Im Text schreien zuerst «die Hohepriester und die Diener» ([[JHN.19.6]]), später heisst es «die Juden» ([[JHN.19.12]]); gekreuzigt wird Jesus von Soldaten ([[JHN.19.23]]).",
+     "gsw": {"question_de": "Das Kapitel isch oft gäge Jude gwändet worde: Was staat im Text, und was händ Läser drus gmacht?", "note_de": "Im Text brüeled zerscht «d Hoheprieschter und d Diener» ([[JHN.19.6]]), spöter heisst s «d Jude» ([[JHN.19.12]]); gchrüüziget wird de Jesus vo Soldate ([[JHN.19.23]])."}},
     # TU-JHN-019-001-003
     {"id": "REFL-JHN-0209", "subject": "TU-JHN-019-001-003", "order": 1,
      "question_de": "Die Soldaten spielen König mit Jesus: Was zeigt ihr Spott – über ihn und über sie?",
@@ -869,9 +886,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Vollmacht «vo obe»: Was bedüütet das für öpper, wo Macht über anderi hät?"}},
     # TU-JHN-019-013-016
     {"id": "REFL-JHN-0215", "subject": "TU-JHN-019-013-016", "order": 1,
-     "question_de": "«Wir haben keinen König ausser dem Kaiser» – was geben die Hohepriester mit diesem Satz preis?",
+     "question_de": "«Wir haben keinen König ausser dem Kaiser» – was bedeutet dieser Satz im Mund der Hohepriester?",
      "note_de": "Pilatus hatte gefragt: «Euren König soll ich kreuzigen?» ([[JHN.19.15]])",
-     "gsw": {"question_de": "«Mir händ kei König usser em Kaiser» – was gäbed d Hohepriester mit dem Satz pries?", "note_de": "De Pilatus hät gfröget: «Eue König söll ich chrüüzige?» ([[JHN.19.15]])"}},
+     "gsw": {"question_de": "«Mir händ kei König usser em Kaiser» – was bedüütet dä Satz im Muul vo de Hoheprieschter?", "note_de": "De Pilatus hät gfröget: «Eue König söll ich chrüüzige?» ([[JHN.19.15]])"}},
     {"id": "REFL-JHN-0216", "subject": "TU-JHN-019-013-016", "order": 2,
      "question_de": "Der Erzähler nennt Ort und Stunde genau: Warum?",
      "gsw": {"question_de": "De Verzeller nännt Ort und Stund gnau: Wieso?"}},
@@ -887,7 +904,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0219", "subject": "TU-JHN-019-023-024", "order": 1,
      "question_de": "Mitten in der Kreuzigung ein Streit um ein Kleidungsstück: Was zeigt dieses Detail?",
      "note_de": "Das Untergewand ist ohne Naht, von oben an durchgehend gewebt ([[JHN.19.23]]).",
-     "gsw": {"question_de": "Mitts i de Chrüzigung en Striit um es Chleid: Was zeigt das Detail?", "note_de": "S Undergwand isch ohni Naht, vo obe aa am Stück gwobe ([[JHN.19.23]])."}},
+     "gsw": {"question_de": "Mitts i de Chrüüzigung en Striit um es Chleid: Was zeigt das Detail?", "note_de": "S Undergwand isch ohni Naht, vo obe aa am Stück gwobe ([[JHN.19.23]])."}},
     {"id": "REFL-JHN-0220", "subject": "TU-JHN-019-023-024", "order": 2,
      "question_de": "Der Erzähler sieht darin ein Schriftwort erfüllt: Wie liest du solche Hinweise?",
      "gsw": {"question_de": "De Verzeller gseht drin es Schriftwort erfüllt: Wie lisisch du söttigi Hiiwiis?"}},
@@ -926,8 +943,8 @@ REFLECTIONS = [
     # SUM-CH-JHN-020
     {"id": "REFL-JHN-0229", "subject": "SUM-CH-JHN-020", "order": 1,
      "question_de": "Sehen und glauben: Wie gehen die Menschen in diesem Kapitel damit um, jeder auf seine Weise?",
-     "note_de": "Das Kapitel endet mit «Selig sind, die nicht gesehen und doch geglaubt haben!» ([[JHN.20.29]]).",
-     "gsw": {"question_de": "Gseh und glaube: Wie gönd d Mänsche i dem Kapitel dermit um, jede uf sini Art?", "note_de": "S Kapitel hört uf mit «Sälig sind die, wo nöd gseh händ und trotzdem glaubt händ!» ([[JHN.20.29]])."}},
+     "note_de": "Gegen Ende sagt Jesus zu Thomas: «Selig sind, die nicht gesehen und doch geglaubt haben!» ([[JHN.20.29]]).",
+     "gsw": {"question_de": "Gseh und glaube: Wie gönd d Mänsche i dem Kapitel dermit um, jede uf sini Art?", "note_de": "Gäge de Schluss seit de Jesus zum Thomas: «Sälig sind die, wo nöd gseh händ und trotzdem glaubt händ!» ([[JHN.20.29]])."}},
     # TU-JHN-020-001-010
     {"id": "REFL-JHN-0230", "subject": "TU-JHN-020-001-010", "order": 1,
      "question_de": "Der andere Jünger «sah und glaubte» – was genau hat er gesehen?",
@@ -990,16 +1007,16 @@ REFLECTIONS = [
     # TU-JHN-021-015-019
     {"id": "REFL-JHN-0245", "subject": "TU-JHN-021-015-019", "order": 1,
      "question_de": "Dreimal «Liebst du mich?» – warum dreimal?",
-     "note_de": "Petrus wird beim dritten Mal traurig; vorher hatte er Jesus dreimal verleugnet ([[JHN.21.17]], [[JHN.18.27]]).",
-     "gsw": {"question_de": "Drüü Mal fröget de Jesus de Petrus, öb er en gärn heig: Wieso drüü Mal?", "note_de": "De Petrus wird bim dritte Mal truurig; vorher hät er de Jesus drüü Mal verleugnet ([[JHN.21.17]], [[JHN.18.27]])."}},
+     "note_de": "Petrus wird beim dritten Mal traurig; vorher hatte er dreimal geleugnet, zu Jesus zu gehören ([[JHN.21.17]], [[JHN.18.17]], [[JHN.18.25-JHN.18.27]]).",
+     "gsw": {"question_de": "Drüü Mal fröget de Jesus de Petrus, öb er en gärn heig: Wieso drüü Mal?", "note_de": "De Petrus wird bim dritte Mal truurig; vorher hät er drüü Mal abgstritte, dass er zum Jesus ghört ([[JHN.21.17]], [[JHN.18.17]], [[JHN.18.25-JHN.18.27]])."}},
     {"id": "REFL-JHN-0246", "subject": "TU-JHN-021-015-019", "order": 2,
      "question_de": "Petrus bekommt einen Auftrag, nicht eine Strafe: Was bedeutet das?",
      "gsw": {"question_de": "De Petrus überchunnt en Uftrag, nöd e Straf: Was bedüütet das?"}},
     # TU-JHN-021-020-023
     {"id": "REFL-JHN-0247", "subject": "TU-JHN-021-020-023", "order": 1,
-     "question_de": "«Was geht es dich an?» – warum ist der Vergleich mit anderen hier fehl am Platz?",
+     "question_de": "«Was geht es dich an?» – was sagt diese Antwort über den Blick auf den Weg eines anderen?",
      "note_de": "Petrus fragt: «Herr, was aber wird mit diesem?» ([[JHN.21.21-JHN.21.22]])",
-     "gsw": {"question_de": "«Was gaat das dich aa?» – wieso isch de Vergliich mit andere da fehl am Platz?", "note_de": "De Petrus fröget: «Herr, was isch aber mit däm?» ([[JHN.21.21-JHN.21.22]])"}},
+     "gsw": {"question_de": "«Was gaat das dich aa?» – was seit die Antwort über de Blick uf de Wäg vo me andere?", "note_de": "De Petrus fröget: «Herr, was isch aber mit däm?» ([[JHN.21.21-JHN.21.22]])"}},
     {"id": "REFL-JHN-0248", "subject": "TU-JHN-021-020-023", "order": 2,
      "question_de": "Der Erzähler korrigiert ein Gerücht: Wie entstehen falsche Sätze über Worte, die jemand gesagt hat?",
      "gsw": {"question_de": "De Verzeller korrigiert es Grücht: Wie entstönd falschi Sätz über Wort, wo öpper gseit hät?"}},
@@ -1007,7 +1024,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0249", "subject": "TU-JHN-021-024-025", "order": 1,
      "question_de": "«Wir wissen, dass sein Zeugnis wahr ist» – wer ist dieses «wir»?",
      "note_de": "Der Text unterscheidet den Jünger, der geschrieben hat, von einer Gruppe, die für ihn bürgt ([[JHN.21.24]]).",
-     "gsw": {"question_de": "«Mer wüssed, dass sis Zügnis wahr isch» – wer isch das «mir»?", "note_de": "De Text unterscheidet de Jünger, wo gschribe hät, vo nere Gruppe, wo für ihn bürgt ([[JHN.21.24]])."}},
+     "gsw": {"question_de": "«Mer wüssed, dass sis Zügnis wahr isch» – wer isch das «mer»?", "note_de": "De Text unterscheidet de Jünger, wo gschribe hät, vo nere Gruppe, wo für ihn bürgt ([[JHN.21.24]])."}},
     {"id": "REFL-JHN-0250", "subject": "TU-JHN-021-024-025", "order": 2,
      "question_de": "Die Welt könnte die Bücher nicht fassen: Was ist mit allem, was nicht aufgeschrieben ist?",
      "gsw": {"question_de": "D Wält chönt d Büecher nöd fasse: Was isch mit allem, wo nöd ufgschribe isch?"}},
@@ -1027,7 +1044,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Irenäus, Adversus haereses III,1,1",
@@ -1054,7 +1071,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Eusebius, Kirchengeschichte VI,14,7",
@@ -1081,7 +1098,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Augustinus, Confessiones VII,9",
@@ -1108,7 +1125,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Goethe, Faust I, «Studierzimmer»",
@@ -1136,7 +1153,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Lektionar, Weihnachten, Messe am Tag",
@@ -1169,7 +1186,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "partly",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Catholic Encyclopedia, «Agnus Dei (in Liturgy)»",
@@ -1190,13 +1207,13 @@ RECEPTIONS = [
      "period_de": "bis heute",
      "text_de": "In den orthodoxen Kirchen ist der fünfte Sonntag der Osterzeit der «Sonntag der Samariterin». Die Überlieferung gibt der namenlosen Frau den Namen Photini (die «Erleuchtete») und verehrt sie als Märtyrin, die Christus verkündet hat ([[JHN.4.28-JHN.4.29]]).",
      "sources_de": [
-      "Orthodoxe Liturgie, Sonntag der Samariterin (5. Sonntag nach Ostern)"
+      "Orthodoxe Liturgie, Sonntag der Samariterin (5. Sonntag der Osterzeit)"
      ],
      "confidence": "high",
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Sonntag der Samariterin",
@@ -1223,7 +1240,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Schaff, History of the Christian Church VII (Marburger Gespräch)",
@@ -1251,7 +1268,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "partly",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Augustinus, De adulterinis coniugiis II,6–7",
@@ -1279,7 +1296,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Lektionar, Gründonnerstag",
@@ -1303,26 +1320,32 @@ RECEPTIONS = [
      "subject": "SUM-CH-JHN-018",
      "tradition": "music",
      "period_de": "1724",
-     "text_de": "Johann Sebastian Bach vertont in der Johannes-Passion den Bericht von [[JHN.18.1-JHN.19.42]] mit Chorälen und Arien. Die erste Aufführung war am Karfreitag, 7. April 1724, in der Nikolaikirche in Leipzig.",
+     "text_de": "Johann Sebastian Bach vertont in der Johannes-Passion den Bericht von [[JHN.18.1-JHN.19.42]] mit Chorälen und Arien. Die erste Aufführung war am Karfreitag, 7. April 1724, in der Nikolaikirche in Leipzig. Weil im vertonten Bibeltext Sätze, die das Evangelium «den Juden» zuschreibt, vom Chor gesungen werden (etwa [[JHN.19.7]], [[JHN.19.12]]), wird gefragt, ob das Werk Judenfeindschaft weitergibt; Michael Marissen kommt 1998 zum Schluss, Feindschaft gegen Juden zu fördern sei weder Thema noch Zweck von Bachs Vertonung.",
      "sources_de": [
-      "Johann Sebastian Bach, Johannes-Passion BWV 245"
+      "Johann Sebastian Bach, Johannes-Passion BWV 245",
+      "Michael Marissen, Lutheranism, Anti-Judaism, and Bach's St. John Passion (Oxford University Press 1998)"
      ],
      "confidence": "high",
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Bach, Johannes-Passion, Uraufführung",
         "found_at": "https://www.l-iz.de/melder/wortmelder/2016/03/nikolaikirche-bachs-johannespassion-ort-der-urauffuehrung-130323",
         "finding_de": "Uraufführung am Karfreitag, 7. April 1724, in der Leipziger Nikolaikirche."
+       },
+       {
+        "source": "Marissen, Lutheranism, Anti-Judaism, and Bach's St. John Passion (1998)",
+        "found_at": "https://works.swarthmore.edu/fac-music/12 (Verlagsangabe und Zusammenfassung, Swarthmore College)",
+        "finding_de": "Am 2026-10-29 von einer weiteren Instanz ergänzt und nachgeschlagen: Die Zusammenfassung fragt, ob die Johannes-Passion Feindschaft gegen Juden fördert, und hält fest, dies sei nicht Thema oder Zweck von Bachs Vertonung (Oxford University Press 1998). Das Buch selbst wurde nicht eingesehen."
        }
       ]
      },
      "gsw": {
       "period_de": "1724",
-      "text_de": "De Johann Sebastian Bach vertont i de Johannes-Passion de Bricht vo [[JHN.18.1-JHN.19.42]] mit Choräl und Arie. Di erscht Uffüerig isch am Karfriitig, 7. April 1724, i de Nikolaichilche z Leipzig gsii."
+      "text_de": "De Johann Sebastian Bach vertont i de Johannes-Passion de Bricht vo [[JHN.18.1-JHN.19.42]] mit Choräl und Arie. Di erscht Uffüerig isch am Karfriitig, 7. April 1724, i de Nikolaichilche z Leipzig gsii. Wil im vertonte Bibeltext Sätz, wo s Evangelium «de Jude» zueschriibt, vom Chor gsunge wärded (öppe [[JHN.19.7]], [[JHN.19.12]]), wird gfröget, öb s Wärch Judefeindschaft wiitergit; de Michael Marissen chunnt 1998 zum Schluss, Feindschaft gäge Jude z fördere seig weder s Thema no de Zwäck vo de Vertonig vom Bach."
      }
     },
     {
@@ -1339,7 +1362,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Nostra aetate 4",
@@ -1371,7 +1394,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Fra Angelico, Noli me tangere",
@@ -1398,7 +1421,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Caravaggio, Der ungläubige Thomas",
@@ -1425,7 +1448,7 @@ RECEPTIONS = [
      "source_check": {
       "date": "2026-10-28",
       "result": "confirmed",
-      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; keine fachliche Prüfung.",
+      "method_de": "KI-Prüfung (Claude): Stellen in frei zugänglichen Ausgaben im Web nachgeschlagen; am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung) erneut nachgeschlagen, Ergebnis unverändert; keine fachliche Prüfung.",
       "checked": [
        {
         "source": "Augustinus, Tractatus in Iohannem 122,8",
