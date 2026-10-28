@@ -308,8 +308,9 @@ def plaene():
     return {p.name: lade(p) for p in sorted(DATEN.glob("szenen-*.json"))}
 
 
-def pruef_check(b, aus, alt_check):
-    """check des Bild-Datensatzes aus den automatischen Prüfungen der Felder (auswahl.json)."""
+def pruef_check(b, aus, alt_check, aktuell_sha=None):
+    """check des Bild-Datensatzes aus den automatischen Prüfungen der Felder (auswahl.json). aktuell_sha: {Szene: Fingerabdruck
+    von Regeln und Szenenplan heute}; weicht er von dem der Prüfung ab, ist die Prüfung veraltet."""
     felder, offen, stufe = [], [], "ki-geprueft"
     for s in b["felder"]:
         pr, sl = aus[s].get("pruefung"), aus[s].get("schluss")
@@ -321,13 +322,14 @@ def pruef_check(b, aus, alt_check):
              "plan_sha": pr.get("plan_sha"), "regeln_version": pr.get("regeln_version"), "datum": pr.get("datum"), "modell": pr.get("modell"),
              "regeln": [{k: e[k] for k in ("id", "stufe", "ergebnis")} for e in pr["regeln"]],
              "offen_de": [f"{e['de']} ({e['ergebnis']}: {e['grund']})" for e in pr["regeln"] if e["ergebnis"] != "ok"]}
-        if pr.get("veraltet"):
+        if pr.get("veraltet") or (aktuell_sha and aktuell_sha.get(s) and pr.get("plan_sha") != aktuell_sha[s]):
             f["veraltet"] = True
+            offen.append(f"{s}: Prüfung veraltet (Regeln oder Szenenplan geändert)")
         if sl:
             f["schluss"] = {"ergebnis": sl["ergebnis"], "kern": sl.get("kern"), "bild_sha": sl.get("bild_sha"),
                             "offen_de": [f"{e['de']} ({e['ergebnis']}: {e['grund']})" for e in sl["regeln"] if e["ergebnis"] != "ok"]
                             + ([f"Moment nicht ganz getroffen: {sl.get('kern_fehlt_de')}"] if (sl.get("kern") or 0) < 2 and sl.get("kern_fehlt_de") else [])}
-        if pr["ergebnis"] != "bestanden" or pr.get("veraltet") or not sl or sl["ergebnis"] != "bestanden":
+        if pr["ergebnis"] != "bestanden" or f.get("veraltet") or not sl or sl["ergebnis"] != "bestanden":
             stufe = "entwurf"
         felder.append(f)
         offen += [f"{s}: {x}" for x in f["offen_de"] if "(fehler" in x or "(unklar" in x]
@@ -412,7 +414,10 @@ def main():
             for k in ("revision_log", "knowledge"):
                 if k in old:
                     rec[k] = old[k]
-            rec["check"] = pruef_check(b, aus, old.get("check"))
+            import bilder_pruefung as BP
+            allg = lade(DATEN / "pruefregeln.json")
+            figp = fig_fuer(fig, plan_d)
+            rec["check"] = pruef_check(b, aus, old.get("check"), {s: BP.plan_fingerabdruck(plan[s], figp, allg) for s in b["felder"]})
             n += schreibe(old_p, rec)
     print(f"PASS: Aquarellstil – {n} Dateien geschrieben")
 
