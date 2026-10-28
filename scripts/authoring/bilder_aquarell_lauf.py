@@ -202,6 +202,39 @@ def neu(a, schluessel, out):
     return bericht
 
 
+def kalibrieren(a, schluessel, out):
+    """Prüfmodell am Prüfsatz messen (bilder_kalibrierung/faelle.json): nur Feldprüfung, nichts wird übernommen."""
+    import time
+    plaene, fig, allg, szenen, momente, band = kontext()
+    K = pathlib.Path(__file__).resolve().parent / "bilder_kalibrierung"
+    faelle = json.loads((K / "faelle.json").read_text(encoding="utf-8"))["faelle"]
+    erg, t0 = [], time.time()
+    for f in faelle:
+        if a.szenen != "alle" and f["szene"] not in a.szenen.split(","):
+            continue
+        _, sz = szenen[f["szene"]]
+        try:
+            pr = BP.pruefe_feld(schluessel, K / f["bild"], sz, fig[f["szene"]], allg, momente[f["szene"]])
+        except Exception as ex:
+            erg.append({**f, "fehler": str(ex)})
+            BP.melde(f"{f['id']}: {ex}")
+            continue
+        r = {e["id"]: e["ergebnis"] for e in pr["regeln"]}
+        ok_ges = (f["erwartet"] is None or (pr["ergebnis"] == "bestanden") == (f["erwartet"] == "bestanden"))
+        ok_reg = {k: (r.get(k) == v if v != "nicht-ok" else r.get(k) not in (None, "ok")) for k, v in f["regeln"].items()}
+        erg.append({**f, "ergebnis": pr["ergebnis"], "kern": pr.get("kern"), "stimmt": ok_ges and all(ok_reg.values()), "regeln_ist": {k: r.get(k) for k in f["regeln"]},
+                    "abweichungen": [f"{e['id']} {e['ergebnis']}: {e['grund']}" for e in pr["regeln"] if e["ergebnis"] != "ok"], "blind": pr["blind"].get("story_guess")})
+        print(f"{f['id']}: erwartet {f['erwartet']} {f['regeln']} → {pr['ergebnis']} {erg[-1]['regeln_ist']} {'✓' if erg[-1]['stimmt'] else '✗'}")
+    zus = {"modell": BP.modell(schluessel), "faelle": len(erg), "richtig": sum(1 for e in erg if e.get("stimmt")), "fehler": sum(1 for e in erg if "fehler" in e),
+           "nutzung": dict(BP.NUTZUNG), "sekunden": round(time.time() - t0)}
+    print(json.dumps(zus, ensure_ascii=False))
+    (out / "kalibrierung.json").write_text(json.dumps({"zusammenfassung": zus, "faelle": erg}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if os.environ.get("GITHUB_ACTIONS"):
+        BP.melde(f"Kalibrierung {zus['modell']}: {zus['richtig']} von {zus['faelle']} richtig; {zus['nutzung']['anfragen']} Anfragen, "
+                 f"{zus['nutzung']['eingabe']} Eingabe- und {zus['nutzung']['ausgabe']} Ausgabe-Tokens, {zus['sekunden']} s")
+    return {}
+
+
 def bericht_html(out, bericht, titel):
     def zeile(e):
         return "".join(f'<li class="{x["ergebnis"]}"><b>{html.escape(x["id"])}</b> {html.escape(x["de"])}: {html.escape(str(x["antwort"]))}'
@@ -231,7 +264,7 @@ def bericht_html(out, bericht, titel):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("schritt", choices=["neu", "pruefen"])
+    ap.add_argument("schritt", choices=["neu", "pruefen", "kalibrieren"])
     ap.add_argument("--szenen", default="alle")
     ap.add_argument("--varianten", type=int, default=2)
     ap.add_argument("--runden", type=int, default=3)
@@ -246,6 +279,9 @@ def main():
     lauf = JETZT.strftime("%Y%m%d-%H%M%S") + f"-auto-{a.schritt}"
     out = ROOT / "ausgabe/aquarell" / lauf
     out.mkdir(parents=True, exist_ok=True)
+    if a.schritt == "kalibrieren":
+        kalibrieren(a, schluessel, out)
+        return
     bericht = neu(a, schluessel, out) if a.schritt == "neu" else pruefen(a, schluessel, out)
     subprocess.run([sys.executable, str(ROOT / "scripts/authoring/bilder_aquarell.py")], check=True)
     bericht_html(out, bericht, f"Bildlauf {lauf}")

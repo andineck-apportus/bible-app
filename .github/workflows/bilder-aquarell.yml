@@ -11,7 +11,7 @@ on:
       schritt:
         description: "auto-neu (malen+prüfen+ablegen), auto-pruefen (abgelegte Bilder prüfen), felder, figurenblatt"
         type: choice
-        options: [auto-neu, auto-pruefen, felder, figurenblatt]
+        options: [auto-neu, auto-pruefen, auto-kalibrieren, felder, figurenblatt]
         default: auto-neu
       szenen:
         description: "Szenen (z. B. JHN-002-K1,JHN-002-T1) oder «alle»"
@@ -25,6 +25,9 @@ on:
       runden:
         description: "auto-neu: höchstens so viele Malrunden je Szene"
         default: "3"
+      pruefmodell:
+        description: "Bildprüfmodell für diesen Lauf (Name oder Teil davon, z. B. terra; leer = Vorgabe)"
+        default: ""
       erzwingen:
         description: "auto-pruefen: auch unveränderte Bilder neu prüfen"
         type: boolean
@@ -70,7 +73,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
-          OPENAI_VISION_MODEL: ${{ vars.OPENAI_VISION_MODEL }}
+          OPENAI_VISION_MODEL: ${{ inputs.pruefmodell || vars.OPENAI_VISION_MODEL }}
           SCHRITT: ${{ inputs.schritt }}
           SZENEN: ${{ inputs.szenen }}
           VARIANTEN: ${{ inputs.varianten }}

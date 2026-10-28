@@ -35,6 +35,7 @@ DATEN = ROOT / "scripts/authoring/bilder_aquarell_daten"
 API = "https://api.openai.com/v1"
 VORZUG = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]
 _modell = None
+NUTZUNG = {"anfragen": 0, "eingabe": 0, "ausgabe": 0}   # Tokens aller Anfragen dieses Laufs (für den Kostenvergleich)
 VERFAHREN = "2026-10-28c"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
 PROZESS = "PROC-BILD-AQUARELL@2.2"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
 
@@ -97,8 +98,20 @@ def modell(schluessel):
     global _modell
     if _modell:
         return _modell
-    if os.environ.get("OPENAI_VISION_MODEL"):
-        _modell = os.environ["OPENAI_VISION_MODEL"]
+    wunsch = os.environ.get("OPENAI_VISION_MODEL")
+    if wunsch:  # genauer Name oder Teil davon (z. B. «terra»): dann der passende Name aus der Modellliste des Kontos
+        try:
+            da = sorted(m["id"] for m in _anfrage("models", schluessel)["data"])
+        except Exception:
+            da = []
+        if wunsch in da or not da:
+            _modell = wunsch
+        else:
+            treffer = [m for m in da if wunsch.lower() in m.lower()]
+            if not treffer:
+                raise RuntimeError(f"Kein Modell zu «{wunsch}». Vorhanden: {', '.join(m for m in da if m.startswith(('gpt', 'o')))}")
+            _modell = sorted(treffer, key=lambda m: (len(m), m))[0]
+        melde(f"Prüfmodell: {_modell}")
         return _modell
     try:
         da = {m["id"] for m in _anfrage("models", schluessel)["data"]}
@@ -175,6 +188,10 @@ def frage(schluessel, system, text, bild=None, versuche=3, breite=1024):
     for k in range(versuche):
         try:
             d = _anfrage("chat/completions", schluessel, body)
+            u = d.get("usage") or {}
+            NUTZUNG["anfragen"] += 1
+            NUTZUNG["eingabe"] += u.get("prompt_tokens", 0)
+            NUTZUNG["ausgabe"] += u.get("completion_tokens", 0)
             return json.loads(d["choices"][0]["message"]["content"])
         except urllib.error.HTTPError as e:
             letzter = f"HTTP {e.code}: {e.read().decode(errors='replace')[:400]}"
