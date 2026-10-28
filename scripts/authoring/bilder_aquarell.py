@@ -11,8 +11,10 @@
    Bild, darüber die Sprechblasen als Text je Sprache (Hochdeutsch, Züridüütsch) und darunter das Stichwortband aus dem
    Bildauftrag. Prüft, dass jede Blase wörtlich (bis auf … für Kürzungen) im Lesetext des genannten Verses steht.
 
-Blasen: in auswahl.json je Szene «bubbles» (in der Reihenfolge von «speech» im Szenenplan): x, y, w (Rahmen oben links und
-Breite, Bildkoordinaten 600×400) und tail (Spitze zeigt auf den Kopf der sprechenden Person).
+Blasen: das Werkzeug setzt sie selbst (blasen_auto) nach den Kopfpositionen aus der automatischen Prüfung
+(bilder_pruefung.py, in auswahl.json je Szene «pruefung.koepfe») und legt sie als «blasen_auto» ab. Von Hand nur als
+Ausnahme: «blasen»: "hand" mit «bubbles» (x, y, w, optional fs, tail; Bildkoordinaten 600×400).
+Szenenpläne: alle Dateien bilder_aquarell_daten/szenen-*.json; «basis» nennt die Lesetexte (de, gsw).
 """
 import datetime
 import html
@@ -49,7 +51,7 @@ def schreibe(p, rec):
     return 1
 
 
-def uebernehmen(lauf, wahl):
+def uebernehmen(lauf, wahl, pruefungen=None):
     from PIL import Image
     lauf = pathlib.Path(lauf)
     aus_p = DATEN / "auswahl.json"
@@ -61,8 +63,11 @@ def uebernehmen(lauf, wahl):
         (OUT / "img").mkdir(parents=True, exist_ok=True)
         Image.open(src).convert("RGB").resize((960, 640), Image.LANCZOS).save(OUT / "img" / f"{sz}.webp", quality=80, method=6)
         alt = aus.get(sz, {})
-        aus[sz] = {"datei": f"img/{sz}.webp", "lauf": lauf.name, "variante": var, "modell": meta[sz].get("modell"),
-                   "bubbles": alt.get("bubbles", []), "uebernommen": DATE}
+        aus[sz] = {"datei": f"img/{sz}.webp", "lauf": lauf.name, "variante": var, "modell": meta[sz].get("modell"), "uebernommen": DATE}
+        if alt.get("blasen") == "hand":
+            aus[sz].update(blasen="hand", bubbles=alt.get("bubbles", []))
+        if pruefungen and (sz, var) in pruefungen:
+            aus[sz]["pruefung"] = pruefungen[(sz, var)]
         print("übernommen", sz, var)
     aus_p.write_text(json.dumps(aus, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -125,6 +130,68 @@ def blase(b, sp, n):
     return "".join(out)
 
 
+def _hoehe(sp, w, fs):
+    return 2 * 14 + (fs + 4) * max(len(zeilen(sp[lg], w - 28, fs)) for lg in ("de", "gsw")) - 4
+
+
+def _schneidet(a, b, rand=0):
+    return not (a[2] + rand <= b[0] or b[2] + rand <= a[0] or a[3] + rand <= b[1] or b[3] + rand <= a[1])
+
+
+def blasen_auto(speech, koepfe):
+    """Blasen nach den Köpfen setzen: über (oder neben) dem Kopf der sprechenden Person, kurze Spitze zum Kopf, keine Blase über
+    einem Kopf oder einer anderen Blase, Lesereihenfolge links→rechts bzw. oben→unten. Köpfe: {Figur: {"kopf": [x0,y0,x1,y1]}} in
+    0–1000. Gibt (Blasen, Fehler) zurück; eine Blase ohne gültigen Platz ist ein Fehler."""
+    kb = {f: (k["kopf"][0] * W / 1000, k["kopf"][1] * H / 1000, k["kopf"][2] * W / 1000, k["kopf"][3] * H / 1000) for f, k in koepfe.items()}
+    gesetzt, fehler = [], []
+    for n, sp in enumerate(speech):
+        if sp["from"] not in kb:
+            fehler.append(f"Blase {n + 1}: Kopf von {sp['from']} unbekannt")
+            gesetzt.append(None)
+            continue
+        hx0, hy0, hx1, hy1 = kb[sp["from"]]
+        hx = (hx0 + hx1) / 2
+        best = None
+        for fs in (21, 19, 17):
+            for w in range(170, 331, 20):
+                h = _hoehe(sp, w, fs)
+                for x in range(6, W - 6 - w + 1, 4):
+                    for y in range(4, H - 6 - h + 1, 4):
+                        box = (x, y, x + w, y + h)
+                        if any(_schneidet(box, k, 6) for k in kb.values()):
+                            continue
+                        if any(g and _schneidet(box, (g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), 8) for g in gesetzt):
+                            continue
+                        if y + h <= hy0 - 10:          # über dem Kopf: Spitze nach unten zur Kopfmitte oben
+                            tail = (hx, hy0 - 3)
+                            lang = hy0 - 3 - (y + h)
+                            seit = abs((x + w / 2) - hx)
+                            if seit > w / 2 + 40:
+                                continue
+                        elif x >= hx1 + 10 or x + w <= hx0 - 10:  # daneben: Spitze seitlich zum Kopf
+                            if y > hy1 or y + h < hy0 - 60:
+                                continue
+                            tail = (hx1 + 3, (hy0 + hy1) / 2) if x >= hx1 + 10 else (hx0 - 3, (hy0 + hy1) / 2)
+                            lang = (x - hx1) if x >= hx1 + 10 else (hx0 - (x + w))
+                            seit = 60
+                        else:
+                            continue
+                        kosten = (seit * 0.5 + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6 + y * 0.25 + (21 - fs) * 12
+                                  + (h - 2 * 14) * 0.6 + (w - 170) * 0.05)
+                        if n and gesetzt[n - 1]:
+                            v = gesetzt[n - 1]
+                            if x + w / 2 < v["x"] + v["w"] / 2 - 20 and y < v["y"] + v["h"] / 2:
+                                kosten += 120      # Lesereihenfolge verletzt
+                        if best is None or kosten < best[0]:
+                            best = (kosten, {"x": x, "y": y, "w": w, "h": h, "fs": fs, "tail": [round(tail[0]), round(tail[1])]})
+            if best and best[1]["h"] <= 2 * 14 + (fs + 4) * 3:
+                break
+        if best is None:
+            fehler.append(f"Blase {n + 1}: kein freier Platz bei {sp['from']}")
+        gesetzt.append(best[1] if best else None)
+    return [g for g in gesetzt], fehler
+
+
 def band(n, kw):
     out = [f'<rect x="0" y="{H}" width="{W}" height="{BAND}" fill="{PAPER}"/>',
            f'<circle cx="24" cy="{H + BAND / 2}" r="12" fill="none" stroke="{INK}" stroke-width="1.4"/>',
@@ -136,20 +203,32 @@ def band(n, kw):
     return "".join(out)
 
 
+def blasen_von(a):
+    return a.get("bubbles", []) if a.get("blasen") == "hand" else a.get("blasen_auto", a.get("bubbles", []))
+
+
 def kachel(i, sz_id, sz, aus, kw, x, y):
     a = aus[sz_id]
     teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{H + BAND}" viewBox="0 0 {W} {H + BAND}">',
              f'<image href="{a["datei"]}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice"/>']
-    for n, (sp, b) in enumerate(zip(sz["speech"], a.get("bubbles", []))):
-        teile.append(blase(b, sp, n))
+    for n, (sp, b) in enumerate(zip(sz["speech"], blasen_von(a))):
+        if b:
+            teile.append(blase(b, sp, n))
     teile.append(band(i, kw))
     teile.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H + BAND - 1}" fill="none" stroke="#D8D0C0" stroke-width="1"/></svg>')
     return "".join(teile)
 
 
-def pruefe_zitate(plan):
-    texte = {"de": lade(ROOT / "data/translations/TRANS-JHN-002-001-025-DE-WORKING.json")["text_by_reference"],
-             "gsw": lade(ROOT / "data/translations/TRANS-JHN-002-001-025-GSW-ZH-WORKING.json")["text_by_reference"]}
+def texte_von(plan_d):
+    t = {}
+    for tid in plan_d["basis"]:
+        rec = lade(ROOT / f"data/translations/{tid}.json")
+        lg = "gsw" if rec.get("language", "").startswith("gsw") or "-GSW" in tid else "de"
+        t.setdefault(lg, {}).update(rec["text_by_reference"])
+    return t
+
+
+def pruefe_zitate(plan, texte):
     fehler = []
     for sid, sz in plan.items():
         for sp in sz["speech"]:
@@ -160,18 +239,63 @@ def pruefe_zitate(plan):
     return fehler
 
 
+def plaene():
+    return {p.name: lade(p) for p in sorted(DATEN.glob("szenen-*.json"))}
+
+
+def pruef_check(b, aus, alt_check):
+    """check des Bild-Datensatzes aus den automatischen Prüfungen der Felder (auswahl.json)."""
+    felder, offen, stufe = [], [], "ki-geprueft"
+    for s in b["felder"]:
+        pr, sl = aus[s].get("pruefung"), aus[s].get("schluss")
+        if not pr:
+            felder.append({"scene": s, "ergebnis": "ungeprueft"})
+            stufe = "entwurf"
+            continue
+        f = {"scene": s, "ergebnis": pr["ergebnis"], "punkte": pr["punkte"], "kern": pr.get("kern"), "bild_sha": pr["bild_sha"],
+             "plan_sha": pr.get("plan_sha"), "regeln_version": pr.get("regeln_version"), "datum": pr.get("datum"), "modell": pr.get("modell"),
+             "regeln": [{k: e[k] for k in ("id", "stufe", "ergebnis")} for e in pr["regeln"]],
+             "offen_de": [f"{e['de']} ({e['ergebnis']}: {e['grund']})" for e in pr["regeln"] if e["ergebnis"] != "ok"]}
+        if pr.get("veraltet"):
+            f["veraltet"] = True
+        if sl:
+            f["schluss"] = {"ergebnis": sl["ergebnis"], "kern": sl.get("kern"), "bild_sha": sl.get("bild_sha"),
+                            "offen_de": [f"{e['de']} ({e['ergebnis']}: {e['grund']})" for e in sl["regeln"] if e["ergebnis"] != "ok"]
+                            + ([f"Moment nicht ganz getroffen: {sl.get('kern_fehlt_de')}"] if (sl.get("kern") or 0) < 2 and sl.get("kern_fehlt_de") else [])}
+        if pr["ergebnis"] != "bestanden" or pr.get("veraltet") or not sl or sl["ergebnis"] != "bestanden":
+            stufe = "entwurf"
+        felder.append(f)
+        offen += [f"{s}: {x}" for x in f["offen_de"] if "(fehler" in x or "(unklar" in x]
+        offen += [f"{s} (Kachel): {x}" for x in (f.get("schluss") or {}).get("offen_de", [])]
+    c = {"stufe": stufe,
+         "method_de": "Automatische Prüfung (docs/BILDSTIL.md, «Automatische Prüfung»): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen "
+                      "(allgemein, Figur, Feld) und Vergleich mit dem Moment; danach Schlussprüfung der fertigen Kachel mit Blasen. "
+                      "Bildprüfmodell von OpenAI, getrennt vom Malmodell.",
+         "felder": felder, "open_de": offen,
+         "limits_de": "Urteil eines KI-Modells; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). "
+                      "Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."}
+    if alt_check and "felder" not in alt_check:
+        c["frueher"] = alt_check
+    elif alt_check and alt_check.get("frueher"):
+        c["frueher"] = alt_check["frueher"]
+    return c
+
+
 def main():
     if len(sys.argv) > 2 and sys.argv[1] == "uebernehmen":
         uebernehmen(sys.argv[2], sys.argv[3:])
         return
-    plan_d = lade(DATEN / "szenen-jhn-002.json")
-    plan, fig = plan_d["szenen"], lade(DATEN / "figuren.json")
+    fig = lade(DATEN / "figuren.json")
     aus = lade(DATEN / "auswahl.json")
-    fehler = pruefe_zitate(plan)
+    alle = plaene()
+    fehler = []
+    for name, pd in alle.items():
+        fehler += pruefe_zitate(pd["szenen"], texte_von(pd))
     if fehler:
         sys.exit("FEHLER Zitate:\n" + "\n".join(fehler))
     n = 0
-    stil = {"id": "ILLSTYLE-AQUARELL", "type": "illustration_style", "status": "draft", "tags": ["TAG-JOHN"], "key": "aquarell",
+    tags = sorted({t for pd in alle.values() for t in pd.get("tags", ["TAG-JOHN"])})
+    stil = {"id": "ILLSTYLE-AQUARELL", "type": "illustration_style", "status": "draft", "tags": tags, "key": "aquarell",
             "labels": {"de": "Aquarell", "en": "Watercolour"},
             "description_de": "Minimalistischer Aquarell-Comic nach dem Styleguide «Visuelle Bibel» V1.2 (docs/BILDSTIL.md): warmweisses Papier, wenige dünne Linien, transparente Flächen, natürliche erwachsene Figuren, viel Weissraum. Gemalte Szenen je Bildfeld; Worte als Text darüber in der gewählten Sprache. Ersetzt in der App die Stile Symbol und Anime, wo vorhanden.",
             "style_reference": "docs/referenz/stilreferenz-aquarell-comic.jpg", "character_sheet": "data/illustrations/aquarell/figurenblatt.webp",
@@ -183,45 +307,48 @@ def main():
         stil["knowledge"] = alt.get("knowledge", stil["knowledge"])
         stil["revision_log"] = alt.get("revision_log", [])
     n += schreibe(alt_p, stil)
-    for b in plan_d["bilder"]:
-        brief = lade(D / f"briefs/{b['brief']}.json")
-        felder = [plan[s] for s in b["felder"]]
-        fehlt = [s for s in b["felder"] if s not in aus]
-        if fehlt:
-            print(f"übersprungen {b['id']}: Bild fehlt für {fehlt}")
-            continue
-        if len(brief["panels"]) != len(b["felder"]):
-            sys.exit(f"{b['id']}: {len(b['felder'])} Felder, Bildauftrag hat {len(brief['panels'])}")
-        cols = 1 if len(b["felder"]) == 1 else 2
-        rows = (len(b["felder"]) + cols - 1) // cols
-        gap = 12
-        tw, th = cols * W + (cols - 1) * gap, rows * (H + BAND) + (rows - 1) * gap
-        tiles = []
-        for i, (sid, p_) in enumerate(zip(b["felder"], brief["panels"]), 1):
-            r_, c_ = divmod(i - 1, cols)
-            x = c_ * (W + gap) + ((W + gap) // 2 if r_ == rows - 1 and len(b["felder"]) % cols and cols > 1 else 0)
-            tiles.append(kachel(i, sid, plan[sid], aus, p_.get("keywords") or {}, x, r_ * (H + BAND + gap)))
-        svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {tw} {th}">' + "".join(tiles) + "</svg>"
-        fp = OUT / f"{b['id']}.svg"
-        if not fp.exists() or fp.read_text(encoding="utf-8").strip() != svg:
-            fp.write_text(svg + "\n", encoding="utf-8")
-            n += 1
-        depicts = sorted({x for s in felder for x in s["depicts"]} | {x for s in felder for sp in s["speech"] for x in (sp["from"], sp["to"])})
-        alt_de = f"{len(felder)} gemalte Bilder: " + " ".join(f"{i} {p_['action_de']}" for i, p_ in enumerate(brief["panels"], 1))
-        rec = {"id": b["id"], "type": "illustration", "status": "draft", "tags": ["TAG-JOHN"], "style": "ILLSTYLE-AQUARELL", "brief": b["brief"],
-               "level": b["level"], "reference": b["reference"], "target": b["target"], "file": f"data/illustrations/aquarell/{b['id']}.svg",
-               "depicts": depicts, "alt_de": alt_de, "note_de": b.get("note_de"),
-               "scenes": [{"scene": s, "image": aus[s]["datei"], "model": aus[s].get("modell"), "run": aus[s].get("lauf"), "variant": aus[s].get("variante"),
-                           "speech": [{"from": sp["from"], "to": sp["to"], "ref": sp["ref"]} for sp in plan[s]["speech"]]} for s in b["felder"]],
-               "evidence": [plan[s]["evidence"] for s in b["felder"]],
-               "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
-        old_p = OUT / f"{b['id']}.json"
-        if old_p.exists():
-            old = lade(old_p)
-            for k in ("check", "revision_log", "knowledge"):
+    for name, plan_d in alle.items():
+        plan = plan_d["szenen"]
+        for b in plan_d["bilder"]:
+            brief = lade(D / f"briefs/{b['brief']}.json")
+            felder = [plan[s] for s in b["felder"]]
+            fehlt = [s for s in b["felder"] if s not in aus]
+            if fehlt:
+                print(f"übersprungen {b['id']}: Bild fehlt für {fehlt}")
+                continue
+            if len(brief["panels"]) != len(b["felder"]):
+                sys.exit(f"{b['id']}: {len(b['felder'])} Felder, Bildauftrag hat {len(brief['panels'])}")
+            cols = 1 if len(b["felder"]) == 1 else 2
+            rows = (len(b["felder"]) + cols - 1) // cols
+            gap = 12
+            tw, th = cols * W + (cols - 1) * gap, rows * (H + BAND) + (rows - 1) * gap
+            tiles = []
+            for i, (sid, p_) in enumerate(zip(b["felder"], brief["panels"]), 1):
+                r_, c_ = divmod(i - 1, cols)
+                x = c_ * (W + gap) + ((W + gap) // 2 if r_ == rows - 1 and len(b["felder"]) % cols and cols > 1 else 0)
+                tiles.append(kachel(i, sid, plan[sid], aus, p_.get("keywords") or {}, x, r_ * (H + BAND + gap)))
+            svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {tw} {th}">' + "".join(tiles) + "</svg>"
+            fp = OUT / f"{b['id']}.svg"
+            if not fp.exists() or fp.read_text(encoding="utf-8").strip() != svg:
+                fp.write_text(svg + "\n", encoding="utf-8")
+                n += 1
+            depicts = sorted({x for s in felder for x in s["depicts"]} | {x for s in felder for sp in s["speech"] for x in (sp["from"], sp["to"])})
+            alt_de = f"{len(felder)} gemalte Bilder: " + " ".join(f"{i} {p_['action_de']}" for i, p_ in enumerate(brief["panels"], 1))
+            rec = {"id": b["id"], "type": "illustration", "status": "draft", "tags": plan_d.get("tags", ["TAG-JOHN"]), "style": "ILLSTYLE-AQUARELL", "brief": b["brief"],
+                   "level": b["level"], "reference": b["reference"], "target": b["target"], "file": f"data/illustrations/aquarell/{b['id']}.svg",
+                   "depicts": depicts, "alt_de": alt_de, "note_de": b.get("note_de"),
+                   "scenes": [{"scene": s, "image": aus[s]["datei"], "model": aus[s].get("modell"), "run": aus[s].get("lauf"), "variant": aus[s].get("variante"),
+                               "reference": plan[s]["reference"],
+                               "speech": [{"from": sp["from"], "to": sp["to"], "ref": sp["ref"]} for sp in plan[s]["speech"]]} for s in b["felder"]],
+                   "evidence": [plan[s]["evidence"] for s in b["felder"]],
+                   "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
+            old_p = OUT / f"{b['id']}.json"
+            old = lade(old_p) if old_p.exists() else {}
+            for k in ("revision_log", "knowledge"):
                 if k in old:
                     rec[k] = old[k]
-        n += schreibe(old_p, rec)
+            rec["check"] = pruef_check(b, aus, old.get("check"))
+            n += schreibe(old_p, rec)
     print(f"PASS: Aquarellstil – {n} Dateien geschrieben")
 
 

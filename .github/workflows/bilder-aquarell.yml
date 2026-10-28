@@ -1,17 +1,18 @@
 # Bilder im Aquarellstil malen lassen (docs/BILDSTIL.md) mit dem Bildmodell von OpenAI.
 # Start von Hand: Actions → «bilder-aquarell» → Run workflow. Geheimnis: OPENAI_API_KEY.
-# Ergebnis: Branch «bildpilot-ausgabe», Ordner ausgabe/aquarell/<lauf>/ (Auswahl und Ablage danach mit
-# scripts/authoring/bilder_aquarell.py). Berührt main und das Deployment nicht.
+# Schritte «auto-neu» und «auto-pruefen» (scripts/authoring/bilder_aquarell_lauf.py): malen, automatisch prüfen, wählen,
+# ablegen, Blasen setzen, Schlussprüfung; geänderte Daten auf Branch «bilder-auto/<Lauf>», Bericht auf «bildpilot-ausgabe».
+# Schritte «felder» und «figurenblatt»: nur malen (Auswahl von Hand). Berührt main und das Deployment nicht.
 name: bilder-aquarell
 
 on:
   workflow_dispatch:
     inputs:
       schritt:
-        description: "figurenblatt oder felder"
+        description: "auto-neu (malen+prüfen+ablegen), auto-pruefen (abgelegte Bilder prüfen), felder, figurenblatt"
         type: choice
-        options: [felder, figurenblatt]
-        default: felder
+        options: [auto-neu, auto-pruefen, felder, figurenblatt]
+        default: auto-neu
       szenen:
         description: "Szenen (z. B. JHN-002-K1,JHN-002-T1) oder «alle»"
         default: "alle"
@@ -21,6 +22,13 @@ on:
       hinweis:
         description: "Zusätzliche Anweisung für diesen Lauf (Englisch, optional)"
         default: ""
+      runden:
+        description: "auto-neu: höchstens so viele Malrunden je Szene"
+        default: "3"
+      erzwingen:
+        description: "auto-pruefen: auch unveränderte Bilder neu prüfen"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -36,7 +44,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Werkzeuge
+        run: |
+          pip install -q pillow playwright
+          python -m playwright install --with-deps chromium
+
       - name: Bilder malen
+        if: startsWith(inputs.schritt, 'auto-') == false
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
@@ -45,6 +63,37 @@ jobs:
           VARIANTEN: ${{ inputs.varianten }}
           HINWEIS: ${{ inputs.hinweis }}
         run: python3 scripts/authoring/bilder_aquarell_gen.py "$SCHRITT" --szenen "$SZENEN" --varianten "$VARIANTEN" --hinweis "$HINWEIS"
+
+      - name: Malen, prüfen, ablegen (automatisch)
+        if: startsWith(inputs.schritt, 'auto-')
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          OPENAI_VISION_MODEL: ${{ vars.OPENAI_VISION_MODEL }}
+          SCHRITT: ${{ inputs.schritt }}
+          SZENEN: ${{ inputs.szenen }}
+          VARIANTEN: ${{ inputs.varianten }}
+          HINWEIS: ${{ inputs.hinweis }}
+          RUNDEN: ${{ inputs.runden }}
+          ERZWINGEN: ${{ inputs.erzwingen }}
+        run: |
+          extra=""
+          [ "$ERZWINGEN" = "true" ] && extra="--erzwingen"
+          python3 scripts/authoring/bilder_aquarell_lauf.py "${SCHRITT#auto-}" --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$RUNDEN" --hinweis "$HINWEIS" $extra
+
+      - name: Daten auf Branch bilder-auto/<Lauf>
+        if: startsWith(inputs.schritt, 'auto-')
+        env:
+          LAUF: ${{ github.run_number }}
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data scripts/authoring/bilder_aquarell_daten
+          git diff --cached --quiet && exit 0
+          git checkout -b "bilder-auto/$LAUF"
+          git commit -qm "Bilder automatisch: Lauf $LAUF (${{ inputs.schritt }} ${{ inputs.szenen }})"
+          git push origin "bilder-auto/$LAUF"
 
       - name: Auf Branch bildpilot-ausgabe sichern
         if: always()

@@ -22,6 +22,7 @@ Prüft:
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
+import hashlib
 import json
 import pathlib
 import re
@@ -260,6 +261,51 @@ def main():
                 errors.append(f"{rel}: Bildauftrag {r.get('brief')} fehlt")
             if r.get("level") not in ("bible", "testament", "group", "book", "chapter", "section", "verse"):
                 errors.append(f"{rel}: level {r.get('level')!r} ungültig")
+            # Gemalte Bilder (docs/BILDSTIL.md): Bilddateien, Belege B/R/I je Feld, Prüfstufe mit Fingerabdruck des Bildes
+            if r.get("scenes"):
+                def _vs(ref_):  # 'JHN.2.3-JHN.2.5' → ((2,3),(2,5)); Kapitelangabe 'JHN.2' → ganze Spanne
+                    a_, _, z_ = str(ref_).partition("-")
+                    def p1(x, ende):
+                        t = x.split(".")
+                        if len(t) < 2 or not t[1].isdigit():
+                            return None
+                        return (int(t[1]), int(t[2]) if len(t) > 2 else (999 if ende else 0))
+                    v0, v1 = p1(a_, False), p1(z_ or a_, True)
+                    return (v0, v1) if v0 and v1 else None
+                base_ = (ROOT / str(r.get("file", ""))).parent
+                for i_, sc_ in enumerate(r["scenes"]):
+                    img_ = base_ / str(sc_.get("image", ""))
+                    if not img_.is_file():
+                        errors.append(f"{rel}: Bild {sc_.get('image')} fehlt")
+                    span_ = _vs(sc_.get("reference")) if sc_.get("reference") else None
+                    for e_ in (r.get("evidence") or [[]] * len(r["scenes"]))[i_]:
+                        if e_.get("s") not in ("B", "R", "I"):
+                            errors.append(f"{rel}: Feld {i_ + 1}: Beleg ohne gültige Stufe B/R/I")
+                        if e_.get("s") == "B" and not e_.get("ref"):
+                            errors.append(f"{rel}: Feld {i_ + 1}: B-Beleg ohne Bibelstelle")
+                        if e_.get("ref"):
+                            check_ref(rel, f"evidence[{i_}].ref", e_["ref"]); ref_count += 1
+                            ev_ = _vs(e_["ref"])
+                            if span_ and ev_ and e_.get("s") == "B" and (ev_[0] < span_[0] or ev_[1] > span_[1]):
+                                warnings.append(f"{rel}: Feld {i_ + 1}: B-Beleg {e_['ref']} liegt ausserhalb der Stelle {sc_.get('reference')}")
+                    for sp_ in sc_.get("speech") or []:
+                        check_ref(rel, f"scenes[{i_}].speech.ref", sp_.get("ref")); ref_count += 1
+                c_ = r.get("check") or {}
+                st_ = c_.get("stufe")
+                if st_ not in (None, "entwurf", "ki-geprueft", "fachlich-geprueft"):
+                    errors.append(f"{rel}: check.stufe {st_!r} ungültig")
+                if st_ == "fachlich-geprueft" and not (c_.get("fachlich") or {}).get("name"):
+                    errors.append(f"{rel}: «fachlich-geprueft» ohne Namen der prüfenden Person")
+                if st_ in ("ki-geprueft", "fachlich-geprueft"):
+                    imgs_ = {sc_["scene"]: base_ / sc_["image"] for sc_ in r["scenes"]}
+                    for f_ in c_.get("felder") or []:
+                        p_img = imgs_.get(f_.get("scene"))
+                        if f_.get("ergebnis") != "bestanden" or (f_.get("schluss") or {}).get("ergebnis") != "bestanden":
+                            errors.append(f"{rel}: Stufe {st_}, aber Feld {f_.get('scene')} nicht bestanden")
+                        elif p_img and p_img.is_file() and hashlib.sha256(p_img.read_bytes()).hexdigest()[:16] != f_.get("bild_sha"):
+                            errors.append(f"{rel}: Prüfung veraltet – Bild {f_.get('scene')} hat sich seit der Prüfung geändert")
+                    if {f_.get("scene") for f_ in c_.get("felder") or []} != set(imgs_):
+                        errors.append(f"{rel}: Stufe {st_}, aber nicht jedes Feld geprüft")
         if r.get("type") == "illustration_style":
             if r.get("library") and not (ROOT / r["library"]).is_file():
                 errors.append(f"{rel}: Bibliothek {r['library']} fehlt")

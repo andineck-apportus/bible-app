@@ -18,5 +18,54 @@
     "FIG-OBJ-PEITSCHE": "A short whip made of a few knotted cords.",
     "FIG-OBJ-MUENZEN": "Small coins."
   },
-  "figurenblatt_en": "A character reference sheet on warm white paper: the following people standing side by side in a row, full figure, front view, evenly spaced with white space between them, same scale, neutral standing pose, each face clearly visible. From left to right: Mary, Jesus, the master of the feast, the bridegroom, one male and one female servant, two disciples. No names, no lettering."
+  "figurenblatt_en": "A character reference sheet on warm white paper: the following people standing side by side in a row, full figure, front view, evenly spaced with white space between them, same scale, neutral standing pose, each face clearly visible. From left to right: Mary, Jesus, the master of the feast, the bridegroom, one male and one female servant, two disciples. No names, no lettering.",
+  "_hinweis_pruef": "«kenn_en»: kurze Beschreibung, an der das Prüfmodell die Figur im Bild wiederfindet (ohne Namen). «pruef»: Figurenregeln, gelten in jedem Feld, in dem die Figur vorkommt (Aufbau wie pruefregeln.json).",
+  "kenn_en": {
+    "FIG-JESUS": "a man in his early thirties with dark wavy shoulder-length hair and short dark beard, wearing a cream tunic and a terracotta-red mantle",
+    "FIG-MARIA-MUTTER-JESU": "an older woman in a blue-grey veil and blue-grey robe",
+    "FIG-GRUPPE-JUENGER": "one or more bearded men in plain ochre or brown robes near the man in the terracotta-red mantle",
+    "FIG-GRUPPE-DIENER": "servants in sand-coloured tunics with pale aprons",
+    "FIG-ROLLE-SPEISEMEISTER": "a portly older man with grey beard in an olive-green robe with a wide ochre belt",
+    "FIG-ROLLE-BRAEUTIGAM": "a young man in a violet robe with a small flower wreath on his head",
+    "FIG-ROLLE-HAENDLER": "traders: dove sellers or money changers",
+    "FIG-GRUPPE-MENGE": "a group of ordinary people (for a speaking group: the member who speaks)"
+  },
+  "pruef": {
+    "FIG-JESUS": [
+      {
+        "id": "F-JESUS-GESICHT",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Gesicht Jesu voll sichtbar (wie bei allen Menschen)",
+        "en": "Is the face of the man in the terracotta-red mantle fully visible, with eyes, nose and mouth (not hidden, turned away or blank)?"
+      }
+    ],
+    "FIG-MARIA-MUTTER-JESU": [
+      {
+        "id": "F-MARIA-ALTER",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Maria sichtbar eine Generation älter als Jesus",
+        "en": "Does the woman in the blue-grey veil look clearly a generation older than the man in the terracotta-red mantle (grey hair or lines on the face, like his mother)?"
+      }
+    ],
+    "FIG-ROLLE-SPEISEMEISTER": [
+      {
+        "id": "F-SPEISEMEISTER-ALTER",
+        "art": "muss",
+        "stufe": "soll",
+        "de": "Speisemeister älter mit grauem Bart",
+        "en": "Does the man in the olive-green robe look older, with a grey beard?"
+      }
+    ],
+    "FIG-ROLLE-BRAEUTIGAM": [
+      {
+        "id": "F-BRAEUTIGAM-JUNG",
+        "art": "muss",
+        "stufe": "soll",
+        "de": "Bräutigam jung, mit Kranz",
+        "en": "Does the man in the violet robe look young and wear a small wreath?"
+      }
+    ]
+  }
 }

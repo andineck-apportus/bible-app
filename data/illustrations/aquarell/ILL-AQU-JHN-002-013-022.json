@@ -28,6 +28,7 @@
       "model": "gpt-image-2.5-flare",
       "run": "20261027-215912-aquarell-felder",
       "variant": "v1",
+      "reference": "JHN.2.13-JHN.2.17",
       "speech": [
         {
           "from": "FIG-JESUS",
@@ -42,6 +43,7 @@
       "model": "gpt-image-2.5-flare",
       "run": "20261027-220456-aquarell-felder",
       "variant": "v1",
+      "reference": "JHN.2.18-JHN.2.22",
       "speech": [
         {
           "from": "FIG-GRUPPE-MENGE",
@@ -94,20 +96,10 @@
     ]
   ],
   "license": "CC0 1.0 (KI-generiert mit dem Bildmodell von OpenAI; keine Urheberrechte beansprucht)",
-  "authorship_de": "KI-Bild: gemalt mit dem Bildmodell von OpenAI nach Szenenplan, Figurenblatt und Stilreferenz (docs/BILDSTIL.md); Auswahl, Blasen und Datensatz KI-Entwurf (Claude) vom 2026-10-27 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "authorship_de": "KI-Bild: gemalt mit dem Bildmodell von OpenAI nach Szenenplan, Figurenblatt und Stilreferenz (docs/BILDSTIL.md); Auswahl, Blasen und Datensatz KI-Entwurf (Claude) vom 2026-10-28 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
   "knowledge": {
     "asserted_at": "2026-10-27",
     "supersedes": null
-  },
-  "check": {
-    "date": "2026-10-27",
-    "method_de": "Reduzierte Fassung (Skizzencharakter, Rand rundherum, Hinweis Andi Neck 2026-10-27): jedes Feld mit Sprechblasen (Hochdeutsch) gerendert und von einer getrennten KI-Instanz ohne Kenntnis von Bildauftrag und Szenenplan beschrieben (nur die Bilder); danach Kana 1 und Tempel 2 neu gemalt (Alter Marias, Hände der Fragenden). Frühere Runden an der detailreicheren Fassung siehe revision_log.",
-    "limits_de": "Beschreibung einzelner KI-Instanzen; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch).",
-    "result_de": "Geissel, Tiere, Münzen, umgestossener Tisch, Taubenhändler erkannt; Zeichenforderung und Antwort richtig zugeordnet; Hand auf der Brust passt zu «Tempel seines Leibes»; ohne Karikatur.",
-    "open_de": [
-      "Feld 1: Käfige wirken leer; undeutlicher Gegenstand in Jesu linker Hand",
-      "Feld 2 nach dem Neumalen nicht erneut blind geprüft"
-    ]
   },
   "revision_log": [
     {
@@ -131,5 +123,31 @@
         }
       }
     }
-  ]
+  ],
+  "check": {
+    "stufe": "entwurf",
+    "method_de": "Automatische Prüfung (docs/BILDSTIL.md, «Automatische Prüfung»): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment; danach Schlussprüfung der fertigen Kachel mit Blasen. Bildprüfmodell von OpenAI, getrennt vom Malmodell.",
+    "felder": [
+      {
+        "scene": "JHN-002-T1",
+        "ergebnis": "ungeprueft"
+      },
+      {
+        "scene": "JHN-002-T2",
+        "ergebnis": "ungeprueft"
+      }
+    ],
+    "open_de": [],
+    "limits_de": "Urteil eines KI-Modells; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe.",
+    "frueher": {
+      "date": "2026-10-27",
+      "method_de": "Reduzierte Fassung (Skizzencharakter, Rand rundherum, Hinweis Andi Neck 2026-10-27): jedes Feld mit Sprechblasen (Hochdeutsch) gerendert und von einer getrennten KI-Instanz ohne Kenntnis von Bildauftrag und Szenenplan beschrieben (nur die Bilder); danach Kana 1 und Tempel 2 neu gemalt (Alter Marias, Hände der Fragenden). Frühere Runden an der detailreicheren Fassung siehe revision_log.",
+      "limits_de": "Beschreibung einzelner KI-Instanzen; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch).",
+      "result_de": "Geissel, Tiere, Münzen, umgestossener Tisch, Taubenhändler erkannt; Zeichenforderung und Antwort richtig zugeordnet; Hand auf der Brust passt zu «Tempel seines Leibes»; ohne Karikatur.",
+      "open_de": [
+        "Feld 1: Käfige wirken leer; undeutlicher Gegenstand in Jesu linker Hand",
+        "Feld 2 nach dem Neumalen nicht erneut blind geprüft"
+      ]
+    }
+  }
 }

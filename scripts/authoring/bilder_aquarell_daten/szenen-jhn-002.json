@@ -1,8 +1,11 @@
 {
-  "_hinweis": "Szenenplan für Johannes 2 im Aquarellstil (docs/BILDSTIL.md). Je Bildfeld eines Bildauftrags eine gemalte Szene. Wörtliche Rede nur aus unserem Lesetext (Feld «quote» mit Vers; das Werkzeug prüft, dass der Wortlaut so im Vers steht; … markiert Kürzungen). Bild_en ist der Auftrag ans Bildmodell; Blasen werden nicht gemalt, sondern von der App als Text darübergelegt (bubbles: Rahmen und Spitze in Bildkoordinaten 1536×1024, nach Sichtung des Bildes eingetragen). Evidenz: B = textlich belegt, R = rekonstruiert, I = interpretiert. KI-Entwurf (Claude) vom 2026-10-27 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "_hinweis": "Szenenplan für Johannes 2 im Aquarellstil (docs/BILDSTIL.md). Je Bildfeld eines Bildauftrags eine gemalte Szene. Wörtliche Rede nur aus unserem Lesetext (Feld «quote» mit Vers; das Werkzeug prüft, dass der Wortlaut so im Vers steht; … markiert Kürzungen). Bild_en ist der Auftrag ans Bildmodell; Blasen werden nicht gemalt, sondern von der App als Text darübergelegt (Blasen setzt das Werkzeug nach den Kopfpositionen aus der Prüfung; von Hand nur als Ausnahme in auswahl.json). Evidenz: B = textlich belegt, R = rekonstruiert, I = interpretiert. KI-Entwurf (Claude) vom 2026-10-27 auf Wunsch von Andi Neck; keine fachliche Prüfung. «pruefung»: Feldregeln für die automatische Prüfung (Aufbau wie pruefregeln.json; s und ref wie bei evidence).",
   "basis": [
     "TRANS-JHN-002-001-025-DE-WORKING",
     "TRANS-JHN-002-001-025-GSW-ZH-WORKING"
+  ],
+  "tags": [
+    "TAG-JOHN"
   ],
   "szenen": {
     "JHN-002-K1": {
@@ -50,6 +53,34 @@
           "s": "I",
           "de": "Gesichtsausdruck (besorgt, ruhig): vom Text nicht genannt."
         }
+      ],
+      "pruefung": [
+        {
+          "id": "K1-GESPRAECH",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.3",
+          "de": "Die Mutter Jesu wendet sich Jesus zu",
+          "en": "Is the woman in the blue-grey veil turned towards the man in the terracotta-red mantle, as if speaking to him?"
+        },
+        {
+          "id": "K1-MANGEL",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "B",
+          "ref": "JHN.2.3",
+          "de": "Krug oder Becher als Zeichen, dass der Wein fehlt",
+          "en": "Is there a small clay jug or cups near them that can be read as empty?"
+        },
+        {
+          "id": "K1-FEST",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "R",
+          "de": "Fest nur angedeutet",
+          "en": "Is the feast only faintly hinted at (a few pale figures at most), not a detailed crowd?"
+        }
       ]
     },
     "JHN-002-K2": {
@@ -94,6 +125,54 @@
           "s": "R",
           "de": "Form der Krüge, Giessgefässe aus Ton, Zahl und Aussehen der Diener: plausible Ausgestaltung; die Zahl der Diener nennt der Text nicht."
         }
+      ],
+      "pruefung": [
+        {
+          "id": "K2-SECHS",
+          "typ": "anzahl",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.6",
+          "de": "Sechs grosse Steinkrüge",
+          "en": "large stone water jars (count only the big jars, not small pitchers)",
+          "soll": 6
+        },
+        {
+          "id": "K2-FUELLEN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.7",
+          "de": "Diener füllen die Krüge mit Wasser",
+          "en": "Are servants pouring water into the large jars?"
+        },
+        {
+          "id": "K2-MARIA-DIENER",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.5",
+          "de": "Die Mutter Jesu spricht zu den Dienern",
+          "en": "Is the woman in the blue-grey veil turned towards the servants, as if speaking to them?"
+        },
+        {
+          "id": "K2-WEISUNG",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "B",
+          "ref": "JHN.2.7",
+          "de": "Jesus weist auf die Krüge",
+          "en": "Does the man in the terracotta-red mantle point or gesture towards the jars?"
+        },
+        {
+          "id": "K2-KEIN-WEIN",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.9",
+          "de": "Kein Wein in den Krügen: die Verwandlung erzählt der Text nicht",
+          "en": "Is red wine visible in the large jars or flowing from them?"
+        }
       ]
     },
     "JHN-002-K3": {
@@ -137,6 +216,35 @@
           "s": "R",
           "de": "Becher aus Ton, Kleidung, Blütenkranz des Bräutigams: plausible Ausgestaltung."
         }
+      ],
+      "pruefung": [
+        {
+          "id": "K3-KOSTEN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.9",
+          "de": "Der Speisemeister hält einen Becher",
+          "en": "Is the man in the olive-green robe holding a cup?"
+        },
+        {
+          "id": "K3-ZUM-BRAEUTIGAM",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.9-JHN.2.10",
+          "de": "Er spricht zum Bräutigam, nicht zu Jesus",
+          "en": "Is the man with the cup turned towards the young man with the wreath (and not towards the man in the terracotta-red mantle)?"
+        },
+        {
+          "id": "K3-JUENGER",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "B",
+          "ref": "JHN.2.11",
+          "de": "Jesus mit Jüngern dabei",
+          "en": "Is the man in the terracotta-red mantle present together with one or two other men?"
+        }
       ]
     },
     "JHN-002-T1": {
@@ -173,6 +281,70 @@
         {
           "s": "I",
           "de": "Gesichtsausdruck (Eifer): gestützt auf 2,17 «Der Eifer um dein Haus»."
+        }
+      ],
+      "pruefung": [
+        {
+          "id": "T1-GEISSEL",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.15",
+          "de": "Jesus mit einer Geissel aus Stricken",
+          "en": "Is the man in the terracotta-red mantle holding a short whip made of cords?"
+        },
+        {
+          "id": "T1-TISCH",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.15",
+          "de": "Umgestossener Tisch, Münzen fallen",
+          "en": "Is there an overturned or tipping table with coins falling or scattered?"
+        },
+        {
+          "id": "T1-TAUBEN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.16",
+          "de": "Taubenverkäufer mit Tauben oder Käfigen, Jesus wendet sich ihnen zu",
+          "en": "Are there traders with doves or dove cages, and is the man in the terracotta-red mantle turned towards them?"
+        },
+        {
+          "id": "T1-TIERE",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "B",
+          "ref": "JHN.2.14-JHN.2.15",
+          "de": "Schaf oder Rind",
+          "en": "Is at least one sheep or ox visible?"
+        },
+        {
+          "id": "T1-ORT",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "R",
+          "de": "Tempel angedeutet",
+          "en": "Is a temple setting hinted at, for example by columns?"
+        },
+        {
+          "id": "T1-KEIN-SCHLAG",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "ref": "JHN.2.15",
+          "de": "Kein Schlag gegen Menschen (der Text lässt es offen)",
+          "en": "Is the whip hitting a person, or is anyone shown injured or bleeding?"
+        },
+        {
+          "id": "T1-KEIN-HASS",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "ref": "JHN.2.17",
+          "de": "Eifer, nicht Grausamkeit",
+          "en": "Does the man in the terracotta-red mantle look cruel, hateful or contemptuous?"
         }
       ]
     },
@@ -221,6 +393,51 @@
           "s": "R",
           "de": "Kleidung und Gebetsschals der Fragenden, Ansicht des Tempels: plausible Ausgestaltung."
         }
+      ],
+      "pruefung": [
+        {
+          "id": "T2-FRAGE",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.18",
+          "de": "Eine Gruppe fragt Jesus, einer spricht",
+          "en": "Is a small group of men facing the man in the terracotta-red mantle, with one of them speaking or gesturing with an open hand?"
+        },
+        {
+          "id": "T2-ANTWORT",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.19",
+          "de": "Jesus antwortet ihnen ruhig",
+          "en": "Is the man in the terracotta-red mantle facing the group calmly, as if answering?"
+        },
+        {
+          "id": "T2-TEMPEL",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "R",
+          "de": "Tempelgebäude angedeutet",
+          "en": "Is the outline of a large temple building visible in the background?"
+        },
+        {
+          "id": "T2-BRUST",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "I",
+          "de": "Hand auf der eigenen Brust (Bildzeichen für den Leib)",
+          "en": "Does the man in the terracotta-red mantle rest one hand on his own chest?"
+        },
+        {
+          "id": "T2-NICHT-FEINDLICH",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "ref": "JHN.2.18",
+          "de": "Die Fragenden nicht als Feinde gezeichnet",
+          "en": "Are the questioning men shown as threatening, sneering or hostile (fists, weapons, grimaces)?"
+        }
       ]
     },
     "JHN-002-J1": {
@@ -247,6 +464,43 @@
           "s": "R",
           "de": "Stadtansicht, Zusammensetzung der Menge: plausible Ausgestaltung."
         }
+      ],
+      "pruefung": [
+        {
+          "id": "J1-SEHEN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.23",
+          "de": "Mehrere Menschen schauen begeistert zu Jesus",
+          "en": "Are several people looking towards the man in the terracotta-red mantle with glad or eager faces?"
+        },
+        {
+          "id": "J1-ABSTAND",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "I",
+          "ref": "JHN.2.24",
+          "de": "Jesus steht deutlich abseits (vertraut sich nicht an)",
+          "en": "Does the man in the terracotta-red mantle stand clearly apart from the group, with empty space between him and them?"
+        },
+        {
+          "id": "J1-ZURUECK",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "I",
+          "ref": "JHN.2.24",
+          "de": "Jesus zurückhaltend, ernst",
+          "en": "Does the man in the terracotta-red mantle look earnest or reserved rather than joyful?"
+        },
+        {
+          "id": "J1-NICHT-BOESE",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Die Menge nicht abgewertet (der Text bewertet sie nicht)",
+          "en": "Are the people in the group shown as mocking, wicked or hostile?"
+        }
       ]
     },
     "JHN-002-J2": {
@@ -268,6 +522,34 @@
         {
           "s": "I",
           "de": "Blick und Ausdruck: Bildgestaltung für «er erkannte, was im Menschen war»."
+        }
+      ],
+      "pruefung": [
+        {
+          "id": "J2-NAH",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "I",
+          "ref": "JHN.2.25",
+          "de": "Jesus nah, ruhig und ernst, wissender Blick",
+          "en": "Is the man in the terracotta-red mantle shown large and close, with a quiet, serious, understanding expression?"
+        },
+        {
+          "id": "J2-GEGENUEBER",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JHN.2.23-JHN.2.24",
+          "de": "Menschen ihm gegenüber, die ihn bewundern",
+          "en": "Are a few people facing him, looking glad or admiring?"
+        },
+        {
+          "id": "J2-NICHT-BOESE",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Die Menschen nicht abgewertet",
+          "en": "Are the people shown as mocking, wicked or hostile?"
         }
       ]
     }

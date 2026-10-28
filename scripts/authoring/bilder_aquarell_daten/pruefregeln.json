@@ -1,0 +1,19 @@
+{
+  "_hinweis": "Allgemeine Prüfregeln für jedes gemalte Bild (docs/BILDSTIL.md, Abschnitt «Automatische Prüfung»). Drei Ebenen: diese allgemeinen Regeln, Figurenregeln in figuren.json («pruef») und Feldregeln im Szenenplan («pruefung»). art «muss»: die Frage muss mit Ja beantwortet werden; art «nicht»: die Frage fragt nach etwas Verbotenem und muss mit Nein beantwortet werden; typ «anzahl»: das Modell zählt, «soll» gibt die verlangte Zahl. stufe «pflicht»: sonst ist die Variante unbrauchbar; «soll»: zählt bei der Wahl unter brauchbaren Varianten. «wenn»: Regel gilt nur, wenn die Figur im Feld vorkommt. Eine Szene kann Regeln mit «ausnahmen» abschalten (mit Grund).",
+  "version": "2026-10-28",
+  "regeln": [
+    {"id": "G-RAND", "art": "nicht", "stufe": "pflicht", "de": "Niemand und nichts Wichtiges ist vom Bildrand angeschnitten", "en": "Is any person, or any important object, cut off by the edge of the picture?"},
+    {"id": "G-SCHRIFT", "art": "nicht", "stufe": "pflicht", "de": "Keine gemalte Schrift, keine gemalten Sprechblasen", "en": "Are there any painted letters, words, numbers or speech bubbles in the picture?"},
+    {"id": "G-NIMBUS", "art": "nicht", "stufe": "pflicht", "de": "Kein Heiligenschein", "en": "Does anyone have a halo, aureole or glowing ring around the head?"},
+    {"id": "G-EFFEKT", "art": "nicht", "stufe": "pflicht", "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt", "en": "Are there magical or supernatural visual effects such as glowing light, sparkles, rays or shining objects?"},
+    {"id": "G-MODERN", "art": "nicht", "stufe": "pflicht", "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)", "en": "Are there anachronistic modern things, for example glasses, watches, buttons, zips, printed or patterned fabric, prayer shawls with coloured stripes, or modern buildings?"},
+    {"id": "G-KOERPER", "art": "nicht", "stufe": "pflicht", "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)", "en": "Does any person have an extra or missing hand, arm or leg, a hand coming from nowhere, or a malformed face?"},
+    {"id": "G-DOPPELT", "art": "nicht", "stufe": "pflicht", "de": "Keine Person doppelt im selben Bild", "en": "Does the same person (same face and same clothing) appear twice in the picture?"},
+    {"id": "G-KARIKATUR", "art": "nicht", "stufe": "pflicht", "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet", "en": "Is any person drawn as a caricature, grotesque, or with ethnic stereotypes?"},
+    {"id": "G-PROPORTION", "art": "muss", "stufe": "pflicht", "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)", "en": "Do the adults have natural adult proportions (not chibi, anime or cartoon proportions with big heads and big eyes)?"},
+    {"id": "G-REDUKTION", "art": "muss", "stufe": "soll", "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten", "en": "Is the picture a loose, reduced watercolour sketch with a lot of untouched white paper and few details (no detailed textures, fabric folds, hair strands or detailed backgrounds)?"},
+    {"id": "G-OBEN", "art": "muss", "stufe": "soll", "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)", "en": "Is the upper quarter of the picture mostly empty white paper or a very pale wash?"},
+    {"id": "G-ROT", "wenn": "FIG-JESUS", "art": "muss", "stufe": "soll", "de": "Nur Jesus trägt Terrakottarot", "en": "Is the man in the terracotta-red mantle the only person wearing terracotta-red?"},
+    {"id": "G-GOTT", "wenn": "FIG-GOTT", "art": "nicht", "stufe": "pflicht", "de": "Gott nie als Mensch oder Gesicht", "en": "Is God shown as a human figure, a face or a hand?"}
+  ]
+}
