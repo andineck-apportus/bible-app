@@ -1,0 +1,115 @@
+{
+  "id": "PROC-BILDAUFTRAG",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Bildauftrag",
+    "en": "Picture brief"
+  },
+  "group": "bild",
+  "purpose_de": "Vor jedem Bild steht ein stilunabhängiger Auftrag, der gegen den Text geprüft ist.",
+  "current": "2.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-14",
+      "change_de": "Erste Fassung: Bildlexikon und Bildaufträge.",
+      "steps": [
+        {
+          "id": "a1",
+          "role": "bearbeitung",
+          "title_de": "Auftrag aus der Kernanalyse",
+          "do_de": "Je tragendem Moment ein Bildfeld: wer, was, wer zu wem, Reihenfolge; Personen und Dinge nur aus dem Bildlexikon.",
+          "result_de": "Bildauftrag"
+        },
+        {
+          "id": "a3",
+          "role": "pruefung",
+          "title_de": "Auftrag prüfen",
+          "do_de": "Eine weitere Instanz prüft den Auftrag wie eine Zusammenfassung gegen den Text und die Worte sprachlich.",
+          "checks_de": [
+            "Wer-zu-wem",
+            "Reihenfolge",
+            "keine Satzfragmente"
+          ],
+          "back": {
+            "to": "a1",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "a4",
+          "role": "werkzeug",
+          "title_de": "Gleichlauf",
+          "do_de": "Fingerabdrücke von Versen und Zusammenfassung; ändert sich der Text, meldet der Validator «Bildauftrag veraltet».",
+          "checks_de": [
+            "Text unverändert"
+          ],
+          "back": {
+            "to": "a1",
+            "when_de": "Text geändert"
+          }
+        }
+      ],
+      "gate_de": "Auftrag geprüft.",
+      "docs": [
+        "docs/BILDSPRACHE.md",
+        "docs/BILDAUFTRAEGE-ANLEITUNG.md"
+      ]
+    },
+    {
+      "version": "2.0",
+      "valid_from": "2026-10-23",
+      "change_de": "Aus der Kernanalyse; Worte im Bild (Stichwortband, Sprechblasen) in allen Sprachen.",
+      "steps": [
+        {
+          "id": "a1",
+          "role": "bearbeitung",
+          "title_de": "Auftrag aus der Kernanalyse",
+          "do_de": "Je tragendem Moment ein Bildfeld: wer, was, wer zu wem, Reihenfolge; Personen und Dinge nur aus dem Bildlexikon.",
+          "result_de": "Bildauftrag"
+        },
+        {
+          "id": "a2",
+          "role": "bearbeitung",
+          "title_de": "Worte im Bild",
+          "do_de": "Stichwortband und Sprechblasen aus dem Lesetext, für sich verständlich, in allen Sprachen."
+        },
+        {
+          "id": "a3",
+          "role": "pruefung",
+          "title_de": "Auftrag prüfen",
+          "do_de": "Eine weitere Instanz prüft den Auftrag wie eine Zusammenfassung gegen den Text und die Worte sprachlich.",
+          "checks_de": [
+            "Wer-zu-wem",
+            "Reihenfolge",
+            "keine Satzfragmente"
+          ],
+          "back": {
+            "to": "a1",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "a4",
+          "role": "werkzeug",
+          "title_de": "Gleichlauf",
+          "do_de": "Fingerabdrücke von Versen und Zusammenfassung; ändert sich der Text, meldet der Validator «Bildauftrag veraltet».",
+          "checks_de": [
+            "Text unverändert"
+          ],
+          "back": {
+            "to": "a1",
+            "when_de": "Text geändert"
+          }
+        }
+      ],
+      "gate_de": "Auftrag und Worte geprüft.",
+      "docs": [
+        "docs/BILDAUFTRAEGE-ANLEITUNG.md",
+        "docs/VERDICHTUNG.md"
+      ]
+    }
+  ]
+}

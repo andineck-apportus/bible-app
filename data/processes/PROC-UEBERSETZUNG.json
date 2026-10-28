@@ -1,0 +1,208 @@
+{
+  "id": "PROC-UEBERSETZUNG",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Übersetzung aus dem Urtext",
+    "en": "Translation from the original"
+  },
+  "group": "text",
+  "purpose_de": "Eine eigene, nachvollziehbare Übersetzung aus dem Urtext: treu, verständlich, mit offengelegten Entscheiden.",
+  "current": "1.2",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-09",
+      "change_de": "Erste Fassung: Übersetzung mit Wortzuordnung und Entscheiden, inhaltliche Prüfung.",
+      "steps": [
+        {
+          "id": "u1",
+          "role": "bearbeitung",
+          "title_de": "Übersetzen",
+          "do_de": "Aus dem Urtext (Griechisch, Hebräisch) übersetzen, wörtlich orientiert in verständlichem Deutsch; Grundentscheide des Buchs einhalten (Schlüsselwörter, Erzählzeit).",
+          "result_de": "Lesetext je Vers"
+        },
+        {
+          "id": "u2",
+          "role": "bearbeitung",
+          "title_de": "Wörter zuordnen",
+          "do_de": "Jedes deutsche Wort den Wörtern des Urtexts zuordnen (Wortzuordnung).",
+          "result_de": "Wortzuordnung"
+        },
+        {
+          "id": "u3",
+          "role": "bearbeitung",
+          "title_de": "Entscheide festhalten",
+          "do_de": "Wo die Übersetzung glättet, deutet oder einer Tradition folgt, Entscheid mit Begründung und Alternative festhalten. Wirkt eine wörtliche Wendung heute gegen ihren Sinn, gibt der Lesetext den Sinn wieder; die wörtliche Fassung steht als Alternative.",
+          "result_de": "Entscheide und Alternativen beim Vers"
+        },
+        {
+          "id": "u4",
+          "role": "pruefung",
+          "title_de": "Inhalt prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Urtext: Bedeutung, Zeitform, Satzart, Handelnde, Wer-zu-wem.",
+          "checks_de": [
+            "treu zum Urtext",
+            "nichts ergänzt, nichts weggelassen"
+          ],
+          "back": {
+            "to": "u1",
+            "when_de": "Abweichung vom Urtext"
+          }
+        },
+        {
+          "id": "u6",
+          "role": "werkzeug",
+          "title_de": "Validator",
+          "do_de": "Wortzuordnung, Verse und Verweise prüfen.",
+          "checks_de": [
+            "jedes Wort zugeordnet",
+            "Verse vollständig"
+          ]
+        }
+      ],
+      "gate_de": "Lesetext geprüft, Wortzuordnung vollständig.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat."
+    },
+    {
+      "version": "1.1",
+      "valid_from": "2026-10-13",
+      "change_de": "Sprachliche Prüfung als eigener Schritt nach der inhaltlichen.",
+      "steps": [
+        {
+          "id": "u1",
+          "role": "bearbeitung",
+          "title_de": "Übersetzen",
+          "do_de": "Aus dem Urtext (Griechisch, Hebräisch) übersetzen, wörtlich orientiert in verständlichem Deutsch; Grundentscheide des Buchs einhalten (Schlüsselwörter, Erzählzeit).",
+          "result_de": "Lesetext je Vers"
+        },
+        {
+          "id": "u2",
+          "role": "bearbeitung",
+          "title_de": "Wörter zuordnen",
+          "do_de": "Jedes deutsche Wort den Wörtern des Urtexts zuordnen (Wortzuordnung).",
+          "result_de": "Wortzuordnung"
+        },
+        {
+          "id": "u3",
+          "role": "bearbeitung",
+          "title_de": "Entscheide festhalten",
+          "do_de": "Wo die Übersetzung glättet, deutet oder einer Tradition folgt, Entscheid mit Begründung und Alternative festhalten.",
+          "result_de": "Entscheide und Alternativen beim Vers"
+        },
+        {
+          "id": "u4",
+          "role": "pruefung",
+          "title_de": "Inhalt prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Urtext: Bedeutung, Zeitform, Satzart, Handelnde, Wer-zu-wem.",
+          "checks_de": [
+            "treu zum Urtext",
+            "nichts ergänzt, nichts weggelassen"
+          ],
+          "back": {
+            "to": "u1",
+            "when_de": "Abweichung vom Urtext"
+          }
+        },
+        {
+          "id": "u5",
+          "role": "pruefung",
+          "title_de": "Sprache prüfen",
+          "do_de": "Eine weitere Instanz prüft Grammatik, Schweizer Rechtschreibung, heutigen Ausdruck und Lesefluss; geglättet wird nur, soweit Bedeutung, Zeitform, Satzart und Wortzuordnung erhalten bleiben.",
+          "checks_de": [
+            "Grammatik und Rechtschreibung",
+            "keine steifen oder wörtlich übertragenen Wendungen"
+          ],
+          "back": {
+            "to": "u1",
+            "when_de": "sprachlicher Mangel"
+          }
+        },
+        {
+          "id": "u6",
+          "role": "werkzeug",
+          "title_de": "Validator",
+          "do_de": "Wortzuordnung, Verse und Verweise prüfen.",
+          "checks_de": [
+            "jedes Wort zugeordnet",
+            "Verse vollständig"
+          ]
+        }
+      ],
+      "gate_de": "Lesetext inhaltlich und sprachlich geprüft, Wortzuordnung vollständig.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat."
+    },
+    {
+      "version": "1.2",
+      "valid_from": "2026-10-24",
+      "change_de": "Wendungen, die heute gegen ihren Sinn wirken, gibt der Lesetext dem Sinn nach wieder; die wörtliche Fassung bleibt als Alternative (z. B. Mt 5,37).",
+      "steps": [
+        {
+          "id": "u1",
+          "role": "bearbeitung",
+          "title_de": "Übersetzen",
+          "do_de": "Aus dem Urtext (Griechisch, Hebräisch) übersetzen, wörtlich orientiert in verständlichem Deutsch; Grundentscheide des Buchs einhalten (Schlüsselwörter, Erzählzeit).",
+          "result_de": "Lesetext je Vers"
+        },
+        {
+          "id": "u2",
+          "role": "bearbeitung",
+          "title_de": "Wörter zuordnen",
+          "do_de": "Jedes deutsche Wort den Wörtern des Urtexts zuordnen (Wortzuordnung).",
+          "result_de": "Wortzuordnung"
+        },
+        {
+          "id": "u3",
+          "role": "bearbeitung",
+          "title_de": "Entscheide festhalten",
+          "do_de": "Wo die Übersetzung glättet, deutet oder einer Tradition folgt, Entscheid mit Begründung und Alternative festhalten. Wirkt eine wörtliche Wendung heute gegen ihren Sinn, gibt der Lesetext den Sinn wieder; die wörtliche Fassung steht als Alternative.",
+          "result_de": "Entscheide und Alternativen beim Vers"
+        },
+        {
+          "id": "u4",
+          "role": "pruefung",
+          "title_de": "Inhalt prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Urtext: Bedeutung, Zeitform, Satzart, Handelnde, Wer-zu-wem.",
+          "checks_de": [
+            "treu zum Urtext",
+            "nichts ergänzt, nichts weggelassen"
+          ],
+          "back": {
+            "to": "u1",
+            "when_de": "Abweichung vom Urtext"
+          }
+        },
+        {
+          "id": "u5",
+          "role": "pruefung",
+          "title_de": "Sprache prüfen",
+          "do_de": "Eine weitere Instanz prüft Grammatik, Schweizer Rechtschreibung, heutigen Ausdruck und Lesefluss; geglättet wird nur, soweit Bedeutung, Zeitform, Satzart und Wortzuordnung erhalten bleiben.",
+          "checks_de": [
+            "Grammatik und Rechtschreibung",
+            "keine steifen oder wörtlich übertragenen Wendungen"
+          ],
+          "back": {
+            "to": "u1",
+            "when_de": "sprachlicher Mangel"
+          }
+        },
+        {
+          "id": "u6",
+          "role": "werkzeug",
+          "title_de": "Validator",
+          "do_de": "Wortzuordnung, Verse und Verweise prüfen.",
+          "checks_de": [
+            "jedes Wort zugeordnet",
+            "Verse vollständig"
+          ]
+        }
+      ],
+      "gate_de": "Lesetext inhaltlich und sprachlich geprüft, Wortzuordnung vollständig.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/ENTSCHEIDUNGEN.md"
+      ]
+    }
+  ]
+}

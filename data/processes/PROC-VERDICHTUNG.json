@@ -1,0 +1,263 @@
+{
+  "id": "PROC-VERDICHTUNG",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Kernanalyse und Zusammenfassungen",
+    "en": "Core analysis and summaries"
+  },
+  "group": "inhalt",
+  "purpose_de": "Auf jeder Ebene verdichten, nicht nacherzählen; Zusammenfassung und Bild aus derselben Kernanalyse.",
+  "current": "2.2",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-12",
+      "change_de": "Erste Fassung: Zusammenfassungen direkt aus dem Text.",
+      "steps": [
+        {
+          "id": "v4",
+          "role": "bearbeitung",
+          "title_de": "Zusammenfassen",
+          "do_de": "Zusammenfassung je Ebene direkt aus dem Text."
+        },
+        {
+          "id": "v5",
+          "role": "pruefung",
+          "title_de": "Prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Text.",
+          "checks_de": [
+            "treu"
+          ],
+          "back": {
+            "to": "v4",
+            "when_de": "Mangel"
+          }
+        }
+      ],
+      "gate_de": "Gegen den Text geprüft.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat."
+    },
+    {
+      "version": "2.0",
+      "valid_from": "2026-10-23",
+      "change_de": "Kernanalyse als gemeinsame Grundlage von Zusammenfassung und Bild; feste Umfänge je Ebene.",
+      "steps": [
+        {
+          "id": "v2",
+          "role": "bearbeitung",
+          "title_de": "Kernanalyse",
+          "do_de": "Kernaussage, tragende Momente in Reihenfolge, Sprecher, bewusst Weggelassenes; kein Glied der Struktur fällt weg.",
+          "result_de": "Kernanalyse"
+        },
+        {
+          "id": "v3",
+          "role": "pruefung",
+          "title_de": "Kernanalyse prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Text: Handelnde, Wer-zu-wem, Zeitform, Ankündigung statt Bericht, nichts Wesentliches fehlt.",
+          "checks_de": [
+            "gibt wieder, was dasteht",
+            "Struktur vollständig"
+          ],
+          "back": {
+            "to": "v2",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "v4",
+          "role": "bearbeitung",
+          "title_de": "Zusammenfassen",
+          "do_de": "Aus der Kernanalyse die Zusammenfassung je Ebene mit festem Umfang; Abschnitt: keine relevante Information geht verloren; Kapitel: Kernaussage jedes Abschnitts.",
+          "result_de": "Zusammenfassung"
+        },
+        {
+          "id": "v5",
+          "role": "pruefung",
+          "title_de": "Zusammenfassung prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den übersetzten Text, dann sprachlich in allen Sprachen.",
+          "checks_de": [
+            "treu",
+            "Umfang je Ebene",
+            "sprachlich richtig"
+          ],
+          "back": {
+            "to": "v4",
+            "when_de": "Mangel"
+          }
+        },
+        {
+          "id": "v6",
+          "role": "werkzeug",
+          "title_de": "Gleichlauf",
+          "do_de": "Fingerabdrücke der Verse; ändert sich der Text, meldet der Validator die Zusammenfassung als veraltet.",
+          "checks_de": [
+            "Text unverändert seit Prüfung"
+          ],
+          "back": {
+            "to": "v2",
+            "when_de": "Text geändert"
+          }
+        }
+      ],
+      "gate_de": "Kernanalyse und Zusammenfassung geprüft.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/VERDICHTUNG.md"
+      ]
+    },
+    {
+      "version": "2.1",
+      "valid_from": "2026-10-24",
+      "change_de": "Struktur zuerst: Strukturanalyse vor der Kernanalyse; kein Glied der Logik fällt weg.",
+      "steps": [
+        {
+          "id": "v1",
+          "role": "bearbeitung",
+          "title_de": "Struktur bestimmen",
+          "do_de": "Wie der Text gebaut ist: Reihe, Gegensatz, Bedingung und Folge, Baum, Raum, Weg, Rahmen, Dialog … (Strukturkatalog).",
+          "result_de": "Strukturanalyse"
+        },
+        {
+          "id": "v2",
+          "role": "bearbeitung",
+          "title_de": "Kernanalyse",
+          "do_de": "Kernaussage, tragende Momente in Reihenfolge, Sprecher, bewusst Weggelassenes; kein Glied der Struktur fällt weg.",
+          "result_de": "Kernanalyse"
+        },
+        {
+          "id": "v3",
+          "role": "pruefung",
+          "title_de": "Kernanalyse prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Text: Handelnde, Wer-zu-wem, Zeitform, Ankündigung statt Bericht, nichts Wesentliches fehlt.",
+          "checks_de": [
+            "gibt wieder, was dasteht",
+            "Struktur vollständig"
+          ],
+          "back": {
+            "to": "v2",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "v4",
+          "role": "bearbeitung",
+          "title_de": "Zusammenfassen",
+          "do_de": "Aus der Kernanalyse die Zusammenfassung je Ebene mit festem Umfang; Abschnitt: keine relevante Information geht verloren; Kapitel: Kernaussage jedes Abschnitts.",
+          "result_de": "Zusammenfassung"
+        },
+        {
+          "id": "v5",
+          "role": "pruefung",
+          "title_de": "Zusammenfassung prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den übersetzten Text, dann sprachlich in allen Sprachen.",
+          "checks_de": [
+            "treu",
+            "Umfang je Ebene",
+            "sprachlich richtig"
+          ],
+          "back": {
+            "to": "v4",
+            "when_de": "Mangel"
+          }
+        },
+        {
+          "id": "v6",
+          "role": "werkzeug",
+          "title_de": "Gleichlauf",
+          "do_de": "Fingerabdrücke der Verse; ändert sich der Text, meldet der Validator die Zusammenfassung als veraltet.",
+          "checks_de": [
+            "Text unverändert seit Prüfung"
+          ],
+          "back": {
+            "to": "v2",
+            "when_de": "Text geändert"
+          }
+        }
+      ],
+      "gate_de": "Struktur, Kernanalyse und Zusammenfassung geprüft.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/VERDICHTUNG.md",
+        "docs/STRUKTURKATALOG.md"
+      ]
+    },
+    {
+      "version": "2.2",
+      "valid_from": "2026-10-25",
+      "change_de": "Umfang je Ebene geschärft: Abschnitt verliert keine relevante Information; Kapitel enthält jede Abschnitts-Kernaussage.",
+      "steps": [
+        {
+          "id": "v1",
+          "role": "bearbeitung",
+          "title_de": "Struktur bestimmen",
+          "do_de": "Wie der Text gebaut ist: Reihe, Gegensatz, Bedingung und Folge, Baum, Raum, Weg, Rahmen, Dialog … (Strukturkatalog).",
+          "result_de": "Strukturanalyse"
+        },
+        {
+          "id": "v2",
+          "role": "bearbeitung",
+          "title_de": "Kernanalyse",
+          "do_de": "Kernaussage, tragende Momente in Reihenfolge, Sprecher, bewusst Weggelassenes; kein Glied der Struktur fällt weg.",
+          "result_de": "Kernanalyse"
+        },
+        {
+          "id": "v3",
+          "role": "pruefung",
+          "title_de": "Kernanalyse prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den Text: Handelnde, Wer-zu-wem, Zeitform, Ankündigung statt Bericht, nichts Wesentliches fehlt.",
+          "checks_de": [
+            "gibt wieder, was dasteht",
+            "Struktur vollständig"
+          ],
+          "back": {
+            "to": "v2",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "v4",
+          "role": "bearbeitung",
+          "title_de": "Zusammenfassen",
+          "do_de": "Aus der Kernanalyse die Zusammenfassung je Ebene mit festem Umfang; Abschnitt: keine relevante Information geht verloren; Kapitel: Kernaussage jedes Abschnitts.",
+          "result_de": "Zusammenfassung"
+        },
+        {
+          "id": "v5",
+          "role": "pruefung",
+          "title_de": "Zusammenfassung prüfen",
+          "do_de": "Eine weitere Instanz prüft gegen den übersetzten Text, dann sprachlich in allen Sprachen.",
+          "checks_de": [
+            "treu",
+            "Umfang je Ebene",
+            "sprachlich richtig"
+          ],
+          "back": {
+            "to": "v4",
+            "when_de": "Mangel"
+          }
+        },
+        {
+          "id": "v6",
+          "role": "werkzeug",
+          "title_de": "Gleichlauf",
+          "do_de": "Fingerabdrücke der Verse; ändert sich der Text, meldet der Validator die Zusammenfassung als veraltet.",
+          "checks_de": [
+            "Text unverändert seit Prüfung"
+          ],
+          "back": {
+            "to": "v2",
+            "when_de": "Text geändert"
+          }
+        }
+      ],
+      "gate_de": "Struktur, Kernanalyse und Zusammenfassung geprüft.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/VERDICHTUNG.md",
+        "docs/STRUKTURKATALOG.md"
+      ]
+    }
+  ]
+}

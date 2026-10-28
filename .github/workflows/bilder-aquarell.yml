@@ -32,6 +32,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: bildpilot
@@ -82,6 +83,7 @@ jobs:
           python3 scripts/authoring/bilder_aquarell_lauf.py "${SCHRITT#auto-}" --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$RUNDEN" --hinweis "$HINWEIS" $extra
 
       - name: Daten auf Branch bilder-auto/<Lauf>
+        id: daten
         if: startsWith(inputs.schritt, 'auto-')
         env:
           LAUF: ${{ github.run_number }}
@@ -94,6 +96,27 @@ jobs:
           git checkout -b "bilder-auto/$LAUF"
           git commit -qm "Bilder automatisch: Lauf $LAUF (${{ inputs.schritt }} ${{ inputs.szenen }})"
           git push origin "bilder-auto/$LAUF"
+          echo "branch=bilder-auto/$LAUF" >> "$GITHUB_OUTPUT"
+
+      # Prozess PROC-FREIGABE 2.0 (Entscheid Andi Neck 2026-10-28): Lauf automatisch in main übernehmen, wenn Zusammenführen
+      # und Validator bestehen; danach Bau, Tests und Veröffentlichung anstossen.
+      - name: In main übernehmen
+        if: steps.daten.outputs.branch != ''
+        env:
+          BRANCH: ${{ steps.daten.outputs.branch }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ok=0
+          for i in 1 2 3 4; do
+            git fetch -q origin main
+            git checkout -q -f -B uebernahme origin/main
+            if python3 scripts/authoring/bilder_merge.py "$BRANCH" && git push origin HEAD:main; then ok=1; break; fi
+            git merge --abort 2>/dev/null || true
+            git reset -q --hard
+            sleep 20
+          done
+          [ "$ok" = 1 ] || { echo "::error::Übernahme in main fehlgeschlagen – Lauf liegt auf $BRANCH"; exit 1; }
+          gh workflow run deploy.yml --ref main
 
       - name: Auf Branch bildpilot-ausgabe sichern
         if: always()

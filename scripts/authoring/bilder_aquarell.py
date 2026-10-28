@@ -375,12 +375,12 @@ def pruef_check(b, aus, alt_check, aktuell_sha=None):
         felder.append(f)
         offen += [f"{s}: {x}" for x in f["offen_de"] if "(fehler" in x or "(unklar" in x]
         offen += [f"{s} (Kachel): {x}" for x in (f.get("schluss") or {}).get("offen_de", [])]
-    c = {"stufe": stufe,
-         "method_de": "Automatische Prüfung (docs/BILDSTIL.md, «Automatische Prüfung»): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen "
-                      "(allgemein, Figur, Feld) und Vergleich mit dem Moment; danach Schlussprüfung der fertigen Kachel mit Blasen. "
-                      "Bildprüfmodell von OpenAI, getrennt vom Malmodell.",
+    vers = sorted({(aus[s].get("pruefung") or {}).get("prozess") for s in b["felder"]} - {None})
+    c = {"stufe": stufe, "process": vers[0] if len(vers) == 1 else ("PROC-BILD-AQUARELL@1.0" if not vers else vers[0]),
+         "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen "
+                      "(allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
          "felder": felder, "open_de": offen,
-         "limits_de": "Urteil eines KI-Modells; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). "
+         "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). "
                       "Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."}
     if alt_check and "felder" not in alt_check:
         c["frueher"] = alt_check

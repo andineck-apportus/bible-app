@@ -53,6 +53,7 @@ def stempel(pr, sz, fig, allg):  # fig: Figurenangaben der Szene
     pr["datum"] = JETZT.date().isoformat()
     pr["plan_sha"] = BP.plan_fingerabdruck(sz, fig, allg)
     pr["regeln_version"] = allg["version"]
+    pr["prozess"] = BP.PROZESS
     return pr
 
 
@@ -83,6 +84,7 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
         try:
             a["schluss"] = BP.pruefe_kachel(schluessel, png, sz.get("speech", []), fig[sid], momente[sid])
             a["schluss"]["datum"] = JETZT.date().isoformat()
+            a["schluss"]["prozess"] = BP.PROZESS
             if len(sz.get("speech", [])) > 1 and not BA.reihe_ok(sz["speech"], (a.get("pruefung") or {}).get("koepfe", {})):
                 a["schluss"]["ergebnis"] = "durchgefallen"
                 a["schluss"]["regeln"].append({"id": "S-REIHE", "ebene": "kachel", "stufe": "pflicht", "de": "Wer zuerst spricht, steht links",

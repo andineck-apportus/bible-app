@@ -1,0 +1,128 @@
+{
+  "id": "PROC-QUELLEN",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Quellen und Urtext",
+    "en": "Sources and original text"
+  },
+  "group": "text",
+  "purpose_de": "Nur Quellen verwenden, deren Recht geklärt ist, und den Urtext nachvollziehbar übernehmen.",
+  "current": "1.1",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-09",
+      "change_de": "Lizenzschichten: freier Kern und Studienschicht getrennt.",
+      "steps": [
+        {
+          "id": "q1",
+          "role": "bearbeitung",
+          "title_de": "Quelle finden",
+          "do_de": "Editionen, Handschriften, Übersetzungen und Hilfsmittel für den Abschnitt suchen; Fassung, Fundort und Nutzungsbedingungen festhalten."
+        },
+        {
+          "id": "q2",
+          "role": "bearbeitung",
+          "title_de": "Recht prüfen",
+          "do_de": "Nutzungsrecht bestimmen: gemeinfrei, CC0, CC BY, CC BY-SA in den freien Kern; nicht kommerzielle Quellen nur in die Studienschicht; geschützte Quellen nur nennen.",
+          "result_de": "Eintrag im Quellenkatalog mit Nutzungsrecht, Verwendung und Begründung"
+        },
+        {
+          "id": "q4",
+          "role": "bearbeitung",
+          "title_de": "Urtext übernehmen",
+          "do_de": "Edition und Datenversion festlegen, Originaldatei mit Prüfsumme nachweisen, Wörter (Token) mit Morphologie übernehmen.",
+          "result_de": "Text mit stabilen Wort-IDs"
+        },
+        {
+          "id": "q5",
+          "role": "werkzeug",
+          "title_de": "Vollständigkeit prüfen",
+          "do_de": "Versumfang, Verszählung und Wort-IDs gegen die Edition prüfen.",
+          "checks_de": [
+            "alle Verse vorhanden",
+            "Zählung nach Versifikation"
+          ],
+          "back": {
+            "to": "q4",
+            "when_de": "Lücke oder Zählfehler"
+          }
+        }
+      ],
+      "gate_de": "Quelle mit geklärtem Recht und vollständiger, geprüfter Text.",
+      "docs": [
+        "LIZENZEN.md",
+        "docs/QUELLEN.md"
+      ]
+    },
+    {
+      "version": "1.1",
+      "valid_from": "2026-10-13",
+      "change_de": "Quellenkatalog mit Abgleich im Validator; Anfragen an Rechteinhaber protokolliert.",
+      "steps": [
+        {
+          "id": "q1",
+          "role": "bearbeitung",
+          "title_de": "Quelle finden",
+          "do_de": "Editionen, Handschriften, Übersetzungen und Hilfsmittel für den Abschnitt suchen; Fassung, Fundort und Nutzungsbedingungen festhalten."
+        },
+        {
+          "id": "q2",
+          "role": "bearbeitung",
+          "title_de": "Recht prüfen",
+          "do_de": "Nutzungsrecht bestimmen: gemeinfrei, CC0, CC BY, CC BY-SA in den freien Kern; nicht kommerzielle Quellen nur in die Studienschicht; geschützte Quellen nur nennen.",
+          "result_de": "Eintrag im Quellenkatalog mit Nutzungsrecht, Verwendung und Begründung"
+        },
+        {
+          "id": "q3",
+          "role": "werkzeug",
+          "title_de": "Katalog abgleichen",
+          "do_de": "Der Validator prüft, dass jede Herkunftsadresse im Katalog steht und verwendete Quellen auf vorhandene Dateien zeigen.",
+          "checks_de": [
+            "Herkunft im Katalog",
+            "Schichten nicht vermischt"
+          ],
+          "back": {
+            "to": "q2",
+            "when_de": "Herkunft fehlt oder Schicht falsch"
+          }
+        },
+        {
+          "id": "q4",
+          "role": "bearbeitung",
+          "title_de": "Urtext übernehmen",
+          "do_de": "Edition und Datenversion festlegen, Originaldatei mit Prüfsumme nachweisen, Wörter (Token) mit Morphologie übernehmen.",
+          "result_de": "Text mit stabilen Wort-IDs"
+        },
+        {
+          "id": "q5",
+          "role": "werkzeug",
+          "title_de": "Vollständigkeit prüfen",
+          "do_de": "Versumfang, Verszählung und Wort-IDs gegen die Edition prüfen.",
+          "checks_de": [
+            "alle Verse vorhanden",
+            "Zählung nach Versifikation"
+          ],
+          "back": {
+            "to": "q4",
+            "when_de": "Lücke oder Zählfehler"
+          }
+        },
+        {
+          "id": "q6",
+          "role": "herausgabe",
+          "title_de": "Anfragen",
+          "do_de": "Bei Quellen mit unklarem Recht fragt der Herausgeber beim Rechteinhaber an; Anfrage und Antwort werden protokolliert."
+        }
+      ],
+      "gate_de": "Quelle im Katalog, Recht geklärt, Text vollständig und geprüft.",
+      "docs": [
+        "LIZENZEN.md",
+        "docs/QUELLEN.md",
+        "docs/ANFRAGEN.md"
+      ]
+    }
+  ]
+}

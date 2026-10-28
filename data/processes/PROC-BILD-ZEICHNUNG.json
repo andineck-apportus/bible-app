@@ -1,0 +1,98 @@
+{
+  "id": "PROC-BILD-ZEICHNUNG",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Gezeichnete Bilder (Symbol, Anime)",
+    "en": "Drawn pictures (symbol, anime)"
+  },
+  "group": "bild",
+  "purpose_de": "Bilder aus Zeichen des Bildlexikons, mit Blindtest geprüft. Abgelöst durch den Aquarellstil, wo dieser vorliegt.",
+  "current": "2.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-14",
+      "change_de": "Erste Fassung: Blindtest mit Legende.",
+      "steps": [
+        {
+          "id": "z1",
+          "role": "werkzeug",
+          "title_de": "Zeichnen",
+          "do_de": "Das Werkzeug zeichnet das Bild aus Bildauftrag und Zeichen des Bildlexikons (Stil Symbol bzw. Anime)."
+        },
+        {
+          "id": "z3",
+          "role": "pruefung",
+          "title_de": "Blindtest",
+          "do_de": "Eine weitere Instanz beschreibt das Bild mit der Legende, ohne den Auftrag.",
+          "checks_de": [
+            "Handelnde",
+            "Wer-zu-wem",
+            "Reihenfolge"
+          ],
+          "back": {
+            "to": "z1",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "z4",
+          "role": "herausgabe",
+          "title_de": "Liste offener Punkte",
+          "do_de": "Was nach drei Runden offen ist, kommt auf eine kurze Liste für den Herausgeber."
+        }
+      ],
+      "gate_de": "Blindtest ohne Abweichung oder Restpunkte vermerkt.",
+      "docs": [
+        "docs/BILDSPRACHE.md"
+      ]
+    },
+    {
+      "version": "2.0",
+      "valid_from": "2026-10-22",
+      "change_de": "Blindtest ohne Legende mit Zielwerten; Anordnung im Browser geprüft.",
+      "steps": [
+        {
+          "id": "z1",
+          "role": "werkzeug",
+          "title_de": "Zeichnen",
+          "do_de": "Das Werkzeug zeichnet das Bild aus Bildauftrag und Zeichen des Bildlexikons (Stil Symbol bzw. Anime)."
+        },
+        {
+          "id": "z2",
+          "role": "werkzeug",
+          "title_de": "Anordnung prüfen",
+          "do_de": "Im Browser: Text ragt nicht über Zellen, Blasen und Pfeile überdecken nichts."
+        },
+        {
+          "id": "z3",
+          "role": "pruefung",
+          "title_de": "Blindtest ohne Legende",
+          "do_de": "Eine weitere Instanz sieht nur das Bild: Welche Stelle? Was geschieht? Wer ist wer? Ein Vergleich mit der Kernanalyse vergibt Punkte.",
+          "checks_de": [
+            "Stelle erkannt",
+            "Kernaussage getroffen",
+            "Wer-zu-wem ohne Fehler"
+          ],
+          "back": {
+            "to": "z1",
+            "when_de": "Zielwert nicht erreicht (höchstens drei Runden)"
+          }
+        },
+        {
+          "id": "z4",
+          "role": "herausgabe",
+          "title_de": "Liste offener Punkte",
+          "do_de": "Was nach drei Runden offen ist, kommt auf eine kurze Liste für den Herausgeber."
+        }
+      ],
+      "gate_de": "Zielwerte erreicht oder Restpunkte vermerkt.",
+      "docs": [
+        "docs/BILDPROZESS.md",
+        "docs/SYMBOLPROZESS.md"
+      ]
+    }
+  ]
+}

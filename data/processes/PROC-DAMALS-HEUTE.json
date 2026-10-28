@@ -1,0 +1,59 @@
+{
+  "id": "PROC-DAMALS-HEUTE",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Damals → Prinzip → Heute",
+    "en": "Then → principle → today"
+  },
+  "group": "inhalt",
+  "purpose_de": "Den Text treu lassen und daneben gekennzeichnet übertragen.",
+  "current": "1.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-23",
+      "change_de": "Erste Fassung.",
+      "steps": [
+        {
+          "id": "d1",
+          "role": "bearbeitung",
+          "title_de": "Damals",
+          "do_de": "Hintergrund der ersten Leser: Situation, Sitte, Bedeutung damals."
+        },
+        {
+          "id": "d2",
+          "role": "bearbeitung",
+          "title_de": "Prinzip",
+          "do_de": "Den Grundsatz ableiten, der über die damalige Situation hinaus gilt, mit Begründung."
+        },
+        {
+          "id": "d3",
+          "role": "bearbeitung",
+          "title_de": "Heute",
+          "do_de": "Anwendung je Zielgruppe mit Grenze. Heutiges steht nie im Bibeltext, in Zusammenfassung oder Bild."
+        },
+        {
+          "id": "d4",
+          "role": "pruefung",
+          "title_de": "Prüfen",
+          "do_de": "Eine weitere Instanz prüft die Herleitung Damals → Prinzip → Heute und die Kennzeichnung.",
+          "checks_de": [
+            "Text bleibt treu",
+            "Stufen gekennzeichnet"
+          ],
+          "back": {
+            "to": "d2",
+            "when_de": "Herleitung trägt nicht"
+          }
+        }
+      ],
+      "gate_de": "Drei Stufen getrennt und geprüft.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/DAMALS-PRINZIP-HEUTE.md"
+      ]
+    }
+  ]
+}

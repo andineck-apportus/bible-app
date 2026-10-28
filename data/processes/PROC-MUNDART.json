@@ -1,0 +1,70 @@
+{
+  "id": "PROC-MUNDART",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Weitere Sprachen und Mundarten",
+    "en": "Further languages and dialects"
+  },
+  "group": "text",
+  "purpose_de": "Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutschen abgeleitet.",
+  "current": "1.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-13",
+      "change_de": "Erste Fassung (Züridüütsch).",
+      "steps": [
+        {
+          "id": "m1",
+          "role": "bearbeitung",
+          "title_de": "Aus dem Urtext übersetzen",
+          "do_de": "Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle.",
+          "result_de": "Lesetext der Schicht"
+        },
+        {
+          "id": "m2",
+          "role": "bearbeitung",
+          "title_de": "Schicht beschreiben",
+          "do_de": "Sprache, Zielgruppe, Schreibweise (z. B. Züridüütsch nach Dieth) und Ton festhalten; Entscheide wie bei der Übersetzung."
+        },
+        {
+          "id": "m3",
+          "role": "pruefung",
+          "title_de": "Inhalt prüfen",
+          "do_de": "Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung.",
+          "checks_de": [
+            "treu zum Urtext"
+          ],
+          "back": {
+            "to": "m1",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "m4",
+          "role": "pruefung",
+          "title_de": "Sprache prüfen",
+          "do_de": "Eine weitere Instanz prüft Schreibweise, Wortwahl und Lesefluss der Mundart.",
+          "checks_de": [
+            "festgelegte Schreibweise",
+            "idiomatisch"
+          ],
+          "back": {
+            "to": "m1",
+            "when_de": "Mangel"
+          }
+        },
+        {
+          "id": "m5",
+          "role": "herausgabe",
+          "title_de": "Muttersprachlich prüfen",
+          "do_de": "Eine Person mit dieser Muttersprache liest gegen; erst dann wird die Prüfung eingetragen."
+        }
+      ],
+      "gate_de": "Inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat."
+    }
+  ]
+}

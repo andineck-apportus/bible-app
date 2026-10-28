@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.141 — 2026-10-28 — Prozesse versioniert, Bilder automatisch freigegeben
+
+Entscheide von Andi Neck (2026-10-28).
+- **Prozesse:** elf Arbeitsweisen als versionierte Prozesse mit Schritten, Rollen (bearbeitende Instanz, weitere Instanzen prüfen, Werkzeug, Bildmodell, Herausgeber), Prüfungen, Rücksprüngen und Freigabebedingung ([docs/PROZESSE.md](docs/PROZESSE.md), `data/processes/`, Werkzeug `scripts/authoring/prozesse.py`, neuer Typ `process`). Frühere Fassungen bleiben erhalten (z. B. Bilder im Aquarellstil 1.0, 2.0, 2.1; Kernanalyse 1.0 bis 2.2).
+- **In der App:** Einstellungen › Prozesse zeigt die aktuellen Fassungen; jeder Prozess als Ablauf mit Rollen, Prüfungen und Rücksprüngen, frühere Fassungen über die Fassungswahl. Bilder, Übersetzung, Kernanalyse und Quellenprüfung verweisen auf die Fassung, nach der sie entstanden sind. Hinweise auf KI und Claude entfallen; «So arbeiten wir» beschreibt das Vorgehen über die Prozesse.
+- **Freigabe:** Bildläufe gehen automatisch nach `main`, wenn Zusammenführen und Validator bestehen; danach wird veröffentlicht (PROC-FREIGABE 2.0, `scripts/authoring/bilder_merge.py`).
+- **Joh 2,25:** Stichwortband als ganzer Satz («er selbst erkannte nämlich, was im Menschen war»), Szene mit erwachsenen Festpilgern; neue Regel gegen das Lesen als Kindersegnung (Fund aus zwei Blindbeschreibungen).
+- **Validator:** Prozessdatensätze (Fassungen, Rollen, Rücksprünge) und Verweise `check.process`.
+
 ## v0.140 — 2026-10-28 — Bilder: automatische Prüfung, neue Beispiele, Versuche mit Strukturen
 
 Ziel (Andi Neck, 2026-10-28): Prozesse, Regeln und Prüfungen so festlegen, dass später kein Mensch mehr drüberschauen muss; mehr Beispiele, um das Regelwerk zu testen. Regelwerk in [docs/BILDSTIL.md](docs/BILDSTIL.md), Abschnitte 8 und 9.

@@ -34,6 +34,7 @@ Aussprache und Vorlesen.
 | Hintergrund, Grundsatz, Anwendung je Zielgruppe | «Damals → Heute» am Titel jeder Ebene ([DAMALS-PRINZIP-HEUTE.md](DAMALS-PRINZIP-HEUTE.md)) | – |
 | Zusammenfassung und Bild | Ebene selbst (Text \| Bild) | – |
 | Vorgehen, Prüfung, Stand, Zeichen | Menü › «So arbeiten wir» | – |
+| Prozesse (Ablauf, Rollen, Prüfungen, frühere Fassungen) | Einstellungen › Prozesse; Verweis «Entstanden nach …» bei Bildern, Übersetzung, Kernanalyse, Quellenprüfung | – |
 
 Was im Lesetext markiert ist, ist nur ein Hinweis: Die volle Information steht immer im Versblatt.
 

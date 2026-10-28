@@ -36,6 +36,7 @@ API = "https://api.openai.com/v1"
 VORZUG = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]
 _modell = None
 VERFAHREN = "2026-10-28c"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
+PROZESS = "PROC-BILD-AQUARELL@2.1"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
 
 
 def lade(p):

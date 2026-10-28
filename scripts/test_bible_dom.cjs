@@ -15,11 +15,11 @@ const vOf=r=>Number(r.split('.')[2]);
 const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.')&&vOf(a.ref)>=20); // Pilotabschnitt Mk 3,20–35
 
 // Feste Darstellung (docs/LESEN-UND-VERTIEFEN.md): fortlaufend, Urtext und Umschrift an, keine Zeilen für Lesarten und Hintergrund im Text; nicht einstellbar
-click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,3,'Einstellungen in drei Gruppen');
+click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,4,'Einstellungen in vier Gruppen (mit Prozessen)');assert(sheetHost.querySelector('[data-proc^="PROC-BILD-AQUARELL@"]'),'Prozesse in den Einstellungen');click('[data-proc^="PROC-BILD-AQUARELL@"]');assert(sheetHost.querySelectorAll('.proc-flow .proc-step').length>5,'Prozess als Ablauf');click('[data-proc="PROC-BILD-AQUARELL@1.0"]');assert(sheetHost.querySelector('.proc-old'),'frühere Fassung abrufbar');click('[data-action=menu]');click('[data-settings]');
 for(const k of ['flow','inline','bgInline','advanced','translit'])assert(!sheetHost.querySelector(`[data-toggle=${k}]`),k+' nicht einstellbar');
 click('[data-close]');
 // So arbeiten wir
-click('[data-action=menu]');click('[data-method]');{const tx=sheetHost.textContent;assert(tx.includes('Was wo steht')&&tx.includes('Zeichen im Text')&&tx.includes('Wer prüft')&&tx.includes('github.com/andineck-apportus/bible-app'),'So arbeiten wir');}click('[data-close]');
+click('[data-action=menu]');click('[data-method]');{const tx=sheetHost.textContent;assert(tx.includes('Was wo steht')&&tx.includes('Zeichen im Text')&&tx.includes('Wie geprüft wird')&&!/KI-|Claude/.test(tx)&&tx.includes('github.com/andineck-apportus/bible-app'),'So arbeiten wir');}click('[data-close]');
 
 // Einstieg über das Menü in den Pilotabschnitt; Studienblatt mit Deutung und Gegenargument
 click('[data-action=index]');click('[data-go="TU-MRK-003-020-021"]');

@@ -85,7 +85,7 @@ Aus [BILDSPRACHE.md](BILDSPRACHE.md), unverändert verbindlich auch im Aquarells
 - **Gott** nie als Mensch; Zeichen bleibt der Strahlenkranz mit יהוה.
 - **«Die Juden»** im Johannesevangelium als neutrale, würdige Menge verschiedenen Alters; nie karikiert, eingefärbt oder vereinheitlicht; keine typisierten Merkmale.
 - **Gewalt und starke Gefühle:** erkennbar zeigen, was geschieht, ohne auszumalen (Bewegung, Folge, Augenblick davor/danach); Tod und Böses nicht ausblenden, nicht beschönigen.
-- **Kennzeichnung:** Jedes Bild ist Deutung und als KI-Bild ausgewiesen (Modell, Datum, Prüfstand im Datensatz und in der Legende).
+- **Kennzeichnung:** Jedes Bild ist Deutung und verweist auf den Prozess und die Fassung, nach der es entstanden ist ([PROZESSE.md](PROZESSE.md), PROC-BILD-AQUARELL); Modell, Datum und Prüfstand stehen im Datensatz, der Prüfstand auch in der Legende (Entscheid Andi Neck 2026-10-28: in der App keine KI-Hinweise, sondern der Prozessverweis).
 
 ## 6 Ergänzung – Bilder in der App
 
@@ -142,4 +142,5 @@ Szenen werden gemalt; was gemessen, gezählt oder verortet ist, kommt aus Daten 
 ## Änderungsnachweis
 
 - **2026-10-27:** V1.2 übernommen (Andi Neck). Ergänzt: Stilreferenz nur für die Bildsprache; Herstellung nach Form (Szenen gemalt, Masse und Strukturen aus Daten); B/R/I in der Legende; unsere Textbasis; weiter geltende Darstellungsregeln; Einzelfelder und Worte als Text in der App. Erste Anwendung: Johannes 2.
+- **2026-10-28:** Prozessbeschreibung versioniert (PROC-BILD-AQUARELL 1.0, 2.0, 2.1); Bildläufe werden automatisch übernommen (PROC-FREIGABE 2.0).
 - **2026-10-28:** Automatische Prüfung mit Regeln auf drei Ebenen, Prüfstufen und automatisch gesetzten Blasen (Abschnitt 8); Pilot Strukturen (Abschnitt 9); weitere Beispiele Mk 4,35–41 und Lk 15,11–32 (Wunsch Andi Neck: Regelwerk an mehr Beispielen testen).

@@ -200,13 +200,28 @@ for key in ("findings", "interpretations", "principles", "applications", "questi
         bundle(f"b/{b}").setdefault(key, []).append(x)
 for x in study["relations"]:
     bundle(f"b/{book_of_id[x['from']]}").setdefault("relations", []).append(x)
+# Prozesse (docs/PROZESSE.md): alle Fassungen in den Kern; Inhalte verweisen auf «PROC-…@Fassung», nach der sie entstanden sind
+procs = {}
+for f in sorted((ROOT / "data/processes").glob("PROC-*.json")):
+    pr_ = json.loads(f.read_text(encoding="utf-8"))
+    procs[pr_["id"]] = {k: pr_[k] for k in ("names", "group", "purpose_de", "current", "versions")}
+
+
+def proc_at(pid, datum):
+    """Fassung eines Prozesses, die an einem Datum galt."""
+    vs = procs[pid]["versions"]
+    gilt = [v for v in vs if v["valid_from"] <= (datum or "9999")]
+    return f"{pid}@{(gilt[-1] if gilt else vs[0])['version']}"
+
+
 # Kernanalysen (docs/VERDICHTUNG.md) für «Verstehen» auf Kapitel- und Buchebene; nur Hochdeutsch (noch keine Lokalisierungen)
 for f in sorted((ROOT / "data/core-analyses").glob("CORE-*.json")):
     c = json.loads(f.read_text(encoding="utf-8"))
     bundle(f"b/{c['reference'].split('.')[0]}").setdefault("core", []).append({
         "id": c["id"], "level": c["level"], "ref": c["reference"], "core": c["core_de"], "purpose": c.get("purpose_de"),
         "mode": c.get("mode"), "moments": [{"ref": m["reference"], "text": m["text_de"]} for m in c["moments"]],
-        "omitted": c.get("omitted_de", []), "checked": bool(c.get("review"))})
+        "omitted": c.get("omitted_de", []), "checked": bool(c.get("review")),
+        "proc": proc_at("PROC-VERDICHTUNG", (c.get("knowledge") or {}).get("asserted_at"))})
 for x in background:
     b = x["chapter"].split(".")[0]
     x = dict(x)
@@ -249,13 +264,13 @@ def _check_text(c):
         return c.get("result_de")
     f = [x for x in c.get("felder", []) if x.get("regeln")]
     if not f:
-        return "Entwurf, noch nicht automatisch geprüft."
+        return "Noch nicht geprüft."
     n = sum(len(x["regeln"]) for x in f)
     datum = max((x.get("datum") or "") for x in f)
-    if c["stufe"] == "ki-geprueft":
-        return f"Automatisch geprüft am {datum}: alle Pflichtregeln erfüllt ({n} Prüfungen in {len(f)} Feldern, Bildprüfmodell ohne Kenntnis des Auftrags beschreibt zuerst blind). Keine fachliche Prüfung."
+    if c["stufe"] in ("ki-geprueft", "fachlich-geprueft"):
+        return f"Geprüft am {datum}: alle Pflichtregeln erfüllt ({n} Prüfungen in {len(f)} Feldern, durch weitere Instanzen; die erste beschreibt das Bild blind, ohne den Auftrag zu kennen)."
     offen = len(c.get("open_de") or [])
-    return f"Entwurf – automatische Prüfung am {datum}: {offen} offene Punkte."
+    return f"In Prüfung (Stand {datum}): {offen} offene Punkte."
 
 
 def _ill_svg(fp):
@@ -277,9 +292,9 @@ for rid, r in ill_recs.items():
             "alt": r["alt_de"], "note": r.get("note_de") or br.get("interpretation_note_de"), "check": _check_text(r.get("check") or {}),
             "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]], "captions": br.get("captions_de"),
             "svg": _ill_svg(ROOT / r["file"])}
-    if r.get("evidence"):  # Aquarellstil (docs/BILDSTIL.md): Belege je Feld (B/R/I) und Herkunft des KI-Bilds für die Legende
+    if r.get("evidence"):  # Aquarellstil (docs/BILDSTIL.md): Belege je Feld (B/R/I) für die Legende
         item["evidence"] = r["evidence"]
-        item["made"] = r.get("authorship_de")
+    item["proc"] = (r.get("check") or {}).get("process") or proc_at("PROC-BILD-ZEICHNUNG", (r.get("check") or {}).get("date") or (r.get("knowledge") or {}).get("asserted_at"))
     bname = "b/_overview" if r["level"] in ("bible", "testament", "group", "book") else f"b/{ref_book(r['reference'])}"
     bundle(bname).setdefault("ill", {}).setdefault(key, {})[st["key"]] = item
     for lg, f in ill_l10n.get(rid, {}).items():
@@ -363,7 +378,8 @@ def page(inline):
     t = template
     for marker, payload in (("/*__STUDY__*/null", core_study), ("/*__NAV__*/null", nav), ("/*__SUMMARIES__*/null", core_sums),
                             ("/*__BACKGROUND__*/null", []), ("/*__SOURCES__*/null", core_src), ("/*__XREF__*/null", core_xref),
-                            ("/*__MANIFEST__*/null", manifest), ("/*__INLINE__*/null", inline), ("/*__CATALOG__*/null", catalog), ("/*__ILL__*/null", ill_core)):
+                            ("/*__MANIFEST__*/null", manifest), ("/*__INLINE__*/null", inline), ("/*__CATALOG__*/null", catalog), ("/*__ILL__*/null", ill_core),
+                            ("/*__PROC__*/null", procs)):
         assert t.count(marker) == 1, marker
         t = t.replace(marker, dump(payload))
     return t

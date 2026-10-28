@@ -306,6 +306,25 @@ def main():
                             errors.append(f"{rel}: Prüfung veraltet – Bild {f_.get('scene')} hat sich seit der Prüfung geändert")
                     if {f_.get("scene") for f_ in c_.get("felder") or []} != set(imgs_):
                         errors.append(f"{rel}: Stufe {st_}, aber nicht jedes Feld geprüft")
+        if r.get("type") == "process":
+            # Prozesse (docs/PROZESSE.md): Fassungen aufsteigend, Rollen gültig, Rücksprünge auf vorhandene Schritte
+            vs_ = r.get("versions") or []
+            if [v.get("valid_from") for v in vs_] != sorted(v.get("valid_from") for v in vs_):
+                errors.append(f"{rel}: Fassungen nicht nach Datum geordnet")
+            if vs_ and r.get("current") != vs_[-1].get("version"):
+                errors.append(f"{rel}: current ist nicht die letzte Fassung")
+            for v in vs_:
+                ids_ = {st_.get("id") for st_ in v.get("steps") or []}
+                for st_ in v.get("steps") or []:
+                    if st_.get("role") not in ("bearbeitung", "pruefung", "werkzeug", "modell", "herausgabe"):
+                        errors.append(f"{rel}: Fassung {v.get('version')}, Schritt {st_.get('id')}: Rolle {st_.get('role')!r} ungültig")
+                    if st_.get("back") and st_["back"].get("to") not in ids_:
+                        errors.append(f"{rel}: Fassung {v.get('version')}, Schritt {st_.get('id')}: Rücksprung auf unbekannten Schritt")
+        if r.get("type") == "illustration" and (r.get("check") or {}).get("process"):
+            pid_, _, pv_ = r["check"]["process"].partition("@")
+            pr_ = records.get(pid_, (None, {}))[1]
+            if pr_.get("type") != "process" or pv_ not in {v.get("version") for v in pr_.get("versions") or []}:
+                errors.append(f"{rel}: check.process {r['check']['process']!r} unbekannt")
         if r.get("type") == "illustration_style":
             if r.get("library") and not (ROOT / r["library"]).is_file():
                 errors.append(f"{rel}: Bibliothek {r['library']} fehlt")
