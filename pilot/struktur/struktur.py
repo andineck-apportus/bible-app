@@ -443,9 +443,11 @@ def zusammen(lauf):
     if tl and tw_:
         meer, seen, jordan = karte_teile()
         wasser = pfad(meer, True) + " " + " ".join(pfad(x, True) for x in seen)
-        grund = (f'<image href="{data_uri(tl)}" x="0" y="0" width="{KW}" height="{KH}" preserveAspectRatio="xMidYMid slice" opacity=".8"/>'
-                 f'<clipPath id="wa"><path d="{wasser}"/></clipPath>'
-                 f'<g filter="url(#nass)"><image href="{data_uri(tw_)}" x="0" y="0" width="{KW}" height="{KH}" preserveAspectRatio="xMidYMid slice" clip-path="url(#wa)"/></g>'
+        grund = (f'<clipPath id="la"><path clip-rule="evenodd" d="M0,0 H{KW} V{KH} H0 Z {wasser}"/></clipPath><clipPath id="wa"><path d="{wasser}"/></clipPath>'
+                 f'<filter id="sand"><feColorMatrix type="saturate" values=".55"/></filter>'
+                 f'<g clip-path="url(#la)"><image href="{data_uri(tl)}" x="0" y="0" width="{KW}" height="{KH}" preserveAspectRatio="xMidYMid slice" opacity=".7" filter="url(#sand)"/></g>'
+                 f'<g filter="url(#nass)"><path d="{wasser}" fill="#9FBCCB"/>'
+                 f'<image href="{data_uri(tw_)}" x="0" y="0" width="{KW}" height="{KH}" preserveAspectRatio="xMidYMid slice" clip-path="url(#wa)" style="mix-blend-mode:multiply"/></g>'
                  + "".join(f'<path d="{pfad(j)}" fill="none" stroke="#7FA2B5" stroke-width="1.8" filter="url(#linie)"/>' for j in jordan))
         svg = svg_doc(KW, KH, grund + karte_daten(False))
         (ERG / "karte_C.svg").write_text(svg, encoding="utf-8")
