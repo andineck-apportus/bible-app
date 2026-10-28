@@ -373,6 +373,13 @@ def auftraege():
                                     "because measurements will be drawn on top later. The court walls are white linen hangings on posts; the tent walls are "
                                     "gilded acacia boards; the veil and the east gate are woven in blue, purple and scarlet; the altar and basin are bronze; "
                                     "ark, table, incense altar and lampstand are gold. The ground is plain sand. No people, no animals, no lettering, no frame. " + STIL}}
+    a["textur-land"] = {"vorlage": None, "groesse": "1024x1536",
+                        "prompt": "A full sheet of loose, transparent watercolour washes for the land of a map: sand, pale ochre and pale olive, soft blooms, "
+                                  "a few darker soft patches like hills, granulation of the paint visible. No shapes of anything, no objects, no lines, no lettering, "
+                                  "the washes cover the whole sheet evenly to the edges. " + STIL}
+    a["textur-wasser"] = {"vorlage": None, "groesse": "1024x1536",
+                          "prompt": "A full sheet of loose, transparent watercolour washes for water on a map: pale blue-grey and soft blue, a few gentle horizontal "
+                                    "strokes, soft blooms. No shapes of anything, no objects, no lines, no lettering, the washes cover the whole sheet evenly to the edges. " + STIL}
     for v, (vv, a_, b_) in zip(VIGNETTEN, selig_glieder()):
         a[f"selig-{v}"] = {"vorlage": None, "groesse": "1536x1024",
                            "prompt": f"A small vignette in the style of a Bible watercolour sketch, first-century Galilee, adults with natural proportions and simple, "
@@ -432,6 +439,17 @@ def zusammen(lauf):
         svg = svg_doc(KW, KH, karte_daten(False), data_uri(k))
         (ERG / "karte_B.svg").write_text(svg, encoding="utf-8")
         png(svg, ERG / "karte_B.png", KW, KH)
+    tl, tw_ = ablegen("textur-land", KW, KH), ablegen("textur-wasser", KW, KH)
+    if tl and tw_:
+        meer, seen, jordan = karte_teile()
+        wasser = pfad(meer, True) + " " + " ".join(pfad(x, True) for x in seen)
+        grund = (f'<image href="{data_uri(tl)}" x="0" y="0" width="{KW}" height="{KH}" preserveAspectRatio="xMidYMid slice" opacity=".8"/>'
+                 f'<clipPath id="wa"><path d="{wasser}"/></clipPath>'
+                 f'<g filter="url(#nass)"><image href="{data_uri(tw_)}" x="0" y="0" width="{KW}" height="{KH}" preserveAspectRatio="xMidYMid slice" clip-path="url(#wa)"/></g>'
+                 + "".join(f'<path d="{pfad(j)}" fill="none" stroke="#7FA2B5" stroke-width="1.8" filter="url(#linie)"/>' for j in jordan))
+        svg = svg_doc(KW, KH, grund + karte_daten(False))
+        (ERG / "karte_C.svg").write_text(svg, encoding="utf-8")
+        png(svg, ERG / "karte_C.png", KW, KH)
     s_ = ablegen("stiftshuette", IW, IH)
     if s_:
         import re

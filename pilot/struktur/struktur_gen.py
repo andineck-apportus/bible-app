@@ -36,6 +36,19 @@ def deckung(vorlage, bild):
     return round(float((v & bb).sum() / max(1, v.sum())), 3)
 
 
+def wasser_iou(vorlage, bild):
+    """Karten: Übereinstimmung der Wasserflächen (Anteil gemeinsamer Fläche, 0–1). Kanten taugen nicht: eine gemalte Fläche
+    hat überall Kanten (Lauf 2026-10-28: Kantenmass 0,92 bei völlig verschobenem See)."""
+    import numpy as np
+    from PIL import Image
+
+    def maske(p):
+        a = np.asarray(Image.open(p).convert("RGB").resize((300, 430))).astype(int)
+        return (a[..., 2] - a[..., 0] > 18) & (a[..., 2] > 120)
+    v, b = maske(vorlage), maske(bild)
+    return round(float((v & b).sum() / max(1, (v | b).sum())), 3)
+
+
 def main():
     nur = sys.argv[1].split(",") if len(sys.argv) > 1 and sys.argv[1] != "alle" else None
     n = int(sys.argv[2]) if len(sys.argv) > 2 else 1
@@ -61,6 +74,8 @@ def main():
                 e["dateien"].append(datei)
                 if a["vorlage"]:
                     e.setdefault("deckung", {})[datei] = deckung(HIER / a["vorlage"], out / datei)
+                    if name == "karte":
+                        e.setdefault("wasser_iou", {})[datei] = wasser_iou(HIER / a["vorlage"], out / datei)
             print("ok", name, e.get("deckung", ""))
         except Exception as ex:
             e["fehler"] = str(ex)
