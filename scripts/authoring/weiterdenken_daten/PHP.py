@@ -338,3 +338,8 @@ for _x in RECEPTIONS:
         if _x["id"] in RECHECK_EXTRA:
             _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
         _x["source_check"] = _sc
+
+# Prüfvermerk der Prüfrunde vom 2026-10-29 (getrennte Instanz; docs/WEITERDENKEN.md, Feld check)
+CHECK = {"date": "2026-10-29", "by": "weitere Instanz (KI)", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung (Zitate per Skript wörtlich verglichen); Quellen der Rezeption nur in frei zugänglichen Ausgaben nachgeschlagen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.0"}
+# in der Prüfung (oder bei der Zitat-Prüfung am selben Tag) berichtigt
+CHECK_CORRECTED = ["RCPT-PHP-0002", "RCPT-PHP-0003", "RCPT-PHP-0005", "RCPT-PHP-0006", "REFL-PHP-0001", "REFL-PHP-0002", "REFL-PHP-0006", "REFL-PHP-0007", "REFL-PHP-0009", "REFL-PHP-0010", "REFL-PHP-0011", "REFL-PHP-0012", "REFL-PHP-0013", "REFL-PHP-0016", "REFL-PHP-0017", "REFL-PHP-0018", "REFL-PHP-0019", "REFL-PHP-0020", "REFL-PHP-0023", "REFL-PHP-0024", "REFL-PHP-0026", "REFL-PHP-0027", "REFL-PHP-0028", "REFL-PHP-0029", "REFL-PHP-0030", "REFL-PHP-0033"]

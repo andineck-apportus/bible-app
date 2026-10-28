@@ -353,3 +353,8 @@ for _x in RECEPTIONS:
         if _x["id"] in RECHECK_EXTRA:
             _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
         _x["source_check"] = _sc
+
+# Prüfvermerk der Prüfrunde vom 2026-10-29 (getrennte Instanz; docs/WEITERDENKEN.md, Feld check)
+CHECK = {"date": "2026-10-29", "by": "weitere Instanz (KI)", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung (Zitate per Skript wörtlich verglichen); Quellen der Rezeption nur in frei zugänglichen Ausgaben nachgeschlagen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.0"}
+# in der Prüfung (oder bei der Zitat-Prüfung am selben Tag) berichtigt
+CHECK_CORRECTED = ["RCPT-RUT-0001", "RCPT-RUT-0004", "REFL-RUT-0001", "REFL-RUT-0005", "REFL-RUT-0006", "REFL-RUT-0008", "REFL-RUT-0009", "REFL-RUT-0010", "REFL-RUT-0012", "REFL-RUT-0013", "REFL-RUT-0014", "REFL-RUT-0015", "REFL-RUT-0018", "REFL-RUT-0019", "REFL-RUT-0020", "REFL-RUT-0021", "REFL-RUT-0023", "REFL-RUT-0024", "REFL-RUT-0026", "REFL-RUT-0027", "REFL-RUT-0029", "REFL-RUT-0031", "REFL-RUT-0032"]

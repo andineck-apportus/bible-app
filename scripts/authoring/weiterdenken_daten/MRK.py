@@ -972,3 +972,8 @@ RECHECK_METHOD = ("KI-Prüfung durch eine weitere, getrennte Instanz (Claude) am
 for _r in RECEPTIONS:
     if _r["id"] in RECHECKED:
         _r["source_check"] = {**_r["source_check"], "date": "2026-10-29", "method_de": RECHECK_METHOD}
+
+# Prüfvermerk der Prüfrunde vom 2026-10-29 (getrennte Instanz; docs/WEITERDENKEN.md, Feld check)
+CHECK = {"date": "2026-10-29", "by": "weitere Instanz (KI)", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung (Zitate per Skript wörtlich verglichen); Quellen der Rezeption nur in frei zugänglichen Ausgaben nachgeschlagen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.0"}
+# in der Prüfung (oder bei der Zitat-Prüfung am selben Tag) berichtigt
+CHECK_CORRECTED = ["RCPT-MRK-0001", "RCPT-MRK-0002", "RCPT-MRK-0003", "RCPT-MRK-0005", "RCPT-MRK-0006", "RCPT-MRK-0007", "RCPT-MRK-0008", "RCPT-MRK-0009", "RCPT-MRK-0010", "RCPT-MRK-0012", "RCPT-MRK-0013", "RCPT-MRK-0014", "REFL-MRK-0003", "REFL-MRK-0014", "REFL-MRK-0023", "REFL-MRK-0026", "REFL-MRK-0029", "REFL-MRK-0032", "REFL-MRK-0036", "REFL-MRK-0040", "REFL-MRK-0052", "REFL-MRK-0057", "REFL-MRK-0061", "REFL-MRK-0063", "REFL-MRK-0080", "REFL-MRK-0085", "REFL-MRK-0090", "REFL-MRK-0096", "REFL-MRK-0118", "REFL-MRK-0124", "REFL-MRK-0130", "REFL-MRK-0133", "REFL-MRK-0134", "REFL-MRK-0144", "REFL-MRK-0151", "REFL-MRK-0153", "REFL-MRK-0155", "REFL-MRK-0158", "REFL-MRK-0160", "REFL-MRK-0165", "REFL-MRK-0171", "REFL-MRK-0172", "REFL-MRK-0176", "REFL-MRK-0190", "REFL-MRK-0192", "REFL-MRK-0205", "REFL-MRK-0207", "REFL-MRK-0208", "REFL-MRK-0216", "REFL-MRK-0217"]

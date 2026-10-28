@@ -1351,7 +1351,7 @@ RECEPTIONS = [
     {
      "id": "RCPT-JHN-0012",
      "subject": "TU-JHN-019-004-007",
-     "tradition": "modern_scholarship",
+     "tradition": "church_teaching",
      "period_de": "1965 bis heute",
      "text_de": "Die Passionserzählung des Johannes, in der oft pauschal «die Juden» handeln, wurde über Jahrhunderte zur Anklage aller Juden verwendet und hat Judenfeindschaft genährt. Das Zweite Vatikanische Konzil hält in der Erklärung «Nostra aetate» fest: Zwar hätten jüdische Obrigkeiten mit ihren Anhängern auf den Tod Christi gedrängt (mit Verweis auf [[JHN.19.6]]); doch dürfe man das Geschehen weder allen damals lebenden noch den heutigen Juden zur Last legen. Neuere Auslegung fragt, wen das Evangelium mit «den Juden» jeweils meint.",
      "sources_de": [
@@ -1463,3 +1463,8 @@ RECEPTIONS = [
      }
     },
 ]
+
+# Prüfvermerk der Prüfrunde vom 2026-10-29 (getrennte Instanz; docs/WEITERDENKEN.md, Feld check)
+CHECK = {"date": "2026-10-29", "by": "weitere Instanz (KI)", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung (Zitate per Skript wörtlich verglichen); Quellen der Rezeption nur in frei zugänglichen Ausgaben nachgeschlagen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.0"}
+# in der Prüfung (oder bei der Zitat-Prüfung am selben Tag) berichtigt
+CHECK_CORRECTED = ["RCPT-JHN-0001", "RCPT-JHN-0002", "RCPT-JHN-0003", "RCPT-JHN-0004", "RCPT-JHN-0005", "RCPT-JHN-0006", "RCPT-JHN-0007", "RCPT-JHN-0008", "RCPT-JHN-0009", "RCPT-JHN-0010", "RCPT-JHN-0011", "RCPT-JHN-0012", "RCPT-JHN-0013", "RCPT-JHN-0014", "RCPT-JHN-0015", "REFL-JHN-0006", "REFL-JHN-0007", "REFL-JHN-0021", "REFL-JHN-0029", "REFL-JHN-0030", "REFL-JHN-0067", "REFL-JHN-0074", "REFL-JHN-0082", "REFL-JHN-0091", "REFL-JHN-0100", "REFL-JHN-0118", "REFL-JHN-0123", "REFL-JHN-0124", "REFL-JHN-0125", "REFL-JHN-0134", "REFL-JHN-0135", "REFL-JHN-0136", "REFL-JHN-0140", "REFL-JHN-0146", "REFL-JHN-0151", "REFL-JHN-0155", "REFL-JHN-0157", "REFL-JHN-0176", "REFL-JHN-0183", "REFL-JHN-0185", "REFL-JHN-0187", "REFL-JHN-0189", "REFL-JHN-0196", "REFL-JHN-0201", "REFL-JHN-0202", "REFL-JHN-0208", "REFL-JHN-0215", "REFL-JHN-0219", "REFL-JHN-0229", "REFL-JHN-0245", "REFL-JHN-0247", "REFL-JHN-0249"]

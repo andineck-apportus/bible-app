@@ -59,7 +59,8 @@ def _write(path, rec):
     """Schreibt nur bei Änderung; geänderte und gestrichene Felder mit voriger Fassung ins revision_log."""
     if path.exists():
         old = json.loads(path.read_text(encoding="utf-8"))
-        changed = {k: old.get(k) for k in sorted(set(rec) | set(old)) if k not in SKIP and old.get(k) != rec.get(k)}
+        changed = {k: old.get(k) for k in sorted(set(rec) | set(old)) if k not in SKIP and old.get(k) != rec.get(k)
+                   and not (k == "check" and k not in old)}  # erstmals eingetragener Prüfvermerk ist keine inhaltliche Revision
         log = old.get("revision_log", [])
         if changed and (TRACKED is None or path in TRACKED):
             date = os.environ.get("BIBLE_REVISION_DATE") or datetime.date.today().isoformat()
