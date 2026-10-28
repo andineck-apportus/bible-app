@@ -155,32 +155,31 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
 
     def px(b):
         x0, y0, x1, y1 = b[0] * W / 1000, b[1] * H / 1000, b[2] * W / 1000, b[3] * H / 1000
-        dx, dy = (x1 - x0) * rand, (y1 - y0) * rand
+        dx, dy = (x1 - x0) * rand, (y1 - y0) * rand * 0.35   # nach oben wenig Rand: dort sitzt die Blase
         return (x0 - dx, y0 - dy, x1 + dx, y1 + dy)
     kb = {f: px(k["kopf"]) for f, k in koepfe.items()}
     hindernisse = list(kb.values()) + [px(b) for b in weitere if b and len(b) == 4]
     oben = min([k[1] for k in hindernisse] or [H])      # oberes Band: über allen Köpfen
 
-    def setze(n, gesetzt):
+    def kandidaten(n, grenze=None):
+        """Alle zulässigen Plätze für Blase n (ohne Rücksicht auf andere Blasen), nach eigenen Kosten sortiert."""
         sp = speech[n]
         if sp["from"] not in kb:
-            return None
+            return []
         hx0, hy0, hx1, hy1 = kb[sp["from"]]
         hx = (hx0 + hx1) / 2
-        best = None
+        out = []
         for fs in (21, 19, 17):
-            for w in range(170, 331, 20):
+            for w in range(170, 391, 20):
                 h = _hoehe(sp, w, fs)
-                for x in range(6, W - 6 - w + 1, 4):
-                    for y in range(4, H - 6 - h + 1, 4):
+                for x in range(6, W - 6 - w + 1, 6):
+                    for y in range(4, H - 6 - h + 1, 6):
                         box = (x, y, x + w, y + h)
                         if any(_schneidet(box, k, 6) for k in hindernisse):
                             continue
-                        if any(_schneidet(box, (g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), 8) for g in gesetzt.values()):
-                            continue
                         if streng and y + h > oben - 6:
                             continue
-                        if y + h <= hy0 - 10:          # über dem Kopf: Spitze nach unten zur Kopfmitte oben
+                        if y + h <= hy0 - 6:           # über dem Kopf: Spitze nach unten zur Kopfmitte oben
                             tail = (hx, hy0 - 3)
                             lang = hy0 - 3 - (y + h)
                             seit = abs((x + w / 2) - hx)
@@ -194,37 +193,58 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
                             seit = 220            # neben dem Kopf nur, wenn darüber kein Platz ist
                         else:
                             continue
-                        kosten = (seit * 0.5 + (0 if y + h <= oben - 6 else 90) + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6 + y * 0.25 + (21 - fs) * 12
-                                  + (h - 2 * 14) * 1.2 + (w - 170) * 0.05)
-                        for m, v in gesetzt.items():  # Lesereihenfolge: frühere Rede links bzw. oben
-                            vor = m < n
-                            links = x + w / 2 < v["x"] + v["w"] / 2 - 20 and y < v["y"] + v["h"] / 2
-                            rechts = x + w / 2 > v["x"] + v["w"] / 2 + 20 and y + h / 2 > v["y"]
-                            if (vor and rechts) or (not vor and links):
-                                kosten += 120
-                        if best is None or kosten < best[0]:
-                            best = (kosten, {"x": x, "y": y, "w": w, "h": h, "fs": fs, "tail": [round(tail[0]), round(tail[1])]})
-        return best
+                        kosten = (seit * 0.5 + (0 if y + h <= oben - 6 else 90) + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6
+                                  + y * 0.25 + (21 - fs) * 12 + (h - 2 * 14) * 1.2 + (w - 170) * 0.05)
+                        out.append((kosten, {"x": x, "y": y, "w": w, "h": h, "fs": fs, "tail": [round(tail[0]), round(tail[1])]}))
+        out.sort(key=lambda e: e[0])
+        return out[:grenze]
 
-    import itertools
-    beste = None
-    for folge in itertools.permutations(range(len(speech))):   # schwierige Blase zuerst setzen, wenn nötig
-        gesetzt, kosten, fehlt = {}, 0, []
-        for n in folge:
-            r = setze(n, gesetzt)
-            if r is None:
-                fehlt.append(n)
-                continue
-            gesetzt[n] = r[1]
-            kosten += r[0]
-        wert = (len(fehlt), kosten)
-        if beste is None or wert < beste[0]:
-            beste = (wert, gesetzt, fehlt)
-        if not fehlt:
-            break
-    _, gesetzt, fehlt = beste
-    fehler = [f"Blase {n + 1}: " + (f"Kopf von {speech[n]['from']} unbekannt" if speech[n]["from"] not in kb else f"kein freier Platz bei {speech[n]['from']}")
-              for n in sorted(fehlt)]
+    def frei(g, andere):
+        return not any(_schneidet((g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), (v["x"], v["y"], v["x"] + v["w"], v["y"] + v["h"]), 8) for v in andere)
+
+    def reihenfolge(gesetzt):  # frühere Rede links bzw. oben
+        k = 0
+        ns = sorted(gesetzt)
+        for i, m in enumerate(ns):
+            for n in ns[i + 1:]:
+                v, g = gesetzt[m], gesetzt[n]
+                if g["x"] + g["w"] / 2 < v["x"] + v["w"] / 2 - 20 and g["y"] < v["y"] + v["h"] / 2:
+                    k += 120
+        return k
+
+    kand = [kandidaten(n) for n in range(len(speech))]
+    beste = [None]
+
+    def suche(n, gesetzt, kosten):
+        if beste[0] and kosten >= beste[0][0]:
+            return
+        if n == len(speech):
+            gesamt_ = kosten + reihenfolge(gesetzt)
+            if not beste[0] or gesamt_ < beste[0][0]:
+                beste[0] = (gesamt_, dict(gesetzt))
+            return
+        breite_ = 1 if n == len(speech) - 1 else (600 if n == 0 else 60)   # letzte Blase: günstigster freier Platz
+        versucht = 0
+        for k_, g in kand[n]:
+            if versucht >= breite_:
+                break
+            if frei(g, gesetzt.values()):
+                versucht += 1
+                gesetzt[n] = g
+                suche(n + 1, gesetzt, kosten + k_)
+                del gesetzt[n]
+
+    suche(0, {}, 0)
+    if beste[0]:
+        return [beste[0][1][n] for n in range(len(speech))], []
+    # keine Lösung für alle: so viele wie möglich, je die günstigste freie
+    gesetzt, fehler = {}, []
+    for n in range(len(speech)):
+        g = next((g for _, g in kand[n] if frei(g, gesetzt.values())), None)
+        if g:
+            gesetzt[n] = g
+        else:
+            fehler.append(f"Blase {n + 1}: " + (f"Kopf von {speech[n]['from']} unbekannt" if speech[n]["from"] not in kb else f"kein freier Platz bei {speech[n]['from']}"))
     return [gesetzt.get(n) for n in range(len(speech))], fehler
 
 

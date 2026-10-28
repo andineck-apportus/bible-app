@@ -155,6 +155,12 @@ def neu(a, schluessel, out):
                     BP.melde(f"{sid} {var} prüfen: {ex}")
                     continue
                 pr["modell_bild"] = m
+                if sz.get("speech"):  # feste Prüfung: Platz für alle Blasen, sonst unbrauchbar (Joh 2 T2, Lauf 19)
+                    _, bf = BA.blasen_auto(sz["speech"], pr.get("koepfe", {}), [p_.get("head") for p_ in pr.get("personen", [])])
+                    if bf:
+                        pr["regeln"].append({"id": "S-PLATZ", "ebene": "kachel", "stufe": "pflicht", "de": "Platz für alle Blasen über den Köpfen",
+                                             "ergebnis": "fehler", "antwort": None, "grund": "; ".join(bf) + " – leave more empty white paper above the heads"})
+                        pr["ergebnis"] = "durchgefallen"
                 e["varianten"].append({"datei": f"{sid}__{var}.png", "runde": runde, "pruefung": pr, "hinweis": hinweis})
                 print(f"{sid} {var}: {pr['ergebnis']} ({pr['punkte']} Punkte)")
                 rang = ({"bestanden": 2, "unklar": 1}.get(pr["ergebnis"], 0), pr["punkte"])
