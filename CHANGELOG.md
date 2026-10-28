@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.143 — 2026-10-28 — Erklärung so breit wie das Bild, Rahmen vollständig
+
+Hinweise von Andi Neck (2026-10-28): Die eingeblendete Erklärung je Feld ist genau so breit wie ihr Bild (gemalte Bilder bis 480, gezeichnete bis 340, auf dem Handy volle Breite; vorher fest 340). Der Rahmen der gemalten Kacheln liegt etwas weiter innen und behält beim Skalieren seine Stärke, damit die untere Linie nicht weggerundet wird. Veröffentlichung: Erfolg wird abgewartet, bevor er gemeldet wird; der Test «Lernen» blendet die Leisten vor dem Menü ein.
+
 ## v0.142 — 2026-10-28 — Erklärung je Bildfeld, Sprechblasen auf freiem Papier
 
 Hinweise von Andi Neck (2026-10-28).

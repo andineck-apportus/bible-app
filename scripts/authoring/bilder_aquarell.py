@@ -369,7 +369,7 @@ def kachel(i, sz_id, sz, aus, kw, x, y):
         if b:
             teile.append(blase(b, sp, n))
     teile.append(band(i, kw))
-    teile.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H + BAND - 1}" fill="none" stroke="#D8D0C0" stroke-width="1"/></svg>')
+    teile.append(f'<rect x="1" y="1" width="{W - 2}" height="{H + BAND - 2}" fill="none" stroke="#D8D0C0" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>')
     return "".join(teile)
 
 

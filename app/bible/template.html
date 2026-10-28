@@ -477,6 +477,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .ev-B{background:#6F7C5A}#bible-stream .ev-R{background:#A27C55}#bible-stream .ev-I{background:#6E8793}
 /* gemalte Bilder (Aquarellstil) dürfen grösser sein als gezeichnete Kacheln */
 #bible-stream .ill-tiles>svg.ill-tile[data-scene],#bible-stream .tile-box>svg.ill-tile[data-scene]{max-width:480px}
+/* Erklärung je Feld genau so breit wie ihr Bild (Hinweis Andi Neck 2026-10-28) */
+#bible-stream .tile-box:has(>svg.ill-tile[data-scene])>.tile-cap{max-width:480px}
+#bible-stream .verse-ill .tile-box:has(>svg.ill-tile[data-scene]){max-width:480px;margin:0 auto}
+#bible-stream .tile-cap{box-sizing:border-box}
 @media (min-width:601px){#bible-stream .ill-tiles:has(>svg.ill-tile[data-scene]),#bible-stream .ill-tiles:has(>.tile-box>svg.ill-tile[data-scene]){grid-template-columns:1fr;gap:10px;max-width:480px}}
 @media (min-width:760px){
   #bible-stream .app[data-ill]:not([data-level="6"]) .reader .column{max-width:calc(100% - 48px)}
