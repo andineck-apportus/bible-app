@@ -4152,5 +4152,344 @@
       "bild_sha": "ec2c71f56e587c1b",
       "datum": "2026-10-28"
     }
+  },
+  "MRK-004-S3": {
+    "datei": "img/MRK-004-S3.webp",
+    "lauf": "20261028-084658-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-10-28",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 5,
+      "kern": 2,
+      "kern_fehlt_de": "Die ehrfürchtige Frage der Jünger («Wer ist dieser?») wird nicht ausdrücklich erwähnt.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The boat and all visible people are within the picture; nothing important is sliced by a hard edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No letters, words, numbers, or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No one has a halo or ring around the head."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "There are no glowing lights, rays, sparkles, or shining supernatural objects."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No extra or missing limbs, stray hands, or malformed faces are clearly visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Person doppelt im selben Bild",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No identical person appears twice."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The people are not drawn as caricatures or grotesque stereotypes."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have natural adult proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a loose watercolor-style image with much white space and a sparse background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "G-ROT",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Nur Jesus trägt Terrakottarot",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Only the man on the right wears a terracotta-red mantle."
+        },
+        {
+          "id": "F-JESUS-GESICHT",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Gesicht Jesu voll sichtbar (wie bei allen Menschen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The face of the man in the terracotta-red mantle is visible with eyes, nose, and mouth."
+        },
+        {
+          "id": "S3-RUHE",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Glattes, ruhiges Wasser",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The water appears calm with only gentle reflections and no waves."
+        },
+        {
+          "id": "S3-FRAGE",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Jesus wendet sich den Jüngern zu",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The man in the terracotta-red mantle is turned toward the others with a speaking gesture."
+        },
+        {
+          "id": "S3-FURCHT",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Die Jünger erschrocken, einander zugewandt",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The other men look worried or awed, and at least the two on the left turn toward each other."
+        },
+        {
+          "id": "S3-KEIN-STURM",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Kein Sturm mehr",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "There are no storm waves or storm sky visible."
+        }
+      ],
+      "koepfe": {
+        "FIG-JESUS": {
+          "kopf": [
+            650,
+            480,
+            725,
+            605
+          ],
+          "sicher": "high"
+        },
+        "FIG-GRUPPE-JUENGER": {
+          "kopf": [
+            245,
+            485,
+            305,
+            600
+          ],
+          "sicher": "high"
+        }
+      },
+      "blind": {
+        "action": "Four men are sitting in a wooden boat on calm water. The man on the right is gesturing and speaking toward the three men on the left, who look worried or attentive. The scene suggests a tense conversation after or during a moment of danger on the water.",
+        "story_guess": "This likely illustrates the Bible story of Jesus calming the storm, specifically the moment when Jesus speaks to the frightened disciples in the boat, possibly after the water has become calm.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "The image is a soft watercolor-style illustration with light detail, muted colors, and gentle sketch-like outlines."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "description": "Adult male, dark curly hair, no clear beard visible, wearing a pale tan robe. He sits huddled in the left side of the boat, with both hands held up against his mouth or cheeks. His expression looks worried or frightened.",
+          "looking_at": 2,
+          "head": [
+            185,
+            500,
+            240,
+            620
+          ]
+        },
+        {
+          "nr": 2,
+          "description": "Adult male, brown curly hair, short beard, wearing brown clothing. He leans close to the first man, with one hand on or near the first man's shoulder and the other arm bent near his body. His expression looks concerned and intent.",
+          "looking_at": 1,
+          "head": [
+            245,
+            485,
+            305,
+            600
+          ]
+        },
+        {
+          "nr": 3,
+          "description": "Adult male, dark hair partly covered by a light headband, short beard, wearing a gray-green robe. He sits or crouches in the middle of the boat, leaning forward with one arm braced near the side. His face is turned toward the man on the right and looks attentive or uncertain.",
+          "looking_at": 4,
+          "head": [
+            345,
+            510,
+            405,
+            625
+          ]
+        },
+        {
+          "nr": 4,
+          "description": "Adult male, long brown hair, full beard, wearing a white robe with a reddish-brown sash or cloak. He sits on the right side of the boat, turned toward the others, with one hand extended palm-up in a speaking gesture and the other hand resting lower near his lap. His expression looks calm and serious.",
+          "looking_at": 3,
+          "head": [
+            650,
+            480,
+            725,
+            605
+          ]
+        }
+      ],
+      "modell": "gpt-5.5",
+      "bild_sha": "621d3820cba0777f",
+      "datum": "2026-10-28",
+      "plan_sha": "75287dfd5ff8c020",
+      "regeln_version": "2026-10-28b",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "blasen_auto": [
+      {
+        "x": 278,
+        "y": 40,
+        "w": 270,
+        "h": 99,
+        "fs": 21,
+        "tail": [
+          412,
+          189
+        ]
+      },
+      {
+        "x": 38,
+        "y": 20,
+        "w": 230,
+        "h": 124,
+        "fs": 21,
+        "tail": [
+          165,
+          191
+        ]
+      }
+    ],
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Nichts Wesentliches fehlt.",
+      "regeln": [
+        {
+          "id": "B1",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Blase 1 zeigt auf den Sprecher (FIG-JESUS)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The right speech bubble tail points clearly to the man with dark shoulder-length hair, short beard, cream tunic, and terracotta-red mantle."
+        },
+        {
+          "id": "B2",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Blase 2 zeigt auf den Sprecher (FIG-GRUPPE-JUENGER)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The left speech bubble tail points clearly toward the bearded men in plain brown/ochre robes near him."
+        },
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubble covers a face, gesturing hand, or important object."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "All bubble text and the caption band text are complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "Four men are sitting in a boat on calm water. The man on the right is speaking to the others, while the three men on the left appear fearful, surprised, or confused.",
+        "story_guess": "This appears to illustrate the Bible story where Jesus calms the storm on the lake. The exact moment shown is after the wind and water have become calm, when Jesus asks the disciples why they were afraid and they wonder who he is that even the wind and sea obey him.",
+        "text_in_picture": {
+          "speech_bubbles": [
+            {
+              "belongs_to": 2,
+              "text": "Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?"
+            },
+            {
+              "belongs_to": 4,
+              "text": "Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?"
+            }
+          ],
+          "other_text": [
+            "Und sie fürchteten sich sehr",
+            "3"
+          ]
+        }
+      },
+      "modell": "gpt-5.5",
+      "bild_sha": "7cf387d9faaa2974",
+      "datum": "2026-10-28"
+    }
   }
 }
