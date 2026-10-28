@@ -216,15 +216,19 @@ def proc_at(pid, datum):
     return f"{pid}@{(gilt[-1] if gilt else vs[0])['version']}"
 
 
-# Kernanalysen (docs/VERDICHTUNG.md) für «Verstehen» auf Kapitel- und Buchebene; nur Hochdeutsch (noch keine Lokalisierungen)
-for f in sorted((ROOT / "data/core-analyses").glob("CORE-*.json")):
-    c = json.loads(f.read_text(encoding="utf-8"))
+# Kernanalysen (docs/VERDICHTUNG.md) für «Verstehen» auf allen Ebenen; die Kernaussage (gist_de) auch lokalisiert
+core_recs = {r["id"]: r for r in (json.loads(f.read_text(encoding="utf-8")) for f in sorted((ROOT / "data/core-analyses").glob("CORE-*.json")))}
+core_l10n = localizations.load(core_recs)
+for c in core_recs.values():
     # Buchebene im Übersichtspaket, damit «Vertiefen» auf Buch- und höheren Ebenen sie ohne das ganze Buchpaket kennt
+    for lg, f in core_l10n.get(c["id"], {}).items():
+        if "gist_de" in f:
+            bundle(f"l/{lg}/common" if c["level"] == "book" else f"l/{lg}/{c['reference'].split('.')[0]}").setdefault("i18n", {})[c["id"]] = {"gist": f["gist_de"]}
     bundle("b/_overview" if c["level"] == "book" else f"b/{c['reference'].split('.')[0]}").setdefault("core", []).append({
         "id": c["id"], "level": c["level"], "ref": c["reference"], "core": c["core_de"], "gist": c.get("gist_de"), "purpose": c.get("purpose_de"),
         "mode": c.get("mode"), "moments": [{"ref": m["reference"], "text": m["text_de"]} for m in c["moments"]],
         "omitted": c.get("omitted_de", []), "checked": bool(c.get("review")),
-        "proc": proc_at("PROC-VERDICHTUNG", (c.get("knowledge") or {}).get("asserted_at"))})
+        "proc": proc_at("PROC-VERDICHTUNG", (c.get("knowledge") or {}).get("first_asserted_at") or (c.get("knowledge") or {}).get("asserted_at"))})
 for x in background:
     b = x["chapter"].split(".")[0]
     x = dict(x)
@@ -356,12 +360,14 @@ for kind, recs in (("reflections", refl_all), ("receptions", rcpt_all)):
             continue
         key = _sum_key(r["subject"])
         if kind == "reflections":
-            x = {"id": r["id"], "q": r["question_de"], "note": r.get("note_de"), "subject": key, "order": r.get("order", 0), "proc": r.get("process")}
+            x = {"id": r["id"], "q": r["question_de"], "note": r.get("note_de"), "subject": key, "order": r.get("order", 0), "proc": r.get("process"),
+                 **({"chk": r["check"]} if r.get("check") else {})}
             mp = {"question_de": "q", "note_de": "note"}
         else:
             x = {"id": r["id"], "subject": key, "tradition": r["tradition"], "period": r.get("period_de"), "text": r["text_de"],
                  "sources": r.get("sources_de", []), "confidence": r.get("confidence"), "proc": r.get("process"),
-                 **({"check": {k: r["source_check"][k] for k in ("date", "result")}} if r.get("source_check") else {})}
+                 **({"check": {k: r["source_check"][k] for k in ("date", "result")}} if r.get("source_check") else {}),
+                 **({"chk": r["check"]} if r.get("check") else {})}
             mp = {"period_de": "period", "text_de": "text"}
         bname = f"b/{key.split('.')[0]}" if "." in key else "b/_overview"
         for lg, f in up_l10n.get(r["id"], {}).items():

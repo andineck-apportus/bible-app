@@ -7,7 +7,9 @@ Ausgabe: data/core-analyses/CORE-<suffix>.json.
 Eine Einheit:
     {"suffix": "RUT-001-006-018", "level": "section|chapter|book", "target": "TU-…|SUM-CH-…|SUM-BOOK-…",
      "reference": "RUT.1.6-RUT.1.18" (bei book: "RUT"), "children": ["RUT-001-001-005", …] (chapter/book),
-     "core_de": "…", "gist_de": "Kernaussage in einem Satz (optional; «Vertiefen › Verstehen»)", "purpose_de": "…" (book), "mode": "narrative|speech|parable|instruction|statement|list|prayer",
+     "core_de": "…", "gist_de": "Kernaussage in einem Satz (optional; «Vertiefen › Verstehen»)", "purpose_de": "…" (book),
+     "gsw": {"gist_de": "Kernaussage auf Züridüütsch (Lokalisierung; Zitate wörtlich aus der Mundart-Schicht)"},
+     "mode": "narrative|speech|parable|instruction|statement|letter|law|prophecy|apocalyptic|wisdom|psalm|prayer|list|genealogy",
      "voice": {"speaker": "FIG-…|narrator", "addressee": "FIG-…"} ,
      "moments": [{"reference": "RUT.1.16-RUT.1.17", "text_de": "…", "reason_de": "…", "recognition_de": "…",
                   "keywords": ["Wo du hingehst"], "mode": "…" (optional, sonst der Einheit)}],
@@ -27,10 +29,21 @@ Personen/Orte im Bildlexikon, Kinder vorhanden und Momente höherer Ebenen aus d
 unten fehlt»). Schreibt Fingerabdrücke (`basis`): Abschnitt = Verse der Arbeitsübersetzung, höhere Ebene = Kernanalysen der
 Kinder. Bestehende Fingerabdrücke werden nur mit BIBLE_CORE_CONFIRM=1 erneuert (wie bei den Bildaufträgen).
 
+Revisionen: Ändert sich ein Inhaltsfeld (alles ausser basis, knowledge, authorship_de, review, revision_log), kommt die vorige
+Fassung der geänderten und gestrichenen Felder mit Datum und Grund ins revision_log (BIBLE_REVISION_DATE,
+BIBLE_REVISION_REASON; mehrere Läufe am selben Tag mit demselben Grund ergeben einen Eintrag). knowledge.asserted_at ist dann
+das Datum der letzten Revision (first_asserted_at das ursprüngliche), authorship_de nennt sie. Das revision_log steht nur in
+data/core-analyses/ und wird bei jedem Lauf übernommen.
+
+Lokalisierung: `gsw.gist_de` wird als localization data/localizations/gsw-u-sd-chzh/L10N-GSW-ZH-CORE-<suffix>.json
+geschrieben (Fingerabdruck des Originals); geprüft werden Mundart-Schreibung (lukas_einheitlich.pruefe_mundart) und Zitate
+wörtlich (scripts/zitate.py: Hochdeutsch gegen die hochdeutsche, Mundart gegen die Mundart-Arbeitsübersetzung).
+
     python3 scripts/authoring/kernanalyse.py [--check] [BUCH …]
 
 --check: nur prüfen, nichts schreiben. BIBLE_CORE_SRC=<Ordner>: Eingabe aus einem anderen Ordner (Entwürfe).
 """
+import datetime
 import json
 import os
 import pathlib
@@ -41,10 +54,18 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = ROOT / "data"
 sys.path.insert(0, str(ROOT / "scripts"))
 import localizations  # noqa: E402
+import zitate  # noqa: E402
+sys.path.insert(0, str(ROOT / "scripts/authoring"))
+import lukas_einheitlich  # noqa: E402
 
 SRC = pathlib.Path(os.environ.get("BIBLE_CORE_SRC") or ROOT / "scripts/authoring/kernanalysen_daten")
 OUT = D / "core-analyses"
-MODES = {"narrative", "speech", "parable", "instruction", "statement", "list", "prayer"}
+# Textarten (docs/WEITERDENKEN.md, Brücke je Textart); letter, law, prophecy, apocalyptic, wisdom, psalm, genealogy seit 2026-10-29
+MODES = {"narrative", "speech", "parable", "instruction", "statement", "list", "prayer", "letter", "law", "prophecy", "apocalyptic",
+         "wisdom", "psalm", "genealogy"}
+GSW = {"language": "gsw-u-sd-chzh", "target_context": "CTX-CH-ZH-GSW-2026"}
+LOC_DIR = D / "localizations/gsw-u-sd-chzh"
+SKIP = ("basis", "knowledge", "authorship_de", "review", "revision_log")
 BUDGET = {"section": (1, 3), "chapter": (1, 4), "book": (4, 6), "group": (4, 6), "testament": (4, 6), "bible": (4, 6)}
 PATTERNS = {"sequence", "cycle", "curve", "fulfilment", "interleave", "series", "numbered", "matrix", "register", "tree",
             "climax", "contrast", "balance", "reversal", "parallel", "frame", "condition", "cause", "argument", "objection",
@@ -96,6 +117,36 @@ def verses(ref):
 
 def norm(s):
     return re.sub(r"[^\w]+", " ", s.lower()).strip()
+
+
+_LAYERS = []
+
+
+def layers():
+    if not _LAYERS:
+        recs = {}
+        for f in sorted((D / "translations").glob("TRANS-*-WORKING.json")):
+            r = json.loads(f.read_text(encoding="utf-8"))
+            recs[r["id"]] = r
+        _LAYERS.append(zitate.Layers(recs))
+    return _LAYERS[0]
+
+
+def check_gist(u, errs):
+    """Kernaussage: Zitate wörtlich (Hochdeutsch und Mundart), Mundart-Schreibung, Lokalisierung nur mit Original."""
+    sid, g = u["suffix"], (u.get("gsw") or {}).get("gist_de")
+    if g and not u.get("gist_de"):
+        errs.append(f"{sid}: gsw.gist_de ohne gist_de")
+    for lang, txt in (("de", u.get("gist_de")), ("gsw", g)):
+        if txt:
+            for _, q, kind in zitate.check({"gist_de": txt}, lang, layers(), u["reference"]):
+                if kind == "fehlt":
+                    errs.append(f"{sid}: gist_de ({lang}) Zitat «{q}» steht nicht wörtlich in {u['reference']}")
+    if g:
+        try:
+            lukas_einheitlich.pruefe_mundart([g], sid)
+        except SystemExit as e:
+            errs.append(str(e))
 
 
 def check_unit(u, units, errs):
@@ -225,6 +276,7 @@ def run(books):
                      for sid, u in units.items() if u["level"] == "chapter"})
     for u in sel:
         check_unit(u, units, errs)
+        check_gist(u, errs)
         if u.get("structure") or os.environ.get("BIBLE_STRUCTURE_REQUIRED", "1") == "1":
             check_structure(u, errs)
     if errs:
@@ -268,11 +320,69 @@ def run(books):
                "knowledge": {"asserted_at": u.get("date", "2026-10-23"), "supersedes": None}}
         if u.get("review"):
             rec["review"] = u["review"]
+        if path.exists():
+            _revise(rec, json.loads(path.read_text(encoding="utf-8")))
         txt = json.dumps(rec, ensure_ascii=False, indent=1) + "\n"
         if not path.exists() or path.read_text(encoding="utf-8") != txt:
             path.write_text(txt, encoding="utf-8")
             n += 1
+        n += _write_loc(u, rec)
     print(f"PASS: {len(sel)} Kernanalysen geprüft; {n} Dateien geschrieben" + (" (Grundlage bestätigt)" if confirm else ""))
+
+
+def _revision():
+    return (os.environ.get("BIBLE_REVISION_DATE") or datetime.date.today().isoformat(),
+            os.environ.get("BIBLE_REVISION_REASON", "Überarbeitet"))
+
+
+def _log_change(log, changed):
+    """Neuer revision_log-Eintrag; derselbe Tag mit demselben Grund ergibt einen Eintrag (älteste Fassung bleibt)."""
+    date, reason = _revision()
+    if log and log[-1].get("date") == date and log[-1].get("change_de") == reason:
+        return log[:-1] + [{**log[-1], "previous": {**changed, **log[-1].get("previous", {})}}]
+    return log + [{"date": date, "change_de": reason, "previous": changed}]
+
+
+def _revise(rec, old):
+    """revision_log übernehmen bzw. ergänzen; asserted_at und authorship_de nach der letzten Revision nachführen."""
+    changed = {k: old.get(k) for k in sorted(set(rec) | set(old)) if k not in SKIP and old.get(k) != rec.get(k)}
+    log = old.get("revision_log", [])
+    if changed:
+        log = _log_change(log, changed)
+    if log:
+        last = log[-1]
+        first = (old.get("knowledge") or {}).get("first_asserted_at") or rec["knowledge"]["asserted_at"]
+        rec["knowledge"] = {"asserted_at": last["date"], "first_asserted_at": first, "supersedes": None}
+        rec["authorship_de"] = f"{rec['authorship_de']} Zuletzt überarbeitet am {last['date']}: {last['change_de'].rstrip('.')}."
+        rec["revision_log"] = log
+
+
+def _write_loc(u, rec):
+    """Züridüütsch-Fassung der Kernaussage als Lokalisierung (mit revision_log bei Änderung)."""
+    g = (u.get("gsw") or {}).get("gist_de")
+    if not g:
+        return 0
+    lid = f"L10N-GSW-ZH-{rec['id']}"
+    path = LOC_DIR / f"{lid}.json"
+    date = u.get("gsw", {}).get("date", "2026-10-29")
+    loc = {"id": lid, "type": "localization", "status": "draft", "tags": [], "localizes": rec["id"], **GSW,
+           "fields": {"gist_de": g}, "source_fingerprint": {"gist_de": localizations.fingerprint(rec.get("gist_de"))},
+           "authorship_de": u.get("gsw", {}).get("authorship_de", f"KI-Entwurf (Claude) vom {date}; Kernaussage aus dem Hochdeutschen in Züridüütsch gefasst, Zitate aus der Mundart-Arbeitsübersetzung; Mundart noch nicht muttersprachlich geprüft."),
+           "review_de": "Noch keine muttersprachliche Prüfung dokumentiert.",
+           "knowledge": {"asserted_at": date, "supersedes": None}}
+    if path.exists():
+        old = json.loads(path.read_text(encoding="utf-8"))
+        changed = {k: old.get(k) for k in ("fields", "source_fingerprint") if old.get(k) != loc.get(k)}
+        log = _log_change(old.get("revision_log", []), changed) if changed else old.get("revision_log", [])
+        if log:
+            loc["revision_log"] = log
+            loc["knowledge"] = old.get("knowledge", loc["knowledge"])
+    txt = json.dumps(loc, ensure_ascii=False, indent=2) + "\n"
+    if not path.exists() or path.read_text(encoding="utf-8") != txt:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(txt, encoding="utf-8")
+        return 1
+    return 0
 
 
 CHECK_ONLY = "--check" in sys.argv

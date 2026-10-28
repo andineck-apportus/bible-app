@@ -104,6 +104,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .more svg{width:15px;height:15px;flex-basis:15px}
 #bible-stream .alt-line{display:block;font:italic 400 calc(var(--read) * .82)/1.5 var(--serif);color:var(--muted);margin:2px 0 8px 1.4em}
 #bible-stream .part-end{margin:4px 0 18px}
+#bible-stream .nw{white-space:nowrap}
 #bible-stream .app button.ref{display:inline!important;padding:0!important;font:inherit;color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:.2em}
 #bible-stream .app button.ref:hover{text-decoration-color:var(--ink)}
 #bible-stream .xrefs{display:flex;flex-wrap:wrap;gap:6px}
@@ -688,7 +689,8 @@ function marks(html,ctx){if(!html||html.indexOf('[[')<0)return html;const sep=',
     let head;if(last&&last[0]===b&&last[1]===c1&&between==='.')head=v1;else if((last&&last[0]===b&&/^\s*(;|,|und|and|oder)\s*$/.test(between))||b===ctx)head=c1+(v1?sep+v1:'');else head=(SHORT[b]||b)+' '+c1+(v1?sep+v1:'');
     const tail=(c1===c2&&v1===v2)?'':(c1===c2?'–'+v2:'–'+c2+(v2?sep+v2:''));
     out+=between+refBtn(m[1],head+tail);last=[b,c2||c1];prev=m.index+m[0].length;}
-  return out+html.slice(prev);}
+  // Schliessende Klammer oder Satzzeichen nach einer Stelle nicht allein auf die nächste Zeile
+  return (out+html.slice(prev)).replace(/(<button type="button" class="ref"[^>]*>[^<]*<\/button>)([)\]»”.,;:!?]+)/g,'<span class="nw">$1$2</span>');}
 const PARTS={};// 'CODE.c' -> [{part, from, to, section}]
 for(const sec of STUDY.sections)for(const part of sec.parts){const g=rangeOf(part.range);(PARTS[g.code+'.'+g.c]=PARTS[g.code+'.'+g.c]||[]).push({part,from:g.from,to:g.to,section:sec});}
 const SECTION_OF={};for(const sec of STUDY.sections){SECTION_OF[sec.id]=sec;for(const p of sec.parts)SECTION_OF[p.id]=sec;}
@@ -985,16 +987,24 @@ const partRange=id=>{const p=STUDY.sections.flatMap(s=>[s,...s.parts]).find(x=>x
 const plain=s=>String(s??'').replace(MARK_RE,(m,r)=>refShort(r)).replace(/\s+/g,' ').trim();
 const shorten=(s,n=150)=>{s=plain(s);if(s.length<=n)return s;const cut=s.slice(0,n).replace(/[\s,;:–-]+\S*$/,'');return cut+' …';};
 const firstClause=s=>{s=plain(s);const m=s.match(/^(.{25,}?)[:;.](\s|$)/);return m?m[1]:shorten(s,90);};
-// Für kurze Punkte: Stellenangaben und Ursprachwörter in Klammern weglassen (die volle Fassung steht unter «Mehr dazu»)
-const lean=s=>String(s||'').replace(/\s*\([^()]*\[\[[^\]]+\]\][^()]*\)/g,'').replace(/\s*\[\[[^\]]+\]\]/g,'').replace(/\s*\([\u0370-\u03FF\u1F00-\u1FFF\u0590-\u05FF\s]+\)/g,'').replace(/\s+([,;:.])/g,'$1');
+// Für kurze Punkte (die volle Fassung steht unter «Mehr dazu»): Klammern, die nur Stellen enthalten, und Ursprachwörter in
+// Klammern weglassen; Stellen mitten im Satz als kurze Stelle zeigen (im Buch ohne Buchname, nicht umbrechend), rohe Kennungen
+// (FIND-MRK-0005) entfernen
+const leanRef=r=>{const t=refShort(r),b=r.split('.')[0];return (b===refCtx?t.replace(/^\S+\s/,''):t).replace(/\s/g,'\u00a0');};
+const ID_RE=/\b(?:FIND|INT|PRIN|APP|BG|REFL|RCPT|CORE|TU|SUM|REL|Q)-[A-Z0-9-]*\d{3,4}\b/;
+const lean=s=>String(s||'')
+  .replace(/\s*\((?:\s*(?:vgl\.|siehe|s\.)?\s*\[\[[^\]]+\]\][\s,;.–-]*(?:und|and|oder)?)+\s*\)/g,'')
+  .replace(new RegExp('\\s*\\((?:\\s*'+ID_RE.source+'[\\s,;]*)+\\)','g'),'').replace(new RegExp('\\s*'+ID_RE.source,'g'),'')
+  .replace(MARK_RE,(m,r)=>leanRef(r))
+  .replace(/\s*\([\u0370-\u03FF\u1F00-\u1FFF\u0590-\u05FF\s]+\)/g,'').replace(/\(\s*\)/g,'').replace(/\s+([,;:.])/g,'$1').replace(/\s{2,}/g,' ').trim();
 // Ein Punkt: lange Sätze am ersten Strichpunkt kürzen, sonst nach Wörtern
 const point=s=>{const i=s.indexOf(';');return s.length>130&&i>=40?s.slice(0,i).replace(/[,:]$/,'')+'.':shorten(s,150);};
 const sentences=s=>String(s||'').split(/(?<=[.!?»])\s+(?=[A-ZÄÖÜ«])/).map(x=>x.trim()).filter(x=>x.length>12);
-const gistOf=c=>c?(c.gist||shorten(c.core,170)):'';
+const gistOf=c=>c?(LOC(c).gist||shorten(c.core,170)):'';
 const MODE_BRIDGE={de:{instruction:'Grundsatz',statement:'Grundsatz',speech:'Grundsatz',letter:'Grundsatz',wisdom:'Grundsatz',narrative:'Was die Erzählung zeigt',parable:'Was das Gleichnis zeigt',law:'Wie Traditionen damit umgehen',prayer:'Mitbeten',psalm:'Mitbeten',prophecy:'Wie es gelesen wurde',apocalyptic:'Wie es gelesen wurde',list:null,genealogy:null},
   en:{instruction:'Principle',statement:'Principle',speech:'Principle',letter:'Principle',wisdom:'Principle',narrative:'What the story shows',parable:'What the parable shows',law:'How traditions handle it',prayer:'Pray along',psalm:'Pray along',prophecy:'How it was read',apocalyptic:'How it was read',list:null,genealogy:null}};
 const bridgeTitle=(mode,hasPr)=>{const m=MODE_BRIDGE[lang==='de'?'de':'en'];const t=mode&&mode in m?m[mode]:m.instruction;return t||(hasPr?m.instruction:null);};
-const TRAD={jewish:['Jüdische Auslegung','Jewish interpretation'],church_fathers:['Kirchenväter','Church Fathers'],liturgy:['Liturgie','Liturgy'],art:['Kunst','Art'],music:['Musik','Music'],literature:['Literatur','Literature'],reformation:['Reformation','Reformation'],modern_scholarship:['Heutige Forschung','Modern scholarship']};
+const TRAD={jewish:['Jüdische Auslegung','Jewish interpretation'],church_fathers:['Kirchenväter','Church Fathers'],liturgy:['Liturgie','Liturgy'],art:['Kunst','Art'],music:['Musik','Music'],literature:['Literatur','Literature'],reformation:['Reformation','Reformation'],modern_scholarship:['Heutige Forschung','Modern scholarship'],church_teaching:['Kirchliche Lehre','Church teaching']};
 const CONF_TXT=c=>c?(lang==='de'?'Sicherheit: ':'Certainty: ')+(CONF[c]||c):'';
 const LEVEL_CHILDREN=()=>lang==='de'?['Testamenten','Buchgruppen','Büchern','Kapiteln','Abschnitten']:['testaments','book groups','books','chapters','passages'];
 // Zeile mit Anriss, klappt auf (echtes <details>: Tastatur und Vorlesen ohne eigenes Skript)
@@ -1069,9 +1079,16 @@ function deepThink(n,d){const L=lang==='de',lv=n.level;let h='';const qs=d.refls
       return `<li><button type="button" class="deep-door" data-vertiefen="${x.id}" data-tab="w">${num?`<span class="dd-n" aria-hidden="true">${esc(num)}</span>`:''}<span class="dd-b"><span class="dd-t dd-q">${esc(plain(lq.q))}</span><span class="dd-s">${esc(x.level===5?pTitle(x.part):x.level===4?title(x):nodeTitle(x))}</span></span><span class="dd-go" aria-hidden="true">›</span></button></li>`;}).join('')}</ul></section>`;}
   if(!h)h=`<p class="body">${L?'Zum Weiterdenken ist hier noch nichts erarbeitet.':'Nothing to think further here yet.'}</p>`+deepUp(n);
   return h;}
+// Prüfvermerke (check) der Fragen und Rezeption: je Datum und Grenzen einmal, ohne Zahlen
+function checkNote(items){const L=lang==='de',by=new Map();let open=0;
+  for(const x of items){if(!x.chk){open++;continue;}const k=x.chk.date+'|'+x.chk.limits_de;const g=by.get(k)||{date:x.chk.date,limits:x.chk.limits_de,corr:false};g.corr=g.corr||x.chk.result==='corrected';by.set(k,g);}
+  if(!by.size)return '';
+  return [...by.values()].map(g=>`<p class="note deep-check">${L?`Fragen und «Wie man es gelesen hat»: am ${esc(g.date)} von einer weiteren Instanz gegen den Text geprüft${g.corr?'; einzelne Einträge wurden dabei berichtigt':''}. Grenzen: ${esc(g.limits)}`:`Questions and reception: checked against the text on ${esc(g.date)} by a further instance${g.corr?'; some entries were corrected':''}. Limits: ${esc(g.limits)}`}</p>`).join('')
+    +(open?`<p class="note">${L?'Einzelne Einträge sind noch nicht geprüft.':'Some entries are not yet checked.'}</p>`:'');}
 function deepOrigin(n,d){const L=lang==='de',c=d.core,ids=[c&&c.id,...d.fs.map(x=>x.id),...d.is.map(x=>x.id),...d.bgs.map(x=>x.id),...d.prs.map(x=>x.id),...d.refls.map(x=>x.id),...d.rcpts.map(x=>x.id)].filter(Boolean);
   const cur=pid=>PROC[pid]?pid+'@'+PROC[pid].current:'';const procs=[c&&c.proc,(d.fs.length||d.is.length||d.bgs.length)&&cur('PROC-STUDIE'),d.prs.length&&cur('PROC-DAMALS-HEUTE'),...new Set([...d.refls,...d.rcpts].map(x=>x.proc).filter(Boolean))].filter(Boolean);
-  const body=(c?`<p class="note">${L?`Kernanalyse: Entwurf${c.checked?', von einer weiteren Instanz gegen den Text geprüft':''}; sie ist die gemeinsame Grundlage von Zusammenfassung und Bild.${lang!=='de'||S.text!=='de'?' Nur auf Hochdeutsch vorhanden.':''}`:'Core analysis: draft.'}</p>`:'')
+  const body=(c?`<p class="note">${L?`Kernanalyse: Entwurf${c.checked?', von einer weiteren Instanz gegen den Text geprüft':''}; sie ist die gemeinsame Grundlage von Zusammenfassung und Bild.${lang!=='de'||S.text!=='de'?(c.gist&&LOC(c).gist!==c.gist?' Die Kernaussage steht auch im gewählten Lesetext, die übrige Kernanalyse nur auf Hochdeutsch.':' Nur auf Hochdeutsch vorhanden.'):''}`:'Core analysis: draft.'}</p>`:'')
+    +checkNote([...d.refls,...d.rcpts])
     +(procs.length?`<p class="note">${[...new Set(procs)].map(p=>procLink(p)).join('<br>')}</p>`:'')
     +(c&&c.omitted&&c.omitted.length?`<h5 class="deep-sub">${L?'Bewusst weggelassen':'Deliberately left out'}</h5><ul class="note">${c.omitted.map(o=>`<li>${rich(o)}</li>`).join('')}</ul>`:'')
     +`<p class="note">${L?'Alle Beobachtungen, Deutungen, Fragen und Hinweise sind Entwürfe, fachlich noch nicht geprüft. Grundsatz und Anwendung sind Folgerungen. Wie wir arbeiten: Menü › «So arbeiten wir».':'All notes are drafts, not yet reviewed. How we work: menu › “How we work”.'}</p>`

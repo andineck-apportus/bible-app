@@ -299,12 +299,14 @@ def project(section_ids=None):
                       for v in sorted(qs.values(), key=lambda r: r["id"]) if v.get("subject") in subjects],
         # Fragen zum Weiterdenken und Rezeption zu Texteinheiten (obere Ebenen: build_bible.py)
         "reflections": [{"id": k, "q": v["question_de"], "note": v.get("note_de"), "subject": v["subject"], "order": v.get("order", 0),
-                         "proc": v.get("process"), "i18n": i18n(k, {"question_de": "q", "note_de": "note"})}
+                         "proc": v.get("process"), **({"chk": v["check"]} if v.get("check") else {}),
+                         "i18n": i18n(k, {"question_de": "q", "note_de": "note"})}
                         for k, v in sorted(refl.items(), key=lambda kv: (kv[1].get("order", 0), kv[0]))
                         if v.get("subject") in subjects and v.get("status") != "deprecated"],
         "receptions": [{"id": k, "subject": v["subject"], "tradition": v["tradition"], "period": v.get("period_de"), "text": v["text_de"],
                         "sources": v.get("sources_de", []), "confidence": v.get("confidence"), "proc": v.get("process"),
                         **({"check": {x: v["source_check"][x] for x in ("date", "result")}} if v.get("source_check") else {}),
+                        **({"chk": v["check"]} if v.get("check") else {}),
                         "i18n": i18n(k, {"period_de": "period", "text_de": "text"})}
                        for k, v in sorted(rcpt.items()) if v.get("subject") in subjects and v.get("status") != "deprecated"],
         "method": {"name": method["name_de"], "question": method["question_de"], "limits": method["assumptions_and_limits_de"]},

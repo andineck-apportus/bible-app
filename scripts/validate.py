@@ -20,7 +20,10 @@ Prüft:
 10. Arbeitsübersetzungen derselben Sprache überschneiden sich nicht (sonst wäre der Vorrang unklar).
 11. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
 12. Weiterdenken (reflection, reception): ID, Bezug auf Texteinheit oder Zusammenfassung, Frage bzw. Tradition,
-    Quellenprüfung wie bei Hintergrund; Prozessverweise «PROC-…@Fassung» lösen auf.
+    Quellenprüfung wie bei Hintergrund, Prüfvermerk (`check`); Prozessverweise «PROC-…@Fassung» lösen auf.
+13. Zitate in «…» in Fragen zum Weiterdenken (question_de, note_de) und Kernaussagen (gist_de) stehen wörtlich (Auslassungen
+    mit …) im Bibeltext der Stelle: Hochdeutsch gegen die hochdeutsche, Lokalisierungen gegen die Arbeitsübersetzung ihrer
+    Sprache (scripts/zitate.py). Zitate aus Stellen ohne Übersetzung in dieser Schicht nur als WARN.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -35,8 +38,12 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import refs  # noqa: E402
 import localizations  # noqa: E402
 import prose_refs  # noqa: E402
+import zitate  # noqa: E402
 
 SCHEMA = json.loads((pathlib.Path(__file__).resolve().parents[1] / "schema" / "record.schema.json").read_text(encoding="utf-8"))
+TRADITIONS = tuple(SCHEMA["$defs"]["receptionTradition"]["enum"])
+# Frage endet mit «?», auch vor schliessenden Anführungen («…?» bzw. «?»»)
+QUESTION_END = re.compile(r"\?[»›“”\"']*$")
 
 # Felder, die auf andere Datensätze verweisen
 ID_FIELDS = ["witness", "target_context", "control_translation", "work", "primary_unit", "subject", "principle", "context", "from", "edition",
@@ -341,13 +348,16 @@ def main():
                 errors.append(f"{rel}: {kind_} ohne subject")
             if not r.get("authorship_de"):
                 errors.append(f"{rel}: {kind_} ohne authorship_de")
+            if r.get("check") is not None:
+                # Prüfvermerk einer weiteren Instanz (docs/WEITERDENKEN.md): date, by, result, limits_de
+                check_schema(r["check"], {"$ref": "#/$defs/contentCheck"}, f"{rel}: check", errors)
             if kind_ == "reflection":
-                if not r.get("question_de") or not str(r["question_de"]).rstrip().endswith("?"):
+                if not r.get("question_de") or not QUESTION_END.search(str(r["question_de"]).rstrip()):
                     errors.append(f"{rel}: question_de fehlt oder ist keine Frage")
                 if not isinstance(r.get("order"), int):
                     errors.append(f"{rel}: order (Ganzzahl) fehlt")
             else:
-                if r.get("tradition") not in ("jewish", "church_fathers", "liturgy", "art", "music", "literature", "reformation", "modern_scholarship"):
+                if r.get("tradition") not in TRADITIONS:
                     errors.append(f"{rel}: tradition {r.get('tradition')!r} unbekannt")
                 for f_ in ("period_de", "text_de"):
                     if not r.get(f_):
@@ -585,6 +595,30 @@ def main():
                     errors.append(f"{rel}: {ref} ist schon in {other} ({lg}) übersetzt; Überschneidung gleicher Sprache "
                                   "(einen Datensatz auf deprecated setzen oder Bereich teilen)")
 
+    # Zitate wörtlich (scripts/zitate.py): Fragen zum Weiterdenken und Kernaussagen, Original und Lokalisierungen
+    plain_recs = {rid: r for rid, (_, r) in records.items()}
+    layers = zitate.Layers(plain_recs)
+    quote_fields = {"reflection": ("question_de", "note_de"), "core_analysis": ("gist_de",)}
+    quote_count = 0
+
+    def check_quotes(rel, orig, fields, lang):
+        nonlocal quote_count
+        sj = orig.get("reference") if orig.get("type") == "core_analysis" else zitate.subject_ref(orig.get("subject") or "", plain_recs)
+        quote_count += sum(len(zitate.QUOTE_RE.findall(v)) for v in fields.values() if isinstance(v, str))
+        for f_, q_, kind_ in zitate.check(fields, lang, layers, sj):
+            msg_ = f"{rel}: {f_}: Zitat «{q_}» steht nicht wörtlich im Bibeltext der Stelle (Schicht {lang})"
+            (warnings if kind_ == "unübersetzt" else errors).append(msg_ + (" – Stelle in dieser Schicht nicht übersetzt" if kind_ == "unübersetzt" else ""))
+
+    for rid, (rel, r) in records.items():
+        if r.get("type") in quote_fields:
+            check_quotes(rel, r, {f: r[f] for f in quote_fields[r["type"]] if r.get(f)}, "de")
+        elif r.get("type") == "localization":
+            orig = plain_recs.get(r.get("localizes")) or {}
+            if orig.get("type") in quote_fields:
+                fl_ = {f: v for f, v in (r.get("fields") or {}).items() if f in quote_fields[orig["type"]]}
+                if fl_:
+                    check_quotes(rel, orig, fl_, (r.get("language") or "de").split("-")[0])
+
     # Quellenkatalog (source.catalog): Nutzungsrecht und Verwendung; jede Herkunftsadresse in Datensätzen muss im
     # Katalog stehen, verwendete Quellen müssen auf vorhandene Dateien zeigen (docs/QUELLEN.md, AGENTS.md).
     CAT_ENUM = {"area": {"at", "lxx", "nt", "versions", "all"},
@@ -643,7 +677,7 @@ def main():
           f"tag/ID/reading references, {token_ref_count} token references, {ref_count} bible references, "
           f"{annotation_count} annotations, {assessment_count} assessments valid "
           f"({sum(v == 'nc' for v in layer_of.values())} records in data-nc; "
-          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {mark_count} Stellen-Marken, {catalog_count} Quellen im Katalog, {len(warnings)} Warnungen)")
+          f"{sum(r.get('type') == 'localization' for _, r in records.values())} localizations, {mark_count} Stellen-Marken, {quote_count} Zitate, {catalog_count} Quellen im Katalog, {len(warnings)} Warnungen)")
 
 
 if __name__ == "__main__":

@@ -100,10 +100,28 @@ def marks(text):
     return MARK_RE.findall(text or "")
 
 
+# Stellenangaben in Werktiteln und Quellenangaben sind keine fehlenden Marken («Polykarp, Brief an die Philipper 7,1»,
+# «Kyrios Jesus. Eine Untersuchung zu Phil. 2,5–11», «Targum Jonathan zu Obadja 1,20», «4. Esra 13,51»)
+WORK_CUES = ("Brief an die", "Brief an den", "Untersuchung zu", "Kommentar zu", "Targum", "Mekhilta", "Midrasch", "Septuaginta",
+             "Homilie", "Predigt", "Polykarp", "Ignatius", "Clemens")
+
+
+def in_work_title(text, start, end):
+    """True, wenn die Stelle text[start:end] zu einem Werktitel oder einer Quellenangabe gehört."""
+    before = text[max(0, start - 40):start]
+    if re.search(r"(^|[^\w])\d\.\s*$", before):  # «4. Esra», «2. Baruch»: nummeriertes ausserbiblisches Werk
+        return True
+    clause = re.split(r"[.;!?]\s|\(|\)", before)[-1] if before else ""
+    if any(c in clause for c in WORK_CUES) or _non_biblical(text, start):
+        return True
+    return text[:start].count("«") > text[:start].count("»")  # innerhalb eines Titels in «…»
+
+
 def unmarked(text):
-    """Stellen in deutscher Schreibweise, die (noch) nicht markiert sind."""
+    """Stellen in deutscher Schreibweise, die (noch) nicht markiert sind (ohne Werktitel und Quellenangaben)."""
     rest = MARK_RE.sub("", text or "")
-    return [m.group(0).strip() for m in REF_RE.finditer(rest)]
+    return [m.group(0)[len(m.group(1)):].strip() for m in REF_RE.finditer(rest)
+            if not in_work_title(rest, m.start(2), m.end())]
 
 
 SHORT = {"de": refs.DISPLAY_DE}
