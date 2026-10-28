@@ -1,6 +1,15 @@
 """Weiterdenken zum 2. Johannesbrief (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen
 hat» für alle Abschnitte, das Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen
-Ausgaben nachgeschlagen (source_check), soweit möglich."""
+Ausgaben nachgeschlagen (source_check), soweit möglich.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 11 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 0 der 3 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-JOHANNINE"]
@@ -15,9 +24,9 @@ REFLECTIONS = [
              "note_de": "Beidi Wörter chömed i de drizää Vers immer wider, scho im Gruess: «i Wahrheit und Liebi» ([[2JN.1.3]])."}},
     {"id": "REFL-2JN-0002", "subject": "SUM-BOOK-2JN", "order": 2,
      "question_de": "Wer ist die «auserwählte Herrin» – eine Frau oder eine Gemeinde?",
-     "note_de": "Der Brief nennt keinen Namen; am Schluss grüssen «die Kinder deiner auserwählten Schwester» ([[2JN.1.13]]).",
+     "note_de": "Der Brief nennt keinen Namen ([[2JN.1.1]]); am Schluss grüssen «die Kinder deiner auserwählten Schwester» ([[2JN.1.13]]).",
      "gsw": {"question_de": "Wär isch di «userwählt Herrin» – e Frau oder e Gmeind?",
-             "note_de": "De Brief nännt kein Name; am Schluss grüessed «d Chind vo dinere userwählte Schwöschter» ([[2JN.1.13]])."}},
+             "note_de": "De Brief nännt kein Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere userwählte Schwöschter» ([[2JN.1.13]])."}},
     # Kapitel
     {"id": "REFL-2JN-0003", "subject": "SUM-CH-2JN-001", "order": 1,
      "question_de": "Wo endet Gastfreundschaft?",
@@ -53,16 +62,16 @@ REFLECTIONS = [
      "gsw": {"question_de": "Isch es lieblos, öpper nöd z grüesse?",
              "note_de": "«Wär en grüesst, hät Aateil a sine böse Wärch» ([[2JN.1.11]]) – im gliiche Brief, wo zur Liebi uufrüeft ([[2JN.1.5]])."}},
     {"id": "REFL-2JN-0009", "subject": "TU-2JN-001-007-011", "order": 2,
-     "question_de": "Warum ist das Bekenntnis «Jesus Christus kommt im Fleisch» hier so entscheidend?",
+     "question_de": "Warum ist das Bekenntnis, «dass Jesus Christus im Fleisch kommt», hier so entscheidend?",
      "note_de": "Wer es nicht bekennt, heisst «der Verführer und der Antichrist» ([[2JN.1.7]], vgl. [[1JN.4.2-1JN.4.3]]).",
-     "gsw": {"question_de": "Wieso isch s Bekänntnis «Jesus Christus chunnt im Fleisch» da so entscheidend?",
+     "gsw": {"question_de": "Wieso isch s Bekänntnis, «dass Jesus Christus im Fleisch chunnt», da so entscheidend?",
              "note_de": "Wär s nöd bekännt, heisst «de Verfüerer und de Antichrischt» ([[2JN.1.7]], vgl. [[1JN.4.2-1JN.4.3]])."}},
     # 12–13
     {"id": "REFL-2JN-0010", "subject": "TU-2JN-001-012-013", "order": 1,
      "question_de": "Was lässt sich nicht schreiben, sondern nur von Angesicht zu Angesicht sagen?",
-     "note_de": "Der Älteste will nicht «mit Papier und Tinte» schreiben, sondern «von Mund zu Mund reden» ([[2JN.1.12]]).",
+     "note_de": "Der Älteste will nicht «mit Papier und Tinte» schreiben, sondern hofft, «von Mund zu Mund zu reden» ([[2JN.1.12]]).",
      "gsw": {"question_de": "Was laat sich nöd schriibe, sondern nu vo Aagsicht zu Aagsicht säge?",
-             "note_de": "De Eltischt wott nöd «mit Papier und Tinte» schriibe, sondern «vo Mund zu Mund rede» ([[2JN.1.12]])."}},
+             "note_de": "De Eltischt wott nöd «mit Papier und Tinte» schriibe, sondern hofft, «vo Mund zu Mund z rede» ([[2JN.1.12]])."}},
     {"id": "REFL-2JN-0011", "subject": "TU-2JN-001-012-013", "order": 2,
      "question_de": "Warum ist die Freude erst vollkommen, wenn man sich sieht?",
      "note_de": "Er hofft zu kommen, «damit eure Freude vollkommen ist» ([[2JN.1.12]]).",

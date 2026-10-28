@@ -2,7 +2,15 @@
 für die Bibel (SUM-BIBLE), die Testamente (SUM-OT, SUM-NT) und die Buchgruppen (SUM-GROUP-01 … SUM-GROUP-10).
 IDs REFL-ALL-nnnn / RCPT-ALL-nnnn («ALL» = keine einzelne Buchkennung). KI-Entwürfe ohne fachliche Prüfung; Quellen in
 frei zugänglichen Ausgaben nachgeschlagen (source_check), soweit möglich. Für diese Ebenen gibt es keine Kernanalyse,
-darum auch keine Kernaussage (gist_de)."""
+darum auch keine Kernaussage (gist_de).
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 16 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart;
+Quellen von 15 der 15 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = []
@@ -98,12 +106,12 @@ RECEPTIONS = [
      "confidence": "high",
      "gsw": {"period_de": "um 391–405",
              "text_de": "De Hieronymus übersetzt d Schrifte vo Israel nüme nu us de griechische Septuaginta, sondern us em Hebräische is Latiinisch. Sini Übersetzig wird als «Vulgata» d Bible vo de weschtliche Chilche; am Aafang hät si Widerstand ghaa, öppe z Oea, wo e Gmeind gäge es nöis Wort im Buech Jona protestiert hät."}},
-    {"id": "RCPT-ALL-0002", "subject": "SUM-BIBLE", "tradition": "modern_scholarship", "period_de": "um 1227; 1551",
-     "text_de": "Die heutige Einteilung in Kapitel geht auf Stephan Langton zurück, den späteren Erzbischof von Canterbury (um 1227); die Verszählung des Neuen Testaments führte der Drucker Robert Estienne (Stephanus) 1551 ein. Kapitel und Verse helfen beim Finden, stammen aber nicht von den biblischen Verfassern.",
+    {"id": "RCPT-ALL-0002", "subject": "SUM-BIBLE", "tradition": "modern_scholarship", "period_de": "Anfang 13. Jahrhundert; 1551",
+     "text_de": "Die heutige Einteilung in Kapitel geht auf Stephan Langton zurück, den späteren Erzbischof von Canterbury (Anfang des 13. Jahrhunderts); die Verszählung des Neuen Testaments führte der Drucker Robert Estienne (Stephanus) 1551 ein. Kapitel und Verse helfen beim Finden, stammen aber nicht von den biblischen Verfassern.",
      "sources_de": ["Stephan Langton, Kapiteleinteilung der lateinischen Bibel", "Robert Estienne, Neues Testament mit Verszählung (1551)"],
      "confidence": "high",
-     "gsw": {"period_de": "um 1227; 1551",
-             "text_de": "Di hütig Iiteilig i Kapitel gaat uf de Stephan Langton zrugg, de speter Erzbischof vo Canterbury (um 1227); d Verszellig vom Nöie Teschtament hät de Drucker Robert Estienne (Stephanus) 1551 iigfüert. Kapitel und Vers hälfed bim Finde, stammed aber nöd vo de biblische Verfasser."}},
+     "gsw": {"period_de": "Aafang 13. Jahrhundert; 1551",
+             "text_de": "Di hütig Iiteilig i Kapitel gaat uf de Stephan Langton zrugg, de speter Erzbischof vo Canterbury (Aafang vom 13. Jahrhundert); d Verszellig vom Nöie Teschtament hät de Drucker Robert Estienne (Stephanus) 1551 iigfüert. Kapitel und Vers hälfed bim Finde, stammed aber nöd vo de biblische Verfasser."}},
     {"id": "RCPT-ALL-0003", "subject": "SUM-OT", "tradition": "jewish", "period_de": "3. oder frühes 2. Jahrhundert v. Chr.",
      "text_de": "Der Aristeasbrief erzählt, wie zweiundsiebzig jüdische Gelehrte in Alexandria das Gesetz Mose ins Griechische übersetzten. Von dieser Legende hat die griechische Übersetzung der Schriften Israels ihren Namen: Septuaginta («die Siebzig»). Sie wurde zur Bibel der griechisch sprechenden Juden und der frühen Christen.",
      "sources_de": ["Aristeasbrief"],
@@ -141,11 +149,11 @@ RECEPTIONS = [
      "gsw": {"period_de": "6. Jahrhundert bis hüt",
              "text_de": "D Regle vom Benedikt vo Nursia leit fescht, dass im Stundegebät vo de Mönch jedi Wuche de ganz Psalter bätet wird. Sitdem präged d Psalme s täglich Gebät i de Chlöschter."}},
     {"id": "RCPT-ALL-0009", "subject": "SUM-GROUP-04", "tradition": "jewish", "period_de": "Babylonischer Talmud, etwa 3.–6. Jahrhundert",
-     "text_de": "Eine Überlieferung im Talmud ordnet die Propheten: Josua, Richter, Samuel, Könige, Jeremia, Ezechiel, Jesaja und die Zwölf. Klagelieder und Daniel stehen dort nicht bei den Propheten, sondern bei den «Schriften». Die christliche Anordnung mit vier grossen Propheten und Daniel folgt der griechischen und lateinischen Überlieferung.",
+     "text_de": "Eine Überlieferung im Talmud ordnet die Propheten: Josua, Richter, Samuel, Könige, Jeremia, Ezechiel, Jesaja und die Zwölf. Klagelieder und Daniel stehen dort nicht bei den Propheten, sondern bei den «Schriften». In der christlichen Anordnung, die der griechischen und lateinischen Überlieferung folgt, stehen Klagelieder und Daniel bei den Propheten; Daniel zählt dort zu den vier grossen Propheten.",
      "sources_de": ["Babylonischer Talmud, Bava Batra 14b"],
      "confidence": "high",
      "gsw": {"period_de": "Babylonische Talmud, öppe 3.–6. Jahrhundert",
-             "text_de": "E Überliferig im Talmud ordnet d Prophete: Josua, Richter, Samuel, Könige, Jeremia, Ezechiel, Jesaja und di Zwölf. D Chlaglieder und de Daniel stönd dört nöd bi de Prophete, sondern bi de «Schrifte». Di chrischtlich Aaornig mit vier grosse Prophete und em Daniel folgt de griechische und latiinische Überliferig."}},
+             "text_de": "E Überliferig im Talmud ordnet d Prophete: Josua, Richter, Samuel, Könige, Jeremia, Ezechiel, Jesaja und di Zwölf. D Chlaglieder und de Daniel stönd dört nöd bi de Prophete, sondern bi de «Schrifte». I de chrischtliche Aaornig, wo de griechische und latiinische Überliferig folgt, stönd d Chlaglieder und de Daniel bi de Prophete; de Daniel ghört dört zu de vier grosse Prophete."}},
     {"id": "RCPT-ALL-0010", "subject": "SUM-GROUP-05", "tradition": "jewish", "period_de": "um 180 v. Chr.; Talmud",
      "text_de": "Schon Jesus Sirach spricht von «den zwölf Propheten» als Gruppe. In der jüdischen Überlieferung gelten sie als ein einziges Buch («die Zwölf»), das auf einer Rolle geschrieben wurde.",
      "sources_de": ["Jesus Sirach 49,10", "Babylonischer Talmud, Bava Batra 14b"],
@@ -265,7 +273,7 @@ SOURCE_CHECKS = {
  },
  "RCPT-ALL-0007": {
   "date": "2026-10-29",
-  "result": "partly",
+  "result": "confirmed",
   "method_de": "KI-Prüfung (Claude) vom 2026-10-29: Angaben mit Websuche in frei zugänglichen Textausgaben bzw. Nachschlagewerken nachgeschlagen; nur Fundstelle und eigene Zusammenfassung übernommen; keine fachliche Prüfung.",
   "checked": [
    {
@@ -397,8 +405,36 @@ SOURCE_CHECKS = {
   ]
  }
 }
-UNCERTAIN = {"RCPT-ALL-0007": "Das Erscheinungsjahr 1943 der Erstausgabe ist an der Fundstelle nicht belegt (dort Ausgabe 1957)."}
+UNCERTAIN = {}
 for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
     if _x["id"] in UNCERTAIN:
         _x["uncertain_de"] = UNCERTAIN[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-ALL-0001", "RCPT-ALL-0002", "RCPT-ALL-0003", "RCPT-ALL-0004", "RCPT-ALL-0005", "RCPT-ALL-0006", "RCPT-ALL-0007", "RCPT-ALL-0008", "RCPT-ALL-0009", "RCPT-ALL-0010", "RCPT-ALL-0011", "RCPT-ALL-0012", "RCPT-ALL-0013", "RCPT-ALL-0014", "RCPT-ALL-0015"]
+RECHECK_EXTRA = {
+ "RCPT-ALL-0002": {
+  "source": "Kapiteleinteilung (zweite Prüfung)",
+  "found_at": "https://en.wikipedia.org/wiki/Chapters_and_verses_of_the_Bible",
+  "finding_de": "Langtons Kapiteleinteilung wird dort auf 1205 datiert, also vor seiner Zeit als Erzbischof (ab 1207); die Angabe «um 1227» aus der ersten Prüfung ist nicht gedeckt und wurde durch «Anfang des 13. Jahrhunderts» ersetzt. Verszählung des Neuen Testaments 1551 durch Estienne bestätigt."
+ },
+ "RCPT-ALL-0007": {
+  "source": "Martin Noth, Überlieferungsgeschichtliche Studien (zweite Prüfung)",
+  "found_at": "https://www.deutsche-biographie.de/118588826.html",
+  "finding_de": "Die Neue Deutsche Biographie nennt «Überlieferungsgeschichtl. Stud., 1943, ³1967»: Das Erscheinungsjahr 1943 ist belegt; Ergebnis von «teilweise» auf «bestätigt» gesetzt, Unsicherheitsvermerk gestrichen."
+ },
+ "RCPT-ALL-0009": {
+  "source": "Babylonischer Talmud, Bava Batra 14b (zweite Prüfung)",
+  "found_at": "https://cojs.org/?p=4832",
+  "finding_de": "Reihenfolge der Propheten und der Schriften bestätigt. Der Satz über die christliche Anordnung war missverständlich («vier grosse Propheten und Daniel», obwohl Daniel einer der vier ist) und wurde umformuliert."
+ }
+}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc

@@ -1,6 +1,15 @@
 """Weiterdenken zu Obadja (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen hat» für alle
 Abschnitte, das Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen Ausgaben
-nachgeschlagen (source_check), soweit möglich. Prophetie: keine Deutung auf heutige Ereignisse oder Völker."""
+nachgeschlagen (source_check), soweit möglich. Prophetie: keine Deutung auf heutige Ereignisse oder Völker.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 14 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 2 der 4 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-OBADIAH"]
@@ -10,9 +19,9 @@ REFLECTIONS = [
     # Buch
     {"id": "REFL-OBA-0001", "subject": "SUM-BOOK-OBA", "order": 1,
      "question_de": "Wie haben wohl Menschen diese Worte gehört, die selbst Gewalt erlitten hatten?",
-     "note_de": "Obadja spricht vom «Tag der Not» Jerusalems, an dem Fremde sein Vermögen wegführten ([[OBA.1.11]]).",
+     "note_de": "Obadja spricht vom Tag, an dem Fremde Jerusalems Vermögen wegführten ([[OBA.1.11]]), vom «Tag der Not» ([[OBA.1.12]]; [[OBA.1.14]]).",
      "gsw": {"question_de": "Wie händ ächt Mänsche die Wort ghört, wo sälber Gwalt erlitte händ?",
-             "note_de": "De Obadja redt vom «Tag vo de Not» vo Jerusalem, wo Frömdi sis Vermöge wäggfüert händ ([[OBA.1.11]])."}},
+             "note_de": "De Obadja redt vom Tag, wo Frömdi s Vermöge vo Jerusalem wäggfüert händ ([[OBA.1.11]]), vom «Tag vo de Not» ([[OBA.1.12]]; [[OBA.1.14]])."}},
     {"id": "REFL-OBA-0002", "subject": "SUM-BOOK-OBA", "order": 2,
      "question_de": "Warum spricht ein Buch, das Edom anklagt, so oft vom «Bruder»?",
      "note_de": "Edom wird an der Gewalt gegen seinen Bruder Jakob gemessen ([[OBA.1.10]]; [[OBA.1.12]]); Esau und Jakob waren nach [[GEN.25.25-GEN.25.26]] Zwillinge.",
@@ -54,14 +63,14 @@ REFLECTIONS = [
              "note_de": "De Vorwurf fangt nöd mit ere Tat aa: «Am Tag, wo du abseits gstande bisch … bisch au du wie eine vo ine gsii» ([[OBA.1.11]])."}},
     {"id": "REFL-OBA-0009", "subject": "TU-OBA-001-010-014", "order": 2,
      "question_de": "Was bewirkt es, dass «am Tag» so oft wiederholt wird?",
-     "note_de": "Acht Verbote folgen aufeinander, jedes mit «am Tag …» ([[OBA.1.12-OBA.1.14]]) – vom Herabschauen bis zum Ausliefern der Flüchtlinge.",
+     "note_de": "Acht Verbote folgen aufeinander, sieben davon mit «am Tag …» ([[OBA.1.12-OBA.1.14]]) – vom Herabschauen bis zum Ausliefern der Flüchtlinge.",
      "gsw": {"question_de": "Was bewürkt s, dass «am Tag» so oft widerholt wird?",
-             "note_de": "Acht Verbot chömed hinderenand, jedes mit «am Tag …» ([[OBA.1.12-OBA.1.14]]) – vom Abeluege bis zum Usliifere vo de Flüchtling."}},
+             "note_de": "Acht Verbot chömed hinderenand, sibe devo mit «am Tag …» ([[OBA.1.12-OBA.1.14]]) – vom Abeluege bis zum Usliifere vo de Flüchtling."}},
     {"id": "REFL-OBA-0010", "subject": "TU-OBA-001-010-014", "order": 3,
      "question_de": "Wo beginnt Schadenfreude, und wo endet sie?",
-     "note_de": "Die Reihe beginnt mit «schau nicht herab» und «freu dich nicht» ([[OBA.1.12]]) und endet mit Gewalt an Flüchtlingen ([[OBA.1.14]]).",
+     "note_de": "Die Reihe beginnt mit «schau nicht … herab» und «freu dich nicht» ([[OBA.1.12]]) und endet mit Gewalt an Flüchtlingen ([[OBA.1.14]]).",
      "gsw": {"question_de": "Wo fangt Schadefröid aa, und wo hört si uf?",
-             "note_de": "D Reihe fangt mit «lueg nöd abe» und «fröi dich nöd» aa ([[OBA.1.12]]) und hört mit Gwalt a Flüchtling uf ([[OBA.1.14]])."}},
+             "note_de": "D Reihe fangt mit «lueg nöd … abe» und «fröi dich nöd» aa ([[OBA.1.12]]) und hört mit Gwalt a Flüchtling uf ([[OBA.1.14]])."}},
     # 15–18
     {"id": "REFL-OBA-0011", "subject": "TU-OBA-001-015-018", "order": 1,
      "question_de": "Warum weitet sich der Blick hier von Edom auf alle Völker?",
@@ -76,23 +85,23 @@ REFLECTIONS = [
     # 19–21
     {"id": "REFL-OBA-0013", "subject": "TU-OBA-001-019-021", "order": 1,
      "question_de": "Was erhofften Verbannte, die solche Ortsnamen hörten?",
-     "note_de": "Die Verbannten Jerusalems «in Sefarad» sollen zurückkehren und die Städte des Negev in Besitz nehmen ([[OBA.1.20]]).",
+     "note_de": "Von den Verbannten Jerusalems, «die in Sefarad sind», heisst es, sie würden die Städte des Negev in Besitz nehmen ([[OBA.1.20]]).",
      "gsw": {"question_de": "Was händ Verbannti ghoffet, wo settigi Ortsnäme ghört händ?",
-             "note_de": "D Verbannte vo Jerusalem «z Sefarad» söled zruggchoo und d Städt vom Negev in Bsitz nää ([[OBA.1.20]])."}},
+             "note_de": "Vo de Verbannte vo Jerusalem, «wo z Sefarad sind», heisst s, si wärdid d Städt vom Negev in Bsitz nää ([[OBA.1.20]])."}},
     {"id": "REFL-OBA-0014", "subject": "TU-OBA-001-019-021", "order": 2,
      "question_de": "Was ändert der letzte Satz an allem, was vorher kam?",
-     "note_de": "Das Buch endet nicht mit Israels Herrschaft, sondern mit: «Die Königsherrschaft wird JHWH gehören» ([[OBA.1.21]]).",
+     "note_de": "Nach der Landnahme ([[OBA.1.19-OBA.1.20]]) lautet der letzte Satz: «Die Königsherrschaft wird JHWH gehören» ([[OBA.1.21]]).",
      "gsw": {"question_de": "Was änderet de letscht Satz a allem, wo vorher choo isch?",
-             "note_de": "S Buech hört nöd mit de Herrschaft vo Israel uf, sondern mit: «D Königsherrschaft wird JHWH ghöre» ([[OBA.1.21]])."}},
+             "note_de": "Nach de Landnaam ([[OBA.1.19-OBA.1.20]]) heisst de letscht Satz: «D Königsherrschaft wird JHWH ghöre» ([[OBA.1.21]])."}},
 ]
 
 RECEPTIONS = [
     {"id": "RCPT-OBA-0001", "subject": "SUM-BOOK-OBA", "tradition": "liturgy", "period_de": "bis heute",
-     "text_de": "In der Synagoge wird das ganze Buch Obadja als Prophetenlesung (Haftara) zum Wochenabschnitt «Wajischlach» gelesen, in dem Jakob seinem Bruder Esau wieder begegnet ([[GEN.32.3-GEN.36.43]]). So steht Obadjas Wort über Edom neben der Erzählung von den beiden Brüdern.",
+     "text_de": "In den meisten Synagogengemeinden wird das ganze Buch Obadja als Prophetenlesung (Haftara) zum Wochenabschnitt «Wajischlach» gelesen, in dem Jakob seinem Bruder Esau wieder begegnet ([[GEN.32.3-GEN.36.43]]). So steht Obadjas Wort über Edom neben der Erzählung von den beiden Brüdern.",
      "sources_de": ["Haftara zum Wochenabschnitt Wajischlach (1. Mose 32–36)"],
      "confidence": "high",
      "gsw": {"period_de": "bis hüt",
-             "text_de": "I de Synagoge list mer s ganz Buech Obadja als Prophetelesig (Haftara) zum Wuche-Abschnitt «Wajischlach», wo de Jakob sim Brueder Esau wider begägnet ([[GEN.32.3-GEN.36.43]]). So staat em Obadja sis Wort über Edom näbe de Gschicht vo de zwei Brüedere."}},
+             "text_de": "I de meischte Synagogegmeinde list mer s ganz Buech Obadja als Prophetelesig (Haftara) zum Wuche-Abschnitt «Wajischlach», wo de Jakob sim Brueder Esau wider begägnet ([[GEN.32.3-GEN.36.43]]). So staat em Obadja sis Wort über Edom näbe de Gschicht vo de zwei Brüedere."}},
     {"id": "RCPT-OBA-0002", "subject": "SUM-BOOK-OBA", "tradition": "jewish", "period_de": "Babylonischer Talmud, etwa 3.–6. Jahrhundert",
      "text_de": "Der Talmud setzt den Propheten mit Obadja gleich, der am Hof Ahabs lebte und Propheten vor Isebel versteckte ([[1KI.18.3-1KI.18.4]]), und erzählt, er sei ein Edomiter gewesen, der zum Judentum übertrat. Dazu passt das Sprichwort: Aus dem Wald selbst kommt der Stiel der Axt. Das Buch selbst sagt über seinen Verfasser nur den Namen ([[OBA.1.1]]).",
      "sources_de": ["Babylonischer Talmud, Sanhedrin 39b"],
@@ -116,7 +125,7 @@ RECEPTIONS = [
 SOURCE_CHECKS = {
  "RCPT-OBA-0001": {
   "date": "2026-10-29",
-  "result": "confirmed",
+  "result": "corrected",
   "method_de": "KI-Prüfung (Claude) vom 2026-10-29: Angaben mit Websuche in frei zugänglichen Textausgaben bzw. Nachschlagewerken nachgeschlagen; nur Fundstelle und eigene Zusammenfassung übernommen; keine fachliche Prüfung.",
   "checked": [
    {
@@ -170,3 +179,21 @@ SOURCE_CHECKS = {
 }
 for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-OBA-0001", "RCPT-OBA-0003"]
+RECHECK_EXTRA = {
+ "RCPT-OBA-0001": {
+  "source": "Haftara zu Wajischlach (zweite Prüfung)",
+  "found_at": "https://seforimblog.com/2021/11/haftaros-of-vayetze-and-vayishlach-a-mistake-rectified/",
+  "finding_de": "Obadja ist die Haftara der Sefarden und der meisten aschkenasischen Gemeinden; einzelne Gemeinden (etwa nach dem Hertz-Chumasch im United Synagogue in Grossbritannien) lesen [[HOS.11.7]] ff. Vorher «In der Synagoge» ohne Einschränkung; berichtigt zu «In den meisten Synagogengemeinden»."
+ }
+}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc

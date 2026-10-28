@@ -1,6 +1,15 @@
 """Weiterdenken zum Philipperbrief (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen hat»
 für alle Abschnitte, Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen Ausgaben
-nachgeschlagen (source_check), soweit möglich."""
+nachgeschlagen (source_check), soweit möglich.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 35 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 4 der 6 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-PHILIPPIANS"]
@@ -129,14 +138,14 @@ REFLECTIONS = [
     # 3,1–11
     {"id": "REFL-PHP-0023", "subject": "TU-PHP-003-001-011", "order": 1,
      "question_de": "Warum zählt Paulus erst seine Vorzüge auf, bevor er sie Verlust nennt?",
-     "note_de": "Er nennt Herkunft, Gesetzestreue und Eifer ([[PHP.3.5-PHP.3.6]]) – er schämt sich dieser Herkunft nicht, er rechnet sie neu.",
+     "note_de": "Er nennt Herkunft, Gesetzestreue und Eifer ([[PHP.3.5-PHP.3.6]]) und rechnet dann um: Was Gewinn war, hält er für Verlust ([[PHP.3.7]]).",
      "gsw": {"question_de": "Wieso zellt de Paulus zerscht sini Vorzüg uf, bevor er sie Verlurscht nännt?",
-             "note_de": "Er nännt Herkunft, Gsetzestreui und Iifer ([[PHP.3.5-PHP.3.6]]) – er schämt sich nöd für die Herkunft, er rächnet si nöi."}},
+             "note_de": "Er nännt Herkunft, Gsetzestreui und Iifer ([[PHP.3.5-PHP.3.6]]) und rächnet dänn um: Was Gwünn gsii isch, hebt er für Verlurscht ([[PHP.3.7]])."}},
     {"id": "REFL-PHP-0024", "subject": "TU-PHP-003-001-011", "order": 2,
      "question_de": "Gegen wen richten sich die harten Worte am Anfang – und wie geht man heute mit solcher Polemik um?",
-     "note_de": "Paulus warnt vor «Hunden» und der «Zerschneidung» ([[PHP.3.2]]); gemeint sind wohl Lehrer in der Gemeinde, nicht das jüdische Volk – Paulus zählt sich selbst zu Israel ([[PHP.3.5]]).",
+     "note_de": "Paulus warnt vor «Hunden» und der «Zerschneidung» ([[PHP.3.2]]); gemeint sind wohl Lehrer, die bei den Gemeinden für die Beschneidung warben, nicht das jüdische Volk – Paulus zählt sich selbst zu Israel ([[PHP.3.5]]).",
      "gsw": {"question_de": "Gäge wän richted sich di harte Wort am Aafang – und wie gaat mer hüt mit settiger Polemik um?",
-             "note_de": "De Paulus warnt vor «Hünd» und de «Zerschniidig» ([[PHP.3.2]]); gmeint sind wohl Lehrer i de Gmeind, nöd s jüdisch Volk – de Paulus zellt sich sälber zu Israel ([[PHP.3.5]])."}},
+             "note_de": "De Paulus warnt vor «Hünd» und de «Zerschniidig» ([[PHP.3.2]]); gmeint sind wohl Lehrer, wo bi de Gmeinde für d Beschniidig gworbe händ, nöd s jüdisch Volk – de Paulus zellt sich sälber zu Israel ([[PHP.3.5]])."}},
     {"id": "REFL-PHP-0025", "subject": "TU-PHP-003-001-011", "order": 3,
      "question_de": "Was heisst es, jemanden zu «erkennen» – mehr als etwas über ihn zu wissen?",
      "note_de": "Paulus will Christus erkennen, «die Kraft seiner Auferstehung und die Gemeinschaft mit seinen Leiden» ([[PHP.3.10]]).",
@@ -149,21 +158,21 @@ REFLECTIONS = [
      "gsw": {"question_de": "Was hilft s, z vergässe, was hinder eim liit?",
              "note_de": "«Ich vergiss, was hinder mir liit, und streck mich nach dem, was vor mir liit» ([[PHP.3.13]])."}},
     {"id": "REFL-PHP-0027", "subject": "TU-PHP-003-012-021", "order": 2,
-     "question_de": "Darf man sagen: «Werdet meine Nachahmer»?",
+     "question_de": "Darf man sagen: «Werdet miteinander meine Nachahmer»?",
      "note_de": "Paulus sagt es ([[PHP.3.17]]) – nachdem er gerade betont hat, er habe das Ziel noch nicht erreicht ([[PHP.3.12]]).",
-     "gsw": {"question_de": "Dörf mer säge: «Wärded mini Nachahmer»?",
+     "gsw": {"question_de": "Dörf mer säge: «Wärded mitenand mini Nachahmer»?",
              "note_de": "De Paulus seit s ([[PHP.3.17]]) – nachdem er grad betont hät, er heb s Ziel no nöd erreicht ([[PHP.3.12]])."}},
     {"id": "REFL-PHP-0028", "subject": "TU-PHP-003-012-021", "order": 3,
-     "question_de": "Was bedeutet ein «Bürgerrecht im Himmel» für das Leben auf der Erde?",
+     "question_de": "Was bedeutet der Satz «unser Bürgerrecht ist im Himmel» für das Leben auf der Erde?",
      "note_de": "«Unser Bürgerrecht ist im Himmel, von wo wir auch den Retter erwarten» ([[PHP.3.20]]).",
-     "gsw": {"question_de": "Was bedüütet es «Bürgerrächt im Himmel» für s Läbe uf de Ärde?",
+     "gsw": {"question_de": "Was bedüütet de Satz «öis Bürgerrächt isch im Himmel» für s Läbe uf de Ärde?",
              "note_de": "«Öis Bürgerrächt isch im Himmel, vo wo mir au de Retter erwarted» ([[PHP.3.20]])."}},
     # 4,1–9
     {"id": "REFL-PHP-0029", "subject": "TU-PHP-004-001-009", "order": 1,
      "question_de": "Warum nennt Paulus den Streit zweier Frauen beim Namen?",
-     "note_de": "Euodia und Syntyche haben mit Paulus «im Evangelium gekämpft» ([[PHP.4.2-PHP.4.3]]); er bittet beide gleich und ergreift keine Partei.",
+     "note_de": "Euodia und Syntyche haben «im Evangelium mit mir gekämpft», schreibt Paulus ([[PHP.4.2-PHP.4.3]]); er bittet beide gleich und ergreift keine Partei.",
      "gsw": {"question_de": "Wieso nännt de Paulus de Striit vo zwei Fraue bim Name?",
-             "note_de": "D Euodia und d Syntyche händ mit em Paulus «im Evangelium kämpft» ([[PHP.4.2-PHP.4.3]]); er bittet beidi gliich und nimmt kei Partei."}},
+             "note_de": "D Euodia und d Syntyche händ «im Evangelium mit mir kämpft», schriibt de Paulus ([[PHP.4.2-PHP.4.3]]); er bittet beidi gliich und nimmt kei Partei."}},
     {"id": "REFL-PHP-0030", "subject": "TU-PHP-004-001-009", "order": 2,
      "question_de": "Was würdest du vor Gott bringen, wenn du dich um nichts sorgen müsstest?",
      "note_de": "«Sorgt euch um nichts, sondern in allem lasst eure Anliegen … vor Gott kund werden» ([[PHP.4.6]]).",
@@ -181,9 +190,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wie lernt mer, mit wenig und mit vil uszcho?",
              "note_de": "De Paulus seit, er seig «iigweiht», satt z sii und z hungere ([[PHP.4.12]]) – er redt vo öppis Glehrtem."}},
     {"id": "REFL-PHP-0033", "subject": "TU-PHP-004-010-020", "order": 2,
-     "question_de": "Warum fällt es Paulus offenbar schwer, einfach Danke zu sagen?",
+     "question_de": "Warum sagt Paulus hier nicht einfach Danke?",
      "note_de": "Er freut sich über die Gabe, betont aber zweimal, er sei nicht darauf aus ([[PHP.4.11]]; [[PHP.4.17]]).",
-     "gsw": {"question_de": "Wieso fallt s em Paulus schiinbar schwär, eifach Danke z säge?",
+     "gsw": {"question_de": "Wieso seit de Paulus da nöd eifach Danke?",
              "note_de": "Er fröit sich über d Gab, betont aber zwei Mal, er seig nöd druf us ([[PHP.4.11]]; [[PHP.4.17]])."}},
     # 4,21–23
     {"id": "REFL-PHP-0034", "subject": "TU-PHP-004-021-023", "order": 1,
@@ -317,3 +326,15 @@ SOURCE_CHECKS = {
 }
 for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-PHP-0002", "RCPT-PHP-0003", "RCPT-PHP-0005", "RCPT-PHP-0006"]
+RECHECK_EXTRA = {}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc

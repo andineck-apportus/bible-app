@@ -1,6 +1,15 @@
 """Weiterdenken zum 1. Johannesbrief (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen
 hat» für alle Abschnitte, Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen Ausgaben
-nachgeschlagen (source_check), soweit möglich."""
+nachgeschlagen (source_check), soweit möglich.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 40 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 3 der 5 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-JOHANNINE"]
@@ -25,9 +34,9 @@ REFLECTIONS = [
              "note_de": "Näbe «Gott isch Liebi» ([[1JN.4.8]]) stönd «Antichrischte» und «Chind vom Tüüfel» ([[1JN.2.18]]; [[1JN.3.10]])."}},
     # Kapitel
     {"id": "REFL-1JN-0004", "subject": "SUM-CH-1JN-001", "order": 1,
-     "question_de": "Warum ist es so wichtig, dass man «gesehen und betastet» hat?",
+     "question_de": "Warum ist es so wichtig, dass man gehört, gesehen und betastet hat?",
      "note_de": "Der Brief beginnt mit Sinnen: hören, sehen, schauen, mit Händen betasten ([[1JN.1.1]]).",
-     "gsw": {"question_de": "Wieso isch es so wichtig, dass mer «gseh und aaglanget» hät?",
+     "gsw": {"question_de": "Wieso isch es so wichtig, dass mer ghört, gseh und aaglanget hät?",
              "note_de": "De Brief fangt mit de Sinn aa: ghöre, gseh, aaluege, mit de Händ aalange ([[1JN.1.1]])."}},
     {"id": "REFL-1JN-0005", "subject": "SUM-CH-1JN-002", "order": 1,
      "question_de": "Wie kann ein Gebot zugleich alt und neu sein?",
@@ -62,9 +71,9 @@ REFLECTIONS = [
              "note_de": "«Und das schriibed mir, damit öisi Fröid volkomme seig» ([[1JN.1.4]])."}},
     # 1,5–10
     {"id": "REFL-1JN-0011", "subject": "TU-1JN-001-005-010", "order": 1,
-     "question_de": "Warum ist es leichter, Sünde zu leugnen, als sie zu bekennen?",
+     "question_de": "Was ändert sich, wenn man Sünde bekennt, statt sie zu leugnen?",
      "note_de": "Dreimal heisst es «Wenn wir sagen …» ([[1JN.1.6]]; [[1JN.1.8]]; [[1JN.1.10]]); dazwischen steht: «Wenn wir unsere Sünden bekennen» ([[1JN.1.9]]).",
-     "gsw": {"question_de": "Wieso isch es eifacher, Sünd z leugne, als si z bekänne?",
+     "gsw": {"question_de": "Was änderet sich, wänn mer Sünd bekännt, statt si z leugne?",
              "note_de": "Drüü Mal heisst s «Wänn mir säged …» ([[1JN.1.6]]; [[1JN.1.8]]; [[1JN.1.10]]); dezwüsche staat: «Wänn mir öisi Sünde bekänned» ([[1JN.1.9]])."}},
     {"id": "REFL-1JN-0012", "subject": "TU-1JN-001-005-010", "order": 2,
      "question_de": "Was bedeutet das Bild vom Licht, in dem keinerlei Finsternis ist?",
@@ -90,9 +99,9 @@ REFLECTIONS = [
              "note_de": "Wär sin Brueder hasst, «weiss nöd, won er anegaat; dänn d Fiischteri hät sini Auge blind gmacht» ([[1JN.2.11]])."}},
     {"id": "REFL-1JN-0016", "subject": "TU-1JN-002-007-011", "order": 2,
      "question_de": "Wer ist hier mit «Bruder» gemeint – und wer nicht?",
-     "note_de": "Der Brief spricht vom Bruder in der Gemeinschaft ([[1JN.2.9-1JN.2.10]]); ob auch Aussenstehende gemeint sind, sagt er nicht.",
+     "note_de": "Ob nur Glaubende oder auch Aussenstehende gemeint sind, sagt der Brief hier nicht ([[1JN.2.9-1JN.2.10]]); an anderer Stelle stehen die «Brüder und Schwestern» der Welt gegenüber ([[1JN.3.13]]).",
      "gsw": {"question_de": "Wär isch da mit «Brueder» gmeint – und wär nöd?",
-             "note_de": "De Brief redt vom Brueder i de Gmeinschaft ([[1JN.2.9-1JN.2.10]]); öb au Ussestehendi gmeint sind, seit er nöd."}},
+             "note_de": "Öb nu Gläubigi oder au Ussestehendi gmeint sind, seit de Brief da nöd ([[1JN.2.9-1JN.2.10]]); anderswo stönd d «Brüeder und Schwöschtere» de Wält gägenüber ([[1JN.3.13]])."}},
     # 2,12–17
     {"id": "REFL-1JN-0017", "subject": "TU-1JN-002-012-017", "order": 1,
      "question_de": "Warum spricht der Brief Kinder, Väter und junge Männer getrennt an?",
@@ -111,9 +120,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wie fühlt sich e Gmeinschaft aa, wo Lüüt devo wäggange sind?",
              "note_de": "«Vo üs sind si usgange, aber si händ nöd zu üs ghört» ([[1JN.2.19]]); de Brief düütet de Wäggang us sinere Sicht."}},
     {"id": "REFL-1JN-0020", "subject": "TU-1JN-002-018-027", "order": 2,
-     "question_de": "Warum braucht ihr niemanden, der euch belehrt – und schreibt der Brief dann trotzdem?",
+     "question_de": "Die Leser brauchen niemanden, der sie belehrt – warum schreibt der Brief dann trotzdem?",
      "note_de": "«Ihr habt es nicht nötig, dass jemand euch belehrt» ([[1JN.2.27]]); geschrieben hat er, «weil ihr sie kennt» ([[1JN.2.21]]).",
-     "gsw": {"question_de": "Wieso bruuched ir niemer, wo eu lehrt – und schriibt de Brief dänn glich?",
+     "gsw": {"question_de": "D Läser bruuched niemer, wo si lehrt – wieso schriibt de Brief dänn glich?",
              "note_de": "«Ir händ s nöd nötig, dass eu öpper lehrt» ([[1JN.2.27]]); gschribe hät er, «wil ir si känned» ([[1JN.2.21]])."}},
     # 2,28–29
     {"id": "REFL-1JN-0021", "subject": "TU-1JN-002-028-029", "order": 1,
@@ -123,31 +132,31 @@ REFLECTIONS = [
              "note_de": "D Chind söled in ihm bliibe, damit si bi sim Choo «nöd bschämt vor ihm zrugggwiiche müend» ([[1JN.2.28]])."}},
     {"id": "REFL-1JN-0022", "subject": "TU-1JN-002-028-029", "order": 2,
      "question_de": "Kann man an jemandes Tun erkennen, woher er kommt?",
-     "note_de": "«Jeder, der die Gerechtigkeit tut, ist aus ihm geboren» ([[1JN.2.29]]).",
+     "note_de": "Der Brief sagt, «dass jeder, der die Gerechtigkeit tut, aus ihm geboren ist» ([[1JN.2.29]]).",
      "gsw": {"question_de": "Chan mer am Tue vo öpperem erchänne, won er herchunnt?",
-             "note_de": "«Jede, wo d Gerächtigkeit tuet, isch us ihm gebore» ([[1JN.2.29]])."}},
+             "note_de": "De Brief seit, «dass jede, wo d Gerächtigkeit tuet, us ihm gebore isch» ([[1JN.2.29]])."}},
     # 3,1–10
     {"id": "REFL-1JN-0023", "subject": "TU-1JN-003-001-010", "order": 1,
-     "question_de": "«Wir heissen Kinder Gottes – und wir sind es!» Was macht dieser Nachsatz aus?",
-     "note_de": "Der Brief hält fest, dass es nicht nur ein Name ist ([[1JN.3.1]]), und zugleich: «Es ist noch nicht offenbar geworden, was wir sein werden» ([[1JN.3.2]]).",
-     "gsw": {"question_de": "«Mir heissed Chind vo Gott – und mir sind s!» Was macht dä Nachsatz us?",
-             "note_de": "De Brief hebt fescht, dass es nöd nu en Name isch ([[1JN.3.1]]), und zgliich: «Es isch no nöd offebar worde, was mir sii wärded» ([[1JN.3.2]])."}},
+     "question_de": "Was macht der Nachsatz «und wir sind es!» aus?",
+     "note_de": "Der Brief sagt, «dass wir Kinder Gottes heissen – und wir sind es!» ([[1JN.3.1]]), und zugleich: «Es ist noch nicht offenbar geworden, was wir sein werden» ([[1JN.3.2]]).",
+     "gsw": {"question_de": "Was macht de Nachsatz «und mir sind s!» us?",
+             "note_de": "De Brief seit, «dass mir Chind vo Gott heissed – und mir sind s!» ([[1JN.3.1]]), und zgliich: «Es isch no nöd offebar worde, was mir sii wärded» ([[1JN.3.2]])."}},
     {"id": "REFL-1JN-0024", "subject": "TU-1JN-003-001-010", "order": 2,
-     "question_de": "Wie passen «wer aus Gott geboren ist, sündigt nicht» und «wenn wir sagen, wir haben keine Sünde» zusammen?",
+     "question_de": "Wie passen «Jeder, der aus Gott geboren ist, tut keine Sünde» und «Wenn wir sagen, dass wir keine Sünde haben, führen wir uns selbst in die Irre» zusammen?",
      "note_de": "Der Brief sagt beides ([[1JN.3.9]]; [[1JN.1.8]]) und löst die Spannung nicht auf.",
-     "gsw": {"question_de": "Wie passed «wär us Gott gebore isch, sündiget nöd» und «wänn mir säged, mir heged kei Sünd» zäme?",
+     "gsw": {"question_de": "Wie passed «Jede, wo us Gott gebore isch, tuet kei Sünd» und «Wänn mir säged, dass mir kei Sünd händ, füered mir üs sälber i d Irri» zäme?",
              "note_de": "De Brief seit beides ([[1JN.3.9]]; [[1JN.1.8]]) und löst d Spannig nöd uf."}},
     # 3,11–18
     {"id": "REFL-1JN-0025", "subject": "TU-1JN-003-011-018", "order": 1,
      "question_de": "Warum wird ausgerechnet Kain als Gegenbild genannt?",
-     "note_de": "Kain «ermordete seinen Bruder», weil seine Werke böse waren ([[1JN.3.12]], vgl. [[GEN.4.8]]); wer hasst, sei ein Mörder ([[1JN.3.15]]).",
+     "note_de": "Genannt wird Kain, der «seinen Bruder ermordete», weil seine Werke böse waren ([[1JN.3.12]], vgl. [[GEN.4.8]]); wer seinen Bruder hasst, heisst ein Mörder ([[1JN.3.15]]).",
      "gsw": {"question_de": "Wieso wird usgrächnet de Kain als Gägebild gnännt?",
-             "note_de": "De Kain «hät sin Brueder umbracht», wil sini Wärch bös gsii sind ([[1JN.3.12]], vgl. [[GEN.4.8]]); wär hasst, seig en Mörder ([[1JN.3.15]])."}},
+             "note_de": "Gnännt wird de Kain, wo «sin Brueder umbracht hät», wil sini Wärch bös gsii sind ([[1JN.3.12]], vgl. [[GEN.4.8]]); wär sin Brueder hasst, heisst en Mörder ([[1JN.3.15]])."}},
     {"id": "REFL-1JN-0026", "subject": "TU-1JN-003-011-018", "order": 2,
-     "question_de": "Wem gegenüber verschliesst du dein Herz am ehesten?",
-     "note_de": "«Wer die Güter der Welt hat und seinen Bruder Not leiden sieht und sein Herz vor ihm verschliesst – wie bleibt die Liebe Gottes in ihm?» ([[1JN.3.17]]).",
-     "gsw": {"question_de": "Gägenüber wem verschliessisch du dis Härz am ehnschte?",
-             "note_de": "«Wär d Güeter vo de Wält hät und sin Brueder Not liide gseht und sis Härz vor ihm verschliesst – wie bliibt d Liebi vo Gott in ihm?» ([[1JN.3.17]])."}},
+     "question_de": "Was hat die Liebe mit dem zu tun, was man besitzt?",
+     "note_de": "«Wer aber die Güter der Welt hat und seinen Bruder Not leiden sieht und sein Herz vor ihm verschliesst – wie bleibt die Liebe Gottes in ihm?» ([[1JN.3.17]]).",
+     "gsw": {"question_de": "Was hät d Liebi mit dem z tue, was mer bsitzt?",
+             "note_de": "«Wär aber d Güeter vo de Wält hät und sin Brueder Not liide gseht und sis Härz vor ihm verschliesst – wie bliibt d Liebi vo Gott in ihm?» ([[1JN.3.17]])."}},
     # 3,19–24
     {"id": "REFL-1JN-0027", "subject": "TU-1JN-003-019-024", "order": 1,
      "question_de": "Was tröstet, wenn das eigene Herz einen verurteilt?",
@@ -166,10 +175,10 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wora prüefsch du, öb e Stimm vertrauenswürdig isch?",
              "note_de": "«Glaubed nöd jedem Geischt, sondern prüefed d Geischter» ([[1JN.4.1]]); de Brief nännt als Prüefstei s Bekänntnis zu Jesus Christus im Fleisch ([[1JN.4.2]])."}},
     {"id": "REFL-1JN-0030", "subject": "TU-1JN-004-001-006", "order": 2,
-     "question_de": "Was spricht dafür und was dagegen, dass «wer auf uns hört», recht hat?",
-     "note_de": "«Wer Gott kennt, hört auf uns» ([[1JN.4.6]]) – kurz nachdem es heisst, die Welt höre auf die Ihren ([[1JN.4.5]]).",
-     "gsw": {"question_de": "Was spricht defür und was degäge, dass «wär uf üs lost», rächt hät?",
-             "note_de": "«Wär Gott kännt, lost uf üs» ([[1JN.4.6]]) – churz nachdem s heisst, d Wält losi uf iri Lüüt ([[1JN.4.5]])."}},
+     "question_de": "Woran lässt sich prüfen, wer die Wahrheit sagt, wenn sich beide Seiten auf Gott berufen?",
+     "note_de": "«Wer Gott kennt, hört auf uns» ([[1JN.4.6]]) – kurz nachdem es von den Gegnern heisst: «die Welt hört auf sie» ([[1JN.4.5]]).",
+     "gsw": {"question_de": "Wora chan mer prüefe, wär d Wahrheit seit, wänn sich beidi Siite uf Gott berüefed?",
+             "note_de": "«Wär Gott kännt, lost uf üs» ([[1JN.4.6]]) – churz nachdem s vo de Gägner heisst: «d Wält lost uf si» ([[1JN.4.5]])."}},
     # 4,7–12
     {"id": "REFL-1JN-0031", "subject": "TU-1JN-004-007-012", "order": 1,
      "question_de": "Was ändert sich, wenn Liebe nicht bei uns anfängt?",
@@ -325,3 +334,15 @@ SOURCE_CHECKS = {
 }
 for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-1JN-0002", "RCPT-1JN-0003", "RCPT-1JN-0004"]
+RECHECK_EXTRA = {}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc

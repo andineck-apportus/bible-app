@@ -1,6 +1,15 @@
 """Weiterdenken zu Jona (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen hat» für alle
 Abschnitte, Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen Ausgaben nachgeschlagen
-(source_check), soweit möglich. Jona 2 ist ein Gebet: dort auch Fragen zum Mitbeten."""
+(source_check), soweit möglich. Jona 2 ist ein Gebet: dort auch Fragen zum Mitbeten.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 29 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 2 der 5 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-JONAH"]
@@ -14,9 +23,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Was würdsch du Gott uf sini letscht Frag antworte?",
              "note_de": "S Buech hört mit de Frag vo Gott a de Jona uf ([[JON.4.11]]); e Antwort vom Jona wird nöd verzellt."}},
     {"id": "REFL-JON-0002", "subject": "SUM-BOOK-JON", "order": 2,
-     "question_de": "Warum stehen die Fremden in diesem Buch so viel besser da als der Prophet?",
+     "question_de": "Wie verhalten sich die Fremden in diesem Buch – und wie der Prophet?",
      "note_de": "Die Seeleute beten und fürchten JHWH ([[JON.1.14-JON.1.16]]), Ninive kehrt um ([[JON.3.5]]) – Jona flieht und zürnt.",
-     "gsw": {"question_de": "Wieso stönd d Frömde i dem Buech so vil besser da als de Prophet?",
+     "gsw": {"question_de": "Wie verhalted sich d Frömde i dem Buech – und wie de Prophet?",
              "note_de": "D Seelüüt bätted und fürchted JHWH ([[JON.1.14-JON.1.16]]), Ninive chert um ([[JON.3.5]]) – de Jona flüchtet und isch toub."}},
     {"id": "REFL-JON-0003", "subject": "SUM-BOOK-JON", "order": 3,
      "question_de": "Ist das Buch eher eine ernste oder eine humorvolle Erzählung?",
@@ -65,9 +74,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wieso zögered d Seelüüt, de Jona is Meer z rüere, obwohl er s sälber verlangt?",
              "note_de": "Si rueded zerscht gäge de Sturm und bitted JHWH, kei unschuldigs Bluet uf si z lege ([[JON.1.13-JON.1.14]])."}},
     {"id": "REFL-JON-0012", "subject": "TU-JON-001-004-016", "order": 3,
-     "question_de": "Jona sagt, er fürchte JHWH – wer fürchtet ihn am Ende wirklich?",
+     "question_de": "Jona sagt, er fürchte JHWH, und am Ende fürchten die Seeleute JHWH – was heisst «fürchten» bei den einen und bei den anderen?",
      "note_de": "Jona bekennt: «JHWH … fürchte ich» ([[JON.1.9]]); am Schluss heisst es von den Seeleuten: «Da fürchteten die Männer JHWH mit grosser Furcht» ([[JON.1.16]]).",
-     "gsw": {"question_de": "De Jona seit, er fürchti JHWH – wär fürchtet en am Änd würkli?",
+     "gsw": {"question_de": "De Jona seit, er fürchti JHWH, und am Änd fürchted d Seelüüt JHWH – was heisst «fürchte» bi de einte und bi de andere?",
              "note_de": "De Jona bekännt: «JHWH … fürcht ich» ([[JON.1.9]]); am Schluss heisst s vo de Seelüüt: «Da händ d Manne JHWH mit grosser Furcht gfürchtet» ([[JON.1.16]])."}},
     # 1,17
     {"id": "REFL-JON-0013", "subject": "TU-JON-001-017-017", "order": 1,
@@ -108,9 +117,9 @@ REFLECTIONS = [
     # 3,1–4
     {"id": "REFL-JON-0020", "subject": "TU-JON-003-001-004", "order": 1,
      "question_de": "Was bedeutet es, dass Gott Jona ein zweites Mal ruft?",
-     "note_de": "Der Auftrag wiederholt fast wörtlich den ersten ([[JON.3.2]]; [[JON.1.2]]); ein Vorwurf fällt nicht.",
+     "note_de": "Der Auftrag beginnt wörtlich wie der erste ([[JON.3.2]]; [[JON.1.2]]); ein Vorwurf fällt nicht.",
      "gsw": {"question_de": "Was bedüütet s, dass Gott de Jona es zweits Mal rüeft?",
-             "note_de": "De Uftrag widerholt fascht wörtlich de erscht ([[JON.3.2]]; [[JON.1.2]]); en Vorwurf fallt nöd."}},
+             "note_de": "De Uftrag fangt wörtlich glich aa wie de erscht ([[JON.3.2]]; [[JON.1.2]]); en Vorwurf fallt nöd."}},
     {"id": "REFL-JON-0021", "subject": "TU-JON-003-001-004", "order": 2,
      "question_de": "Warum ist Jonas Botschaft so kurz?",
      "note_de": "Im hebräischen Text sind es nur fünf Wörter ([[JON.3.4]]); von Umkehr oder Gnade sagt Jona nichts.",
@@ -135,9 +144,9 @@ REFLECTIONS = [
     # 4,1–4
     {"id": "REFL-JON-0025", "subject": "TU-JON-004-001-004", "order": 1,
      "question_de": "Warum macht ausgerechnet Gottes Barmherzigkeit Jona so zornig?",
-     "note_de": "Jona zitiert ein altes Bekenntnis: «gnädig und barmherzig, langsam zum Zorn und reich an Treue» ([[JON.4.2]], vgl. [[EXO.34.6]]).",
+     "note_de": "Jona zitiert ein altes Bekenntnis: «ein gnädiger und barmherziger Gott …, langsam zum Zorn und reich an Treue» ([[JON.4.2]], vgl. [[EXO.34.6]]).",
      "gsw": {"question_de": "Wieso macht usgrächnet d Barmhärzigkeit vo Gott de Jona so toub?",
-             "note_de": "De Jona zitiert es alts Bekänntnis: «gnädig und barmhärzig, langsam zum Zorn und riich a Tröii» ([[JON.4.2]], vgl. [[EXO.34.6]])."}},
+             "note_de": "De Jona zitiert es alts Bekänntnis: «en gnädige und barmhärzige Gott …, langsam zum Zorn und riich a Tröii» ([[JON.4.2]], vgl. [[EXO.34.6]])."}},
     {"id": "REFL-JON-0026", "subject": "TU-JON-004-001-004", "order": 2,
      "question_de": "Was bewirkt eine Frage, wo man einen Vorwurf erwarten würde?",
      "note_de": "Gott fragt nur: «Ist es recht, dass du zornig bist?» ([[JON.4.4]]).",
@@ -269,3 +278,15 @@ SOURCE_CHECKS = {
 }
 for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-JON-0001", "RCPT-JON-0003"]
+RECHECK_EXTRA = {}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc

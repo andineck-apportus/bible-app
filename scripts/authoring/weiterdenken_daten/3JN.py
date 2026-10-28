@@ -1,6 +1,15 @@
 """Weiterdenken zum 3. Johannesbrief (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen
 hat» für alle Abschnitte, das Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen
-Ausgaben nachgeschlagen (source_check), soweit möglich."""
+Ausgaben nachgeschlagen (source_check), soweit möglich.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 13 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 0 der 2 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-JOHANNINE"]
@@ -21,9 +30,9 @@ REFLECTIONS = [
     # Kapitel
     {"id": "REFL-3JN-0003", "subject": "SUM-CH-3JN-001", "order": 1,
      "question_de": "Woran zeigt sich, ob jemand Erster sein will oder dienen will?",
-     "note_de": "Diotrephes «will unter ihnen der Erste sein» ([[3JN.1.9]]); Gaius rüstet Reisende aus ([[3JN.1.6]]).",
+     "note_de": "Diotrephes ist einer, «der unter ihnen der Erste sein will» ([[3JN.1.9]]); Gaius rüstet Reisende aus ([[3JN.1.6]]).",
      "gsw": {"question_de": "Wora zeigt sich, öb öpper de Erscht wott sii oder wott diene?",
-             "note_de": "De Diotrephes «wott under ine de Erscht sii» ([[3JN.1.9]]); de Gaius rüschtet Reisendi us ([[3JN.1.6]])."}},
+             "note_de": "De Diotrephes isch eine, «wo under ine de Erscht wott sii» ([[3JN.1.9]]); de Gaius rüschtet Reisendi us ([[3JN.1.6]])."}},
     # 1–4
     {"id": "REFL-3JN-0004", "subject": "TU-3JN-001-001-004", "order": 1,
      "question_de": "Worüber freust du dich bei anderen am meisten?",

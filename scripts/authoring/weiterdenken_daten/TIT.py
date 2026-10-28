@@ -1,7 +1,16 @@
 """Weiterdenken zum Titusbrief (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen hat»
 für alle Abschnitte, Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen Ausgaben
 nachgeschlagen (source_check), soweit möglich. Pauschalurteile des Textes (über Kreter, «die aus der Beschneidung») werden
-als Teil des Textes befragt, nicht übernommen."""
+als Teil des Textes befragt, nicht übernommen.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 21 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 2 der 4 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-TITUS"]
@@ -37,9 +46,9 @@ REFLECTIONS = [
              "note_de": "«Dänn au mir sind emal unverständig, ungehorsam, irregfüert gsii» ([[TIT.3.3]]) – so wird d Mahnig zur Fründlichkeit begründet ([[TIT.3.2]])."}},
     # 1,1–4
     {"id": "REFL-TIT-0006", "subject": "TU-TIT-001-001-004", "order": 1,
-     "question_de": "Was bedeutet es, jemanden sein «echtes Kind im Glauben» zu nennen?",
+     "question_de": "Was bedeutet es, jemanden «mein echtes Kind im gemeinsamen Glauben» zu nennen?",
      "note_de": "So nennt Paulus Titus ([[TIT.1.4]]) – nicht verwandt, sondern durch den gemeinsamen Glauben verbunden.",
-     "gsw": {"question_de": "Was bedüütet s, öpper sis «ächts Chind im Glaube» z nänne?",
+     "gsw": {"question_de": "Was bedüütet s, öpper «mis ächt Chind im gmeinsame Glaube» z nänne?",
              "note_de": "So nännt de Paulus de Titus ([[TIT.1.4]]) – nöd verwandt, sondern dur de gmeinsam Glaube verbunde."}},
     {"id": "REFL-TIT-0007", "subject": "TU-TIT-001-001-004", "order": 2,
      "question_de": "Warum betont der Gruss, dass Gott «nicht lügt»?",
@@ -53,16 +62,16 @@ REFLECTIONS = [
      "gsw": {"question_de": "Weli vo dene Eigeschafte würdsch du vo Mänsche i de Verantwortig erwarte – und weli fääled dir?",
              "note_de": "D Lischte nännt fascht nu Charakter und Läbesfüerig ([[TIT.1.6-TIT.1.8]]); nu ei Fähigkeit wird verlangt: ermahne und widerlege chöne ([[TIT.1.9]])."}},
     {"id": "REFL-TIT-0009", "subject": "TU-TIT-001-005-009", "order": 2,
-     "question_de": "Warum soll ein Aufseher zuerst gastfreundlich sein?",
+     "question_de": "Warum steht «gastfreundlich» an erster Stelle der guten Eigenschaften?",
      "note_de": "Nach den Verboten beginnt die Reihe der guten Eigenschaften mit «gastfreundlich» ([[TIT.1.8]]).",
-     "gsw": {"question_de": "Wieso söll en Ufseher zerscht gaschtfründlich sii?",
+     "gsw": {"question_de": "Wieso staat «gaschtfründlich» zvorderscht bi de guete Eigeschafte?",
              "note_de": "Nach de Verbot fangt d Reihe vo de guete Eigeschafte mit «gaschtfründlich» aa ([[TIT.1.8]])."}},
     # 1,10–16
     {"id": "REFL-TIT-0010", "subject": "TU-TIT-001-010-016", "order": 1,
      "question_de": "Was macht ein Pauschalurteil über ein ganzes Volk mit denen, die es trifft?",
-     "note_de": "Der Brief zitiert einen Kreter: «Kreter sind immer Lügner» und nennt das Zeugnis wahr ([[TIT.1.12-TIT.1.13]]); auch «die aus der Beschneidung» werden pauschal genannt ([[TIT.1.10]]).",
+     "note_de": "Der Brief zitiert einen Kreter: «Kreter sind immer Lügner» und nennt das Zeugnis wahr ([[TIT.1.12-TIT.1.13]]); unter den Verführern werden «besonders die aus der Beschneidung» genannt ([[TIT.1.10]]).",
      "gsw": {"question_de": "Was macht es Pauschalurteil über es ganzes Volk mit dene, wo s trifft?",
-             "note_de": "De Brief zitiert en Kreter: «Kreter sind immer Lügner» und nännt s Zügnis wahr ([[TIT.1.12-TIT.1.13]]); au «die us de Beschniidig» wärded pauschal gnännt ([[TIT.1.10]])."}},
+             "note_de": "De Brief zitiert en Kreter: «Kreter sind immer Lügner» und nännt s Zügnis wahr ([[TIT.1.12-TIT.1.13]]); under de Verfüerer wärded «bsunders die us de Beschniidig» gnännt ([[TIT.1.10]])."}},
     {"id": "REFL-TIT-0011", "subject": "TU-TIT-001-010-016", "order": 2,
      "question_de": "«Alles ist rein für die Reinen» – was sagt dieser Satz über den Blick des Betrachters?",
      "note_de": "Für die Befleckten ist nichts rein, «befleckt sind sowohl ihr Verstand als auch ihr Gewissen» ([[TIT.1.15]]).",
@@ -98,9 +107,9 @@ REFLECTIONS = [
              "note_de": "«Wo aber d Güeti und d Mänschefründlichkeit vo Gott, öisem Retter, erschine isch» ([[TIT.3.4]]); churz vorher söled d Gläubige sälber «gägenüber allne Mänsche» Sanftmuet zeige ([[TIT.3.2]])."}},
     {"id": "REFL-TIT-0017", "subject": "TU-TIT-003-001-007", "order": 2,
      "question_de": "Wie wird man freundlich zu Menschen, die man schwierig findet?",
-     "note_de": "Die Glaubenden sollen «volle Sanftmut zeigen gegenüber allen Menschen» ([[TIT.3.2]]).",
+     "note_de": "Titus soll die Glaubenden daran erinnern, freundlich zu sein und «volle Sanftmut zu zeigen gegenüber allen Menschen» ([[TIT.3.1-TIT.3.2]]).",
      "gsw": {"question_de": "Wie wird mer fründlich zu Mänsche, wo mer schwierig findt?",
-             "note_de": "D Gläubige söled «ganzi Sanftmuet zeige gägenüber allne Mänsche» ([[TIT.3.2]])."}},
+             "note_de": "De Titus söll d Gläubige draa erinnere, fründlich z sii und «ganzi Sanftmuet z zeige gägenüber allne Mänsche» ([[TIT.3.1-TIT.3.2]])."}},
     # 3,8–11
     {"id": "REFL-TIT-0018", "subject": "TU-TIT-003-008-011", "order": 1,
      "question_de": "Wann ist ein Streit nutzlos – und wann muss man ihn führen?",
@@ -139,11 +148,11 @@ RECEPTIONS = [
      "gsw": {"period_de": "sit em 18. Jahrhundert",
              "text_de": "Sit em 18. Jahrhundert nännt mer di beide Brief a de Timotheus und de Brief a de Titus zäme «Pastoralbrief», wil si sich a Leiter vo Gmeinde richted. Sit em 19. Jahrhundert halted vil Forschendi si wäge Sprach, Gmeindsornig und Laag für Schrifte us de Ziit nach em Paulus; anderi halted am Paulus als Verfasser fescht."}},
     {"id": "RCPT-TIT-0003", "subject": "TU-TIT-002-011-015", "tradition": "liturgy", "period_de": "bis heute",
-     "text_de": "In der römisch-katholischen Leseordnung ist [[TIT.2.11-TIT.2.14]] die zweite Lesung der Christmette in der Heiligen Nacht, [[TIT.3.4-TIT.3.7]] die der Messe am Weihnachtsmorgen: Die «erschienene Gnade» und die «erschienene Menschenfreundlichkeit Gottes» werden auf die Geburt Jesu bezogen.",
+     "text_de": "In der römisch-katholischen Leseordnung ist [[TIT.2.11-TIT.2.14]] die zweite Lesung der Christmette in der Heiligen Nacht, [[TIT.3.4-TIT.3.7]] die der Messe am Weihnachtsmorgen: Dass die Gnade Gottes und seine Menschenfreundlichkeit «erschienen» sind, wird auf die Geburt Jesu bezogen.",
      "sources_de": ["Römisches Messlektionar, Weihnachten (Messe in der Heiligen Nacht; Messe am Morgen)"],
      "confidence": "high",
      "gsw": {"period_de": "bis hüt",
-             "text_de": "I de römisch-katholische Läseornig isch [[TIT.2.11-TIT.2.14]] di zweit Läsig vo de Chrischtmette i de Heilige Nacht, [[TIT.3.4-TIT.3.7]] die vo de Mäss am Wienachtsmorge: Di «erschinig Gnad» und di «erschinig Mänschefründlichkeit vo Gott» bezieht mer uf d Geburt vo Jesus."}},
+             "text_de": "I de römisch-katholische Läseornig isch [[TIT.2.11-TIT.2.14]] di zweit Läsig vo de Chrischtmette i de Heilige Nacht, [[TIT.3.4-TIT.3.7]] die vo de Mäss am Wienachtsmorge: Dass d Gnad vo Gott und sini Mänschefründlichkeit «erschine» sind, bezieht mer uf d Geburt vo Jesus."}},
     {"id": "RCPT-TIT-0004", "subject": "SUM-BOOK-TIT", "tradition": "reformation", "period_de": "1522",
      "text_de": "Martin Luther nennt den Titusbrief in seiner Vorrede zu diesem Brief eine kurze Epistel, aber ein Muster christlicher Lehre.",
      "sources_de": ["Martin Luther, Vorrede auf die Epistel an Titus (1522)"],
@@ -213,3 +222,15 @@ for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
     if _x["id"] in UNCERTAIN:
         _x["uncertain_de"] = UNCERTAIN[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-TIT-0002", "RCPT-TIT-0004"]
+RECHECK_EXTRA = {}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc

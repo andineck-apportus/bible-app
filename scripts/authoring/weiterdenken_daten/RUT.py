@@ -1,6 +1,15 @@
 """Weiterdenken zu Rut (Entscheid Andi Neck 2026-10-28): Fragen zum Weiterdenken und «Wie man es gelesen hat» für alle
 Abschnitte, Kapitel und das Buch. KI-Entwürfe ohne fachliche Prüfung; Quellen in frei zugänglichen Ausgaben nachgeschlagen
-(source_check), soweit möglich."""
+(source_check), soweit möglich.
+
+Prüfvermerk (PROC-WEITERDENKEN@1.0, Schritte 3 und 4): Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung,
+Claude) gegen die hochdeutsche Arbeitsübersetzung geprüft: alle 34 Fragen und Hintergrundsätze (offen, nicht suggestiv,
+am Text belegt, Zitate per Skript wörtlich verglichen, Stellenmarken), Mundart nach pruefe_mundart; Kernaussagen (gist_de)
+der Kernanalysen gegen den Text;
+Quellen von 2 der 7 Einträge «Wie man es gelesen hat» erneut
+nachgeschlagen (Vermerk im source_check). Grenzen: nicht gegen den Urtext geprüft; Zitate aus Büchern ohne
+Arbeitsübersetzung nicht verglichen; Mundart-Zitate nicht an die Mundart-Übersetzungsschicht angeglichen; keine fachliche
+und keine muttersprachliche Prüfung durch eine Person."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"
 TAGS = ["TAG-RUTH"]
@@ -48,9 +57,9 @@ REFLECTIONS = [
     # 1,1–5
     {"id": "REFL-RUT-0008", "subject": "TU-RUT-001-001-005", "order": 1,
      "question_de": "Wie lebt es sich als Fremde in einem anderen Land?",
-     "note_de": "Die Familie zieht wegen einer Hungersnot nach Moab, «um dort als Fremder zu wohnen» ([[RUT.1.1]]).",
+     "note_de": "Die Familie zieht wegen einer Hungersnot nach Moab, «um im Gebiet von Moab als Fremder zu wohnen» ([[RUT.1.1]]).",
      "gsw": {"question_de": "Wie läbt mer als Frömdi in eme andere Land?",
-             "note_de": "D Familie zieht wäg ere Hungersnot uf Moab, «zum dört als Frömde z wone» ([[RUT.1.1]])."}},
+             "note_de": "D Familie zieht wäg ere Hungersnot uf Moab, «zum im Gebiet vo Moab als Frömde z wone» ([[RUT.1.1]])."}},
     {"id": "REFL-RUT-0009", "subject": "TU-RUT-001-001-005", "order": 2,
      "question_de": "Was bleibt einer Frau, die ohne Mann und ohne Kinder zurückbleibt?",
      "note_de": "Zweimal heisst es, Noomi «blieb zurück» ([[RUT.1.3]]; [[RUT.1.5]]).",
@@ -59,25 +68,25 @@ REFLECTIONS = [
     # 1,6–18
     {"id": "REFL-RUT-0010", "subject": "TU-RUT-001-006-018", "order": 1,
      "question_de": "Orpa geht zurück, Rut bleibt – hat eine von beiden falsch gehandelt?",
-     "note_de": "Noomi drängt beide dreimal zur Umkehr ([[RUT.1.8]]; [[RUT.1.11]]; [[RUT.1.15]]); der Text tadelt Orpa nicht.",
+     "note_de": "Noomi drängt beide zur Umkehr ([[RUT.1.8]]; [[RUT.1.11-RUT.1.12]]), zuletzt Rut allein ([[RUT.1.15]]); der Text tadelt Orpa nicht.",
      "gsw": {"question_de": "D Orpa gaat zrugg, d Rut bliibt – hät eini vo beide falsch ghandlet?",
-             "note_de": "D Noomi drängt beidi drüü Mal zum Umchere ([[RUT.1.8]]; [[RUT.1.11]]; [[RUT.1.15]]); de Text tadlet d Orpa nöd."}},
+             "note_de": "D Noomi drängt beidi zum Umchere ([[RUT.1.8]]; [[RUT.1.11-RUT.1.12]]), zletscht d Rut elei ([[RUT.1.15]]); de Text tadlet d Orpa nöd."}},
     {"id": "REFL-RUT-0011", "subject": "TU-RUT-001-006-018", "order": 2,
      "question_de": "Was gibt Rut alles auf mit ihrem Satz «Dein Volk ist mein Volk, und dein Gott ist mein Gott»?",
      "note_de": "Rut verbindet in ihrem Schwur Weg, Wohnort, Volk, Gott und Grab ([[RUT.1.16-RUT.1.17]]).",
      "gsw": {"question_de": "Was git d Rut alles uf mit irem Satz «Dis Volk isch mis Volk, und din Gott isch min Gott»?",
              "note_de": "D Rut verbindet i irem Schwur Wäg, Wonort, Volk, Gott und Grab ([[RUT.1.16-RUT.1.17]])."}},
     {"id": "REFL-RUT-0012", "subject": "TU-RUT-001-006-018", "order": 3,
-     "question_de": "Warum versucht Noomi so hartnäckig, die beiden loszuwerden?",
+     "question_de": "Warum drängt Noomi die beiden so hartnäckig zur Umkehr?",
      "note_de": "Noomi sagt: «Die Hand JHWHs hat sich gegen mich gewendet» ([[RUT.1.13]]).",
-     "gsw": {"question_de": "Wieso probiert d Noomi so hartnäckig, die beide loszwärde?",
+     "gsw": {"question_de": "Wieso drängt d Noomi die beide so hartnäckig zum Umchere?",
              "note_de": "D Noomi seit: «D Hand vo JHWH hät sich gäge mich gchert» ([[RUT.1.13]])."}},
     # 1,19–22
     {"id": "REFL-RUT-0013", "subject": "TU-RUT-001-019-022", "order": 1,
      "question_de": "Darf man so offen gegen Gott klagen wie Noomi?",
-     "note_de": "Noomi sagt vor der ganzen Stadt, der Allmächtige habe ihr Böses angetan ([[RUT.1.20-RUT.1.21]]); der Erzähler widerspricht ihr nicht.",
+     "note_de": "Noomi sagt vor den Frauen der Stadt, der Allmächtige habe ihr Böses angetan ([[RUT.1.20-RUT.1.21]]); der Erzähler widerspricht ihr nicht.",
      "gsw": {"question_de": "Dörf mer so offe gäge Gott chlage wie d Noomi?",
-             "note_de": "D Noomi seit vor de ganze Stadt, de Allmächtig heb ire Böses aatue ([[RUT.1.20-RUT.1.21]]); de Erzähler widerspricht ire nöd."}},
+             "note_de": "D Noomi seit vor de Fraue vo de Stadt, de Allmächtig heb ire Böses aatue ([[RUT.1.20-RUT.1.21]]); de Erzähler widerspricht ire nöd."}},
     {"id": "REFL-RUT-0014", "subject": "TU-RUT-001-019-022", "order": 2,
      "question_de": "Was sagt der letzte Satz des Kapitels nach Noomis Klage?",
      "note_de": "Sie kommen «zu Beginn der Gerstenernte» nach Betlehem ([[RUT.1.22]]).",
@@ -102,9 +111,9 @@ REFLECTIONS = [
              "note_de": "D Rut fröget genau das ([[RUT.2.10]]), und de Boas antwortet mit dem, was mer ihm über iri Treui zur Noomi verzellt hät ([[RUT.2.11]])."}},
     {"id": "REFL-RUT-0018", "subject": "TU-RUT-002-004-017", "order": 2,
      "question_de": "Boas wünscht, dass JHWH Rut belohnt – und tut dann selbst etwas. Wie hängt beides zusammen?",
-     "note_de": "Er segnet sie, Zuflucht «unter seinen Flügeln» zu finden ([[RUT.2.12]]), und lässt für sie Ähren aus den Bündeln ziehen ([[RUT.2.16]]).",
+     "note_de": "Er wünscht ihr Lohn von JHWH, zu dem sie gekommen ist, «um unter seinen Flügeln Zuflucht zu suchen» ([[RUT.2.12]]), und lässt für sie Ähren aus den Bündeln ziehen ([[RUT.2.16]]).",
      "gsw": {"question_de": "De Boas wünscht, dass JHWH d Rut belohnt – und tuet dänn sälber öppis. Wie hanget beides zäme?",
-             "note_de": "Er sägnet si, dass si «under sine Flügel» Zueflucht findet ([[RUT.2.12]]), und laat für si Ähre us de Büschel zie ([[RUT.2.16]])."}},
+             "note_de": "Er wünscht ire Lohn vo JHWH, zu dem si choo isch, «zum under sine Flügel Zueflucht z sueche» ([[RUT.2.12]]), und laat für si Ähre us de Büschel zie ([[RUT.2.16]])."}},
     {"id": "REFL-RUT-0019", "subject": "TU-RUT-002-004-017", "order": 3,
      "question_de": "Wovor muss Boas eine junge fremde Frau auf dem Feld schützen?",
      "note_de": "Boas hat den Knechten geboten, sie nicht anzurühren, und sagt: «Beschämt sie nicht» ([[RUT.2.9]]; [[RUT.2.15]]).",
@@ -113,14 +122,14 @@ REFLECTIONS = [
     # 2,18–23
     {"id": "REFL-RUT-0020", "subject": "TU-RUT-002-018-023", "order": 1,
      "question_de": "Was verändert sich bei Noomi, als sie den Namen Boas hört?",
-     "note_de": "Die Frau, die sich «Mara» nannte, segnet nun JHWH, «der seine Treue den Lebenden und den Toten nicht entzogen hat» ([[RUT.2.20]]).",
+     "note_de": "Die Frau, die «Mara» heissen wollte ([[RUT.1.20]]), sagt nun über Boas: «Gesegnet sei er von JHWH, der seine Treue den Lebenden und den Toten nicht entzogen hat!» ([[RUT.2.20]]).",
      "gsw": {"question_de": "Was veränderet sich bi de Noomi, wo si de Name Boas ghört?",
-             "note_de": "D Frau, wo sich «Mara» gnännt hät, sägnet jetzt JHWH, «wo sini Treui de Läbige und de Tote nöd entzoge hät» ([[RUT.2.20]])."}},
+             "note_de": "D Frau, wo «Mara» hät wele heisse ([[RUT.1.20]]), seit jetzt über de Boas: «Gsägnet seig er vo JHWH, wo sini Treui de Läbige und de Tote nöd entzoge hät!» ([[RUT.2.20]])."}},
     {"id": "REFL-RUT-0021", "subject": "TU-RUT-002-018-023", "order": 2,
      "question_de": "Was ist ein «Löser» – und wer kann heute für andere einstehen?",
-     "note_de": "Noomi nennt Boas «einen von unseren Lösern» ([[RUT.2.20]]); was das heisst, zeigt erst Kapitel 4.",
+     "note_de": "Noomi sagt von Boas: «Er ist einer von unseren Lösern» ([[RUT.2.20]]); was das heisst, zeigt erst Kapitel 4.",
      "gsw": {"question_de": "Was isch en «Löser» – und wär chan hüt für anderi iistaa?",
-             "note_de": "D Noomi nännt de Boas «eine vo öisne Löser» ([[RUT.2.20]]); was das heisst, zeigt erscht s Kapitel 4."}},
+             "note_de": "D Noomi seit vom Boas: «Er isch eine vo öisne Löser» ([[RUT.2.20]]); was das heisst, zeigt erscht s Kapitel 4."}},
     # 3,1–5
     {"id": "REFL-RUT-0022", "subject": "TU-RUT-003-001-005", "order": 1,
      "question_de": "Noomi wollte Rut zuerst wegschicken, jetzt sucht sie ihr einen Ort der Ruhe. Was hat sich verändert?",
@@ -145,10 +154,10 @@ REFLECTIONS = [
              "note_de": "De Boas schwört, er lös d Rut, wänn de nööcher Löser nöd wott ([[RUT.3.12-RUT.3.13]])."}},
     # 3,16–18
     {"id": "REFL-RUT-0026", "subject": "TU-RUT-003-016-018", "order": 1,
-     "question_de": "«Komm nicht mit leeren Händen» – an wen denkt Boas dabei?",
-     "note_de": "Die Gerste ist für Noomi bestimmt ([[RUT.3.17]]), die gesagt hatte, JHWH habe sie leer zurückgebracht ([[RUT.1.21]]).",
-     "gsw": {"question_de": "«Chumm nöd mit lääre Händ» – a wän dänkt de Boas debii?",
-             "note_de": "D Gärschte isch für d Noomi bestimmt ([[RUT.3.17]]), wo gseit hät, JHWH heb si läär zruggbracht ([[RUT.1.21]])."}},
+     "question_de": "«Komm nicht mit leeren Händen» – was bedeutet dieses Wort für Noomi?",
+     "note_de": "Boas sagt es mit Blick auf die Schwiegermutter ([[RUT.3.17]]), die gesagt hatte, JHWH habe sie leer zurückgebracht ([[RUT.1.21]]).",
+     "gsw": {"question_de": "«Chumm nöd mit lääre Händ» – was bedüütet das Wort für d Noomi?",
+             "note_de": "De Boas seit s mit Blick uf d Schwigermueter ([[RUT.3.17]]), wo gseit hät, JHWH heb si läär zruggbracht ([[RUT.1.21]])."}},
     {"id": "REFL-RUT-0027", "subject": "TU-RUT-003-016-018", "order": 2,
      "question_de": "Wie fühlt sich das Warten an, wenn andere über die eigene Zukunft entscheiden?",
      "note_de": "Noomi sagt zu Rut: «Bleib sitzen, meine Tochter, bis du weisst, wie die Sache ausgeht» ([[RUT.3.18]]).",
@@ -177,9 +186,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wär isch da de Löser – de Boas oder s Chind?",
              "note_de": "D Fraue lobed JHWH, wo de Noomi «hüt nöd hät la fääle a me Löser», und meined s Neugeborne ([[RUT.4.14-RUT.4.15]])."}},
     {"id": "REFL-RUT-0032", "subject": "TU-RUT-004-013-017", "order": 2,
-     "question_de": "Was heisst es, dass eine Schwiegertochter «besser als sieben Söhne» ist?",
+     "question_de": "Was heisst es, dass eine Schwiegertochter für Noomi «besser ist als sieben Söhne»?",
      "note_de": "So reden die Frauen von Betlehem über Rut ([[RUT.4.15]]) – über die Fremde, mit der Noomi zurückgekommen war.",
-     "gsw": {"question_de": "Was heisst es, dass e Schwigertochter «besser als sibe Söhn» isch?",
+     "gsw": {"question_de": "Was heisst es, dass e Schwigertochter für d Noomi «besser isch als sibe Söhn»?",
              "note_de": "So redet d Fraue vo Betlehem über d Rut ([[RUT.4.15]]) – über di Frömd, wo mit de Noomi zruggchoo isch."}},
     # 4,18–22
     {"id": "REFL-RUT-0033", "subject": "TU-RUT-004-018-022", "order": 1,
@@ -195,7 +204,7 @@ REFLECTIONS = [
 RECEPTIONS = [
     {"id": "RCPT-RUT-0001", "subject": "SUM-BOOK-RUT", "tradition": "liturgy", "period_de": "seit dem Frühmittelalter",
      "text_de": "In der Synagoge wird das Buch Rut am Wochenfest (Schawuot) gelesen. Als Gründe werden genannt: die Erntezeit, Ruts Bindung an Israels Gott als Bild für die Annahme der Tora am Sinai und David, mit dessen Stammbaum das Buch endet.",
-     "sources_de": ["Traktat Soferim 14,16 (frühester Beleg)"],
+     "sources_de": ["Traktat Soferim 14,16 (in anderen Ausgaben 14,18; frühester Beleg)"],
      "confidence": "high",
      "gsw": {"period_de": "sit em Früemittelalter",
              "text_de": "I de Synagoge list mer s Buech Rut am Wuchefescht (Schawuot). Als Gründ nännt mer: d Ärnteziit, dass sich d Rut a Israels Gott bindet, als Bild für d Aanaam vo de Tora am Sinai, und de David, mit dem sim Stammbaum s Buech uufhört."}},
@@ -326,3 +335,21 @@ SOURCE_CHECKS = {
 }
 for _x in RECEPTIONS:
     _x["source_check"] = SOURCE_CHECKS[_x["id"]]
+
+# Zweite Quellenprüfung durch eine weitere Instanz (2026-10-29)
+RECHECK_DE = " Am 2026-10-29 von einer weiteren Instanz (getrennte KI-Prüfung, Claude) erneut nachgeschlagen; keine fachliche Prüfung."
+RECHECKED = ["RCPT-RUT-0001", "RCPT-RUT-0004"]
+RECHECK_EXTRA = {
+ "RCPT-RUT-0001": {
+  "source": "Traktat Soferim 14 (zweite Prüfung)",
+  "found_at": "https://jewishlink.news/the-origin-of-the-reading-of-the-chamesh-megillot/",
+  "finding_de": "Dieselbe Bestimmung (Hoheslied an Pessach, Rut an Schawuot) wird dort als Soferim 14,18 gezählt; die Zählung der Halachot schwankt zwischen Ausgaben. Angabe in sources_de ergänzt."
+ }
+}
+for _x in RECEPTIONS:
+    if _x["id"] in RECHECKED:
+        _sc = dict(_x["source_check"])
+        _sc["method_de"] = _sc["method_de"] + RECHECK_DE
+        if _x["id"] in RECHECK_EXTRA:
+            _sc["checked"] = _sc["checked"] + [RECHECK_EXTRA[_x["id"]]]
+        _x["source_check"] = _sc
