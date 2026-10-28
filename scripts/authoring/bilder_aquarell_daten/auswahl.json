@@ -9816,5 +9816,343 @@
       "datum": "2026-10-28",
       "prozess": "PROC-BILD-AQUARELL@2.3"
     }
+  },
+  "TIT-003-R2": {
+    "datei": "img/TIT-003-R2.webp",
+    "lauf": "20261028-195913-auto-neu",
+    "variante": "r3v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-10-28",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 4,
+      "kern": 1,
+      "kern_fehlt_de": "Die Versorgung mit Reiseproviant ist erkennbar, aber Titus, Zenas und Apollos sowie der Reiseanlass und der Aufruf zu guten Werken bleiben unklar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and objects remain within the picture edges."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No painted writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical anomaly is visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No two figures are clearly the same individual."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear caricature or ethnic stereotype is visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have natural-looking proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten",
+          "ergebnis": "fehler",
+          "antwort": "no",
+          "grund": "Although much paper is white, the figures and boat have detailed folds and textures."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "F-TITUS",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Titus erkennbar (moosgrünes Gewand, kurzes lockiges Haar)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The central man has curly dark hair and a moss-green robe."
+        },
+        {
+          "id": "F-GEMEINDE-GEMISCHT",
+          "ebene": "figur",
+          "stufe": "soll",
+          "de": "Gemeinde aus Männern und Frauen",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A man and a woman on the right both wear blue clothing."
+        },
+        {
+          "id": "R2-AUSRUESTEN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Die Reisenden werden ausgerüstet",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The man in green holds a bag and bread while the two men beside him reach toward them."
+        },
+        {
+          "id": "R2-REISENDE",
+          "ebene": "feld",
+          "stufe": "soll",
+          "de": "Zwei Reisende mit Wanderstab",
+          "ergebnis": "fehler",
+          "antwort": 1,
+          "grund": "One man visibly holds a staff."
+        },
+        {
+          "id": "R2-HAFEN",
+          "ebene": "feld",
+          "stufe": "soll",
+          "de": "Hafen mit Boot",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A boat is visible behind the figures."
+        }
+      ],
+      "koepfe": {
+        "FIG-TITUS": {
+          "kopf": [
+            415,
+            343,
+            478,
+            448
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-ZENAS": {
+          "kopf": [
+            196,
+            343,
+            263,
+            446
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-APOLLOS": {
+          "kopf": [
+            586,
+            347,
+            652,
+            448
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-GRUPPE-GLAUBENDE": {
+          "kopf": [
+            789,
+            428,
+            857,
+            528
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "The man in green holds a bag and a loaf while the man in blue reaches toward the loaf. The man with the staff gestures toward them, and the two people on the right hold a basket and another bag.",
+        "story_guess": "Possibly a scene of Jesus and disciples preparing for a journey, but the image does not identify a particular Bible story or moment with confidence.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with moderately detailed foreground figures and a sparse, lightly painted background."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Faint figure in the left background",
+          "head": [
+            14,
+            526,
+            34,
+            562
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Faint figure in the left background",
+          "head": [
+            47,
+            500,
+            68,
+            536
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Faint figure in the left background",
+          "head": [
+            90,
+            488,
+            110,
+            522
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Dark-haired bearded man in brown with a pale wrap",
+          "head": [
+            196,
+            343,
+            263,
+            446
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Curly-haired bearded man in a green robe",
+          "head": [
+            415,
+            343,
+            478,
+            448
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Man in a petrol-blue mantle over a light robe",
+          "head": [
+            586,
+            347,
+            652,
+            448
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Woman in blue with a pale head covering, carrying a basket",
+          "head": [
+            789,
+            428,
+            857,
+            528
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Bearded man in blue with a pale wrap, carrying a jar",
+          "head": [
+            854,
+            380,
+            914,
+            474
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "e86991d394f4892d",
+      "datum": "2026-10-28",
+      "plan_sha": "8c410bfd942f707d",
+      "regeln_version": "2026-10-28c",
+      "prozess": "PROC-BILD-AQUARELL@2.3",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Die Reiseausrüstung für Zenas und Apollos durch Titus und die Aufforderung zu guten Werken werden nicht eindeutig erkannt.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible lettering is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "A man in green holds out a loaf while a man in blue reaches toward it. A man with a staff gestures toward them, and two people carrying a basket and a bag stand nearby.",
+        "story_guess": "The scene may depict Jesus and others performing good works, such as sharing food, but no specific Bible story or exact moment can be identified confidently from the picture alone.",
+        "text_in_picture": [
+          {
+            "text": "Gute Werke",
+            "speech_bubble_belongs_to": null
+          },
+          {
+            "text": "2",
+            "speech_bubble_belongs_to": null
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "45c9b743d0637c79",
+      "datum": "2026-10-28",
+      "prozess": "PROC-BILD-AQUARELL@2.3"
+    }
   }
 }
