@@ -35,6 +35,7 @@ DATEN = ROOT / "scripts/authoring/bilder_aquarell_daten"
 API = "https://api.openai.com/v1"
 VORZUG = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]
 _modell = None
+VERFAHREN = "2026-10-28c"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
 
 
 def lade(p):
@@ -72,7 +73,7 @@ def figuren_fuer(sz, fig):
 
 
 def plan_fingerabdruck(sz, fig, allg):
-    return sha({"regeln": regeln_fuer(sz, fig, allg), "speech": sz.get("speech", []), "evidence": sz.get("evidence", []),
+    return sha({"verfahren": VERFAHREN, "regeln": regeln_fuer(sz, fig, allg), "speech": sz.get("speech", []), "evidence": sz.get("evidence", []),
                 "bild_en": sz.get("bild_en"), "figuren": figuren_fuer(sz, fig)})
 
 
