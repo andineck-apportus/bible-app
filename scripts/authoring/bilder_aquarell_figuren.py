@@ -97,7 +97,9 @@ def regeln(e, c=None):
     for r in c["regeln"]["alle"]:
         if r["id"] == "P-LEXIKON" and not e["lexikon"]:
             continue
-        out.append({**r, "en": r["en"].replace("{beschreibung}", e["beschreibung"]).replace("{lexikon}", e["lexikon"] or ""), "ebene": "portraet"})
+        erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
+        out.append({**r, "en": r["en"].replace("{beschreibung}", e["beschreibung"]).replace("{lexikon}", e["lexikon"] or "")
+                    .replace("{erlaubt}", f" (also allowed: {erl})" if erl else ""), "ebene": "portraet"})
     ers = c["pruef"].get(e["id"], {})
     for r in e["pruef"]:
         if r["id"] not in ers.get("ersetzt", []):
@@ -121,6 +123,9 @@ def auftrag(e, c=None):
     c = c or cfg()
     fig = BA.lade(DATEN / "figuren.json")
     t = c["auftrag_en"][e["art"]].replace("{beschreibung}", e["beschreibung"])
+    erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
+    if erl:
+        t += f" Allowed in addition: {erl}."
     vorl = "The first attached image shows the drawing style (use only its style – line, wash, palette, white space; ignore its content and ages)."
     if e["figurenblatt"]:
         import bilder_aquarell_gen as G
@@ -129,7 +134,9 @@ def auftrag(e, c=None):
                "FIG-GRUPPE-DIENER": "the 5th and 6th persons from the left", "FIG-GRUPPE-JUENGER": "the 7th and 8th persons from the left"}
         assert set(pos) == set(G.FIGBLATT_IDS)
         vorl += (f" The second attached image is the character sheet; this portrait shows {pos[e['id']]} on it: keep face shape, hair, beard, "
-                 "apparent age and clothing colours exactly as there, but paint as loosely as the style requires.")
+                 "apparent age and clothing colours exactly as there, but paint as loosely as the style requires. Paint ONLY "
+                 "this person (or these persons) – none of the other people on the sheet, and none of their clothing or attributes (for example the "
+                 "bridegroom's wreath or violet robe).")
     return f"{t}\n\nSTYLE: {fig['stil_en']}\n\n{vorl}"
 
 

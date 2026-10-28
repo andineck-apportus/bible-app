@@ -1,6 +1,6 @@
 {
-  "_hinweis": "Einzelporträts für das Bildlexikon im Aquarellstil (docs/BILDSTIL.md, Abschnitt 4; PROC-BILD-AQUARELL 2.4; Entscheid Andi Neck 2026-10-28). Werkzeug scripts/authoring/bilder_aquarell_figuren.py. «auftrag_en»: Malauftrag je Art (einzel = eine Person, gruppe = Gruppe, vignette = Gegenstand, Ort oder Zeichen); {beschreibung} wird durch die Beschreibung des Stils ersetzt. «regeln»: Porträtregeln je Art (Aufbau wie pruefregeln.json). «allgemein_ohne»: allgemeine Regeln, die für Porträts nicht gelten (mit Grund). «pruef»: Figurenregeln nur für das Porträt; «ersetzt» nennt Figurenregeln der Szenen, die im Porträt nicht prüfbar sind, weil sie eine zweite Figur voraussetzen.",
-  "version": "2026-10-28",
+  "_hinweis": "Einzelporträts für das Bildlexikon im Aquarellstil (docs/BILDSTIL.md, Abschnitt 4; PROC-BILD-AQUARELL 2.4; Entscheid Andi Neck 2026-10-28). Werkzeug scripts/authoring/bilder_aquarell_figuren.py. «auftrag_en»: Malauftrag je Art (einzel = eine Person, gruppe = Gruppe, vignette = Gegenstand, Ort oder Zeichen); {beschreibung} wird durch die Beschreibung des Stils ersetzt. «regeln»: Porträtregeln je Art (Aufbau wie pruefregeln.json). «allgemein_ohne»: allgemeine Regeln, die für Porträts nicht gelten (mit Grund). «pruef»: Figurenregeln nur für das Porträt; «ersetzt» nennt Figurenregeln der Szenen, die im Porträt nicht prüfbar sind, weil sie eine zweite Figur voraussetzen. «erlaubt_en» je Eintrag: Dinge, die das Porträt zeigen darf, obwohl die Beschreibung sie nicht nennt (z. B. weil das Figurenblatt sie zeigt); gilt für Malauftrag und Regeln {erlaubt}. Lauf 42 (2026-10-28): «entspricht der Beschreibung» als Ja-Frage war für Merkmale, die eine lockere Skizze nicht zeigen kann (Material, Grösse ohne Massstab, leicht gebeugte Haltung), meist «unklar»; deshalb fragt P-BESCHREIBUNG nach einem sichtbaren Widerspruch, die Übereinstimmung bewertet der Kern-Vergleich.",
+  "version": "2026-10-28b",
   "groesse": "1024x1536",
   "ablage_px": [
     384,
@@ -82,17 +82,17 @@
     "alle": [
       {
         "id": "P-BESCHREIBUNG",
-        "art": "muss",
+        "art": "nicht",
         "stufe": "pflicht",
-        "de": "Entspricht der Beschreibung des Stils (Alter, Geschlecht, Haar, Bart, Kleidungsfarben, gehaltene Dinge bzw. Form und Material)",
-        "en": "Does the picture match this description in all essential points (apparent age, sex, hair, beard, clothing colours, objects held – or, for an object or place, its shape, material and number): «{beschreibung}»?"
+        "de": "Kein sichtbarer Widerspruch zur Beschreibung des Stils (Geschlecht, Altersgruppe, Haar, Bart, Kleidungsfarben, Anzahl und Form der Dinge)",
+        "en": "Does anything clearly visible CONTRADICT this description in an essential point – sex, age group, hair, beard, clothing colours, number or shape of objects? Details that a loose watercolour sketch cannot show (exact age, material, size without a scale, a subtle posture) do NOT count as a contradiction. Description: «{beschreibung}»{erlaubt}"
       },
       {
         "id": "P-ZUSATZ",
         "art": "nicht",
         "stufe": "pflicht",
         "de": "Keine Attribute oder Erkennungszeichen ausser denen der Beschreibung und des Lexikons",
-        "en": "Does the picture add any identifying attribute or object that is NOT named in this description: «{beschreibung}» – for example a crown, wreath, staff, book, scroll, jewellery, weapon, religious symbol, prayer shawl or tassels? (Plain clothing, sandals and a head covering count as normal.)"
+        "en": "Does the picture add any identifying attribute or object that is NOT named in this description: «{beschreibung}»{erlaubt} – for example a crown, wreath, staff, book, scroll, jewellery, weapon, religious symbol, prayer shawl or tassels? (Plain clothing, sandals and a simple head covering count as normal.)"
       },
       {
         "id": "P-LEXIKON",
@@ -129,6 +129,11 @@
           "en": "Is the man an adult of about thirty – clearly neither old (no grey hair) nor a youth?"
         }
       ]
+    },
+    "FIG-GRUPPE-DIENER": {
+      "ersetzt": [],
+      "regeln": [],
+      "erlaubt_en": "a plain clay jug, a bowl or a basin for serving, and for a woman a simple head cloth (as on the character sheet)"
     }
   }
 }
