@@ -1,0 +1,75 @@
+{
+  "MRK-004-S3": {
+    "blasen_fehler": [],
+    "kachel": "MRK-004-S3__kachel.png",
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Nichts Wesentliches fehlt.",
+      "regeln": [
+        {
+          "id": "B1",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Blase 1 zeigt auf den Sprecher (FIG-JESUS)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The tail of the left speech bubble clearly points to the man with dark wavy hair, short beard, cream tunic, and terracotta-red mantle."
+        },
+        {
+          "id": "B2",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Blase 2 zeigt auf den Sprecher (FIG-GRUPPE-JUENGER)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The tail of the right speech bubble clearly points toward the bearded men in ochre/brown robes near him."
+        },
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The speech bubbles are above the figures and do not cover any face, gesturing hand, or main action."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "All bubble text and the caption band text are complete, readable, and not cut off or overlapping."
+        }
+      ],
+      "blind": {
+        "action": "A calm bearded man in white and red speaks to three frightened men in a boat. The other men huddle together and wonder aloud who he is, while the water around the boat appears calm.",
+        "story_guess": "This appears to illustrate the Bible story of Jesus calming the storm. The exact moment shown is after the wind and sea have obeyed him, when Jesus asks why the disciples were afraid and they wonder who he is.",
+        "text_in_picture": [
+          {
+            "text": "Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?",
+            "belongs_to": 1
+          },
+          {
+            "text": "Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?",
+            "belongs_to": "speech bubble tail points toward person 2; the words appear to belong to the frightened men"
+          },
+          {
+            "text": "Und sie fürchteten sich sehr",
+            "belongs_to": "caption"
+          },
+          {
+            "text": "3",
+            "belongs_to": "page number or marker"
+          }
+        ]
+      },
+      "modell": "gpt-5.5",
+      "bild_sha": "c99a3f5613fd685c",
+      "datum": "2026-10-28"
+    }
+  }
+}
