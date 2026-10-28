@@ -1,6 +1,6 @@
 {
   "_hinweis": "Allgemeine Prüfregeln für jedes gemalte Bild (docs/BILDSTIL.md, Abschnitt «Automatische Prüfung»). Drei Ebenen: diese allgemeinen Regeln, Figurenregeln in figuren.json («pruef») und Feldregeln im Szenenplan («pruefung»). art «muss»: die Frage muss mit Ja beantwortet werden; art «nicht»: die Frage fragt nach etwas Verbotenem und muss mit Nein beantwortet werden; typ «anzahl»: das Modell zählt, «soll» gibt die verlangte Zahl. stufe «pflicht»: sonst ist die Variante unbrauchbar; «soll»: zählt bei der Wahl unter brauchbaren Varianten. «wenn»: Regel gilt nur, wenn die Figur im Feld vorkommt. Eine Szene kann Regeln mit «ausnahmen» abschalten (mit Grund).",
-  "version": "2026-10-28b",
+  "version": "2026-10-28c",
   "regeln": [
     {
       "id": "G-RAND",
@@ -48,8 +48,8 @@
       "id": "G-DOPPELT",
       "art": "nicht",
       "stufe": "pflicht",
-      "de": "Keine Person doppelt im selben Bild",
-      "en": "Does the same person (same face and same clothing) appear twice in the picture?"
+      "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+      "en": "Does the same individual (clearly the same face, hair and clothing) appear twice in the picture? Members of a group who are dressed alike (servants, disciples, believers) do NOT count unless two of them are clearly the same person."
     },
     {
       "id": "G-KARIKATUR",
@@ -101,6 +101,11 @@
       "datum": "2026-10-28",
       "version": "2026-10-28b",
       "de": "G-RAND: Ausblenden ins Papier ist kein Anschneiden (Fehlalarm bei Joh 2 J2, Lauf 11). G-MODERN: gestreifte Kopftücher ausdrücklich genannt (Fund Joh 2 J2)."
+    },
+    {
+      "datum": "2026-10-28",
+      "version": "2026-10-28c",
+      "de": "G-DOPPELT: gleich gekleidete Mitglieder einer Gruppe zählen nicht als dieselbe Person (Fehlalarm bei Joh 2 K2, Lauf 30: zwei Dienerinnen)."
     }
   ]
 }

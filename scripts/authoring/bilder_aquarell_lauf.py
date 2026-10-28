@@ -67,7 +67,9 @@ def schreibe_auswahl(aus):
     (DATEN / "auswahl.json").write_text(json.dumps(aus, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht, streng=False):
+def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht, streng=False, behalten=False):
+    """behalten (Neuprüfung unveränderter Bilder): findet die neue Ortung keinen Platz, bleibt die bisherige, vollständige
+    Anordnung; die Ortung der Köpfe schwankt zwischen Läufen (Lauf 30, Joh 2 K3: Blase fiel weg)."""
     zweiter = []
     for sid in sids:
         _, sz = szenen[sid]
@@ -77,6 +79,10 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
             pr_ = a.get("pruefung") or {}
             bl, fehler = BA.blasen_auto(sz["speech"], pr_.get("koepfe", {}), [p_.get("head") for p_ in pr_.get("personen", [])], streng=streng,
                                         belegt=BA.belegung(BA.OUT / a["datei"]))
+            alt_bl = a.get("blasen_auto")
+            if fehler and behalten and isinstance(alt_bl, list) and len(alt_bl) == len(sz["speech"]) and all(alt_bl):
+                bl, fehler = alt_bl, []
+                e["blasen_behalten"] = True
             a["blasen_auto"] = bl
             e["blasen_fehler"] = fehler
         png = kachel_png(sid, sz, a, band[sid])
@@ -131,7 +137,7 @@ def pruefen(a, schluessel, out):
             print(f"feld {sid}: {pr['ergebnis']} ({pr['punkte']} Punkte)")
         except Exception as ex:
             BP.melde(f"{sid}: {ex}")
-    blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht)
+    blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht, behalten=True)
     schreibe_auswahl(aus)
     return bericht
 

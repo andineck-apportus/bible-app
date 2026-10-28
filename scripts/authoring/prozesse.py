@@ -243,7 +243,7 @@ P["PROC-BILD-AQUARELL"] = {"names": {"de": "Bilder im Aquarellstil", "en": "Wate
         fassung("2.2", "2026-10-28", "Blasen nur auf leerem Papier (Belegungskarte aus dem Bild), Mindestabstand zum Rand, keine Spitze durch eine andere Blase; Umriss mit Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen (Hinweise Herausgeber).", aq22,
                 "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28b"], docs=["docs/BILDSTIL.md"]),
         fassung("2.3", "2026-10-28", "Zwei prüfende Instanzen: eine günstige prüft alles, eine genauere entscheidet nur, wo eine Pflichtregel nicht besteht (Messung am Prüfsatz mit 20 Bildern bekannten Urteils). Gesicht Jesu: auch schräg oder im Profil gilt als sichtbar.", aq23,
-                "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28b"], docs=["docs/BILDSTIL.md"])]}
+                "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28c"], docs=["docs/BILDSTIL.md"])]}
 
 # ------------------------------------------------------------------ Freigabe
 f20 = [
