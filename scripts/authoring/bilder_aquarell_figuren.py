@@ -106,6 +106,8 @@ def regeln(e, c=None):
             out.append({**r, "ebene": "figur", "figur": e["id"]})
     for r in ers.get("regeln", []):
         out.append({**r, "ebene": "figur", "figur": e["id"]})
+    for r in (ers.get("vergleich") or {}).get("regeln", []):
+        out.append({**r, "ebene": "vergleich", "figur": e["id"], "mit": ers["vergleich"]["mit"]})
     return out
 
 
@@ -126,6 +128,9 @@ def auftrag(e, c=None):
     erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
     if erl:
         t += f" Allowed in addition: {erl}."
+    zus = c["pruef"].get(e["id"], {}).get("zusatz_en")
+    if zus:
+        t += f"\n\n{zus}"
     vorl = "The first attached image shows the drawing style (use only its style – line, wash, palette, white space; ignore its content and ages)."
     if e["figurenblatt"]:
         import bilder_aquarell_gen as G
@@ -203,12 +208,37 @@ Score: 2 = the description clearly fits the intended figure or object (sex, appa
 Return JSON: {{"score": 0 | 1 | 2, "missing_de": what is missing or wrong, in German, short}}"""
 
 
+def vergleichsbild(mit, bild):
+    """Geprüftes Porträt von «mit» (links) und das neue Bild (rechts) nebeneinander, gleich hoch; None ohne gültiges Porträt."""
+    from PIL import Image
+    r = stil().get("renderings", {}).get(mit) or {}
+    ch = r.get("check") or {}
+    if not (r.get("image") and (ROOT / r["image"]).is_file() and ch.get("ergebnis") == "bestanden" and not ch.get("trocken") and not ch.get("veraltet")):
+        return None
+    links = Image.open(ROOT / r["image"]).convert("RGB")
+    rechts = Image.open(io.BytesIO(bild if isinstance(bild, bytes) else pathlib.Path(bild).read_bytes())).convert("RGB")
+    h = 768
+    links, rechts = (im.resize((round(im.width * h / im.height), h), Image.LANCZOS) for im in (links, rechts))
+    neu = Image.new("RGB", (links.width + rechts.width + 40, h), (255, 255, 255))
+    neu.paste(links, (0, 0))
+    neu.paste(rechts, (links.width + 40, 0))
+    buf = io.BytesIO()
+    neu.save(buf, "PNG")
+    return buf.getvalue()
+
+
 def pruefe(schluessel, bild, e, c=None):
     c = c or cfg()
     blind = BP.frage(schluessel, BP.SYS_BLIND, BP.TXT_BLIND, bild)
-    rg = regeln(e, c)
+    rg = [r for r in regeln(e, c) if r["ebene"] != "vergleich"]
     r = BP.frage(schluessel, BP.SYS_REGELN, BP.txt_regeln(rg, [], blind), bild)
     erg = BP.zweitmeinung(schluessel, bild, rg, BP.bewerte(rg, r.get("questions", {})), [], blind)
+    vg = c["pruef"].get(e["id"], {}).get("vergleich")
+    paar = vergleichsbild(vg["mit"], bild) if vg else None
+    if paar:  # Vergleich mit dem geprüften Porträt einer anderen Figur (z. B. Maria neben Jesus)
+        rv = [{**x, "ebene": "vergleich", "figur": e["id"]} for x in vg["regeln"]]
+        q = BP.frage(schluessel, BP.SYS_REGELN, BP.txt_regeln(rv, [], {"persons": []}), paar)
+        erg += BP.zweitmeinung(schluessel, paar, rv, BP.bewerte(rv, q.get("questions", {})), [], {"persons": []})
     k = BP.frage(schluessel, SYS_KERN, txt_kern(e, blind))
     ergebnis, punkte = BP.gesamt(erg, k.get("score"), kern_pflicht=1)
     daten = bild if isinstance(bild, bytes) else pathlib.Path(bild).read_bytes()
@@ -262,6 +292,8 @@ def lauf(a, schluessel, out):
     c = cfg()
     eintr = eintraege()
     ids = wahl(eintr, a.szenen, erzwingen=a.erzwingen)
+    zuerst = {(c["pruef"].get(f, {}).get("vergleich") or {}).get("mit") for f in ids}   # Vergleichsporträts zuerst malen
+    ids = sorted(ids, key=lambda f: f not in zuerst)
     print(f"Porträts: {len(ids)} Einträge – {', '.join(ids)}")
     bericht, ergebnis = {}, {}
     for fid in ids:

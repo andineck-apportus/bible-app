@@ -1,6 +1,6 @@
 {
-  "_hinweis": "Einzelporträts für das Bildlexikon im Aquarellstil (docs/BILDSTIL.md, Abschnitt 4; PROC-BILD-AQUARELL 2.4; Entscheid Andi Neck 2026-10-28). Werkzeug scripts/authoring/bilder_aquarell_figuren.py. «auftrag_en»: Malauftrag je Art (einzel = eine Person, gruppe = Gruppe, vignette = Gegenstand, Ort oder Zeichen); {beschreibung} wird durch die Beschreibung des Stils ersetzt. «regeln»: Porträtregeln je Art (Aufbau wie pruefregeln.json). «allgemein_ohne»: allgemeine Regeln, die für Porträts nicht gelten (mit Grund). «pruef»: Figurenregeln nur für das Porträt; «ersetzt» nennt Figurenregeln der Szenen, die im Porträt nicht prüfbar sind, weil sie eine zweite Figur voraussetzen. «erlaubt_en» je Eintrag: Dinge, die das Porträt zeigen darf, obwohl die Beschreibung sie nicht nennt (z. B. weil das Figurenblatt sie zeigt); gilt für Malauftrag und Regeln {erlaubt}. Lauf 42 (2026-10-28): «entspricht der Beschreibung» als Ja-Frage war für Merkmale, die eine lockere Skizze nicht zeigen kann (Material, Grösse ohne Massstab, leicht gebeugte Haltung), meist «unklar»; deshalb fragt P-BESCHREIBUNG nach einem sichtbaren Widerspruch, die Übereinstimmung bewertet der Kern-Vergleich.",
-  "version": "2026-10-28b",
+  "_hinweis": "Einzelporträts für das Bildlexikon im Aquarellstil (docs/BILDSTIL.md, Abschnitt 4; PROC-BILD-AQUARELL 2.4; Entscheid Andi Neck 2026-10-28). Werkzeug scripts/authoring/bilder_aquarell_figuren.py. «auftrag_en»: Malauftrag je Art (einzel = eine Person, gruppe = Gruppe, vignette = Gegenstand, Ort oder Zeichen); {beschreibung} wird durch die Beschreibung des Stils ersetzt. «regeln»: Porträtregeln je Art (Aufbau wie pruefregeln.json). «allgemein_ohne»: allgemeine Regeln, die für Porträts nicht gelten (mit Grund). «pruef»: Figurenregeln nur für das Porträt; «ersetzt» nennt Figurenregeln der Szenen, die im Porträt nicht prüfbar sind, weil sie eine zweite Figur voraussetzen. «erlaubt_en» je Eintrag: Dinge, die das Porträt zeigen darf, obwohl die Beschreibung sie nicht nennt (z. B. weil das Figurenblatt sie zeigt); gilt für Malauftrag und Regeln {erlaubt}. Lauf 42 (2026-10-28): «entspricht der Beschreibung» als Ja-Frage war für Merkmale, die eine lockere Skizze nicht zeigen kann (Material, Grösse ohne Massstab, leicht gebeugte Haltung), meist «unklar»; deshalb fragt P-BESCHREIBUNG nach einem sichtbaren Widerspruch, die Übereinstimmung bewertet der Kern-Vergleich. «vergleich» je Eintrag: Figur, deren geprüftes Porträt beim Prüfen links neben das neue Bild gestellt wird, mit «regeln» für dieses Vergleichsbild (Maria neben Jesus: sichtbar eine Generation älter; Lauf 43 zeigte, dass die Altersregel am Einzelbild allein zu nachsichtig ist). Fehlt das Vergleichsporträt, gilt nur die Einzelregel. «zusatz_en»: zusätzlicher Satz im Malauftrag dieses Eintrags.",
+  "version": "2026-10-28c",
   "groesse": "1024x1536",
   "ablage_px": [
     384,
@@ -116,7 +116,20 @@
           "de": "Maria sichtbar eine Generation älter als Jesus (im Porträt: deutlich älter als ein Mann Anfang dreissig – graue Strähnen oder Falten)",
           "en": "Does the woman look clearly older than a man in his early thirties – old enough to be the mother of an adult son – with grey streaks in her hair or lines around eyes and mouth?"
         }
-      ]
+      ],
+      "vergleich": {
+        "mit": "FIG-JESUS",
+        "regeln": [
+          {
+            "id": "P-MARIA-ALTER-VERGLEICH",
+            "art": "muss",
+            "stufe": "pflicht",
+            "de": "Neben dem Porträt Jesu: Maria sichtbar eine Generation älter (wie seine Mutter)",
+            "en": "This picture shows two separate portraits side by side: LEFT a man in a terracotta-red mantle, RIGHT a woman in a blue-grey veil. Does the woman look clearly a generation older than the man – old enough to be his mother (grey in her hair, lines in her face, an older face)?"
+          }
+        ]
+      },
+      "zusatz_en": "Make her age unmistakable even in this loose style: a woman of about fifty, clearly visible grey in the hair at the temples, lines around eyes and mouth, an older face than the young man on the character sheet."
     },
     "FIG-JESUS": {
       "ersetzt": [],
