@@ -33,11 +33,14 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 DATEN = ROOT / "scripts/authoring/bilder_aquarell_daten"
 API = "https://api.openai.com/v1"
-VORZUG = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]
-_modell = None
+VORZUG = ["gpt-6.1-terra", "gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]   # erste Instanz: alle Prüfschritte
+VORZUG_ZWEIT = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]   # zweite Instanz: nur wenn eine Pflichtregel nicht besteht
+# Aufteilung nach Kalibrierung 2026-10-28 (20 Fälle): gpt-5.5 17/20 richtig, ≈ $0.19 je Feld; gpt-6.1-terra 15/20, ≈ $0.02 je Feld,
+# seine Fehler waren überwiegend Fehlalarme bei Pflichtregeln. Die günstige Instanz prüft alles, die genauere entscheidet nur Streitfälle.
+_modell = {}
 NUTZUNG = {"anfragen": 0, "eingabe": 0, "ausgabe": 0}   # Tokens aller Anfragen dieses Laufs (für den Kostenvergleich)
-VERFAHREN = "2026-10-28c"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
-PROZESS = "PROC-BILD-AQUARELL@2.2"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
+VERFAHREN = "2026-10-28d"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
+PROZESS = "PROC-BILD-AQUARELL@2.3"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
 
 
 def lade(p):
@@ -94,18 +97,21 @@ def _anfrage(pfad, schluessel, body=None, timeout=300):
         return json.loads(r.read())
 
 
-def modell(schluessel):
-    global _modell
-    if _modell:
-        return _modell
-    wunsch = os.environ.get("OPENAI_VISION_MODEL")
-    if wunsch:  # genauer Name oder Teil davon (z. B. «terra»): dann der passende Name aus der Modellliste des Kontos
-        try:
-            da = sorted(m["id"] for m in _anfrage("models", schluessel)["data"])
-        except Exception:
-            da = []
+def modell(schluessel, rolle="haupt"):
+    """Prüfmodell der ersten (rolle «haupt») oder der zweiten Instanz (rolle «zweit»). Vorgabe aus VORZUG bzw. VORZUG_ZWEIT,
+    übersteuerbar mit OPENAI_VISION_MODEL bzw. OPENAI_VISION_MODEL_ZWEIT (genauer Name oder Teil davon, z. B. «terra»)."""
+    if rolle in _modell:
+        return _modell[rolle]
+    wunsch = os.environ.get("OPENAI_VISION_MODEL" + ("_ZWEIT" if rolle == "zweit" else ""))
+    vorzug = VORZUG_ZWEIT if rolle == "zweit" else VORZUG
+    try:
+        da = sorted(m["id"] for m in _anfrage("models", schluessel)["data"])
+    except Exception as ex:
+        melde(f"Modellliste nicht lesbar ({ex})")
+        da = []
+    if wunsch:  # dann der passende Name aus der Modellliste des Kontos
         if wunsch in da or not da:
-            _modell = wunsch
+            gewaehlt = wunsch
         else:
             treffer = [m for m in da if wunsch.lower() in m.lower()]
             if not treffer:
@@ -115,17 +121,19 @@ def modell(schluessel):
                 z = _re.search(r"(\d+(?:\.\d+)*)", m)
                 return tuple(int(x) for x in z.group(1).split(".")) if z else ()
             datiert = lambda m: bool(_re.search(r"\d{4}-\d{2}-\d{2}", m))  # noqa: E731
-            _modell = sorted(treffer, key=lambda m: (_vers(m), not datiert(m), -len(m)))[-1]   # neueste Fassung, ohne Datumsendung
+            gewaehlt = sorted(treffer, key=lambda m: (_vers(m), not datiert(m), -len(m)))[-1]   # neueste Fassung, ohne Datumsendung
             melde(f"Treffer für «{wunsch}»: {', '.join(treffer)}")
-        melde(f"Prüfmodell: {_modell}")
-        return _modell
-    try:
-        da = {m["id"] for m in _anfrage("models", schluessel)["data"]}
-        _modell = next((m for m in VORZUG if m in da), VORZUG[-1])
-    except Exception as ex:
-        melde(f"Modellliste nicht lesbar ({ex}); nehme {VORZUG[-1]}")
-        _modell = VORZUG[-1]
-    return _modell
+    else:
+        gewaehlt = next((m for m in vorzug if m in da), vorzug[0] if not da else vorzug[-1])
+    _modell[rolle] = gewaehlt
+    melde(f"Prüfmodell ({'zweite' if rolle == 'zweit' else 'erste'} Instanz): {gewaehlt}")
+    return gewaehlt
+
+
+def modelle(schluessel):
+    """Beschreibung für den Prüfdatensatz: erste Instanz, bei Streitfällen zweite."""
+    a, b = modell(schluessel), modell(schluessel, "zweit")
+    return a if a == b else f"{a} + {b}"
 
 
 def bild_url(pfad_oder_bytes, breite=1024):
@@ -184,11 +192,11 @@ def orte(schluessel, bild, figuren):
     return pers, zu
 
 
-def frage(schluessel, system, text, bild=None, versuche=3, breite=1024):
+def frage(schluessel, system, text, bild=None, versuche=3, breite=1024, rolle="haupt"):
     inhalt = [{"type": "text", "text": text}]
     if bild is not None:
         inhalt.append({"type": "image_url", "image_url": {"url": bild_url(bild, breite), "detail": "high"}})
-    body = {"model": modell(schluessel), "response_format": {"type": "json_object"},
+    body = {"model": modell(schluessel, rolle), "response_format": {"type": "json_object"},
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": inhalt}]}
     letzter = None
     for k in range(versuche):
@@ -278,15 +286,16 @@ def bewerte(regeln, antworten):
 
 
 def zweitmeinung(schluessel, bild, regeln, erg, figuren, blind, runden=2):
-    """Verfehlte Pflichtregeln noch zweimal einzeln fragen; es gilt die Mehrheit der drei Antworten. Dasselbe Bild bestand im
-    einen Lauf und war im nächsten «unklar» (Lauf 15, Mk 4 S1): ein einzelnes Urteil ist nicht stabil genug."""
+    """Verfehlte Pflichtregeln noch zweimal einzeln fragen, und zwar die zweite Instanz; es gilt die Mehrheit der drei Antworten.
+    Dasselbe Bild bestand im einen Lauf und war im nächsten «unklar» (Lauf 15, Mk 4 S1): ein einzelnes Urteil ist nicht stabil genug.
+    Weil die zweite Instanz zwei der drei Stimmen hat, entscheidet sie, sobald sie sich einig ist (Verfahren 2026-10-28d)."""
     offen = [e["id"] for e in erg if e["stufe"] == "pflicht" and e["ergebnis"] != "ok"]
     if not offen:
         return erg
     nach = [r for r in regeln if r["id"] in offen]
     stimmen = {i: [next(e for e in erg if e["id"] == i)] for i in offen}
     for _ in range(runden):
-        r = frage(schluessel, SYS_REGELN, txt_regeln(nach, [], blind), bild)
+        r = frage(schluessel, SYS_REGELN, txt_regeln(nach, [], blind), bild, rolle="zweit")
         for e in bewerte(nach, r.get("questions", {})):
             stimmen[e["id"]].append(e)
     out = []
@@ -339,7 +348,7 @@ def pruefe_feld(schluessel, bild, sz, fig, allg, moment_de):
     bytes_ = bild if isinstance(bild, bytes) else pathlib.Path(bild).read_bytes()
     return {"ergebnis": e, "punkte": punkte, "kern": kern, "kern_fehlt_de": k.get("missing_de", ""), "regeln": erg, "koepfe": koepfe,
             "blind": {k_: blind.get(k_) for k_ in ("action", "story_guess", "cut_off", "text_in_picture", "style")},
-            "personen": personen or blind.get("persons", []), "modell": modell(schluessel), "bild_sha": sha(bytes_)}
+            "personen": personen or blind.get("persons", []), "modell": modelle(schluessel), "bild_sha": sha(bytes_)}
 
 
 SYS_SCHLUSS = ("You are a strict checker of a finished comic panel for a Bible app (painting with speech bubbles and a caption band). "
@@ -375,7 +384,7 @@ def pruefe_kachel(schluessel, png, sprech, fig, moment_de):
         nur = "\n".join(l for l in txt_schluss(sprech, fig).split("\n") if l.split(":")[0].strip("- ") in offen)
         for _ in range(2):
             q2 = frage(schluessel, SYS_SCHLUSS, "Answer each question separately:\n" + nur
-                       + '\nReturn JSON: {"questions": {id: {"answer": "yes" | "no" | "unclear", "reason"}}}', png)
+                       + '\nReturn JSON: {"questions": {id: {"answer": "yes" | "no" | "unclear", "reason"}}}', png, rolle="zweit")
             for e in bewerte([r for r in regeln if r["id"] in offen], q2.get("questions", {})):
                 stimmen[e["id"]].append(e)
         neu = []
@@ -389,7 +398,7 @@ def pruefe_kachel(schluessel, png, sprech, fig, moment_de):
     k = frage(schluessel, SYS_KERN, txt_kern(moment_de, blind))
     e, punkte = gesamt(erg, k.get("score"), kern_pflicht=1)
     return {"ergebnis": e, "punkte": punkte, "kern": k.get("score"), "kern_fehlt_de": k.get("missing_de", ""), "regeln": erg,
-            "blind": {k_: blind.get(k_) for k_ in ("action", "story_guess", "text_in_picture")}, "modell": modell(schluessel), "bild_sha": sha(png)}
+            "blind": {k_: blind.get(k_) for k_ in ("action", "story_guess", "text_in_picture")}, "modell": modelle(schluessel), "bild_sha": sha(png)}
 
 
 def hinweis_aus(pruefung):

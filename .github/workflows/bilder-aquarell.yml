@@ -26,7 +26,7 @@ on:
         description: "auto-neu: höchstens so viele Malrunden je Szene"
         default: "3"
       pruefmodell:
-        description: "Bildprüfmodell für diesen Lauf (Name oder Teil davon, z. B. terra; leer = Vorgabe)"
+        description: "Erste prüfende Instanz für diesen Lauf (Name oder Teil davon; leer = Vorgabe gpt-6.1-terra, Streitfälle entscheidet gpt-5.5)"
         default: ""
       erzwingen:
         description: "auto-pruefen: auch unveränderte Bilder neu prüfen"
@@ -44,7 +44,7 @@ concurrency:
 jobs:
   malen:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -74,6 +74,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
           OPENAI_VISION_MODEL: ${{ inputs.pruefmodell || vars.OPENAI_VISION_MODEL }}
+          OPENAI_VISION_MODEL_ZWEIT: ${{ vars.OPENAI_VISION_MODEL_ZWEIT }}
           SCHRITT: ${{ inputs.schritt }}
           SZENEN: ${{ inputs.szenen }}
           VARIANTEN: ${{ inputs.varianten }}

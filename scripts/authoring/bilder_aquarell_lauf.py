@@ -225,7 +225,7 @@ def kalibrieren(a, schluessel, out):
         erg.append({**f, "ergebnis": pr["ergebnis"], "kern": pr.get("kern"), "stimmt": ok_ges and all(ok_reg.values()), "regeln_ist": {k: r.get(k) for k in f["regeln"]},
                     "abweichungen": [f"{e['id']} {e['ergebnis']}: {e['grund']}" for e in pr["regeln"] if e["ergebnis"] != "ok"], "blind": pr["blind"].get("story_guess")})
         print(f"{f['id']}: erwartet {f['erwartet']} {f['regeln']} → {pr['ergebnis']} {erg[-1]['regeln_ist']} {'✓' if erg[-1]['stimmt'] else '✗'}")
-    zus = {"modell": BP.modell(schluessel), "faelle": len(erg), "richtig": sum(1 for e in erg if e.get("stimmt")), "fehler": sum(1 for e in erg if "fehler" in e),
+    zus = {"modell": BP.modelle(schluessel), "faelle": len(erg), "richtig": sum(1 for e in erg if e.get("stimmt")), "fehler": sum(1 for e in erg if "fehler" in e),
            "nutzung": dict(BP.NUTZUNG), "sekunden": round(time.time() - t0)}
     print(json.dumps(zus, ensure_ascii=False))
     (out / "kalibrierung.json").write_text(json.dumps({"zusammenfassung": zus, "faelle": erg}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
