@@ -257,6 +257,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .row.current{font-weight:600}
 #bible-stream details.worked{margin:8px 0 4px;border-top:1px solid var(--rule)}
 #bible-stream details.worked>summary{cursor:pointer;padding:12px 0;font:500 14px/1.3 var(--ui);color:var(--muted)}
+#bible-stream .pick-sel{position:sticky;top:62px;z-index:2;background:var(--sheet);margin:0 -4px 8px;padding:6px 4px 10px;border-bottom:1px solid var(--rule)}
+#bible-stream .pick-sel .crumbs{margin:2px 0 8px}
+#bible-stream .app .pick-sel .open{display:inline-flex;align-items:center;gap:6px;padding:8px 14px!important;border-radius:999px!important;background:var(--ink)!important;color:var(--bg)!important;font-weight:600}
+#bible-stream .pick-sel .open svg{width:15px;height:15px}
 #bible-stream .clear-recent{display:inline-block;margin:6px 0 10px;font:400 12.5px/1.4 var(--ui)}
 #bible-stream .dss{margin:0 0 12px;padding:0 0 0 10px;border-left:2px solid var(--rule)}
 #bible-stream .dss-name{margin:0 0 4px;font:500 14px/1.35 var(--ui)} #bible-stream .dss-name .sub{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
@@ -468,7 +472,13 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
      jedes Feld neben seinem Vers steht und die Bilder nicht nach unten wegrutschen */
   #bible-stream .app[data-vill][data-show=both][data-level="6"] .vill-break{display:block;clear:right;height:0}
 }
-@media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}}
+/* Laden: dezenter Spinner, Bedienung darunter gesperrt */
+#bible-stream .loading{position:absolute;inset:0;z-index:60;display:grid;place-items:center;background:color-mix(in srgb,var(--bg) 55%,transparent);animation:ld-in .2s ease}
+#bible-stream .loading-box{display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid var(--rule);border-radius:999px;background:var(--bg);box-shadow:0 6px 24px rgba(0,0,0,.08);font:400 14px/1.3 var(--ui);color:var(--muted);max-width:calc(100% - 32px)}
+#bible-stream .app .loading-box .link{padding:4px 10px!important;border-radius:999px!important;color:var(--ink)}
+#bible-stream .spinner{flex:none;width:18px;height:18px;border-radius:50%;border:2px solid var(--rule);border-top-color:var(--ink);animation:ld-spin .8s linear infinite}
+@keyframes ld-spin{to{transform:rotate(360deg)}}@keyframes ld-in{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}#bible-stream .spinner{animation-duration:2.4s}}
 </style></head><body>
 <div id="bible-stream"><div class="app"></div></div>
 <script>
@@ -768,7 +778,19 @@ const codesOf=ids=>{const ns=ids.map(id=>nodes.get(id)).filter(Boolean);return [
 function needData(codes){const ps=[];for(const lg of langsNeeded()){const av=MANIFEST.lang[lg]||[];if(av.includes('common'))ps.push(loadBundle(`l/${lg}/common`));for(const c of codes)if(av.includes(c))ps.push(loadBundle(`l/${lg}/${c}`));}
   for(const c of codes)if(MANIFEST.books.includes(c))ps.push(loadBundle(`b/${c}`));
   for(const c of codes)if((MANIFEST.nc||[]).includes(c))ps.push(loadBundle(`n/${c}`));const w=ps.filter(Boolean);return w.length?Promise.all(w):null;}
-function withData(codes,fn){const p=needData(codes);if(!p){fn();return;}reader.setAttribute('aria-busy','true');p.then(()=>{reader.removeAttribute('aria-busy');fn();});}
+/* Nachladen (Hinweis Andi Neck 2026-10-28): dauert es länger als 200 ms, erscheint ein dezenter Spinner, die Bedienung ist
+   gesperrt (inert) und «Abbrechen» kehrt zum vorherigen Ort zurück – so bleibt die App nie hängen. Nach 15 s ein Hinweis. */
+let loadEpoch=0,loadPending=0,loadTimer=null,loadSlow=null,loadRevert=null;
+const LOCKED=()=>[reader,aside,host,app.querySelector('.bar.top'),app.querySelector('.bar.dock'),app.querySelector('.jump')].filter(Boolean);
+function showLoading(){if(app.querySelector('.loading'))return;const L=lang==='de';
+  app.insertAdjacentHTML('beforeend',`<div class="loading" role="alertdialog" aria-modal="true" aria-label="${L?'Wird geladen':'Loading'}"><div class="loading-box"><span class="spinner" aria-hidden="true"></span><span class="loading-text" role="status">${L?'Wird geladen …':'Loading …'}</span><button type="button" class="link soft" data-action="load-cancel">${L?'Abbrechen':'Cancel'}</button></div></div>`);
+  LOCKED().forEach(e=>e.inert=true);app.querySelector('.loading [data-action=load-cancel]').focus({preventScroll:true});
+  loadSlow=setTimeout(()=>{const t=app.querySelector('.loading-text');if(t)t.textContent=L?'Das Laden dauert ungewöhnlich lange. Verbindung prüfen oder abbrechen.':'Loading takes unusually long. Check the connection or cancel.';},15000);}
+function hideLoading(){clearTimeout(loadTimer);clearTimeout(loadSlow);loadTimer=null;const had=app.querySelector('.loading');had?.remove();LOCKED().forEach(e=>e.inert=false);reader.removeAttribute('aria-busy');if(had)reader.focus({preventScroll:true});}
+function cancelLoading(){loadEpoch++;loadPending=0;hideLoading();if(loadRevert&&nodes.has(loadRevert)&&loadRevert!==current){current=loadRevert;setHash(current,false);chrome();sidebar();}loadRevert=null;reader.focus({preventScroll:true});}
+function withData(codes,fn){const p=needData(codes);if(!p){fn();return;}const ep=loadEpoch;loadPending++;reader.setAttribute('aria-busy','true');
+  if(!loadTimer)loadTimer=setTimeout(()=>{if(loadPending>0)showLoading();},200);
+  p.then(()=>{if(ep!==loadEpoch)return;loadPending=Math.max(0,loadPending-1);if(!loadPending){hideLoading();loadRevert=null;}fn();});}
 // Vergleichsübersetzungen der Sprachen, die der Zielkontext der gewählten Schicht vorsieht, gruppiert und in dieser Reihenfolge
 const LANGLABEL={de:['Hochdeutsch','German'],gsw:['Züridüütsch','Zurich German'],en:['Englisch','English']};
 const CMP=ref=>(LAYER().compare_languages||[S.text]).map(lg=>({lang:lg,items:(STUDY.compare[ref]||[]).filter(c=>c.lang===lg).sort((a,b)=>b.id.localeCompare(a.id))}));
@@ -1080,31 +1102,39 @@ function loadMore(before=false){
 // Zuletzt gelesen: nur auf diesem Gerät (localStorage, Schlüssel «bible:recent»; ältere Fassungen: «lesestrom-zuletzt», wird übernommen); Abschnitt- bzw. Kapitelebene.
 const RECENT_KEY='bible:recent',RECENT_OLD='lesestrom-zuletzt',RECENT_MAX=12;
 let recent=[];try{recent=JSON.parse(localStorage.getItem(RECENT_KEY)||localStorage.getItem(RECENT_OLD)||'[]').filter(x=>x&&nodes.has(x.id));}catch(e){recent=[];}
-function recentTarget(id){let n=nodes.get(id);if(!n||n.level<4)return null;if(n.level===6)n=nodes.get(n.parent);return n.id;}
+// erfasst beim Öffnen (Buch, Kapitel, Abschnitt; Vers zählt als sein Abschnitt) und beim Weiterlesen erst nach 4 s am selben Ort,
+// damit Durchscrollen die Liste nicht füllt (Hinweis Andi Neck 2026-10-28)
+function recentTarget(id){let n=nodes.get(id);if(!n||n.level<3)return null;if(n.level===6)n=nodes.get(n.parent);return n.id;}
+let recentTimer=null;function recordRecentSoon(){clearTimeout(recentTimer);const at=current;recentTimer=setTimeout(()=>{if(current===at)recordRecent();},4000);}
 function recordRecent(){const id=recentTarget(current);if(!id||(recent[0]&&recent[0].id===id))return;recent=[{id,ts:Date.now()},...recent.filter(x=>x.id!==id)].slice(0,RECENT_MAX);try{localStorage.setItem(RECENT_KEY,JSON.stringify(recent));}catch(e){}}
 function clearRecent(){recent=[];try{localStorage.removeItem(RECENT_KEY);}catch(e){}}
-function recentLabel(id){const n=nodes.get(id),b=DATA[n.b];const name=lang==='de'?b.de:b.en;if(n.level===4)return `${name} ${n.c}`;return `${name} ${n.c},${n.v}${n.last>n.v?'–'+n.last:''}`+(n.part?' · '+pTitle(n.part):'');}
+function recentLabel(id){const n=nodes.get(id),b=DATA[n.b];const name=lang==='de'?b.de:b.en;if(n.level===3)return name;if(n.level===4)return `${name} ${n.c}`;return `${name} ${n.c},${n.v}${n.last>n.v?'–'+n.last:''}`+(n.part?' · '+pTitle(n.part):'');}
 // Pfad unten: kurze Namen; Glied antippen = direkt auf diese Ebene (der Vorgänger trägt data-action=up)
 function crumbLabel(n){const L=lang==='de';if(n.level===0)return L?'Bibel':'Bible';if(n.level===1)return n.id==='ot'?(L?'AT':'OT'):'NT';if(n.level===2)return n[lang];
   if(n.level===3){const d=DATA[n.b];return L?(SHORT[d.code]||d.abbr):d.abbr;}if(n.level===4)return String(n.c);if(n.level===5)return n.part?pTitle(n.part):n.v+'–'+n.last;return String(n.v);}
 function renderPath(n){const box=app.querySelector('.dock .path'),ids=ancestors(n.id);
   box.setAttribute('aria-label',lang==='de'?'Pfad':'Path');
-  box.innerHTML=ids.map((id,i)=>{const x=nodes.get(id),last=i===ids.length-1,act=last?'data-action="levels"':i===ids.length-2?'data-action="up"':`data-go="${id}"`;
+  box.innerHTML=ids.map((id,i)=>{const x=nodes.get(id),last=i===ids.length-1,act=`data-pickat="${id}"`+(last?' data-action="levels"':i===ids.length-2?' data-action="up"':'');
     return `<button type="button" ${act} ${last?'aria-current="true"':''} title="${esc(title(x))}" aria-label="${esc(title(x))}">${esc(crumbLabel(x))}</button>`;}).join('<span class="sep" aria-hidden="true">›</span>');
   box.scrollLeft=box.scrollWidth;}
 // Auswahl der Ebene darunter (zum aktuellen Ort): Liste oder Raster, der zuletzt besuchte Untereintrag markiert
 function childLabel(x){if(x.level<=2)return x[lang];if(x.level===3)return lang==='de'?DATA[x.b].de:DATA[x.b].en;if(x.level===4)return String(x.c);if(x.level===5)return x.part?pTitle(x.part):(lang==='de'?'Verse ':'Verses ')+x.v+'–'+x.last;return String(x.v);}
 function childPicker(n){const kids=n.children.map(id=>nodes.get(id)),rem=remembered.get(n.id),L=lang==='de';
-  if(n.level===2)return `<div class="grid books">${kids.map(x=>{const d=DATA[x.b];return `<button type="button" data-go="${x.id}" class="${x.id===rem?'cur':''}"><b>${esc(L?(SHORT[d.code]||d.abbr):d.abbr)}</b><small>${esc(L?d.de:d.en)}</small></button>`;}).join('')}</div>`;
-  if(n.level===3||n.level===5)return `<div class="grid nums">${kids.map(x=>`<button type="button" data-go="${x.id}" class="${x.id===rem?'cur':''}${n.level===5&&isPilotVerse(x)?' study':''}">${x.level===4?x.c:x.v}</button>`).join('')}</div>`;
+  if(n.level===2)return `<div class="grid books">${kids.map(x=>{const d=DATA[x.b];return `<button type="button" data-pickat="${x.id}" class="${x.id===rem?'cur':''}"><b>${esc(L?(SHORT[d.code]||d.abbr):d.abbr)}</b><small>${esc(L?d.de:d.en)}</small></button>`;}).join('')}</div>`;
+  if(n.level===3||n.level===5)return `<div class="grid nums">${kids.map(x=>`<button type="button" data-pickat="${x.id}" class="${x.id===rem?'cur':''}${n.level===5&&isPilotVerse(x)?' study':''}">${x.level===4?x.c:x.v}</button>`).join('')}</div>`;
   if(n.level===4){const vs=kids.flatMap(x=>x.children.map(id=>nodes.get(id)));
-    return `<div class="pick-list">${kids.map(x=>`<button type="button" class="row${x.id===rem?' cur':''}" data-go="${x.id}"><span>${esc(childLabel(x))}${x.part?`<span class="note">${x.v}–${x.last}</span>`:''}</span><span class="go">${icon('arrow-right')}</span></button>`).join('')}</div>
-      <div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span></h4><div class="grid nums">${vs.map(v=>`<button type="button" data-go="${v.id}" class="${isPilotVerse(v)?'study':''}">${v.v}</button>`).join('')}</div></div>`;}
-  return `<div class="pick-list">${kids.map(x=>`<button type="button" class="row${x.id===rem?' cur':''}" data-go="${x.id}"><span>${esc(childLabel(x))}</span>${icon('chevron-right')}</button>`).join('')}</div>`;}
-function pickSheet(){const n=nodes.get(current);if(!n.children.length)return;
-  openSheet('pick',head(title(n))+`<p class="note">${lang==='de'?'Wähle':'Choose'}: ${esc(LV[lang][n.level+1])}</p>`+childPicker(n));}
+    return `<div class="pick-list">${kids.map(x=>`<button type="button" class="row${x.id===rem?' cur':''}" data-pickat="${x.id}"><span>${esc(childLabel(x))}${x.part?`<span class="note">${x.v}–${x.last}</span>`:''}</span><span class="go">${icon('arrow-right')}</span></button>`).join('')}</div>
+      <div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span></h4><div class="grid nums">${vs.map(v=>`<button type="button" data-pickat="${v.id}" class="${isPilotVerse(v)?'study':''}">${v.v}</button>`).join('')}</div></div>`;}
+  return `<div class="pick-list">${kids.map(x=>`<button type="button" class="row${x.id===rem?' cur':''}" data-pickat="${x.id}"><span>${esc(childLabel(x))}</span>${icon('chevron-right')}</button>`).join('')}</div>`;}
+/* Stelle wählen (Pfad unten, «Vertiefen», Hinweis Andi Neck 2026-10-28): oben der klickbare Pfad der Auswahl, darunter die Ebene
+   darunter. Antippen wählt nur aus und zeigt die nächste Ebene; erst «… öffnen» springt und schliesst. */
+function pickSheet(selId){selId=nodes.has(selId)?selId:current;const n=nodes.get(selId),L=lang==='de',t=T();
+  const crumbs=ancestors(selId).map(id=>`<button type="button" data-pickat="${id}" ${id===selId?'aria-current="true"':''}>${esc(crumbLabel(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
+  openSheet('pick',head(L?'Stelle wählen':'Choose a place')+`<div class="pick-sel"><div class="crumbs sel">${crumbs}</div><button type="button" class="open pick-open" data-go="${selId}">${esc(title(n))} ${t.open}${icon('chevron-right')}</button></div>`
+    +(n.children.length?`<p class="note">${L?'Wähle':'Choose'}: ${esc(LV[lang][n.level+1])}</p>`+childPicker(n):''));
+  focusIn(host.querySelector('.sheet .pick-open'));}
 function chrome(){
-  const n=nodes.get(current),t=T();app.lang=lang;app.dataset.level=n.level;recordRecent();
+  const n=nodes.get(current),t=T();app.lang=lang;app.dataset.level=n.level;
   app.querySelector('.location').innerHTML=icon('search')+`<span class="loc-text">${esc(title(n))}</span>`;
   app.querySelector('.location').setAttribute('aria-label',t.contents+': '+title(n));
   app.querySelector('[data-action=home]').setAttribute('aria-label',t.home);
@@ -1143,7 +1173,7 @@ function pinTo(id){holdPin(id,padTop());}
 if('ResizeObserver' in globalThis){const ro=new ResizeObserver(()=>applyPin());ro.observe(reader);new MutationObserver(()=>{const c=reader.querySelector('.column');if(c)ro.observe(c);}).observe(reader,{childList:true});}
 for(const ev of ['wheel','touchstart','keydown','pointerdown'])reader.addEventListener(ev,()=>{pin=null;},{passive:true});
 function render(after){const n=nodes.get(current);const r=savedStreams.get(n.level);const [s0,e0]=(r&&r.id===current)?[r.start,r.end]:[n.si,Math.min(n.si+10,streams[n.level].length)];
-  withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();if(after)after();});}
+  withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;loadRevert=null;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();if(after)after();});}
 function rerenderKeep(){withData(codesOf(streams[nodes.get(current).level].slice(readerStart,readerEnd)),rerenderNow);}
 function rerenderNow(){
   // Gleiche geladene Einträge neu zeichnen und den obersten sichtbaren Eintrag an derselben Stelle halten
@@ -1155,13 +1185,27 @@ function rerenderNow(){
 }
 function reopenMenu(){const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;if(sheet==='settings')settingsSheet();else menuSheet();const nw=host.querySelector('.sheet');if(nw)nw.scrollTop=y;}
 function saveStream(){savedStreams.set(nodes.get(current).level,{id:current,start:readerStart,end:readerEnd,offset:reader.scrollTop});}
-function go(id,keepJump){if(!id||!nodes.has(id))return;if(!keepJump)jumpFrom=null;saveStream();for(const child of ancestors(id).slice(1))remembered.set(nodes.get(child).parent,child);current=id;closeSheet();const r=savedStreams.get(nodes.get(id).level);render(()=>{if(r&&r.id===id)reader.scrollTop=r.offset;else pinTo(id);});app.classList.remove('immersed');app.querySelector('.live').textContent=title(nodes.get(id));}
+/* Adressen (Hash-Router, Wunsch Andi Neck 2026-10-28): jeder Ort ist verlinkbar, Dialoge nicht.
+   #/ Bibel · #/ot, #/nt Testament · #/g3 Buchgruppe · #/JHN Buch · #/JHN.2 Kapitel · #/JHN.2.1-12 Abschnitt · #/JHN.2.5 Vers.
+   Öffnen legt einen Eintrag im Verlauf an (Zurück im Browser), Weiterlesen ersetzt ihn nur. */
+function hashOf(id){const n=nodes.get(id);if(!n||n.level===0)return '';if(n.level<=2)return n.id;const c=DATA[n.b].code;
+  if(n.level===3)return c;if(n.level===4)return `${c}.${n.c}`;if(n.level===5)return `${c}.${n.c}.${n.v}-${n.last}`;return `${c}.${n.c}.${n.v}`;}
+function idOfHash(h){h=decodeURIComponent(String(h||'').replace(/^#\/?/,'')).trim();if(!h)return 'all';if(nodes.has(h)&&nodes.get(h).level<=2)return h;
+  const m=h.match(/^([1-3]?[A-Za-z]+)(?:\.(\d+)(?:\.(\d+)(-\d+)?)?)?$/);if(!m)return null;const bi=CODE_IDX[m[1].toUpperCase()];if(bi===undefined)return null;
+  if(!m[2])return nodes.has(`b${bi}`)?`b${bi}`:null;const cid=`c${bi}-${m[2]}`;if(!nodes.has(cid))return null;if(!m[3])return cid;
+  if(m[4]){const sec=nodes.get(cid).children.map(x=>nodes.get(x)).find(x=>x.v===Number(m[3]));return sec?sec.id:null;}
+  const vid=`v${bi}-${m[2]}-${m[3]}`;return nodes.has(vid)?vid:null;}
+function setHash(id,push){const h='#/'+hashOf(id);if(location.hash===h||(h==='#/'&&!location.hash))return;try{history[push?'pushState':'replaceState'](null,'',h);}catch(e){try{location.replace(h);}catch(_){}}}
+function fromHash(){const id=idOfHash(location.hash);if(id&&id!==current)go(id,false,true);}
+addEventListener('popstate',fromHash);addEventListener('hashchange',fromHash);
+function go(id,keepJump,noPush){if(!id||!nodes.has(id))return;if(!keepJump)jumpFrom=null;saveStream();loadRevert=current;setHash(id,!noPush);for(const child of ancestors(id).slice(1))remembered.set(nodes.get(child).parent,child);current=id;if(sheet){closeSheet();reader.focus({preventScroll:true});}else closeSheet();const r=savedStreams.get(nodes.get(id).level);render(()=>{recordRecent();if(r&&r.id===id)reader.scrollTop=r.offset;else pinTo(id);});app.classList.remove('immersed');app.querySelector('.live').textContent=title(nodes.get(id));}
 function resolveLevel(level){let n=nodes.get(current);while(n.level>level)n=nodes.get(n.parent);while(n.level<level)n=nodes.get(remembered.get(n.id)||n.children[0]);return n.id;}
 
 /* ---------- Blätter ---------- */
 let sheetAnchor=null;
 function openSheet(kind,html){html=marks(html,refCtx);sheet=kind;if(!['verse','source','decision','background','study'].includes(kind))sheetAnchor=null;host.innerHTML=`<div class="scrim" data-close></div><div class="sheet" role="dialog" aria-modal="true" tabindex="-1"><div class="column"><div class="grab"></div>${html}</div></div>`;host.querySelector('.sheet')?.focus({preventScroll:true});}
 function closeSheet(){sheet=null;sheetAnchor=null;host.innerHTML='';}
+const focusIn=el=>{if(el)el.focus({preventScroll:true});};
 const head=(title,close)=>`<div class="sheet-head"><h3>${esc(title)}</h3><button type="button" class="close" data-close aria-label="${close||T().close}">${icon(close?'check':'x')}<span>${close||T().close}</span></button></div>`;
 const dots=(n,of)=>n==null?'':`<span class="dots" aria-hidden="true">${Array.from({length:of},(_,i)=>`<i class="${i<n?'on':''}"></i>`).join('')}</span>`;
 const support=(n,of)=>n==null?(lang==='de'?'Einige alte Handschriften lesen so; diese Angabe ist noch nicht geprüft.':'Reported in some old manuscripts; not yet verified.'):(lang==='de'?`Steht in ${n} von ${of} wichtigen Textausgaben.`:`Found in ${n} of ${of} major editions.`);
@@ -1412,23 +1456,23 @@ function resultRow(n){const bk=n.level>=3?bookName(n):'',sep=lang==='de'?',':':'
   if(n.level===3)label=bk;else if(n.level===4)label=bk+' '+n.c;
   else if(n.level===5){label=`${bk} ${n.c}${sep}${n.v}–${n.last}`;if(n.part)sub=pTitle(n.part);}
   else if(n.level===6){label=`${bk} ${n.c}${sep}${n.v}`;const tx=(LAYER().text||{})[n.canonicalRef]||((STUDY.layers.de||{}).text||{})[n.canonicalRef]||'';sub=String(tx).replace(/<[^>]*>/g,'').replace(MARK_RE,'').slice(0,90)+(String(tx).length>90?'…':'');}
-  // Vers: direkt öffnen; höhere Ebenen: im Navigator auswählen (darunterliegende Ebene wählbar)
-  return `<button type="button" class="row result" ${n.level===6?`data-go="${n.id}"`:`data-pick="${n.id}"`}><span><span class="lv">${LV[lang][n.level]}</span> ${esc(label)}${sub?`<span class="sub">${esc(sub)}</span>`:''}</span>${icon('chevron-right')}</button>`;}
+  // Treffer werden im Navigator ausgewählt (darunterliegende Ebene wählbar); geöffnet wird mit «… öffnen» (Hinweis Andi Neck 2026-10-28)
+  return `<button type="button" class="row result" data-pick="${n.id}"><span><span class="lv">${LV[lang][n.level]}</span> ${esc(label)}${sub?`<span class="sub">${esc(sub)}</span>`:''}</span>${icon('chevron-right')}</button>`;}
 function renderResults(){const box=host.querySelector('.results');if(!box)return;box.innerHTML=query?search(query).map(resultRow).join('')||`<p class="note" role="status">${T().empty}</p>`:'';}
 let nav=null;
-function navFrom(id,withPart){const st={t:'nt',g:null,b:null,c:null,s:null};for(const x of ancestors(id)){const n=nodes.get(x);if(n.level===1)st.t=n.id;if(n.level===2)st.g=n.gi;if(n.level===3)st.b=n.b;if(n.level===4)st.c=n.c;if(withPart&&n.level===5&&n.part)st.s=n.id;}return st;}
+function navFrom(id,withPart){const st={t:'nt',g:null,b:null,c:null,s:null,v:null};for(const x of ancestors(id)){const n=nodes.get(x);if(n.level===1)st.t=n.id;if(n.level===2)st.g=n.gi;if(n.level===3)st.b=n.b;if(n.level===4)st.c=n.c;if(withPart&&n.level===5&&n.part)st.s=n.id;if(withPart&&n.level===6)st.v=n.v;}return st;}
 function navSheet(reset){
   if(reset||!nav)nav=navFrom(current);const t=T(),L=lang==='de';
   const name=n=>n.level===0?t.bible:n.level===5&&n.part?pTitle(n.part):n.level===4?(L?'Kapitel ':'Chapter ')+n.c:n.level===6?(L?'Vers ':'Verse ')+n.v:n.level===5?(L?'Verse ':'Verses ')+n.v+'–'+n.last:(L?n.de:n.en);
   const crumbs=ancestors(current).map(id=>`<button type="button" data-go="${id}" ${id===current?'aria-current="true"':''}>${esc(name(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
   const workedBook=code=>STUDY.sections.some(sec=>rangeOf(sec.range).code===code),workedCh=(code,c)=>STUDY.sections.some(sec=>{const g=rangeOf(sec.range);return g.code===code&&g.c===c;});
   // Auswahl im Navigator (nach einem Suchtreffer oder Antippen) als klickbarer Pfad; ohne Auswahl die aktuelle Position
-  const pos=navFrom(current),picked=['t','g','b','c','s'].some(k=>(nav[k]??null)!==(pos[k]??null));
-  const selIds=[['all','t:'+nav.t],[nav.t,'t:'+nav.t],nav.g!=null&&['g'+nav.g,'g:'+nav.g],nav.b!=null&&['b'+nav.b,'b:'+nav.b],nav.c&&[`c${nav.b}-${nav.c}`,'c:'+nav.c],nav.s&&[nav.s,'s:'+nav.s]].filter(Boolean);
+  const pos=navFrom(current),picked=['t','g','b','c','s','v'].some(k=>(nav[k]??null)!==(pos[k]??null));
+  const selIds=[['all','t:'+nav.t],[nav.t,'t:'+nav.t],nav.g!=null&&['g'+nav.g,'g:'+nav.g],nav.b!=null&&['b'+nav.b,'b:'+nav.b],nav.c&&[`c${nav.b}-${nav.c}`,'c:'+nav.c],nav.s&&[nav.s,'s:'+nav.s],nav.v&&nav.c&&[`v${nav.b}-${nav.c}-${nav.v}`,'v:'+nav.v]].filter(Boolean);
   const selCrumbs=selIds.map(([id,k],i)=>`<button type="button" data-nav="${k}" ${i===selIds.length-1?'aria-current="true"':''}>${esc(name(nodes.get(id)))}</button>`).join('<span class="sep">›</span>');
   let h=head(t.contents)+`${recent.length?`<details class="worked recent"><summary>${t.recent} (${recent.length})</summary>${recent.map(x=>`<button type="button" class="row recent-row" data-go="${x.id}"><span>${esc(recentLabel(x.id))}</span>${icon('chevron-right')}</button>`).join('')}<button type="button" class="link soft clear-recent" data-clear-recent>${t.recentClear}</button></details>`:''}
   <label for="find-nav-${appIndex}" class="note">${t.search}</label><input id="find-nav-${appIndex}" type="search" placeholder="${t.hint}" value="${esc(query)}" autocomplete="off"><div class="results"></div>
-  <p class="note">${picked?(L?'Auswahl':'Selection'):t.here}</p><div class="crumbs${picked?' sel':''}">${picked?selCrumbs:crumbs}</div>`;
+  <div class="pick-sel nav-sel"><p class="note">${picked?(L?'Auswahl':'Selection'):t.here}</p><div class="crumbs sel">${selCrumbs}</div><button type="button" class="open nav-open" data-go="${selIds[selIds.length-1][0]}">${esc(title(nodes.get(selIds[selIds.length-1][0])))} ${t.open}${icon('chevron-right')}</button></div>`;
   // Testament als kleiner Umschalter (wie Text/Bild) direkt vor den Buchgruppen
   h+=`<div class="nav-block"><div class="chips"><span class="tm-toggle" role="group" aria-label="${L?'Testament':'Testament'}">${['ot','nt'].map(x=>{const full=L?nodes.get(x).de:nodes.get(x).en;return `<button type="button" data-nav="t:${x}" aria-pressed="${nav.t===x}" aria-label="${esc(full)}" title="${esc(full)}">${x==='ot'?(L?'AT':'OT'):'NT'}</button>`;}).join('')}</span>${nodes.get(nav.t).children.map(gid=>{const g=nodes.get(gid);return `<button type="button" class="chip${nav.g===g.gi?' cur':''}" data-nav="g:${g.gi}">${esc(L?g.de:g.en)}</button>`;}).join('')}</div></div>`;
   if(nav.g!=null){const gn=nodes.get('g'+nav.g);
@@ -1436,7 +1480,7 @@ function navSheet(reset){
   if(nav.b!=null){const bn=nodes.get('b'+nav.b),code=DATA[nav.b].code;
     h+=`<div class="nav-block"><h4><span>${L?'Kapitel':'Chapter'}</span>${nav.c?`<button type="button" class="open" data-go="c${nav.b}-${nav.c}">${esc(L?DATA[nav.b].de:DATA[nav.b].en)} ${nav.c} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${bn.children.map(cid=>{const cn=nodes.get(cid);return `<button type="button" class="${nav.c===cn.c?'cur':''}${workedCh(code,cn.c)?' study':''}" data-nav="c:${cn.c}">${cn.c}</button>`;}).join('')}</div></div>`;}
   if(nav.b!=null&&nav.c){const cn=nodes.get(`c${nav.b}-${nav.c}`),parts=cn.children.map(id=>nodes.get(id)),sn=nav.s&&nodes.get(nav.s),vs=sn?sn.children:cn.children.flatMap(sid=>nodes.get(sid).children);
-    h+=`${parts.length?`<details class="worked nav-parts"${sn?' open':''}><summary>${L?'Abschnitt wählen':'Choose a passage'} (${parts.length})</summary>${parts.map(x=>`<div class="row-split${nav.s===x.id?' cur':''}"><button type="button" class="row open-row" data-go="${x.id}" aria-label="${esc(x.part?pTitle(x.part):childLabel(x))} ${t.open}"><span>${x.part?`${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span>`:esc(childLabel(x))}</span><span class="go">${icon('arrow-right')}</span></button><button type="button" class="verses-btn" data-nav="s:${x.id}" aria-pressed="${nav.s===x.id}" aria-label="${L?'Verse dieses Abschnitts wählen':'Choose a verse in this passage'}">${L?'Verse':'Verses'}</button></div>`).join('')}</details>`:''}<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span>${sn?`<button type="button" class="open" data-go="${sn.id}">${esc(childLabel(sn))} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${current===vid?'cur':''}${isPilotVerse(v)?' study':''}" data-go="${vid}">${v.v}</button>`;}).join('')}</div></div>`;}
+    h+=`${parts.length?`<details class="worked nav-parts"${sn?' open':''}><summary>${L?'Abschnitt wählen':'Choose a passage'} (${parts.length})</summary>${parts.map(x=>`<div class="row-split${nav.s===x.id?' cur':''}"><button type="button" class="row open-row" data-go="${x.id}" aria-label="${esc(x.part?pTitle(x.part):childLabel(x))} ${t.open}"><span>${x.part?`${esc(pTitle(x.part))} <span class="note">${x.v}–${x.last}</span>`:esc(childLabel(x))}</span><span class="go">${icon('arrow-right')}</span></button><button type="button" class="verses-btn" data-nav="s:${x.id}" aria-pressed="${nav.s===x.id}" aria-label="${L?'Verse dieses Abschnitts wählen':'Choose a verse in this passage'}">${L?'Verse':'Verses'}</button></div>`).join('')}</details>`:''}<div class="nav-block"><h4><span>${L?'Vers':'Verse'}</span>${sn?`<button type="button" class="open" data-go="${sn.id}">${esc(childLabel(sn))} ${t.open}${icon('chevron-right')}</button>`:''}</h4><div class="grid nums">${vs.map(vid=>{const v=nodes.get(vid);return `<button type="button" class="${nav.v===v.v?'cur':''}${isPilotVerse(v)?' study':''}" data-nav="v:${v.v}">${v.v}</button>`;}).join('')}</div></div>`;}
   h+=`<p class="note nav-legend"><span class="dot"></span> ${L?'ausgearbeitet':'worked out'}</p>`;
   h+=`<details class="worked"><summary>${t.examples} (${STUDY.sections.length})</summary>${STUDY.sections.map(sec=>`<button type="button" class="row" data-go="${sec.parts[0].id}"><span>${esc(refDe(sec.range))} · ${esc(pTitle(sec))}</span>${icon('chevron-right')}</button>`).join('')}</details>`;
   openSheet('nav',h);renderResults();
@@ -1564,12 +1608,15 @@ app.addEventListener('click',e=>{
   if(b.hasAttribute('data-close')){closeSheet();return;}
   if(b.dataset.deep){const n=nodes.get(b.dataset.deep);current=b.dataset.deep;go(remembered.get(current)||n.children[0]);return;}
   if(b.dataset.refGo){goRef(b.dataset.refGo);return;}
+  if(b.dataset.pickat){pickSheet(b.dataset.pickat);return;}
   if(b.dataset.pick){const id=b.dataset.pick,n=nodes.get(id);nav=navFrom(id,true);query='';navSheet();const last=host.querySelector('.nav-parts[open]')||host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});
     // Fokus auf das gewählte Ergebnis: Enter öffnet es (Abschnitt) bzw. zeigt seine Teile, Tab führt zu den Nachbarn (Wunsch Andi Neck)
-    const f=host.querySelector(`.sheet .open-row[data-go="${id}"]`)||(n&&n.level===4?host.querySelector(`.sheet [data-nav="c:${n.c}"]`):null)||(n&&n.level===3?host.querySelector(`.sheet [data-nav="b:${n.b}"]`):null)||(n&&n.level===2?host.querySelector(`.sheet [data-nav="g:${n.gi}"]`):null);
-    if(f){f.focus({preventScroll:false});if(f.scrollIntoView)f.scrollIntoView({block:'nearest'});}return;}
-  if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null,s:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;nav.s=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;nav.s=null;}else if(k==='c'){nav.c=Number(v);nav.s=null;}else if(k==='s'){nav.s=v;}
-    const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;navSheet();const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,y);const last=host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});return;}
+    // Kapitel und Buch: Fokus auf «… öffnen», damit Enter direkt öffnet (Hinweis Andi Neck 2026-10-28)
+    focusIn(host.querySelector('.sheet .nav-open'));return;}
+  if(b.dataset.nav){const [k,v]=b.dataset.nav.split(':');if(k==='t'){nav={t:v,g:null,b:null,c:null,s:null,v:null};}else if(k==='g'){nav.g=Number(v);nav.b=null;nav.c=null;nav.s=null;nav.v=null;}else if(k==='b'){nav.b=Number(v);nav.c=null;nav.s=null;nav.v=null;}else if(k==='c'){nav.c=Number(v);nav.s=null;nav.v=null;}else if(k==='s'){nav.s=v;nav.v=null;}else if(k==='v'){nav.v=Number(v);}
+    const old=host.querySelector('.sheet'),y=old?old.scrollTop:0;navSheet();const sh=host.querySelector('.sheet');if(sh&&sh.scrollTo)sh.scrollTo(0,y);const last=host.querySelector('.nav-block:last-of-type');if(last&&last.scrollIntoView)last.scrollIntoView({block:'nearest'});
+    // Nach der Auswahl steht der Fokus auf «… öffnen» des Gewählten (Enter öffnet), sonst wieder auf dem gewählten Knopf
+    focusIn(host.querySelector('.sheet .nav-open'));return;}
   if(b.hasAttribute('data-clear-recent')){clearRecent();navSheet();return;}
   if(b.hasAttribute('data-settings')){settingsSheet();return;}
   if(b.hasAttribute('data-figindex')){figIndexSheet();return;}
@@ -1592,9 +1639,9 @@ app.addEventListener('click',e=>{
   if(b.dataset.toggle){if(b.dataset.toggle in FIXED)return;S[b.dataset.toggle]=!S[b.dataset.toggle];save();rerenderKeep();reopenMenu();return;}
   const a=b.dataset.action,n=nodes.get(current);
   if(a==='home')go('all');else if(a==='menu'){if(sheet==='menu')closeSheet();else menuSheet();}
-  else if(a==='index'){navSheet(true);const f=host.querySelector('input[type=search]');if(f){f.focus({preventScroll:true});f.select();}}else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels'){if(n.children.length)pickSheet();else navSheet(true);}
-  else if(a==='up')go(n.parent);else if(a==='down')pickSheet();
-  else if(a==='load-next')loadMore();else if(a==='load-prev')loadMore(true);
+  else if(a==='index'){navSheet(true);const f=host.querySelector('input[type=search]');if(f){f.focus({preventScroll:true});f.select();}}else if(a==='back'){const tgt=jumpFrom;jumpFrom=null;go(tgt);}else if(a==='levels'){pickSheet(current);}
+  else if(a==='up')pickSheet(n.parent);else if(a==='down')pickSheet(current);
+  else if(a==='load-next')loadMore();else if(a==='load-prev')loadMore(true);else if(a==='load-cancel')cancelLoading();
 });
 /* Blatt nach unten ziehen zum Schliessen (Hinweis Andi Neck 2026-10-25): das Blatt folgt Finger oder Maus; nahe am unteren Rand
    oder nach weitem bzw. schnellem Zug verschwindet es ganz, sonst federt es zurück. Am Griff und Kopf mit Maus und Finger
@@ -1628,14 +1675,14 @@ app.addEventListener('click',e=>{
   root.addEventListener('touchend',()=>{if(sw&&sw.id==null)end();});root.addEventListener('touchcancel',()=>{if(sw&&sw.id==null)end();});}
 app.addEventListener('keydown',e=>{const tb=e.target.matches&&e.target.matches('[data-tilecap]')?e.target:null;if(tb&&(e.key==='Enter'||e.key===' ')){e.preventDefault();tb.click();return;}const x=e.target.closest&&e.target.closest('[data-explain]');if(x&&(e.key==='Enter'||e.key===' ')){e.preventDefault();legendSheet(x.dataset.explain);}});
 app.addEventListener('input',e=>{if(e.target.type==='search'){const sh=e.inputType&&e.inputType.startsWith('delete')?null:bookShort(e.target.value);if(sh!==null&&sh!==e.target.value){e.target.value=sh;e.target.setSelectionRange(sh.length,sh.length);}query=e.target.value;renderResults();}});
-app.addEventListener('keydown',e=>{if(e.key==='Escape'&&sheet){closeSheet();reader.focus({preventScroll:true});}
+app.addEventListener('keydown',e=>{if(e.key==='Escape'&&app.querySelector('.loading')){e.preventDefault();cancelLoading();return;}if(e.key==='Escape'&&sheet){closeSheet();reader.focus({preventScroll:true});}
   // Markierte Übersetzungsentscheidungen sind Textstellen (span), damit lange Markierungen normal umbrechen; per Tastatur bedienbar
   if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('[role=button].dec')){e.preventDefault();e.target.click();}});
 let busy=false,lastTop=0;
 reader.addEventListener('scroll',()=>{if(busy)return;busy=true;
   const y=reader.scrollTop;if(pin&&Date.now()<=pin.until){lastTop=y;}else if(y>80&&y-lastTop>6)app.classList.add('immersed');else if(lastTop-y>6||y<40)app.classList.remove('immersed');lastTop=y;
   const active=pin&&Date.now()<=pin.until?null:activeEntry();
-  if(active&&active.dataset.stream!==current){current=active.dataset.stream;for(const child of ancestors(current).slice(1))remembered.set(nodes.get(child).parent,child);chrome();const cn=nodes.get(current);if(cn.level>=4&&aside.dataset.parent!==cn.parent)sidebar();else aside.querySelectorAll('[data-go]:not(.side-step):not(.side-head)').forEach(x=>x.setAttribute('aria-current',String(x.dataset.go===current)));}
+  if(active&&active.dataset.stream!==current){current=active.dataset.stream;for(const child of ancestors(current).slice(1))remembered.set(nodes.get(child).parent,child);chrome();setHash(current,false);recordRecentSoon();const cn=nodes.get(current);if(cn.level>=4&&aside.dataset.parent!==cn.parent)sidebar();else aside.querySelectorAll('[data-go]:not(.side-step):not(.side-head)').forEach(x=>x.setAttribute('aria-current',String(x.dataset.go===current)));}
   if(reader.scrollTop+reader.clientHeight>reader.scrollHeight-300)loadMore();else if(reader.scrollTop<30&&readerStart>0)loadMore(true);
   busy=false;},{passive:true});
 // Weiterlesen ohne Knopf: Sobald «Weiterlesen» in die Nähe des sichtbaren Bereichs kommt, wird nachgeladen – auch wenn
@@ -1651,7 +1698,7 @@ reader.addEventListener('touchmove',e=>{if(touchY===null)return;const dy=e.touch
   if(dy<-40&&reader.scrollTop+reader.clientHeight>=reader.scrollHeight-2){touchY=null;loadMore();}
   else if(dy>40&&reader.scrollTop<=0&&readerStart>0){touchY=null;loadMore(true);}},{passive:true});
 reader.addEventListener('touchend',()=>{touchY=null;},{passive:true});
-render();
+{const h0=idOfHash(location.hash);if(h0&&h0!=='all')go(h0,false,true);else render();}
 });
 if(globalThis.__BIBLE_TEST__)globalThis.__BIBLE_TEST__({nodes,verses,stats,search,sibling,ancestors,streams,BOOK_SUMMARIES,STUDY,BG,translit});
 })();

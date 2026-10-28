@@ -8,8 +8,8 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(await p.$('.has-ill .ill-img svg'),'Bild auf der Ebene Bibel');
     assert.equal(await p.$$eval('.ill-styles',x=>x.length),0,'nur ein Bildstil (Anime), kein Umschalter');
     assert(await p.evaluate(()=>!!document.querySelector('.has-ill .ill-img use[href^="#an-"]')),'Anime-Bild auf der Ebene Bibel');
-    await p.click('[data-action=index]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
-    while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(800);}
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.click('.sheet .nav-open');await p.waitForTimeout(900);
+    while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.click('.sheet .pick-open');await p.waitForTimeout(800);}
     assert(await p.$$eval('.has-ill',x=>x.length)>=3,'Bilder bei den Abschnitten von Johannes 2 (und den geladenen Nachbarn)');
     assert.equal(await p.evaluate(()=>document.querySelector('.app').dataset.show),'both','Text und Bild zusammen als Vorgabe');
     {const tb=p.locator('.has-ill .tile-box[data-tilecap]:visible').first();await tb.click();await p.waitForTimeout(200);  // Legende je Kachel einblenden (Hinweis Andi Neck 2026-10-25)
@@ -26,8 +26,8 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(await p.$('.sheet .legend-fig use[href^="#an-"]'),'Anime-Darstellungen im Bildlexikon');
     // Struktur zuerst: Seligpreisungen mit Liste aller acht Glieder und Strukturbild in einzelnen Kacheln
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);
-    await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
-    while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.waitForTimeout(500);}
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.click('.sheet .nav-open');await p.waitForTimeout(900);
+    while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.click('.sheet .pick-open');await p.waitForTimeout(500);}
     const nLi=await p.evaluate(()=>{const e=[...document.querySelectorAll('.stream-entry')].find(x=>/Seligpreisungen/.test(x.querySelector('h2')?.textContent||''));return e?e.querySelectorAll('.sum-list li').length:0;});
     assert(nLi>=8,'Seligpreisungen als Liste aller Glieder ('+nLi+')');
     assert(await p.$('.ill-tiles svg.ill-tile'),'Bilder als einzelne Kacheln');
@@ -47,7 +47,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     // Umschalter Text | Bild (Entscheid Andi Neck 2026-10-27): beide unabhängig, mindestens einer an, gilt für alle Ebenen; auf Versebene
     // stehen die Felder des Abschnittsbilds bei ihren Versen
     await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));
-    await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,33');await p.waitForTimeout(300);await p.click('.results button');await p.waitForTimeout(900);
+    await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,33');await p.waitForTimeout(300);await p.click('.results button');await p.click('.sheet .nav-open');await p.waitForTimeout(900);
     assert(await p.$('.verse-ill svg.ill-tile'),'Feld des Abschnittsbilds beim Vers (Text und Bild)');
     const tog=async k=>{await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.locator(`[data-show-t=${k}]:visible`).first().click();await p.waitForTimeout(500);};
     await tog('img');assert(!await p.$('.verse-ill'),'nur Text: keine Bilder bei den Versen');

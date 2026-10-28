@@ -59,12 +59,12 @@ const details=sheetHost.querySelector('details');details.querySelector('summary'
 assert(sheetHost.textContent.includes('Keine Handschriftenzählung'));
 assert(sheetHost.textContent.includes('MorphGNT'));
 click('[data-close]');
-click('[data-action=up]');assert.equal(reader.scrollTop,137,'Rückkehrposition');
+(click('[data-action=up]'),click('.sheet .pick-open'));assert.equal(reader.scrollTop,137,'Rückkehrposition');
 
 // Suche, fortlaufendes Lesen über die Kapitelgrenze, Lesarten im Fliesstext
 click('[data-action=index]');
 const input=sheetHost.querySelector('input[type=search]');input.value='Mk 3,20';input.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
-sheetHost.querySelector('.results [data-go]').click();
+(sheetHost.querySelector('.results [data-pick]').click(),click('.sheet .nav-open'));
 click('[data-action=load-next]');
 for(let v=20;v<=35;v++)assert.equal(reader.querySelector(`[data-stream="v40-3-${v}"] .stream-copy`).textContent,mk(v));
 assert(reader.querySelector('[data-stream="v40-4-1"]'));
@@ -109,7 +109,7 @@ assert(sheetHost.querySelector('.dph-steps [data-dph="today"]')&&sheetHost.query
 assert(sheetHost.textContent.includes('abgeleiteter Grundsatz')&&sheetHost.textContent.includes('Grenze:'),'Prinzip und Anwendung');
 assert(!sheetHost.querySelector('[data-app="APP-MAT-1007"]'),'Anwendung zu Mt 6,5–6 nicht beim Vaterunser');
 click('[data-close]');
-click('[data-action=up]');
+(click('[data-action=up]'),click('.sheet .pick-open'));
 click('[data-background="TU-MAT-006-005-008"]');
 assert(sheetHost.textContent.includes('Kammer')&&sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'Kammer damals, Anwendungen heute');
 click('.dph-aud [data-aud="CTX-CH-YOUTH-2026"]');
@@ -118,12 +118,12 @@ assert(!sheetHost.querySelector('[data-app="APP-MAT-1005"]'),'Anwendung zu Mt 6,
 click('.dph-aud [data-aud="all"]');assert(sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'wieder alle');
 click('[data-close]');
 // Gleiche Knöpfe auf allen Ebenen; Kapitel mit Kernanalyse
-click('[data-action=up]');
+(click('[data-action=up]'),click('.sheet .pick-open'));
 {const ch=[...reader.querySelectorAll('[data-stream]')].find(e=>e.dataset.stream&&model.nodes.get(e.dataset.stream)&&model.nodes.get(e.dataset.stream).level===4&&e.querySelector('[data-study]'));assert(ch,'Kapitel mit Verstehen');
  assert(ch.querySelector('[data-background]'),'Kapitel mit Damals → Heute');}
 click('[data-study="'+[...reader.querySelectorAll('[data-study]')].map(b=>b.dataset.study).find(id=>model.nodes.get(id).level===4&&model.nodes.get(id).c===6)+'"]');
 assert(sheetHost.textContent.includes('Worum es geht')&&sheetHost.textContent.includes('Die tragenden Momente'),'Kernanalyse Mt 6');click('[data-close]');
-click('[data-action=up]');
+(click('[data-action=up]'),click('.sheet .pick-open'));
 {const b=[...reader.querySelectorAll('[data-study]')].find(x=>model.nodes.get(x.dataset.study).level===3);assert(b,'Buch mit Verstehen');b.click();assert(sheetHost.textContent.includes('noch keine Kernanalyse')||sheetHost.textContent.includes('Worum es geht'),'Buchblatt');click('[data-close]');}
 click('[data-action=index]');click('.sheet [data-go="TU-MAT-006-001-004"]');
 click('[data-deep="TU-MAT-006-009-013"]');
@@ -159,7 +159,7 @@ tested++;click('[data-close]');
 click('[data-action=menu]');click('[data-settings]');assert(sheetHost.textContent.includes('Aussprache'),'Aussprache-Einstellung');click('[data-close]');
 click('[data-more="v39-6-13"]');click('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]');assert(sheetHost.querySelector('.tr'),'Umschrift immer an');click('[data-close]');
 for(const a of M().alternatives.filter(a=>a.ref.startsWith('MAT.6.'))){const v=vOf(a.ref);if(!reader.querySelector(`[data-more="v39-6-${v}"]`)){continue;}click(`[data-more="v39-6-${v}"]`);sheetHost.querySelector(`[data-source="${a.variant}"]`).click();assert(sheetHost.textContent.includes('Was die gedruckten Ausgaben haben'),a.variant);click('[data-close]');tested++;}
-click('[data-action=index]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
+click('[data-action=index]');const inp=sheetHost.querySelector('input[type=search]');inp.value='Lk 11,2';inp.dispatchEvent(new dom.window.Event('input',{bubbles:true}));(sheetHost.querySelector('.results [data-pick]').click(),click('.sheet .nav-open'));
 assert.equal(reader.querySelector('[data-stream="v41-11-2"] .stream-copy').textContent,M().de['LUK.11.2']);
 click('[data-more="v41-11-2"]');click('.sheet [data-source="VAR-SBLGNTAPP-LUK-011-002-01"]');
 txt=sheetHost.textContent;assert(txt.includes('Papyrus 75')&&txt.includes('Codex Vaticanus'),'P75 zu Lk 11,2');tested++;click('[data-close]');
@@ -170,19 +170,19 @@ assert(app.classList.contains('flow'),'Verse fortlaufend ist Standard');
 click('[data-action=index]');
 assert(sheetHost.querySelector('.crumbs [aria-current=true]'),'Pfad zeigt die aktuelle Position');
 assert(sheetHost.textContent.includes('Du bist hier'));
-click('[data-nav="t:ot"]');click('[data-nav="g:0"]');
+click('.tm-toggle [data-nav="t:ot"]');click('.chips [data-nav="g:0"]');
 assert(sheetHost.querySelector('.grid.books [data-nav="b:0"]'),'Bücher der Gruppe');
 click('[data-nav="b:0"]');assert(sheetHost.querySelector('.grid.nums [data-nav="c:50"]'),'50 Kapitel Genesis');
-click('[data-nav="c:1"]');assert(sheetHost.querySelector('.grid.nums [data-go="v0-1-31"]'),'31 Verse Genesis 1');
+click('[data-nav="c:1"]');assert(sheetHost.querySelector('.grid.nums [data-nav="v:31"]'),'31 Verse Genesis 1');
 assert(sheetHost.querySelector('.open[data-go="c0-1"]'),'Kapitel öffnen');
-click('[data-go="v0-1-3"]');assert.equal(model.nodes.get('v0-1-3').id,'v0-1-3');assert(reader.querySelector('[data-stream="v0-1-3"]'),'Sprung zu Genesis 1,3');
-click('[data-action=index]');assert(sheetHost.querySelector('.grid.books [data-nav="b:0"].cur')&&sheetHost.querySelector('[data-nav="c:1"].cur'),'Navigator startet an der aktuellen Position');
+click('.grid.nums [data-nav="v:3"]');assert(sheetHost.querySelector('.nav-open[data-go="v0-1-3"]'),'Vers gewählt, noch nicht geöffnet');click('.sheet .nav-open');assert.equal(model.nodes.get('v0-1-3').id,'v0-1-3');assert(reader.querySelector('[data-stream="v0-1-3"]'),'Sprung zu Genesis 1,3');
+click('[data-action=index]');assert(sheetHost.querySelector('.grid.books [data-nav="b:0"].cur')&&sheetHost.querySelector('.grid.nums [data-nav="c:1"].cur'),'Navigator startet an der aktuellen Position');
 assert(!sheetHost.querySelector('.grid.books .study'),'in der Gruppe Gesetz ist nichts ausgearbeitet');
-click('[data-nav="t:nt"]');assert(sheetHost.querySelector('[data-nav="g:5"]'),'Gruppen des NT');click('[data-nav="g:5"]');assert(sheetHost.querySelector('.grid.books [data-nav="b:39"].study'),'Matthäus als ausgearbeitet markiert');
+click('.tm-toggle [data-nav="t:nt"]');assert(sheetHost.querySelector('[data-nav="g:5"]'),'Gruppen des NT');click('[data-nav="g:5"]');assert(sheetHost.querySelector('.grid.books [data-nav="b:39"].study'),'Matthäus als ausgearbeitet markiert');
 click('[data-close]');
 
 // Querverweise und Stellen im Text sind verlinkt; Rücksprung
-click('[data-action=index]');const inp2=sheetHost.querySelector('input[type=search]');inp2.value='Mt 6,11';inp2.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();
+click('[data-action=index]');const inp2=sheetHost.querySelector('input[type=search]');inp2.value='Mt 6,11';inp2.dispatchEvent(new dom.window.Event('input',{bubbles:true}));(sheetHost.querySelector('.results [data-pick]').click(),click('.sheet .nav-open'));
 click('[data-more="v39-6-11"]');
 assert(sheetHost.querySelector('.xrefs [data-ref-go="PRO.30.8"]'),'Querverweis Spr 30,8');
 assert(sheetHost.textContent.includes('Spr 30,8')&&sheetHost.textContent.includes('Lk 11,3'),'Kurzform der Stellen');
@@ -201,7 +201,7 @@ click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][da
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesetext');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
-click('[data-action=up]');assert(reader.textContent.includes('De Jesus git de Jünger s Gebät vor')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');assert(sheetHost.querySelector('.grid.nums .cur[data-go="v39-6-11"]'),'Auswahl unten markiert den zuletzt gelesenen Vers');click('.grid.nums .cur');
+(click('[data-action=up]'),click('.sheet .pick-open'));assert(reader.textContent.includes('De Jesus git de Jünger s Gebät vor')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');assert(sheetHost.querySelector('.grid.nums .cur[data-pickat="v39-6-11"]'),'Auswahl unten markiert den zuletzt gelesenen Vers');click('.grid.nums .cur');click('.sheet .pick-open');
 click('[data-more="v39-6-12"]');assert(sheetHost.querySelector('[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Versblatt');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
@@ -218,7 +218,7 @@ assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textC
 assert.equal(Object.keys(M().layers.gsw.text).length,4204,'Mundart für alle 4204 Verse');
 // Obadja (Hebräisch) und Titus: Muster ganzer Bücher
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
-click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');sheetHost.querySelector('.grid.nums [data-go]').click();
+click('[data-action=index]');sheetHost.querySelector('[data-go^="TU-OBA"]').click();click('[data-action=down]');sheetHost.querySelector('.grid.nums [data-pickat]').click();click('.sheet .pick-open');
 assert(reader.querySelector('[data-stream="v30-1-21"]')||true);
 click('[data-more="v30-1-3"]');
 assert(sheetHost.querySelector('.il.he .heb'),'Hebräisch Wort für Wort');
@@ -231,7 +231,7 @@ assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift
 assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Es grüessed dich alli'),'Titus in Mundart');
 assert(model.STUDY&&dom.window.document.querySelector('#bible-stream'));
 // Wörterbuch (UBS/STEPBible), Ketiv/Qere (TAHOT), Ausgaben je Wort (TAGNT); Urtext-Modus ist an
-const goto=q=>{click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-go]').click();};
+const goto=q=>{click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));(sheetHost.querySelector('.results [data-pick]').click(),click('.sheet .nav-open'));};
 {click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value='matt 5';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
   if(i.value!=='Mt 5')throw new Error('Suche: eindeutiger Buchanfang wird nicht als Kürzel übernommen: '+i.value);
   i.value='ma 5';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));if(i.value!=='ma 5')throw new Error('Suche: mehrdeutiger Buchanfang verändert');}
@@ -267,21 +267,21 @@ click('[data-close]');
 {click('[data-action=index]');const blocks=[...sheetHost.querySelectorAll('details.recent, input[type=search], details.worked:not(.recent):not(.nav-parts)')];
  assert(blocks.length===3&&blocks[0].matches('details.recent')&&blocks[2].matches('details.worked'),'Reihenfolge: Zuletzt gelesen, Suche, … ausgearbeitete Stellen am Ende');
  const find=q=>{const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));return [...sheetHost.querySelectorAll('.results .row')];};
- let r=find('Mt 5,3');assert.deepEqual(r.map(x=>x.querySelector('.lv').textContent),['Vers','Abschnitt','Kapitel','Buch'],'Treffer Vers, Abschnitt, Kapitel, Buch');assert(r[0].dataset.go&&!r[1].dataset.go&&r[1].dataset.pick,'Vers öffnet direkt, Abschnitt wird ausgewählt');
+ let r=find('Mt 5,3');assert.deepEqual(r.map(x=>x.querySelector('.lv').textContent),['Vers','Abschnitt','Kapitel','Buch'],'Treffer Vers, Abschnitt, Kapitel, Buch');assert(r.every(x=>x.dataset.pick&&!x.dataset.go),'alle Treffer werden ausgewählt, geöffnet wird mit «… öffnen»');
  r=find('Feindesliebe');assert(r.some(x=>x.dataset.pick==='TU-MAT-005-043-048'),'Abschnitt über den Titel gefunden');
- r.find(x=>x.dataset.pick==='TU-MAT-005-043-048').click();assert.equal(dom.window.document.activeElement&&dom.window.document.activeElement.dataset.go,'TU-MAT-005-043-048','Fokus auf dem gewählten Abschnitt (Enter öffnet)');
- find('Mt 5');sheetHost.querySelector('.results [data-pick^="c"]').click();assert.equal(dom.window.document.activeElement&&dom.window.document.activeElement.dataset.nav,'c:5','Fokus auf dem gewählten Kapitel');
+ r.find(x=>x.dataset.pick==='TU-MAT-005-043-048').click();assert.equal(dom.window.document.activeElement&&dom.window.document.activeElement.dataset.go,'TU-MAT-005-043-048','Fokus auf «… öffnen» des gewählten Abschnitts (Enter öffnet)');
+ find('Mt 5');sheetHost.querySelector('.results [data-pick^="c"]').click();assert.match(dom.window.document.activeElement&&dom.window.document.activeElement.dataset.go||'',/^c\d+-5$/,'Fokus auf «Matthäus 5 öffnen»');
  assert(sheetHost.querySelector('.crumbs.sel')&&sheetHost.querySelector('.crumbs.sel [aria-current=true]').textContent==='Kapitel 5','Auswahl als Pfad bis zum Kapitel');assert(!sheetHost.querySelector('.results .row'),'Treffer nach der Auswahl ausgeblendet');
  sheetHost.querySelector('.crumbs.sel [data-nav^="b:"]').click();assert(!sheetHost.querySelector('.crumbs.sel [data-nav^="c:"]')&&sheetHost.querySelector('.grid.nums [data-nav="c:5"]'),'Pfad klickbar: zurück zum Buch, Kapitel wählbar');
  click('[data-nav="c:5"]');click('[data-nav="s:TU-MAT-005-001-012"]');
- assert.equal(sheetHost.querySelectorAll('.nav-block:last-of-type .grid.nums [data-go]').length,12,'Abschnitt gewählt: seine 12 Verse');assert(sheetHost.querySelector('.open[data-go="TU-MAT-005-001-012"]'),'Abschnitt öffnen');assert(sheetHost.querySelector('.nav-parts .open-row[data-go="TU-MAT-005-043-048"]'),'Abschnitt direkt in der Zeile öffnen');
+ assert.equal(sheetHost.querySelectorAll('.nav-block:last-of-type .grid.nums [data-nav^="v:"]').length,12,'Abschnitt gewählt: seine 12 Verse');assert(sheetHost.querySelector('.open[data-go="TU-MAT-005-001-012"]'),'Abschnitt öffnen');assert(sheetHost.querySelector('.nav-parts .open-row[data-go="TU-MAT-005-043-048"]'),'Abschnitt direkt in der Zeile öffnen');
  click('[data-close]');}
-// Pfad unten: Glieder springen direkt; rechts die Auswahl der Ebene darunter (auch Platzhalter-Abschnitte ungeprüfter Kapitel)
+// Pfad unten: Glieder öffnen den Wähler (Auswahl, erst «… öffnen» springt); rechts die Auswahl der Ebene darunter
 {const crumbs=[...app.querySelectorAll('.dock .path button')];assert(crumbs.length>=2&&crumbs.at(-1).getAttribute('aria-current')==='true'&&crumbs.at(-2).dataset.action==='up','Pfad unten mit aktueller Stelle');
- crumbs[0].click();assert.equal(app.dataset.level,'0','erstes Glied: direkt zur ganzen Bibel');
- click('[data-action=down]');assert(sheetHost.querySelector('.pick-list [data-go="ot"]'),'Auswahl darunter: Testamente');click('[data-close]');
+ crumbs[0].click();assert(sheetHost.querySelector('.pick-open[data-go="all"]'),'erstes Glied: Wähler mit «Die Bibel öffnen»');assert.notEqual(app.dataset.level,'0','noch nicht gesprungen');click('.sheet .pick-open');assert.equal(app.dataset.level,'0','nach «öffnen» bei der ganzen Bibel');
+ click('[data-action=down]');assert(sheetHost.querySelector('.pick-list [data-pickat="ot"]'),'Auswahl darunter: Testamente');click('.pick-list [data-pickat="ot"]');assert(sheetHost.querySelector('.pick-open[data-go="ot"]')&&app.dataset.level==='0','Testament gewählt, nächste Ebene angezeigt, noch nicht geöffnet');click('[data-close]');
  const i=(click('[data-action=index]'),sheetHost.querySelector('input[type=search]'));i.value='Apg 4';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-pick^="c"]').click();
- assert(sheetHost.querySelectorAll('.nav-parts [data-nav^="s:"]').length>=7,'Abschnitte auch bei nicht ausgearbeiteten Kapiteln (Verse 1–5 …)');sheetHost.querySelector('.nav-block:last-of-type [data-go]').click();
+ assert(sheetHost.querySelectorAll('.nav-parts [data-nav^="s:"]').length>=7,'Abschnitte auch bei nicht ausgearbeiteten Kapiteln (Verse 1–5 …)');sheetHost.querySelector('.nav-block:last-of-type [data-nav^="v:"]').click();click('.sheet .nav-open');
  assert.equal(app.dataset.level,'6');assert(app.querySelector('[data-action=down]').hidden,'auf Versebene keine Auswahl darunter');}
 console.log(`PASS: Navigation (Suche nach Stelle und Abschnitt, Auswahl im Pfad), Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
 dom.window.close();

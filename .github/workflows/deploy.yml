@@ -51,7 +51,7 @@ jobs:
       - name: App-Tests
         run: |
           set -e
-          for t in test_bible test_bible_dom test_bible_bilder test_bible_sidebar test_bible_vorlesen test_bible_lernen; do
+          for t in test_bible test_bible_dom test_bible_bilder test_bible_sidebar test_bible_vorlesen test_bible_lernen test_bible_navigation; do
             node scripts/$t.cjs
           done
           node scripts/test_bible_split.cjs bible

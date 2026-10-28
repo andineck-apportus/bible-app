@@ -2,6 +2,16 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.138 — 2026-10-28 — Navigation: zuerst auswählen, dann öffnen; Adressen; Laden mit Abbrechen
+
+Hinweise von Andi Neck (2026-10-28).
+- **Zuerst auswählen, dann öffnen:** Suchtreffer, Navigator und Pfad unten springen nicht mehr sofort. Oben steht die Auswahl als klickbarer Pfad (wie in der Fusszeile), darunter die Ebene darunter; Antippen wählt aus und zeigt die nächste Ebene, erst «… öffnen» springt und schliesst. Der Fokus steht nach jeder Auswahl auf «… öffnen», Enter öffnet direkt (vorher stand er beim Kapitel auf dem Pfadglied). Im Navigator ist auch der Vers wählbar; der Auswahlblock bleibt beim Scrollen oben stehen.
+- **Pfad unten:** Antippen eines Glieds öffnet «Stelle wählen» mit diesem Glied als Auswahl (kein direkter Sprung mehr); ebenso «Vertiefen».
+- **Zuletzt gelesen:** wird beim Öffnen sofort erfasst, jetzt auch für Bücher; beim Weiterlesen erst nach 4 s am selben Ort, damit Durchscrollen die Liste nicht füllt.
+- **Adressen (Hash-Router):** jeder Ort ist verlinkbar, Dialoge nicht: `#/` Bibel, `#/nt`, `#/g5`, `#/JHN`, `#/JHN.2`, `#/JHN.2.1-12`, `#/JHN.2.5`. Öffnen legt einen Verlaufseintrag an (Zurück im Browser funktioniert), Weiterlesen ersetzt ihn nur; beim Start mit Adresse geht die App direkt dorthin.
+- **Laden:** Dauert das Nachladen länger als 200 ms, erscheint ein dezenter Spinner, die Bedienung darunter ist gesperrt; «Abbrechen» (oder Esc) kehrt zum vorherigen Ort zurück, nach 15 s ein Hinweis. So kann die App nicht hängen bleiben.
+- **Tests:** neu `test_bible_navigation.cjs` (Fokus, Auswahl, Zuletzt gelesen, Adressen mit Zurück, Laden mit Abbrechen, im Build-Workflow); bestehende Tests auf «auswählen, dann öffnen» umgestellt.
+
 ## v0.137 — 2026-10-27 — Johannes 2: Aquarellbilder reduziert, nichts mehr angeschnitten
 
 Hinweis von Andi Neck (2026-10-27): Die Bilder waren am Rand abgeschnitten und zu detailliert, nicht wie im Styleguide beschrieben; gewünscht sind reduziertere Grafiken mit weniger Details.
