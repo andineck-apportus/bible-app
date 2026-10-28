@@ -87,8 +87,12 @@ def male(prompt, vorlagen, schluessel, n):
     modelle = [os.environ["OPENAI_IMAGE_MODEL"]] if os.environ.get("OPENAI_IMAGE_MODEL") else MODELLE
     for m in modelle:
         felder = {"model": m, "prompt": prompt, "size": "1536x1024", "quality": "high", "n": str(n)}
-        daten, typ = multipart(felder, [("image[]", p) for p in vorlagen])
-        req = urllib.request.Request(f"{API}/edits", data=daten, headers={"Authorization": f"Bearer {schluessel}", "Content-Type": typ})
+        if vorlagen:
+            daten, typ = multipart(felder, [("image[]", p) for p in vorlagen])
+            req = urllib.request.Request(f"{API}/edits", data=daten, headers={"Authorization": f"Bearer {schluessel}", "Content-Type": typ})
+        else:  # ohne Vorlage (Stilprobe C): Bild nur aus dem Text
+            req = urllib.request.Request(f"{API}/generations", data=json.dumps({**felder, "n": n}).encode(),
+                                         headers={"Authorization": f"Bearer {schluessel}", "Content-Type": "application/json"})
         try:
             with urllib.request.urlopen(req, timeout=900) as r:
                 d = json.loads(r.read())

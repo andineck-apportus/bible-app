@@ -241,6 +241,59 @@ def kalibrieren(a, schluessel, out):
     return {}
 
 
+REDUKTION_EN = ("MUCH MORE REDUCED than usual (this matters most): at least two thirds of the sheet stay untouched white paper. "
+                "Each figure is a few loose brush strokes and one flat pale wash; clothing has no folds, no seams, no texture; hair is one flat "
+                "shape without strands; faces are a few small strokes (eyes, brows, nose, mouth, beard as one tone) that still show the feeling; "
+                "hands are simple shapes. No background at all except, if needed, one single pale line or wash for the ground. "
+                "Fewer, thinner, broken ink lines; leave contours open.")
+STILPROBE = {"A-aktuell": (True, ""), "B-schaerfer": (True, REDUKTION_EN),
+             "C-ohne-vorlage": (False, REDUKTION_EN + " (No reference image is attached: follow the STYLE text alone.)")}
+
+
+def stilprobe(a, schluessel, out):
+    """Stilprobe (Hinweis Andi Neck 2026-10-28: Bilder tendenziell zu detailliert): dieselben Szenen mit drei Einstellungen malen
+    und prüfen – A wie bisher, B mit verschärfter Reduktion, C verschärft ohne Stilreferenz. Gemessen: Belegung (Anteil bemaltes
+    Papier), Regel G-REDUKTION, Pflichtregeln, Kern. Nichts wird übernommen."""
+    import bilder_aquarell_gen as G
+    plaene, fig, allg, szenen, momente, band = kontext()
+    bericht, zus = {}, []
+    for sid in [s.strip() for s in a.szenen.split(",")]:
+        name, sz = szenen[sid]
+        for stil, (mit_ref, extra) in STILPROBE.items():
+            vorlagen = G.vorlagen_fuer(plaene[name]) if mit_ref else []
+            prompt = G.auftrag_feld(sz, fig[sid], len(vorlagen) > 1)
+            if not mit_ref:
+                prompt = prompt.split("\n\nThe first attached image")[0]
+            prompt += f"\n\nREDUCTION: {extra}" if extra else ""
+            try:
+                m, bilder = G.male(prompt, vorlagen, schluessel, a.varianten)
+            except Exception as ex:
+                BP.melde(f"{sid} {stil} malen: {ex}")
+                continue
+            e = bericht.setdefault(f"{sid} · {stil}", {"varianten": []})
+            for k, b in enumerate(bilder, 1):
+                datei = f"{sid}__{stil}__v{k}.png"
+                (out / datei).write_bytes(b)
+                try:
+                    pr = BP.pruefe_feld(schluessel, b, sz, fig[sid], allg, momente[sid])
+                except Exception as ex:
+                    BP.melde(f"{sid} {stil} prüfen: {ex}")
+                    continue
+                bel = round(float(BA.belegung(b).mean()), 3)
+                red = next((x["ergebnis"] for x in pr["regeln"] if x["id"] == "G-REDUKTION"), None)
+                e["varianten"].append({"datei": datei, "pruefung": pr, "belegung": bel})
+                zus.append({"szene": sid, "stil": stil, "datei": datei, "belegung": bel, "reduktion": red, "ergebnis": pr["ergebnis"], "kern": pr.get("kern"),
+                            "pflicht_offen": [x["id"] for x in pr["regeln"] if x["stufe"] == "pflicht" and x["ergebnis"] != "ok"]})
+                print(f"{sid} {stil} v{k}: Belegung {bel}, G-REDUKTION {red}, {pr['ergebnis']}, Kern {pr.get('kern')}")
+    (out / "stilprobe.json").write_text(json.dumps({"nutzung": dict(BP.NUTZUNG), "bilder": zus}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for stil in STILPROBE:
+        z = [x for x in zus if x["stil"] == stil]
+        if z:
+            BP.melde(f"Stilprobe {stil}: Belegung im Mittel {sum(x['belegung'] for x in z) / len(z):.2f}, G-REDUKTION ok {sum(x['reduktion'] == 'ok' for x in z)}/{len(z)}, "
+                     f"bestanden {sum(x['ergebnis'] == 'bestanden' for x in z)}/{len(z)}")
+    return bericht
+
+
 def bericht_html(out, bericht, titel):
     def zeile(e):
         return "".join(f'<li class="{x["ergebnis"]}"><b>{html.escape(x["id"])}</b> {html.escape(x["de"])}: {html.escape(str(x["antwort"]))}'
@@ -270,7 +323,7 @@ def bericht_html(out, bericht, titel):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("schritt", choices=["neu", "pruefen", "kalibrieren"])
+    ap.add_argument("schritt", choices=["neu", "pruefen", "kalibrieren", "stilprobe"])
     ap.add_argument("--szenen", default="alle")
     ap.add_argument("--varianten", type=int, default=2)
     ap.add_argument("--runden", type=int, default=3)
@@ -287,6 +340,9 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     if a.schritt == "kalibrieren":
         kalibrieren(a, schluessel, out)
+        return
+    if a.schritt == "stilprobe":
+        bericht_html(out, stilprobe(a, schluessel, out), f"Stilprobe {lauf}")
         return
     bericht = neu(a, schluessel, out) if a.schritt == "neu" else pruefen(a, schluessel, out)
     subprocess.run([sys.executable, str(ROOT / "scripts/authoring/bilder_aquarell.py")], check=True)
