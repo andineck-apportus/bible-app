@@ -70,10 +70,12 @@ def project(section_ids=None):
             assess[a["assesses"]] = a
     findings, ints, prin, apps = _all("findings"), _all("interpretations"), _all("principles"), _all("applications")
     ctx, rels, qs = _all("contexts"), _all("relations"), _all("questions")
+    # Weiterdenken (docs/WEITERDENKEN.md): Fragen zum Weiterdenken und «Wie man es gelesen hat»
+    refl, rcpt = (_all("reflections") if (D / "reflections").exists() else {}), (_all("receptions") if (D / "receptions").exists() else {})
     method = json.loads((D / "methods/METHOD-EDITION-AGREEMENT-V1.json").read_text(encoding="utf-8"))
     editions = {k: {"title": v["title"], "year": v.get("year")} for k, v in _all("editions").items()}
 
-    L10N = localizations.load({**tu, **findings, **ints, **prin, **apps, **qs})
+    L10N = localizations.load({**tu, **findings, **ints, **prin, **apps, **qs, **refl, **rcpt})
     sections, scope, subjects = [], {}, set()
     mid = {}  # Zwischenebenen je Abschnitt: ihre Inhalte gelten für den ganzen Abschnitt
     for sid in section_ids:
@@ -237,13 +239,15 @@ def project(section_ids=None):
     prs = {k: v for k, v in prin.items() if set(v.get("derived_from", [])) & known}
     aps = {k: v for k, v in apps.items() if v.get("principle") in prs}
 
-    def subject_of_principle(p):
+    def subjects_of_principle(p):
+        """Alle Texteinheiten, deren Befunde oder Deutungen der Grundsatz in derived_from nennt (in dieser Reihenfolge,
+        ohne Doppel): Er erscheint bei jedem dieser Abschnitte, nicht nur beim ersten."""
+        out = []
         for x in p.get("derived_from", []):
-            if x in fs:
-                return fs[x]["subject"]
-            if x in ins:
-                return ins[x]["subject"]
-        return None
+            sj = (fs.get(x) or ins.get(x) or {}).get("subject")
+            if sj and sj not in out:
+                out.append(sj)
+        return out
 
     def scope_of_principle(p):
         """Verse, für die ein Grundsatz gilt: Feld `reference`, sonst die erste Stellen-Marke seiner Aussage."""
@@ -256,7 +260,8 @@ def project(section_ids=None):
 
     def re_subject(o):
         if isinstance(o, dict):
-            return {k: (alias.get(v, v) if k in ("subject", "from", "to") and isinstance(v, str) else re_subject(v)) for k, v in o.items()}
+            return {k: (alias.get(v, v) if k in ("subject", "from", "to") and isinstance(v, str)
+                        else [alias.get(x, x) for x in v] if k == "subjects" and isinstance(v, list) else re_subject(v)) for k, v in o.items()}
         if isinstance(o, list):
             return [re_subject(x) for x in o]
         return o
@@ -276,11 +281,12 @@ def project(section_ids=None):
                              "i18n": i18n(k, {"claim_de": "claim", "caveat_de": "caveat", "counterarguments_de": "counter", "terms": "terms"})}
                             for k, v in sorted(ins.items())],
         "principles": [{"id": k, "text": v["statement_de"], "confidence": v.get("confidence"),
-                        "subject": subject_of_principle(v), "ref": scope_of_principle(v), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
+                        "subject": (subjects_of_principle(v) or [None])[0], "subjects": subjects_of_principle(v), "ref": scope_of_principle(v), "i18n": i18n(k, {"statement_de": "text"})} for k, v in sorted(prs.items())],
         "applications": [{"id": k, "text": v["statement_de"], "limits": v.get("limitations_de"),
-                          "subject": subject_of_principle(prs[v["principle"]]),
+                          "subject": (subjects_of_principle(prs[v["principle"]]) or [None])[0],
+                          "subjects": subjects_of_principle(prs[v["principle"]]),
                           "context": ctx.get(v.get("context"), {}).get("audience"), "confidence": v.get("confidence"),
-                          # Zielgruppe für die Auswahl «Heute» und optionale Einschränkung auf Verse (docs/DAMALS-PRINZIP-HEUTE.md)
+                          # Zielgruppe für die Auswahl «Heute» und optionale Einschränkung auf Verse (docs/WEITERDENKEN.md)
                           "ctx": v.get("context"), "ctx_label": ctx.get(v.get("context"), {}).get("label_de"),
                           "ref": v.get("reference") or scope_of_principle(prs[v["principle"]]),
                           "i18n": i18n(k, {"statement_de": "text", "limitations_de": "limits"})}
@@ -291,6 +297,16 @@ def project(section_ids=None):
         "questions": [{"id": v["id"], "q": v["question_de"], "finding": v.get("finding_de"), "subject": v.get("subject"),
                        "i18n": i18n(v["id"], {"question_de": "q", "finding_de": "finding"})}
                       for v in sorted(qs.values(), key=lambda r: r["id"]) if v.get("subject") in subjects],
+        # Fragen zum Weiterdenken und Rezeption zu Texteinheiten (obere Ebenen: build_bible.py)
+        "reflections": [{"id": k, "q": v["question_de"], "note": v.get("note_de"), "subject": v["subject"], "order": v.get("order", 0),
+                         "proc": v.get("process"), "i18n": i18n(k, {"question_de": "q", "note_de": "note"})}
+                        for k, v in sorted(refl.items(), key=lambda kv: (kv[1].get("order", 0), kv[0]))
+                        if v.get("subject") in subjects and v.get("status") != "deprecated"],
+        "receptions": [{"id": k, "subject": v["subject"], "tradition": v["tradition"], "period": v.get("period_de"), "text": v["text_de"],
+                        "sources": v.get("sources_de", []), "confidence": v.get("confidence"), "proc": v.get("process"),
+                        **({"check": {x: v["source_check"][x] for x in ("date", "result")}} if v.get("source_check") else {}),
+                        "i18n": i18n(k, {"period_de": "period", "text_de": "text"})}
+                       for k, v in sorted(rcpt.items()) if v.get("subject") in subjects and v.get("status") != "deprecated"],
         "method": {"name": method["name_de"], "question": method["question_de"], "limits": method["assumptions_and_limits_de"]},
         "editions": editions,
         # Wörterbuch-Einträge (Schlüssel aus words[].lx), Ketiv/Qere (words[].kq), Ausgaben je Wort (words[].ed) und
@@ -298,7 +314,7 @@ def project(section_ids=None):
         "lexicon": lexicon, "ketiv": ketiv, "ketiv_only": ketiv_only, "ed_extra": ed_extra,
     }
     if alias:
-        for k in ("findings", "interpretations", "principles", "applications", "relations", "questions"):
+        for k in ("findings", "interpretations", "principles", "applications", "relations", "questions", "reflections", "receptions"):
             if k in out:
                 out[k] = re_subject(out[k])
     return out

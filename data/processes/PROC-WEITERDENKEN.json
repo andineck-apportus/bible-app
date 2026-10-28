@@ -1,0 +1,99 @@
+{
+  "id": "PROC-WEITERDENKEN",
+  "type": "process",
+  "status": "draft",
+  "tags": [],
+  "names": {
+    "de": "Weiterdenken: Fragen und Rezeption",
+    "en": "Thinking further: questions and reception"
+  },
+  "group": "inhalt",
+  "purpose_de": "Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der Text gelesen wurde.",
+  "current": "1.0",
+  "versions": [
+    {
+      "version": "1.0",
+      "valid_from": "2026-10-28",
+      "change_de": "Erste Fassung: Fragen zum Weiterdenken (reflection) und «Wie man es gelesen hat» (reception), dargestellt unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber).",
+      "steps": [
+        {
+          "id": "w1",
+          "role": "bearbeitung",
+          "title_de": "Fragen formulieren",
+          "do_de": "Je Abschnitt zwei bis vier offene Fragen zum Weiterdenken, aus dem Text gewonnen (offenes Ende, Leerstelle, Frage des Textes selbst, Wer-zu-wem); je höchstens ein Satz Hintergrund mit Stelle. Keine Suggestivfrage, keine Antwort vorwegnehmen. Kapitel und höhere Ebenen: eine Frage der Ebene; die erste Frage jeder Ebene ist die Tür von oben.",
+          "result_de": "reflection"
+        },
+        {
+          "id": "w2",
+          "role": "bearbeitung",
+          "title_de": "Wie man es gelesen hat",
+          "do_de": "Rezeption je Tradition (jüdische Auslegung, Kirchenväter, Liturgie, Kunst, Musik, Literatur, Reformation, heutige Forschung) mit Zeitraum, in eigenen Worten. Stimmen nebeneinander, keine wird als richtig gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten) benennen. Quellen nur, wo sicher; sonst ohne Stellenangabe und als ungeprüft gekennzeichnet.",
+          "result_de": "reception"
+        },
+        {
+          "id": "w3",
+          "role": "pruefung",
+          "title_de": "Quellen nachschlagen",
+          "do_de": "Eine weitere Instanz schlägt die genannten Quellen in frei zugänglichen Ausgaben nach (docs/QUELLENPRUEFUNG.md): bestätigt, berichtigt, teilweise oder nicht prüfbar. Bis dahin zeigt die App «noch nicht nachgeschlagen».",
+          "result_de": "source_check",
+          "checks_de": [
+            "Quelle sagt, was der Eintrag behauptet",
+            "Zeitraum und Tradition stimmen"
+          ],
+          "back": {
+            "to": "w2",
+            "when_de": "Angabe falsch oder nicht belegt"
+          }
+        },
+        {
+          "id": "w4",
+          "role": "pruefung",
+          "title_de": "Gegen den Text prüfen",
+          "do_de": "Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig?",
+          "checks_de": [
+            "Frage offen und belegt",
+            "keine versteckte Deutung",
+            "Rezeption richtig zugeordnet"
+          ],
+          "back": {
+            "to": "w1",
+            "when_de": "Frage suggestiv, unbelegt oder schief"
+          }
+        },
+        {
+          "id": "w5",
+          "role": "bearbeitung",
+          "title_de": "Mundart und weitere Sprachen",
+          "do_de": "Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet."
+        },
+        {
+          "id": "w6",
+          "role": "werkzeug",
+          "title_de": "Validator",
+          "do_de": "ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?», Tradition und Gesichertheit gültig, Quellenprüfung vollständig, Stellenmarken und Prozessverweis lösen auf.",
+          "checks_de": [
+            "Struktur gültig",
+            "Verweise lösen auf"
+          ],
+          "back": {
+            "to": "w1",
+            "when_de": "Fehler im Datensatz"
+          }
+        },
+        {
+          "id": "w7",
+          "role": "herausgabe",
+          "title_de": "Auswahl",
+          "do_de": "Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption."
+        }
+      ],
+      "gate_de": "Fragen offen und am Text belegt, Rezeption zugeordnet und gekennzeichnet, Validator bestanden.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/WEITERDENKEN.md",
+        "docs/LESEN-UND-VERTIEFEN.md",
+        "docs/QUELLENPRUEFUNG.md"
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@ Ausgabe: data/core-analyses/CORE-<suffix>.json.
 Eine Einheit:
     {"suffix": "RUT-001-006-018", "level": "section|chapter|book", "target": "TU-…|SUM-CH-…|SUM-BOOK-…",
      "reference": "RUT.1.6-RUT.1.18" (bei book: "RUT"), "children": ["RUT-001-001-005", …] (chapter/book),
-     "core_de": "…", "purpose_de": "…" (book), "mode": "narrative|speech|parable|instruction|statement|list|prayer",
+     "core_de": "…", "gist_de": "Kernaussage in einem Satz (optional; «Vertiefen › Verstehen»)", "purpose_de": "…" (book), "mode": "narrative|speech|parable|instruction|statement|list|prayer",
      "voice": {"speaker": "FIG-…|narrator", "addressee": "FIG-…"} ,
      "moments": [{"reference": "RUT.1.16-RUT.1.17", "text_de": "…", "reason_de": "…", "recognition_de": "…",
                   "keywords": ["Wo du hingehst"], "mode": "…" (optional, sonst der Einheit)}],
@@ -257,7 +257,8 @@ def run(books):
         rec = {"id": rid, "type": "core_analysis", "status": "draft", "tags": u.get("tags", []), "level": u["level"],
                "reference": u["reference"], "target": u["target"],
                **({"children": [f"CORE-{c}" for c in u["children"]]} if u.get("children") else {}),
-               "core_de": u["core_de"], **({"purpose_de": u["purpose_de"]} if u.get("purpose_de") else {}),
+               "core_de": u["core_de"], **({"gist_de": u["gist_de"]} if u.get("gist_de") else {}),
+               **({"purpose_de": u["purpose_de"]} if u.get("purpose_de") else {}),
                "mode": u["mode"], **({"voice": u["voice"]} if u.get("voice") else {}),
                **({"structure": u["structure"]} if u.get("structure") else {}),
                "moments": u["moments"], "omitted_de": u["omitted_de"],

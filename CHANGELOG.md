@@ -2,6 +2,18 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.145 — 2026-10-28 — Vertiefen: ein Knopf, Verstehen und Weiterdenken
+
+Entscheid Andi Neck (2026-10-28) nach den Skizzen «Vertiefen»: am Anfang das Wichtige, dann die Möglichkeit abzutauchen, ohne den Leser zu verlieren.
+- **Ein Knopf «Vertiefen»** am Titel jeder Ebene (Bibel bis Abschnitt) statt «Verstehen» und «Damals → Heute»; ein kleiner Punkt, wenn es auf der Ebene oder darunter etwas gibt (keine Zahlen). Im Lesetext nichts Zusätzliches.
+- **Blatt mit zwei Reitern** «Verstehen» | «Weiterdenken», Pfad oben (eine Ebene höher antippbar), echte Reiter mit Tastatur und aria, Touch-Ziele ≥ 44 px. Verstehen: ein Satz Kernaussage, «Was auffällt» (bis drei Punkte, «Mehr dazu ›»), aufklappbare Zeilen «Umfeld damals», «Wie man es verstehen kann», «Ähnliche Stellen», beim Buch «Wozu geschrieben»; Kapitel mit «Gliederung», die Blatt zu Blatt in die Abschnitte führt. Ganz unten einmal «Wie das entstanden ist». Weiterdenken: grosse Frage mit «Nächste Frage ›», Brücke mit Titel je Textart («Was das Gleichnis zeigt», «Grundsatz», «Mitbeten» …), «Wie man es gelesen hat», «Weitere Fragen»; obere Ebenen mit je einer Frage als Tür nach unten.
+- **Fehler behoben:** Kapitel und Buch zeigen die Inhalte aller Teile darunter (vorher fehlten z. B. in Lukas 15 Befunde, Deutungen und Hintergrund der Abschnitte), mit Stelle. Ein Grundsatz erscheint bei allen Abschnitten seiner Befunde und Deutungen (`subjects` statt nur des ersten).
+- **Neue Datentypen** `reflection` (Fragen zum Weiterdenken) und `reception` (Wie man es gelesen hat), Schema v0.12, Validator, Projektion, Lokalisierung; Kernanalyse optional mit `gist_de` (Kernaussage in einem Satz). Pilot Lukas 15: zehn Fragen und sechs Rezeptions-Einträge mit Züridüütsch, KI-Entwurf, Quellen ungeprüft gekennzeichnet (`scripts/authoring/weiterdenken.py`).
+- **Anwendungen nur auf Wunsch:** neue Einstellung «Anwendungsideen zeigen» (Einstellungen › Vertiefen, Standard aus); dann als eingeklappte Zeile mit Zielgruppe und Grenze.
+- **Versblatt neu geordnet:** Vers; nur wenn vorhanden die Kästen «Anders überliefert · Handschriften» (was anders ist, warum wichtig, Belegung als Satz) und «Anders übersetzbar · Deutung»; dann «Mehr zu diesem Vers»: Textausgaben im Vergleich, Querverweise, Griechisch bzw. Hebräisch Wort für Wort, Bis zu den Handschriften, Stand dieser Stelle; «Abschnitt vertiefen ›».
+- **Prozesse:** neue Fassungen PROC-STUDIE 1.2 (Darstellung unter Verstehen, Sammeln mit Stelle), PROC-DAMALS-HEUTE 2.0 (Grundsatz und Anwendung: Brücke je Textart, Anwendungen nur auf Wunsch) und neu PROC-WEITERDENKEN 1.0 (Fragen, Rezeption mit Quellenprüfung); frühere Fassungen bleiben. Neue Datensätze tragen den Prozessverweis, der Validator prüft ihn; Hintergrund verweist auf die Fassung, die beim Nachschlagen galt.
+- **Doku:** [LESEN-UND-VERTIEFEN.md](docs/LESEN-UND-VERTIEFEN.md) neu, [WEITERDENKEN.md](docs/WEITERDENKEN.md) (vorher DAMALS-PRINZIP-HEUTE.md, dort Verweis), DATENMODELL, ENTSCHEIDUNGEN, PROZESSE, AGENTS; «So arbeiten wir» in der App nachgeführt. Neuer Test `scripts/test_bible_vertiefen.cjs` (Handybreite 390).
+
 ## v0.144 — 2026-10-28 — Zwei prüfende Instanzen, Titus im Aquarellstil
 
 Entscheid Andi Neck (2026-10-28) nach der Kalibrierung.

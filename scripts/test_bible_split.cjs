@@ -9,10 +9,10 @@ const server=http.createServer((q,r)=>{const f=path.join(root,decodeURIComponent
 server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/index.html`;const b=await chromium.launch();
   try{const p=await b.newPage({viewport:{width:390,height:800}});const reqs=[],errs=[];
     p.on('request',r=>{const u=r.url().split('?')[0];if(/\.(json\.gz|gz\.txt)$/.test(u))reqs.push(u.split('/').slice(-3).join('/').replace(/^.*?\/(b|l|n)\//,'$1/').replace(/\.(json\.gz|gz\.txt)$/,''));});p.on('pageerror',e=>errs.push(e.message));
-    const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);
+    const ev=f=>p.evaluate(f);const wait=()=>p.waitForTimeout(400);const openAll=()=>ev(()=>document.querySelectorAll('.sheet details').forEach(d=>d.open=true));
     await p.goto(url);await p.waitForRequest(r=>/_overview/.test(r.url()),{timeout:5000}).catch(()=>{});await wait();
     assert.deepEqual(reqs,['b/_overview'],'auf Bibelebene nur der Hintergrund der oberen Ebenen');
-    await ev(()=>document.querySelector('[data-background="all"]').click());await wait();
+    await ev(()=>document.querySelector('[data-vertiefen="all"]').click());await wait();await openAll();
     const ov=await ev(()=>document.querySelector('.sheet').innerText);
     assert(ov.includes('Eine Bibliothek aus rund tausend Jahren')&&!ov.includes('[['),'Hintergrund der Bibel');
     await ev(()=>document.querySelector('[data-close]').click());
@@ -23,21 +23,21 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());
     assert(reqs.includes('l/gsw/MAT')&&reqs.includes('l/gsw/common'),'Mundart-Pakete nachgeladen');
     assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'diis Riich söll choo, diin Wile söll gschee, wie im Himel, eso au uf de Ärde.');
-    await ev(()=>document.querySelector('[data-more="v39-6-10"]').click());await ev(()=>document.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click());await wait();
+    await ev(()=>document.querySelector('[data-more="v39-6-10"]').click());await ev(()=>document.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click());await wait();await openAll();
     const sheet=await ev(()=>document.querySelector('.sheet').innerText);
     assert(!sheet.includes('[[')&&sheet.includes('Vatterunser'),'Hintergrund in Mundart, Stellen als Anzeige');
     await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=home]')?.click());await wait();
     await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-pickat="nt"]').click());await ev(()=>document.querySelector('.sheet .pick-open').click());await wait();await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-pickat="g5"]').click());await ev(()=>document.querySelector('.sheet .pick-open').click());await wait();
-    await ev(()=>document.querySelector('[data-background="g5"]').click());await wait();
+    await ev(()=>document.querySelector('[data-vertiefen="g5"]').click());await wait();await openAll();
     assert((await ev(()=>document.querySelector('.sheet').innerText)).includes('Vier Verzellige vom Jesus'),'Hintergrund der Buchgruppe in Mundart');
     await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-pickat="b39"]').click());await ev(()=>document.querySelector('.sheet .pick-open').click());await wait();
-    await ev(()=>document.querySelector('[data-background="b39"]').click());await wait();
+    await ev(()=>document.querySelector('[data-vertiefen="b39"]').click());await wait();await openAll();
     const gen=await ev(()=>document.querySelector('.sheet').innerText);
     assert(gen.includes('Matthäus: Verfasser, Ziit und Gmeind')&&!gen.includes('[['),'Hintergrund auf Buchebene (Matthäus) in Mundart');
     // Noch nicht übersetztes Buch mit Handschriften vom Toten Meer (nicht kommerzielle Schicht n/ISA)
     await ev(()=>document.querySelector('[data-action=index]').click());await p.fill('input[type=search]','Jes 53,11');await wait();await ev(()=>document.querySelector('.results button').click());await ev(()=>document.querySelector('.sheet .nav-open').click());await wait();await wait();
     assert(reqs.some(x=>x.endsWith('n/ISA')),'Paket Jesaja (Qumran) nachgeladen');
-    await ev(()=>document.querySelector('[data-more="v22-53-11"]').click());await wait();
+    await ev(()=>document.querySelector('[data-more="v22-53-11"]').click());await wait();await openAll();
     const q=await ev(()=>document.querySelector('.sheet').innerText);
     assert(q.includes('grosse Jesaja-Rolle')&&q.includes('אור')&&q.includes('CC BY-NC'),'Jes 53,11 in 1QIsa a mit «Licht»');
     assert.deepEqual(errs,[],'keine Skriptfehler');

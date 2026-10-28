@@ -30,6 +30,7 @@ import localizations  # noqa: E402
 # Ausgearbeitete Abschnitte ergeben sich aus den Daten (Texteinheiten mit Arbeitsübersetzung), in Bibelreihenfolge
 study = project()
 nav = json.loads((ROOT / "data/navigation/NAV-PROT66-KJV.json").read_text(encoding="utf-8"))
+nav_counts = {b["code"]: b["verses_per_chapter"] for b in nav["books"]}
 sum_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/summaries").glob("*.json")))}
 bg_recs = {r["id"]: r for r in (json.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "data/background").rglob("*.json")))}
 L10N = localizations.load({**sum_recs, **bg_recs})
@@ -84,6 +85,7 @@ for b in bg_recs.values():
                        "evidence": [refs.display_de(r) for r in b.get("evidence_refs", [])],
                        "sources": b.get("sources_de", []), "status": b["status"], "terms": b.get("terms", []),
                        **({"check": {k: b["source_check"][k] for k in ("date", "result")}} if b.get("source_check") else {}),
+                       "dated": (b.get("source_check") or {}).get("date") or (b.get("knowledge") or {}).get("asserted_at"),
                        "i18n": i18n(b["id"], {"topic_de": "topic", "text_de": "text", "uncertain_de": "uncertain", "terms": "terms"})})
 
 
@@ -191,7 +193,7 @@ for w in study["words"]:
 for key, dst in (("ed_extra", "ed_extra"), ("ketiv_only", "kq_only")):
     for r, v in study[key].items():
         bundle(f"b/{ref_book(r)}").setdefault(dst, {})[r] = v
-for key in ("findings", "interpretations", "principles", "applications", "questions"):
+for key in ("findings", "interpretations", "principles", "applications", "questions", "reflections", "receptions"):
     for x in study[key]:
         b = book_of_id[x["subject"]]
         x = dict(x)
@@ -217,14 +219,16 @@ def proc_at(pid, datum):
 # Kernanalysen (docs/VERDICHTUNG.md) für «Verstehen» auf Kapitel- und Buchebene; nur Hochdeutsch (noch keine Lokalisierungen)
 for f in sorted((ROOT / "data/core-analyses").glob("CORE-*.json")):
     c = json.loads(f.read_text(encoding="utf-8"))
-    bundle(f"b/{c['reference'].split('.')[0]}").setdefault("core", []).append({
-        "id": c["id"], "level": c["level"], "ref": c["reference"], "core": c["core_de"], "purpose": c.get("purpose_de"),
+    # Buchebene im Übersichtspaket, damit «Vertiefen» auf Buch- und höheren Ebenen sie ohne das ganze Buchpaket kennt
+    bundle("b/_overview" if c["level"] == "book" else f"b/{c['reference'].split('.')[0]}").setdefault("core", []).append({
+        "id": c["id"], "level": c["level"], "ref": c["reference"], "core": c["core_de"], "gist": c.get("gist_de"), "purpose": c.get("purpose_de"),
         "mode": c.get("mode"), "moments": [{"ref": m["reference"], "text": m["text_de"]} for m in c["moments"]],
         "omitted": c.get("omitted_de", []), "checked": bool(c.get("review")),
         "proc": proc_at("PROC-VERDICHTUNG", (c.get("knowledge") or {}).get("asserted_at"))})
 for x in background:
     b = x["chapter"].split(".")[0]
     x = dict(x)
+    x["proc"] = proc_at("PROC-STUDIE", x.pop("dated", None))
     for lg, f in (x.pop("i18n", None) or {}).items():
         bundle(f"l/{lg}/{b}").setdefault("i18n", {})[x["id"]] = f
     bundle(f"b/{b}").setdefault("bg", []).append(x)
@@ -331,6 +335,151 @@ for sec in study["sections"]:
         return {**{k: v for k, v in u.items() if k not in ("titles", "summaries", "parts")},
                 "titles": {"de": u["titles"]["de"]}, "summaries": {"de": u["summaries"]["de"]}}
     core_sections.append({**strip(sec), "parts": [strip(p) for p in sec["parts"]]})
+# ---------------------------------------------------------------- Vertiefen (docs/LESEN-UND-VERTIEFEN.md)
+# Fragen und Rezeption der oberen Ebenen (subject = Zusammenfassung der Ebene, SUM-…): Buch und höher im Übersichtspaket,
+# Kapitel (SUM-CH-…) im Buchpaket. Schlüssel wie bei den Bildern: SUM-BIBLE, SUM-OT/NT, SUM-GROUP-nn, Buchcode, «LUK.15».
+def _sum_key(sid):
+    if sid.startswith("SUM-BOOK-"):
+        return sid[9:]
+    if sid.startswith("SUM-CH-"):
+        b_, c_ = sid[7:].rsplit("-", 1)
+        return f"{b_}.{int(c_)}"
+    return sid
+
+
+refl_all = {r["id"]: r for r in folder("reflections")} if (ROOT / "data/reflections").exists() else {}
+rcpt_all = {r["id"]: r for r in folder("receptions")} if (ROOT / "data/receptions").exists() else {}
+up_l10n = localizations.load({**refl_all, **rcpt_all})
+for kind, recs in (("reflections", refl_all), ("receptions", rcpt_all)):
+    for r in sorted(recs.values(), key=lambda r: (r.get("order", 0), r["id"])):
+        if not r["subject"].startswith("SUM-") or r.get("status") == "deprecated":
+            continue
+        key = _sum_key(r["subject"])
+        if kind == "reflections":
+            x = {"id": r["id"], "q": r["question_de"], "note": r.get("note_de"), "subject": key, "order": r.get("order", 0), "proc": r.get("process")}
+            mp = {"question_de": "q", "note_de": "note"}
+        else:
+            x = {"id": r["id"], "subject": key, "tradition": r["tradition"], "period": r.get("period_de"), "text": r["text_de"],
+                 "sources": r.get("sources_de", []), "confidence": r.get("confidence"), "proc": r.get("process"),
+                 **({"check": {k: r["source_check"][k] for k in ("date", "result")}} if r.get("source_check") else {})}
+            mp = {"period_de": "period", "text_de": "text"}
+        bname = f"b/{key.split('.')[0]}" if "." in key else "b/_overview"
+        for lg, f in up_l10n.get(r["id"], {}).items():
+            m = {dst: f[src] for src, dst in mp.items() if src in f}
+            if m:
+                bundle(f"l/{lg}/{key.split('.')[0]}" if "." in key else f"l/{lg}/common").setdefault("i18n", {})[r["id"]] = m
+        bundle(bname).setdefault(kind, []).append(x)
+
+# Index im Kern: welche Ebenen etwas zum Vertiefen haben (Punkt am Knopf) und die erste Frage je Ebene (Tür von oben),
+# damit obere Ebenen ohne alle Buchpakete wissen, was darunter liegt.
+_group_of = {b_: g["id"] for g in nav["groups"] for b_ in g["books"]}
+_testament_of = {g["id"]: g["testament"] for g in nav["groups"]}
+part_info = {}  # Teil-ID -> (Abschnitts-ID, Buch, Kapitel)
+for sec in study["sections"]:
+    for part in sec["parts"]:
+        b_, c_ = part["range"].split("-")[0].split(".")[:2]
+        part_info[part["id"]] = (sec["id"], b_, int(c_))
+whole_chapter = {}  # Abschnitt, der ein ganzes Kapitel umfasst -> «LUK.15»
+for sec in study["sections"]:
+    a_, _, z_ = sec["range"].partition("-")
+    b_, c_, v_ = a_.split(".")
+    cnt_ = nav_counts.get(b_) or []
+    if v_ == "1" and z_ and z_.split(".")[:2] == [b_, c_] and int(c_) <= len(cnt_) and int(z_.split(".")[2]) == cnt_[int(c_) - 1]:
+        whole_chapter[sec["id"]] = f"{b_}.{int(c_)}"
+has = set()
+
+
+def _mark(key, b_=None, c_=None):
+    has.add(key)
+    if b_:
+        if c_:
+            has.add(f"{b_}.{c_}")
+        has.update([b_, _group_of.get(b_, ""), _testament_of.get(_group_of.get(b_), ""), "BIBLE"])
+
+
+for key in ("findings", "interpretations", "principles", "relations", "questions", "reflections", "receptions"):
+    for x in study[key]:
+        for sj in (x.get("subjects") or [x.get("subject") or x.get("from")]):
+            if sj in part_info:
+                _mark(sj, *part_info[sj][1:])
+            elif sj in whole_chapter or any(v[0] == sj for v in part_info.values()):
+                for pid, (sid, b_, c_) in part_info.items():
+                    if sid == sj:
+                        _mark(pid, b_, c_)
+for x in background:
+    for pid, (sid, b_, c_) in part_info.items():
+        if x["subject"] in (pid,) or (x["subject"] == sid and x.get("wide")):
+            _mark(pid, b_, c_)
+for f in sorted((ROOT / "data/core-analyses").glob("CORE-*.json")):
+    c = json.loads(f.read_text(encoding="utf-8"))
+    ref_ = c["reference"]
+    if c["level"] == "book":
+        _mark(ref_, ref_)
+    elif c["level"] == "chapter":
+        b_, c_ = ref_.split("-")[0].split(".")[:2]
+        _mark(f"{b_}.{int(c_)}", b_, int(c_))
+    else:
+        tgt = c.get("target")
+        if tgt in part_info:
+            _mark(tgt, *part_info[tgt][1:])
+for x in overview:
+    if x["scope"] == "bible":
+        has.add("BIBLE")
+    elif x["scope"] == "testament":
+        has.update([x["testament"], "BIBLE"])
+    elif x["scope"] == "book_group":
+        has.update([x["group"], _testament_of.get(x["group"], ""), "BIBLE"])
+    elif x["scope"] == "book" and x["book"]:
+        _mark(x["book"], x["book"])
+has.discard("")
+_SUMKEY = {"SUM-BIBLE": "BIBLE", "SUM-OT": "OT", "SUM-NT": "NT"}
+firstq = {}
+
+
+def _fq(key, x):
+    firstq.setdefault(key, {"id": x["id"], "q": x["q"]})
+
+
+up_refl = [x for n_, d in bundles.items() if n_.startswith("b/") for x in d.get("reflections", []) if not x["subject"].startswith("TU-")]
+for x in up_refl:  # eigene Fragen der oberen Ebenen zuerst
+    k_ = _SUMKEY.get(x["subject"], x["subject"])
+    _fq(k_, x)
+    has.add(k_)
+_order = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
+for x in study["reflections"]:  # Fragen eines Abschnitts, der das ganze Kapitel umfasst = Fragen des Kapitels
+    if x["subject"] in whole_chapter:
+        _fq(whole_chapter[x["subject"]], x)
+for x in sorted(study["reflections"], key=lambda x: (_order.get(part_info.get(x["subject"], (None, "ZZZ", 0))[1], 999),
+                                                     part_info.get(x["subject"], (None, None, 0))[2], x["subject"], x.get("order", 0))):
+    sj = x["subject"]
+    for pid, (sid, b_, c_) in part_info.items():
+        if pid == sj:
+            _fq(pid, x)
+            _fq(f"{b_}.{c_}", x)
+            break
+# Obere Ebenen ohne eigene Frage: erste Frage darunter, in Bibelreihenfolge (Kapitel → Buch → Buchgruppe → Testament → Bibel)
+for code, *_ in refs.BOOKS:
+    if code not in firstq:
+        hit = next((firstq[f"{code}.{c_}"] for c_ in range(1, len(nav_counts.get(code, [])) + 1) if f"{code}.{c_}" in firstq), None)
+        if hit:
+            firstq[code] = hit
+for g in nav["groups"]:
+    hit = next((firstq[b_] for b_ in g["books"] if b_ in firstq), None)
+    if hit and g["id"] not in firstq:
+        firstq[g["id"]] = hit
+for tm in ("OT", "NT"):
+    hit = next((firstq[g["id"]] for g in nav["groups"] if g["testament"] == tm and g["id"] in firstq), None)
+    if hit and tm not in firstq:
+        firstq[tm] = hit
+hit = next((firstq[k_] for k_ in ("OT", "NT") if k_ in firstq), None)
+if hit and "BIBLE" not in firstq:
+    firstq["BIBLE"] = hit
+for x in study["reflections"]:
+    for lg, f in (x.get("i18n") or {}).items():
+        if "q" in f:
+            bundle(f"l/{lg}/common").setdefault("i18n", {}).setdefault(x["id"], {})["q"] = f["q"]
+deep_index = {"has": sorted(has), "firstq": firstq}
+
 for name, d in bundles.items():
     kind, *rest = name.split("/")
     d["name"] = name
@@ -341,7 +490,8 @@ for name, d in bundles.items():
 
 core_study = {"built_from": study["built_from"], "sections": core_sections, "layers": core_layers, "layer_order": langs,
               "compare": {}, "words": [], "variants": [], "findings": [], "interpretations": [], "principles": [],
-              "applications": [], "relations": [], "questions": [], "method": study["method"], "editions": study["editions"],
+              "applications": [], "relations": [], "questions": [], "reflections": [], "receptions": [], "deep": deep_index,
+              "method": study["method"], "editions": study["editions"],
               "lexicon": {}, "ketiv": {}, "ketiv_only": {}, "ed_extra": {}}
 core_src = {k: v for k, v in sources_payload.items() if k not in ("readings", "alts", "variants")}
 core_src.update({"readings": {}, "alts": {lg: {} for lg in langs}, "variants": {}})

@@ -19,6 +19,8 @@ Prüft:
    werden als WARN gemeldet (scripts/prose_refs.py).
 10. Arbeitsübersetzungen derselben Sprache überschneiden sich nicht (sonst wäre der Vorrang unklar).
 11. Lizenzschichten: Datensätze in data/ verweisen nie auf Datensätze in data-nc/.
+12. Weiterdenken (reflection, reception): ID, Bezug auf Texteinheit oder Zusammenfassung, Frage bzw. Tradition,
+    Quellenprüfung wie bei Hintergrund; Prozessverweise «PROC-…@Fassung» lösen auf.
 
 Ein PASS ist keine fachliche Freigabe. Nur Standardbibliothek.
 """
@@ -320,6 +322,42 @@ def main():
                         errors.append(f"{rel}: Fassung {v.get('version')}, Schritt {st_.get('id')}: Rolle {st_.get('role')!r} ungültig")
                     if st_.get("back") and st_["back"].get("to") not in ids_:
                         errors.append(f"{rel}: Fassung {v.get('version')}, Schritt {st_.get('id')}: Rücksprung auf unbekannten Schritt")
+        if isinstance(r.get("process"), str):
+            # Prozessverweis «PROC-…@Fassung» bei Erklärtexten (z. B. reflection, reception; docs/PROZESSE.md)
+            pid_, _, pv_ = r["process"].partition("@")
+            pr_ = records.get(pid_, (None, {}))[1]
+            if pr_.get("type") != "process" or pv_ not in {v.get("version") for v in pr_.get("versions") or []}:
+                errors.append(f"{rel}: process {r['process']!r} unbekannt")
+        if r.get("type") in ("reflection", "reception"):
+            # Weiterdenken (docs/WEITERDENKEN.md): Frage zum Weiterdenken bzw. «Wie man es gelesen hat»
+            kind_ = r["type"]
+            pre_ = "REFL" if kind_ == "reflection" else "RCPT"
+            if not re.match(rf"^{pre_}-[1-3]?[A-Z]{{2,3}}-\d{{4}}$", rid or ""):
+                errors.append(f"{rel}: ID muss {pre_}-<BUCH>-nnnn sein")
+            sj_ = records.get(r.get("subject"), (None, {}))[1]
+            if sj_ and sj_.get("type") not in ("text_unit", "summary"):
+                errors.append(f"{rel}: subject muss eine Texteinheit (TU-…) oder Zusammenfassung einer Ebene (SUM-…) sein")
+            if not r.get("subject"):
+                errors.append(f"{rel}: {kind_} ohne subject")
+            if not r.get("authorship_de"):
+                errors.append(f"{rel}: {kind_} ohne authorship_de")
+            if kind_ == "reflection":
+                if not r.get("question_de") or not str(r["question_de"]).rstrip().endswith("?"):
+                    errors.append(f"{rel}: question_de fehlt oder ist keine Frage")
+                if not isinstance(r.get("order"), int):
+                    errors.append(f"{rel}: order (Ganzzahl) fehlt")
+            else:
+                if r.get("tradition") not in ("jewish", "church_fathers", "liturgy", "art", "music", "literature", "reformation", "modern_scholarship"):
+                    errors.append(f"{rel}: tradition {r.get('tradition')!r} unbekannt")
+                for f_ in ("period_de", "text_de"):
+                    if not r.get(f_):
+                        errors.append(f"{rel}: reception ohne {f_}")
+                if r.get("confidence") not in ("high", "probable", "possible"):
+                    errors.append(f"{rel}: confidence muss high, probable oder possible sein")
+                sc_ = r.get("source_check")
+                if sc_ is not None and (not isinstance(sc_, dict) or sc_.get("result") not in ("confirmed", "corrected", "partly", "unverifiable")
+                                        or not re.match(r"^\d{4}-\d{2}-\d{2}$", str(sc_.get("date", ""))) or not sc_.get("method_de")):
+                    errors.append(f"{rel}: source_check braucht date, result (confirmed/corrected/partly/unverifiable), method_de, checked[]")
         if r.get("type") == "illustration" and (r.get("check") or {}).get("process"):
             pid_, _, pv_ = r["check"]["process"].partition("@")
             pr_ = records.get(pid_, (None, {}))[1]
@@ -532,7 +570,7 @@ def main():
                 if k not in skip_keys:
                     walk(x, f"{path}.{k}" if path else k, rel)
 
-    prose_types = {"finding", "interpretation", "principle", "application", "open_question", "background_note", "summary",
+    prose_types = {"finding", "interpretation", "principle", "application", "open_question", "background_note", "summary", "reflection", "reception",
                    "text_unit", "localization", "alignment"}
     covered = {}
     for rid, (rel, r) in records.items():

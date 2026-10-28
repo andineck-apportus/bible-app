@@ -131,12 +131,19 @@ st11 = [
     s("t5", "pruefung", "Gegen den Text prüfen", "Eine weitere Instanz prüft Befunde und Deutungen gegen den Text und auf Trennung der Ebenen.", prueft=["Befund ≠ Deutung", "Alternativen sichtbar"], zurueck=("t1", "Vermischung oder Fehler")),
     s("t6", "werkzeug", "Validator", "Stellenmarken, Verweise und Ursprachwörter prüfen.", prueft=["Stellen gültig", "Ursprachwörter erfasst"]),
 ]
+st12 = ersetze(ersetze(st11, "t1", s("t1", "bearbeitung", "Befunde", "Was im Text steht: Wortbedeutung, Grammatik, Aufbau, wiederkehrende Begriffe – getrennt von jeder Deutung. Jeder Satz ist für sich verständlich, denn die ersten Sätze erscheinen gekürzt unter «Was auffällt».")),
+               "t3", s("t3", "bearbeitung", "Hintergrund damals", "Zeit, Ort, Kultur und Sprachgebrauch der Adressaten mit antiken Quellen; Thema kurz und sprechend, es dient als Anriss der Zeile «Umfeld damals»."))
+st12.append(s("t7", "werkzeug", "Einordnen", "Die Projektion ordnet jeden Befund, jede Deutung, jeden Hintergrund und jede ähnliche Stelle seiner Texteinheit zu; Kapitel und Buch sammeln alles aus den Ebenen darunter, mit Stelle.",
+              prueft=["jeder Inhalt einer Texteinheit zugeordnet", "auf Kapitel- und Buchebene mit Stelle sichtbar"], zurueck=("t1", "Inhalt hängt an keiner ausgearbeiteten Texteinheit")))
 P["PROC-STUDIE"] = {"names": {"de": "Befunde, Deutungen, Hintergrund", "en": "Findings, interpretations, background"}, "group": "inhalt",
     "purpose_de": "Was dasteht, wie man es verstehen kann und was damals galt – sauber getrennt und belegt.",
     "versions": [
         fassung("1.0", "2026-10-12", "Erste Fassung.", ohne(st11, "t4"), "Ebenen getrennt, gegen den Text geprüft.", ENTWURF, docs=["docs/GESICHERTHEIT.md"]),
         fassung("1.1", "2026-10-18", "Antike Quellen werden am Text nachgeschlagen; Ergebnis als Prüfvermerk bei jeder Notiz.", st11, "Ebenen getrennt, Quellen nachgeschlagen, gegen den Text geprüft.", ENTWURF,
-                docs=["docs/QUELLENPRUEFUNG.md", "docs/GESICHERTHEIT.md"])]}
+                docs=["docs/QUELLENPRUEFUNG.md", "docs/GESICHERTHEIT.md"]),
+        fassung("1.2", "2026-10-28", "Darstellung unter «Vertiefen › Verstehen»: Befunde liefern «Was auffällt», Hintergrund steht unter «Umfeld damals», Deutungen unter «Wie man es verstehen kann»; Kapitel und Buch sammeln die Inhalte aller Teile darunter mit Stelle (Entscheid Herausgeber).",
+                st12, "Ebenen getrennt, Quellen nachgeschlagen, gegen den Text geprüft, auf allen Ebenen darüber auffindbar.", ENTWURF,
+                docs=["docs/QUELLENPRUEFUNG.md", "docs/GESICHERTHEIT.md", "docs/LESEN-UND-VERTIEFEN.md"])]}
 
 d10 = [
     s("d1", "bearbeitung", "Damals", "Hintergrund der ersten Leser: Situation, Sitte, Bedeutung damals."),
@@ -144,9 +151,38 @@ d10 = [
     s("d3", "bearbeitung", "Heute", "Anwendung je Zielgruppe mit Grenze. Heutiges steht nie im Bibeltext, in Zusammenfassung oder Bild."),
     s("d4", "pruefung", "Prüfen", "Eine weitere Instanz prüft die Herleitung Damals → Prinzip → Heute und die Kennzeichnung.", prueft=["Text bleibt treu", "Stufen gekennzeichnet"], zurueck=("d2", "Herleitung trägt nicht")),
 ]
-P["PROC-DAMALS-HEUTE"] = {"names": {"de": "Damals → Prinzip → Heute", "en": "Then → principle → today"}, "group": "inhalt",
+d20 = [
+    s("d1", "bearbeitung", "Brücke je Textart", "Aus der Textart der Kernanalyse den Titel der Brücke bestimmen: Weisung, Brief, Weisheit → «Grundsatz»; Erzählung → «Was die Erzählung zeigt»; Gleichnis → «Was das Gleichnis zeigt»; Gesetz → «Wie Traditionen damit umgehen»; Psalm, Gebet → «Mitbeten»; Prophetie, Apokalyptik → «Wie es gelesen wurde»; Listen, Genealogien → keine Brücke."),
+    s("d2", "bearbeitung", "Grundsatz", "Den Grundsatz ableiten, der über die damalige Situation hinaus gilt, mit Begründung; in derived_from alle Befunde und Deutungen nennen, auf die er sich stützt – er erscheint bei jedem dieser Abschnitte.", "principle"),
+    s("d3", "bearbeitung", "Anwendung (nur auf Wunsch)", "Anwendung je Zielgruppe mit Grenze. Sie erscheint nur, wenn Lesende «Anwendungsideen zeigen» einschalten (Standard aus). Heutiges steht nie im Bibeltext, in Zusammenfassung oder Bild.", "application"),
+    s("d4", "pruefung", "Prüfen", "Eine weitere Instanz prüft die Herleitung Text → Grundsatz → Anwendung, die Kennzeichnung als Folgerung und den Titel der Brücke.", prueft=["Text bleibt treu", "Grundsatz als Folgerung gekennzeichnet", "Anwendung mit Zielgruppe und Grenze"], zurueck=("d2", "Herleitung trägt nicht")),
+    s("d5", "werkzeug", "Zuordnen", "Projektion und Validator: Grundsatz bei allen Abschnitten seiner Befunde und Deutungen, Anwendung nur mit Grundsatz und Zielgruppe; Stellenmarken gültig.", prueft=["bei allen betroffenen Abschnitten sichtbar", "Verweise lösen auf"], zurueck=("d2", "derived_from unvollständig")),
+    s("d6", "herausgabe", "Grundsatzfragen", "Der Herausgeber entscheidet, welche Zielgruppen es gibt und wo eine Übertragung zu weit geht."),
+]
+P["PROC-DAMALS-HEUTE"] = {"names": {"de": "Grundsatz und Anwendung (Damals → Prinzip → Heute)", "en": "Principle and application (then → principle → today)"}, "group": "inhalt",
     "purpose_de": "Den Text treu lassen und daneben gekennzeichnet übertragen.",
-    "versions": [fassung("1.0", "2026-10-23", "Erste Fassung.", d10, "Drei Stufen getrennt und geprüft.", ENTWURF, docs=["docs/DAMALS-PRINZIP-HEUTE.md"])]}
+    "versions": [fassung("1.0", "2026-10-23", "Erste Fassung.", d10, "Drei Stufen getrennt und geprüft.", ENTWURF, docs=["docs/DAMALS-PRINZIP-HEUTE.md"]),
+                 fassung("2.0", "2026-10-28", "Neu unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber): «Damals» (Hintergrund) steht unter «Verstehen › Umfeld damals»; der Grundsatz ist die Brücke mit Titel je Textart und erscheint bei allen Abschnitten, aus denen er abgeleitet ist; Anwendungen nur auf Wunsch (Einstellung, Standard aus).",
+                         d20, "Brücke und Anwendung getrennt, gekennzeichnet und geprüft.", ENTWURF, docs=["docs/WEITERDENKEN.md", "docs/LESEN-UND-VERTIEFEN.md"])]}
+
+# ------------------------------------------------------------------ Weiterdenken
+w10 = [
+    s("w1", "bearbeitung", "Fragen formulieren", "Je Abschnitt zwei bis vier offene Fragen zum Weiterdenken, aus dem Text gewonnen (offenes Ende, Leerstelle, Frage des Textes selbst, Wer-zu-wem); je höchstens ein Satz Hintergrund mit Stelle. Keine Suggestivfrage, keine Antwort vorwegnehmen. Kapitel und höhere Ebenen: eine Frage der Ebene; die erste Frage jeder Ebene ist die Tür von oben.", "reflection"),
+    s("w2", "bearbeitung", "Wie man es gelesen hat", "Rezeption je Tradition (jüdische Auslegung, Kirchenväter, Liturgie, Kunst, Musik, Literatur, Reformation, heutige Forschung) mit Zeitraum, in eigenen Worten. Stimmen nebeneinander, keine wird als richtig gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten) benennen. Quellen nur, wo sicher; sonst ohne Stellenangabe und als ungeprüft gekennzeichnet.", "reception"),
+    s("w3", "pruefung", "Quellen nachschlagen", "Eine weitere Instanz schlägt die genannten Quellen in frei zugänglichen Ausgaben nach (docs/QUELLENPRUEFUNG.md): bestätigt, berichtigt, teilweise oder nicht prüfbar. Bis dahin zeigt die App «noch nicht nachgeschlagen».",
+      "source_check", ["Quelle sagt, was der Eintrag behauptet", "Zeitraum und Tradition stimmen"], ("w2", "Angabe falsch oder nicht belegt")),
+    s("w4", "pruefung", "Gegen den Text prüfen", "Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig?",
+      prueft=["Frage offen und belegt", "keine versteckte Deutung", "Rezeption richtig zugeordnet"], zurueck=("w1", "Frage suggestiv, unbelegt oder schief")),
+    s("w5", "bearbeitung", "Mundart und weitere Sprachen", "Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet."),
+    s("w6", "werkzeug", "Validator", "ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?», Tradition und Gesichertheit gültig, Quellenprüfung vollständig, Stellenmarken und Prozessverweis lösen auf.",
+      prueft=["Struktur gültig", "Verweise lösen auf"], zurueck=("w1", "Fehler im Datensatz")),
+    s("w7", "herausgabe", "Auswahl", "Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption."),
+]
+P["PROC-WEITERDENKEN"] = {"names": {"de": "Weiterdenken: Fragen und Rezeption", "en": "Thinking further: questions and reception"}, "group": "inhalt",
+    "purpose_de": "Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der Text gelesen wurde.",
+    "versions": [fassung("1.0", "2026-10-28", "Erste Fassung: Fragen zum Weiterdenken (reflection) und «Wie man es gelesen hat» (reception), dargestellt unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber).",
+                         w10, "Fragen offen und am Text belegt, Rezeption zugeordnet und gekennzeichnet, Validator bestanden.", ENTWURF,
+                         docs=["docs/WEITERDENKEN.md", "docs/LESEN-UND-VERTIEFEN.md", "docs/QUELLENPRUEFUNG.md"])]}
 
 # ------------------------------------------------------------------ Verdichtung
 v22 = [

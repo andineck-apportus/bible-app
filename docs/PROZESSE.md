@@ -121,7 +121,23 @@ Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutsch
 
 Was dasteht, wie man es verstehen kann und was damals galt – sauber getrennt und belegt.
 
-### Fassung 1.1 – gültig ab 2026-10-18 (aktuell)
+### Fassung 1.2 – gültig ab 2026-10-28 (aktuell)
+
+*Änderung:* Darstellung unter «Vertiefen › Verstehen»: Befunde liefern «Was auffällt», Hintergrund steht unter «Umfeld damals», Deutungen unter «Wie man es verstehen kann»; Kapitel und Buch sammeln die Inhalte aller Teile darunter mit Stelle (Entscheid Herausgeber).
+
+1. **Befunde** (Bearbeitende Instanz): Was im Text steht: Wortbedeutung, Grammatik, Aufbau, wiederkehrende Begriffe – getrennt von jeder Deutung. Jeder Satz ist für sich verständlich, denn die ersten Sätze erscheinen gekürzt unter «Was auffällt».
+2. **Deutungen** (Bearbeitende Instanz): Wie man den Text verstehen kann: mehrere begründbare Verständnisse mit Befunden, Gegenargumenten und Gesichertheit; keine Entscheidung über richtig oder falsch.
+3. **Hintergrund damals** (Bearbeitende Instanz): Zeit, Ort, Kultur und Sprachgebrauch der Adressaten mit antiken Quellen; Thema kurz und sprechend, es dient als Anriss der Zeile «Umfeld damals».
+4. **Quellen nachschlagen** (Weitere Instanz (prüft)): Eine weitere Instanz schlägt jede antike Quelle in frei zugänglichen Ausgaben nach: bestätigt, berichtigt, teilweise oder nicht prüfbar. Was sich nicht belegen lässt, wird abgeschwächt oder gestrichen. Prüft: Stelle sagt, was die Notiz behauptet. Zurück zu «Hintergrund damals», wenn Angabe falsch oder nicht belegt.
+5. **Gegen den Text prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Befunde und Deutungen gegen den Text und auf Trennung der Ebenen. Prüft: Befund ≠ Deutung, Alternativen sichtbar. Zurück zu «Befunde», wenn Vermischung oder Fehler.
+6. **Validator** (Werkzeug (feste Prüfung)): Stellenmarken, Verweise und Ursprachwörter prüfen. Prüft: Stellen gültig, Ursprachwörter erfasst.
+7. **Einordnen** (Werkzeug (feste Prüfung)): Die Projektion ordnet jeden Befund, jede Deutung, jeden Hintergrund und jede ähnliche Stelle seiner Texteinheit zu; Kapitel und Buch sammeln alles aus den Ebenen darunter, mit Stelle. Prüft: jeder Inhalt einer Texteinheit zugeordnet, auf Kapitel- und Buchebene mit Stelle sichtbar. Zurück zu «Befunde», wenn Inhalt hängt an keiner ausgearbeiteten Texteinheit.
+
+*Weiter, wenn:* Ebenen getrennt, Quellen nachgeschlagen, gegen den Text geprüft, auf allen Ebenen darüber auffindbar.
+*Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
+*Ausführlich:* docs/QUELLENPRUEFUNG.md, docs/GESICHERTHEIT.md, docs/LESEN-UND-VERTIEFEN.md
+
+### Fassung 1.1 – gültig ab 2026-10-18
 
 *Änderung:* Antike Quellen werden am Text nachgeschlagen; Ergebnis als Prüfvermerk bei jeder Notiz.
 
@@ -150,11 +166,26 @@ Was dasteht, wie man es verstehen kann und was damals galt – sauber getrennt u
 *Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
 *Ausführlich:* docs/GESICHERTHEIT.md
 
-## Damals → Prinzip → Heute (`PROC-DAMALS-HEUTE`)
+## Grundsatz und Anwendung (Damals → Prinzip → Heute) (`PROC-DAMALS-HEUTE`)
 
 Den Text treu lassen und daneben gekennzeichnet übertragen.
 
-### Fassung 1.0 – gültig ab 2026-10-23 (aktuell)
+### Fassung 2.0 – gültig ab 2026-10-28 (aktuell)
+
+*Änderung:* Neu unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber): «Damals» (Hintergrund) steht unter «Verstehen › Umfeld damals»; der Grundsatz ist die Brücke mit Titel je Textart und erscheint bei allen Abschnitten, aus denen er abgeleitet ist; Anwendungen nur auf Wunsch (Einstellung, Standard aus).
+
+1. **Brücke je Textart** (Bearbeitende Instanz): Aus der Textart der Kernanalyse den Titel der Brücke bestimmen: Weisung, Brief, Weisheit → «Grundsatz»; Erzählung → «Was die Erzählung zeigt»; Gleichnis → «Was das Gleichnis zeigt»; Gesetz → «Wie Traditionen damit umgehen»; Psalm, Gebet → «Mitbeten»; Prophetie, Apokalyptik → «Wie es gelesen wurde»; Listen, Genealogien → keine Brücke.
+2. **Grundsatz** (Bearbeitende Instanz): Den Grundsatz ableiten, der über die damalige Situation hinaus gilt, mit Begründung; in derived_from alle Befunde und Deutungen nennen, auf die er sich stützt – er erscheint bei jedem dieser Abschnitte.
+3. **Anwendung (nur auf Wunsch)** (Bearbeitende Instanz): Anwendung je Zielgruppe mit Grenze. Sie erscheint nur, wenn Lesende «Anwendungsideen zeigen» einschalten (Standard aus). Heutiges steht nie im Bibeltext, in Zusammenfassung oder Bild.
+4. **Prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft die Herleitung Text → Grundsatz → Anwendung, die Kennzeichnung als Folgerung und den Titel der Brücke. Prüft: Text bleibt treu, Grundsatz als Folgerung gekennzeichnet, Anwendung mit Zielgruppe und Grenze. Zurück zu «Grundsatz», wenn Herleitung trägt nicht.
+5. **Zuordnen** (Werkzeug (feste Prüfung)): Projektion und Validator: Grundsatz bei allen Abschnitten seiner Befunde und Deutungen, Anwendung nur mit Grundsatz und Zielgruppe; Stellenmarken gültig. Prüft: bei allen betroffenen Abschnitten sichtbar, Verweise lösen auf. Zurück zu «Grundsatz», wenn derived_from unvollständig.
+6. **Grundsatzfragen** (Herausgeber): Der Herausgeber entscheidet, welche Zielgruppen es gibt und wo eine Übertragung zu weit geht.
+
+*Weiter, wenn:* Brücke und Anwendung getrennt, gekennzeichnet und geprüft.
+*Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
+*Ausführlich:* docs/WEITERDENKEN.md, docs/LESEN-UND-VERTIEFEN.md
+
+### Fassung 1.0 – gültig ab 2026-10-23
 
 *Änderung:* Erste Fassung.
 
@@ -166,6 +197,26 @@ Den Text treu lassen und daneben gekennzeichnet übertragen.
 *Weiter, wenn:* Drei Stufen getrennt und geprüft.
 *Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
 *Ausführlich:* docs/DAMALS-PRINZIP-HEUTE.md
+
+## Weiterdenken: Fragen und Rezeption (`PROC-WEITERDENKEN`)
+
+Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der Text gelesen wurde.
+
+### Fassung 1.0 – gültig ab 2026-10-28 (aktuell)
+
+*Änderung:* Erste Fassung: Fragen zum Weiterdenken (reflection) und «Wie man es gelesen hat» (reception), dargestellt unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber).
+
+1. **Fragen formulieren** (Bearbeitende Instanz): Je Abschnitt zwei bis vier offene Fragen zum Weiterdenken, aus dem Text gewonnen (offenes Ende, Leerstelle, Frage des Textes selbst, Wer-zu-wem); je höchstens ein Satz Hintergrund mit Stelle. Keine Suggestivfrage, keine Antwort vorwegnehmen. Kapitel und höhere Ebenen: eine Frage der Ebene; die erste Frage jeder Ebene ist die Tür von oben.
+2. **Wie man es gelesen hat** (Bearbeitende Instanz): Rezeption je Tradition (jüdische Auslegung, Kirchenväter, Liturgie, Kunst, Musik, Literatur, Reformation, heutige Forschung) mit Zeitraum, in eigenen Worten. Stimmen nebeneinander, keine wird als richtig gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten) benennen. Quellen nur, wo sicher; sonst ohne Stellenangabe und als ungeprüft gekennzeichnet.
+3. **Quellen nachschlagen** (Weitere Instanz (prüft)): Eine weitere Instanz schlägt die genannten Quellen in frei zugänglichen Ausgaben nach (docs/QUELLENPRUEFUNG.md): bestätigt, berichtigt, teilweise oder nicht prüfbar. Bis dahin zeigt die App «noch nicht nachgeschlagen». Prüft: Quelle sagt, was der Eintrag behauptet, Zeitraum und Tradition stimmen. Zurück zu «Wie man es gelesen hat», wenn Angabe falsch oder nicht belegt.
+4. **Gegen den Text prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig? Prüft: Frage offen und belegt, keine versteckte Deutung, Rezeption richtig zugeordnet. Zurück zu «Fragen formulieren», wenn Frage suggestiv, unbelegt oder schief.
+5. **Mundart und weitere Sprachen** (Bearbeitende Instanz): Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet.
+6. **Validator** (Werkzeug (feste Prüfung)): ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?», Tradition und Gesichertheit gültig, Quellenprüfung vollständig, Stellenmarken und Prozessverweis lösen auf. Prüft: Struktur gültig, Verweise lösen auf. Zurück zu «Fragen formulieren», wenn Fehler im Datensatz.
+7. **Auswahl** (Herausgeber): Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption.
+
+*Weiter, wenn:* Fragen offen und am Text belegt, Rezeption zugeordnet und gekennzeichnet, Validator bestanden.
+*Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
+*Ausführlich:* docs/WEITERDENKEN.md, docs/LESEN-UND-VERTIEFEN.md, docs/QUELLENPRUEFUNG.md
 
 ## Kernanalyse und Zusammenfassungen (`PROC-VERDICHTUNG`)
 

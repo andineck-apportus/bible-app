@@ -15,7 +15,7 @@ const vOf=r=>Number(r.split('.')[2]);
 const mkAlts=()=>M().alternatives.filter(a=>a.ref.startsWith('MRK.3.')&&vOf(a.ref)>=20); // Pilotabschnitt Mk 3,20–35
 
 // Feste Darstellung (docs/LESEN-UND-VERTIEFEN.md): fortlaufend, Urtext und Umschrift an, keine Zeilen für Lesarten und Hintergrund im Text; nicht einstellbar
-click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,4,'Einstellungen in vier Gruppen (mit Prozessen)');assert(sheetHost.querySelector('[data-proc^="PROC-BILD-AQUARELL@"]'),'Prozesse in den Einstellungen');click('[data-proc^="PROC-BILD-AQUARELL@"]');assert(sheetHost.querySelectorAll('.proc-flow .proc-step').length>5,'Prozess als Ablauf');click('[data-proc="PROC-BILD-AQUARELL@1.0"]');assert(sheetHost.querySelector('.proc-old'),'frühere Fassung abrufbar');click('[data-action=menu]');click('[data-settings]');
+click('[data-action=menu]');assert(sheetHost.querySelector('[data-settings]')&&!sheetHost.querySelector('[data-toggle]'),'Hauptmenü ohne Einstellungen, mit Eintrag «Einstellungen»');click('[data-settings]');assert.equal(sheetHost.querySelectorAll('h4.set-group').length,5,'Einstellungen in fünf Gruppen (mit Vertiefen und Prozessen)');assert(sheetHost.querySelector('[data-toggle=apps][aria-checked=false]'),'Anwendungsideen standardmässig aus');assert(sheetHost.querySelector('[data-proc^="PROC-BILD-AQUARELL@"]'),'Prozesse in den Einstellungen');click('[data-proc^="PROC-BILD-AQUARELL@"]');assert(sheetHost.querySelectorAll('.proc-flow .proc-step').length>5,'Prozess als Ablauf');click('[data-proc="PROC-BILD-AQUARELL@1.0"]');assert(sheetHost.querySelector('.proc-old'),'frühere Fassung abrufbar');click('[data-action=menu]');click('[data-settings]');
 for(const k of ['flow','inline','bgInline','advanced','translit'])assert(!sheetHost.querySelector(`[data-toggle=${k}]`),k+' nicht einstellbar');
 click('[data-close]');
 // So arbeiten wir
@@ -25,7 +25,7 @@ click('[data-action=menu]');click('[data-method]');{const tx=sheetHost.textConte
 click('[data-action=index]');click('[data-go="TU-MRK-003-020-021"]');
 assert.equal(sheetHost.textContent,'','Menü schliesst nach Navigation');
 assert(reader.querySelector('[data-stream="TU-MRK-003-031-035"]'));
-click('[data-study="TU-MRK-003-022-030"]');
+click('[data-vertiefen="TU-MRK-003-022-030"]');assert(sheetHost.querySelector('[role=tab][aria-selected=true]#deep-tab-u')&&sheetHost.querySelector('#deep-panel-w[hidden]'),'Vertiefen öffnet mit Verstehen');
 const counter=M().interpretations.find(i=>['TU-MRK-003-022-030','TU-MRK-003-020-035'].includes(i.subject)&&i.counter.length)?.counter[0];
 assert(counter&&sheetHost.textContent.includes(counter.slice(0,40)),'Gegenargument im Studienblatt');
 click('[data-close]');
@@ -44,7 +44,7 @@ click('[data-more="v40-3-22"]');
 assert(sheetHost.querySelector('[data-bg-note="BG-MRK-0006"]'),'Beelzebul im Versblatt 3,22');
 assert(!sheetHost.querySelector('[data-bg-note="BG-MRK-0001"]'),'Abschnittsweiter Hintergrund nicht im Versblatt');
 click('[data-close]');
-click('[data-background="TU-MRK-003-022-030"]');
+click('[data-vertiefen="TU-MRK-003-022-030"]');
 for(const b of model.BG.filter(x=>(x.wide&&x.section==='TU-MRK-003-020-035')||x.subject==='TU-MRK-003-022-030'))assert(sheetHost.querySelector(`[data-bg-note="${b.id}"]`),b.id);
 assert(sheetHost.textContent.includes('Josephus'),'Quellenangabe sichtbar');
 click('[data-close]');
@@ -97,37 +97,39 @@ click('.sheet [data-go="TU-MAT-006-001-004"]');
 click('[data-deep="TU-MAT-006-009-013"]');
 const mtv=v=>reader.querySelector(`[data-stream="v39-6-${v}"] .stream-copy`);
 for(let v=9;v<=13;v++)assert.equal(mtv(v).textContent,M().de['MAT.6.'+v]);
-click('[data-study="TU-MAT-006-009-013"]');
+click('[data-vertiefen="TU-MAT-006-009-013"]');
 assert(sheetHost.textContent.includes('Brot für den kommenden Tag'),'Deutungen zu epiousios');
 assert(!sheetHost.textContent.includes('Grenze:'),'Anwendung nicht mehr im Studienblatt');
 click('[data-close]');
-{const u=reader.querySelector('[data-stream="v39-6-13"] .dec.alt');assert(u,'Lesart in Mt 6,13 unterstrichen');u.click();assert(sheetHost.querySelector('[data-alternative]')&&sheetHost.textContent.includes('Andere Lesarten'),'Unterstreichung öffnet Lesarten');}
+{const u=reader.querySelector('[data-stream="v39-6-13"] .dec.alt');assert(u,'Lesart in Mt 6,13 unterstrichen');u.click();assert(sheetHost.querySelector('[data-alternative]')&&sheetHost.textContent.includes('Anders überliefert'),'Unterstreichung öffnet Lesarten');}
 click('[data-close]');
-// Damals → Prinzip → Heute (docs/DAMALS-PRINZIP-HEUTE.md)
-click('[data-background="TU-MAT-006-009-013"]');
-assert(sheetHost.querySelector('.dph-steps [data-dph="today"]')&&sheetHost.querySelector('#dph-then')&&sheetHost.querySelector('#dph-principle'),'drei Stufen');
-assert(sheetHost.textContent.includes('abgeleiteter Grundsatz')&&sheetHost.textContent.includes('Grenze:'),'Prinzip und Anwendung');
+// Weiterdenken (docs/WEITERDENKEN.md): Brücke je Textart; Anwendungen nur mit Einstellung
+click('[data-vertiefen="TU-MAT-006-009-013"]');click('#deep-tab-w');
+assert(!sheetHost.querySelector('#deep-panel-w').hidden&&sheetHost.querySelector('#deep-panel-u').hidden,'Reiter Weiterdenken');
+assert(sheetHost.querySelector('#deep-panel-w .deep-row')&&!sheetHost.querySelector('[data-app]')&&sheetHost.textContent.includes('Anwendungsideen sind ausgeblendet'),'Grundsatz, Anwendungen ausgeblendet');
+click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=apps]');click('[data-close]');
+click('[data-vertiefen="TU-MAT-006-009-013"]');
+assert(sheetHost.textContent.includes('Anwendungsideen')&&sheetHost.textContent.includes('Grenze:'),'Grundsatz und Anwendung mit Einstellung');
 assert(!sheetHost.querySelector('[data-app="APP-MAT-1007"]'),'Anwendung zu Mt 6,5–6 nicht beim Vaterunser');
 click('[data-close]');
 (click('[data-action=up]'),click('.sheet .pick-open'));
-click('[data-background="TU-MAT-006-005-008"]');
+click('[data-vertiefen="TU-MAT-006-005-008"]');
 assert(sheetHost.textContent.includes('Kammer')&&sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'Kammer damals, Anwendungen heute');
-click('.dph-aud [data-aud="CTX-CH-YOUTH-2026"]');
-assert(sheetHost.querySelector('[data-app="APP-MAT-1007"]')&&!sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'Zielgruppe Jugendliche');
 assert(!sheetHost.querySelector('[data-app="APP-MAT-1005"]'),'Anwendung zu Mt 6,19–34 nicht bei 6,5–8');
-click('.dph-aud [data-aud="all"]');assert(sheetHost.querySelector('[data-app="APP-MAT-1004"]'),'wieder alle');
 click('[data-close]');
+click('[data-action=menu]');click('[data-settings]');click('[data-toggle=apps]');click('[data-close]');
 // Gleiche Knöpfe auf allen Ebenen; Kapitel mit Kernanalyse
 (click('[data-action=up]'),click('.sheet .pick-open'));
-{const ch=[...reader.querySelectorAll('[data-stream]')].find(e=>e.dataset.stream&&model.nodes.get(e.dataset.stream)&&model.nodes.get(e.dataset.stream).level===4&&e.querySelector('[data-study]'));assert(ch,'Kapitel mit Verstehen');
- assert(ch.querySelector('[data-background]'),'Kapitel mit Damals → Heute');}
-click('[data-study="'+[...reader.querySelectorAll('[data-study]')].map(b=>b.dataset.study).find(id=>model.nodes.get(id).level===4&&model.nodes.get(id).c===6)+'"]');
-assert(sheetHost.textContent.includes('Worum es geht')&&sheetHost.textContent.includes('Die tragenden Momente'),'Kernanalyse Mt 6');click('[data-close]');
+{const ch=[...reader.querySelectorAll('[data-stream]')].find(e=>e.dataset.stream&&model.nodes.get(e.dataset.stream)&&model.nodes.get(e.dataset.stream).level===4&&e.querySelector('[data-vertiefen]'));assert(ch,'Kapitel mit Vertiefen');
+ assert(ch.querySelectorAll('[data-vertiefen]').length===1&&!ch.querySelector('[data-study],[data-background]'),'nur ein Knopf');}
+click('[data-vertiefen="'+[...reader.querySelectorAll('[data-vertiefen]')].map(b=>b.dataset.vertiefen).find(id=>model.nodes.get(id).level===4&&model.nodes.get(id).c===6)+'"]');
+assert(sheetHost.textContent.includes('Gliederung')&&sheetHost.querySelector('.deep-outline [data-vertiefen="TU-MAT-006-009-013"]'),'Kapitel Mt 6 mit Gliederung');click('[data-close]');
 (click('[data-action=up]'),click('.sheet .pick-open'));
-{const b=[...reader.querySelectorAll('[data-study]')].find(x=>model.nodes.get(x.dataset.study).level===3);assert(b,'Buch mit Verstehen');b.click();assert(sheetHost.textContent.includes('noch keine Kernanalyse')||sheetHost.textContent.includes('Worum es geht'),'Buchblatt');click('[data-close]');}
+{const b=[...reader.querySelectorAll('[data-vertiefen]')].find(x=>model.nodes.get(x.dataset.vertiefen).level===3);assert(b,'Buch mit Vertiefen');b.click();assert(sheetHost.textContent.includes('noch nichts erarbeitet')||sheetHost.textContent.includes('Worum es geht'),'Buchblatt');click('[data-close]');}
 click('[data-action=index]');click('.sheet [data-go="TU-MAT-006-001-004"]');
 click('[data-deep="TU-MAT-006-009-013"]');
-assert(reader.querySelector('.part-head [data-study="TU-MAT-006-009-013"]')&&reader.querySelector('.part-head [data-background="TU-MAT-006-009-013"]'),'Werkzeuge am Abschnittstitel');
+assert(reader.querySelector('.part-head [data-vertiefen="TU-MAT-006-009-013"] .deep-dot')&&!reader.querySelector('.part-head [data-study],.part-head [data-background]'),'ein Knopf mit Punkt am Abschnittstitel');
 assert(!reader.querySelector('.part-end'),'keine Links am Abschnittsende');
 assert(reader.querySelector('button.vno[data-more="v39-6-11"]'),'Versnummer öffnet Details');
 const decBtn=reader.querySelector('[data-ref="MAT.6.11"] .dec');assert(decBtn&&decBtn.textContent==='tägliches','tägliches markiert');decBtn.click();
@@ -137,12 +139,12 @@ assert(ptx.includes('Unser täglich Brot gib uns heute')&&ptx.includes('Unser n�
 assert(sheetHost.querySelector('.play[data-speak="τὸν ἐπιούσιον"]'),'Griechisch anhörbar');
 click('[data-close]');
 click('[data-more="v39-6-11"]');
-assert(sheetHost.querySelector('.sheet-tools [data-study="TU-MAT-006-009-013"] svg')&&sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"] svg'),'Symbole Verstehen/Geschichte im Versblatt');
+assert(sheetHost.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]'),'Abschnitt vertiefen im Versblatt');
 assert(!sheetHost.textContent.includes('Diesen Abschnitt verstehen'),'keine alten Links im Versblatt');
 click('[data-close]');
 click('[data-more="v39-6-13"]');
 let dtx=sheetHost.textContent;
-assert(dtx.includes('Wie ist übersetzt?')&&dtx.includes('folgt der vertrauten Wiedergabe'),'Übersetzungsentscheidungen');
+assert(dtx.includes('Anders übersetzbar')&&dtx.includes('folgt der vertrauten Wiedergabe'),'Übersetzungsentscheidungen');
 assert(dtx.includes('«durch» wäre διά'),'Hinweis zu «führe uns durch»');
 assert(dtx.includes('Lutherbibel, revidierte Fassung 1912')&&dtx.includes('erlöse uns von dem Übel'),'Vergleich Luther 1912');
 assert(dtx.includes('errette uns von dem Bösen'),'Vergleich Elberfelder 1905');
@@ -190,7 +192,7 @@ sheetHost.querySelector('.xrefs [data-ref-go="PRO.30.8"]').click();
 assert(reader.querySelector('[data-stream="v19-30-8"]'),'Sprung zu Sprüche 30,8');
 const back=app.querySelector('.jump-back');assert(back&&back.textContent.includes('Matthäus 6,11'),'Rücksprung angeboten');back.click();
 assert(reader.querySelector('[data-stream="v39-6-11"]')&&!app.querySelector('.jump-back'),'zurück bei Matthäus 6,11');
-click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
+click('[data-more="v39-6-11"]');sheetHost.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click();
 assert(sheetHost.querySelector('[data-ref-go="MRK.14.36"]'),'Vergleichsstelle verlinkt');
 assert(!sheetHost.textContent.includes('[['),'Stellen-Marken als Anzeige, nicht roh');
 assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext verlinkt (Jes 63,16; 64,7)');
@@ -208,10 +210,10 @@ click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises t�
 sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
 // Inhalte in Mundart (data/localizations): Deutungen, Befunde, Hintergrund, Zusammenfassungen, Lesarten-Erklärungen
 if(sheetHost.querySelector('.sheet'))click('[data-close]');
-click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-study="TU-MAT-006-009-013"]').click();
+click('[data-more="v39-6-11"]');sheetHost.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click();
 assert(sheetHost.textContent.includes('Broot für de nööchscht Taag')&&sheetHost.textContent.includes('de folgendi Tag'),'Deutung und Wortbedeutung in Mundart');
 assert(!sheetHost.textContent.includes('Brot für den kommenden Tag'),'keine hochdeutsche Deutung im Mundart-Blatt');click('[data-close]');
-click('[data-more="v39-6-11"]');sheetHost.querySelector('.sheet-tools [data-background="TU-MAT-006-009-013"]').click();
+click('[data-more="v39-6-11"]');sheetHost.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click();
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
 click('[data-action=menu]');click('[data-set="text"][data-value="de"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,M().de['MAT.6.11'],'zurück zu Hochdeutsch');

@@ -4,12 +4,12 @@
   "status": "draft",
   "tags": [],
   "names": {
-    "de": "Damals → Prinzip → Heute",
-    "en": "Then → principle → today"
+    "de": "Grundsatz und Anwendung (Damals → Prinzip → Heute)",
+    "en": "Principle and application (then → principle → today)"
   },
   "group": "inhalt",
   "purpose_de": "Den Text treu lassen und daneben gekennzeichnet übertragen.",
-  "current": "1.0",
+  "current": "2.0",
   "versions": [
     {
       "version": "1.0",
@@ -53,6 +53,74 @@
       "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
       "docs": [
         "docs/DAMALS-PRINZIP-HEUTE.md"
+      ]
+    },
+    {
+      "version": "2.0",
+      "valid_from": "2026-10-28",
+      "change_de": "Neu unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber): «Damals» (Hintergrund) steht unter «Verstehen › Umfeld damals»; der Grundsatz ist die Brücke mit Titel je Textart und erscheint bei allen Abschnitten, aus denen er abgeleitet ist; Anwendungen nur auf Wunsch (Einstellung, Standard aus).",
+      "steps": [
+        {
+          "id": "d1",
+          "role": "bearbeitung",
+          "title_de": "Brücke je Textart",
+          "do_de": "Aus der Textart der Kernanalyse den Titel der Brücke bestimmen: Weisung, Brief, Weisheit → «Grundsatz»; Erzählung → «Was die Erzählung zeigt»; Gleichnis → «Was das Gleichnis zeigt»; Gesetz → «Wie Traditionen damit umgehen»; Psalm, Gebet → «Mitbeten»; Prophetie, Apokalyptik → «Wie es gelesen wurde»; Listen, Genealogien → keine Brücke."
+        },
+        {
+          "id": "d2",
+          "role": "bearbeitung",
+          "title_de": "Grundsatz",
+          "do_de": "Den Grundsatz ableiten, der über die damalige Situation hinaus gilt, mit Begründung; in derived_from alle Befunde und Deutungen nennen, auf die er sich stützt – er erscheint bei jedem dieser Abschnitte.",
+          "result_de": "principle"
+        },
+        {
+          "id": "d3",
+          "role": "bearbeitung",
+          "title_de": "Anwendung (nur auf Wunsch)",
+          "do_de": "Anwendung je Zielgruppe mit Grenze. Sie erscheint nur, wenn Lesende «Anwendungsideen zeigen» einschalten (Standard aus). Heutiges steht nie im Bibeltext, in Zusammenfassung oder Bild.",
+          "result_de": "application"
+        },
+        {
+          "id": "d4",
+          "role": "pruefung",
+          "title_de": "Prüfen",
+          "do_de": "Eine weitere Instanz prüft die Herleitung Text → Grundsatz → Anwendung, die Kennzeichnung als Folgerung und den Titel der Brücke.",
+          "checks_de": [
+            "Text bleibt treu",
+            "Grundsatz als Folgerung gekennzeichnet",
+            "Anwendung mit Zielgruppe und Grenze"
+          ],
+          "back": {
+            "to": "d2",
+            "when_de": "Herleitung trägt nicht"
+          }
+        },
+        {
+          "id": "d5",
+          "role": "werkzeug",
+          "title_de": "Zuordnen",
+          "do_de": "Projektion und Validator: Grundsatz bei allen Abschnitten seiner Befunde und Deutungen, Anwendung nur mit Grundsatz und Zielgruppe; Stellenmarken gültig.",
+          "checks_de": [
+            "bei allen betroffenen Abschnitten sichtbar",
+            "Verweise lösen auf"
+          ],
+          "back": {
+            "to": "d2",
+            "when_de": "derived_from unvollständig"
+          }
+        },
+        {
+          "id": "d6",
+          "role": "herausgabe",
+          "title_de": "Grundsatzfragen",
+          "do_de": "Der Herausgeber entscheidet, welche Zielgruppen es gibt und wo eine Übertragung zu weit geht."
+        }
+      ],
+      "gate_de": "Brücke und Anwendung getrennt, gekennzeichnet und geprüft.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/WEITERDENKEN.md",
+        "docs/LESEN-UND-VERTIEFEN.md"
       ]
     }
   ]

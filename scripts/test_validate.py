@@ -154,8 +154,24 @@ def nc_in_core(root):
     write(p, d)
 
 
+def bad_weiterdenken(root):
+    p = root / "data/reflections/REFL-LUK-0007.json"
+    d = json.loads(p.read_text())
+    d.update({"question_de": "Keine Frage.", "process": "PROC-WEITERDENKEN@9.9", "subject": "FIND-LUK-0508"})
+    write(p, d)
+    p = root / "data/receptions/RCPT-LUK-0001.json"
+    d = json.loads(p.read_text())
+    d.update({"tradition": "unbekannt", "source_check": {"result": "ok"}})
+    write(p, d)
+
+
+case("Frage ohne Fragezeichen", bad_weiterdenken, "question_de fehlt oder ist keine Frage")
+case("Prozessfassung unbekannt", bad_weiterdenken, "process 'PROC-WEITERDENKEN@9.9' unbekannt")
+case("Frage zu einem Befund", bad_weiterdenken, "subject muss eine Texteinheit")
+case("Rezeption unbekannte Tradition", bad_weiterdenken, "tradition 'unbekannt' unbekannt")
+case("Rezeption Quellenprüfung unvollständig", bad_weiterdenken, "source_check braucht")
 case("Herkunft nicht im Quellenkatalog", uncatalogued, "fehlt im Quellenkatalog")
 case("Verwendete Quelle ohne Dateien", used_without_files, "passt auf keine Datei")
 case("NC-Quelle im freien Kern", nc_in_core, "nicht kommerzielle Quelle im freien Kern")
 
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog)")
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog, Weiterdenken)")

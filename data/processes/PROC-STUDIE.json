@@ -9,7 +9,7 @@
   },
   "group": "inhalt",
   "purpose_de": "Was dasteht, wie man es verstehen kann und was damals galt – sauber getrennt und belegt.",
-  "current": "1.1",
+  "current": "1.2",
   "versions": [
     {
       "version": "1.0",
@@ -132,6 +132,90 @@
       "docs": [
         "docs/QUELLENPRUEFUNG.md",
         "docs/GESICHERTHEIT.md"
+      ]
+    },
+    {
+      "version": "1.2",
+      "valid_from": "2026-10-28",
+      "change_de": "Darstellung unter «Vertiefen › Verstehen»: Befunde liefern «Was auffällt», Hintergrund steht unter «Umfeld damals», Deutungen unter «Wie man es verstehen kann»; Kapitel und Buch sammeln die Inhalte aller Teile darunter mit Stelle (Entscheid Herausgeber).",
+      "steps": [
+        {
+          "id": "t1",
+          "role": "bearbeitung",
+          "title_de": "Befunde",
+          "do_de": "Was im Text steht: Wortbedeutung, Grammatik, Aufbau, wiederkehrende Begriffe – getrennt von jeder Deutung. Jeder Satz ist für sich verständlich, denn die ersten Sätze erscheinen gekürzt unter «Was auffällt»."
+        },
+        {
+          "id": "t2",
+          "role": "bearbeitung",
+          "title_de": "Deutungen",
+          "do_de": "Wie man den Text verstehen kann: mehrere begründbare Verständnisse mit Befunden, Gegenargumenten und Gesichertheit; keine Entscheidung über richtig oder falsch."
+        },
+        {
+          "id": "t3",
+          "role": "bearbeitung",
+          "title_de": "Hintergrund damals",
+          "do_de": "Zeit, Ort, Kultur und Sprachgebrauch der Adressaten mit antiken Quellen; Thema kurz und sprechend, es dient als Anriss der Zeile «Umfeld damals»."
+        },
+        {
+          "id": "t4",
+          "role": "pruefung",
+          "title_de": "Quellen nachschlagen",
+          "do_de": "Eine weitere Instanz schlägt jede antike Quelle in frei zugänglichen Ausgaben nach: bestätigt, berichtigt, teilweise oder nicht prüfbar. Was sich nicht belegen lässt, wird abgeschwächt oder gestrichen.",
+          "result_de": "Prüfvermerk je Notiz",
+          "checks_de": [
+            "Stelle sagt, was die Notiz behauptet"
+          ],
+          "back": {
+            "to": "t3",
+            "when_de": "Angabe falsch oder nicht belegt"
+          }
+        },
+        {
+          "id": "t5",
+          "role": "pruefung",
+          "title_de": "Gegen den Text prüfen",
+          "do_de": "Eine weitere Instanz prüft Befunde und Deutungen gegen den Text und auf Trennung der Ebenen.",
+          "checks_de": [
+            "Befund ≠ Deutung",
+            "Alternativen sichtbar"
+          ],
+          "back": {
+            "to": "t1",
+            "when_de": "Vermischung oder Fehler"
+          }
+        },
+        {
+          "id": "t6",
+          "role": "werkzeug",
+          "title_de": "Validator",
+          "do_de": "Stellenmarken, Verweise und Ursprachwörter prüfen.",
+          "checks_de": [
+            "Stellen gültig",
+            "Ursprachwörter erfasst"
+          ]
+        },
+        {
+          "id": "t7",
+          "role": "werkzeug",
+          "title_de": "Einordnen",
+          "do_de": "Die Projektion ordnet jeden Befund, jede Deutung, jeden Hintergrund und jede ähnliche Stelle seiner Texteinheit zu; Kapitel und Buch sammeln alles aus den Ebenen darunter, mit Stelle.",
+          "checks_de": [
+            "jeder Inhalt einer Texteinheit zugeordnet",
+            "auf Kapitel- und Buchebene mit Stelle sichtbar"
+          ],
+          "back": {
+            "to": "t1",
+            "when_de": "Inhalt hängt an keiner ausgearbeiteten Texteinheit"
+          }
+        }
+      ],
+      "gate_de": "Ebenen getrennt, Quellen nachgeschlagen, gegen den Text geprüft, auf allen Ebenen darüber auffindbar.",
+      "limits_de": "Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.",
+      "docs": [
+        "docs/QUELLENPRUEFUNG.md",
+        "docs/GESICHERTHEIT.md",
+        "docs/LESEN-UND-VERTIEFEN.md"
       ]
     }
   ]

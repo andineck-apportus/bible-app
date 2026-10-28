@@ -35,6 +35,8 @@
 - Typnamen in `snake_case` (`study`, `text_unit`), festgelegt 2026-10-09.
 - Griechischer NT-Grundtext für den Pilot: SBLGNT mit MorphGNT-Annotation, Version 6.12, per Commit fixiert.
 
+- **Vertiefen und Weiterdenken (2026-10-28, Andi Neck):** «Am Anfang das Wichtige, dann die Möglichkeit abzutauchen, ohne den Leser zu verlieren» – ruhig, nicht überladen, zum Weiterdenken anregend. Ein Knopf «Vertiefen» (mit Punkt, ohne Zahlen) ersetzt «Verstehen» und «Damals → Heute» auf allen Ebenen; das Blatt hat die Reiter «Verstehen» und «Weiterdenken», oben den Pfad. Kapitel und Buch sammeln die Inhalte aller Ebenen darunter mit Stelle; ein Grundsatz erscheint bei allen Abschnitten, aus denen er abgeleitet ist. Die Brücke heisst je Textart; neue Datentypen `reflection` (Fragen zum Weiterdenken) und `reception` (Wie man es gelesen hat); Anwendungen nur mit der Einstellung «Anwendungsideen zeigen» (Standard aus). Versblatt neu geordnet (Kästen «Anders überliefert» und «Anders übersetzbar» nur wenn vorhanden, dann «Mehr zu diesem Vers»). Regeln: [LESEN-UND-VERTIEFEN.md](LESEN-UND-VERTIEFEN.md), [WEITERDENKEN.md](WEITERDENKEN.md); Prozesse PROC-WEITERDENKEN 1.0, PROC-DAMALS-HEUTE 2.0, PROC-STUDIE 1.2.
+
 ## Bereits vorliegende Umsetzung
 38 JSON-Datensätze in v0.6; 6 kontrollierte Tags; generisches Schema mit allen Typen/Statuswerten; Validator für Schema, Verweise und Bibelstellen; MorphGNT-Import Mk 3,22–30 mit Quellnachweis; synthetische Importtests. Der tatsächliche Bestand ist massgeblich gegenüber früheren Zusammenfassungen, die Implementierung und Ziel teilweise vermischen.
 
