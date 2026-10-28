@@ -127,20 +127,20 @@
     "supersedes": null
   },
   "check": {
-    "stufe": "entwurf",
-    "process": "PROC-BILD-AQUARELL@2.2",
+    "stufe": "ki-geprueft",
+    "process": "PROC-BILD-AQUARELL@2.3",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
         "scene": "MRK-004-S1",
         "ergebnis": "bestanden",
-        "punkte": 6,
+        "punkte": 5,
         "kern": 2,
         "bild_sha": "c22bc2bd09f2addc",
-        "plan_sha": "ee58058b142a93cf",
+        "plan_sha": "af39be93364fea49",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -190,7 +190,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -228,12 +228,13 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The watercolour has substantial detail in the figures, clothing and waves.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "f78e3639ac4d2bef",
+          "bild_sha": "b90d34a97b0e12d1",
           "offen_de": []
         }
       },
@@ -241,12 +242,12 @@
         "scene": "MRK-004-S2",
         "ergebnis": "bestanden",
         "punkte": 6,
-        "kern": 1,
+        "kern": 2,
         "bild_sha": "c7f2eba9a8a617c5",
-        "plan_sha": "a8ea8ffd367e8f45",
+        "plan_sha": "bc30897a7068ea0f",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -296,7 +297,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -334,25 +335,26 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: There is ample white paper, but the boat, clothing and hair have noticeable detail.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "673862fb32433b61",
+          "bild_sha": "90b20b264fabb3af",
           "offen_de": []
         }
       },
       {
         "scene": "MRK-004-S3",
         "ergebnis": "bestanden",
-        "punkte": 5,
-        "kern": 2,
+        "punkte": 3,
+        "kern": 1,
         "bild_sha": "1cc18f0c622cfa75",
-        "plan_sha": "21c8667bc365bdf2",
+        "plan_sha": "dff35de1bd5cec66",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -402,7 +404,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -440,20 +442,21 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although much paper is left white, the figures, clothing and boat have visible detail and texture.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "6029b7958701efc7",
+          "bild_sha": "57ab819c62af1203",
           "offen_de": []
         }
       }
     ],
     "open_de": [
-      "MRK-004-S1: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "MRK-004-S2: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "MRK-004-S3: Prüfung veraltet (Regeln oder Szenenplan geändert)"
+      "MRK-004-S1: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The watercolour has substantial detail in the figures, clothing and waves.)",
+      "MRK-004-S2: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: There is ample white paper, but the boat, clothing and hair have noticeable detail.)",
+      "MRK-004-S3: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although much paper is left white, the figures, clothing and boat have visible detail and texture.)"
     ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
   }

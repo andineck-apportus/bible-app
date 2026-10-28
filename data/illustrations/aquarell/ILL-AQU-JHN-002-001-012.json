@@ -171,19 +171,19 @@
   ],
   "check": {
     "stufe": "entwurf",
-    "process": "PROC-BILD-AQUARELL@2.2",
+    "process": "PROC-BILD-AQUARELL@2.3",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
         "scene": "JHN-002-K1",
         "ergebnis": "bestanden",
-        "punkte": 6,
+        "punkte": 5,
         "kern": 1,
         "bild_sha": "761b691ce6d91d6f",
-        "plan_sha": "b63288208cffab8c",
+        "plan_sha": "cc2d459562107bc0",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -233,7 +233,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -271,25 +271,26 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although much paper is white, the foreground figures have detailed faces, hair and garment folds.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "4c6940adb7560c37",
+          "bild_sha": "a32c8993bde15c31",
           "offen_de": []
         }
       },
       {
         "scene": "JHN-002-K2",
-        "ergebnis": "bestanden",
-        "punkte": 6,
-        "kern": 2,
+        "ergebnis": "durchgefallen",
+        "punkte": 4,
+        "kern": 1,
         "bild_sha": "f93895390ff5a637",
-        "plan_sha": "068d21faa9c5fdfe",
+        "plan_sha": "0fbf0cb5bb8af135",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -324,7 +325,7 @@
           {
             "id": "G-DOPPELT",
             "stufe": "pflicht",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-KARIKATUR",
@@ -339,7 +340,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -387,27 +388,29 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Keine Person doppelt im selben Bild (fehler: The two women holding pitchers have very similar faces, clothing and poses.)",
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although much paper is white, the figures have visible clothing folds, hair and other details.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 1,
-          "bild_sha": "5198eb073563da17",
+          "bild_sha": "965bb9bed8aeb2b7",
           "offen_de": [
-            "Moment nicht ganz getroffen: Die Aufforderung Jesu, nun zu schöpfen und es dem Speisemeister zu bringen, fehlt; auch „bis oben gefüllt“ wird nicht erwähnt."
+            "Moment nicht ganz getroffen: Das anschließende Schöpfen und Bringen zum Speisemeister wird nicht gezeigt oder erwähnt."
           ]
         }
       },
       {
         "scene": "JHN-002-K3",
         "ergebnis": "bestanden",
-        "punkte": 8,
+        "punkte": 7,
         "kern": 2,
         "bild_sha": "6c9842d00b019c47",
-        "plan_sha": "7ebeebf982e45770",
+        "plan_sha": "661af1c9d68e892f",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -457,7 +460,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -500,21 +503,28 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although the background is largely white, the figures have detailed clothing, hair and textures.)"
+        ],
         "schluss": {
-          "ergebnis": "bestanden",
+          "ergebnis": "durchgefallen",
           "kern": 2,
-          "bild_sha": "215bcb08797c8cf3",
-          "offen_de": []
+          "bild_sha": "ae92aeadda5cfec1",
+          "offen_de": [
+            "Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SPEISEMEISTER) (fehler: The specified speech bubble and tail are not visible.)",
+            "Platz für alle Blasen (fehler: Blase 1: kein freier Platz bei FIG-ROLLE-SPEISEMEISTER)"
+          ]
         }
       }
     ],
     "open_de": [
-      "JHN-002-K1: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-K2: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-K2 (Kachel): Moment nicht ganz getroffen: Die Aufforderung Jesu, nun zu schöpfen und es dem Speisemeister zu bringen, fehlt; auch „bis oben gefüllt“ wird nicht erwähnt.",
-      "JHN-002-K3: Prüfung veraltet (Regeln oder Szenenplan geändert)"
+      "JHN-002-K1: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although much paper is white, the foreground figures have detailed faces, hair and garment folds.)",
+      "JHN-002-K2: Keine Person doppelt im selben Bild (fehler: The two women holding pitchers have very similar faces, clothing and poses.)",
+      "JHN-002-K2: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although much paper is white, the figures have visible clothing folds, hair and other details.)",
+      "JHN-002-K2 (Kachel): Moment nicht ganz getroffen: Das anschließende Schöpfen und Bringen zum Speisemeister wird nicht gezeigt oder erwähnt.",
+      "JHN-002-K3: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although the background is largely white, the figures have detailed clothing, hair and textures.)",
+      "JHN-002-K3 (Kachel): Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SPEISEMEISTER) (fehler: The specified speech bubble and tail are not visible.)",
+      "JHN-002-K3 (Kachel): Platz für alle Blasen (fehler: Blase 1: kein freier Platz bei FIG-ROLLE-SPEISEMEISTER)"
     ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe.",
     "frueher": {

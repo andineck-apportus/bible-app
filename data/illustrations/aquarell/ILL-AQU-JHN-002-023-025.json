@@ -95,19 +95,19 @@
   ],
   "check": {
     "stufe": "entwurf",
-    "process": "PROC-BILD-AQUARELL@2.2",
+    "process": "PROC-BILD-AQUARELL@2.3",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
         "scene": "JHN-002-J1",
         "ergebnis": "bestanden",
-        "punkte": 5,
+        "punkte": 4,
         "kern": 1,
         "bild_sha": "985b7ca4cbd3fcf8",
-        "plan_sha": "288f3d5e2f7ea864",
+        "plan_sha": "9c72f9c62f95bea5",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -157,7 +157,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -195,30 +195,33 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The loose watercolour includes visible hair, fabric folds and background details.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
-          "kern": 2,
-          "bild_sha": "469cd75de8ba65e6",
-          "offen_de": []
+          "kern": 1,
+          "bild_sha": "e723d3f36b2b1080",
+          "offen_de": [
+            "Moment nicht ganz getroffen: Die Zeichen als Grund für den Glauben und Jesu Wissen um das Innere der Menschen fehlen; auch Passa und Jerusalem werden nicht genannt."
+          ]
         }
       },
       {
         "scene": "JHN-002-J2",
-        "ergebnis": "bestanden",
-        "punkte": 5,
+        "ergebnis": "durchgefallen",
+        "punkte": 4,
         "kern": 1,
         "bild_sha": "520a130c0f26f5dd",
-        "plan_sha": "a7fdab4903d27a93",
+        "plan_sha": "6dacc8c169fd91bb",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
             "stufe": "pflicht",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-SCHRIFT",
@@ -263,7 +266,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -306,22 +309,26 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt) (fehler: Figures on the far left meet and are cut by the picture edge.)",
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The watercolour has substantial white space, but also visible hair, fabric folds and background figures.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 1,
-          "bild_sha": "4473ed6708ecd358",
+          "bild_sha": "d62d4bc550d5690b",
           "offen_de": [
-            "Moment nicht ganz getroffen: Es fehlt ausdrücklich, dass sie wegen der Zeichen glauben und dass Jesus sich ihnen nicht anvertraut."
+            "Moment nicht ganz getroffen: Die Zeichen, aufgrund derer viele glauben, und Jesu Zurückhaltung, sich ihnen anzuvertrauen, werden nicht erkennbar."
           ]
         }
       }
     ],
     "open_de": [
-      "JHN-002-J1: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-J2: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-J2 (Kachel): Moment nicht ganz getroffen: Es fehlt ausdrücklich, dass sie wegen der Zeichen glauben und dass Jesus sich ihnen nicht anvertraut."
+      "JHN-002-J1: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The loose watercolour includes visible hair, fabric folds and background details.)",
+      "JHN-002-J1 (Kachel): Moment nicht ganz getroffen: Die Zeichen als Grund für den Glauben und Jesu Wissen um das Innere der Menschen fehlen; auch Passa und Jerusalem werden nicht genannt.",
+      "JHN-002-J2: Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt) (fehler: Figures on the far left meet and are cut by the picture edge.)",
+      "JHN-002-J2: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The watercolour has substantial white space, but also visible hair, fabric folds and background figures.)",
+      "JHN-002-J2 (Kachel): Moment nicht ganz getroffen: Die Zeichen, aufgrund derer viele glauben, und Jesu Zurückhaltung, sich ihnen anzuvertrauen, werden nicht erkennbar."
     ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe.",
     "frueher": {
