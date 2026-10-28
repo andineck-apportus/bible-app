@@ -149,19 +149,19 @@
   ],
   "check": {
     "stufe": "entwurf",
-    "process": "PROC-BILD-AQUARELL@2.2",
+    "process": "PROC-BILD-AQUARELL@2.3",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
         "scene": "JHN-002-K3",
         "ergebnis": "bestanden",
-        "punkte": 8,
+        "punkte": 7,
         "kern": 2,
         "bild_sha": "6c9842d00b019c47",
-        "plan_sha": "7ebeebf982e45770",
+        "plan_sha": "661af1c9d68e892f",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -211,7 +211,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -254,25 +254,29 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although the background is largely white, the figures have detailed clothing, hair and textures.)"
+        ],
         "schluss": {
-          "ergebnis": "bestanden",
+          "ergebnis": "durchgefallen",
           "kern": 2,
-          "bild_sha": "215bcb08797c8cf3",
-          "offen_de": []
+          "bild_sha": "ae92aeadda5cfec1",
+          "offen_de": [
+            "Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SPEISEMEISTER) (fehler: The specified speech bubble and tail are not visible.)",
+            "Platz für alle Blasen (fehler: Blase 1: kein freier Platz bei FIG-ROLLE-SPEISEMEISTER)"
+          ]
         }
       },
       {
         "scene": "JHN-002-T1",
         "ergebnis": "bestanden",
-        "punkte": 7,
+        "punkte": 6,
         "kern": 2,
         "bild_sha": "b662f5c187d7f6e9",
-        "plan_sha": "8e283a3de6e999f8",
+        "plan_sha": "28000111ad352c7b",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -322,7 +326,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -375,25 +379,26 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The watercolour has visible fabric folds, faces, cages and background architecture.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "26f3ebed6f59444f",
+          "bild_sha": "1da23dd1daf8b94b",
           "offen_de": []
         }
       },
       {
         "scene": "JHN-002-J1",
         "ergebnis": "bestanden",
-        "punkte": 5,
+        "punkte": 4,
         "kern": 1,
         "bild_sha": "985b7ca4cbd3fcf8",
-        "plan_sha": "288f3d5e2f7ea864",
+        "plan_sha": "9c72f9c62f95bea5",
         "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
-        "modell": "gpt-5.5",
+        "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
@@ -443,7 +448,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-OBEN",
@@ -481,20 +486,26 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The loose watercolour includes visible hair, fabric folds and background details.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
-          "kern": 2,
-          "bild_sha": "469cd75de8ba65e6",
-          "offen_de": []
+          "kern": 1,
+          "bild_sha": "e723d3f36b2b1080",
+          "offen_de": [
+            "Moment nicht ganz getroffen: Die Zeichen als Grund für den Glauben und Jesu Wissen um das Innere der Menschen fehlen; auch Passa und Jerusalem werden nicht genannt."
+          ]
         }
       }
     ],
     "open_de": [
-      "JHN-002-K3: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-T1: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-J1: Prüfung veraltet (Regeln oder Szenenplan geändert)"
+      "JHN-002-K3: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although the background is largely white, the figures have detailed clothing, hair and textures.)",
+      "JHN-002-K3 (Kachel): Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SPEISEMEISTER) (fehler: The specified speech bubble and tail are not visible.)",
+      "JHN-002-K3 (Kachel): Platz für alle Blasen (fehler: Blase 1: kein freier Platz bei FIG-ROLLE-SPEISEMEISTER)",
+      "JHN-002-T1: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The watercolour has visible fabric folds, faces, cages and background architecture.)",
+      "JHN-002-J1: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: The loose watercolour includes visible hair, fabric folds and background details.)",
+      "JHN-002-J1 (Kachel): Moment nicht ganz getroffen: Die Zeichen als Grund für den Glauben und Jesu Wissen um das Innere der Menschen fehlen; auch Passa und Jerusalem werden nicht genannt."
     ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe.",
     "frueher": {
