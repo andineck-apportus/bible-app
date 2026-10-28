@@ -61,8 +61,8 @@
       "scene": "JHN-002-J1",
       "image": "img/JHN-002-J1.webp",
       "model": "gpt-image-2.5-flare",
-      "run": "20261027-215643-aquarell-felder",
-      "variant": "v2",
+      "run": "20261028-083623-auto-neu",
+      "variant": "r1v1",
       "reference": "JHN.2.23-JHN.2.24",
       "speech": []
     }
@@ -148,7 +148,7 @@
     }
   ],
   "check": {
-    "stufe": "entwurf",
+    "stufe": "ki-geprueft",
     "method_de": "Automatische Prüfung (docs/BILDSTIL.md, «Automatische Prüfung»): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment; danach Schlussprüfung der fertigen Kachel mit Blasen. Bildprüfmodell von OpenAI, getrennt vom Malmodell.",
     "felder": [
       {
@@ -385,19 +385,19 @@
       },
       {
         "scene": "JHN-002-J1",
-        "ergebnis": "durchgefallen",
-        "punkte": 4,
+        "ergebnis": "bestanden",
+        "punkte": 5,
         "kern": 1,
-        "bild_sha": "4e3428c136210faf",
-        "plan_sha": "526e356732a274fa",
-        "regeln_version": "2026-10-28",
+        "bild_sha": "985b7ca4cbd3fcf8",
+        "plan_sha": "e5fa17d2e24667cf",
+        "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
         "modell": "gpt-5.5",
         "regeln": [
           {
             "id": "G-RAND",
             "stufe": "pflicht",
-            "ergebnis": "fehler"
+            "ergebnis": "ok"
           },
           {
             "id": "G-SCHRIFT",
@@ -442,7 +442,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "fehler"
+            "ergebnis": "ok"
           },
           {
             "id": "G-OBEN",
@@ -480,22 +480,17 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [
-          "Niemand und nichts Wichtiges ist vom Bildrand angeschnitten (fehler: A faint person at the far left appears partly cut off by the picture edge.)",
-          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although it is watercolor, there are visible clothing folds, hair details and background details.)"
-        ],
+        "offen_de": [],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "5ab7fea9af0b46b7",
+          "bild_sha": "469cd75de8ba65e6",
           "offen_de": []
         }
       }
     ],
     "open_de": [
-      "JHN-002-K3: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although the background is blank, the figures have visible details such as hair and fabric folds.)",
-      "JHN-002-J1: Niemand und nichts Wichtiges ist vom Bildrand angeschnitten (fehler: A faint person at the far left appears partly cut off by the picture edge.)",
-      "JHN-002-J1: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although it is watercolor, there are visible clothing folds, hair details and background details.)"
+      "JHN-002-K3: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although the background is blank, the figures have visible details such as hair and fabric folds.)"
     ],
     "limits_de": "Urteil eines KI-Modells; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe.",
     "frueher": {
