@@ -45,7 +45,7 @@ def kontext():
             panels = BA.lade(BA.D / f"briefs/{b['brief']}.json")["panels"]
             for sid, p_ in zip(b["felder"], panels):
                 momente.setdefault(sid, p_["action_de"])
-                band.setdefault(sid, (b["felder"].index(sid) + 1, p_.get("keywords") or {}))
+                band.setdefault(sid, (b["felder"].index(sid) + 1, b.get("band", {}).get(sid) or pd["szenen"][sid].get("band") or p_.get("keywords") or {}))
     return plaene, fig, allg, szenen, momente, band
 
 

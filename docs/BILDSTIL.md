@@ -125,6 +125,13 @@ Jede Regel ist **Pflicht** (sonst ist das Bild unbrauchbar) oder **Soll** (zähl
 
 **Prüfstufen** (`check.stufe`): `entwurf` (nicht oder nicht vollständig bestanden) → `ki-geprueft` (alle Pflichtregeln und Schlussprüfung bestanden, aktuell) → `fachlich-geprueft` (nur mit Name der prüfenden Person). «ki-geprueft» ist keine fachliche Freigabe.
 
+**Feste Prüfungen im Werkzeug** (ohne KI, bei jedem Lauf): Zitate in Blasen wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen (sonst unter 16 px Schrift), sonst kürzeres Stichwort aus dem Text des Felds im Szenenplan («band»); jede Blase hat einen freien Platz.
+
+**Szenenpläne schreiben** (gelernt aus den ersten Läufen):
+- Gefühle über Körper und Geste beschreiben, nicht nur über das Gesicht: Im reduzierten Stil liest das Prüfmodell Furcht erst an Haltung und Händen (Mk 4,41: sechs Versuche mit «awed and afraid» scheiterten).
+- «kenn_en» (Wiedererkennen einer Figur) nur mit Merkmalen, die in jeder Einstellung sichtbar sind – Gesicht, Haar, Kleidung, nicht Füsse.
+- Zu jeder B-Aussage, die man sehen kann, eine Feldregel; zu jeder bewussten Lücke des Texts (offenes Ende, keine Verwandlung, kein Schlag) eine «nicht»-Regel.
+
 **Regelwerk verbessern:** Fällt einem Menschen an einem «ki-geprueft»-Bild etwas auf, wird daraus eine Regel auf der passenden Ebene (allgemein, Figur oder Feld) und alle betroffenen Bilder laufen mit `auto-pruefen` erneut. Ein Hinweis, der keine Regel wird, ist keine Verbesserung des Verfahrens.
 
 ## 9 Ergänzung – Strukturen, Karten, Masse (Pilot)

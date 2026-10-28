@@ -257,6 +257,34 @@ def texte_von(plan_d):
     return t
 
 
+BAND_MAX = 54   # Zeichen; länger wird die Schrift im Band kleiner als 16 px und auf dem Handy zu klein (Lauf 12, Lk 15)
+
+
+def pruefe_band(plan_d, texte):
+    """Feste Prüfung: Stichwortband höchstens BAND_MAX Zeichen, sonst «band» im Szenenplan (Wortlaut aus dem Text des Felds)."""
+    fehler = []
+    for b in plan_d["bilder"]:
+        panels = lade(D / f"briefs/{b['brief']}.json")["panels"]
+        for sid, p_ in zip(b["felder"], panels):
+            sz = plan_d["szenen"][sid]
+            eigen = b.get("band", {}).get(sid) or sz.get("band")
+            kw = eigen or p_.get("keywords") or {}
+            for lg in ("de", "gsw"):
+                t = kw.get(lg) or ""
+                if len(t) > BAND_MAX:
+                    fehler.append(f"{sid}: Band «{t}» ({lg}) hat {len(t)} Zeichen, höchstens {BAND_MAX} – «band» im Szenenplan setzen")
+                if eigen and t and norm(t) not in norm(" ".join(texte[lg].get(r, "") for r in verse_von(p_.get("reference") or sz["reference"]))):
+                    fehler.append(f"{sid}: Band «{t}» ({lg}) steht so nicht im Text {p_.get('reference') or sz['reference']}")
+    return fehler
+
+
+def verse_von(ref):
+    a, _, z = ref.partition("-")
+    bk, c, v = a.split(".")
+    c2, v2 = (z.split(".")[1], z.split(".")[2]) if z else (c, v)
+    return [f"{bk}.{c}.{x}" for x in range(int(v), int(v2) + 1)] if c == c2 else [f"{bk}.{c}.{v}"]
+
+
 def pruefe_zitate(plan, texte):
     fehler = []
     for sid, sz in plan.items():
@@ -327,7 +355,7 @@ def main():
     alle = plaene()
     fehler = []
     for name, pd in alle.items():
-        fehler += pruefe_zitate(pd["szenen"], texte_von(pd))
+        fehler += pruefe_zitate(pd["szenen"], texte_von(pd)) + pruefe_band(pd, texte_von(pd))
     if fehler:
         sys.exit("FEHLER Zitate:\n" + "\n".join(fehler))
     n = 0
@@ -363,7 +391,7 @@ def main():
             for i, (sid, p_) in enumerate(zip(b["felder"], brief["panels"]), 1):
                 r_, c_ = divmod(i - 1, cols)
                 x = c_ * (W + gap) + ((W + gap) // 2 if r_ == rows - 1 and len(b["felder"]) % cols and cols > 1 else 0)
-                tiles.append(kachel(i, sid, plan[sid], aus, p_.get("keywords") or {}, x, r_ * (H + BAND + gap)))
+                tiles.append(kachel(i, sid, plan[sid], aus, b.get("band", {}).get(sid) or plan[sid].get("band") or p_.get("keywords") or {}, x, r_ * (H + BAND + gap)))
             svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {tw} {th}">' + "".join(tiles) + "</svg>"
             fp = OUT / f"{b['id']}.svg"
             if not fp.exists() or fp.read_text(encoding="utf-8").strip() != svg:
