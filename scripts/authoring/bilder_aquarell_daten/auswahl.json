@@ -765,27 +765,15 @@
   },
   "JHN-002-T1": {
     "datei": "img/JHN-002-T1.webp",
-    "lauf": "20261027-215912-aquarell-felder",
-    "variante": "v1",
+    "lauf": "20261028-091009-auto-neu",
+    "variante": "r1v1",
     "modell": "gpt-image-2.5-flare",
-    "bubbles": [
-      {
-        "x": 300,
-        "y": 6,
-        "w": 290,
-        "fs": 20,
-        "tail": [
-          345,
-          132
-        ]
-      }
-    ],
-    "uebernommen": "2026-10-27",
+    "uebernommen": "2026-10-28",
     "pruefung": {
-      "ergebnis": "durchgefallen",
+      "ergebnis": "bestanden",
       "punkte": 7,
       "kern": 2,
-      "kern_fehlt_de": "Der Ausspruch «Macht das Haus meines Vaters nicht zu einem Haus des Handels!» wird nicht erwähnt.",
+      "kern_fehlt_de": "Nichts Wesentliches; der Ausspruch Jesu wird nicht ausdrücklich erwähnt.",
       "regeln": [
         {
           "id": "G-RAND",
@@ -794,7 +782,7 @@
           "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No person or important object is visibly sliced by a hard picture border."
+          "grund": "No person or important object is visibly sliced by the picture border."
         },
         {
           "id": "G-SCHRIFT",
@@ -812,7 +800,7 @@
           "de": "Kein Heiligenschein",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No one has a halo or glowing ring around the head."
+          "grund": "No halo or glowing ring is visible around any head."
         },
         {
           "id": "G-EFFEKT",
@@ -828,9 +816,9 @@
           "ebene": "allgemein",
           "stufe": "pflicht",
           "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
-          "ergebnis": "fehler",
-          "antwort": "yes",
-          "grund": "Some head coverings on the left have visible colored stripes/patterns."
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects, clothing details, or buildings are visible."
         },
         {
           "id": "G-KOERPER",
@@ -857,7 +845,7 @@
           "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The people are not clearly drawn as caricatures or grotesques."
+          "grund": "The figures are not drawn as caricatures or grotesque stereotypes."
         },
         {
           "id": "G-PROPORTION",
@@ -866,7 +854,7 @@
           "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The adults have natural adult proportions, not oversized cartoon heads or eyes."
+          "grund": "The adults have natural adult proportions."
         },
         {
           "id": "G-REDUKTION",
@@ -884,7 +872,7 @@
           "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The upper quarter is mostly empty white or very pale wash."
+          "grund": "The upper quarter is mostly empty white paper or very pale wash."
         },
         {
           "id": "G-ROT",
@@ -893,7 +881,7 @@
           "de": "Nur Jesus trägt Terrakottarot",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The terracotta-red mantle on the central man is the only clearly terracotta-red clothing."
+          "grund": "Only the central man has a clearly terracotta-red mantle."
         },
         {
           "id": "F-JESUS-GESICHT",
@@ -902,7 +890,7 @@
           "de": "Gesicht Jesu voll sichtbar (wie bei allen Menschen)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "His face is visible in profile/three-quarter view with eye, nose, and mouth/beard shown."
+          "grund": "The face is visible with eyes, nose, and mouth shown."
         },
         {
           "id": "T1-GEISSEL",
@@ -911,7 +899,7 @@
           "de": "Jesus mit einer Geissel aus Stricken",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The man in the terracotta-red mantle is holding a short cord whip."
+          "grund": "The man in the terracotta-red mantle holds a short bundle of cords like a whip."
         },
         {
           "id": "T1-TISCH",
@@ -920,7 +908,7 @@
           "de": "Umgestossener Tisch, Münzen fallen",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "A table is tipped over and coins are scattered or falling nearby."
+          "grund": "A table is tipped over and coins are falling or scattered."
         },
         {
           "id": "T1-TAUBEN",
@@ -929,7 +917,7 @@
           "de": "Taubenverkäufer mit Tauben oder Käfigen, Jesus wendet sich ihnen zu",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The left traders have bird cages with pale birds, and the man in red is turned toward them."
+          "grund": "Two traders hold dove cages, and the man in the red mantle is turned toward them."
         },
         {
           "id": "T1-TIERE",
@@ -938,7 +926,7 @@
           "de": "Schaf oder Rind",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "At least one ox and sheep are visible on the right."
+          "grund": "A sheep and an ox or cow are visible on the right."
         },
         {
           "id": "T1-ORT",
@@ -947,7 +935,7 @@
           "de": "Tempel angedeutet",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Pale columns/building forms suggest a temple setting."
+          "grund": "Columns and a temple-like building are visible in the background."
         },
         {
           "id": "T1-KEIN-SCHLAG",
@@ -956,7 +944,7 @@
           "de": "Kein Schlag gegen Menschen (der Text lässt es offen)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The whip is raised but not visibly hitting anyone, and no injury or blood is shown."
+          "grund": "The whip is not hitting anyone, and no injuries or blood are visible."
         },
         {
           "id": "T1-KEIN-HASS",
@@ -965,153 +953,216 @@
           "de": "Eifer, nicht Grausamkeit",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "He looks stern, but not clearly cruel, hateful, or contemptuous."
+          "grund": "He appears stern or forceful, not clearly cruel, hateful, or contemptuous."
         }
       ],
       "koepfe": {
         "FIG-JESUS": {
           "kopf": [
-            516,
-            323,
-            589,
-            451
+            536,
+            337,
+            606,
+            453
           ],
-          "sicher": "high"
+          "sicher": "gitter"
         },
         "FIG-ROLLE-HAENDLER": {
           "kopf": [
-            165,
-            338,
-            238,
-            456
+            211,
+            381,
+            276,
+            462
           ],
-          "sicher": "high"
+          "sicher": "gitter"
         }
       },
       "blind": {
-        "action": "A central bearded man in white and red is swinging a cord or whip and has knocked over a table, spilling coins onto the ground. Two men beside bird cages recoil in surprise while animals move away on the right.",
-        "story_guess": "This appears to illustrate Jesus cleansing the Temple, specifically the moment when he overturns the money changers' table and drives sellers and animals out.",
+        "action": "A bearded man in a white robe and red drape is advancing with raised cords while gripping or upsetting a wooden table. The two foreground men with bird cages recoil, and animals move away to the right as small objects spill onto the ground.",
+        "story_guess": "This appears to illustrate Jesus cleansing the Temple: the moment when he drives out sellers and animals, overturning tables and confronting merchants.",
         "cut_off": "",
         "text_in_picture": "",
-        "style": "The image is a soft watercolor-style illustration with loose outlines, pale washes, and moderate detail focused on the foreground figures."
+        "style": "Loose watercolor illustration with soft washes, pale background figures, and more detailed expressive foreground characters."
       },
       "personen": [
         {
           "nr": 1,
-          "description": "Adult man, bearded, wearing a white head covering, blue outer robe, and pale inner clothing. He is leaning back with a startled expression; one hand is raised defensively and the other is near his chest.",
-          "looking_at": 6,
+          "who": "left dove seller with white head covering and beard",
           "head": [
-            73,
-            340,
-            142,
-            455
+            67,
+            374,
+            136,
+            457
           ]
         },
         {
           "nr": 2,
-          "description": "Adult man, bearded, wearing a striped head covering, gray-green outer robe, and brown inner clothing. He is stepping or leaning backward with a surprised expression; both hands are held up near his chest.",
-          "looking_at": 6,
+          "who": "bearded trader in blue robe with head wrap",
           "head": [
-            165,
-            338,
-            238,
-            456
+            211,
+            381,
+            276,
+            462
           ]
         },
         {
           "nr": 3,
-          "description": "Indistinct background adult figure in blue-gray clothing with a pale head covering. The pose is upright, with hands not clearly visible.",
-          "looking_at": null,
+          "who": "partly hidden dark-cloaked background person",
           "head": [
-            306,
-            480,
-            336,
-            535
+            282,
+            428,
+            329,
+            478
           ]
         },
         {
           "nr": 4,
-          "description": "Small indistinct background figure in warm tan or orange clothing. The face, hair, and hands are not clear.",
-          "looking_at": null,
+          "who": "faint background onlooker near center-left",
           "head": [
-            377,
-            501,
-            404,
-            548
+            356,
+            446,
+            385,
+            493
           ]
         },
         {
           "nr": 5,
-          "description": "Indistinct background adult figure in dark blue-gray clothing. The head and face are only loosely drawn; hands are not clear.",
-          "looking_at": null,
+          "who": "small faint background onlooker",
           "head": [
-            414,
-            493,
-            447,
-            552
+            399,
+            481,
+            425,
+            526
           ]
         },
         {
           "nr": 6,
-          "description": "Adult man with shoulder-length dark brown hair and beard, wearing a white robe with a reddish-brown sash or cloak. He is striding forward with a stern expression; his right hand raises a cord or whip, and his left hand points or reaches downward.",
-          "looking_at": 2,
+          "who": "small pale background onlooker",
           "head": [
-            516,
-            323,
-            589,
-            451
+            455,
+            492,
+            474,
+            527
           ]
         },
         {
           "nr": 7,
-          "description": "Indistinct background adult figure in light brown or tan clothing. The figure stands behind the central man; facial details and hands are unclear.",
-          "looking_at": null,
+          "who": "small pale background onlooker",
           "head": [
-            695,
-            492,
-            725,
-            551
-          ]
-        },
-        {
-          "nr": 8,
-          "description": "Background adult figure wearing blue clothing and a light head covering. The figure appears to stand or walk in profile; hands are not clearly visible.",
-          "looking_at": null,
-          "head": [
-            736,
-            480,
-            770,
+            481,
+            512,
+            503,
             548
           ]
         },
         {
-          "nr": 9,
-          "description": "Small background figure, possibly a child or shorter adult, wearing pale tan clothing. The figure is standing near the right background; facial details and hands are unclear.",
-          "looking_at": null,
+          "nr": 8,
+          "who": "Jesus holding a whip",
           "head": [
-            767,
-            538,
-            798,
-            590
+            536,
+            337,
+            606,
+            453
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "faint background onlooker right of Jesus",
+          "head": [
+            652,
+            495,
+            675,
+            530
+          ]
+        },
+        {
+          "nr": 10,
+          "who": "faint background onlooker",
+          "head": [
+            682,
+            504,
+            704,
+            537
+          ]
+        },
+        {
+          "nr": 11,
+          "who": "faint background onlooker",
+          "head": [
+            717,
+            488,
+            746,
+            537
+          ]
+        },
+        {
+          "nr": 12,
+          "who": "small pale background onlooker",
+          "head": [
+            746,
+            504,
+            769,
+            543
+          ]
+        },
+        {
+          "nr": 13,
+          "who": "faint background onlooker",
+          "head": [
+            817,
+            514,
+            843,
+            552
+          ]
+        },
+        {
+          "nr": 14,
+          "who": "dark faint background onlooker",
+          "head": [
+            856,
+            491,
+            891,
+            538
+          ]
+        },
+        {
+          "nr": 15,
+          "who": "faint background onlooker",
+          "head": [
+            919,
+            502,
+            949,
+            544
+          ]
+        },
+        {
+          "nr": 16,
+          "who": "faint background onlooker at far right",
+          "head": [
+            953,
+            502,
+            984,
+            545
           ]
         }
       ],
       "modell": "gpt-5.5",
-      "bild_sha": "b69200b11d028471",
+      "bild_sha": "b662f5c187d7f6e9",
       "datum": "2026-10-28",
       "plan_sha": "9bb7c0463e3a2a34",
-      "regeln_version": "2026-10-28b"
+      "regeln_version": "2026-10-28b",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
     },
     "blasen_auto": [
       {
-        "x": 198,
+        "x": 206,
         "y": 4,
         "w": 270,
         "h": 99,
         "fs": 21,
         "tail": [
-          332,
-          126
+          343,
+          120
         ]
       }
     ],
@@ -1119,7 +1170,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches fehlt; der Moment ist klar erkannt.",
+      "kern_fehlt_de": "Nichts Wesentliches fehlt.",
       "regeln": [
         {
           "id": "B1",
@@ -1137,7 +1188,7 @@
           "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubble is above the figures and does not cover any face, gesturing hand, or important object."
+          "grund": "The speech bubble does not cover any face, gesturing hand, or clearly important object."
         },
         {
           "id": "S-LESBAR",
@@ -1146,27 +1197,32 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All text in the speech bubble and caption band is visible, complete, and readable."
+          "grund": "All text in the speech bubble and caption band is complete, readable, and not cut off or overlapping."
         }
       ],
       "blind": {
-        "action": "A bearded man in white and red is driving people and animals out, holding cords or a whip and standing beside an overturned table with coins spilled on the ground. Two men on the left recoil in alarm near cages of birds, while animals move away on the right.",
-        "story_guess": "This appears to illustrate Jesus cleansing the Temple. The exact moment shown is Jesus overturning a seller or money-changer's table and ordering that his Father's house not be made into a house of trade.",
-        "text_in_picture": {
-          "speech_bubbles": [
-            {
-              "belongs_to": 7,
-              "text": "Macht das Haus meines Vaters nicht zu einem Haus des Handels!"
-            }
-          ],
-          "other_text": [
-            "Der Eifer um dein Haus wird mich verzehren",
-            "1"
-          ]
-        }
+        "action": "Person 8 is angrily driving out merchants and animals, raising a whip or cords and overturning a table so that coins scatter on the ground. The two foreground merchants recoil with frightened gestures while holding cages of birds.",
+        "story_guess": "This appears to illustrate the cleansing of the Temple by Jesus. The exact moment shown is Jesus confronting the sellers and money changers, driving them out with cords, overturning a table, and saying not to make his Father's house a house of trade.",
+        "text_in_picture": [
+          {
+            "type": "speech_bubble",
+            "belongs_to": 8,
+            "text": "Macht das Haus meines Vaters nicht zu einem Haus des Handels!"
+          },
+          {
+            "type": "caption",
+            "belongs_to": null,
+            "text": "Der Eifer um dein Haus wird mich verzehren"
+          },
+          {
+            "type": "number_label",
+            "belongs_to": null,
+            "text": "1"
+          }
+        ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "59cfae028aa3a413",
+      "bild_sha": "d142e011d6a80fde",
       "datum": "2026-10-28"
     }
   },
