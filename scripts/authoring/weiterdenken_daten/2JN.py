@@ -25,8 +25,8 @@ REFLECTIONS = [
     {"id": "REFL-2JN-0002", "subject": "SUM-BOOK-2JN", "order": 2,
      "question_de": "Wer ist die «auserwählte Herrin» – eine Frau oder eine Gemeinde?",
      "note_de": "Der Brief nennt keinen Namen ([[2JN.1.1]]); am Schluss grüssen «die Kinder deiner auserwählten Schwester» ([[2JN.1.13]]).",
-     "gsw": {"question_de": "Wär isch di «userwählt Herrin» – e Frau oder e Gmeind?",
-             "note_de": "De Brief nännt kein Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere userwählte Schwöschter» ([[2JN.1.13]])."}},
+     "gsw": {"question_de": "Wär isch di «uuserwählt Herrin» – e Frau oder e Gmeind?",
+             "note_de": "De Brief nännt kein Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere uuserwählte Schwöschter» ([[2JN.1.13]])."}},
     # Kapitel
     {"id": "REFL-2JN-0003", "subject": "SUM-CH-2JN-001", "order": 1,
      "question_de": "Wo endet Gastfreundschaft?",
@@ -37,13 +37,13 @@ REFLECTIONS = [
     {"id": "REFL-2JN-0004", "subject": "TU-2JN-001-001-003", "order": 1,
      "question_de": "Warum nennt sich der Schreiber nur «der Älteste»?",
      "note_de": "Er nennt keinen Namen ([[2JN.1.1]]); die Empfänger wussten offenbar, wer gemeint war.",
-     "gsw": {"question_de": "Wieso nännt sich de Schriiber nu «de Eltischt»?",
+     "gsw": {"question_de": "Wieso nännt sich de Schriiber nu «De Ältischt»?",
              "note_de": "Er nännt kein Name ([[2JN.1.1]]); d Empfänger händ offebar gwüsst, wär gmeint isch."}},
     {"id": "REFL-2JN-0005", "subject": "TU-2JN-001-001-003", "order": 2,
      "question_de": "Was heisst es, jemanden «in Wahrheit» zu lieben?",
      "note_de": "«… die ich in Wahrheit liebe – und nicht ich allein» ([[2JN.1.1]]).",
      "gsw": {"question_de": "Was heisst es, öpper «i Wahrheit» z liebe?",
-             "note_de": "«… won ich i Wahrheit lieb – und nöd ich elei» ([[2JN.1.1]])."}},
+             "note_de": "«… wo ich i Wahrheit liebe – und nöd ich elei» ([[2JN.1.1]])."}},
     # 4–6
     {"id": "REFL-2JN-0006", "subject": "TU-2JN-001-004-006", "order": 1,
      "question_de": "Warum freut sich der Älteste über «solche», nicht über alle?",
@@ -71,12 +71,12 @@ REFLECTIONS = [
      "question_de": "Was lässt sich nicht schreiben, sondern nur von Angesicht zu Angesicht sagen?",
      "note_de": "Der Älteste will nicht «mit Papier und Tinte» schreiben, sondern hofft, «von Mund zu Mund zu reden» ([[2JN.1.12]]).",
      "gsw": {"question_de": "Was laat sich nöd schriibe, sondern nu vo Aagsicht zu Aagsicht säge?",
-             "note_de": "De Eltischt wott nöd «mit Papier und Tinte» schriibe, sondern hofft, «vo Mund zu Mund z rede» ([[2JN.1.12]])."}},
+             "note_de": "De Eltischt wott nöd «mit Papier und Tinte» schriibe, sondern hofft, «vo Muul zu Muul z rede» ([[2JN.1.12]])."}},
     {"id": "REFL-2JN-0011", "subject": "TU-2JN-001-012-013", "order": 2,
      "question_de": "Warum ist die Freude erst vollkommen, wenn man sich sieht?",
      "note_de": "Er hofft zu kommen, «damit eure Freude vollkommen ist» ([[2JN.1.12]]).",
      "gsw": {"question_de": "Wieso isch d Fröid erscht volkomme, wänn mer sich gseht?",
-             "note_de": "Er hoffet z choo, «damit eui Fröid volkomme isch» ([[2JN.1.12]])."}},
+             "note_de": "Er hoffet z choo, «demit eui Fröid vollkomme isch» ([[2JN.1.12]])."}},
 ]
 
 RECEPTIONS = [

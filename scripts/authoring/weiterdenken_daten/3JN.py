@@ -26,24 +26,24 @@ REFLECTIONS = [
      "question_de": "Was bedeutet es, die Tür für Fremde offen zu halten?",
      "note_de": "Gaius handelt treu an Geschwistern, «und noch dazu an Fremden» ([[3JN.1.5]]).",
      "gsw": {"question_de": "Was bedüütet s, d Tür für Frömdi offe z bhalte?",
-             "note_de": "De Gaius handlet treu a Gschwüschterte, «und dezue no a Frömde» ([[3JN.1.5]])."}},
+             "note_de": "De Gaius handlet treu a Gschwüschterte, «und das no für Frömdi» ([[3JN.1.5]])."}},
     # Kapitel
     {"id": "REFL-3JN-0003", "subject": "SUM-CH-3JN-001", "order": 1,
      "question_de": "Woran zeigt sich, ob jemand Erster sein will oder dienen will?",
      "note_de": "Diotrephes ist einer, «der unter ihnen der Erste sein will» ([[3JN.1.9]]); Gaius rüstet Reisende aus ([[3JN.1.6]]).",
      "gsw": {"question_de": "Wora zeigt sich, öb öpper de Erscht wott sii oder wott diene?",
-             "note_de": "De Diotrephes isch eine, «wo under ine de Erscht wott sii» ([[3JN.1.9]]); de Gaius rüschtet Reisendi us ([[3JN.1.6]])."}},
+             "note_de": "De Diotrephes isch eine, «wo under ine de Erscht sii wott» ([[3JN.1.9]]); de Gaius rüschtet Reisendi us ([[3JN.1.6]])."}},
     # 1–4
     {"id": "REFL-3JN-0004", "subject": "TU-3JN-001-001-004", "order": 1,
      "question_de": "Worüber freust du dich bei anderen am meisten?",
      "note_de": "«Ich habe keine grössere Freude als diese: dass ich höre, wie meine Kinder in der Wahrheit leben» ([[3JN.1.4]]).",
      "gsw": {"question_de": "Über was fröisch du dich bi andere am meischte?",
-             "note_de": "«Ich han kei grösseri Fröid als die: dass ich ghör, wie mini Chind i de Wahrheit läbed» ([[3JN.1.4]])."}},
+             "note_de": "«Ich ha kei grösseri Fröid als die: dass ich ghör, wie mini Chind i de Wahrheit läbed» ([[3JN.1.4]])."}},
     {"id": "REFL-3JN-0005", "subject": "TU-3JN-001-001-004", "order": 2,
      "question_de": "Was wünschst du jemandem, wenn du ihm wünschst, dass es ihm «in allem gut geht»?",
      "note_de": "Der Älteste wünscht Gaius Gesundheit, «so wie es deiner Seele gut geht» ([[3JN.1.2]]).",
      "gsw": {"question_de": "Was wünschsch du öpperem, wänn d ihm wünschsch, dass es ihm «i allem guet gaat»?",
-             "note_de": "De Eltischt wünscht em Gaius Gsundheit, «so wie s dinere Seel guet gaat» ([[3JN.1.2]])."}},
+             "note_de": "De Eltischt wünscht em Gaius Gsundheit, «so wie es dinere Seel guet gaat» ([[3JN.1.2]])."}},
     # 5–8
     {"id": "REFL-3JN-0006", "subject": "TU-3JN-001-005-008", "order": 1,
      "question_de": "Wie wird man «Mitarbeiter für die Wahrheit», ohne selbst zu reisen oder zu predigen?",
@@ -60,12 +60,12 @@ REFLECTIONS = [
      "question_de": "Was macht es mit einer Gemeinschaft, wenn einer bestimmt, wer dazugehört?",
      "note_de": "Diotrephes nimmt die Geschwister nicht auf, hindert andere und «stösst sie aus der Gemeinde hinaus» ([[3JN.1.10]]).",
      "gsw": {"question_de": "Was macht s mit ere Gmeinschaft, wänn eine bestimmt, wär dezueghört?",
-             "note_de": "De Diotrephes nimmt d Gschwüschterti nöd uf, hindert anderi und «stosst si us de Gmeind use» ([[3JN.1.10]])."}},
+             "note_de": "De Diotrephes nimmt d Gschwüschterti nöd uf, hindert anderi und «schmeisst si us de Gmeind use» ([[3JN.1.10]])."}},
     {"id": "REFL-3JN-0009", "subject": "TU-3JN-001-009-010", "order": 2,
      "question_de": "Warum will der Älteste den Konflikt erst bei seinem Kommen ansprechen?",
      "note_de": "«Darum werde ich, wenn ich komme, seine Taten zur Sprache bringen» ([[3JN.1.10]]).",
      "gsw": {"question_de": "Wieso wott de Eltischt de Konflikt erscht bi sim Choo aaspräche?",
-             "note_de": "«Drum wird ich, wänn ich chume, sini Tate zur Sprach bringe» ([[3JN.1.10]])."}},
+             "note_de": "«Drum wirde ich, wänn ich chume, sini Tate zur Sprach bringe» ([[3JN.1.10]])."}},
     # 11–12
     {"id": "REFL-3JN-0010", "subject": "TU-3JN-001-011-012", "order": 1,
      "question_de": "Wen ahmst du nach?",
@@ -87,7 +87,7 @@ REFLECTIONS = [
      "question_de": "Warum nennt der Älteste die Glaubenden hier «Freunde»?",
      "note_de": "Zweimal heisst es «die Freunde» ([[3JN.1.14]]); sonst spricht der Brief von «Geschwistern» ([[3JN.1.3]]; [[3JN.1.5]]).",
      "gsw": {"question_de": "Wieso nännt de Eltischt d Gläubige da «Fründe»?",
-             "note_de": "Zwei Mal heisst s «d Fründe» ([[3JN.1.14]]); susch redt de Brief vo «Gschwüschterte» ([[3JN.1.3]]; [[3JN.1.5]])."}},
+             "note_de": "Zwei Mal heisst s «d Fründe» ([[3JN.1.14]]); susch redt de Brief vo «Gschwüschterti» ([[3JN.1.3]]; [[3JN.1.5]])."}},
 ]
 
 RECEPTIONS = [

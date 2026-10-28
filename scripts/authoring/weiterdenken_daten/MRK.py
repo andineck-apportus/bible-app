@@ -70,8 +70,8 @@ _Q = [
      "Jesus beginnt zu verkündigen, nachdem Johannes ausgeliefert worden ist ([[MRK.1.14]]).",
      "Was bedüütet «D Ziit isch erfüllt» für Mänsche, wo druf gwartet händ?",
      "Jesus fangt a verchünde, nachdem de Johannes usgliferet worde isch ([[MRK.1.14]])."),
-    (14, _tu("001-014-015"), 2, "Was verbindest du mit dem Wort «umkehren»?",
-     None, "Was verbindsch du mit em Wort «umchere»?", None),
+    (14, _tu("001-014-015"), 2, "Was verbindest du mit dem Ruf «Kehrt um»?",
+     None, "Was verbindsch du mit em Ruef «Chehred um»?", None),
     # 1,16–20
     (15, _tu("001-016-020"), 1, "Was mag der Vater Zebedäus gedacht haben, als seine Söhne aus dem Boot stiegen?",
      "Jakobus und Johannes lassen ihren Vater mit den Tagelöhnern im Boot zurück ([[MRK.1.20]]).",
@@ -128,7 +128,7 @@ _Q = [
     (29, _tu("002-013-017"), 1, "Was mag Levi bewogen haben, von der Zollstelle aufzustehen?",
      "Jesus sagt nur «Folge mir!», und Levi steht auf und folgt ihm ([[MRK.2.14]]).",
      "Was hät ächt de Levi bewoge, vo de Zollstell ufzstah?",
-     "Jesus seit nu «Chumm mir na!», und de Levi staat uf und gaat ihm na ([[MRK.2.14]])."),
+     "De Jesus seit nu «Chumm mir nache!», und de Levi staat uf und gaat ihm nache ([[MRK.2.14]])."),
     (30, _tu("002-013-017"), 2, "Mit wem setzt du dich an einen Tisch – und mit wem nicht?",
      None, "Mit wem sitzisch du a en Tisch – und mit wem nöd?", None),
     # 2,18–22
@@ -136,8 +136,8 @@ _Q = [
      "Jesus vergleicht seine Jünger mit Hochzeitsgästen, die nicht fasten, solange der Bräutigam bei ihnen ist ([[MRK.2.19-MRK.2.20]]).",
      "Wänn isch Ziit zum Faschte, und wänn Ziit zum Fiire?",
      "Jesus vergliicht sini Jünger mit Hochziitsgäscht, wo nöd faschted, solang de Brüütigam bi ine isch ([[MRK.2.19-MRK.2.20]])."),
-    (32, _tu("002-018-022"), 2, "Was ist für dich «junger Wein», der neue Schläuche braucht?",
-     None, "Was isch für dich «nöie Wii», wo nöi Schlüüch bruucht?", None),
+    (32, _tu("002-018-022"), 2, "«Jungen Wein in neue Schläuche!»: Was ist für dich das Neue, das eine neue Form braucht?",
+     None, "«Nöie Wii i nöii Schlüüch!»: Was isch für dich s Nöie, wo e nöii Form bruucht?", None),
     # 2,23–28
     (33, _tu("002-023-028"), 1, "Was heisst es, dass der Sabbat für den Menschen geschaffen wurde?",
      "Jesus beruft sich auf David, der in der Not die Schaubrote ass ([[MRK.2.25-MRK.2.27]]).",

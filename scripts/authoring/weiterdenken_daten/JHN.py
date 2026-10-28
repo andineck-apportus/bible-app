@@ -41,9 +41,9 @@ REFLECTIONS = [
      "question_de": "Das Wort wurde «Fleisch»: Warum wohl dieses Wort und nicht einfach «Mensch»?",
      "gsw": {"question_de": "S Wort isch «Fleisch» worde: Wieso ächt grad das Wort und nöd eifach «Mänsch»?"}},
     {"id": "REFL-JHN-0007", "subject": "TU-JHN-001-001-018", "order": 3,
-     "question_de": "«Die Seinen nahmen ihn nicht auf»: Wer ist mit «den Seinen» gemeint – und was ändert sich, je nachdem, wie man es versteht?",
+     "question_de": "«Die Seinen nahmen ihn nicht auf»: Wer sind «die Seinen» – und was ändert sich, je nachdem, wie man es versteht?",
      "note_de": "Manche verstehen darunter Israel, andere die Menschen überhaupt; kurz zuvor heisst es, die Welt habe ihn nicht erkannt ([[JHN.1.10-JHN.1.11]]).",
-     "gsw": {"question_de": "«Di Sine händ ihn nöd ufgnoo»: Wer isch mit «de Sine» gmeint – und was änderet sich, je nachdem, wie mer s verstaat?", "note_de": "Di eine verstönd drunder Israel, anderi d Mänsche überhaupt; churz vorher heisst s, d Wält heig en nöd erchännt ([[JHN.1.10-JHN.1.11]])."}},
+     "gsw": {"question_de": "«Di Sine händ ihn nöd ufgnoo»: Wer sind «di Sine» – und was änderet sich, je nachdem, wie mer s verstaat?", "note_de": "Di eine verstönd drunder Israel, anderi d Mänsche überhaupt; churz vorher heisst s, d Wält heig en nöd erchännt ([[JHN.1.10-JHN.1.11]])."}},
     # TU-JHN-001-019-028
     {"id": "REFL-JHN-0008", "subject": "TU-JHN-001-019-028", "order": 1,
      "question_de": "Johannes sagt dreimal, wer er nicht ist: Warum ist das wichtig?",
@@ -342,7 +342,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "D Lüüt meined, si wüssed, wohär de Jesus isch: Was übersehnd si dermit?", "note_de": "«Vo däm wüssed mer, wohär er isch; wänn aber de Christus chunnt, weiss niemer, wohär er isch» ([[JHN.7.27]])."}},
     {"id": "REFL-JHN-0082", "subject": "TU-JHN-007-025-031", "order": 2,
      "question_de": "Niemand legt Hand an ihn, «weil seine Stunde noch nicht gekommen war»: Wer bestimmt hier den Lauf?",
-     "gsw": {"question_de": "Niemer leit Hand an en, «wil sini Stund no nöd choo gsii isch»: Wer bestimmt da de Lauf?"}},
+     "gsw": {"question_de": "Niemer leit Hand an en, «wil sini Stund no nöd choo isch»: Wer bestimmt da de Lauf?"}},
     # TU-JHN-007-032-036
     {"id": "REFL-JHN-0083", "subject": "TU-JHN-007-032-036", "order": 1,
      "question_de": "«Ihr werdet mich suchen und nicht finden»: Wie hört sich das für die an, die ihn festnehmen sollen?",
@@ -646,9 +646,9 @@ REFLECTIONS = [
      "gsw": {"question_de": "«Es isch aber Nacht gsii» – was treit dä churz Satz?"}},
     # TU-JHN-013-031-038
     {"id": "REFL-JHN-0157", "subject": "TU-JHN-013-031-038", "order": 1,
-     "question_de": "Was ist «neu» an dem Gebot, einander zu lieben?",
+     "question_de": "«Ein neues Gebot gebe ich euch»: Was ist neu daran, einander zu lieben?",
      "note_de": "Jesus fügt hinzu: «Wie ich euch geliebt habe» ([[JHN.13.34]]).",
-     "gsw": {"question_de": "Was isch «nöi» a dem Gebot, enand gärn zha?", "note_de": "De Jesus seit derzue: «Wie ich eu gliebt han» ([[JHN.13.34]])."}},
+     "gsw": {"question_de": "«Es nöis Gebot gib ich eu»: Was isch nöi dra, enand z liebe?", "note_de": "De Jesus seit derzue: «Wie ich eu gliebt han» ([[JHN.13.34]])."}},
     {"id": "REFL-JHN-0158", "subject": "TU-JHN-013-031-038", "order": 2,
      "question_de": "Petrus verspricht viel und meint es ernst: Wie geht es dir mit Versprechen, die grösser sind als du?",
      "gsw": {"question_de": "De Petrus verspricht vil und meint s ärnscht: Wie gaat s dir mit Verspräche, wo grösser sind als du?"}},
