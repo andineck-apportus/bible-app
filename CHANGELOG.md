@@ -2,6 +2,18 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.140 — 2026-10-28 — Bilder: automatische Prüfung, neue Beispiele, Versuche mit Strukturen
+
+Ziel (Andi Neck, 2026-10-28): Prozesse, Regeln und Prüfungen so festlegen, dass später kein Mensch mehr drüberschauen muss; mehr Beispiele, um das Regelwerk zu testen. Regelwerk in [docs/BILDSTIL.md](docs/BILDSTIL.md), Abschnitte 8 und 9.
+- **Prüfregeln auf drei Ebenen:** allgemein (`pruefregeln.json`, versioniert), je Figur (`figuren.json` «pruef»), je Feld (Szenenplan «pruefung», mit B/R/I und Stelle); Pflicht und Soll, Zählregeln.
+- **Automatische Prüfung** (`scripts/authoring/bilder_pruefung.py`): Bildprüfmodell von OpenAI (getrennt vom Malmodell) beschreibt blind, beantwortet jede Regel einzeln, ordnet Figuren zu (Kopfpositionen) und vergleicht mit dem Moment; Schlussprüfung der fertigen Kachel.
+- **Ablauf ohne Handarbeit** (`bilder_aquarell_lauf.py`, Action «bilder-aquarell» `auto-neu` / `auto-pruefen`): malen, prüfen, beste Variante wählen, bei Fehlern mit Hinweis neu malen (höchstens drei Runden), ablegen, Blasen nach Kopfpositionen setzen, Schlussprüfung; Ergebnis auf Branch `bilder-auto/<Lauf>`.
+- **Prüfstufe** im Bild-Datensatz (`check.stufe`: entwurf / ki-geprueft / fachlich-geprueft) mit Fingerabdruck von Bild und Regeln; Validator prüft B/R/I-Belege und meldet veraltete Prüfungen; Prüfvermerk in der Legende.
+- **Feste Prüfungen:** Zitate wörtlich, Stichwortband höchstens 54 Zeichen.
+- **Neue Beispiele:** Markus 4,35–41 (Sturm) und Lukas 15,11–32 (zwei Söhne, mit Gedankenblase) vollständig automatisch gemalt und geprüft; Johannes 2 rückwirkend geprüft und drei Felder automatisch neu gemalt (Maria älter, sechs Krüge – eine Variante mit fünf Krügen verworfen –, nichts angeschnitten).
+- **Regelwerk aus den Läufen verbessert:** Ausblenden ins Papier ist kein Anschneiden; gestreifte Kopftücher; Blasen meiden alle Köpfe und setzen die schwierige Blase zuerst; Gefühle über Körpersprache beschreiben; Wiedererkennen ohne Füsse; Bandlänge.
+- **Pilot strukturierte Inhalte** (`pilot/struktur/`, Action «bildpilot-struktur», nicht in der App): Karte Johannes 2 mit Höhenprofil (Natural Earth, gemeinfrei), Stiftshütte nach Ex 25–27 und 30 mit Massen und B/R, Seligpreisungen mit Aufbau und Vignetten; je Fassung A (nur Daten), B (KI malt nach exakter Vorlage, Daten darüber), bei der Karte C (KI nur Textur, Form aus Daten). Befund: Stiftshütte B hält die Geometrie; die Karte verschiebt das Bildmodell – Karten darum nur C.
+
 ## v0.139 — 2026-10-28 — Navigator ohne feste Leiste Testament/Buchgruppen
 
 Hinweis von Andi Neck (2026-10-28): Die Leiste AT/NT mit den Buchgruppen wird nicht mehr gebraucht, der Pfad oben zeigt, wo man ist. Testamente bzw. Buchgruppen erscheinen nur noch als nächste Ebene, wenn im Pfad «Die Bibel» bzw. ein Testament gewählt ist; danach wie bisher Bücher, Kapitel, Abschnitte, Verse.
