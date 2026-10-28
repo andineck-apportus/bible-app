@@ -47,7 +47,7 @@ def main():
         sys.exit(f"Konfliktmarken bleiben: {marken}")
     v = subprocess.run([sys.executable, "scripts/validate.py"], cwd=ROOT, capture_output=True, text=True)
     if v.returncode:
-        sys.exit("Validator meldet Fehler:\n" + "\n".join(l for l in v.stdout.splitlines() if l.startswith("ERROR"))[:3000])
+        sys.exit("Validator meldet Fehler:\n" + "\n".join(l for l in v.stdout.splitlines() if l.startswith(("ERROR", "FAIL")))[:3000])
     git("add", "-A", "data", "scripts")
     git("commit", "-qm", f"Bildlauf {b.split('/')[-1]} automatisch übernommen ({', '.join(neu) or 'keine Szenen geändert'})\n\nProzess PROC-FREIGABE@2.0")
     print("übernommen:", neu)
