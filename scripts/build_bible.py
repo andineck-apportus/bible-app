@@ -442,7 +442,7 @@ def _fq(key, x):
 
 up_refl = [x for n_, d in bundles.items() if n_.startswith("b/") for x in d.get("reflections", []) if not x["subject"].startswith("TU-")]
 for x in up_refl:  # eigene Fragen der oberen Ebenen zuerst
-    k_ = _SUMKEY.get(x["subject"], x["subject"])
+    k_ = _SUMKEY.get(x["subject"], x["subject"].removeprefix("SUM-"))  # SUM-GROUP-nn -> GROUP-nn (Schlüssel der App)
     _fq(k_, x)
     has.add(k_)
 _order = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
