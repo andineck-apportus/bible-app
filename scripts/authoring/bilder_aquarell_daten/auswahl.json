@@ -1638,29 +1638,24 @@
   },
   "JHN-002-J2": {
     "datei": "img/JHN-002-J2.webp",
-    "lauf": "20261028-110104-auto-neu",
+    "lauf": "20261028-220138-auto-neu",
     "variante": "r1v1",
     "modell": "gpt-image-2.5-flare",
     "uebernommen": "2026-10-28",
     "pruefung": {
-      "ergebnis": "durchgefallen",
-      "punkte": 4,
+      "ergebnis": "bestanden",
+      "punkte": 5,
       "kern": 1,
-      "kern_fehlt_de": "Die Zeichen als Grund für den Glauben fehlen; ebenso, dass Jesus sich den Menschen nicht anvertraut, weil er ihr Inneres kennt.",
+      "kern_fehlt_de": "Der Glaube aufgrund der Zeichen sowie Jesu Zurückhaltung und seine Kenntnis des menschlichen Inneren sind nicht erkennbar.",
       "regeln": [
         {
           "id": "G-RAND",
           "ebene": "allgemein",
           "stufe": "pflicht",
           "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
-          "ergebnis": "fehler",
-          "antwort": "yes",
-          "grund": "A faint background figure is cut by the left edge.",
-          "stimmen": [
-            "fehler",
-            "fehler",
-            "fehler"
-          ]
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and ground fade softly into the paper."
         },
         {
           "id": "G-SCHRIFT",
@@ -1705,7 +1700,7 @@
           "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clear anatomical abnormality is visible."
+          "grund": "No clear anatomical abnormalities are visible; some limbs are obscured."
         },
         {
           "id": "G-DOPPELT",
@@ -1714,7 +1709,7 @@
           "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No two figures are clearly the same individual."
+          "grund": "No clearly identical individual appears twice."
         },
         {
           "id": "G-KARIKATUR",
@@ -1723,7 +1718,7 @@
           "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The figures are stylized but not clearly grotesque or stereotyped."
+          "grund": "No clear caricature or ethnic stereotype is visible."
         },
         {
           "id": "G-PROPORTION",
@@ -1732,16 +1727,16 @@
           "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The visible adults have broadly natural adult proportions."
+          "grund": "The prominent adults have natural adult proportions."
         },
         {
           "id": "G-REDUKTION",
           "ebene": "allgemein",
           "stufe": "soll",
-          "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten",
-          "ergebnis": "fehler",
-          "antwort": "no",
-          "grund": "There is much white paper, but the figures, clothing and background have substantial detail."
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The light watercolour has ample white paper and a simple background."
         },
         {
           "id": "G-OBEN",
@@ -1750,7 +1745,7 @@
           "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The upper quarter is mostly pale empty paper."
+          "grund": "The upper quarter is mostly empty pale paper."
         },
         {
           "id": "G-ROT",
@@ -1759,7 +1754,7 @@
           "de": "Nur Jesus trägt Terrakottarot",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Only the man at right visibly wears terracotta-red."
+          "grund": "Only the prominent man wears terracotta-red."
         },
         {
           "id": "F-JESUS-GESICHT",
@@ -1768,7 +1763,7 @@
           "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "His eyes, nose and mouth are visible."
+          "grund": "His facial features are visible in a three-quarter view."
         },
         {
           "id": "J2-NAH",
@@ -1777,7 +1772,7 @@
           "de": "Jesus nah, ruhig und ernst, wissender Blick",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "He is shown large, with a calm, serious expression."
+          "grund": "He is large and close, with a calm, attentive expression."
         },
         {
           "id": "J2-GEGENUEBER",
@@ -1786,7 +1781,7 @@
           "de": "Menschen ihm gegenüber, die ihn bewundern",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Several people face him with pleased expressions."
+          "grund": "Several people face him with smiling or animated expressions."
         },
         {
           "id": "J2-NICHT-BOESE",
@@ -1795,7 +1790,7 @@
           "de": "Die Menschen nicht abgewertet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The group does not visibly appear hostile or mocking."
+          "grund": "The group does not clearly appear mocking or hostile."
         },
         {
           "id": "J2-KEINE-KINDER",
@@ -1804,7 +1799,7 @@
           "de": "Erwachsene Festpilger, keine Kinder im Mittelpunkt (sonst als Kindersegnung gelesen: Blindbeschreibung Lauf 11, 19)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The prominent group consists of adults, and no child is being welcomed or blessed."
+          "grund": "The prominent group consists of adults; no children are being welcomed or blessed."
         },
         {
           "id": "J2-ZURUECK",
@@ -1813,180 +1808,162 @@
           "de": "Jesus geht nicht auf sie zu, hält sich zurück",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "He remains separated from the group and is not embracing anyone; his feet are not visible."
+          "grund": "He is not embracing the group or visibly stepping toward them."
         }
       ],
       "koepfe": {
         "FIG-JESUS": {
           "kopf": [
-            736,
-            235,
-            874,
-            448
+            767,
+            195,
+            907,
+            406
           ],
           "sicher": "gitter"
         },
         "FIG-GRUPPE-MENGE": {
           "kopf": [
-            165,
-            491,
-            297,
-            665
+            400,
+            490,
+            496,
+            625
           ],
           "sicher": "gitter"
         }
       },
       "blind": {
-        "action": "A group of people on the left gesture and look toward the robed man on the right. He turns his head back toward them while other figures stand in the distance.",
-        "story_guess": "The robed man may represent Jesus with people calling to or following him, but the picture does not clearly identify a particular Bible story or moment.",
-        "cut_off": "A faint background person is cut off by the left edge.",
+        "action": "A group on the left leans toward the robed man, gesturing and appearing to speak; one man points at him. The robed man looks back toward them, while several small figures stand or walk in the distance.",
+        "story_guess": "The robed man appears to represent Jesus approached by a crowd, but the picture does not identify a specific Bible story or moment.",
+        "cut_off": "The clothing of the woman at the far left touches the picture edge.",
         "text_in_picture": "",
-        "style": "A softly colored watercolor-style illustration with detailed foreground faces and loose, hazy background figures."
+        "style": "A softly colored watercolor-style illustration with detailed foreground faces and clothing and loosely suggested background figures."
       },
       "personen": [
         {
           "nr": 1,
-          "who": "Faint person at the far left",
+          "who": "Woman in a white head covering",
           "head": [
             3,
-            434,
-            34,
-            498
+            432,
+            127,
+            602
           ]
         },
         {
           "nr": 2,
-          "who": "Woman in blue with a white head covering",
+          "who": "Bearded man raising his hand",
           "head": [
-            28,
-            370,
-            161,
-            550
+            82,
+            323,
+            197,
+            480
           ]
         },
         {
           "nr": 3,
-          "who": "Partly obscured person behind the woman",
+          "who": "Woman in blue with a white veil",
           "head": [
-            162,
-            418,
-            191,
-            463
+            207,
+            435,
+            349,
+            605
           ]
         },
         {
           "nr": 4,
-          "who": "Bearded man in blue gesturing toward Jesus",
+          "who": "Bearded man in a gray head covering",
           "head": [
-            165,
-            491,
-            297,
-            665
+            308,
+            375,
+            400,
+            514
           ]
         },
         {
           "nr": 5,
-          "who": "Bearded man pointing, wearing a headband",
-          "head": [
-            180,
-            331,
-            284,
-            489
-          ]
-        },
-        {
-          "nr": 6,
-          "who": "Faint person behind the pointing man",
-          "head": [
-            275,
-            423,
-            305,
-            488
-          ]
-        },
-        {
-          "nr": 7,
-          "who": "Woman in a pale head covering, gesturing",
-          "head": [
-            283,
-            446,
-            395,
-            609
-          ]
-        },
-        {
-          "nr": 8,
-          "who": "Distant gray-clad person",
+          "who": "Bearded man pointing",
           "head": [
             400,
-            500,
-            433,
-            564
-          ]
-        },
-        {
-          "nr": 9,
-          "who": "Distant brown-haired person",
-          "head": [
-            448,
-            504,
-            475,
-            563
-          ]
-        },
-        {
-          "nr": 10,
-          "who": "Distant person in gray-blue",
-          "head": [
-            513,
-            571,
-            546,
+            490,
+            496,
             625
           ]
         },
         {
-          "nr": 11,
-          "who": "Distant person in pale clothing",
+          "nr": 6,
+          "who": "Small distant figure",
+          "head": [
+            528,
+            701,
+            542,
+            726
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Distant figure in gray",
           "head": [
             557,
-            607,
-            584,
-            654
+            678,
+            578,
+            718
           ]
         },
         {
-          "nr": 12,
-          "who": "Distant person in gray",
+          "nr": 8,
+          "who": "Small distant figure",
           "head": [
-            594,
-            630,
-            620,
-            676
+            591,
+            685,
+            605,
+            714
           ]
         },
         {
-          "nr": 13,
+          "nr": 9,
+          "who": "Distant figure in blue-gray",
+          "head": [
+            624,
+            663,
+            646,
+            706
+          ]
+        },
+        {
+          "nr": 10,
+          "who": "Faint distant figure",
+          "head": [
+            654,
+            652,
+            680,
+            690
+          ]
+        },
+        {
+          "nr": 11,
           "who": "Jesus in a cream tunic and red mantle",
           "head": [
-            736,
-            235,
-            874,
-            448
+            767,
+            195,
+            907,
+            406
           ]
         }
       ],
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "520a130c0f26f5dd",
+      "bild_sha": "9555efd4b769009b",
       "datum": "2026-10-28",
-      "plan_sha": "2ec53309719d3fc3",
-      "regeln_version": "2026-10-28c",
-      "prozess": "PROC-BILD-AQUARELL@2.3"
+      "plan_sha": "6943a4e02c616c32",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.3",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
     },
     "schluss": {
       "ergebnis": "bestanden",
       "punkte": 1,
       "kern": 1,
-      "kern_fehlt_de": "Die Zeichen fehlen; Jesu mangelndes Vertrauen und seine Kenntnis des Menschen bleiben bildlich uneindeutig.",
+      "kern_fehlt_de": "Der Glaube aufgrund der Zeichen und Jesu fehlendes Vertrauen in die Menschen sind nicht erkennbar.",
       "regeln": [
         {
           "id": "S-GESICHT",
@@ -2004,25 +1981,27 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The visible caption is complete and readable."
+          "grund": "The caption lettering is complete and readable."
         }
       ],
       "blind": {
-        "action": "A group on the left gestures and looks towards the robed man on the right. He turns his head back towards them as he moves away or stands apart.",
-        "story_guess": "The caption suggests John 2:23–25: people believe in Jesus, but he knows what is in human beings. The picture does not establish a more specific moment with certainty.",
+        "action": "A group of people gesture and call toward the robed man on the right; one points at him. He looks back toward them, while several smaller figures stand in the distance.",
+        "story_guess": "The bearded man in white and red appears to represent Jesus. The German caption echoes John 2:25, about Jesus knowing what was in people; the picture does not establish a more specific moment.",
         "text_in_picture": [
           {
             "text": "2",
-            "location": "Circled at bottom left"
+            "location": "Circled at bottom left",
+            "speech_bubble_owner": null
           },
           {
             "text": "er selbst erkannte nämlich, was im Menschen war",
-            "location": "Caption along the bottom"
+            "location": "Caption along the bottom",
+            "speech_bubble_owner": null
           }
         ]
       },
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "d62d4bc550d5690b",
+      "bild_sha": "5e5e4e2fa2f6a265",
       "datum": "2026-10-28",
       "prozess": "PROC-BILD-AQUARELL@2.3"
     }
@@ -5724,15 +5703,15 @@
   },
   "TIT-001-E3": {
     "datei": "img/TIT-001-E3.webp",
-    "lauf": "20261028-175410-auto-neu",
-    "variante": "r2v1",
+    "lauf": "20261028-213102-auto-neu",
+    "variante": "r1v1",
     "modell": "gpt-image-2.5-flare",
     "uebernommen": "2026-10-28",
     "pruefung": {
-      "ergebnis": "unklar",
+      "ergebnis": "bestanden",
       "punkte": 4,
       "kern": 1,
-      "kern_fehlt_de": "Der Bezug auf die gesunde Lehre und die Zurechtweisung eines Widersprechenden durch den Ältesten bleiben unklar.",
+      "kern_fehlt_de": "Die Belehrung anhand der Schrift ist erkennbar, aber Ermahnung und Zurechtweisung von Widersprechenden bleiben unklar.",
       "regeln": [
         {
           "id": "G-RAND",
@@ -5741,7 +5720,7 @@
           "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The figures and ground fade into the paper rather than being cut off."
+          "grund": "Figures and ground fade into the paper; none are visibly sliced by the border."
         },
         {
           "id": "G-SCHRIFT",
@@ -5750,7 +5729,7 @@
           "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No identifiable letters, words or numbers are visible."
+          "grund": "No writing or speech bubbles are visible."
         },
         {
           "id": "G-NIMBUS",
@@ -5759,7 +5738,7 @@
           "de": "Kein Heiligenschein",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No halos or rings are visible."
+          "grund": "No halo or glowing ring is visible."
         },
         {
           "id": "G-EFFEKT",
@@ -5786,7 +5765,7 @@
           "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clear anatomical anomalies are visible."
+          "grund": "No clear anatomical anomaly is visible; some limbs are hidden."
         },
         {
           "id": "G-DOPPELT",
@@ -5804,7 +5783,7 @@
           "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No obvious caricatures or ethnic stereotypes are visible."
+          "grund": "No clear caricature or ethnic stereotype is visible."
         },
         {
           "id": "G-PROPORTION",
@@ -5813,16 +5792,16 @@
           "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The adults have natural-looking proportions."
+          "grund": "The adults have broadly natural proportions."
         },
         {
           "id": "G-REDUKTION",
           "ebene": "allgemein",
           "stufe": "soll",
-          "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten",
-          "ergebnis": "fehler",
-          "antwort": "no",
-          "grund": "The watercolour has extensive white space but also visible fabric folds, textures and background details."
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The light watercolour has extensive white paper and a simple background."
         },
         {
           "id": "G-OBEN",
@@ -5831,44 +5810,34 @@
           "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The upper quarter is mostly empty pale paper."
+          "grund": "The upper quarter is mostly pale, empty paper."
         },
         {
           "id": "F-GEMEINDE-GEMISCHT",
           "ebene": "figur",
           "stufe": "soll",
           "de": "Gemeinde aus Männern und Frauen",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "Apparent men and women are wearing blue."
+          "ergebnis": "unklar",
+          "antwort": "unclear",
+          "grund": "Men are visible, but no woman in blue is clearly identifiable."
         },
         {
           "id": "E3-LEHRT",
           "ebene": "feld",
           "stufe": "pflicht",
           "de": "Der Älteste lehrt aus der Schrift",
-          "ergebnis": "unklar",
-          "antwort": "unclear",
-          "grund": "The man rests a hand on a scroll and gestures, but faces the standing man; speech to the seated group is not clear.",
-          "stimmen": [
-            "unklar",
-            "unklar",
-            "ok"
-          ]
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The grey-bearded man points to a scroll with seated people facing him."
         },
         {
           "id": "E3-WIDERSPRUCH",
           "ebene": "feld",
           "stufe": "pflicht",
           "de": "Einer widerspricht",
-          "ergebnis": "unklar",
-          "antwort": "unclear",
-          "grund": "The standing man raises a finger, but whether he is objecting or arguing is not clear.",
-          "stimmen": [
-            "unklar",
-            "unklar",
-            "ok"
-          ]
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A standing man faces him with raised hands and a furrowed expression."
         },
         {
           "id": "E3-RUHIG",
@@ -5877,120 +5846,132 @@
           "de": "Der Älteste bleibt ruhig",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "His expression appears calm and attentive."
+          "grund": "The grey-bearded man looks attentive rather than angry."
         }
       ],
       "koepfe": {
         "FIG-ROLLE-AELTESTER": {
           "kopf": [
-            215,
-            331,
-            288,
-            436
+            149,
+            390,
+            239,
+            521
           ],
           "sicher": "gitter"
         },
         "FIG-GRUPPE-GLAUBENDE": {
           "kopf": [
-            598,
-            544,
-            667,
-            650
+            368,
+            502,
+            440,
+            609
           ],
           "sicher": "gitter"
         }
       },
       "blind": {
-        "action": "A seated older man gestures over an open scroll while a standing man raises a finger toward him. Several seated listeners watch the exchange.",
-        "story_guess": "It may depict Jesus discussing scripture with a teacher, but the image does not clearly identify a particular Bible story or moment.",
+        "action": "An older seated man points to an open scroll while three people sit nearby. A standing man gestures toward the group as if speaking, and several distant figures stand in the background.",
+        "story_guess": "The gathering around a scroll could illustrate a biblical teaching or discussion, but no specific story or moment is reliably identifiable from the picture alone.",
         "cut_off": "",
         "text_in_picture": "",
-        "style": "A softly colored watercolor-style illustration with loose edges and moderately detailed figures."
+        "style": "A softly colored watercolor-style illustration with loose backgrounds and moderately detailed figures."
       },
       "personen": [
         {
           "nr": 1,
-          "who": "Seated woman in blue with a cream veil, left",
+          "who": "Grey-bearded seated man in a grey overmantle",
           "head": [
-            148,
-            585,
-            215,
-            683
+            149,
+            390,
+            239,
+            521
           ]
         },
         {
           "nr": 2,
-          "who": "Grey-bearded elder in a grey overmantle",
+          "who": "Seated bearded man in blue and cream",
           "head": [
-            215,
-            331,
-            288,
-            436
+            368,
+            502,
+            440,
+            609
           ]
         },
         {
           "nr": 3,
-          "who": "Seated dark-bearded man in blue",
+          "who": "Seated person in blue with a cream head covering",
           "head": [
-            531,
-            505,
-            599,
-            598
+            455,
+            604,
+            543,
+            741
           ]
         },
         {
           "nr": 4,
-          "who": "Seated veiled woman in blue, seen from behind",
+          "who": "Seated bearded man in blue and cream with a headband",
           "head": [
-            526,
-            640,
-            600,
-            768
+            605,
+            559,
+            696,
+            693
           ]
         },
         {
           "nr": 5,
-          "who": "Seated woman in blue with a cream veil, center-right",
+          "who": "Standing dark-haired bearded man gesturing",
           "head": [
-            598,
-            544,
-            667,
-            650
+            684,
+            315,
+            782,
+            453
           ]
         },
         {
           "nr": 6,
-          "who": "Standing dark-bearded man in grey",
+          "who": "Faint background person in blue-grey",
           "head": [
-            690,
-            278,
-            757,
-            384
+            888,
+            489,
+            910,
+            529
           ]
         },
         {
           "nr": 7,
-          "who": "Seated grey-haired man in blue with a cream mantle",
+          "who": "Faint background person in cream",
           "head": [
-            803,
-            536,
-            873,
-            641
+            934,
+            498,
+            954,
+            543
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Faint background person in blue-grey at right",
+          "head": [
+            962,
+            528,
+            986,
+            576
           ]
         }
       ],
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "8ef60af8644b5ecc",
+      "bild_sha": "02f8d70bc78e1696",
       "datum": "2026-10-28",
-      "plan_sha": "536149e9f1ac4055",
-      "regeln_version": "2026-10-28c",
-      "prozess": "PROC-BILD-AQUARELL@2.3"
+      "plan_sha": "865e15a930209067",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.3",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
     },
     "schluss": {
       "ergebnis": "bestanden",
       "punkte": 1,
       "kern": 1,
-      "kern_fehlt_de": "Die Zurechtweisung eines Widersprechenden und der Bezug auf die gesunde Lehre bleiben unklar.",
+      "kern_fehlt_de": "Der Älteste verweist auf die Schrift, aber die Ermahnung und Zurechtweisung eines Widersprechenden sind nicht eindeutig erkennbar.",
       "regeln": [
         {
           "id": "S-GESICHT",
@@ -6008,25 +5989,25 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The visible caption and page number are complete and readable."
+          "grund": "The visible caption is complete and readable."
         }
       ],
       "blind": {
-        "action": "A seated older man gestures over an open scroll while a standing man raises a finger as if making a point. The others sit around them, apparently listening or taking part in the discussion.",
-        "story_guess": "The scene may depict people discussing or teaching from scripture, but no particular Bible story or exact moment is identifiable from the picture alone.",
+        "action": "A seated older man points to an open scroll while three nearby people listen. A standing man gestures toward the group.",
+        "story_guess": "Possibly Paul and the Bereans examining the Scriptures, as in Acts 17:11, but the picture has no clear identifying detail that establishes the story or exact moment.",
         "text_in_picture": [
           {
-            "text": "3",
-            "where": "In a circle at the bottom left"
+            "text": "Das zuverlässige Wort",
+            "where": "Bottom caption"
           },
           {
-            "text": "Das zuverlässige Wort",
-            "where": "Caption at the bottom"
+            "text": "3",
+            "where": "Inside a circle at bottom left"
           }
         ]
       },
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "7064e6e7b83921f7",
+      "bild_sha": "b30198ef43f46cae",
       "datum": "2026-10-28",
       "prozess": "PROC-BILD-AQUARELL@2.3"
     }
@@ -8642,15 +8623,15 @@
   },
   "TIT-003-C2": {
     "datei": "img/TIT-003-C2.webp",
-    "lauf": "20261028-175410-auto-neu",
+    "lauf": "20261028-213102-auto-neu",
     "variante": "r1v1",
     "modell": "gpt-image-2.5-flare",
     "uebernommen": "2026-10-28",
     "pruefung": {
-      "ergebnis": "durchgefallen",
+      "ergebnis": "bestanden",
       "punkte": 5,
       "kern": 1,
-      "kern_fehlt_de": "Die Taufszene und die Umarmung passen sinnbildlich, aber Gottes Erbarmen, die Wiedergeburt durch den Heiligen Geist und die Hoffnung auf ewiges Leben sind nicht eindeutig erkennbar.",
+      "kern_fehlt_de": "Die Wasserszene könnte eine Taufe darstellen, doch Gottes Erbarmen und die geistliche Wiedergeburt bleiben unklar. Die Deutung als Taufe Jesu ist nicht gesichert.",
       "regeln": [
         {
           "id": "G-RAND",
@@ -8659,380 +8640,12 @@
           "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The figures and ground fade out rather than being cut off by the border."
-        },
-        {
-          "id": "G-SCHRIFT",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No writing or speech bubbles are visible."
-        },
-        {
-          "id": "G-NIMBUS",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Kein Heiligenschein",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No halo or glowing ring is visible."
-        },
-        {
-          "id": "G-EFFEKT",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No supernatural visual effects are visible."
-        },
-        {
-          "id": "G-MODERN",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
-          "ergebnis": "fehler",
-          "antwort": "yes",
-          "grund": "One man wears a pale head covering with a blue stripe.",
+          "grund": "All visible persons and objects are within the picture area; none are visibly sliced by a hard border.",
           "stimmen": [
-            "fehler",
-            "fehler",
-            "fehler"
+            "unklar",
+            "ok",
+            "ok"
           ]
-        },
-        {
-          "id": "G-KOERPER",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No clear anatomical anomaly is visible."
-        },
-        {
-          "id": "G-DOPPELT",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No two figures are clearly the same individual."
-        },
-        {
-          "id": "G-KARIKATUR",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No figure is visibly caricatured or grotesque."
-        },
-        {
-          "id": "G-PROPORTION",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "The adults have broadly natural proportions."
-        },
-        {
-          "id": "G-REDUKTION",
-          "ebene": "allgemein",
-          "stufe": "soll",
-          "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "The scene is loosely painted, with much white paper and limited detail."
-        },
-        {
-          "id": "G-OBEN",
-          "ebene": "allgemein",
-          "stufe": "soll",
-          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "The upper quarter is mostly pale, empty paper."
-        },
-        {
-          "id": "F-TITUS",
-          "ebene": "figur",
-          "stufe": "pflicht",
-          "de": "Titus erkennbar (moosgrünes Gewand, kurzes lockiges Haar)",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "A curly dark-haired, bearded man wears a moss-green robe."
-        },
-        {
-          "id": "F-GEMEINDE-GEMISCHT",
-          "ebene": "figur",
-          "stufe": "soll",
-          "de": "Gemeinde aus Männern und Frauen",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "Both men and women wear blue clothing."
-        },
-        {
-          "id": "C2-TAUFE",
-          "ebene": "feld",
-          "stufe": "pflicht",
-          "de": "Taufe im Fluss",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "A man in the water is being held and helped by another man."
-        },
-        {
-          "id": "C2-VERSOEHNT",
-          "ebene": "feld",
-          "stufe": "soll",
-          "de": "Zwei umarmen sich versöhnt",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "Two men are embracing."
-        },
-        {
-          "id": "C2-KEIN-ZEICHEN",
-          "ebene": "feld",
-          "stufe": "pflicht",
-          "de": "Keine Taube, kein Licht vom Himmel",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No dove or light coming from the sky is visible."
-        }
-      ],
-      "koepfe": {
-        "FIG-TITUS": {
-          "kopf": [
-            258,
-            388,
-            333,
-            513
-          ],
-          "sicher": "gitter"
-        },
-        "FIG-GRUPPE-GLAUBENDE": {
-          "kopf": [
-            680,
-            383,
-            727,
-            470
-          ],
-          "sicher": "gitter"
-        }
-      },
-      "blind": {
-        "action": "Two men stand in the water, with the man in green supporting the man in white. On the bank, two other men embrace while several people watch.",
-        "story_guess": "Possibly the baptism of Jesus by John the Baptist, with the two men standing in the water before or after the baptism. The image does not show a distinctive sign that establishes their identities or the exact moment.",
-        "cut_off": "",
-        "text_in_picture": "",
-        "style": "A soft, lightly detailed watercolor-style illustration with muted colors and loosely defined background figures."
-      },
-      "personen": [
-        {
-          "nr": 1,
-          "who": "Faint figure at far left",
-          "head": [
-            22,
-            391,
-            50,
-            460
-          ]
-        },
-        {
-          "nr": 2,
-          "who": "Bearded man in blue with pale head covering",
-          "head": [
-            54,
-            371,
-            100,
-            483
-          ]
-        },
-        {
-          "nr": 3,
-          "who": "Woman in blue with cream veil",
-          "head": [
-            101,
-            407,
-            156,
-            501
-          ]
-        },
-        {
-          "nr": 4,
-          "who": "Faint figure behind the woman",
-          "head": [
-            162,
-            466,
-            189,
-            521
-          ]
-        },
-        {
-          "nr": 5,
-          "who": "Curly-haired bearded man in green",
-          "head": [
-            258,
-            388,
-            333,
-            513
-          ]
-        },
-        {
-          "nr": 6,
-          "who": "Dark-haired bearded man in white",
-          "head": [
-            391,
-            445,
-            470,
-            575
-          ]
-        },
-        {
-          "nr": 7,
-          "who": "Woman in blue behind the praying woman",
-          "head": [
-            643,
-            438,
-            679,
-            504
-          ]
-        },
-        {
-          "nr": 8,
-          "who": "Praying woman in blue with cream veil",
-          "head": [
-            680,
-            383,
-            727,
-            470
-          ]
-        },
-        {
-          "nr": 9,
-          "who": "Faint figure behind the praying woman",
-          "head": [
-            736,
-            408,
-            763,
-            475
-          ]
-        },
-        {
-          "nr": 10,
-          "who": "Dark-haired man in rust robe embracing another man",
-          "head": [
-            791,
-            293,
-            849,
-            390
-          ]
-        },
-        {
-          "nr": 11,
-          "who": "Bearded man in blue and cream head covering",
-          "head": [
-            837,
-            284,
-            903,
-            383
-          ]
-        },
-        {
-          "nr": 12,
-          "who": "Bearded man in blue with pale head covering",
-          "head": [
-            929,
-            322,
-            971,
-            408
-          ]
-        },
-        {
-          "nr": 13,
-          "who": "Woman in blue with cream veil at right",
-          "head": [
-            953,
-            399,
-            991,
-            483
-          ]
-        }
-      ],
-      "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "9ec93e2817467102",
-      "datum": "2026-10-28",
-      "plan_sha": "dd8831d3cf0ebb4a",
-      "regeln_version": "2026-10-28c",
-      "prozess": "PROC-BILD-AQUARELL@2.3"
-    },
-    "schluss": {
-      "ergebnis": "bestanden",
-      "punkte": 1,
-      "kern": 1,
-      "kern_fehlt_de": "Die Taufszene und die Umarmung passen zur Erneuerung und Versöhnung. Gottes Erbarmen, die Wiedergeburt durch den Heiligen Geist und die Hoffnung auf ewiges Leben bleiben jedoch unklar.",
-      "regeln": [
-        {
-          "id": "S-GESICHT",
-          "ebene": "kachel",
-          "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No speech bubbles are visible."
-        },
-        {
-          "id": "S-LESBAR",
-          "ebene": "kachel",
-          "stufe": "pflicht",
-          "de": "Alle Worte vollständig und lesbar",
-          "ergebnis": "ok",
-          "antwort": "yes",
-          "grund": "The caption and panel number are complete and readable."
-        }
-      ],
-      "blind": {
-        "action": "A man in green holds the arm and shoulder of a man in white as they stand in the water. On the bank, two men embrace while other figures stand nearby.",
-        "story_guess": "Possibly the baptism of Jesus by John in the Jordan, at the moment they stand together in the water. The identification is uncertain because no distinctive symbols are visible.",
-        "text_in_picture": [
-          {
-            "text": "Nach seinem Erbarmen hat er uns gerettet",
-            "speech_bubble_owner": null
-          },
-          {
-            "text": "2",
-            "speech_bubble_owner": null
-          }
-        ]
-      },
-      "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "cc2005893228ea28",
-      "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.3"
-    }
-  },
-  "TIT-003-W1": {
-    "datei": "img/TIT-003-W1.webp",
-    "lauf": "20261028-175410-auto-neu",
-    "variante": "r1v1",
-    "modell": "gpt-image-2.5-flare",
-    "uebernommen": "2026-10-28",
-    "pruefung": {
-      "ergebnis": "unklar",
-      "punkte": 4,
-      "kern": 1,
-      "kern_fehlt_de": "Titus und seine Aufforderung zu guten Werken sowie die Warnung vor nutzlosen Streitfragen werden nicht eindeutig erkannt.",
-      "regeln": [
-        {
-          "id": "G-RAND",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No person or important object is visibly cut off by the picture edge."
         },
         {
           "id": "G-SCHRIFT",
@@ -9041,7 +8654,7 @@
           "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The scroll has short marks, but no discernible letters, words or numbers."
+          "grund": "No text or speech bubbles are visible."
         },
         {
           "id": "G-NIMBUS",
@@ -9050,7 +8663,7 @@
           "de": "Kein Heiligenschein",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No halo or glowing ring is visible."
+          "grund": "No halos are visible."
         },
         {
           "id": "G-EFFEKT",
@@ -9068,7 +8681,7 @@
           "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clearly modern or anachronistic items are visible."
+          "grund": "No clearly modern objects or clothing details are visible."
         },
         {
           "id": "G-KOERPER",
@@ -9077,7 +8690,7 @@
           "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clear extra or missing limbs or malformed faces are visible."
+          "grund": "No clear anatomical abnormalities are visible."
         },
         {
           "id": "G-DOPPELT",
@@ -9095,7 +8708,7 @@
           "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clear caricature or ethnic stereotype is visible."
+          "grund": "No clear caricatures or ethnic stereotypes are visible."
         },
         {
           "id": "G-PROPORTION",
@@ -9104,16 +8717,16 @@
           "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The adults have generally natural proportions."
+          "grund": "The adults have natural-looking proportions."
         },
         {
           "id": "G-REDUKTION",
           "ebene": "allgemein",
           "stufe": "soll",
-          "de": "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten",
-          "ergebnis": "fehler",
-          "antwort": "no",
-          "grund": "There is much white paper, but also visible fabric folds, hair and textured stonework."
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The light watercolour leaves much white paper and has a simple background."
         },
         {
           "id": "G-OBEN",
@@ -9131,7 +8744,7 @@
           "de": "Titus erkennbar (moosgrünes Gewand, kurzes lockiges Haar)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "A short-haired, dark-haired man wears a moss-green robe."
+          "grund": "A curly dark-haired, bearded man wears a moss-green robe."
         },
         {
           "id": "F-GEMEINDE-GEMISCHT",
@@ -9140,240 +8753,199 @@
           "de": "Gemeinde aus Männern und Frauen",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Both men and women are visible in blue clothing."
+          "grund": "Both men and women wear blue robes."
         },
         {
-          "id": "F-IRRLEHRER-NEUTRAL",
-          "ebene": "figur",
-          "stufe": "pflicht",
-          "de": "Verführer ohne Merkmale einer Volksgruppe oder Religion",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No specific religious or ethnic markers are clearly visible on the grey-brown-robed men."
-        },
-        {
-          "id": "W1-ARBEIT",
+          "id": "C2-TAUFE",
           "ebene": "feld",
           "stufe": "pflicht",
-          "de": "Glaubende arbeiten mit den Händen",
+          "de": "Taufe im Fluss",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Several people handle stones together at a wall."
+          "grund": "A man stands in the water while another supports his arm."
         },
         {
-          "id": "W1-STREIT",
-          "ebene": "feld",
-          "stufe": "pflicht",
-          "de": "Zwei streiten über eine lange Rolle",
-          "ergebnis": "unklar",
-          "antwort": "unclear",
-          "grund": "Two men gesture toward each other beside an unrolled scroll, but an argument is not certain.",
-          "stimmen": [
-            "unklar",
-            "unklar",
-            "ok"
-          ]
-        },
-        {
-          "id": "W1-ABGEWANDT",
+          "id": "C2-VERSOEHNT",
           "ebene": "feld",
           "stufe": "soll",
-          "de": "Titus wendet sich vom Streit ab",
+          "de": "Zwei umarmen sich versöhnt",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The green-robed man faces left, away from the two men on the right."
+          "grund": "Two people are visibly embracing."
+        },
+        {
+          "id": "C2-KEIN-ZEICHEN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Keine Taube, kein Licht vom Himmel",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No dove or distinct light from the sky is visible."
         }
       ],
       "koepfe": {
         "FIG-TITUS": {
           "kopf": [
-            530,
-            275,
-            599,
-            386
+            285,
+            394,
+            370,
+            530
           ],
           "sicher": "gitter"
         },
         "FIG-GRUPPE-GLAUBENDE": {
           "kopf": [
-            258,
-            528,
-            321,
-            623
-          ],
-          "sicher": "gitter"
-        },
-        "FIG-GRUPPE-IRRLEHRER": {
-          "kopf": [
-            764,
-            355,
-            817,
-            443
+            754,
+            337,
+            810,
+            429
           ],
           "sicher": "gitter"
         }
       },
       "blind": {
-        "action": "Several people handle stones beside a low wall while the central man points toward them. On the right, two men gesture toward one another, one holding an unrolled scroll.",
-        "story_guess": "Possibly Jesus referring to the stone rejected by the builders, while addressing religious leaders, as in Matthew 21:42. The scene is not specific enough to identify the story or moment confidently.",
-        "cut_off": "",
+        "action": "Two men stand together in the water, with one supporting the other's arm as they look at each other. On the right bank, two people embrace while others stand nearby.",
+        "story_guess": "Possibly the baptism of Jesus by John the Baptist, with the two men standing in the river just before or after the baptism. No immersion or pouring of water is shown, so the exact moment is uncertain.",
+        "cut_off": "The clothing of the man at the far right is cut off by the picture edge.",
         "text_in_picture": "",
-        "style": "A softly colored watercolor-style illustration with detailed foreground figures and a loosely suggested background."
+        "style": "A softly colored watercolor-style illustration with loose outlines and moderate detail."
       },
       "personen": [
         {
           "nr": 1,
-          "who": "Dark-haired person in blue and cream, leaning forward",
+          "who": "Faint figure in the far-left background",
           "head": [
-            97,
-            420,
-            162,
-            505
+            31,
+            467,
+            51,
+            508
           ]
         },
         {
           "nr": 2,
-          "who": "Bearded man in blue and cream",
+          "who": "Faint figure behind the left group",
           "head": [
-            214,
-            426,
-            263,
-            503
+            61,
+            447,
+            82,
+            489
           ]
         },
         {
           "nr": 3,
-          "who": "Faint blue-grey figure in background",
+          "who": "Woman in blue with a cream veil",
           "head": [
-            275,
-            480,
-            293,
-            512
+            88,
+            404,
+            140,
+            491
           ]
         },
         {
           "nr": 4,
-          "who": "Kneeling woman in blue with cream head covering",
+          "who": "Bearded man in blue and cream",
           "head": [
-            258,
-            528,
-            321,
-            623
+            148,
+            400,
+            185,
+            473
           ]
         },
         {
           "nr": 5,
-          "who": "Faint background figure behind the women",
+          "who": "Faint figure behind the left group",
           "head": [
-            305,
-            498,
-            321,
-            527
+            201,
+            458,
+            219,
+            499
           ]
         },
         {
           "nr": 6,
-          "who": "Standing woman in blue and cream",
+          "who": "Curly-haired, bearded man in a moss-green robe",
           "head": [
-            323,
-            441,
-            373,
-            526
+            285,
+            394,
+            370,
+            530
           ]
         },
         {
           "nr": 7,
-          "who": "Dark-haired, bearded man in moss-green robe",
+          "who": "Long-haired, bearded man in white",
           "head": [
-            530,
-            275,
-            599,
-            386
+            420,
+            454,
+            500,
+            588
           ]
         },
         {
           "nr": 8,
-          "who": "Faint blue figure in background",
+          "who": "Curly-haired man in blue embracing another man",
           "head": [
-            652,
-            552,
-            673,
-            582
+            754,
+            337,
+            810,
+            429
           ]
         },
         {
           "nr": 9,
-          "who": "Faint pale figure in background",
+          "who": "Man in a cream head covering being embraced",
           "head": [
-            669,
-            499,
-            687,
-            533
+            793,
+            349,
+            848,
+            431
           ]
         },
         {
           "nr": 10,
-          "who": "Faint grey-blue figure in background",
+          "who": "Woman in blue with a cream overmantle",
           "head": [
-            682,
-            550,
-            700,
-            583
+            876,
+            417,
+            910,
+            488
           ]
         },
         {
           "nr": 11,
-          "who": "Bearded man in grey-brown robe, gesturing",
+          "who": "Bearded man in blue behind the woman",
           "head": [
-            764,
-            355,
-            817,
-            443
+            908,
+            374,
+            947,
+            460
           ]
         },
         {
           "nr": 12,
-          "who": "Faint background figure behind the grey-robed men",
+          "who": "Older bearded man with a cream head covering",
           "head": [
-            795,
-            588,
-            811,
-            613
-          ]
-        },
-        {
-          "nr": 13,
-          "who": "Faint background figure beside the scroll",
-          "head": [
-            820,
-            554,
-            837,
-            583
-          ]
-        },
-        {
-          "nr": 14,
-          "who": "Bearded man in grey-brown robe holding a scroll",
-          "head": [
-            868,
-            341,
-            923,
-            434
+            945,
+            401,
+            984,
+            493
           ]
         }
       ],
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "9a4daeff7345fb44",
+      "bild_sha": "67f53acae2cd0290",
       "datum": "2026-10-28",
-      "plan_sha": "8300d6a52cbbb185",
-      "regeln_version": "2026-10-28c",
-      "prozess": "PROC-BILD-AQUARELL@2.3"
+      "plan_sha": "ab16c8a849a491c3",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.3",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
     },
     "schluss": {
       "ergebnis": "bestanden",
       "punkte": 1,
       "kern": 1,
-      "kern_fehlt_de": "Titus und seine Aufforderung zu guten Werken sind nicht eindeutig erkennbar; auch die Warnung, nutzlose Streitfragen und Gesetzesstreit zu meiden, bleibt unklar.",
+      "kern_fehlt_de": "Die Wasserszene passt zum Bad der Wiedergeburt, doch Gottes Erbarmen, die Erneuerung durch den Heiligen Geist und die Hoffnung auf ewiges Leben sind nicht erkennbar. Die Taufe Jesu bleibt eine ungesicherte Vermutung.",
       "regeln": [
         {
           "id": "S-GESICHT",
@@ -9391,16 +8963,404 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The caption text is complete and readable."
+          "grund": "The caption is complete and readable."
         }
       ],
       "blind": {
-        "action": "On the left, people handle stones around a partly built wall while the central man points toward them. On the right, two men face and gesture toward each other, one holding a long scroll.",
-        "story_guess": "The central figure may represent Jesus, and the German caption means “Good deeds.” The picture may illustrate a teaching about good works, but no particular Bible story or exact moment is identifiable from the image alone.",
+        "action": "Two men stand in the water holding hands, with the man in green supporting the man in white. On the right bank, two people embrace while others stand nearby.",
+        "story_guess": "Possibly a baptism, perhaps Jesus being baptized by John in the Jordan, with the two standing in the water before or after immersion. Their identities are not visually certain, and immersion is not shown.",
+        "text_in_picture": [
+          {
+            "text": "2",
+            "location": "Bottom left, inside a circle"
+          },
+          {
+            "text": "Nach seinem Erbarmen hat er uns gerettet",
+            "location": "Bottom, beneath the illustration"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "f3b75426d0a40d91",
+      "datum": "2026-10-28",
+      "prozess": "PROC-BILD-AQUARELL@2.3"
+    }
+  },
+  "TIT-003-W1": {
+    "datei": "img/TIT-003-W1.webp",
+    "lauf": "20261028-213102-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-10-28",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 5,
+      "kern": 1,
+      "kern_fehlt_de": "Die Gegenüberstellung von guten Werken und Streit ist erkennbar, aber Titus und seine Aufforderung, gute Werke zu fördern und nutzlose Streitfragen zu meiden, bleiben unklar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and objects remain within the picture edges."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The scroll has short marks, but no discernible letters or words."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical defect is visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No two figures are clearly the same individual."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No obvious caricature or ethnic stereotype is visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have broadly natural proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The picture is a light watercolour with extensive white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "F-TITUS",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Titus erkennbar (moosgrünes Gewand, kurzes lockiges Haar)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A dark-haired, bearded man wears a moss-green robe."
+        },
+        {
+          "id": "F-GEMEINDE-GEMISCHT",
+          "ebene": "figur",
+          "stufe": "soll",
+          "de": "Gemeinde aus Männern und Frauen",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Both men and women wear blue and pale cream clothing."
+        },
+        {
+          "id": "F-IRRLEHRER-NEUTRAL",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Verführer ohne Merkmale einer Volksgruppe oder Religion",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No specific religious or ethnic markers are clearly visible on the grey-brown-robed men."
+        },
+        {
+          "id": "W1-ARBEIT",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Glaubende arbeiten mit den Händen",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "People handle stones together beside a partially built wall."
+        },
+        {
+          "id": "W1-STREIT",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Zwei streiten über eine lange Rolle",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Two men gesture animatedly toward each other over a long scroll."
+        },
+        {
+          "id": "W1-ABGEWANDT",
+          "ebene": "feld",
+          "stufe": "soll",
+          "de": "Titus wendet sich vom Streit ab",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The green-robed man faces left, away from the two men on the right."
+        }
+      ],
+      "koepfe": {
+        "FIG-TITUS": {
+          "kopf": [
+            495,
+            346,
+            561,
+            449
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-GRUPPE-GLAUBENDE": {
+          "kopf": [
+            85,
+            396,
+            155,
+            494
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-GRUPPE-IRRLEHRER": {
+          "kopf": [
+            758,
+            397,
+            819,
+            491
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "Several people handle stones beside a low wall, while the man in green points toward them. On the right, two men face each other and gesture over a long scroll.",
+        "story_guess": "Possibly Nehemiah and the rebuilding of Jerusalem's wall, but the picture alone does not establish a specific Bible story or exact moment.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly coloured watercolor-style illustration with loosely rendered backgrounds and moderately detailed foreground figures."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Bearded man in blue carrying a stone",
+          "head": [
+            85,
+            396,
+            155,
+            494
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Crouching man in blue",
+          "head": [
+            92,
+            609,
+            150,
+            711
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Woman in blue with a pale head covering",
+          "head": [
+            151,
+            437,
+            210,
+            529
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Faint background figure behind the women",
+          "head": [
+            216,
+            474,
+            237,
+            512
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Woman in blue and cream receiving a stone",
+          "head": [
+            245,
+            456,
+            305,
+            552
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Faint background figure",
+          "head": [
+            311,
+            495,
+            332,
+            529
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Faint background figure",
+          "head": [
+            337,
+            516,
+            354,
+            544
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Older woman in a rose-colored robe and pale veil",
+          "head": [
+            369,
+            482,
+            423,
+            566
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "Dark-haired bearded man in a green robe",
+          "head": [
+            495,
+            346,
+            561,
+            449
+          ]
+        },
+        {
+          "nr": 10,
+          "who": "Faint background figure",
+          "head": [
+            619,
+            511,
+            640,
+            548
+          ]
+        },
+        {
+          "nr": 11,
+          "who": "Faint background figure",
+          "head": [
+            649,
+            533,
+            668,
+            566
+          ]
+        },
+        {
+          "nr": 12,
+          "who": "Bearded grey-brown-robed man pointing at a scroll",
+          "head": [
+            758,
+            397,
+            819,
+            491
+          ]
+        },
+        {
+          "nr": 13,
+          "who": "Grey-brown-robed man gesturing",
+          "head": [
+            864,
+            401,
+            927,
+            492
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "9fa1a2fe4b8ff6c9",
+      "datum": "2026-10-28",
+      "plan_sha": "bd0520f64da8540d",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.3",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Titus und seine Anweisung werden nicht eindeutig erkannt; der Gegensatz zwischen guten Werken und nutzlosen Streitfragen bleibt unklar.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption and number are complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "People on the left handle stones around a low wall while the man in green points toward them. On the right, two men face each other and gesture beside a long scroll, which one of them points to.",
+        "story_guess": "The central figure may represent Jesus teaching about good works, but the picture does not clearly identify a particular Bible story or moment.",
         "text_in_picture": [
           {
             "text": "1",
-            "where": "Circled at bottom left"
+            "where": "Circled at the bottom left"
           },
           {
             "text": "Gute Werke",
@@ -9409,7 +9369,7 @@
         ]
       },
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "9b127bd7a9a35dfe",
+      "bild_sha": "f92a024a1bc8e457",
       "datum": "2026-10-28",
       "prozess": "PROC-BILD-AQUARELL@2.3"
     }

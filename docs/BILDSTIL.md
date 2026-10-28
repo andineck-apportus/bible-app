@@ -134,6 +134,10 @@ Jede Regel ist **Pflicht** (sonst ist das Bild unbrauchbar) oder **Soll** (zähl
 - Gefühle über Körper und Geste beschreiben, nicht nur über das Gesicht: Im reduzierten Stil liest das Prüfmodell Furcht erst an Haltung und Händen (Mk 4,41: sechs Versuche mit «awed and afraid» scheiterten).
 - «kenn_en» (Wiedererkennen einer Figur) nur mit Merkmalen, die in jeder Einstellung sichtbar sind – Gesicht, Haar, Kleidung, nicht Füsse.
 - Wer zuerst spricht, steht im Bild links («LEFT»/«RIGHT» im Auftrag nach der Reihenfolge der Reden).
+- Handlungen, die die Prüfung erkennen soll («lehrt», «widerspricht», «streitet»), über eindeutige Körpersprache beschreiben (offener Mund, erhobene Hände, gerunzelte Stirn, wem zugewandt) und die Regel nach genau diesen Zeichen fragen (Titus, Läufe 36 und 39).
+- Malauftrag und Regel dürfen sich nicht widersprechen: «blickt vom Brief auf» und «liest sichtbar» zugleich ist nicht erfüllbar (Tit 3,12–15, sechs Runden ohne Ergebnis).
+- Jede gezeigte Figur, jeder Gegenstand und Ort braucht eine Beschreibung in «figuren»; das Werkzeug prüft das vor dem Malen.
+- **Darstellungsform zuerst** (Titus, Andi Neck 2026-10-28): Der Prozess hat jedes Feld als Szene gemalt, auch Anweisungen und Listen eines Briefs; solche Bilder sind ausgedacht (R/I) und wenig aussagekräftig. Die Form wird nach Abschnitt 2 aus dem Inhalt gewählt – Szene nur, wo der Text eine hat; sonst Strukturbild, Objekt, Schema oder kein Bild. Gemischt erlaubt: auch in einer Erzählung erhält ein struktureller Inhalt ein eigenes Feld in passender Form ([ENTSCHEIDUNGEN.md](ENTSCHEIDUNGEN.md)).
 - Zu jeder B-Aussage, die man sehen kann, eine Feldregel; zu jeder bewussten Lücke des Texts (offenes Ende, keine Verwandlung, kein Schlag) eine «nicht»-Regel.
 
 **Regelwerk verbessern:** Fällt einem Menschen an einem «ki-geprueft»-Bild etwas auf, wird daraus eine Regel auf der passenden Ebene (allgemein, Figur oder Feld) und alle betroffenen Bilder laufen mit `auto-pruefen` erneut. Ein Hinweis, der keine Regel wird, ist keine Verbesserung des Verfahrens.
