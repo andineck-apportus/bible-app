@@ -126,6 +126,8 @@ Jede Regel ist **Pflicht** (sonst ist das Bild unbrauchbar) oder **Soll** (zähl
 
 **Prüfstufen** (`check.stufe`): `entwurf` (nicht oder nicht vollständig bestanden) → `ki-geprueft` (alle Pflichtregeln und Schlussprüfung bestanden, aktuell) → `fachlich-geprueft` (nur mit Name der prüfenden Person). «ki-geprueft» ist keine fachliche Freigabe.
 
+**Detailgrad** (Entscheid Andi Neck 2026-10-28 nach einer Stilprobe mit drei Einstellungen): wie die Stilvorlage. Stärker reduzierte Bilder malten vor allem kleinere Figuren, und Gesichter und Gesten wurden schlechter lesbar. G-REDUKTION (Soll) prüft deshalb freies Papier und schlichten Hintergrund, nicht Gesichter, Falten oder Haar.
+
 **Feste Prüfungen im Werkzeug** (ohne KI, bei jedem Lauf): Zitate in Blasen wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen (sonst unter 16 px Schrift), sonst kürzeres Stichwort aus dem Text des Felds im Szenenplan («band»); jede Blase hat einen freien Platz über bzw. neben dem Kopf, mit Schrift von mindestens 19 (von 600) – kleiner wird sie auf dem Handy unleserlich; wer zuerst spricht, steht links (Lesereihenfolge der Blasen). Diese Regeln gelten schon bei der Wahl der Variante: ein Bild ohne Platz für die Blasen wird neu gemalt.
 
 **Szenenpläne schreiben** (gelernt aus den ersten Läufen):

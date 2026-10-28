@@ -9,6 +9,8 @@ Entscheid Andi Neck (2026-10-28) nach der Kalibrierung.
 - **Gesicht Jesu:** Die Regel bleibt; von vorn, schräg oder im Profil gilt als sichtbar (vorher Fehlalarm bei Mk 4 im Profil).
 - **Titus:** Szenenplan für alle acht Abschnitte und drei Kapitel (18 Felder, `szenen-tit.json`). Brief statt Erzählung: die Bilder zeigen, wie die Anweisungen gelebt werden (Ausgestaltung mit B/R/I); Gott wird nicht gemalt, die Verführer tragen keine Merkmale einer Volksgruppe, das Kreter-Zitat wird nicht gemalt; eine einzige Blase mit wörtlichem Brieftext ([[TIT.3.15]]).
 - Bildlauf darf bis 180 Minuten dauern.
+- **Stilprobe** (Schritt `auto-stilprobe`): Joh 2 K2 und Lk 15 L2 wie bisher, mit verschärfter Reduktion und ohne Stilvorlage gemalt. Stärker reduziert hiess vor allem kleinere Figuren (bemaltes Papier 41 % → 25–29 %), Gesichter und Gesten wurden schlechter lesbar. Entscheid Andi Neck: Stil bleibt wie bisher; die Regel G-REDUKTION prüft nun freies Papier und schlichten Hintergrund statt Einzelheiten in Gesicht und Kleidung (Regeln 2026-10-28d).
+- G-DOPPELT: gleich gekleidete Mitglieder einer Gruppe zählen nicht als dieselbe Person (Regeln 2026-10-28c). Neuprüfung behält eine vollständige Blasenanordnung, wenn die neue Ortung keinen Platz findet.
 
 ## v0.143 — 2026-10-28 — Erklärung so breit wie das Bild, Rahmen vollständig
 

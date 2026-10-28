@@ -299,7 +299,7 @@ Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Rege
 10. **Prüfvermerk** (Werkzeug (feste Prüfung)): Ergebnis mit Fingerabdruck von Bild, Regeln, Szenenplan und Verfahren im Datensatz; Stufe «geprüft» nur, wenn alle Felder bestanden. Ändert sich etwas, gilt die Prüfung als veraltet.
 
 *Weiter, wenn:* Alle Pflichtregeln und die Schlussprüfung bestanden.
-*Regeln:* scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28c
+*Regeln:* scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d
 *Ausführlich:* docs/BILDSTIL.md
 
 ### Fassung 2.2 – gültig ab 2026-10-28
