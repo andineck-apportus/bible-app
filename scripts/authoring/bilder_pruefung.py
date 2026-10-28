@@ -330,7 +330,7 @@ def txt_schluss(sprech, fig):
             fr.append(f'- B{n}: Is the bubble with the words «{sp["de"]}» a thought bubble (rounded, with a trail of small circles instead of a pointed tail), and do the circles lead to {wer}?')
         else:
             fr.append(f'- B{n}: Does the tail of the speech bubble with the words «{sp["de"]}» point clearly at {wer}?')
-    fr.append("- S-GESICHT: Does any speech bubble cover a face, a hand that gestures, or an important object?")
+    fr.append("- S-GESICHT: Does any speech bubble cover a face, a gesturing hand, or the main action of the scene? (Touching the tip of a mast, a roof, a tree or the sky does not count.)")
     fr.append("- S-LESBAR: Is all lettering (bubbles and caption band) complete and readable, not cut off or overlapping?")
     return "\n".join(fr)
 
@@ -342,7 +342,7 @@ def pruefe_kachel(schluessel, png, sprech, fig, moment_de):
     q = frage(schluessel, SYS_SCHLUSS, "Answer each question separately:\n" + txt_schluss(sprech, fig)
               + '\nReturn JSON: {"questions": {id: {"answer": "yes" | "no" | "unclear", "reason"}}}', png)
     regeln = [{"id": f"B{n}", "art": "muss", "stufe": "pflicht", "de": f"Blase {n} zeigt auf den Sprecher ({sp['from']})", "ebene": "kachel"} for n, sp in enumerate(sprech, 1)]
-    regeln += [{"id": "S-GESICHT", "art": "nicht", "stufe": "pflicht", "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand", "ebene": "kachel"},
+    regeln += [{"id": "S-GESICHT", "art": "nicht", "stufe": "pflicht", "de": "Keine Blase über Gesicht, Geste oder Haupthandlung", "ebene": "kachel"},
                {"id": "S-LESBAR", "art": "muss", "stufe": "pflicht", "de": "Alle Worte vollständig und lesbar", "ebene": "kachel"}]
     erg = bewerte(regeln, q.get("questions", {}))
     offen = [e["id"] for e in erg if e["ergebnis"] != "ok"]
