@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: bildpilot
+  group: bildpilot-struktur
   cancel-in-progress: false
 
 jobs:
@@ -53,4 +53,4 @@ jobs:
           cp -r "$RUNNER_TEMP/struktur/." ausgabe/struktur/
           git add ausgabe
           git commit -qm "Bildpilot Struktur: Lauf $LAUF"
-          git push origin bildpilot-ausgabe
+          for i in 1 2 3 4 5; do git push origin bildpilot-ausgabe && break; sleep 20; git fetch --depth 1 origin bildpilot-ausgabe; git rebase FETCH_HEAD; done
