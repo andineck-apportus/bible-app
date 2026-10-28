@@ -213,6 +213,9 @@ aq21 = [
     s("w10", "werkzeug", "Prüfvermerk", "Ergebnis mit Fingerabdruck von Bild, Regeln, Szenenplan und Verfahren im Datensatz; Stufe «geprüft» nur, wenn alle Felder bestanden. Ändert sich etwas, gilt die Prüfung als veraltet.",
       "Prüfstufe im Datensatz"),
 ]
+aq22 = ersetze(ersetze(aq21, "w8", s("w8", "werkzeug", "Blasen setzen", "Blasen nur auf leerem Papier: eine Belegungskarte aus dem Bild selbst zeigt, wo gemalt ist (Figuren, Hände, gehaltene Dinge, Bauten); dazu die georteten Köpfe. Beste Anordnung aller Blasen über den Köpfen, mindestens 12 Punkte vom Bildrand, Schrift mindestens 19, keine Spitze läuft durch eine andere Blase. Umriss und Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen; Gedanken als Wolke.")),
+               "w9", s("w9", "pruefung", "Schlussprüfung", "Eine weitere Instanz prüft die fertige Kachel: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste, gehaltenem Gegenstand oder Haupthandlung, alle Worte lesbar, Moment getroffen (mindestens 1 von 2).",
+                       prueft=["Sprecher richtig", "nichts verdeckt", "lesbar", "Moment"], zurueck=("w8", "zweiter Blasenversuch nur im oberen Band")))
 aq20 = ersetze(ersetze(ohne(aq21, "w6"), "w5", s("w5", "pruefung", "Regeln prüfen", "Dieselbe Instanz beantwortet jede Regel einzeln (allgemein, Figur, Feld), zählt verlangte Dinge und gibt Kopfpositionen an.", prueft=["alle Pflichtregeln erfüllt"])),
                "w7", s("w7", "werkzeug", "Variante wählen", "Brauchbar ist eine Variante, die alle Pflichtregeln erfüllt; gewählt wird die mit den meisten Punkten.", prueft=["Pflichtregeln"],
                        zurueck=("w3", "keine brauchbare Variante: neu malen mit Hinweis, höchstens drei Runden")))
@@ -232,6 +235,8 @@ P["PROC-BILD-AQUARELL"] = {"names": {"de": "Bilder im Aquarellstil", "en": "Wate
         fassung("2.0", "2026-10-28", "Automatische Prüfung: Regeln auf drei Ebenen, Wahl der Variante, Blasen und Schlussprüfung ohne Handarbeit.", aq20,
                 "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28"], docs=["docs/BILDSTIL.md"]),
         fassung("2.1", "2026-10-28", "Köpfe auf Koordinatengitter, Zweitmeinung (Mehrheit aus drei), beste Blasenanordnung, feste Regeln für Platz, Schriftgrösse und Reihenfolge schon bei der Wahl.", aq21,
+                "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28b"], docs=["docs/BILDSTIL.md"]),
+        fassung("2.2", "2026-10-28", "Blasen nur auf leerem Papier (Belegungskarte aus dem Bild), Mindestabstand zum Rand, keine Spitze durch eine andere Blase; Umriss mit Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen (Hinweise Herausgeber).", aq22,
                 "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28b"], docs=["docs/BILDSTIL.md"])]}
 
 # ------------------------------------------------------------------ Freigabe

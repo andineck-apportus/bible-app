@@ -410,6 +410,11 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .tile-box[data-span="2"]>.tile-cap{max-width:680px}
 #bible-stream .tile-cap[hidden]{display:none}
 #bible-stream .tile-cap b{font-weight:600}
+#bible-stream .tile-cap .tc-act{margin:0}
+#bible-stream .tile-cap details.tc-sub{margin-top:6px;border-top:1px solid var(--rule);padding-top:4px}
+#bible-stream .tile-cap details.tc-sub>summary{cursor:pointer;font-size:.92em;color:var(--muted);padding:2px 0}
+#bible-stream .tile-cap details.tc-sub .note{margin:4px 0 0}
+#bible-stream .tile-cap ul.tc-ev{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:4px;font-size:.95em}
 @media (max-width:600px){#bible-stream .ill-tiles>svg.ill-tile[data-span="2"]:has(+ svg.ill-narrow){display:none}#bible-stream .ill-tiles>svg.ill-narrow{display:block}
   #bible-stream .tile-box[data-span="2"]:has(+ .tile-box.narrow){display:none}#bible-stream .tile-box.narrow{display:flex}
   /* Handy: Kacheln einzeln zum seitlichen Wischen wie ein Comic, die nächste schaut am Rand hervor (Versuch, Hinweis Andi Neck 2026-10-25) */
@@ -418,6 +423,12 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .tile-box>svg.ill-tile,#bible-stream .tile-box>.tile-cap{max-width:none}
   #bible-stream .ill-tiles>svg.ill-tile:only-of-type,#bible-stream .ill-tiles>svg.ill-tile[data-span="2"],#bible-stream .ill-tiles>.tile-box:only-child,#bible-stream .ill-tiles>.tile-box[data-span="2"]{flex-basis:100%}}
 #bible-stream .verse-ill .ill-tiles{justify-content:flex-start}
+#bible-stream .verse-ill{margin:22px 0 26px}
+#bible-stream details.legend-more{margin:12px 0 0;border-top:1px solid var(--rule);padding-top:6px}
+#bible-stream details.legend-more>summary{cursor:pointer;color:var(--muted);font:500 14px/1.6 var(--ui)}
+#bible-stream .verse-ill .tile-box{display:block}
+#bible-stream .verse-ill .tile-box>svg.ill-tile{margin:0 auto}
+#bible-stream .verse-ill .tile-cap{margin:4px auto 6px}
 #bible-stream .verse-ill figcaption{margin-top:2px}
 #bible-stream .ill.nowords text:not(.pn-n){visibility:hidden}
 #bible-stream .ill.nowords .dg-keep text{visibility:visible}
@@ -439,7 +450,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .app[data-show=text] .ill-wrap>.ill{display:none}
 #bible-stream .app[data-show=img] .stream-entry.verse.in-ill .verse-line,#bible-stream .app[data-show=img] .stream-entry.verse.in-ill .merk{display:none}
 #bible-stream .app[data-show=img] .stream-entry.has-ill>.actions-under{display:flex!important}
-#bible-stream .app.flow[data-show=img] .stream-entry.verse.in-ill .verse-ill{display:block;margin:10px 0 18px}
+#bible-stream .app.flow[data-show=img] .stream-entry.verse.in-ill .verse-ill{display:block;margin:22px 0 26px}
 #bible-stream .vill-break{display:none}
 #bible-stream .app[data-show=text] .nowords-btn{display:none!important}
 #bible-stream .entry-tools .ill-toggle,#bible-stream .part-tools .ill-toggle{margin-left:auto}
@@ -937,11 +948,22 @@ const illWide=il=>{const t=illTiles(il&&il.svg);return t?(t.filter(x=>!x.include
 // Bilder ohne Worte (Kapitelebene, Hinweis Andi Neck 2026-10-25): zum Abrufen nach dem Lernen. Die Worte im Bild und die
 // Zusammenfassung daneben sind verdeckt; Antippen eines Feldes oder Kästchens zeigt dessen Worte, Antippen des Textes den Text.
 const nwBtn=()=>`<button type="button" class="tool nowords-btn" data-nowords="1" aria-pressed="${!!S.nowords}" aria-label="${lang==='de'?'Ohne Worte':'No words'}" title="${lang==='de'?'Bild ohne Worte: Inhalt aus dem Gedächtnis zusammenbringen':'Picture without words: recall the content'}">${icon('nowords')}<span>${lang==='de'?'Ohne Worte':'No words'}</span></button>`;
-// Kacheln je Feld mit eigener Legende (Bildhilfe des Feldes), per Antippen ein- und ausblendbar; schmale Fassung gehört zum Feld davor
-function illTileBoxes(il,tap){const tiles=illTiles(il.svg);if(!tiles)return null;const it0=illItem(il.key),it=it0?LOC(it0):null;const caps=it?(it.evidence?(it.actions||it.panels.map(p=>p.action)):(it.captions||it.actions||[])):[];
-  let pi=-1;return `<div class="ill-tiles">${tiles.map(t=>{const narrow=t.includes('ill-narrow');if(!narrow)pi++;const c=caps[pi]||'',k=c.indexOf(': '),tt=k>0?c.slice(0,k):'',tx=k>0?c.slice(k+2):c;
+// Erklärung eines einzelnen Feldes, beim Antippen direkt unter dem Feld (Hinweis Andi Neck 2026-10-28): was man sieht, darunter
+// eingeklappt «Was ist belegt?» (B/R/I dieses Feldes) und «Mehr zum Bild» (Deutungshinweis, Prüfung, Prozess, Legende zu allen Feldern)
+function panelInfo(il,it,i){const L=lang==='de',t=T(),caps=it.evidence?(it.actions||it.panels.map(p=>p.action)):(it.captions||it.actions||[]),c=caps[i]||'';if(!c)return '';
+  const k=c.indexOf(': '),tt=k>0?c.slice(0,k):'',tx=k>0?c.slice(k+2):c,p=it.panels[i],ev=it.evidence&&it.evidence[i];
+  const more=[it.note&&`<p class="note">${rich(it.note)}</p>`,it.check&&`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`,it.proc&&`<p class="note">${procLink(it.proc)}</p>`,
+    `<p class="note">${L?'Ein Bild ist Deutung: Es legt mehr fest als der Text (Kleidung, Anordnung, Gewichtung).':'A picture is interpretation: it fixes more than the text does.'}</p>`,
+    `<p class="note"><button type="button" class="link soft" data-legend="${esc(il.key)}">${L?'Legende zu allen Feldern':'Legend for all panels'}</button></p>`].filter(Boolean).join('');
+  return `<p class="tc-act">${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}${p&&it.level!=='book'?` <span class="ref-small">${esc(refAny(p.ref))}</span>`:''}</p>`
+    +(ev&&ev.length?`<details class="tc-sub"><summary>${L?'Was ist belegt?':'What is attested?'}</summary><p class="note">${L?'B = steht im Text · R = rekonstruiert (plausible Ausgestaltung) · I = gedeutet':'B = in the text · R = reconstructed · I = interpreted'}</p><ul class="tc-ev">${ev.map(e=>`<li><b class="ev ev-${e.s}">${e.s}</b> ${esc(e.de)}${e.ref?` <span class="ref-small">${esc(refAny(e.ref))}</span>`:''}</li>`).join('')}</ul></details>`:'')
+    +`<details class="tc-sub"><summary>${L?'Mehr zum Bild':'More about the picture'}</summary>${more}</details>`;}
+// Kacheln je Feld mit eigener Erklärung, per Antippen ein- und ausblendbar; schmale Fassung gehört zum Feld davor.
+// idx: Feldnummern der Kacheln (Versebene: nur die Felder dieses Verses)
+function illTileBoxes(il,tap,tilesIn,idx){const tiles=tilesIn||illTiles(il.svg);if(!tiles)return null;const it0=illItem(il.key),it=it0?LOC(it0):null;
+  let pi=-1;return `<div class="ill-tiles">${tiles.map((t,ti)=>{const narrow=t.includes('ill-narrow');if(!narrow)pi++;const n=idx?idx[ti]:pi,info=it?panelInfo(il,it,n):'';
     const span=(t.match(/data-span="(\d)"/)||[])[1]||'1';
-    return `<div class="tile-box${narrow?' narrow':''}" data-span="${span}"${tap&&c?` role="button" tabindex="0" data-tilecap aria-expanded="false" title="${T().tileHint}"`:''}>${t}${c?`<div class="tile-cap" hidden>${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}</div>`:''}</div>`;}).join('')}</div>`;}
+    return `<div class="tile-box${narrow?' narrow':''}" data-span="${span}"${tap&&info?` role="button" tabindex="0" data-tilecap aria-expanded="false" title="${T().tileHint}"`:''}>${t}${info?`<div class="tile-cap" hidden>${info}</div>`:''}</div>`;}).join('')}</div>`;}
 const illFigure=(il,nw)=>{const off=nw&&S.nowords,boxes=illTileBoxes(il,!off);if(boxes)return `<figure class="ill${off?' nowords':''}"><div class="ill-img" role="img" aria-label="${esc(il.alt)}">${boxes}</div><figcaption><button type="button" class="link soft" data-legend="${esc(il.key)}">${T().legendTitle}</button>${illStyles(il.key,il.style)}</figcaption></figure>`;
   return `<figure class="ill${off?' nowords':''}"><div class="ill-img${illNarrow(il.svg)}" ${off?`role="img" aria-label="${esc(il.alt)}"`:`role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}"`}>${illSvg(il.svg)}</div>${illStyles(il.key,il.style)?`<figcaption>${illStyles(il.key,il.style)}</figcaption>`:''}</figure>`;};
 // Bilder auf Versebene (Hinweis Andi Neck 2026-10-26/27: mit dem Umschalter Text | Bild beim Abschnittstitel, für alle Abschnitte zusammen):
@@ -955,8 +977,8 @@ const villBtn=p=>{if(!ILL||S.ill==='off'||!p.part)return '';const il=illFor(p);r
 const inIll=n=>{const p=nodes.get(n.parent);if(!ILL||S.ill==='off'||!p||p.level!==5||!p.part)return false;const il=illFor(p);return !!(il&&il.panels&&illTiles(il.svg));};
 function verseIll(n){if(!ILL||S.ill==='off'||S.show==='text')return '';const p=nodes.get(n.parent);if(!p||p.level!==5||!p.part)return '';const il=illFor(p);if(!il||!il.panels)return '';
   const tiles=illTiles(il.svg);if(!tiles)return '';const groups=[];tiles.forEach(t=>{if(t.includes('ill-narrow')&&groups.length)groups[groups.length-1].push(t);else groups.push([t]);});
-  const out=[];il.panels.forEach((pn,i)=>{const r=refV(pn.ref);if(r.c===n.c&&r.v===n.v&&groups[i])out.push(groups[i].join(''));});
-  if(!out.length)return '';return `<span class="vill-break"></span><figure class="ill verse-ill"><div class="ill-tiles" role="button" tabindex="0" data-explain="${esc(il.key)}" aria-label="${esc(il.alt)} – ${T().explainHint}" title="${T().explainHint}">${out.join('')}</div></figure>`;}
+  const ts=[],idx=[];il.panels.forEach((pn,i)=>{const r=refV(pn.ref);if(r.c===n.c&&r.v===n.v&&groups[i])groups[i].forEach(t=>{ts.push(t);idx.push(i);});});
+  if(!ts.length)return '';return `<span class="vill-break"></span><figure class="ill verse-ill" aria-label="${esc(il.alt)}">${illTileBoxes(il,true,ts,idx)}</figure>`;}
 function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];if(!st||!it0)return;const it=LOC(it0),t=T(),L=lang==='de';
   const acts=it.actions||it.panels.map(p=>p.action),ORDER=['divine','people','thing','place','action','concept'],grp=l=>l.group||l.kind;
   // Bildhilfe je Feld: Nummer wie im Bild, Kurztitel fett, was man sieht und wofür die Zeichen stehen, Stelle klein dahinter
@@ -964,7 +986,7 @@ function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];i
   const steps=`<ol class="legend-panels${one?' one':''}">${it.panels.map((p,i)=>{const c=caps[i]||acts[i]||p.action,k=c.indexOf(': '),tt=k>0?c.slice(0,k):'',tx=k>0?c.slice(k+2):c;
     return `<li>${one?'':`<span class="lp-n">${p.n}</span>`}<span>${tt?`<b>${esc(tt)}</b> `:''}${rich(tx)}${it.level==='book'?'':` <span class="ref-small">${esc(refAny(p.ref))}</span>`}</span></li>`;}).join('')}</ol>`;
   const figs=(it.depicts||[]).map(id=>({id,lx:(ILL.lexicon||{})[id],r:(st.renderings||{})[id]})).filter(x=>x.lx&&x.r&&x.r.symbol).sort((a,b)=>ORDER.indexOf(grp(a.lx))-ORDER.indexOf(grp(b.lx)));
-  openSheet('legend',head(t.legendTitle)+steps+`<div class="ill-img legend-img${illNarrow(it.svg)}">${illSvg(it.svg)}</div>${illStyles(key,it0.style)}`+(figs.length?`<h4>${t.legendFigures}</h4><div class="legend-figs">${figs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.legend?(f.lx.legend[S.text]||f.lx.legend.de):f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'')+(it.evidence?`<h4>${L?'Was ist belegt?':'What is attested?'}</h4><p class="note">${L?'B = steht im Text · R = rekonstruiert (plausible Ausgestaltung) · I = gedeutet':'B = in the text · R = reconstructed · I = interpreted'}</p><ol class="legend-ev">${it.evidence.map((ev,i)=>`<li>${one?'':`<span class="lp-n">${i+1}</span>`}<ul>${ev.map(e=>`<li><b class="ev ev-${e.s}">${e.s}</b> ${esc(e.de)}${e.ref?` <span class="ref-small">${esc(refAny(e.ref))}</span>`:''}</li>`).join('')}</ul></li>`).join('')}</ol>`:'')+(it.note?`<p class="note">${rich(it.note)}</p>`:'')+(it.check?`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`:'')+(it.proc?`<p class="note">${procLink(it.proc)}</p>`:'')+`<p class="note">${it.evidence?(L?'Ein Bild ist Deutung: Es legt mehr fest als der Text (Kleidung, Anordnung, Gewichtung). Entwurf, gemalt mit einem Bildmodell; eigene Bilder (CC0). Stil:':'A picture is interpretation: it fixes more than the text does (clothing, arrangement, emphasis). Draft, painted with an image model; own pictures (CC0). Style:'):t.legendNote} ${esc(L?st.label.de:st.label.en)}.</p>`);}
+  openSheet('legend',head(t.legendTitle)+steps+`<div class="ill-img legend-img${illNarrow(it.svg)}">${illSvg(it.svg)}</div>${illStyles(key,it0.style)}`+(figs.length?`<h4>${t.legendFigures}</h4><div class="legend-figs">${figs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.legend?(f.lx.legend[S.text]||f.lx.legend.de):f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'')+(it.evidence?`<details class="legend-more"><summary>${L?'Was ist belegt?':'What is attested?'}</summary><p class="note">${L?'B = steht im Text · R = rekonstruiert (plausible Ausgestaltung) · I = gedeutet':'B = in the text · R = reconstructed · I = interpreted'}</p><ol class="legend-ev">${it.evidence.map((ev,i)=>`<li>${one?'':`<span class="lp-n">${i+1}</span>`}<ul>${ev.map(e=>`<li><b class="ev ev-${e.s}">${e.s}</b> ${esc(e.de)}${e.ref?` <span class="ref-small">${esc(refAny(e.ref))}</span>`:''}</li>`).join('')}</ul></li>`).join('')}</ol></details>`:'')+`<details class="legend-more"><summary>${L?'Mehr zum Bild':'More about the picture'}</summary>`+(it.note?`<p class="note">${rich(it.note)}</p>`:'')+(it.check?`<p class="note">${t.legendCheck} ${esc(it.check)}</p>`:'')+(it.proc?`<p class="note">${procLink(it.proc)}</p>`:'')+`<p class="note">${it.evidence?(L?'Ein Bild ist Deutung: Es legt mehr fest als der Text (Kleidung, Anordnung, Gewichtung). Entwurf, gemalt mit einem Bildmodell; eigene Bilder (CC0). Stil:':'A picture is interpretation: it fixes more than the text does (clothing, arrangement, emphasis). Draft, painted with an image model; own pictures (CC0). Style:'):t.legendNote} ${esc(L?st.label.de:st.label.en)}.</p></details>`);}
 
 /* ---------- Einträge ---------- */
 const entryM=id=>{const n=nodes.get(id);return marks(entry(id),n&&n.b!==undefined?DATA[n.b].code:null);};

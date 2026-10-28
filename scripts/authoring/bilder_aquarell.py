@@ -97,6 +97,48 @@ def zeilen(text, breite, fs):
     return best
 
 
+RAND_LINIE = "#8E9087"   # Blasenumriss: abgeschwächt (Hinweis Andi Neck 2026-10-28)
+RANDABSTAND = 12         # Mindestabstand der Blasen zum Bildrand (600×400)
+
+
+def _umriss(x, y, w, h, r, kante, basis, spitze, seed):
+    """Umriss einer Blase als ein einziger Pfad (Rahmen und Spitze zusammen, damit der Rand auch bei schräger Spitze
+    durchgeht), mit leichter, gleichbleibender Unruhe wie von Hand gezogen."""
+    import math
+    def bogen(cx, cy, a0, a1, n=6):
+        return [(cx + r * math.cos(math.radians(a0 + (a1 - a0) * i / n)), cy + r * math.sin(math.radians(a0 + (a1 - a0) * i / n))) for i in range(n + 1)]
+    pts = []
+    b1, b2 = basis
+    # oben (links→rechts)
+    pts += bogen(x + r, y + r, 180, 270)
+    if kante == "oben":
+        pts += [b1, spitze, b2]
+    pts += bogen(x + w - r, y + r, 270, 360)
+    if kante == "rechts":
+        pts += [b1, spitze, b2]
+    pts += bogen(x + w - r, y + h - r, 0, 90)
+    if kante == "unten":
+        pts += [b2, spitze, b1]
+    pts += bogen(x + r, y + h - r, 90, 180)
+    if kante == "links":
+        pts += [b2, spitze, b1]
+    # dichter abtasten und quer zur Linie leicht versetzen (deterministisch je Blase)
+    dicht = []
+    for (u0, v0), (u1, v1) in zip(pts, pts[1:] + pts[:1]):
+        l = math.hypot(u1 - u0, v1 - v0)
+        k = max(1, int(l / 9))
+        for i in range(k):
+            dicht.append((u0 + (u1 - u0) * i / k, v0 + (v1 - v0) * i / k))
+    out = []
+    for i, (u, v) in enumerate(dicht):
+        if (u, v) == spitze:
+            out.append((u, v))
+            continue
+        d = 0.75 * math.sin(i * 0.9 + seed) + 0.45 * math.sin(i * 2.3 + seed * 1.7)
+        out.append((u + d * math.cos(i + seed), v + d * math.sin(i * 1.3 + seed)))
+    return "M" + " L".join(f"{u:.1f},{v:.1f}" for u, v in out) + " Z"
+
+
 def blase(b, sp, n):
     fs = b.get("fs", 21)
     pad, lh = 14, fs + 4
@@ -104,38 +146,53 @@ def blase(b, sp, n):
     h = 2 * pad + lh * max(len(v) for v in lines.values()) - (lh - fs)
     x, y, w = b["x"], b["y"], b["w"]
     tx, ty = b["tail"]
-    # Spitze: kurzer Keil von der Rahmenkante, die der sprechenden Person zugewandt ist
+    r = min(18, h / 2)
+    # Spitze an der Kante, die der sprechenden Person zugewandt ist; Basis breiter bei schräger Spitze
     if ty > y + h:
-        cx = min(max(tx, x + 26), x + w - 26)
-        base, shift = [(cx - 11, y + h - 1), (cx + 11, y + h - 1)], (0, -2)
+        cx = min(max(tx, x + r + 12), x + w - r - 12)
+        br = 10 + min(6, abs(tx - cx) / 8)
+        kante, basis = "unten", [(cx - br, y + h), (cx + br, y + h)]
     elif tx > x + w:
-        cy = min(max(ty, y + 20), y + h - 20)
-        base, shift = [(x + w - 1, cy - 11), (x + w - 1, cy + 11)], (-2, 0)
+        cy = min(max(ty, y + r + 8), y + h - r - 8)
+        kante, basis = "rechts", [(x + w, cy - 9), (x + w, cy + 9)]
     elif tx < x:
-        cy = min(max(ty, y + 20), y + h - 20)
-        base, shift = [(x + 1, cy - 11), (x + 1, cy + 11)], (2, 0)
+        cy = min(max(ty, y + r + 8), y + h - r - 8)
+        kante, basis = "links", [(x, cy - 9), (x, cy + 9)]
     else:
-        cx = min(max(tx, x + 26), x + w - 26)
-        base, shift = [(cx - 11, y + 1), (cx + 11, y + 1)], (0, 2)
+        cx = min(max(tx, x + r + 12), x + w - r - 12)
+        kante, basis = "oben", [(cx - 10, y), (cx + 10, y)]
+    stil = f'stroke="{RAND_LINIE}" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"'
     if sp.get("denken"):  # Gedanke: Wolke mit kleinen Kreisen statt Spitze
-        bx, by = base[0][0] + (base[1][0] - base[0][0]) / 2, base[0][1] + (base[1][1] - base[0][1]) / 2
-        kreise = "".join(f'<circle cx="{bx + (tx - bx) * t:.0f}" cy="{by + (ty - by) * t:.0f}" r="{r_}" fill="{PAPER}" stroke="{INK}" stroke-width="1.2"/>'
+        bx, by = (basis[0][0] + basis[1][0]) / 2, (basis[0][1] + basis[1][1]) / 2
+        kreise = "".join(f'<circle cx="{bx + (tx - bx) * t:.0f}" cy="{by + (ty - by) * t:.0f}" r="{r_}" fill="{PAPER}" {stil}/>'
                          for t, r_ in ((0.3, 7), (0.62, 5), (0.9, 3.5)))
-        out = [f'<g class="ill-bubble ill-thought" data-speech="{n}">', kreise,
-               f'<rect x="{x}" y="{y}" width="{w}" height="{h:.0f}" rx="{min(h / 2, 34):.0f}" fill="{PAPER}" fill-opacity=".94" stroke="{INK}" stroke-width="1.2" stroke-dasharray="1 0"/>']
+        rr = min(h / 2, 34)
+        d = _umriss(x, y, w, h, rr, None, basis, None, n * 3.1 + 1)
+        out = [f'<g class="ill-bubble ill-thought" data-speech="{n}">', kreise, f'<path d="{d}" fill="{PAPER}" fill-opacity=".95" {stil}/>']
     else:
-        out = None
-    pts = " ".join(f"{u:.0f},{v:.0f}" for u, v in base) + f" {tx:.0f},{ty:.0f}"
-    out = out or [f'<g class="ill-bubble" data-speech="{n}">',
-           f'<polygon points="{pts}" fill="{PAPER}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>',
-           f'<rect x="{x}" y="{y}" width="{w}" height="{h:.0f}" rx="18" fill="{PAPER}" fill-opacity=".94" stroke="{INK}" stroke-width="1.2"/>',
-           f'<polygon points="{pts}" fill="{PAPER}" stroke="none" transform="translate({shift[0]} {shift[1]})"/>']
+        d = _umriss(x, y, w, h, r, kante, basis, (tx, ty), n * 3.1 + 1)
+        out = [f'<g class="ill-bubble" data-speech="{n}">', f'<path d="{d}" fill="{PAPER}" fill-opacity=".95" {stil}/>']
     for lg, ls in lines.items():
         y0 = y + pad + fs * 0.82 + (h - 2 * pad - (lh * len(ls) - (lh - fs))) / 2
         tsp = "".join(f'<tspan x="{x + w / 2:.1f}" y="{y0 + i * lh:.1f}">{html.escape(t)}</tspan>' for i, t in enumerate(ls))
         out.append(f'<text class="lw lw-{lg}" text-anchor="middle" font-family="sans-serif" font-size="{fs}" fill="#2F312C">{tsp}</text>')
     out.append("</g>")
     return "".join(out)
+
+
+def belegung(bild):
+    """Wo im Bild gemalt ist (600×400, wahr = belegt): alles, was sich vom Papier abhebt, etwas geweitet. Blasen dürfen nur auf
+    weitgehend leeres Papier (Hinweis Andi Neck 2026-10-28: nichts Wichtiges überdecken – Köpfe allein genügten nicht)."""
+    import io
+    import numpy as np
+    from PIL import Image, ImageFilter
+    daten = bild if isinstance(bild, bytes) else pathlib.Path(bild).read_bytes()
+    a = np.asarray(Image.open(io.BytesIO(daten)).convert("RGB").resize((W, H), Image.LANCZOS)).astype(int)
+    lum, spread = a.mean(axis=2), a.max(axis=2) - a.min(axis=2)
+    papier = float(np.percentile(lum, 95))
+    roh = (lum < papier - 18) | (spread > 38)
+    weit = Image.fromarray((roh * 255).astype("uint8")).filter(ImageFilter.MaxFilter(7))
+    return np.asarray(weit) > 0
 
 
 def _hoehe(sp, w, fs):
@@ -146,7 +203,7 @@ def _schneidet(a, b, rand=0):
     return not (a[2] + rand <= b[0] or b[2] + rand <= a[0] or a[3] + rand <= b[1] or b[3] + rand <= a[1])
 
 
-def blasen_auto(speech, koepfe, weitere=(), streng=False):
+def blasen_auto(speech, koepfe, weitere=(), streng=False, belegt=None):
     """Blasen nach den Köpfen setzen: über (oder neben) dem Kopf der sprechenden Person, kurze Spitze zum Kopf, keine Blase über
     einem Kopf oder einer anderen Blase, Lesereihenfolge links→rechts bzw. oben→unten. Köpfe: {Figur: {"kopf": [x0,y0,x1,y1]}} in
     0–1000. weitere: Kopfrahmen aller anderen Personen aus der Blindbeschreibung (werden ebenfalls nie verdeckt).
@@ -155,10 +212,18 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
 
     def px(b):
         x0, y0, x1, y1 = b[0] * W / 1000, b[1] * H / 1000, b[2] * W / 1000, b[3] * H / 1000
-        dx, dy = (x1 - x0) * rand, (y1 - y0) * rand * 0.35   # nach oben wenig Rand: dort sitzt die Blase
-        return (x0 - dx, y0 - dy, x1 + dx, y1 + dy)
+        dx, dy = (x1 - x0) * rand, (y1 - y0) * rand * 0.35   # seitlich und unten Rand; oben keiner, dort sitzt die Blase
+        return (x0 - dx, y0, x1 + dx, y1 + dy)
     kb = {f: px(k["kopf"]) for f, k in koepfe.items()}
     hindernisse = list(kb.values()) + [px(b) for b in weitere if b and len(b) == 4]
+    summe = None
+    if belegt is not None:  # Summenbild für schnelle Flächenanteile
+        import numpy as np
+        summe = np.pad(belegt.astype(np.int32).cumsum(0).cumsum(1), ((1, 0), (1, 0)))
+
+    def anteil(x0, y0, x1, y1):
+        x0, y0, x1, y1 = max(0, int(x0)), max(0, int(y0)), min(W, int(x1)), min(H, int(y1))
+        return float(summe[y1, x1] - summe[y0, x1] - summe[y1, x0] + summe[y0, x0]) / max(1, (x1 - x0) * (y1 - y0))
     oben = min([k[1] for k in hindernisse] or [H])      # oberes Band: über allen Köpfen
 
     def kandidaten(n, grenze=None):
@@ -172,10 +237,13 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
         for fs in (21, 19):          # kleiner wird die Schrift auf dem Handy unleserlich (Durchsicht 2026-10-28)
             for w in range(170, 391, 20):
                 h = _hoehe(sp, w, fs)
-                for x in range(6, W - 6 - w + 1, 6):
-                    for y in range(4, H - 6 - h + 1, 6):
+                for x in range(RANDABSTAND, W - RANDABSTAND - w + 1, 6):
+                    for y in range(10, H - RANDABSTAND - h + 1, 6):
                         box = (x, y, x + w, y + h)
-                        if any(_schneidet(box, k, 6) for k in hindernisse):
+                        if any(_schneidet(box, k, 4) for k in hindernisse):
+                            continue
+                        belegt_ = anteil(x - 4, y - 4, x + w + 4, y + h + 4) if summe is not None else 0
+                        if belegt_ > 0.05:      # Blase nur auf leerem Papier
                             continue
                         if streng and y + h > oben - 6:
                             continue
@@ -193,14 +261,26 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
                             seit = 220            # neben dem Kopf nur, wenn darüber kein Platz ist
                         else:
                             continue
-                        kosten = (seit * 0.5 + (0 if y + h <= oben - 6 else 90) + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6
+                        kosten = (belegt_ * 600 + seit * 0.5 + (0 if y + h <= oben - 6 else 90) + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6
                                   + y * 0.25 + (21 - fs) * 12 + (h - 2 * 14) * 1.2 + (w - 170) * 0.05)
                         out.append((kosten, {"x": x, "y": y, "w": w, "h": h, "fs": fs, "tail": [round(tail[0]), round(tail[1])]}))
         out.sort(key=lambda e: e[0])
         return out[:grenze]
 
+    def spitze_frei(g, v):  # die Spitze einer Blase läuft nicht durch eine andere Blase
+        x0, y0 = g["x"] + g["w"] / 2, g["y"] + g["h"] / 2
+        tx, ty = g["tail"]
+        for i in range(1, 21):
+            u, w_ = x0 + (tx - x0) * i / 20, y0 + (ty - y0) * i / 20
+            if g["x"] <= u <= g["x"] + g["w"] and g["y"] <= w_ <= g["y"] + g["h"]:
+                continue
+            if v["x"] - 4 <= u <= v["x"] + v["w"] + 4 and v["y"] - 4 <= w_ <= v["y"] + v["h"] + 4:
+                return False
+        return True
+
     def frei(g, andere):
-        return not any(_schneidet((g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), (v["x"], v["y"], v["x"] + v["w"], v["y"] + v["h"]), 8) for v in andere)
+        return not any(_schneidet((g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), (v["x"], v["y"], v["x"] + v["w"], v["y"] + v["h"]), 8)
+                       or not spitze_frei(g, v) or not spitze_frei(v, g) for v in andere)
 
     def reihenfolge(gesetzt):  # frühere Rede links bzw. oben
         k = 0
@@ -215,15 +295,18 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
     kand = [kandidaten(n) for n in range(len(speech))]
     beste = [None]
 
-    def suche(n, gesetzt, kosten):
+    import itertools
+
+    def suche(folge, j, gesetzt, kosten):
         if beste[0] and kosten >= beste[0][0]:
             return
-        if n == len(speech):
+        if j == len(folge):
             gesamt_ = kosten + reihenfolge(gesetzt)
             if not beste[0] or gesamt_ < beste[0][0]:
                 beste[0] = (gesamt_, dict(gesetzt))
             return
-        breite_ = 1 if n == len(speech) - 1 else (600 if n == 0 else 60)   # letzte Blase: günstigster freier Platz
+        n = folge[j]
+        breite_ = 1 if j == len(folge) - 1 else (400 if j == 0 else 60)   # letzte Blase: günstigster freier Platz
         versucht = 0
         for k_, g in kand[n]:
             if versucht >= breite_:
@@ -231,10 +314,11 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
             if frei(g, gesetzt.values()):
                 versucht += 1
                 gesetzt[n] = g
-                suche(n + 1, gesetzt, kosten + k_)
+                suche(folge, j + 1, gesetzt, kosten + k_)
                 del gesetzt[n]
 
-    suche(0, {}, 0)
+    for folge in itertools.permutations(range(len(speech))):   # jede Blase einmal zuerst setzen
+        suche(folge, 0, {}, 0)
     if beste[0]:
         return [beste[0][1][n] for n in range(len(speech))], []
     # keine Lösung für alle: so viele wie möglich, je die günstigste freie
@@ -375,8 +459,8 @@ def pruef_check(b, aus, alt_check, aktuell_sha=None):
         felder.append(f)
         offen += [f"{s}: {x}" for x in f["offen_de"] if "(fehler" in x or "(unklar" in x]
         offen += [f"{s} (Kachel): {x}" for x in (f.get("schluss") or {}).get("offen_de", [])]
-    vers = sorted({(aus[s].get("pruefung") or {}).get("prozess") for s in b["felder"]} - {None})
-    c = {"stufe": stufe, "process": vers[0] if len(vers) == 1 else ("PROC-BILD-AQUARELL@1.0" if not vers else vers[0]),
+    vers = sorted({((aus[s].get("schluss") or {}).get("prozess") or (aus[s].get("pruefung") or {}).get("prozess")) for s in b["felder"]} - {None})
+    c = {"stufe": stufe, "process": vers[-1] if vers else "PROC-BILD-AQUARELL@1.0",
          "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen "
                       "(allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
          "felder": felder, "open_de": offen,

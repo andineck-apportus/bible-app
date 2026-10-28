@@ -119,7 +119,7 @@ Jede Regel ist **Pflicht** (sonst ist das Bild unbrauchbar) oder **Soll** (zähl
 3. **Regeln:** Es beantwortet jede Prüfregel einzeln (ja / nein / unklar mit Begründung), zählt verlangte Gegenstände und ordnet die erwarteten Figuren den Personen zu.
 4. **Kern:** Ein Textvergleich bewertet, ob die Blindbeschreibung den Moment des Felds trifft (0–2).
 5. **Wahl:** die Variante, die alle Pflichtregeln erfüllt, mit den meisten Punkten. Erfüllt keine, wird mit einem Hinweis aus den verfehlten Regeln neu gemalt (höchstens drei Runden); danach bleibt das Feld offen und wird nicht übernommen.
-6. **Blasen** setzt das Werkzeug selbst nach den Kopfpositionen (über oder neben dem Kopf, kurze Spitze, nie über einem Kopf, Lesereihenfolge); Gedanken als Wolke mit kleinen Kreisen.
+6. **Blasen** setzt das Werkzeug selbst: nur auf leerem Papier (Belegungskarte aus dem Bild: wo gemalt ist, also Figuren, Hände, gehaltene Dinge, Bauten), über oder neben dem Kopf, kurze Spitze, mindestens 12 Punkte vom Rand, keine Spitze durch eine andere Blase, Lesereihenfolge; Umriss und Spitze als eine Linie, abgeschwächt (Grau statt Tinte) und leicht unregelmässig wie von Hand; Gedanken als Wolke mit kleinen Kreisen (Hinweise Andi Neck 2026-10-28).
 7. **Schlussprüfung** der fertigen Kachel mit Blasen und Band: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste oder wichtigem Gegenstand, alle Worte lesbar, Moment getroffen (mindestens 1 von 2).
 8. Ergebnis in `check` des Bild-Datensatzes, mit Fingerabdruck von Bild und Regeln. Der Validator prüft Belege (B mit gültiger Stelle innerhalb des Felds) und meldet eine Prüfung als veraltet, sobald sich das Bild ändert.
 

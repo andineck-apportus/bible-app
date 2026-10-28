@@ -36,7 +36,7 @@ API = "https://api.openai.com/v1"
 VORZUG = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]
 _modell = None
 VERFAHREN = "2026-10-28c"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
-PROZESS = "PROC-BILD-AQUARELL@2.1"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
+PROZESS = "PROC-BILD-AQUARELL@2.2"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
 
 
 def lade(p):
@@ -331,7 +331,7 @@ def txt_schluss(sprech, fig):
             fr.append(f'- B{n}: Is the bubble with the words «{sp["de"]}» a thought bubble (rounded, with a trail of small circles instead of a pointed tail), and do the circles lead to {wer}?')
         else:
             fr.append(f'- B{n}: Does the tail of the speech bubble with the words «{sp["de"]}» point clearly at {wer}?')
-    fr.append("- S-GESICHT: Does any speech bubble cover a face, a gesturing hand, or the main action of the scene? (Touching the tip of a mast, a roof, a tree or the sky does not count.)")
+    fr.append("- S-GESICHT: Does any speech bubble cover a face, a gesturing hand, an object someone holds (for example a whip, a cup, a jug), or the main action of the scene? (Touching the tip of a mast, a roof, a tree or the sky does not count.)")
     fr.append("- S-LESBAR: Is all lettering (bubbles and caption band) complete and readable, not cut off or overlapping?")
     return "\n".join(fr)
 

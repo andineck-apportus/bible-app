@@ -51,7 +51,7 @@ jobs:
 
       - name: Werkzeuge
         run: |
-          pip install -q pillow playwright
+          pip install -q pillow playwright numpy
           python -m playwright install --with-deps chromium
 
       - name: Bilder malen

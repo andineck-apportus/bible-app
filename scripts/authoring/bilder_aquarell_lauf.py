@@ -75,7 +75,8 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
         e = bericht.setdefault(sid, {})
         if a.get("blasen") != "hand" and sz.get("speech"):
             pr_ = a.get("pruefung") or {}
-            bl, fehler = BA.blasen_auto(sz["speech"], pr_.get("koepfe", {}), [p_.get("head") for p_ in pr_.get("personen", [])], streng=streng)
+            bl, fehler = BA.blasen_auto(sz["speech"], pr_.get("koepfe", {}), [p_.get("head") for p_ in pr_.get("personen", [])], streng=streng,
+                                        belegt=BA.belegung(BA.OUT / a["datei"]))
             a["blasen_auto"] = bl
             e["blasen_fehler"] = fehler
         png = kachel_png(sid, sz, a, band[sid])
@@ -166,7 +167,7 @@ def neu(a, schluessel, out):
                                          "ergebnis": "fehler", "antwort": None, "grund": "the first speaker must stand LEFT of the second speaker"})
                     pr["ergebnis"] = "durchgefallen"
                 if sz.get("speech"):  # feste Prüfung: Platz für alle Blasen, sonst unbrauchbar (Joh 2 T2, Lauf 19)
-                    _, bf = BA.blasen_auto(sz["speech"], pr.get("koepfe", {}), [p_.get("head") for p_ in pr.get("personen", [])])
+                    _, bf = BA.blasen_auto(sz["speech"], pr.get("koepfe", {}), [p_.get("head") for p_ in pr.get("personen", [])], belegt=BA.belegung(b))
                     if bf:
                         pr["regeln"].append({"id": "S-PLATZ", "ebene": "kachel", "stufe": "pflicht", "de": "Platz für alle Blasen über den Köpfen",
                                              "ergebnis": "fehler", "antwort": None, "grund": "; ".join(bf) + " – leave more empty white paper above the heads"})

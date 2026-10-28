@@ -2,6 +2,13 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.142 — 2026-10-28 — Erklärung je Bildfeld, Sprechblasen auf freiem Papier
+
+Hinweise von Andi Neck (2026-10-28).
+- **Erklärung je Feld:** Antippen eines Bildfelds zeigt dessen Erklärung direkt darunter (auch auf der Versebene, vorher Legende für alle Felder); «Was ist belegt?» und «Mehr zum Bild» (Deutungshinweis, Prüfung, Prozess, Legende zu allen Feldern) sind eingeklappt. In der Legende zu allen Feldern ebenso eingeklappt.
+- **Abstand** zwischen Bibeltext und Bild auf der Versebene vergrössert.
+- **Sprechblasen (Prozess Bilder im Aquarellstil 2.2):** nur auf leerem Papier – eine Belegungskarte aus dem Bild selbst zeigt, wo gemalt ist (Figuren, Hände, gehaltene Dinge wie die Geissel, Bauten); mindestens 12 Punkte vom Rand; keine Spitze läuft durch eine andere Blase; beste Anordnung über alle Reihenfolgen. Umriss und Spitze als eine Linie (der Rand geht auch bei schräger Spitze durch), in abgeschwächtem Grau und leicht unregelmässig wie von Hand gezogen. Schlussprüfung fragt auch nach verdeckten gehaltenen Gegenständen.
+
 ## v0.141 — 2026-10-28 — Prozesse versioniert, Bilder automatisch freigegeben
 
 Entscheide von Andi Neck (2026-10-28).
