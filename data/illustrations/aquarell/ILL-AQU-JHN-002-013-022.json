@@ -130,12 +130,12 @@
     "felder": [
       {
         "scene": "JHN-002-T1",
-        "ergebnis": "bestanden",
+        "ergebnis": "durchgefallen",
         "punkte": 7,
         "kern": 2,
         "bild_sha": "b69200b11d028471",
-        "plan_sha": "8ab8ae645e111273",
-        "regeln_version": "2026-10-28",
+        "plan_sha": "9bb7c0463e3a2a34",
+        "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
         "modell": "gpt-5.5",
         "regeln": [
@@ -162,7 +162,7 @@
           {
             "id": "G-MODERN",
             "stufe": "pflicht",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "G-KOERPER",
@@ -240,23 +240,24 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: Some head coverings on the left have visible colored stripes/patterns.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "2046e67dc263e74a",
+          "bild_sha": "59cfae028aa3a413",
           "offen_de": []
         }
       },
       {
         "scene": "JHN-002-T2",
         "ergebnis": "bestanden",
-        "punkte": 5,
+        "punkte": 6,
         "kern": 1,
         "bild_sha": "ce218e02e4883e3f",
-        "plan_sha": "6cd2b7a1aad8f23e",
-        "regeln_version": "2026-10-28",
+        "plan_sha": "2a8c48ea5e59dcd9",
+        "regeln_version": "2026-10-28b",
         "datum": "2026-10-28",
         "modell": "gpt-5.5",
         "regeln": [
@@ -308,7 +309,7 @@
           {
             "id": "G-REDUKTION",
             "stufe": "soll",
-            "ergebnis": "fehler"
+            "ergebnis": "ok"
           },
           {
             "id": "G-OBEN",
@@ -351,25 +352,20 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [
-          "Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although watercolor-like, it includes visible folds, hair detail, and a background building outline.)"
-        ],
-        "veraltet": true,
+        "offen_de": [],
         "schluss": {
-          "ergebnis": "durchgefallen",
+          "ergebnis": "unklar",
           "kern": 2,
-          "bild_sha": "9a6b4f78ff552fe9",
+          "bild_sha": "9bb152aea2a2bcbe",
           "offen_de": [
-            "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand (fehler: The left speech bubble covers parts of the people on the left, including faces/heads.)"
+            "Blase 1 zeigt auf den Sprecher (FIG-GRUPPE-MENGE) (unklar: The bubble with “Was für ein Zeichen zeigst du uns …?” has no clearly visible tail pointing to the group.)"
           ]
         }
       }
     ],
     "open_de": [
-      "JHN-002-T1: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-T2: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "JHN-002-T2: Reduziertes Aquarell: viel weisses Papier, wenig Einzelheiten (fehler: Although watercolor-like, it includes visible folds, hair detail, and a background building outline.)",
-      "JHN-002-T2 (Kachel): Keine Blase über Gesicht, Geste oder wichtigem Gegenstand (fehler: The left speech bubble covers parts of the people on the left, including faces/heads.)"
+      "JHN-002-T1: Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: Some head coverings on the left have visible colored stripes/patterns.)",
+      "JHN-002-T2 (Kachel): Blase 1 zeigt auf den Sprecher (FIG-GRUPPE-MENGE) (unklar: The bubble with “Was für ein Zeichen zeigst du uns …?” has no clearly visible tail pointing to the group.)"
     ],
     "limits_de": "Urteil eines KI-Modells; kein Test mit Menschen, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe.",
     "frueher": {
