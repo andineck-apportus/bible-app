@@ -13,12 +13,12 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(await p.$('.sheet .merk .ill-img svg'),'Karte im Blatt');
     assert((await p.$eval('.sheet .merk-text',e=>e.textContent)).includes('Armen'),'Verswortlaut auf der Karte');
     await p.click('.sheet [data-close]');
-    await p.click('[data-action=menu]');await p.click('[data-settings]');await p.click('[data-set=merk][data-value=card]');await p.click('.sheet [data-close]');await p.waitForTimeout(400);
+    await p.evaluate(()=>document.querySelector('.app').classList.remove('immersed'));await p.waitForTimeout(250);await p.click('[data-action=menu]');await p.click('[data-settings]');await p.click('[data-set=merk][data-value=card]');await p.click('.sheet [data-close]');await p.waitForTimeout(400);
     assert(await p.$('.reader .merk'),'Einstellung «Karte»: Karte im Text');
-    await p.click('[data-action=menu]');await p.click('[data-settings]');await p.click('[data-set=merk][data-value=off]');await p.click('.sheet [data-close]');await p.waitForTimeout(400);
+    await p.evaluate(()=>document.querySelector('.app').classList.remove('immersed'));await p.waitForTimeout(250);await p.click('[data-action=menu]');await p.click('[data-settings]');await p.click('[data-set=merk][data-value=off]');await p.click('.sheet [data-close]');await p.waitForTimeout(400);
     assert(!await p.$('.reader .merk')&&!await p.$('[data-merk]'),'Einstellung «Aus»');
     // Lernen
-    await p.click('[data-action=menu]');await p.click('[data-learn=menu]');await p.waitForTimeout(300);
+    await p.evaluate(()=>document.querySelector('.app').classList.remove('immersed'));await p.waitForTimeout(250);await p.click('[data-action=menu]');await p.click('[data-learn=menu]');await p.waitForTimeout(300);
     assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),6,'sechs Lernmethoden');
     await p.click('[data-learn="start:cards"]');await p.waitForTimeout(600);
     assert(await p.$('.sheet .learn-img svg'),'Karteikarte mit Bild');await p.click('[data-learn=reveal]');await p.click('[data-learn="rate:good"]');
