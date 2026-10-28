@@ -284,24 +284,24 @@
     "blasen_auto": [
       {
         "x": 90,
-        "y": 4,
+        "y": 10,
         "w": 210,
         "h": 74,
         "fs": 21,
         "tail": [
           197,
-          100
+          107
         ]
       },
       {
         "x": 312,
-        "y": 4,
-        "w": 230,
-        "h": 70,
-        "fs": 19,
+        "y": 10,
+        "w": 270,
+        "h": 74,
+        "fs": 21,
         "tail": [
           376,
-          90
+          99
         ]
       }
     ],
@@ -309,7 +309,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches fehlt.",
+      "kern_fehlt_de": "Nichts Wesentliches fehlt; die Szene und der Dialog sind klar erfasst.",
       "regeln": [
         {
           "id": "B1",
@@ -318,7 +318,7 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-MARIA-MUTTER-JESU)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The tail of the left speech bubble points down toward the older woman wearing a blue-grey veil and robe."
+          "grund": "The tail of the bubble with «Sie haben keinen Wein mehr.» points down toward the older woman in the blue-grey veil and robe."
         },
         {
           "id": "B2",
@@ -327,16 +327,16 @@
           "de": "Blase 2 zeigt auf den Sprecher (FIG-JESUS)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The tail of the right speech bubble points down toward the bearded man in a cream tunic with a terracotta-red mantle."
+          "grund": "The tail of the bubble with «… Meine Stunde ist noch nicht gekommen.» points down toward the bearded man in the cream tunic and terracotta-red mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubbles are above the figures and do not cover faces, gesturing hands, or important objects."
+          "grund": "The speech bubbles are above the characters and do not cover faces, gesturing hands, held objects, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -345,12 +345,12 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All text in the speech bubbles and the caption band is complete and readable."
+          "grund": "All bubble text and the caption band text are complete, readable, and not cut off or overlapping."
         }
       ],
       "blind": {
-        "action": "The woman is telling the bearded man that there is no more wine. The man responds calmly that his hour has not yet come, while cups and a jug sit on the table between them.",
-        "story_guess": "This appears to illustrate the Bible story of the wedding at Cana. The exact moment is when Mary tells Jesus that the wine has run out, and Jesus replies that his hour has not yet come, just before the water is turned into wine.",
+        "action": "A veiled woman speaks to a bearded man at a table, gesturing toward him while saying that there is no more wine. The man answers calmly that his hour has not yet come. Cups and a jug sit on the table, suggesting a meal or wedding feast.",
+        "story_guess": "This appears to illustrate the wedding at Cana from the Bible. The exact moment shown is Mary telling Jesus that the wine has run out, and Jesus replying that his hour has not yet come, before the water is turned into wine.",
         "text_in_picture": [
           {
             "text": "Sie haben keinen Wein mehr.",
@@ -371,9 +371,9 @@
         ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "2781449b41260cba",
+      "bild_sha": "4c6940adb7560c37",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "JHN-002-K3": {
@@ -698,14 +698,14 @@
     },
     "blasen_auto": [
       {
-        "x": 6,
-        "y": 160,
-        "w": 210,
-        "h": 93,
+        "x": 150,
+        "y": 10,
+        "w": 270,
+        "h": 70,
         "fs": 19,
         "tail": [
-          242,
-          127
+          285,
+          88
         ]
       }
     ],
@@ -722,16 +722,16 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SPEISEMEISTER)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The bubble tail points toward the older grey-bearded man in the olive-green robe with the wide ochre belt."
+          "grund": "The bubble tail points down toward the portly older grey-bearded man in an olive-green robe with a wide ochre belt."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubble does not cover any faces, gesturing hands, or clearly important objects."
+          "grund": "The speech bubble is above the figures and does not cover any face, gesturing hand, held object, or main action."
         },
         {
           "id": "S-LESBAR",
@@ -740,31 +740,35 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The text in the speech bubble and caption band is complete, readable, and not cut off or overlapping."
+          "grund": "The lettering in the speech bubble and caption band is visible, complete, readable, and not overlapping or cut off."
         }
       ],
       "blind": {
-        "action": "An older man holding a cup is speaking and gesturing toward the young man wearing a flower wreath. The surrounding people stand and watch, several with calm or pleased expressions.",
-        "story_guess": "This appears to illustrate the Wedding at Cana. The exact moment is after the water has been turned into wine, when the master of the banquet tastes it and says that the good wine has been kept until now.",
-        "text_in_picture": [
-          {
-            "text": "... du hast den guten Wein bis jetzt aufbewahrt.",
-            "belongs_to": "speech bubble, apparently person 4"
-          },
-          {
-            "text": "3",
-            "belongs_to": "circled number at bottom left"
-          },
-          {
-            "text": "Diesen Anfang der Zeichen machte Jesus",
-            "belongs_to": "bottom caption"
-          }
-        ]
+        "action": "An older man holding a cup is speaking and gesturing toward a young man wearing a flower wreath. The surrounding people stand and watch, suggesting a public comment or announcement at a celebration.",
+        "story_guess": "This appears to illustrate the Wedding at Cana. The exact moment is when the master of the feast, after tasting the wine, tells the bridegroom that he has kept the good wine until now.",
+        "text_in_picture": {
+          "speech_bubbles": [
+            {
+              "text": "... du hast den guten Wein bis jetzt aufbewahrt.",
+              "belongs_to": 4
+            }
+          ],
+          "other_text": [
+            {
+              "text": "3",
+              "where": "bottom left inside a circle"
+            },
+            {
+              "text": "Diesen Anfang der Zeichen machte Jesus",
+              "where": "bottom center"
+            }
+          ]
+        }
       },
       "modell": "gpt-5.5",
-      "bild_sha": "1ffb9a068aeb0f98",
+      "bild_sha": "215bcb08797c8cf3",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "JHN-002-T1": {
@@ -1149,13 +1153,13 @@
     "blasen_auto": [
       {
         "x": 144,
-        "y": 4,
+        "y": 10,
         "w": 390,
         "h": 74,
         "fs": 21,
         "tail": [
           342,
-          127
+          131
         ]
       }
     ],
@@ -1163,7 +1167,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches fehlt.",
+      "kern_fehlt_de": "Nichts Wesentliches fehlt; die Szene wird klar erkannt.",
       "regeln": [
         {
           "id": "B1",
@@ -1172,16 +1176,16 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-JESUS)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The bubble tail clearly points to the central man matching that description."
+          "grund": "The bubble tail points to the central man with dark wavy shoulder-length hair, short beard, cream tunic, and terracotta-red mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubble is above the figures and does not cover any face, gesturing hand, or important object."
+          "grund": "The speech bubble is in the upper background and does not cover any face, gesturing hand, held object, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -1194,12 +1198,12 @@
         }
       ],
       "blind": {
-        "action": "The central-right man is driving away merchants and animals, raising a whip and overturning a table so that coins fall to the ground. The two men on the left recoil while holding cages of birds.",
-        "story_guess": "This appears to illustrate Jesus cleansing the Temple: the moment when he drives out the sellers and money changers, saying not to make his Father's house a house of trade.",
+        "action": "The central bearded man is driving merchants and animals away, raising a whip and overturning a table so that coins fall to the ground. The two men with bird cages recoil from him in alarm while animals run off to the right.",
+        "story_guess": "This appears to illustrate Jesus cleansing the Temple. The exact moment shown is Jesus driving out the merchants and animals, overturning a money-changing table, and saying not to make his Father's house a house of trade.",
         "text_in_picture": [
           {
             "text": "Macht das Haus meines Vaters nicht zu einem Haus des Handels!",
-            "belongs_to": 3
+            "belongs_to": 7
           },
           {
             "text": "Der Eifer um dein Haus wird mich verzehren",
@@ -1212,9 +1216,9 @@
         ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "677f5b4e2835c7da",
+      "bild_sha": "26f3ebed6f59444f",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "JHN-002-T2": {
@@ -1562,25 +1566,25 @@
     },
     "blasen_auto": [
       {
-        "x": 150,
-        "y": 22,
+        "x": 84,
+        "y": 28,
         "w": 250,
         "h": 74,
         "fs": 21,
         "tail": [
           274,
-          146
+          150
         ]
       },
       {
-        "x": 72,
-        "y": 214,
-        "w": 250,
-        "h": 124,
-        "fs": 21,
+        "x": 342,
+        "y": 10,
+        "w": 230,
+        "h": 116,
+        "fs": 19,
         "tail": [
-          406,
-          178
+          456,
+          143
         ]
       }
     ],
@@ -1588,7 +1592,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches; die spätere Erinnerung der Jünger nach der Auferweckung wird nicht dargestellt.",
+      "kern_fehlt_de": "Nichts Wesentliches.",
       "regeln": [
         {
           "id": "B1",
@@ -1597,7 +1601,7 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-GRUPPE-MENGE)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The tail of the upper speech bubble points down toward one of the ordinary men in the group."
+          "grund": "The tail of the left speech bubble clearly points to the rightmost man in the group of ordinary people."
         },
         {
           "id": "B2",
@@ -1606,16 +1610,16 @@
           "de": "Blase 2 zeigt auf den Sprecher (FIG-JESUS)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The tail of the lower speech bubble points toward the man matching that description on the right."
+          "grund": "The tail of the right speech bubble clearly points to the man with dark wavy shoulder-length hair, short beard, cream tunic, and terracotta-red mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubbles do not cover any visible face, gesturing hand, or clearly important object."
+          "grund": "No speech bubble covers any face, gesturing hand, held object, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -1624,33 +1628,35 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All bubble and caption text appears complete, readable, and not cut off or overlapping."
+          "grund": "All lettering in the speech bubbles and caption band is complete and readable."
         }
       ],
       "blind": {
-        "action": "Three robed men on the left question the man on the right, who appears to be answering them. The man on the right gestures to himself with one hand on his chest while speaking about destroying and raising the temple.",
-        "story_guess": "This appears to illustrate the Bible story in John 2, after Jesus cleanses the temple, when Jewish leaders ask him for a sign and he answers, \"Destroy this temple, and in three days I will raise it up,\" referring to the temple of his body.",
-        "text_in_picture": {
-          "speech_bubbles": [
-            {
-              "belongs_to": "persons 1-3, the group of men on the left",
-              "text": "Was für ein Zeichen zeigst du uns ...?"
-            },
-            {
-              "belongs_to": "person 4",
-              "text": "Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten."
-            }
-          ],
-          "other_text": [
-            "2",
-            "Er aber sprach vom Tempel seines Leibes"
-          ]
-        }
+        "action": "Three robed men are questioning the man on the right. The man on the right answers calmly, pointing to himself with one hand while speaking about the temple.",
+        "story_guess": "This appears to illustrate John 2:18-21. It shows the moment when people ask Jesus for a sign, and Jesus says, \"Destroy this temple, and in three days I will raise it up,\" referring to the temple of his body.",
+        "text_in_picture": [
+          {
+            "text": "Was für ein Zeichen zeigst du uns ...?",
+            "belongs_to": 3
+          },
+          {
+            "text": "Reisst diesen Tempel nieder, und in drei Tagen werde ich ihn aufrichten.",
+            "belongs_to": 4
+          },
+          {
+            "text": "2",
+            "belongs_to": null
+          },
+          {
+            "text": "Er aber sprach vom Tempel seines Leibes",
+            "belongs_to": null
+          }
+        ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "1e10ea74dab46fc3",
+      "bild_sha": "960ead5e17f719d9",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "JHN-002-J2": {
@@ -1998,9 +2004,9 @@
     },
     "schluss": {
       "ergebnis": "bestanden",
-      "punkte": 2,
-      "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches fehlt; die Szene und die Aussage, dass Jesus ihnen nicht vertraut, weil er die Menschen kennt, werden erkannt.",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Es fehlt ausdrücklich, dass sie wegen der Zeichen glauben und dass Jesus sich ihnen nicht anvertraut.",
       "regeln": [
         {
           "id": "S-GESICHT",
@@ -2009,7 +2015,7 @@
           "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No speech bubbles are visible, so none cover a face, gesturing hand, or main action."
+          "grund": "No speech bubble is visible, so none covers a face, hand, held object, or main action."
         },
         {
           "id": "S-LESBAR",
@@ -2018,21 +2024,27 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The caption band text is complete, readable, and not cut off or overlapping."
+          "grund": "The caption band text is complete and readable, with no cut-off or overlapping lettering."
         }
       ],
       "blind": {
-        "action": "A small group of people at the left are addressing or reacting to the bearded man on the right, who appears to be Jesus. They smile, point, and gesture toward him while he turns calmly toward them.",
-        "story_guess": "This likely illustrates a Gospel scene involving Jesus with people who believe in or come to him; the visible German caption says that he himself knew what was in a person, matching John 2:25. The moment may be Jesus among people in Jerusalem after signs, while he does not fully entrust himself to them because he knows human hearts.",
-        "text_in_picture": {
-          "caption": "2 er selbst erkannte nämlich, was im Menschen war",
-          "speech_bubbles": []
-        }
+        "action": "A group of people on the left are looking toward the bearded man in white and red on the right. Some of them gesture excitedly, point, or hold out their hands, while he turns toward them calmly.",
+        "story_guess": "This likely illustrates John 2:23-25, especially the moment where people respond to Jesus but he knows what is in human beings. The German caption means roughly that he himself knew what was in people.",
+        "text_in_picture": [
+          {
+            "text": "2",
+            "belongs_to": null
+          },
+          {
+            "text": "er selbst erkannte nämlich, was im Menschen war",
+            "belongs_to": null
+          }
+        ]
       },
       "modell": "gpt-5.5",
       "bild_sha": "4473ed6708ecd358",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "JHN-002-K2": {
@@ -2326,25 +2338,25 @@
     },
     "blasen_auto": [
       {
-        "x": 6,
-        "y": 4,
+        "x": 12,
+        "y": 10,
         "w": 230,
         "h": 74,
         "fs": 21,
         "tail": [
           67,
-          96
+          101
         ]
       },
       {
-        "x": 264,
-        "y": 4,
+        "x": 258,
+        "y": 10,
         "w": 330,
         "h": 49,
         "fs": 21,
         "tail": [
           548,
-          87
+          91
         ]
       }
     ],
@@ -2352,7 +2364,7 @@
       "ergebnis": "bestanden",
       "punkte": 1,
       "kern": 1,
-      "kern_fehlt_de": "Es fehlt Jesu Anweisung, nun zu schöpfen und es dem Speisemeister zu bringen.",
+      "kern_fehlt_de": "Die Aufforderung Jesu, nun zu schöpfen und es dem Speisemeister zu bringen, fehlt; auch „bis oben gefüllt“ wird nicht erwähnt.",
       "regeln": [
         {
           "id": "B1",
@@ -2361,7 +2373,7 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-MARIA-MUTTER-JESU)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The speech bubble tail points down toward the older woman on the left wearing a blue-grey veil and robe."
+          "grund": "The speech bubble tail points down toward the older woman at the left wearing a blue-grey veil and robe."
         },
         {
           "id": "B2",
@@ -2370,16 +2382,16 @@
           "de": "Blase 2 zeigt auf den Sprecher (FIG-JESUS)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The speech bubble tail points down toward the man on the right with dark wavy hair, short beard, cream tunic, and terracotta-red mantle."
+          "grund": "The speech bubble tail points toward the bearded man on the right wearing a cream tunic and terracotta-red mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubbles are in the upper empty area and do not cover any faces, gesturing hands, or important objects."
+          "grund": "The speech bubbles are placed above the figures and do not cover faces, gesturing hands, held objects, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -2392,31 +2404,31 @@
         }
       ],
       "blind": {
-        "action": "A woman on the left tells the servants to do whatever the man on the right says. The man on the right instructs them to fill the jars with water, and the servants are shown filling the large stone jars.",
+        "action": "The veiled woman tells the servants to do whatever the bearded man says. The bearded man instructs them to fill the jars with water, and the servants are filling or holding pitchers near the large stone jars.",
         "story_guess": "This appears to illustrate the Bible story of the wedding at Cana. The exact moment shown is when Mary tells the servants to obey Jesus, and Jesus tells them to fill the stone jars with water before the water is turned into wine.",
         "text_in_picture": [
           {
             "text": "Was er euch auch sagt, das tut!",
-            "belongs_to": "person 1"
+            "belongs_to": 1
           },
           {
             "text": "Füllt die Krüge mit Wasser!",
-            "belongs_to": "person 6"
-          },
-          {
-            "text": "Und sie füllten sie bis oben",
-            "belongs_to": null
+            "belongs_to": 6
           },
           {
             "text": "2",
+            "belongs_to": null
+          },
+          {
+            "text": "Und sie füllten sie bis oben",
             "belongs_to": null
           }
         ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "3868dc54b0f3d26f",
+      "bild_sha": "5198eb073563da17",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "JHN-002-J1": {
@@ -2685,16 +2697,16 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Keine wesentlichen Abweichungen; Passa, Jerusalem und die Zeichen sind im Bild/der Beschreibung nicht ausdrücklich sichtbar.",
+      "kern_fehlt_de": "Passa in Jerusalem, die gesehenen Zeichen und Jesu Wissen um das Innere der Menschen werden nicht ausdrücklich gezeigt.",
       "regeln": [
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No speech bubbles are visible, so none cover any faces, gesturing hands, or important objects."
+          "grund": "There are no speech bubbles covering any faces, gesturing hands, held objects, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -2703,32 +2715,22 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The caption band text is visible and readable, with no apparent cut-off or overlap."
+          "grund": "The caption band text is complete and readable, with no cut-off or overlapping lettering."
         }
       ],
       "blind": {
-        "action": "A small group on the left is watching and discussing the man standing apart on the right. One bearded man points toward him while the others look on, and the man on the right looks back toward them without approaching.",
-        "story_guess": "Likely John 2:23-25, especially the moment expressed by John 2:24: people are reacting to Jesus, but Jesus does not entrust himself to them because he knows what is in people.",
+        "action": "A group of people on the left are looking toward the man on the right, and one of them points at him. The man on the right stands apart and looks back calmly rather than joining them. The printed caption suggests a moment of hesitation or distance between him and the crowd.",
+        "story_guess": "This appears to illustrate John 2:24, the moment described by the German caption: Jesus did not entrust himself to the people. The picture shows people noticing or pointing toward Jesus while he remains separate from them.",
         "text_in_picture": {
-          "readable_text": [
-            {
-              "text": "1",
-              "where": "inside a circle at the bottom left",
-              "speech_bubble_belongs_to": null
-            },
-            {
-              "text": "Jesus selbst aber vertraute sich ihnen nicht an",
-              "where": "caption along the bottom",
-              "speech_bubble_belongs_to": null
-            }
-          ],
+          "caption": "Jesus selbst aber vertraute sich ihnen nicht an",
+          "circled_number": "1",
           "speech_bubbles": []
         }
       },
       "modell": "gpt-5.5",
       "bild_sha": "469cd75de8ba65e6",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "MRK-004-S1": {
@@ -2986,13 +2988,13 @@
     "blasen_auto": [
       {
         "x": 198,
-        "y": 64,
+        "y": 58,
         "w": 330,
         "h": 74,
         "fs": 21,
         "tail": [
           366,
-          188
+          192
         ]
       }
     ],
@@ -3009,16 +3011,16 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-GRUPPE-JUENGER)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The bubble tail points to the bearded man in an ochre robe leaning near the man in the terracotta-red mantle."
+          "grund": "The speech-bubble tail clearly points to the bearded man in an ochre robe near the man in the terracotta-red mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubble is in the sky area and does not cover any face, gesturing hand, or important object."
+          "grund": "The speech bubble and tail do not cover any face, gesturing hand, held object, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -3027,16 +3029,16 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All text in the speech bubble and caption band is complete, readable, and not cut off or overlapping."
+          "grund": "All visible lettering in the speech bubble and caption band is complete and readable."
         }
       ],
       "blind": {
-        "action": "Several men are in a small boat during a storm, with waves splashing around them. One man urgently reaches toward a sleeping man and speaks to him, while the others look frightened or concerned.",
-        "story_guess": "This appears to illustrate the Bible story of Jesus calming the storm. The exact moment shown is when the disciples wake the sleeping Jesus in the boat and ask whether he cares that they are about to perish.",
+        "action": "Several men are in a boat during rough water and stormy weather. One man leans toward the sleeping man and speaks anxiously, while the others look alarmed and brace themselves against the boat.",
+        "story_guess": "This appears to illustrate the Bible story of Jesus calming the storm, at the moment when the disciples wake Jesus in the boat and ask whether he cares that they are about to perish.",
         "text_in_picture": [
           {
             "text": "Lehrer, kümmert es dich nicht, dass wir umkommen?",
-            "belongs_to": "speech bubble of person 4"
+            "belongs_to": 4
           },
           {
             "text": "ein grosser Sturmwind",
@@ -3049,9 +3051,9 @@
         ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "f21024fe68937e78",
+      "bild_sha": "f78e3639ac4d2bef",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "MRK-004-S2": {
@@ -3305,7 +3307,7 @@
         "fs": 21,
         "tail": [
           336,
-          136
+          139
         ]
       }
     ],
@@ -3313,7 +3315,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches; das Eintreten der grossen Stille ist nur angedeutet.",
+      "kern_fehlt_de": "Nichts Wesentliches; die grosse Stille nach dem Befehl ist nur angedeutet.",
       "regeln": [
         {
           "id": "B1",
@@ -3322,16 +3324,16 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-JESUS)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The speech bubble tail points clearly to the standing man with dark wavy shoulder-length hair, short beard, cream tunic, and terracotta-red mantle."
+          "grund": "The speech bubble tail clearly points to the man with dark wavy shoulder-length hair, short beard, cream tunic, and terracotta-red mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubble is in the sky area and does not cover any face, gesturing hand, or important object."
+          "grund": "The speech bubble does not cover any face, gesturing hand, held object, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -3340,31 +3342,29 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All text in the speech bubble and caption band is complete, readable, and not cut off or overlapping."
+          "grund": "All bubble and caption lettering is complete, readable, and not cut off or overlapping."
         }
       ],
       "blind": {
-        "action": "A man standing in the boat raises his arm toward the water or wind and speaks a command. The two other men in the boat watch him anxiously or attentively while the boat sits among waves.",
-        "story_guess": "This appears to illustrate the Bible story of Jesus calming the storm. The exact moment shown is Jesus rebuking the wind and water with a command, just before or as the great calm comes.",
-        "text_in_picture": [
-          {
-            "text": "Schweig! Verstumme!",
-            "belongs_to": 3
-          },
-          {
-            "text": "es wurde eine grosse Stille",
-            "belongs_to": null
-          },
-          {
-            "text": "2",
-            "belongs_to": null
-          }
-        ]
+        "action": "A standing man in the boat is stretching out his hand and speaking a command. The two other men crouch in the boat and look toward him while the boat sits among waves. The speech bubble suggests he is telling something to be silent and still.",
+        "story_guess": "This likely illustrates the Bible story of Jesus calming the storm. The exact moment shown is Jesus standing in the boat and commanding the wind or sea to be quiet, just before or as the great calm comes.",
+        "text_in_picture": {
+          "speech_bubbles": [
+            {
+              "speaker": 3,
+              "text": "Schweig! Verstumme!"
+            }
+          ],
+          "other_text": [
+            "es wurde eine grosse Stille",
+            "2"
+          ]
+        }
       },
       "modell": "gpt-5.5",
-      "bild_sha": "57df797bb4e8e760",
+      "bild_sha": "673862fb32433b61",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "LUK-015-L1": {
@@ -3555,13 +3555,13 @@
     "blasen_auto": [
       {
         "x": 42,
-        "y": 10,
+        "y": 16,
         "w": 310,
         "h": 74,
         "fs": 21,
         "tail": [
           195,
-          132
+          136
         ]
       }
     ],
@@ -3569,7 +3569,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nur Vorgeschichte/Details fehlen: verschleudertes Erbteil, Hungersnot und der genaue Bußsatz.",
+      "kern_fehlt_de": "Nichts Wesentliches; Verschleudern des Erbteils, Hungersnot und der genaue Bekenntnissatz werden nicht ausdrücklich gezeigt.",
       "regeln": [
         {
           "id": "B1",
@@ -3578,16 +3578,16 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SOHN)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The text is in a rounded thought bubble with a trail of small circles leading to the seated thin young man in a torn, dirty, pale tunic."
+          "grund": "The text is in a rounded thought bubble with a trail of small circles leading to the thin young man wearing a torn, dirty, colourless tunic."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The bubble is in empty space above the man and does not cover a face, gesturing hand, or important object."
+          "grund": "No bubble covers a face, gesturing hand, held object, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -3596,17 +3596,17 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The bubble text and the caption band text are fully visible, readable, and not cut off or overlapping."
+          "grund": "All lettering in the thought bubble and caption band is complete, readable, and not cut off or overlapping."
         }
       ],
       "blind": {
-        "action": "A ragged man sits beside pigs that are eating from a trough. He appears to be thinking about getting up and going to his father.",
-        "story_guess": "This appears to illustrate the parable of the Prodigal Son, at the moment when the younger son is among the pigs, comes to himself, and decides to return to his father.",
+        "action": "A ragged man sits on the ground beside pigs while they eat from a trough. He appears to be thinking about leaving and going to his father. The scene suggests a moment of reflection and decision.",
+        "story_guess": "This appears to illustrate the Bible story of the Prodigal Son, at the moment when he is among the pigs, comes to his senses, and decides to return to his father.",
         "text_in_picture": {
-          "speech_bubbles": [
+          "thought_bubbles": [
             {
               "belongs_to": 1,
-              "text": "Ich werde mich aufmachen, zu meinem Vater gehen …"
+              "text": "Ich werde mich aufmachen, zu meinem Vater gehen ..."
             }
           ],
           "other_text": [
@@ -3616,9 +3616,9 @@
         }
       },
       "modell": "gpt-5.5",
-      "bild_sha": "cfb64634114a751f",
+      "bild_sha": "4d235b75013eb960",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "LUK-015-L2": {
@@ -3847,21 +3847,21 @@
     "blasen_auto": [
       {
         "x": 138,
-        "y": 10,
+        "y": 16,
         "w": 370,
         "h": 74,
         "fs": 21,
         "tail": [
           326,
-          134
+          141
         ]
       }
     ],
     "schluss": {
       "ergebnis": "bestanden",
-      "punkte": 1,
-      "kern": 1,
-      "kern_fehlt_de": "Die Umarmung und das Bekenntnis sind erkannt, aber der Kuss sowie die Anweisungen des Vaters zu Gewand, Ring, Sandalen und Mastkalb fehlen bzw. sind nicht erkannt.",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Nicht erwähnt sind das Hinlaufen und Küssen sowie die Anweisungen zu Gewand, Ring, Sandalen und Mastkalb.",
       "regeln": [
         {
           "id": "B1",
@@ -3870,16 +3870,16 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-ROLLE-SOHN)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The speech-bubble tail points down toward the thin young man in the torn, pale dirty tunic."
+          "grund": "The speech bubble tail points down toward the thin young man wearing a torn, dirty, pale tunic."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubble and tail do not cover any face, gesturing hand, or important object."
+          "grund": "The speech bubble does not cover any face, gesturing hand, held object, or the main embrace action."
         },
         {
           "id": "S-LESBAR",
@@ -3888,31 +3888,29 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The text in the speech bubble and caption band is fully visible and readable."
+          "grund": "All visible text in the speech bubble and caption band is complete and readable."
         }
       ],
       "blind": {
-        "action": "An elderly man embraces a younger man who is bent over in shame or sorrow. The speech bubble shows the younger man confessing that he has sinned. A small figure in the background walks near the houses.",
-        "story_guess": "This likely illustrates the Bible story of the Prodigal Son, at the moment when the returning son confesses to his father and the father welcomes him back.",
-        "text_in_picture": [
-          {
-            "text": "Vater, ich habe gesündigt gegen den Himmel und vor dir ...",
-            "belongs_to": 2
-          },
-          {
-            "text": "war tot und ist wieder lebendig geworden",
-            "belongs_to": null
-          },
-          {
-            "text": "2",
-            "belongs_to": null
-          }
-        ]
+        "action": "An elderly man embraces a ragged younger man, who is bowed and appears repentant or ashamed. The speech bubble says the younger man has sinned against heaven and before his father, while the bottom caption refers to someone being dead and alive again.",
+        "story_guess": "This appears to illustrate the Bible story of the Prodigal Son, at the moment when the returning son confesses to his father and the father welcomes him back with an embrace.",
+        "text_in_picture": {
+          "speech_bubbles": [
+            {
+              "belongs_to": 2,
+              "text": "Vater, ich habe gesündigt gegen den Himmel und vor dir ..."
+            }
+          ],
+          "other_text": [
+            "2",
+            "war tot und ist wieder lebendig geworden"
+          ]
+        }
       },
       "modell": "gpt-5.5",
-      "bild_sha": "74070e350d8a6720",
+      "bild_sha": "1591732089fea7d6",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "LUK-015-L3": {
@@ -4180,25 +4178,25 @@
     },
     "blasen_auto": [
       {
-        "x": 6,
-        "y": 4,
+        "x": 12,
+        "y": 10,
         "w": 270,
         "h": 74,
         "fs": 21,
         "tail": [
           139,
-          100
+          107
         ]
       },
       {
-        "x": 288,
-        "y": 4,
-        "w": 290,
-        "h": 99,
-        "fs": 21,
+        "x": 294,
+        "y": 10,
+        "w": 270,
+        "h": 93,
+        "fs": 19,
         "tail": [
           344,
-          128
+          134
         ]
       }
     ],
@@ -4206,7 +4204,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches fehlt; die Szene mit dem zornigen älteren Sohn und dem erklärenden Vater wird klar erkannt.",
+      "kern_fehlt_de": "Nichts Wesentliches fehlt; der Moment wird klar erkannt.",
       "regeln": [
         {
           "id": "B1",
@@ -4215,7 +4213,7 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-ROLLE-JUNGER-MANN)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The bubble tail points down toward the sturdy bearded man on the left wearing an olive-brown work tunic with rolled-up sleeves."
+          "grund": "The bubble tail points clearly to the bearded man on the left wearing an olive-brown work tunic with rolled-up sleeves."
         },
         {
           "id": "B2",
@@ -4224,16 +4222,16 @@
           "de": "Blase 2 zeigt auf den Sprecher (FIG-ROLLE-VATER)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The bubble tail points down toward the old man on the right with white hair and a white beard, wearing a brown robe and dark brown mantle."
+          "grund": "The bubble tail points clearly to the old man on the right with white hair and a white beard, wearing a brown robe and dark brown mantle."
         },
         {
           "id": "S-GESICHT",
           "ebene": "kachel",
           "stufe": "pflicht",
-          "de": "Keine Blase über Gesicht, Geste oder wichtigem Gegenstand",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubbles are above the figures and do not cover any face, gesturing hand, or important object."
+          "grund": "The speech bubbles do not cover any faces, gesturing hands, held objects, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -4242,12 +4240,12 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All bubble text and the caption band text are complete, readable, and not cut off or overlapping."
+          "grund": "All bubble and caption text is complete, readable, and not cut off or overlapping."
         }
       ],
       "blind": {
-        "action": "A younger bearded man stands with crossed arms and turns away, appearing upset. An older bearded man reaches toward him and speaks calmly, while small figures in the background seem to be gathered near a house.",
-        "story_guess": "This appears to illustrate the Bible story of the prodigal son. The exact moment is the elder son complaining to his father after the younger brother has returned, and the father explaining that the brother was dead and is alive again.",
+        "action": "An older man is speaking gently to a younger bearded man who stands with crossed arms and looks upset. The older man touches the younger man's arm while explaining, and a small group in the background appears to be celebrating or gathering near a building.",
+        "story_guess": "This appears to illustrate the Bible parable of the prodigal son. The exact moment shown is the older brother complaining that he was never given even a young goat, while the father tells him that everything the father has is his and that his brother was dead and has come back to life.",
         "text_in_picture": [
           {
             "text": "... mir hast du nie ein Zicklein gegeben ...",
@@ -4258,19 +4256,19 @@
             "belongs_to": 2
           },
           {
-            "text": "dein Bruder war tot und ist lebendig geworden",
+            "text": "3",
             "belongs_to": null
           },
           {
-            "text": "3",
+            "text": "dein Bruder war tot und ist lebendig geworden",
             "belongs_to": null
           }
         ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "ba8aa94d5b5178c9",
+      "bild_sha": "bb21db59d5815408",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   },
   "MRK-004-S3": {
@@ -4519,25 +4517,25 @@
     },
     "blasen_auto": [
       {
-        "x": 18,
-        "y": 28,
+        "x": 12,
+        "y": 34,
         "w": 270,
         "h": 99,
         "fs": 21,
         "tail": [
           183,
-          176
+          179
         ]
       },
       {
-        "x": 300,
+        "x": 294,
         "y": 46,
         "w": 290,
         "h": 99,
         "fs": 21,
         "tail": [
           335,
-          194
+          197
         ]
       }
     ],
@@ -4545,7 +4543,7 @@
       "ergebnis": "bestanden",
       "punkte": 2,
       "kern": 2,
-      "kern_fehlt_de": "Nichts Wesentliches fehlt.",
+      "kern_fehlt_de": "Nichts Wesentliches fehlt; die Szene und der Moment werden klar erkannt.",
       "regeln": [
         {
           "id": "B1",
@@ -4554,7 +4552,7 @@
           "de": "Blase 1 zeigt auf den Sprecher (FIG-JESUS)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The tail of the left speech bubble clearly points to the man with dark wavy hair, short beard, cream tunic, and terracotta-red mantle."
+          "grund": "The left speech bubble tail points clearly toward the man with dark shoulder-length hair, beard, cream tunic, and terracotta-red mantle."
         },
         {
           "id": "B2",
@@ -4563,7 +4561,7 @@
           "de": "Blase 2 zeigt auf den Sprecher (FIG-GRUPPE-JUENGER)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The tail of the right speech bubble clearly points toward the bearded men in ochre/brown robes near him."
+          "grund": "The right speech bubble tail points clearly toward the bearded men in ochre/brown robes near him."
         },
         {
           "id": "S-GESICHT",
@@ -4572,7 +4570,7 @@
           "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The speech bubbles are above the figures and do not cover any face, gesturing hand, or main action."
+          "grund": "The speech bubbles do not cover any faces, gesturing hands, held objects, or the main action."
         },
         {
           "id": "S-LESBAR",
@@ -4581,12 +4579,12 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "All bubble text and the caption band text are complete, readable, and not cut off or overlapping."
+          "grund": "All bubble and caption text is complete, readable, and not cut off or overlapping."
         }
       ],
       "blind": {
-        "action": "A calm bearded man in white and red speaks to three frightened men in a boat. The other men huddle together and wonder aloud who he is, while the water around the boat appears calm.",
-        "story_guess": "This appears to illustrate the Bible story of Jesus calming the storm. The exact moment shown is after the wind and sea have obeyed him, when Jesus asks why the disciples were afraid and they wonder who he is.",
+        "action": "The man on the left is speaking calmly to the frightened men in the boat while gesturing with an open hand. The other men appear afraid and amazed, discussing who he is because the wind and the sea obey him.",
+        "story_guess": "This appears to illustrate the Bible story of Jesus calming the storm. The exact moment shown is after the wind and sea have become calm, when Jesus asks the disciples why they were afraid and they wonder who he is that even the wind and sea obey him.",
         "text_in_picture": [
           {
             "text": "Warum seid ihr so furchtsam? Habt ihr noch keinen Glauben?",
@@ -4594,22 +4592,22 @@
           },
           {
             "text": "Wer ist denn dieser, dass auch der Wind und der See ihm gehorchen?",
-            "belongs_to": "speech bubble tail points toward person 2; the words appear to belong to the frightened men"
+            "belongs_to": 2
           },
           {
             "text": "Und sie fürchteten sich sehr",
-            "belongs_to": "caption"
+            "belongs_to": null
           },
           {
             "text": "3",
-            "belongs_to": "page number or marker"
+            "belongs_to": null
           }
         ]
       },
       "modell": "gpt-5.5",
-      "bild_sha": "c99a3f5613fd685c",
+      "bild_sha": "6029b7958701efc7",
       "datum": "2026-10-28",
-      "prozess": "PROC-BILD-AQUARELL@2.1"
+      "prozess": "PROC-BILD-AQUARELL@2.2"
     }
   }
 }
