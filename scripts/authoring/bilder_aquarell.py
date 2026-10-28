@@ -169,7 +169,7 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
         hx0, hy0, hx1, hy1 = kb[sp["from"]]
         hx = (hx0 + hx1) / 2
         out = []
-        for fs in (21, 19, 17):
+        for fs in (21, 19):          # kleiner wird die Schrift auf dem Handy unleserlich (Durchsicht 2026-10-28)
             for w in range(170, 391, 20):
                 h = _hoehe(sp, w, fs)
                 for x in range(6, W - 6 - w + 1, 6):
@@ -246,6 +246,20 @@ def blasen_auto(speech, koepfe, weitere=(), streng=False):
         else:
             fehler.append(f"Blase {n + 1}: " + (f"Kopf von {speech[n]['from']} unbekannt" if speech[n]["from"] not in kb else f"kein freier Platz bei {speech[n]['from']}"))
     return [gesetzt.get(n) for n in range(len(speech))], fehler
+
+
+def reihe_ok(speech, koepfe):
+    """Feste Regel Lesereihenfolge: wer zuerst spricht, steht (mit dem Kopf) links von dem, der danach spricht – sonst stehen
+    die Blasen in falscher Reihenfolge (Mk 4 S3, Durchsicht 2026-10-28; Regel schon in BILDAUFTRAEGE-ANLEITUNG.md)."""
+    xs = []
+    for sp in speech:
+        k = koepfe.get(sp["from"])
+        if k:
+            xs.append((sp["from"], (k["kopf"][0] + k["kopf"][2]) / 2))
+    for (f0, x0), (f1, x1) in zip(xs, xs[1:]):
+        if f0 != f1 and x0 > x1 + 30:
+            return False
+    return True
 
 
 def band(n, kw):

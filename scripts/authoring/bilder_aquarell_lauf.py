@@ -83,6 +83,10 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
         try:
             a["schluss"] = BP.pruefe_kachel(schluessel, png, sz.get("speech", []), fig[sid], momente[sid])
             a["schluss"]["datum"] = JETZT.date().isoformat()
+            if len(sz.get("speech", [])) > 1 and not BA.reihe_ok(sz["speech"], (a.get("pruefung") or {}).get("koepfe", {})):
+                a["schluss"]["ergebnis"] = "durchgefallen"
+                a["schluss"]["regeln"].append({"id": "S-REIHE", "ebene": "kachel", "stufe": "pflicht", "de": "Wer zuerst spricht, steht links",
+                                                "ergebnis": "fehler", "antwort": None, "grund": "Sprecher in falscher Reihenfolge"})
             if e.get("blasen_fehler"):
                 a["schluss"]["ergebnis"] = "durchgefallen"
                 a["schluss"]["regeln"].append({"id": "S-PLATZ", "ebene": "kachel", "stufe": "pflicht", "de": "Platz für alle Blasen",
@@ -155,6 +159,10 @@ def neu(a, schluessel, out):
                     BP.melde(f"{sid} {var} prüfen: {ex}")
                     continue
                 pr["modell_bild"] = m
+                if len(sz.get("speech", [])) > 1 and not BA.reihe_ok(sz["speech"], pr.get("koepfe", {})):
+                    pr["regeln"].append({"id": "S-REIHE", "ebene": "kachel", "stufe": "pflicht", "de": "Wer zuerst spricht, steht links",
+                                         "ergebnis": "fehler", "antwort": None, "grund": "the first speaker must stand LEFT of the second speaker"})
+                    pr["ergebnis"] = "durchgefallen"
                 if sz.get("speech"):  # feste Prüfung: Platz für alle Blasen, sonst unbrauchbar (Joh 2 T2, Lauf 19)
                     _, bf = BA.blasen_auto(sz["speech"], pr.get("koepfe", {}), [p_.get("head") for p_ in pr.get("personen", [])])
                     if bf:
