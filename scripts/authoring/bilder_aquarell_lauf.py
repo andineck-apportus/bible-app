@@ -35,11 +35,12 @@ JETZT = datetime.datetime.now(datetime.timezone.utc)
 
 def kontext():
     plaene = BA.plaene()
-    fig, allg = BA.lade(DATEN / "figuren.json"), BA.lade(DATEN / "pruefregeln.json")
-    szenen, momente, band = {}, {}, {}
+    fig0, allg = BA.lade(DATEN / "figuren.json"), BA.lade(DATEN / "pruefregeln.json")
+    szenen, momente, band, fig = {}, {}, {}, {}
     for name, pd in plaene.items():
         for sid, sz in pd["szenen"].items():
             szenen[sid] = (name, sz)
+            fig[sid] = BA.fig_fuer(fig0, pd)
         for b in pd["bilder"]:
             panels = BA.lade(BA.D / f"briefs/{b['brief']}.json")["panels"]
             for sid, p_ in zip(b["felder"], panels):
@@ -48,7 +49,7 @@ def kontext():
     return plaene, fig, allg, szenen, momente, band
 
 
-def stempel(pr, sz, fig, allg):
+def stempel(pr, sz, fig, allg):  # fig: Figurenangaben der Szene
     pr["datum"] = JETZT.date().isoformat()
     pr["plan_sha"] = BP.plan_fingerabdruck(sz, fig, allg)
     pr["regeln_version"] = allg["version"]
@@ -78,7 +79,7 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
         (out / f"{sid}__kachel.png").write_bytes(png)
         e["kachel"] = f"{sid}__kachel.png"
         try:
-            a["schluss"] = BP.pruefe_kachel(schluessel, png, sz.get("speech", []), fig, momente[sid])
+            a["schluss"] = BP.pruefe_kachel(schluessel, png, sz.get("speech", []), fig[sid], momente[sid])
             a["schluss"]["datum"] = JETZT.date().isoformat()
             if e.get("blasen_fehler"):
                 a["schluss"]["ergebnis"] = "durchgefallen"
@@ -100,13 +101,13 @@ def pruefen(a, schluessel, out):
         _, sz = szenen[sid]
         bild = BA.OUT / aus[sid]["datei"]
         alt = aus[sid].get("pruefung") or {}
-        aktuell = (alt.get("bild_sha") == BP.sha(bild.read_bytes()) and alt.get("plan_sha") == BP.plan_fingerabdruck(sz, fig, allg)
+        aktuell = (alt.get("bild_sha") == BP.sha(bild.read_bytes()) and alt.get("plan_sha") == BP.plan_fingerabdruck(sz, fig[sid], allg)
                    and alt.get("regeln_version") == allg["version"])
         if aktuell and not a.erzwingen:
             print(f"aktuell {sid}")
             continue
         try:
-            pr = stempel(BP.pruefe_feld(schluessel, bild, sz, fig, allg, momente[sid]), sz, fig, allg)
+            pr = stempel(BP.pruefe_feld(schluessel, bild, sz, fig[sid], allg, momente[sid]), sz, fig[sid], allg)
             aus[sid]["pruefung"] = pr
             bericht[sid] = {"varianten": [{"datei": None, "pruefung": pr}]}
             print(f"feld {sid}: {pr['ergebnis']} ({pr['punkte']} Punkte)")
@@ -123,12 +124,12 @@ def neu(a, schluessel, out):
     bericht, gewaehlt = {}, {}
     for sid in a.szenen.split(","):
         sid = sid.strip()
-        _, sz = szenen[sid]
-        vorlagen = [G.STILREF] + ([G.FIGBLATT] if G.FIGBLATT.is_file() else [])
+        name, sz = szenen[sid]
+        vorlagen = G.vorlagen_fuer(plaene[name])
         hinweis, beste = a.hinweis, None
         e = bericht.setdefault(sid, {"varianten": []})
         for runde in range(1, a.runden + 1):
-            prompt = G.auftrag_feld(sz, fig) + (f"\n\nADDITIONAL INSTRUCTION FOR THIS RUN: {hinweis}" if hinweis else "")
+            prompt = G.auftrag_feld(sz, fig[sid], len(vorlagen) > 1) + (f"\n\nADDITIONAL INSTRUCTION FOR THIS RUN: {hinweis}" if hinweis else "")
             try:
                 m, bilder = G.male(prompt, vorlagen, schluessel, a.varianten)
             except Exception as ex:
@@ -138,7 +139,7 @@ def neu(a, schluessel, out):
                 var = f"r{runde}v{k}"
                 (out / f"{sid}__{var}.png").write_bytes(b)
                 try:
-                    pr = stempel(BP.pruefe_feld(schluessel, b, sz, fig, allg, momente[sid]), sz, fig, allg)
+                    pr = stempel(BP.pruefe_feld(schluessel, b, sz, fig[sid], allg, momente[sid]), sz, fig[sid], allg)
                 except Exception as ex:
                     BP.melde(f"{sid} {var} prüfen: {ex}")
                     continue

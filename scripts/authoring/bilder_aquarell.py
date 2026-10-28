@@ -117,8 +117,16 @@ def blase(b, sp, n):
     else:
         cx = min(max(tx, x + 26), x + w - 26)
         base, shift = [(cx - 11, y + 1), (cx + 11, y + 1)], (0, 2)
+    if sp.get("denken"):  # Gedanke: Wolke mit kleinen Kreisen statt Spitze
+        bx, by = base[0][0] + (base[1][0] - base[0][0]) / 2, base[0][1] + (base[1][1] - base[0][1]) / 2
+        kreise = "".join(f'<circle cx="{bx + (tx - bx) * t:.0f}" cy="{by + (ty - by) * t:.0f}" r="{r_}" fill="{PAPER}" stroke="{INK}" stroke-width="1.2"/>'
+                         for t, r_ in ((0.3, 7), (0.62, 5), (0.9, 3.5)))
+        out = [f'<g class="ill-bubble ill-thought" data-speech="{n}">', kreise,
+               f'<rect x="{x}" y="{y}" width="{w}" height="{h:.0f}" rx="{min(h / 2, 34):.0f}" fill="{PAPER}" fill-opacity=".94" stroke="{INK}" stroke-width="1.2" stroke-dasharray="1 0"/>']
+    else:
+        out = None
     pts = " ".join(f"{u:.0f},{v:.0f}" for u, v in base) + f" {tx:.0f},{ty:.0f}"
-    out = [f'<g class="ill-bubble" data-speech="{n}">',
+    out = out or [f'<g class="ill-bubble" data-speech="{n}">',
            f'<polygon points="{pts}" fill="{PAPER}" stroke="{INK}" stroke-width="1.2" stroke-linejoin="round"/>',
            f'<rect x="{x}" y="{y}" width="{w}" height="{h:.0f}" rx="18" fill="{PAPER}" fill-opacity=".94" stroke="{INK}" stroke-width="1.2"/>',
            f'<polygon points="{pts}" fill="{PAPER}" stroke="none" transform="translate({shift[0]} {shift[1]})"/>']
@@ -239,6 +247,14 @@ def pruefe_zitate(plan, texte):
     return fehler
 
 
+def fig_fuer(fig, plan_d):
+    """Figurenangaben für einen Plan: figuren.json, ergänzt bzw. überschrieben durch «figuren», «kenn_en», «pruef» des Plans."""
+    f = {k: (dict(v) if isinstance(v, dict) else v) for k, v in fig.items()}
+    for k in ("figuren", "kenn_en", "pruef"):
+        f.setdefault(k, {}).update(plan_d.get(k, {}))
+    return f
+
+
 def plaene():
     return {p.name: lade(p) for p in sorted(DATEN.glob("szenen-*.json"))}
 
@@ -299,7 +315,7 @@ def main():
             "labels": {"de": "Aquarell", "en": "Watercolour"},
             "description_de": "Minimalistischer Aquarell-Comic nach dem Styleguide «Visuelle Bibel» V1.2 (docs/BILDSTIL.md): warmweisses Papier, wenige dünne Linien, transparente Flächen, natürliche erwachsene Figuren, viel Weissraum. Gemalte Szenen je Bildfeld; Worte als Text darüber in der gewählten Sprache. Ersetzt in der App die Stile Symbol und Anime, wo vorhanden.",
             "style_reference": "docs/referenz/stilreferenz-aquarell-comic.jpg", "character_sheet": "data/illustrations/aquarell/figurenblatt.webp",
-            "renderings": {k: {"description_en": v} for k, v in sorted(fig["figuren"].items())},
+            "renderings": {k: {"description_en": v} for k, v in sorted({**fig["figuren"], **{x: y for pd in alle.values() for x, y in pd.get("figuren", {}).items() if x not in fig["figuren"]}}.items())},
             "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
     alt_p = D / "styles/ILLSTYLE-AQUARELL.json"
     if alt_p.exists():

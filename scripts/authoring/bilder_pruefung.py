@@ -253,7 +253,11 @@ SYS_SCHLUSS = ("You are a strict checker of a finished comic panel for a Bible a
 def txt_schluss(sprech, fig):
     fr = []
     for n, sp in enumerate(sprech, 1):
-        fr.append(f'- B{n}: Does the tail of the speech bubble with the words «{sp["de"]}» point clearly at {fig["kenn_en"].get(sp["from"], sp["from"])}?')
+        wer = fig["kenn_en"].get(sp["from"], sp["from"])
+        if sp.get("denken"):
+            fr.append(f'- B{n}: Is the bubble with the words «{sp["de"]}» a thought bubble (rounded, with a trail of small circles instead of a pointed tail), and do the circles lead to {wer}?')
+        else:
+            fr.append(f'- B{n}: Does the tail of the speech bubble with the words «{sp["de"]}» point clearly at {wer}?')
     fr.append("- S-GESICHT: Does any speech bubble cover a face, a hand that gestures, or an important object?")
     fr.append("- S-LESBAR: Is all lettering (bubbles and caption band) complete and readable, not cut off or overlapping?")
     return "\n".join(fr)

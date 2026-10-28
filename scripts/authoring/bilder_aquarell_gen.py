@@ -49,12 +49,22 @@ def auftrag_figurenblatt(fig):
             f"its line, wash, palette and white space; ignore its content, layout, ages and text): {fig['stil_en']}")
 
 
-def auftrag_feld(sz, fig):
+def vorlagen_fuer(plan_d):
+    """Stilreferenz und, wenn der Plan es nicht abschaltet («figurenblatt»: null) oder ein eigenes nennt, das Figurenblatt."""
+    fb = plan_d.get("figurenblatt", "data/illustrations/aquarell/figurenblatt.webp")
+    return [STILREF] + ([ROOT / fb] if fb and (ROOT / fb).is_file() else [])
+
+
+def auftrag_feld(sz, fig, mit_blatt=None):
     ids = list(dict.fromkeys([*sz["depicts"], *[x for sp in sz["speech"] for x in (sp["from"], sp["to"])]]))
     leute = "\n".join(f"- {fig['figuren'][k]}" for k in ids if k in fig["figuren"])
-    sprecher = "".join(f"\n- {fig['figuren'][sp['from']].split(':')[0]} is speaking to {fig['figuren'][sp['to']].split(':')[0].lower()} (shown through gaze and gesture)." for sp in sz["speech"])
+    def wer(f):
+        return fig["figuren"].get(f, f).split(":")[0]
+    sprecher = "".join(f"\n- {wer(sp['from'])} is thinking (shown through face and gaze)." if sp.get("denken") else
+                       f"\n- {wer(sp['from'])} are talking to each other (shown through gaze and gesture)." if sp["from"] == sp["to"] else
+                       f"\n- {wer(sp['from'])} is speaking to {wer(sp['to']).lower()} (shown through gaze and gesture)." for sp in sz["speech"])
     vorlagen = ("The first attached image shows the drawing style (use only its style). "
-                + ("The second attached image is the character sheet: use it only to know who is who (face shape, hair, beard, age, clothing colours) – not for its level of detail; paint everyone much simpler and looser than on the sheet." if FIGBLATT.is_file() else ""))
+                + ("The second attached image is the character sheet: use it only to know who is who (face shape, hair, beard, age, clothing colours) – not for its level of detail; paint everyone much simpler and looser than on the sheet." if (FIGBLATT.is_file() if mit_blatt is None else mit_blatt) else ""))
     return (f"{sz['bild_en']}\n\nPEOPLE AND OBJECTS (keep exactly):\n{leute}\n"
             + (f"\nWHO SPEAKS:{sprecher}\n" if sprecher else "")
             + f"\nPICTURE: {fig['bild_en']}\n\nSTYLE: {fig['stil_en']}\n\n{vorlagen}")

@@ -1,0 +1,56 @@
+# Pilot «strukturierte Inhalte mit Bild-KI» (pilot/struktur/): Aquarell-Unterlagen nach exakten Vorlagen und Vignetten malen.
+# Start von Hand: Actions → «bildpilot-struktur» → Run workflow. Geheimnis: OPENAI_API_KEY.
+# Ergebnis: Branch «bildpilot-ausgabe», Ordner ausgabe/struktur/<lauf>/. Zusammensetzen danach mit pilot/struktur/struktur.py zusammen.
+name: bildpilot-struktur
+
+on:
+  workflow_dispatch:
+    inputs:
+      auftraege:
+        description: "karte, stiftshuette, selig (Präfixe, mit Komma) oder «alle»"
+        default: "alle"
+      varianten:
+        description: "Bilder je Auftrag"
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bildpilot
+  cancel-in-progress: false
+
+jobs:
+  malen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pillow numpy
+      - name: Malen
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          AUFTRAEGE: ${{ inputs.auftraege }}
+          VARIANTEN: ${{ inputs.varianten }}
+        run: python3 pilot/struktur/struktur_gen.py "$AUFTRAEGE" "$VARIANTEN"
+      - name: Auf Branch bildpilot-ausgabe sichern
+        if: always()
+        env:
+          LAUF: ${{ github.run_number }}
+        run: |
+          set -e
+          [ -d pilot/struktur/ausgabe ] || exit 0
+          mv pilot/struktur/ausgabe "$RUNNER_TEMP/struktur"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git fetch --depth 1 origin bildpilot-ausgabe
+          git checkout -B bildpilot-ausgabe FETCH_HEAD
+          mkdir -p ausgabe/struktur
+          cp -r "$RUNNER_TEMP/struktur/." ausgabe/struktur/
+          git add ausgabe
+          git commit -qm "Bildpilot Struktur: Lauf $LAUF"
+          git push origin bildpilot-ausgabe
