@@ -31,6 +31,12 @@ def main():
     theirs = json.loads(git("show", f"origin/{b}:{F}").stdout)
     ours = json.loads(git("show", f"HEAD:{F}").stdout)
     neu = [k for k, v in theirs.items() if base.get(k) != v]
+    # Hat main eine Szene seit dem Start des Laufs selbst geändert (z. B. neu gemalt), bleibt main: sonst überschreibt eine
+    # Neuprüfung auf altem Stand das neue Bild (Lauf 41 überschrieb Joh 2 J2 aus Lauf 40).
+    veraltet = [k for k in neu if ours.get(k) != base.get(k)]
+    if veraltet:
+        print("::warning::Lauf auf älterem Stand, main behalten für: " + ", ".join(veraltet))
+    neu = [k for k in neu if k not in veraltet]
     for k in neu:
         ours[k] = theirs[k]
     (ROOT / F).write_text(json.dumps(ours, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
