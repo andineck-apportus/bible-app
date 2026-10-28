@@ -483,6 +483,8 @@ def main():
     fehler = []
     for name, pd in alle.items():
         fehler += pruefe_zitate(pd["szenen"], texte_von(pd)) + pruefe_band(pd, texte_von(pd))
+        bekannt = {**fig["figuren"], **pd.get("figuren", {})}   # jede gezeigte Figur braucht eine Darstellung im Stil (Validator)
+        fehler += [f"{name} {sid}: {d} ohne Beschreibung in «figuren»" for sid, sz in pd["szenen"].items() for d in sz["depicts"] if d not in bekannt]
     if fehler:
         sys.exit("FEHLER Zitate:\n" + "\n".join(fehler))
     n = 0
