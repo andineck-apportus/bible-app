@@ -102,6 +102,36 @@ Aus [BILDSPRACHE.md](BILDSPRACHE.md), unverändert verbindlich auch im Aquarells
 
 **Freigabevermerk je Motiv** (Feld `check` im Bild-Datensatz): Textbasis · Referenzbild · B/R/I-Nachweise · offene Punkte · Prüfer/in · Datum · Version. Eine KI-Prüfung ersetzt keine fachliche Prüfung und wird nicht als solche ausgegeben.
 
+## 8 Ergänzung – Automatische Prüfung (seit 2026-10-28)
+
+Ziel (Andi Neck, 2026-10-28): Prozesse, Regeln und Prüfungen so festlegen, dass später kein Mensch mehr jedes Bild ansehen muss. Darum ist jede Forderung dieses Stilblatts, die man im Bild sehen kann, als **Prüfregel** geschrieben, und jedes Bild wird von einem Bildprüfmodell geprüft, das nicht das Malmodell ist.
+
+**Regeln auf drei Ebenen** (Aufbau: Frage auf Englisch, Erwartung, Stufe, Beleg):
+1. **Allgemein** (`scripts/authoring/bilder_aquarell_daten/pruefregeln.json`): gilt für jedes Bild – nichts angeschnitten, keine gemalte Schrift, kein Heiligenschein, keine Licht- oder Zaubereffekte, nichts Modernes, keine Fehlbildungen, niemand doppelt, keine Karikatur, erwachsene Proportionen; dazu Soll-Regeln (Reduktion, oberes Viertel frei, nur Jesus in Terrakottarot).
+2. **Figur** (`figuren.json` «pruef», im Szenenplan ergänzbar): gilt überall, wo die Figur vorkommt – Jesu Gesicht voll sichtbar; Maria eine Generation älter als Jesus; der Vater im Gleichnis alt.
+3. **Feld** (Szenenplan «pruefung»): was dieser Text verlangt oder verbietet, mit B/R/I und Bibelstelle – z. B. sechs Krüge zählbar (Zählregel), kein Wein in den Krügen ([[JHN.2.9]]), der Speisemeister spricht zum Bräutigam, die Geissel trifft niemanden, das Ende von [[LUK.15.32]] bleibt offen.
+
+Jede Regel ist **Pflicht** (sonst ist das Bild unbrauchbar) oder **Soll** (zählt bei der Wahl unter brauchbaren Varianten). «Nicht»-Regeln fragen nach dem Verbotenen und müssen mit Nein beantwortet werden.
+
+**Ablauf** (`scripts/authoring/bilder_aquarell_lauf.py`, Action «bilder-aquarell», Schritt `auto-neu`):
+1. Je Feld zwei Varianten malen.
+2. **Blind:** Das Prüfmodell sieht nur das Bild und beschreibt Personen (mit Kopfposition), Gegenstände, Handlung und rät die Bibelstelle.
+3. **Regeln:** Es beantwortet jede Prüfregel einzeln (ja / nein / unklar mit Begründung), zählt verlangte Gegenstände und ordnet die erwarteten Figuren den Personen zu.
+4. **Kern:** Ein Textvergleich bewertet, ob die Blindbeschreibung den Moment des Felds trifft (0–2).
+5. **Wahl:** die Variante, die alle Pflichtregeln erfüllt, mit den meisten Punkten. Erfüllt keine, wird mit einem Hinweis aus den verfehlten Regeln neu gemalt (höchstens drei Runden); danach bleibt das Feld offen und wird nicht übernommen.
+6. **Blasen** setzt das Werkzeug selbst nach den Kopfpositionen (über oder neben dem Kopf, kurze Spitze, nie über einem Kopf, Lesereihenfolge); Gedanken als Wolke mit kleinen Kreisen.
+7. **Schlussprüfung** der fertigen Kachel mit Blasen und Band: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste oder wichtigem Gegenstand, alle Worte lesbar, Moment getroffen (mindestens 1 von 2).
+8. Ergebnis in `check` des Bild-Datensatzes, mit Fingerabdruck von Bild und Regeln. Der Validator prüft Belege (B mit gültiger Stelle innerhalb des Felds) und meldet eine Prüfung als veraltet, sobald sich das Bild ändert.
+
+**Prüfstufen** (`check.stufe`): `entwurf` (nicht oder nicht vollständig bestanden) → `ki-geprueft` (alle Pflichtregeln und Schlussprüfung bestanden, aktuell) → `fachlich-geprueft` (nur mit Name der prüfenden Person). «ki-geprueft» ist keine fachliche Freigabe.
+
+**Regelwerk verbessern:** Fällt einem Menschen an einem «ki-geprueft»-Bild etwas auf, wird daraus eine Regel auf der passenden Ebene (allgemein, Figur oder Feld) und alle betroffenen Bilder laufen mit `auto-pruefen` erneut. Ein Hinweis, der keine Regel wird, ist keine Verbesserung des Verfahrens.
+
+## 9 Ergänzung – Strukturen, Karten, Masse (Pilot)
+
+Szenen werden gemalt; was gemessen, gezählt oder verortet ist, kommt aus Daten (Abschnitt 2). Im Pilot (`pilot/struktur/`) gibt es dafür zwei Fassungen: **A** rein aus Daten gezeichnet (exakt, Aquarell-Anmutung mit Filtern) und **B** eine vom Bildmodell nach einer exakten Vorlage gemalte Unterlage, über der die Datenebene (Orte, Masse, Beschriftung, Text, B/R-Kennzeichen) als SVG liegt. Die Formtreue der gemalten Unterlage wird gemessen (Kantenvergleich mit der Vorlage). Beschriftung und Zahlen malt nie das Bildmodell.
+
 ## Änderungsnachweis
 
 - **2026-10-27:** V1.2 übernommen (Andi Neck). Ergänzt: Stilreferenz nur für die Bildsprache; Herstellung nach Form (Szenen gemalt, Masse und Strukturen aus Daten); B/R/I in der Legende; unsere Textbasis; weiter geltende Darstellungsregeln; Einzelfelder und Worte als Text in der App. Erste Anwendung: Johannes 2.
+- **2026-10-28:** Automatische Prüfung mit Regeln auf drei Ebenen, Prüfstufen und automatisch gesetzten Blasen (Abschnitt 8); Pilot Strukturen (Abschnitt 9); weitere Beispiele Mk 4,35–41 und Lk 15,11–32 (Wunsch Andi Neck: Regelwerk an mehr Beispielen testen).

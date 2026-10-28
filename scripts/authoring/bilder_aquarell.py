@@ -146,17 +146,20 @@ def _schneidet(a, b, rand=0):
     return not (a[2] + rand <= b[0] or b[2] + rand <= a[0] or a[3] + rand <= b[1] or b[3] + rand <= a[1])
 
 
-def blasen_auto(speech, koepfe):
+def blasen_auto(speech, koepfe, weitere=()):
     """Blasen nach den Köpfen setzen: über (oder neben) dem Kopf der sprechenden Person, kurze Spitze zum Kopf, keine Blase über
     einem Kopf oder einer anderen Blase, Lesereihenfolge links→rechts bzw. oben→unten. Köpfe: {Figur: {"kopf": [x0,y0,x1,y1]}} in
-    0–1000. Gibt (Blasen, Fehler) zurück; eine Blase ohne gültigen Platz ist ein Fehler."""
-    kb = {f: (k["kopf"][0] * W / 1000, k["kopf"][1] * H / 1000, k["kopf"][2] * W / 1000, k["kopf"][3] * H / 1000) for f, k in koepfe.items()}
-    gesetzt, fehler = [], []
-    for n, sp in enumerate(speech):
+    0–1000. weitere: Kopfrahmen aller anderen Personen aus der Blindbeschreibung (werden ebenfalls nie verdeckt).
+    Gibt (Blasen, Fehler) zurück; eine Blase ohne gültigen Platz ist ein Fehler."""
+    def px(b):
+        return (b[0] * W / 1000, b[1] * H / 1000, b[2] * W / 1000, b[3] * H / 1000)
+    kb = {f: px(k["kopf"]) for f, k in koepfe.items()}
+    hindernisse = list(kb.values()) + [px(b) for b in weitere if b and len(b) == 4]
+
+    def setze(n, gesetzt):
+        sp = speech[n]
         if sp["from"] not in kb:
-            fehler.append(f"Blase {n + 1}: Kopf von {sp['from']} unbekannt")
-            gesetzt.append(None)
-            continue
+            return None
         hx0, hy0, hx1, hy1 = kb[sp["from"]]
         hx = (hx0 + hx1) / 2
         best = None
@@ -166,9 +169,9 @@ def blasen_auto(speech, koepfe):
                 for x in range(6, W - 6 - w + 1, 4):
                     for y in range(4, H - 6 - h + 1, 4):
                         box = (x, y, x + w, y + h)
-                        if any(_schneidet(box, k, 6) for k in kb.values()):
+                        if any(_schneidet(box, k, 6) for k in hindernisse):
                             continue
-                        if any(g and _schneidet(box, (g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), 8) for g in gesetzt):
+                        if any(_schneidet(box, (g["x"], g["y"], g["x"] + g["w"], g["y"] + g["h"]), 8) for g in gesetzt.values()):
                             continue
                         if y + h <= hy0 - 10:          # über dem Kopf: Spitze nach unten zur Kopfmitte oben
                             tail = (hx, hy0 - 3)
@@ -181,23 +184,41 @@ def blasen_auto(speech, koepfe):
                                 continue
                             tail = (hx1 + 3, (hy0 + hy1) / 2) if x >= hx1 + 10 else (hx0 - 3, (hy0 + hy1) / 2)
                             lang = (x - hx1) if x >= hx1 + 10 else (hx0 - (x + w))
-                            seit = 60
+                            seit = 220            # neben dem Kopf nur, wenn darüber kein Platz ist
                         else:
                             continue
                         kosten = (seit * 0.5 + max(0, lang - 50) * 1.5 + max(0, 14 - lang) * 6 + y * 0.25 + (21 - fs) * 12
                                   + (h - 2 * 14) * 0.6 + (w - 170) * 0.05)
-                        if n and gesetzt[n - 1]:
-                            v = gesetzt[n - 1]
-                            if x + w / 2 < v["x"] + v["w"] / 2 - 20 and y < v["y"] + v["h"] / 2:
-                                kosten += 120      # Lesereihenfolge verletzt
+                        for m, v in gesetzt.items():  # Lesereihenfolge: frühere Rede links bzw. oben
+                            vor = m < n
+                            links = x + w / 2 < v["x"] + v["w"] / 2 - 20 and y < v["y"] + v["h"] / 2
+                            rechts = x + w / 2 > v["x"] + v["w"] / 2 + 20 and y + h / 2 > v["y"]
+                            if (vor and rechts) or (not vor and links):
+                                kosten += 120
                         if best is None or kosten < best[0]:
                             best = (kosten, {"x": x, "y": y, "w": w, "h": h, "fs": fs, "tail": [round(tail[0]), round(tail[1])]})
-            if best and best[1]["h"] <= 2 * 14 + (fs + 4) * 3:
-                break
-        if best is None:
-            fehler.append(f"Blase {n + 1}: kein freier Platz bei {sp['from']}")
-        gesetzt.append(best[1] if best else None)
-    return [g for g in gesetzt], fehler
+        return best
+
+    import itertools
+    beste = None
+    for folge in itertools.permutations(range(len(speech))):   # schwierige Blase zuerst setzen, wenn nötig
+        gesetzt, kosten, fehlt = {}, 0, []
+        for n in folge:
+            r = setze(n, gesetzt)
+            if r is None:
+                fehlt.append(n)
+                continue
+            gesetzt[n] = r[1]
+            kosten += r[0]
+        wert = (len(fehlt), kosten)
+        if beste is None or wert < beste[0]:
+            beste = (wert, gesetzt, fehlt)
+        if not fehlt:
+            break
+    _, gesetzt, fehlt = beste
+    fehler = [f"Blase {n + 1}: " + (f"Kopf von {speech[n]['from']} unbekannt" if speech[n]["from"] not in kb else f"kein freier Platz bei {speech[n]['from']}")
+              for n in sorted(fehlt)]
+    return [gesetzt.get(n) for n in range(len(speech))], fehler
 
 
 def band(n, kw):

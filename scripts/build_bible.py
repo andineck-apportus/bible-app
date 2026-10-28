@@ -243,6 +243,21 @@ for rid, r in ill_recs.items():
 ill_l10n = _l10n.load(ill_recs)
 
 
+def _check_text(c):
+    """Kurzer Prüfvermerk für die Legende; automatische Prüfung (docs/BILDSTIL.md, Abschnitt 8) oder alter Blindtest."""
+    if "stufe" not in c:
+        return c.get("result_de")
+    f = [x for x in c.get("felder", []) if x.get("regeln")]
+    if not f:
+        return "Entwurf, noch nicht automatisch geprüft."
+    n = sum(len(x["regeln"]) for x in f)
+    datum = max((x.get("datum") or "") for x in f)
+    if c["stufe"] == "ki-geprueft":
+        return f"Automatisch geprüft am {datum}: alle Pflichtregeln erfüllt ({n} Prüfungen in {len(f)} Feldern, Bildprüfmodell ohne Kenntnis des Auftrags beschreibt zuerst blind). Keine fachliche Prüfung."
+    offen = len(c.get("open_de") or [])
+    return f"Entwurf – automatische Prüfung am {datum}: {offen} offene Punkte."
+
+
 def _ill_svg(fp):
     """SVG eines Bildes; gemalte Bilder (<image href="img/…">) als data:-Adresse einbetten, damit Einzeldatei und Pakete sie tragen."""
     svg = fp.read_text(encoding="utf-8").strip()
@@ -259,7 +274,7 @@ for rid, r in ill_recs.items():
     st, br = ill_recs[r["style"]], ill_recs[r["brief"]]
     key = r["target"] if r["level"] in ("section", "bible", "testament", "group") else r["reference"]
     item = {"id": rid, "brief": br["id"], "style": st["key"], "level": r["level"], "ref": r.get("reference"), "depicts": r.get("depicts", []),
-            "alt": r["alt_de"], "note": r.get("note_de") or br.get("interpretation_note_de"), "check": (r.get("check") or {}).get("result_de"),
+            "alt": r["alt_de"], "note": r.get("note_de") or br.get("interpretation_note_de"), "check": _check_text(r.get("check") or {}),
             "panels": [{"n": p_["n"], "ref": p_["reference"], "action": p_["action_de"]} for p_ in br["panels"]], "captions": br.get("captions_de"),
             "svg": _ill_svg(ROOT / r["file"])}
     if r.get("evidence"):  # Aquarellstil (docs/BILDSTIL.md): Belege je Feld (B/R/I) und Herkunft des KI-Bilds für die Legende

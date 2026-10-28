@@ -72,7 +72,8 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
         a = aus[sid]
         e = bericht.setdefault(sid, {})
         if a.get("blasen") != "hand" and sz.get("speech"):
-            bl, fehler = BA.blasen_auto(sz["speech"], (a.get("pruefung") or {}).get("koepfe", {}))
+            pr_ = a.get("pruefung") or {}
+            bl, fehler = BA.blasen_auto(sz["speech"], pr_.get("koepfe", {}), [p_.get("head") for p_ in pr_.get("personen", [])])
             a["blasen_auto"] = bl
             e["blasen_fehler"] = fehler
         png = kachel_png(sid, sz, a, band[sid])
