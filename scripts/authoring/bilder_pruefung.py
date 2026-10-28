@@ -110,7 +110,13 @@ def modell(schluessel):
             treffer = [m for m in da if wunsch.lower() in m.lower()]
             if not treffer:
                 raise RuntimeError(f"Kein Modell zu «{wunsch}». Vorhanden: {', '.join(m for m in da if m.startswith(('gpt', 'o')))}")
-            _modell = sorted(treffer, key=lambda m: (len(m), m))[0]
+            import re as _re
+            def _vers(m):
+                z = _re.search(r"(\d+(?:\.\d+)*)", m)
+                return tuple(int(x) for x in z.group(1).split(".")) if z else ()
+            datiert = lambda m: bool(_re.search(r"\d{4}-\d{2}-\d{2}", m))  # noqa: E731
+            _modell = sorted(treffer, key=lambda m: (_vers(m), not datiert(m), -len(m)))[-1]   # neueste Fassung, ohne Datumsendung
+            melde(f"Treffer für «{wunsch}»: {', '.join(treffer)}")
         melde(f"Prüfmodell: {_modell}")
         return _modell
     try:
