@@ -497,7 +497,9 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
   #bible-stream .app:not([data-show=img]) .stream-entry.has-ill>.actions-under{display:none}
   #bible-stream .ill-wrap.nowords .actions-side{display:none}
   #bible-stream .stream-entry.has-ill:has(.ill-wrap.nowords)>.actions-under{display:flex}
-  #bible-stream .ill-wrap .ill-tiles,#bible-stream .ill-wrap .ill figcaption{margin-left:0}
+  /* Bild in seiner Spalte zentriert wie auf der Versebene (Hinweis Andi Neck 2026-10-28) */
+  #bible-stream .ill-wrap .ill-tiles,#bible-stream .ill-wrap .ill figcaption{margin-left:auto;margin-right:auto}
+  #bible-stream .ill-wrap .ill:has(.tile-box>svg.ill-tile[data-scene]) figcaption{max-width:480px}
   #bible-stream .app[data-show=both] .ill-wrap{display:grid;grid-template-columns:minmax(16em,36em) minmax(460px,1fr);gap:32px;align-items:start}
 }
 /* Versbilder rechts neben den Versen: Lesebereich (ohne Seitenleiste) braucht Platz für 36em Text und 400 px Bild */
