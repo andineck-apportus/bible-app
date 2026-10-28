@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.139 — 2026-10-28 — Navigator ohne feste Leiste Testament/Buchgruppen
+
+Hinweis von Andi Neck (2026-10-28): Die Leiste AT/NT mit den Buchgruppen wird nicht mehr gebraucht, der Pfad oben zeigt, wo man ist. Testamente bzw. Buchgruppen erscheinen nur noch als nächste Ebene, wenn im Pfad «Die Bibel» bzw. ein Testament gewählt ist; danach wie bisher Bücher, Kapitel, Abschnitte, Verse.
+
 ## v0.138 — 2026-10-28 — Navigation: zuerst auswählen, dann öffnen; Adressen; Laden mit Abbrechen
 
 Hinweise von Andi Neck (2026-10-28).

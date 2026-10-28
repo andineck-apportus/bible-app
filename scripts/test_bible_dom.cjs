@@ -170,7 +170,7 @@ assert(app.classList.contains('flow'),'Verse fortlaufend ist Standard');
 click('[data-action=index]');
 assert(sheetHost.querySelector('.crumbs [aria-current=true]'),'Pfad zeigt die aktuelle Position');
 assert(sheetHost.textContent.includes('Du bist hier'));
-click('.tm-toggle [data-nav="t:ot"]');click('.chips [data-nav="g:0"]');
+click('.nav-sel [data-nav="t:"]');assert(sheetHost.querySelector('.chips [data-nav="t:ot"]')&&!sheetHost.querySelector('.tm-toggle'),'Bibel gewählt: Testamente als nächste Ebene');click('.chips [data-nav="t:ot"]');click('.chips [data-nav="g:0"]');
 assert(sheetHost.querySelector('.grid.books [data-nav="b:0"]'),'Bücher der Gruppe');
 click('[data-nav="b:0"]');assert(sheetHost.querySelector('.grid.nums [data-nav="c:50"]'),'50 Kapitel Genesis');
 click('[data-nav="c:1"]');assert(sheetHost.querySelector('.grid.nums [data-nav="v:31"]'),'31 Verse Genesis 1');
@@ -178,7 +178,7 @@ assert(sheetHost.querySelector('.open[data-go="c0-1"]'),'Kapitel öffnen');
 click('.grid.nums [data-nav="v:3"]');assert(sheetHost.querySelector('.nav-open[data-go="v0-1-3"]'),'Vers gewählt, noch nicht geöffnet');click('.sheet .nav-open');assert.equal(model.nodes.get('v0-1-3').id,'v0-1-3');assert(reader.querySelector('[data-stream="v0-1-3"]'),'Sprung zu Genesis 1,3');
 click('[data-action=index]');assert(sheetHost.querySelector('.grid.books [data-nav="b:0"].cur')&&sheetHost.querySelector('.grid.nums [data-nav="c:1"].cur'),'Navigator startet an der aktuellen Position');
 assert(!sheetHost.querySelector('.grid.books .study'),'in der Gruppe Gesetz ist nichts ausgearbeitet');
-click('.tm-toggle [data-nav="t:nt"]');assert(sheetHost.querySelector('[data-nav="g:5"]'),'Gruppen des NT');click('[data-nav="g:5"]');assert(sheetHost.querySelector('.grid.books [data-nav="b:39"].study'),'Matthäus als ausgearbeitet markiert');
+click('.nav-sel [data-nav="t:"]');click('.chips [data-nav="t:nt"]');assert(sheetHost.querySelector('[data-nav="g:5"]'),'Gruppen des NT');click('[data-nav="g:5"]');assert(sheetHost.querySelector('.grid.books [data-nav="b:39"].study'),'Matthäus als ausgearbeitet markiert');
 click('[data-close]');
 
 // Querverweise und Stellen im Text sind verlinkt; Rücksprung
