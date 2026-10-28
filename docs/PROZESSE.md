@@ -334,7 +334,31 @@ Bilder aus Zeichen des Bildlexikons, mit Blindtest geprüft. Abgelöst durch den
 
 Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Regeln, bis kein Mensch mehr drüberschauen muss.
 
-### Fassung 2.3 – gültig ab 2026-10-28 (aktuell)
+### Fassung 2.4 – gültig ab 2026-10-28 (aktuell)
+
+*Änderung:* Bildlexikon im Aquarellstil (Entscheid Herausgeber): je Lexikon-Eintrag ein gemaltes Einzelporträt bzw. eine Vignette, automatisch geprüft wie die Szenen (Blindbeschreibung, Regeln, Vergleich mit Beschreibung und Lexikon); geprüfte Porträts gehen beim Malen der Szenen als Vorlage mit.
+
+1. **Einträge fürs Bildlexikon** (Werkzeug (feste Prüfung)): Jeder Lexikon-Eintrag, den der Aquarellstil zeichnet, erhält ein Einzelbild: Personen als Ganzkörper- oder Kniestück-Porträt, Gruppen als kleine Gruppe, Gegenstände, Orte und Zeichen als Vignette, auf warmweissem Papier. Gemalt wird nach der Beschreibung des Stils, der Stilreferenz und, für die Personen von Joh 2, dem Figurenblatt.
+2. **Porträt malen** (Bildmodell): Das Bildmodell malt zwei Varianten im Hochformat.
+3. **Porträt blind beschreiben** (Weitere Instanz (prüft)): Eine weitere Instanz sieht nur das Bild und beschreibt Personen bzw. Gegenstände, ohne Beschreibung oder Namen zu kennen.
+4. **Porträt prüfen** (Weitere Instanz (prüft)): Dieselbe Instanz beantwortet die Regeln einzeln: allgemeine Regeln, Porträtregeln (eine Person bzw. kleine Gruppe bzw. Vignette, entspricht der Beschreibung, keine Attribute ausser denen von Beschreibung und Lexikon, passt zu den Erkennungsmerkmalen im Lexikon) und Figurenregeln (z. B. Maria sichtbar älter, Gesicht Jesu voll sichtbar). Verfehlte Pflichtregeln fragt die zweite Instanz noch zweimal, die Mehrheit gilt; ein Textvergleich bewertet, ob die Blindbeschreibung zur Beschreibung passt (mindestens 1 von 2). Prüft: alle Pflichtregeln erfüllt, Blindbeschreibung passt.
+5. **Porträt wählen und ablegen** (Werkzeug (feste Prüfung)): Gewählt wird die bestandene Variante mit den meisten Punkten; abgelegt klein (384 × 576) mit Prüfvermerk im Stil-Datensatz (Datum, Ergebnis, Regeln, Grenzen, Fingerabdrücke von Bild und Auftrag). Ändern sich Beschreibung oder Regeln, gilt das Porträt als veraltet. Zurück zu «Porträt malen», wenn keine Variante bestanden: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden; danach bleibt der Eintrag offen.
+6. **Szenenplan** (Bearbeitende Instanz): Je Bildfeld: Malauftrag (Personen links/rechts nach Reihenfolge der Reden, Gefühle über Körper und Geste), wörtliche Rede aus dem Lesetext, Belege B/R/I und Feldregeln (was der Text verlangt oder verbietet).
+7. **Zitate und Band** (Werkzeug (feste Prüfung)): Jede Blase steht wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen. Prüft: Zitat wörtlich, Band lesbar. Zurück zu «Szenenplan», wenn Abweichung.
+8. **Malen** (Bildmodell): Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz, Figurenblatt und den geprüften Einzelporträts der vorkommenden Figuren (nur wenn die Figur im Szenenplan dieselbe Beschreibung hat wie im Porträt).
+9. **Blind beschreiben** (Weitere Instanz (prüft)): Eine weitere Instanz sieht nur das Bild: Personen, Gegenstände, Handlung, vermutete Bibelstelle.
+10. **Regeln prüfen** (Weitere Instanz (prüft)): Dieselbe Instanz beantwortet jede Regel einzeln: allgemeine Regeln, Figurenregeln, Feldregeln; zählt verlangte Dinge. Verfehlte Pflichtregeln fragt eine zweite, genauere Instanz noch zweimal; die Mehrheit der drei Antworten gilt. Prüft: alle Pflichtregeln erfüllt.
+11. **Köpfe orten** (Weitere Instanz (prüft)): Auf einem eingeblendeten Koordinatengitter werden alle Köpfe geortet und die erwarteten Figuren zugeordnet.
+12. **Variante wählen** (Werkzeug (feste Prüfung)): Brauchbar ist eine Variante, die alle Pflichtregeln erfüllt, Platz für alle Blasen hat und die Reihenfolge der Sprecher einhält; gewählt wird die mit den meisten Punkten. Prüft: Pflichtregeln, Platz für Blasen, wer zuerst spricht, steht links. Zurück zu «Malen», wenn keine brauchbare Variante: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden.
+13. **Blasen setzen** (Werkzeug (feste Prüfung)): Blasen nur auf leerem Papier: eine Belegungskarte aus dem Bild selbst zeigt, wo gemalt ist (Figuren, Hände, gehaltene Dinge, Bauten); dazu die georteten Köpfe. Beste Anordnung aller Blasen über den Köpfen, mindestens 12 Punkte vom Bildrand, Schrift mindestens 19, keine Spitze läuft durch eine andere Blase. Umriss und Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen; Gedanken als Wolke.
+14. **Schlussprüfung** (Weitere Instanz (prüft)): Eine weitere Instanz prüft die fertige Kachel: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste, gehaltenem Gegenstand oder Haupthandlung, alle Worte lesbar, Moment getroffen (mindestens 1 von 2). Was nicht besteht, fragt die zweite Instanz noch zweimal; die Mehrheit gilt. Prüft: Sprecher richtig, nichts verdeckt, lesbar, Moment. Zurück zu «Blasen setzen», wenn zweiter Blasenversuch nur im oberen Band.
+15. **Prüfvermerk** (Werkzeug (feste Prüfung)): Ergebnis mit Fingerabdruck von Bild, Regeln, Szenenplan und Verfahren im Datensatz; Stufe «geprüft» nur, wenn alle Felder bestanden. Ändert sich etwas, gilt die Prüfung als veraltet.
+
+*Weiter, wenn:* Alle Pflichtregeln und die Schlussprüfung bestanden; Porträts: alle Pflichtregeln bestanden.
+*Regeln:* scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d, scripts/authoring/bilder_aquarell_daten/portraets.json@2026-10-28
+*Ausführlich:* docs/BILDSTIL.md
+
+### Fassung 2.3 – gültig ab 2026-10-28
 
 *Änderung:* Zwei prüfende Instanzen: eine günstige prüft alles, eine genauere entscheidet nur, wo eine Pflichtregel nicht besteht (Messung am Prüfsatz mit 20 Bildern bekannten Urteils). Gesicht Jesu: auch schräg oder im Profil gilt als sichtbar.
 

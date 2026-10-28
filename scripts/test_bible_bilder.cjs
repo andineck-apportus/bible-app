@@ -24,8 +24,26 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=menu]');await p.click('[data-figindex]');await p.waitForTimeout(300);
     const nAni=await p.$$eval('.sheet .legend-fig',x=>x.length);assert(nAni>300,'Bildlexikon Anime ('+nAni+')');
     assert(await p.$('.sheet .legend-fig use[href^="#an-"]'),'Anime-Darstellungen im Bildlexikon');
+    // Bildlexikon im Aquarellstil (Entscheid Andi Neck 2026-10-28): Einzelporträt (img mit alt) oder Platzhalter «noch nicht gemalt»,
+    // Name, Erkennungsmerkmal und «kommt vor in» (antippbar → Stelle)
+    await p.click('.sheet [data-figindex-style=aquarell]');await p.waitForTimeout(600);
+    const aq=await p.evaluate(()=>{const c=[...document.querySelectorAll('.sheet .legend-fig.fig-paint')];
+      return {n:c.length,img:c.filter(x=>x.querySelector('.fig-pic img')).length,alt:c.filter(x=>{const i=x.querySelector('.fig-pic img');return i&&i.alt.length>3&&i.getAttribute("src").startsWith("data:image/");}).length,
+        none:c.filter(x=>/noch nicht gemalt/.test(x.querySelector('.fig-none')?.textContent||'')).length,sym:document.querySelectorAll('.sheet .legend-fig use').length,
+        name:c.every(x=>x.querySelector('b')?.textContent.trim()),sub:c.every(x=>x.querySelector('.sub')?.textContent.trim()),occ:document.querySelectorAll('.sheet .fig-occ [data-ref-go]').length};});
+    {const fs=require('node:fs'),R=path.join(__dirname,'..'),st=JSON.parse(fs.readFileSync(path.join(R,'data/illustrations/styles/ILLSTYLE-AQUARELL.json'),'utf8')).renderings;
+      aq.want=Object.keys(st).filter(i=>fs.existsSync(path.join(R,'data/illustrations/lexicon',i+'.json'))).length;
+      aq.mitBild=Object.values(st).filter(r=>r.image&&fs.existsSync(path.join(R,r.image))&&(!(r.check||{}).trocken||process.env.BIBLE_TROCKEN_BILDER)).length;}
+    assert(aq.n>=40&&aq.n===aq.want,'Bildlexikon Aquarell: alle Einträge ('+aq.n+'/'+aq.want+')');
+    assert.equal(aq.sym,0,'im Aquarellstil keine SVG-Zeichen');
+    assert.equal(aq.img+aq.none,aq.n,'je Eintrag Bild oder Platzhalter');assert.equal(aq.img,aq.mitBild,'Bilder für alle gemalten Einträge ('+aq.img+')');assert.equal(aq.alt,aq.img,'Bilder mit Bilddaten und alt-Text');
+    assert(aq.name&&aq.sub,'Name und Erkennungsmerkmal');assert(aq.occ>=10,'«kommt vor in» mit Stellen ('+aq.occ+')');
+    {const r=await p.getAttribute('.sheet .fig-paint[data-fig="FIG-JESUS"] .fig-occ [data-ref-go]','data-ref-go');assert(r,'Jesus kommt in gemalten Stellen vor');
+      await p.click('.sheet .fig-paint[data-fig="FIG-JESUS"] .fig-occ [data-ref-go]');await p.waitForTimeout(900);
+      assert(!await p.$('.sheet .fig-paint'),'Stelle antippen schliesst das Bildlexikon');
+      const [bk,c]=r.split('-')[0].split('.');assert(await p.evaluate(([bk,c])=>{const a=document.querySelector('.app');return a.dataset.level>=4;},[bk,c]),'Stelle geöffnet');}
     // Struktur zuerst: Seligpreisungen mit Liste aller acht Glieder und Strukturbild in einzelnen Kacheln
-    await p.click('.sheet [data-close]');await p.waitForTimeout(300);
+    if(await p.$('.sheet [data-close]')){await p.click('.sheet [data-close]');await p.waitForTimeout(300);}
     await p.click('[data-action=index]');await p.fill('input[type=search]','Mt 5,3');await p.waitForTimeout(300);await p.click('.results button');await p.click('.sheet .nav-open');await p.waitForTimeout(900);
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.click('.sheet .pick-open');await p.waitForTimeout(500);}
     const nLi=await p.evaluate(()=>{const e=[...document.querySelectorAll('.stream-entry')].find(x=>/Seligpreisungen/.test(x.querySelector('h2')?.textContent||''));return e?e.querySelectorAll('.sum-list li').length:0;});
@@ -58,5 +76,5 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await tog('text');assert.equal(await p.evaluate(()=>document.querySelector('.app').dataset.show),'both','beide wieder an');
     assert(!await p.$('.set [data-seg=ill] [data-val=off]'),'keine Einstellung «keine Bilder» mehr');
     assert.deepEqual(errs,[],'keine Skriptfehler');
-    console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon, Kacheln, strukturierte Zusammenfassung, Kapitel ohne Worte, Umschalter Text | Bild, Bilder bei den Versen.');
+    console.log('PASS: Bilder auf allen Ebenen im Stil Anime, Legende, Bildlexikon (Anime, Aquarell mit Porträts bzw. Platzhaltern), Kacheln, strukturierte Zusammenfassung, Kapitel ohne Worte, Umschalter Text | Bild, Bilder bei den Versen.');
   }finally{await b.close();}})().catch(e=>{console.error(e);process.exit(1);});

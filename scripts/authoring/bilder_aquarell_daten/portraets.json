@@ -1,0 +1,134 @@
+{
+  "_hinweis": "Einzelporträts für das Bildlexikon im Aquarellstil (docs/BILDSTIL.md, Abschnitt 4; PROC-BILD-AQUARELL 2.4; Entscheid Andi Neck 2026-10-28). Werkzeug scripts/authoring/bilder_aquarell_figuren.py. «auftrag_en»: Malauftrag je Art (einzel = eine Person, gruppe = Gruppe, vignette = Gegenstand, Ort oder Zeichen); {beschreibung} wird durch die Beschreibung des Stils ersetzt. «regeln»: Porträtregeln je Art (Aufbau wie pruefregeln.json). «allgemein_ohne»: allgemeine Regeln, die für Porträts nicht gelten (mit Grund). «pruef»: Figurenregeln nur für das Porträt; «ersetzt» nennt Figurenregeln der Szenen, die im Porträt nicht prüfbar sind, weil sie eine zweite Figur voraussetzen.",
+  "version": "2026-10-28",
+  "groesse": "1024x1536",
+  "ablage_px": [
+    384,
+    576
+  ],
+  "allgemein_ohne": {
+    "G-OBEN": "Im Porträt kommen keine Sprechblasen dazu.",
+    "G-DOPPELT": "Ersetzt durch P-EINZELN bzw. P-GRUPPE.",
+    "G-ROT": "Bezieht sich auf mehrere Personen in einer Szene."
+  },
+  "auftrag_en": {
+    "einzel": "A single character portrait for a picture lexicon, painted on warm white paper: {beschreibung}\n\nCOMPOSITION: upright picture; only this one person, nobody else; full figure or from the knees up, standing calmly, front or three-quarter view, the face fully visible with eyes, nose and mouth; hands relaxed and empty unless the description names something they hold. The whole figure stands inside the picture with generous empty paper on every side; no background, at most one pale wash under the feet. No lettering, no frame, no halo, no light effects. Only the clothing, objects and marks named in the description – no extra jewellery, crowns, staffs, books, scrolls, symbols or weapons.",
+    "gruppe": "A small group portrait for a picture lexicon, painted on warm white paper: {beschreibung}\n\nCOMPOSITION: upright picture; three people of this group standing loosely side by side (different ages and, where the description allows, men and women), full figure or from the knees up, faces visible; nobody else. The group stands inside the picture with generous empty paper on every side; no background, at most one pale wash under the feet. No lettering, no frame, no halo, no light effects. Only the clothing and objects named in the description.",
+    "vignette": "A small vignette for a picture lexicon, painted on warm white paper: {beschreibung}\n\nCOMPOSITION: upright picture; the subject alone, small and centred, with generous empty paper on every side; no people unless the description itself needs them; no landscape around it except what the description names. No lettering, numbers, names or labels, no frame, no light effects."
+  },
+  "regeln": {
+    "einzel": [
+      {
+        "id": "P-EINZELN",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Genau eine Person, sonst niemand",
+        "en": "Does the picture show exactly one person and nobody else?"
+      },
+      {
+        "id": "P-GANZ",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Ganzkörper oder Kniestück, Gesicht voll sichtbar",
+        "en": "Is the person shown at least from the knees up (or full figure), with the face visible and its features (eyes, nose, mouth) painted?"
+      },
+      {
+        "id": "P-PAPIER",
+        "art": "muss",
+        "stufe": "soll",
+        "de": "Warmweisses Papier ohne Hintergrund",
+        "en": "Does the person stand on plain white or cream paper without a painted background scene?"
+      }
+    ],
+    "gruppe": [
+      {
+        "id": "P-GRUPPE",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Eine kleine Gruppe (zwei bis vier Personen), niemand doppelt",
+        "en": "Does the picture show a small group of two to four different people (no person repeated with the same face)?"
+      },
+      {
+        "id": "P-GESICHTER",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Gesichter sichtbar",
+        "en": "Are the faces of the people visible with simple features (not blank and not turned away)?"
+      },
+      {
+        "id": "P-PAPIER",
+        "art": "muss",
+        "stufe": "soll",
+        "de": "Warmweisses Papier ohne Hintergrund",
+        "en": "Do the people stand on plain white or cream paper without a painted background scene?"
+      }
+    ],
+    "vignette": [
+      {
+        "id": "P-VIGNETTE",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Kleine Vignette mit viel freiem Papier",
+        "en": "Is the subject shown as a small vignette with a lot of empty white paper around it (no full-page landscape or scene)?"
+      },
+      {
+        "id": "P-SCHRIFT-ZAHL",
+        "art": "nicht",
+        "stufe": "pflicht",
+        "de": "Keine Schrift, Zahlen oder Namen",
+        "en": "Are there any letters, numbers, names or labels painted anywhere?"
+      }
+    ],
+    "alle": [
+      {
+        "id": "P-BESCHREIBUNG",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Entspricht der Beschreibung des Stils (Alter, Geschlecht, Haar, Bart, Kleidungsfarben, gehaltene Dinge bzw. Form und Material)",
+        "en": "Does the picture match this description in all essential points (apparent age, sex, hair, beard, clothing colours, objects held – or, for an object or place, its shape, material and number): «{beschreibung}»?"
+      },
+      {
+        "id": "P-ZUSATZ",
+        "art": "nicht",
+        "stufe": "pflicht",
+        "de": "Keine Attribute oder Erkennungszeichen ausser denen der Beschreibung und des Lexikons",
+        "en": "Does the picture add any identifying attribute or object that is NOT named in this description: «{beschreibung}» – for example a crown, wreath, staff, book, scroll, jewellery, weapon, religious symbol, prayer shawl or tassels? (Plain clothing, sandals and a head covering count as normal.)"
+      },
+      {
+        "id": "P-LEXIKON",
+        "art": "muss",
+        "stufe": "soll",
+        "de": "Passt zu den Erkennungsmerkmalen im Bildlexikon (ausser Zeichen, die der Aquarellstil weglässt, z. B. Nimbus)",
+        "en": "Leaving aside any halo or nimbus (this style never paints one), does the picture fit these identifying features (German): «{lexikon}»?"
+      }
+    ]
+  },
+  "pruef": {
+    "FIG-MARIA-MUTTER-JESU": {
+      "ersetzt": [
+        "F-MARIA-ALTER"
+      ],
+      "regeln": [
+        {
+          "id": "P-MARIA-ALTER",
+          "art": "muss",
+          "stufe": "pflicht",
+          "de": "Maria sichtbar eine Generation älter als Jesus (im Porträt: deutlich älter als ein Mann Anfang dreissig – graue Strähnen oder Falten)",
+          "en": "Does the woman look clearly older than a man in his early thirties – old enough to be the mother of an adult son – with grey streaks in her hair or lines around eyes and mouth?"
+        }
+      ]
+    },
+    "FIG-JESUS": {
+      "ersetzt": [],
+      "regeln": [
+        {
+          "id": "P-JESUS-ALTER",
+          "art": "muss",
+          "stufe": "pflicht",
+          "de": "Jesus ein erwachsener Mann um die dreissig (nicht alt, kein Kind)",
+          "en": "Is the man an adult of about thirty – clearly neither old (no grey hair) nor a youth?"
+        }
+      ]
+    }
+  }
+}

@@ -369,6 +369,27 @@ def main():
             for fid in r.get("renderings") or {}:
                 if records.get(fid, (None, {}))[1].get("type") != "figure":
                     errors.append(f"{rel}: Darstellung für {fid}, der nicht im Bildlexikon steht")
+                # Einzelporträt im Bildlexikon (Aquarellstil, docs/BILDSTIL.md Abschnitt 4): Datei vorhanden, Prüfvermerk vorhanden
+                rd_ = (r.get("renderings") or {})[fid] or {}
+                if rd_.get("image"):
+                    img_ = ROOT / str(rd_["image"])
+                    c_ = rd_.get("check")
+                    if not img_.is_file():
+                        errors.append(f"{rel}: Bild {rd_['image']} für {fid} fehlt")
+                    if not isinstance(c_, dict) or not c_.get("datum") or not c_.get("ergebnis"):
+                        errors.append(f"{rel}: Bild für {fid} ohne Prüfvermerk (check mit datum und ergebnis)")
+                    else:
+                        if c_.get("stufe") not in ("entwurf", "ki-geprueft", "fachlich-geprueft"):
+                            errors.append(f"{rel}: {fid}: check.stufe {c_.get('stufe')!r} ungültig")
+                        if c_.get("stufe") == "ki-geprueft" and (c_.get("ergebnis") != "bestanden" or c_.get("trocken")):
+                            errors.append(f"{rel}: {fid}: Stufe ki-geprueft, aber Porträt nicht bestanden")
+                        if c_.get("stufe") in ("ki-geprueft", "fachlich-geprueft") and img_.is_file() and hashlib.sha256(img_.read_bytes()).hexdigest()[:16] != c_.get("bild_sha"):
+                            errors.append(f"{rel}: Prüfung veraltet – Porträt {fid} hat sich seit der Prüfung geändert")
+                        if c_.get("process"):
+                            pid_, _, pv_ = c_["process"].partition("@")
+                            pr_ = records.get(pid_, (None, {}))[1]
+                            if pr_.get("type") != "process" or pv_ not in {v.get("version") for v in pr_.get("versions") or []}:
+                                errors.append(f"{rel}: {fid}: check.process {c_['process']!r} unbekannt")
         if r.get("type") == "illustration_brief":
             # Nur Lexikon-Einträge; Gleichlauf mit dem Text über Fingerabdrücke (veraltet = Fehler, bis erneut geprüft)
             for p_ in r.get("panels") or []:
