@@ -1611,6 +1611,66 @@ RECEPTIONS = [
              "text_de": "De Caravaggio malt «S Abigmahl z Emmaus» als de Augeblick, wo de Jesus s Brot segnet und di beide ihn erchänned ([[LUK.24.30-LUK.24.31]]), mit heftige Gebärde vo de beide Jünger."}},
 ]
 
+# Jüdische Stimmen, ergänzt nach der Prüfrunde (2026-10-29; noch nicht von einer weiteren Instanz geprüft)
+_COMMON = {"process": "PROC-WEITERDENKEN@1.1", "date": "2026-10-29", "check": None, "authorship_de": "KI-Entwurf (Claude) vom 2026-10-29 (Ergänzung jüdischer Stimmen nach der Prüfrunde, Auftrag Andi Neck); Quelle im Web nachgeschlagen; noch nicht von einer weiteren Instanz geprüft; keine fachliche Prüfung."}
+RECEPTIONS += [{**_COMMON, **_x} for _x in [
+ {
+  "id": "RCPT-LUK-0017",
+  "subject": "TU-LUK-015-001-032",
+  "tradition": "jewish",
+  "period_de": "2014",
+  "text_de": "Die jüdische Neutestamentlerin Amy-Jill Levine liest die Gleichnisse Jesu als Geschichten eines jüdischen Lehrers für jüdische Hörer. Zum verlorenen Sohn meint sie, die ersten Hörer hätten ihn nicht als Geschichte von Busse und Vergebung gehört; zugleich kritisiert sie Auslegungen, die die Gleichnisse zur guten Nachricht für Christen und zur schlechten für Juden machen. Andere halten dagegen, die Erzählung laufe gerade auf Umkehr hinaus.",
+  "sources_de": [
+   "Amy-Jill Levine, Short Stories by Jesus. The Enigmatic Parables of a Controversial Rabbi, New York: HarperOne 2014, S. 28"
+  ],
+  "confidence": "probable",
+  "uncertain_de": "Die Seitenangabe und die Zusammenfassung stützen sich auf eine Besprechung; das Buch selbst wurde nicht eingesehen.",
+  "source_check": {
+   "date": "2026-10-29",
+   "result": "partly",
+   "method_de": "KI-Prüfung (Claude): Angaben in frei zugänglichen Bibliothekskatalogen, Besprechungen bzw. im Wiederabdruck des Artikels nachgeschlagen; das Buch selbst nicht eingesehen, soweit nicht anders vermerkt; keine fachliche Prüfung.",
+   "checked": [
+    {
+     "source": "Amy-Jill Levine, Short Stories by Jesus (2014)",
+     "found_at": "https://ejournals.bc.edu/index.php/scjr/article/download/9968/8663/17420 (Besprechung in Studies in Christian-Jewish Relations)",
+     "finding_de": "Die Besprechung nennt New York: HarperOne 2014 und zitiert Levine, der verlorene Sohn wäre «nicht als Geschichte von Umkehr oder Vergebung gehört worden» (S. 28); sie würdigt ihre Kritik an Lesarten, die die Gleichnisse zur guten Nachricht für Christen und zur schlechten für Juden machen, und widerspricht der Deutung ohne Umkehr."
+    }
+   ]
+  },
+  "gsw": {
+   "period_de": "2014",
+   "text_de": "Di jüdisch Neutestamentlerin Amy-Jill Levine list d Gliichnis vom Jesus als Gschichte vo me jüdische Lehrer für jüdischi Zuehörer. Zum verlorne Sohn meint si, di erschte Zuehörer hettid en nöd als Gschicht vo Buess und Vergäbig ghört; zgliich kritisiert si Uslegige, wo d Gliichnis zur guete Nachricht für Chrischte und zur schlächte für Jude mached. Anderi händ dergäge, d Erzälig lauf grad uf Umkehr use."
+  }
+ },
+ {
+  "id": "RCPT-LUK-0018",
+  "subject": "TU-LUK-010-025-037",
+  "tradition": "jewish",
+  "period_de": "2012",
+  "text_de": "Amy-Jill Levine widerspricht der verbreiteten Erklärung, Priester und Levit seien aus Angst vor ritueller Unreinheit vorbeigegangen: Leviten waren an das Verbot nicht gebunden, der Priester war von Jerusalem weg unterwegs, und nach jüdischem Recht geht die Rettung eines Lebens allen anderen Geboten vor. Für die ersten Hörer sei der Samaritaner kein Ausgestossener, sondern ein Feind gewesen; das Gleichnis sage, dass Feinde zu Nächsten werden können.",
+  "sources_de": [
+   "Amy-Jill Levine, The Many Faces of the Good Samaritan – Most Wrong, in: Biblical Archaeology Review, Januar/Februar 2012"
+  ],
+  "confidence": "high",
+  "source_check": {
+   "date": "2026-10-29",
+   "result": "confirmed",
+   "method_de": "KI-Prüfung (Claude): Angaben in frei zugänglichen Bibliothekskatalogen, Besprechungen bzw. im Wiederabdruck des Artikels nachgeschlagen; das Buch selbst nicht eingesehen, soweit nicht anders vermerkt; keine fachliche Prüfung.",
+   "checked": [
+    {
+     "source": "Amy-Jill Levine, The Many Faces of the Good Samaritan – Most Wrong (2012)",
+     "found_at": "https://christianethicstoday.com/wp/?p=4733 (Wiederabdruck mit Erlaubnis, Christian Ethics Today 85, 2012; Erstdruck Biblical Archaeology Review, Jan./Feb. 2012)",
+     "finding_de": "Im Artikel nachgelesen: Reinheitsgründe erklären das Vorbeigehen nicht (Leviten nicht gebunden, Priester von Jerusalem weg, Lebensrettung geht allen Geboten vor); Samaritaner als Feinde, nicht als Ausgestossene; «enemies can prove to be neighbors»."
+    }
+   ]
+  },
+  "gsw": {
+   "period_de": "2012",
+   "text_de": "D Amy-Jill Levine widerspricht de verbreitete Erchlärig, de Prieschter und de Levit seied us Angscht vor rituelle Unreinheit verbiigange: D Levite sind a das Verbot nöd bunde gsii, de Prieschter isch vo Jerusalem wäg unterwägs gsii, und nach jüdischem Rächt gaat s Rette vo me Läbe allne andere Gebot vor. Für di erschte Zuehörer seig de Samaritaner kein Usgstossne, sondern en Fiind gsii; s Gliichnis säg, dass Fiind zu Nächschte wärde chönd."
+  }
+ }
+]]
+
 # Prüfvermerk der Prüfrunde vom 2026-10-29 (getrennte Instanz; docs/WEITERDENKEN.md, Feld check)
 CHECK = {"date": "2026-10-29", "by": "weitere Instanz (KI)", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung (Zitate per Skript wörtlich verglichen); Quellen der Rezeption nur in frei zugänglichen Ausgaben nachgeschlagen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.0"}
 # in der Prüfung (oder bei der Zitat-Prüfung am selben Tag) berichtigt

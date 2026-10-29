@@ -137,7 +137,7 @@ _Q = [
      "Wänn isch Ziit zum Faschte, und wänn Ziit zum Fiire?",
      "Jesus vergliicht sini Jünger mit Hochziitsgäscht, wo nöd faschted, solang de Brüütigam bi ine isch ([[MRK.2.19-MRK.2.20]])."),
     (32, _tu("002-018-022"), 2, "«Jungen Wein in neue Schläuche!»: Was ist für dich das Neue, das eine neue Form braucht?",
-     None, "«Nöie Wii i nöii Schlüüch!»: Was isch für dich s Nöie, wo e nöii Form bruucht?", None),
+     None, "«Nöie Wii i nöii Schlüüch!»: Was isch für dich s Nöie, wo e nöi Form bruucht?", None),
     # 2,23–28
     (33, _tu("002-023-028"), 1, "Was heisst es, dass der Sabbat für den Menschen geschaffen wurde?",
      "Jesus beruft sich auf David, der in der Not die Schaubrote ass ([[MRK.2.25-MRK.2.27]]).",

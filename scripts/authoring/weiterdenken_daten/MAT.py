@@ -547,7 +547,7 @@ REFLECTIONS = [
     {"id": "REFL-MAT-0133", "subject": "TU-MAT-010-026-033", "order": 1,
      "question_de": "Zweimal «Fürchtet euch nicht» und einmal «fürchtet»: Wen oder was soll man fürchten?",
      "note_de": "Jesus sagt «Fürchtet sie also nicht!» ([[MAT.10.26]]), dann «fürchtet aber vielmehr den, der sowohl Seele als auch Leib in der Hölle verderben kann» ([[MAT.10.28]]) und wieder «Fürchtet euch also nicht!» ([[MAT.10.31]]).",
-     "gsw": {"question_de": "Zweimal «förchted … nöd» und eimal «förchted eu aber vilmeh vor däm»: Vor wäm oder was söll mer Angscht ha?",
+     "gsw": {"question_de": "Zweimal «förchted … nöd» und eimal «förchted eu aber vilmeh vor däm»: Vor wem oder was söll mer Angscht ha?",
              "note_de": "De Jesus seit «Förchted si also nöd!» ([[MAT.10.26]]), dänn «förchted eu aber vilmeh vor däm, wo d Seel und de Liib i de Höll cha zgrund richte» ([[MAT.10.28]]) und wider «Förchted eu also nöd!» ([[MAT.10.31]])."}},
     {"id": "REFL-MAT-0134", "subject": "TU-MAT-010-026-033", "order": 2,
      "question_de": "Spatzen und gezählte Haare: Was sagen diese kleinen Bilder über den Wert eines Menschen?",

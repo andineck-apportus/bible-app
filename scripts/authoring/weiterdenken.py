@@ -10,7 +10,7 @@ Grund ins revision_log (BIBLE_REVISION_DATE, BIBLE_REVISION_REASON). Mehrere Lä
 einen Eintrag (die älteste Fassung bleibt). Dateien, die Git noch nicht erfasst hat (neuer Entwurf), werden ohne
 revision_log überschrieben.
 
-Datenmodul: DATE, PROCESS, TAGS, AUTHORSHIP_DE; je Eintrag optional eigene `authorship_de` und `check`. Prüfvermerk für alle
+Datenmodul: DATE, PROCESS, TAGS, AUTHORSHIP_DE; je Eintrag optional eigene `process`, `authorship_de`, `date` und `check`. Prüfvermerk für alle
 Einträge eines Moduls: CHECK = {"date", "by", "limits_de", optional "process"} und CHECK_CORRECTED = [IDs, die in der Prüfung
 berichtigt wurden] (result corrected, sonst confirmed). Traditionen: TRADITIONS (Schema `receptionTradition`).
 
@@ -84,7 +84,7 @@ def _write(path, rec):
 
 def _check(m, x):
     """Prüfvermerk eines Eintrags: eigener `check` oder der des Moduls (CHECK, CHECK_CORRECTED)."""
-    if x.get("check"):
+    if "check" in x:  # eigener Vermerk; None = (noch) nicht von einer weiteren Instanz geprüft
         return x["check"]
     c = getattr(m, "CHECK", None)
     if not c:
@@ -111,16 +111,16 @@ def run(books):
                                 **({"uncertain_de": x["uncertain_de"]} if x.get("uncertain_de") else {}),
                                 **({"source_check": x["source_check"]} if x.get("source_check") else {})})
                 chk = _check(m, x)
-                rec.update({"process": proc, "authorship_de": x.get("authorship_de", author), **({"check": chk} if chk else {}),
-                            "knowledge": {"asserted_at": date, "supersedes": None}})
+                rec.update({"process": x.get("process", proc), "authorship_de": x.get("authorship_de", author), **({"check": chk} if chk else {}),
+                            "knowledge": {"asserted_at": x.get("date", date), "supersedes": None}})
                 n += _write(ROOT / "data" / folder / f"{x['id']}.json", rec)
                 if x.get("gsw"):
                     fields = {k: v for k, v in x["gsw"].items() if k in TEXT[kind]}
                     loc = {"id": f"L10N-GSW-ZH-{x['id']}", "type": "localization", "status": "draft", "tags": [], "localizes": x["id"],
                            **GSW, "fields": fields, "source_fingerprint": {k: localizations.fingerprint(rec.get(k)) for k in fields},
-                           "authorship_de": f"KI-Entwurf (Claude) vom {date}; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.",
+                           "authorship_de": f"KI-Entwurf (Claude) vom {x.get('date', date)}; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.",
                            "review_de": "Noch keine muttersprachliche Prüfung dokumentiert.",
-                           "knowledge": {"asserted_at": date, "supersedes": None}}
+                           "knowledge": {"asserted_at": x.get("date", date), "supersedes": None}}
                     n += _write(ROOT / "data/localizations/gsw-u-sd-chzh" / f"{loc['id']}.json", loc)
     print(f"PASS: Weiterdenken für {', '.join(books)}; {n} Dateien geschrieben")
 

@@ -202,7 +202,23 @@ Den Text treu lassen und daneben gekennzeichnet übertragen.
 
 Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der Text gelesen wurde.
 
-### Fassung 1.0 – gültig ab 2026-10-28 (aktuell)
+### Fassung 1.1 – gültig ab 2026-10-29 (aktuell)
+
+*Änderung:* Prüfvermerk (check) am Eintrag, Zitat-Prüfung im Validator (Hochdeutsch und Mundart wörtlich nach der Arbeitsübersetzung), Kernaussage auch in Mundart, Tradition «Kirchliche Lehre» (church_teaching).
+
+1. **Fragen formulieren** (Bearbeitende Instanz): Je Abschnitt zwei bis vier offene Fragen zum Weiterdenken, aus dem Text gewonnen (offenes Ende, Leerstelle, Frage des Textes selbst, Wer-zu-wem); je höchstens ein Satz Hintergrund mit Stelle. Keine Suggestivfrage, keine Antwort vorwegnehmen. Kapitel und höhere Ebenen: eine Frage der Ebene; die erste Frage jeder Ebene ist die Tür von oben.
+2. **Wie man es gelesen hat** (Bearbeitende Instanz): Rezeption je Tradition (jüdische Auslegung, Kirchenväter, Liturgie, Kunst, Musik, Literatur, Reformation, heutige Forschung, kirchliche Lehre wie Konzilien, Enzykliken, Bekenntnisschriften) mit Zeitraum, in eigenen Worten. Stimmen nebeneinander, keine wird als richtig gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten) benennen. Quellen nur, wo sicher; sonst ohne Stellenangabe und als ungeprüft gekennzeichnet.
+3. **Quellen nachschlagen** (Weitere Instanz (prüft)): Eine weitere Instanz schlägt die genannten Quellen in frei zugänglichen Ausgaben nach (docs/QUELLENPRUEFUNG.md): bestätigt, berichtigt, teilweise oder nicht prüfbar. Bis dahin zeigt die App «noch nicht nachgeschlagen». Prüft: Quelle sagt, was der Eintrag behauptet, Zeitraum und Tradition stimmen. Zurück zu «Wie man es gelesen hat», wenn Angabe falsch oder nicht belegt.
+4. **Gegen den Text prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig? Stehen Zitate wörtlich in der Arbeitsübersetzung (Hochdeutsch und Mundart)? Ergebnis, Datum und Grenzen der Prüfung als Prüfvermerk (check) am Eintrag; berichtigte Einträge mit revision_log. Prüft: Frage offen und belegt, keine versteckte Deutung, Rezeption richtig zugeordnet, Zitate wörtlich. Zurück zu «Fragen formulieren», wenn Frage suggestiv, unbelegt oder schief.
+5. **Mundart und weitere Sprachen** (Bearbeitende Instanz): Fragen, Rezeption und die Kernaussage (gist_de) der Kernanalyse als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); Zitate wörtlich aus der Übersetzungsschicht dieser Sprache; muttersprachliche Prüfung wird nicht behauptet.
+6. **Validator** (Werkzeug (feste Prüfung)): ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?» (auch «…?» bzw. «?»»), Tradition und Gesichertheit gültig, Quellenprüfung und Prüfvermerk vollständig, Zitate in «…» wörtlich im Bibeltext der Stelle (Hochdeutsch gegen die hochdeutsche, Lokalisierung gegen die Arbeitsübersetzung ihrer Sprache; Unübersetztes nur als Hinweis), Stellenmarken und Prozessverweis lösen auf. Prüft: Struktur gültig, Zitate wörtlich, Verweise lösen auf. Zurück zu «Fragen formulieren», wenn Fehler im Datensatz.
+7. **Auswahl** (Herausgeber): Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption.
+
+*Weiter, wenn:* Fragen offen und am Text belegt, Zitate wörtlich, Rezeption zugeordnet und gekennzeichnet, Prüfvermerk eingetragen, Validator bestanden.
+*Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
+*Ausführlich:* docs/WEITERDENKEN.md, docs/LESEN-UND-VERTIEFEN.md, docs/QUELLENPRUEFUNG.md
+
+### Fassung 1.0 – gültig ab 2026-10-28
 
 *Änderung:* Erste Fassung: Fragen zum Weiterdenken (reflection) und «Wie man es gelesen hat» (reception), dargestellt unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber).
 

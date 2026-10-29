@@ -178,10 +178,20 @@ w10 = [
       prueft=["Struktur gültig", "Verweise lösen auf"], zurueck=("w1", "Fehler im Datensatz")),
     s("w7", "herausgabe", "Auswahl", "Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption."),
 ]
+_w2 = next(x for x in w10 if x["id"] == "w2")
+w11 = ersetze(ersetze(ersetze(ersetze(w10, "w2", {**_w2, "do_de": _w2["do_de"].replace("heutige Forschung)", "heutige Forschung, kirchliche Lehre wie Konzilien, Enzykliken, Bekenntnisschriften)")}),
+    "w4", s("w4", "pruefung", "Gegen den Text prüfen", "Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig? Stehen Zitate wörtlich in der Arbeitsübersetzung (Hochdeutsch und Mundart)? Ergebnis, Datum und Grenzen der Prüfung als Prüfvermerk (check) am Eintrag; berichtigte Einträge mit revision_log.",
+      prueft=["Frage offen und belegt", "keine versteckte Deutung", "Rezeption richtig zugeordnet", "Zitate wörtlich"], zurueck=("w1", "Frage suggestiv, unbelegt oder schief"))),
+    "w5", s("w5", "bearbeitung", "Mundart und weitere Sprachen", "Fragen, Rezeption und die Kernaussage (gist_de) der Kernanalyse als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); Zitate wörtlich aus der Übersetzungsschicht dieser Sprache; muttersprachliche Prüfung wird nicht behauptet.")),
+    "w6", s("w6", "werkzeug", "Validator", "ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?» (auch «…?» bzw. «?»»), Tradition und Gesichertheit gültig, Quellenprüfung und Prüfvermerk vollständig, Zitate in «…» wörtlich im Bibeltext der Stelle (Hochdeutsch gegen die hochdeutsche, Lokalisierung gegen die Arbeitsübersetzung ihrer Sprache; Unübersetztes nur als Hinweis), Stellenmarken und Prozessverweis lösen auf.",
+      prueft=["Struktur gültig", "Zitate wörtlich", "Verweise lösen auf"], zurueck=("w1", "Fehler im Datensatz")))
 P["PROC-WEITERDENKEN"] = {"names": {"de": "Weiterdenken: Fragen und Rezeption", "en": "Thinking further: questions and reception"}, "group": "inhalt",
     "purpose_de": "Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der Text gelesen wurde.",
     "versions": [fassung("1.0", "2026-10-28", "Erste Fassung: Fragen zum Weiterdenken (reflection) und «Wie man es gelesen hat» (reception), dargestellt unter «Vertiefen › Weiterdenken» (Entscheid Herausgeber).",
                          w10, "Fragen offen und am Text belegt, Rezeption zugeordnet und gekennzeichnet, Validator bestanden.", ENTWURF,
+                         docs=["docs/WEITERDENKEN.md", "docs/LESEN-UND-VERTIEFEN.md", "docs/QUELLENPRUEFUNG.md"]),
+                 fassung("1.1", "2026-10-29", "Prüfvermerk (check) am Eintrag, Zitat-Prüfung im Validator (Hochdeutsch und Mundart wörtlich nach der Arbeitsübersetzung), Kernaussage auch in Mundart, Tradition «Kirchliche Lehre» (church_teaching).",
+                         w11, "Fragen offen und am Text belegt, Zitate wörtlich, Rezeption zugeordnet und gekennzeichnet, Prüfvermerk eingetragen, Validator bestanden.", ENTWURF,
                          docs=["docs/WEITERDENKEN.md", "docs/LESEN-UND-VERTIEFEN.md", "docs/QUELLENPRUEFUNG.md"])]}
 
 # ------------------------------------------------------------------ Verdichtung
