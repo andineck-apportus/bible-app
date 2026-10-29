@@ -1,6 +1,6 @@
 # Weiterdenken: Brücke, Fragen, Rezeption, Anwendung
 
-Stand 2026-10-28, festgelegt von Andi Neck (vorher «Damals → Prinzip → Heute», Stand 2026-10-23; frühere Fassung im
+Stand 2026-10-29 (Prüfvermerk, Zitate wörtlich, Kirchliche Lehre), Grundsatz festgelegt von Andi Neck am 2026-10-28 (vorher «Damals → Prinzip → Heute», Stand 2026-10-23; frühere Fassung im
 Git-Verlauf und als Prozess PROC-DAMALS-HEUTE 1.0). Diese Regel beantwortet, wo wir beim Wortlaut bleiben, wo wir für eine
 andere Zeit, Kultur oder Zielgruppe übertragen und wie die App zum Weiterdenken anregt, ohne die Antwort vorwegzunehmen.
 
@@ -41,8 +41,17 @@ Inhalt sind die Grundsätze (`principle`). Ein Grundsatz erscheint bei **allen**
 ## Fragen zum Weiterdenken (`reflection`)
 
 `data/reflections/REFL-<BUCH>-nnnn.json`: `subject` (Texteinheit `TU-…` oder Zusammenfassung einer oberen Ebene `SUM-…`),
-`question_de` (endet mit «?»), `note_de` (höchstens ein Satz Hintergrund mit Stelle, optional), `order`, `status` (`draft`),
-`process` («PROC-WEITERDENKEN@Fassung»), `authorship_de`, `tags`, `knowledge`, `revision_log` (bei Änderungen).
+`question_de` (endet mit «?», auch «…?» bzw. «?»» bei einem Zitat am Schluss), `note_de` (höchstens ein Satz Hintergrund mit
+Stelle, optional), `order`, `status` (`draft`), `process` («PROC-WEITERDENKEN@Fassung»), `authorship_de`, `tags`, `knowledge`,
+`check` (Prüfvermerk, siehe unten), `revision_log` (bei Änderungen). Fragen und Hintergrund zu Bibel, Testamenten und
+Buchgruppen tragen das Präfix `ALL` (`REFL-ALL-nnnn`, `RCPT-ALL-nnnn`, Datenmodul `ALL.py`); ihr `subject` ist `SUM-BIBLE`,
+`SUM-OT`/`SUM-NT` oder `SUM-GROUP-nn` (in der App der Schlüssel `GROUP-nn`).
+
+- **Zitate wörtlich:** Was in «…» steht, ist ein Zitat und steht wörtlich (Auslassungen mit «…») im Bibeltext der Stelle –
+  Hochdeutsch in der hochdeutschen Arbeitsübersetzung, die Mundart-Fassung in der Mundart-Arbeitsübersetzung. Gesucht wird in
+  den Stellenmarken des Texts und in der Stelle des Bezugs. Begriffe, Gegenformulierungen oder andere mögliche Übersetzungen
+  stehen ohne Zitatzeichen. Der Validator prüft das (`scripts/zitate.py`); Zitate aus Büchern ohne Arbeitsübersetzung meldet
+  er nur als Hinweis. Dasselbe gilt für die Kernaussage (`gist_de`) der Kernanalysen.
 
 - Zwei bis vier Fragen je Abschnitt, aus dem Text gewonnen: offenes Ende, Leerstelle, Frage des Textes selbst, Wer-zu-wem.
   Keine Suggestivfrage, keine versteckte Deutung als Tatsache, keine Antwort.
@@ -54,18 +63,30 @@ Inhalt sind die Grundsätze (`principle`). Ein Grundsatz erscheint bei **allen**
 ## Wie man es gelesen hat (`reception`)
 
 `data/receptions/RCPT-<BUCH>-nnnn.json`: `subject`, `tradition` (`jewish`, `church_fathers`, `liturgy`, `art`, `music`,
-`literature`, `reformation`, `modern_scholarship`), `period_de`, `text_de` (eigene Worte), `sources_de`, `confidence`
-(`high`, `probable`, `possible`), optional `uncertain_de` und `source_check` (wie bei Hintergrund,
-[QUELLENPRUEFUNG.md](QUELLENPRUEFUNG.md)), `process`, `authorship_de`.
+`literature`, `reformation`, `modern_scholarship`, `church_teaching` – kirchliche Lehräusserungen wie Konzilien, Enzykliken,
+Bekenntnisschriften, in der App «Kirchliche Lehre», seit 2026-10-29), `period_de`, `text_de` (eigene Worte), `sources_de`,
+`confidence` (`high`, `probable`, `possible`), optional `uncertain_de` und `source_check` (wie bei Hintergrund,
+[QUELLENPRUEFUNG.md](QUELLENPRUEFUNG.md)), `process`, `authorship_de`, `check`.
 
 - Stimmen nebeneinander, keine wird als die richtige gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten)
   werden benannt.
 - Quellen nur, wo sie sicher sind; sonst ohne Stellenangabe und mit dem Vermerk «Stellenangabe nicht nachgeschlagen
   (ungeprüft)». Ohne `source_check` zeigt die App «Quellen noch nicht nachgeschlagen».
 
+## Prüfvermerk (`check`)
+
+Seit 2026-10-29 (PROC-WEITERDENKEN 1.1) tragen Fragen und Rezeption einen Prüfvermerk der weiteren Instanz, die sie gegen den
+Text geprüft hat: `check` = {`date`, `by` (z. B. «weitere Instanz (KI)»), `result` (`confirmed` bestätigt, `corrected` in der
+Prüfung berichtigt; die Berichtigung steht im `revision_log`), `limits_de` (was nicht geprüft wurde, z. B. nicht gegen den
+Urtext, keine fachliche und keine muttersprachliche Prüfung), optional `process`}. Ein Eintrag ohne `check` ist noch nicht von
+einer weiteren Instanz geprüft. Die App zeigt den Vermerk einmal unter «Wie das entstanden ist» (ohne Hinweis auf KI); er
+ersetzt keine fachliche Prüfung. Im Datenmodul: `CHECK` und `CHECK_CORRECTED` für alle Einträge, `check` (auch `None`) je
+Eintrag. Das erstmalige Eintragen eines Prüfvermerks ist keine inhaltliche Revision (kein `revision_log`).
+
 Beide Typen werden wie andere Erklärtexte lokalisiert (`localization`, Felder `question_de`, `note_de` bzw. `period_de`,
-`text_de`). Werkzeug: `scripts/authoring/weiterdenken.py` mit Datenmodulen `scripts/authoring/weiterdenken_daten/<BUCH>.py`.
-Prozess: PROC-WEITERDENKEN ([PROZESSE.md](PROZESSE.md)).
+`text_de`). Werkzeug: `scripts/authoring/weiterdenken.py` mit Datenmodulen `scripts/authoring/weiterdenken_daten/<BUCH>.py`
+(Urheberschaft, Prozess, Datum und Prüfvermerk je Eintrag möglich; revision_log nur für Dateien, die Git schon erfasst hat; ein
+Eintrag je Tag und Grund; auch gestrichene Felder). Prozess: PROC-WEITERDENKEN ([PROZESSE.md](PROZESSE.md)).
 
 ## Wo die Grenze liegt
 
@@ -123,12 +144,26 @@ Anwendungen der Bereich ihres Grundsatzes.
 
 ## In der App
 
+Die Kernaussage (`gist_de`) steht auch auf Züridüütsch (Lokalisierung, `scripts/authoring/kernanalyse.py`, Feld `gsw` im
+Datenmodul) und erscheint im gewählten Lesetext; die übrige Kernanalyse nur Hochdeutsch.
+
 Am Titel jeder Ebene öffnet «Vertiefen» ein Blatt mit den Reitern «Verstehen» und «Weiterdenken»
 ([LESEN-UND-VERTIEFEN.md](LESEN-UND-VERTIEFEN.md)). «Damals» steht unter Verstehen › «Umfeld damals». Weiterdenken zeigt oben
 die Frage, darunter die Brücke, «Wie man es gelesen hat», «Weitere Fragen» und, wenn eingeschaltet, «Anwendungsideen» mit
 Zielgruppe und Grenze; auf Kapitel- und höheren Ebenen zusätzlich je Kind eine Frage als Tür nach unten.
 
-## Pilot
+## Stand (2026-10-29)
 
-Fragen und Rezeption: Lukas 15 (Kapitel und drei Abschnitte, 2026-10-28, KI-Entwurf). Anwendungen: Mt 6,5–6 mit der
-Zielgruppe «Jugendliche» (`APP-MAT-1007`). Die übrigen Inhalte entstehen in eigenen Runden.
+Pilot war Lukas 15 (2026-10-28). Seither haben alle ausgearbeiteten Bücher Kernaussagen, Fragen und Rezeption (KI-Entwurf,
+von einer weiteren Instanz gegen den Text geprüft, Prüfvermerk `check`; keine fachliche Prüfung):
+
+| Buch | Kernaussagen (`gist_de`, auch Mundart) | Fragen | Wie man es gelesen hat |
+|---|---:|---:|---:|
+| Matthäus | 176 | 378 | 15 |
+| Markus | 108 | 220 | 14 |
+| Lukas | 160 | 353 | 18 |
+| Johannes | 127 | 250 | 17 |
+| Rut, Jona, Obadja, Philipper, Titus, 1.–3. Johannesbrief und obere Ebenen | 102 | 213 | 51 |
+
+Die jüdischen Stimmen zu Lukas und Johannes (RCPT-LUK-0017/0018, RCPT-JHN-0016/0017) sind nach der Prüfrunde ergänzt und noch
+nicht von einer weiteren Instanz geprüft. Anwendungen: Mt 6,5–6 mit der Zielgruppe «Jugendliche» (`APP-MAT-1007`).

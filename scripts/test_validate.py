@@ -165,7 +165,51 @@ def bad_weiterdenken(root):
     write(p, d)
 
 
+def bad_zitate(root):
+    """Zitate nicht wörtlich (Hochdeutsch, Mundart, Kernaussage) und unvollständiger Prüfvermerk."""
+    def upd(rel, f):
+        p = root / rel
+        d = json.loads(p.read_text())
+        f(d)
+        write(p, d)
+    upd("data/reflections/REFL-LUK-0017.json", lambda d: d.update({"question_de": "Was heisst «Wie wird das passieren?» hier?"}))
+    upd("data/localizations/gsw-u-sd-chzh/L10N-GSW-ZH-REFL-LUK-0018.json",
+        lambda d: d["fields"].update({"question_de": "Was heisst «Bei Gott ist nichts unmöglich»?"}))
+    upd("data/core-analyses/CORE-LUK-015-011-032.json", lambda d: d.update({"gist_de": "Der Vater sagt: «Ich renne dir entgegen.»"}))
+    upd("data/reflections/REFL-LUK-0020.json", lambda d: d.update({"check": {**d["check"], "result": "ok"}}))
+    upd("data/reflections/REFL-LUK-0021.json", lambda d: d.update({"check": {k: v for k, v in d["check"].items() if k != "limits_de"}}))
+
+
+def good_weiterdenken(root):
+    """Zulässig: Frage endet mit «…?», Tradition church_teaching, Stelle in einem Werktitel, Zitat aus unübersetztem Buch."""
+    def upd(rel, f):
+        p = root / rel
+        d = json.loads(p.read_text())
+        f(d)
+        write(p, d)
+    upd("data/reflections/REFL-LUK-0017.json", lambda d: d.update({"question_de": "Warum fragt Maria: «Wie wird das geschehen?»"}))
+    upd("data/receptions/RCPT-LUK-0001.json", lambda d: d.update({"tradition": "church_teaching"}))
+    upd("data/receptions/RCPT-LUK-0002.json", lambda d: d.update({"text_de": d["text_de"] + " Vgl. Polykarp, Brief an die Philipper 7,1."}))
+    upd("data/reflections/REFL-LUK-0023.json", lambda d: d.update({"note_de": "Vgl. «Im Anfang schuf Gott» ([[GEN.1.1]])."}))
+
+
 case("Frage ohne Fragezeichen", bad_weiterdenken, "question_de fehlt oder ist keine Frage")
+case("Zitat nicht wörtlich (Hochdeutsch)", bad_zitate, "REFL-LUK-0017.json: question_de: Zitat «Wie wird das passieren?» steht nicht wörtlich")
+case("Zitat nicht wörtlich (Mundart)", bad_zitate, "L10N-GSW-ZH-REFL-LUK-0018.json: question_de: Zitat «Bei Gott ist nichts unmöglich» steht nicht wörtlich im Bibeltext der Stelle (Schicht gsw)")
+case("Zitat nicht wörtlich (Kernaussage)", bad_zitate, "CORE-LUK-015-011-032.json: gist_de: Zitat «Ich renne dir entgegen.» steht nicht wörtlich")
+case("Prüfvermerk mit ungültigem Ergebnis", bad_zitate, "REFL-LUK-0020.json: check.result: Wert 'ok' nicht erlaubt")
+case("Prüfvermerk ohne Grenzen", bad_zitate, "REFL-LUK-0021.json: check: Pflichtfeld 'limits_de' fehlt")
+with tempfile.TemporaryDirectory() as tmp:
+    root = pathlib.Path(tmp)
+    for d_ in ("data", "data-nc", "vendor"):
+        shutil.copytree(ROOT / d_, root / d_)
+    good_weiterdenken(root)
+    res = run(root)
+    out = res.stdout + res.stderr
+    assert res.returncode == 0, ("zulässige Weiterdenken-Fälle", out[-800:])
+    assert "reflections/REFL-LUK-0017.json" not in out, ("Frage mit «…?» oder Zitat gemeldet", out[-800:])
+    assert "Philipper 7,1" not in out, ("Stelle im Werktitel als fehlende Marke gemeldet", out[-800:])
+    assert "WARN: data/reflections/REFL-LUK-0023.json: note_de: Zitat «Im Anfang schuf Gott»" in out and "nicht übersetzt" in out, ("Zitat aus unübersetztem Buch nur als Hinweis", out[-800:])
 case("Prozessfassung unbekannt", bad_weiterdenken, "process 'PROC-WEITERDENKEN@9.9' unbekannt")
 case("Frage zu einem Befund", bad_weiterdenken, "subject muss eine Texteinheit")
 case("Rezeption unbekannte Tradition", bad_weiterdenken, "tradition 'unbekannt' unbekannt")
@@ -174,4 +218,4 @@ case("Herkunft nicht im Quellenkatalog", uncatalogued, "fehlt im Quellenkatalog"
 case("Verwendete Quelle ohne Dateien", used_without_files, "passt auf keine Datei")
 case("NC-Quelle im freien Kern", nc_in_core, "nicht kommerzielle Quelle im freien Kern")
 
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog, Weiterdenken)")
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog, Weiterdenken inkl. Zitate wörtlich, Prüfvermerk, «…?», Kirchliche Lehre, Werktitel)")

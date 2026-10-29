@@ -101,6 +101,29 @@ const srv=http.createServer((q,r)=>{const f=path.join(ROOT,decodeURIComponent(q.
     assert(await p.$('#deep-panel-w [data-app="APP-LUK-0505"]'),'Anwendung mit Einstellung sichtbar');
     assert((await txt('#deep-panel-w .deep-row')).includes('Grenze:'),'mit Grenze');
     assert(!(await p.$('.sheet .deep-apps-off')),'Hinweis «ausgeblendet» verschwindet');
+    // 7 «Was auffällt»: Stellen mitten im Satz als kurze Stelle, keine rohen Kennungen; Klammer nicht allein umbrechen
+    const openDeep=async(id,tab='u')=>{await ev(([id,tab])=>{const b=document.createElement('button');b.dataset.vertiefen=id;b.dataset.tab=tab;document.querySelector('.app').appendChild(b);b.click();b.remove();},[id,tab]);await wait(900);};
+    await click('.sheet .close');await openDeep('TU-MAT-015-001-020');
+    const mpts=await txt('.sheet .deep-points li');
+    assert(mpts.includes('15,1–20 erzählt denselben Streit wie Mk 7,1–23, aber mit eigenen Zügen'),'Stellen gekürzt statt gelöscht: '+mpts.slice(0,160));
+    assert(!/\(FIND-|FIND-[A-Z]/.test(mpts)&&!/\(\s*\)/.test(mpts),'keine rohen Kennungen');
+    assert(await ev(()=>[...document.querySelectorAll('.sheet .deep-more .nw')].some(x=>/\)$/.test(x.textContent))),'Stelle und schliessende Klammer umbrechen nicht getrennt');
+    // 8 Kapitelfragen mit Bezug SUM-CH-… (Mk 3) und Abschnitt des ganzen Kapitels (Lk 11)
+    await click('.sheet .close');await openDeep('c40-3','w');
+    assert((await txt('#deep-panel-w')).includes('Wer steht in diesem Kapitel drinnen, wer draussen?'),'Mk 3: Kapitelfrage (SUM-CH-MRK-003)');
+    await click('.sheet .close');await openDeep('c41-11','w');
+    assert((await txt('#deep-panel-w')).includes('Das Kapitel beginnt mit einem Gebet'),'Lk 11: Kapitelfrage (Abschnitt des ganzen Kapitels)');
+    // 9 Kirchliche Lehre, Prüfvermerk unter «Wie das entstanden ist»
+    await click('.sheet .close');await openDeep('TU-MAT-027-011-026','w');
+    assert((await txt('#deep-panel-w .deep-row')).includes('Kirchliche Lehre'),'Tradition «Kirchliche Lehre»');
+    const orig=await txt('.sheet .deep-origin');
+    assert(orig.includes('von einer weiteren Instanz gegen den Text geprüft')&&orig.includes('Grenzen:')&&!/KI|Claude/.test(orig),'Prüfvermerk ohne KI-Hinweis');
+    // 10 Kernaussage im Lesetext Züridüütsch
+    await click('.sheet .close');await ev(()=>document.querySelector('[data-action=menu]').click());await wait();await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());await wait();
+    await openDeep('TU-LUK-015-011-032');
+    assert.equal(await txt('.sheet .deep-gist'),'De Vatter lauft em jüngere Sohn entgäge – und gaat au zum eltere use.','Kernaussage in Mundart');
+    assert((await txt('.sheet .deep-origin')).includes('Die Kernaussage steht auch im gewählten Lesetext'),'Hinweis Kernaussage in Mundart');
+    await click('.sheet .close');
     assert.deepEqual(errs.filter(e=>!/attribute d: Expected number/.test(e)),[],'keine Skriptfehler');
-    console.log('PASS: Vertiefen – ein Knopf mit Punkt, zwei Reiter (Tastatur), Pfad, Kapitel sammelt aus den Abschnitten, Gliederung Blatt zu Blatt, Buch und Bibel mit Türen nach unten, Versblatt-Reihenfolge, Anwendungen nur mit Einstellung.');
+    console.log('PASS: Vertiefen – ein Knopf mit Punkt, zwei Reiter (Tastatur), Pfad, Kapitel sammelt aus den Abschnitten, Gliederung Blatt zu Blatt, Buch und Bibel mit Türen nach unten, Versblatt-Reihenfolge, Anwendungen nur mit Einstellung, «Was auffällt» mit kurzen Stellen, Kapitelfragen SUM-CH und ganzes Kapitel, Kirchliche Lehre, Prüfvermerk, Kernaussage in Mundart.');
   }finally{await b.close();srv.close();}})();

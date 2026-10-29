@@ -86,9 +86,10 @@ Versblatt). «Vertiefen» ersetzt die früheren Knöpfe «Verstehen» und «Dama
 - **Blatt** mit Pfad oben (z. B. «Lukas 15 › 15,11–32»; jede Stufe öffnet das Blatt der Ebene darüber, der Reiter bleibt),
   Schliessen, Titel und zwei Reitern «Verstehen» | «Weiterdenken» (echte Reiter mit `role=tab`, Pfeiltasten, Fokus beim
   Öffnen auf dem Titel). Zeilen sind aufklappbar (`details`), mit einer Zeile Anriss; Touch-Ziele mindestens 44 px.
-- **Verstehen beim Abschnitt:** ein Satz Kernaussage (`gist_de` der Kernanalyse, sonst gekürzt aus `core_de`); «Was auffällt»
-  mit bis zu drei kurzen nummerierten Punkten (die ersten Sätze der Befunde, ohne Stellenklammern, gekürzt; sonst die
-  tragenden Momente), «Mehr dazu ›» klappt die vollen Befunde und die tragenden Momente auf; darunter die Zeilen «Umfeld
+- **Verstehen beim Abschnitt:** ein Satz Kernaussage (`gist_de` der Kernanalyse im gewählten Lesetext, z. B. Züridüütsch,
+  sonst Hochdeutsch bzw. gekürzt aus `core_de`); «Was auffällt» mit bis zu drei kurzen nummerierten Punkten (die ersten Sätze
+  der Befunde, gekürzt: Klammern, die nur Stellen enthalten, fallen weg, Stellen mitten im Satz bleiben als kurze Stelle,
+  Kennungen wie «FIND-…» fallen weg; sonst die tragenden Momente), «Mehr dazu ›» klappt die vollen Befunde und die tragenden Momente auf; darunter die Zeilen «Umfeld
   damals» (Hintergrund), «Wie man es verstehen kann» (Deutungen mit Gegenargumenten, offene Forschungsfragen), «Ähnliche
   Stellen». Unten die erste Frage als Übergang zu Weiterdenken.
 - **Kapitel:** Kernaussage; «Gliederung» = die Abschnitte als nummerierte Liste mit Titel, Stelle und Anriss ihrer
@@ -105,6 +106,8 @@ Versblatt). «Vertiefen» ersetzt die früheren Knöpfe «Verstehen» und «Dama
 - **Wo eine Ebene nichts Eigenes hat,** zeigt das Blatt, was darunter liegt, mit Links; nur wenn auch darunter nichts ist,
   steht «noch nicht erarbeitet» mit dem Weg eine Ebene höher.
 - **Ruhig:** keine Zahlen an Knöpfen und Reitern; Sicherheit («Sicherheit: wahrscheinlich») nur im Klartext in aufgeklappten
-  Zeilen; Methodenhinweise (Prozess, Prüfung, Entwurf) nur einmal unter «Wie das entstanden ist».
+  Zeilen; Methodenhinweise (Prozess, Prüfung, Entwurf) nur einmal unter «Wie das entstanden ist» – dort auch der Prüfvermerk der
+  Fragen und Rezeption (Datum, «von einer weiteren Instanz gegen den Text geprüft», ob berichtigt wurde, Grenzen).
+- **Satz:** Eine Stelle und die schliessende Klammer oder das Satzzeichen danach werden nicht getrennt umbrochen.
 - **Sammeln:** Kapitel und Buch zeigen die Inhalte aller Ebenen darunter (Teile und Abschnitte), je mit Stelle; ein Grundsatz
   erscheint bei allen Abschnitten, aus deren Befunden oder Deutungen er abgeleitet ist.

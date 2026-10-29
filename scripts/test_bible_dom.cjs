@@ -1,7 +1,21 @@
 // Optionale Bedienungsprüfung: npm install --no-save jsdom, dann mit Node ausführen.
-// Die App mit allen Paketen braucht in jsdom mehr als den Standard-Speicher: bei Bedarf mit grösserem Heap neu starten.
+// Die App mit allen Paketen braucht in jsdom mehr als den Standard-Speicher: in einem Kindprozess mit grösserem Heap starten.
+// Robust bei Speicherknappheit: Heap nach freiem Speicher bemessen (höchstens 6 GB, mindestens 2 GB), Speicher zwischendurch
+// freigeben (--expose-gc), und bei «heap out of memory» bzw. Abbruch durch das System einmal klar gemeldet neu starten.
 if(!process.execArgv.some(x=>x.startsWith('--max-old-space-size'))&&!/max-old-space-size/.test(process.env.NODE_OPTIONS||'')){
-  const r=require('node:child_process').spawnSync(process.execPath,['--max-old-space-size=6144',__filename],{stdio:'inherit'});process.exit(r.status??1);}
+  const os=require('node:os'),cp=require('node:child_process');
+  const heapMb=()=>Math.max(2048,Math.min(6144,Math.floor(os.freemem()/1048576*0.8)));
+  for(let attempt=1;attempt<=2;attempt++){
+    const mb=heapMb();
+    const r=cp.spawnSync(process.execPath,['--expose-gc',`--max-old-space-size=${mb}`,__filename],{stdio:['inherit','inherit','pipe'],maxBuffer:64*1024*1024});
+    const err=String(r.stderr||'');process.stderr.write(err);
+    const oom=/heap out of memory|Allocation failed|ERR_WORKER_OUT_OF_MEMORY/.test(err)||['SIGKILL','SIGABRT'].includes(r.signal);
+    if(r.status===0||!oom||attempt===2){
+      if(oom)console.error(`FAIL: Speicher reicht nicht (Heap ${mb} MB, frei ${Math.round(os.freemem()/1048576)} MB): andere Node-Prozesse beenden und erneut starten.`);
+      process.exit(r.status??1);}
+    console.error(`Hinweis: Test wegen Speicherknappheit abgebrochen (Heap ${mb} MB, Signal ${r.signal||'–'}); Neustart …`);
+  }}
+const gc=()=>{if(typeof global.gc==='function')global.gc();};
 const {JSDOM}=require('jsdom'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 let model;
 const dom=new JSDOM(fs.readFileSync(path.join(__dirname,'../app/bible/index.html'),'utf8'),{runScripts:'dangerously',pretendToBeVisual:true,beforeParse(w){w.__BIBLE_TEST__=x=>model=x;}});
@@ -39,6 +53,7 @@ for(let v=22;v<=30;v++){const want=mkAlts().some(a=>vOf(a.ref)===v)||model.BG.so
  assert(reader.querySelector(`[data-more="v40-3-${v}"]`),`jede Versnummer öffnet das Versblatt (3,${v})`);
  assert.equal(!!reader.querySelector(`.vno.more[data-more="v40-3-${v}"]`),want,`Rahmen nur bei Erarbeitetem (3,${v})`);}
 
+gc();
 // Hintergrund damals: Vers, Abschnitt, Hinweise im Text
 click('[data-more="v40-3-22"]');
 assert(sheetHost.querySelector('[data-bg-note="BG-MRK-0006"]'),'Beelzebul im Versblatt 3,22');
@@ -51,6 +66,7 @@ click('[data-close]');
 assert(!reader.querySelector('.bg-line'),'Hintergrund nicht im Lesetext, nur im Versblatt');
 click('[data-more="v40-3-27"]');assert(sheetHost.textContent.includes('Jes 49,24–25'),'Hintergrund 3,27 im Versblatt');click('[data-close]');
 
+gc();
 // Versblatt: Lesarten, Urtext, Stand dieser Stelle
 click('[data-more="v40-3-29"]');
 assert(sheetHost.querySelector('[data-alternative]'),'Lesarten im Versblatt');
@@ -61,6 +77,7 @@ assert(sheetHost.textContent.includes('MorphGNT'));
 click('[data-close]');
 (click('[data-action=up]'),click('.sheet .pick-open'));assert.equal(reader.scrollTop,137,'Rückkehrposition');
 
+gc();
 // Suche, fortlaufendes Lesen über die Kapitelgrenze, Lesarten im Fliesstext
 click('[data-action=index]');
 const input=sheetHost.querySelector('input[type=search]');input.value='Mk 3,20';input.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
@@ -69,6 +86,7 @@ click('[data-action=load-next]');
 for(let v=20;v<=35;v++)assert.equal(reader.querySelector(`[data-stream="v40-3-${v}"] .stream-copy`).textContent,mk(v));
 assert(reader.querySelector('[data-stream="v40-4-1"]'));
 assert.equal(reader.querySelectorAll('.alt-line').length,0,'keine Lesarten-Zeilen im Lesetext');
+gc();
 // Bis zur Quelle: jede Alternative führt zu Handschriften, Ausgaben, Wortbedeutungen und Erklärungen
 for(const a of mkAlts()){
  const vid=`v40-3-${vOf(a.ref)}`;
@@ -85,6 +103,7 @@ for(const a of mkAlts()){
 let tested=mkAlts().length;
 
 
+gc();
 // Vaterunser: Matthäus und Lukas; Suche, Zuletzt gelesen und Ausgearbeitetes stehen in der Navigation (nicht mehr im Menü)
 click('[data-action=menu]');assert(!sheetHost.querySelector('input[type=search]')&&!sheetHost.querySelector('details.worked'),'Menü ohne Suche und Listen');click('[data-close]');
 click('[data-action=index]');
@@ -287,3 +306,4 @@ click('[data-close]');
  assert.equal(app.dataset.level,'6');assert(app.querySelector('[data-action=down]').hidden,'auf Versebene keine Auswahl darunter');}
 console.log(`PASS: Navigation (Suche nach Stelle und Abschnitt, Auswahl im Pfad), Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
 dom.window.close();
+gc();

@@ -2,6 +2,48 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.146 — 2026-10-29 — Vertiefen-Inhalte für alle ausgearbeiteten Bücher, geprüft
+
+Inhaltsrunde Vertiefen (Entscheid Andi Neck 2026-10-28): Kernaussage in einem Satz (`gist_de`), Fragen zum Weiterdenken
+(`reflection`) und «Wie man es gelesen hat» (`reception`) für alle ausgearbeiteten Bücher; KI-Entwürfe, von einer getrennten
+weiteren Instanz gegen den Text geprüft, keine fachliche und keine muttersprachliche Prüfung.
+
+| Buch | Kernaussagen | Fragen | Wie man es gelesen hat |
+|---|---:|---:|---:|
+| Matthäus (MAT) | 176 | 378 | 15 |
+| Markus (MRK) | 108 | 220 | 14 |
+| Lukas (LUK) | 160 | 353 | 16 (+2 jüdische Stimmen) |
+| Johannes (JHN) | 127 | 250 | 15 (+2 jüdische Stimmen) |
+| Rut, Jona, Obadja, Philipper, Titus, 1.–3. Johannesbrief und obere Ebenen (Bibel, Testamente, Buchgruppen) | 102 | 213 | 51 |
+
+- **Prüfungen:** je Buch eine getrennte Instanz (PROC-WEITERDENKEN 1.0, Schritte 3 und 4): Fragen offen und am Text belegt,
+  keine versteckte Deutung, Kernaussagen gegen den Text, Quellen der Rezeption erneut nachgeschlagen (`source_check`).
+  Ergebnis als **Prüfvermerk `check`** an allen 1525 Fragen und Rezeptionen (Datum, «weitere Instanz (KI)», bestätigt bzw.
+  berichtigt, Grenzen); in der App einmal unter «Wie das entstanden ist».
+- **Neue Zitat-Prüfung** im Validator (`scripts/zitate.py`): Zitate in «…» in Fragen und Kernaussagen stehen wörtlich im
+  Bibeltext der Stelle, Hochdeutsch gegen die hochdeutsche, Mundart gegen die Mundart-Arbeitsübersetzung. Sie fand 244 nicht
+  wörtliche Zitate (5 Kernaussagen, 19 hochdeutsche und 220 Mundart-Zitate in Fragen); alle berichtigt, mit `revision_log`.
+- **Kernaussage auf Züridüütsch** für alle 673 Kernanalysen (Lokalisierung, Mundart nach `lukas_einheitlich.py`, Zitate aus
+  der Mundart-Schicht); die App zeigt sie im gewählten Lesetext.
+- **Textarten:** neu `letter`, `law`, `prophecy`, `apocalyptic` (und `wisdom`, `psalm`, `genealogy`) mit Brücken-Titel nach
+  [WEITERDENKEN.md](docs/WEITERDENKEN.md); 92 Kernanalysen korrigiert (Obadja Prophetie, Briefe, Stammbäume, Gleichnisse in
+  Lukas 10, 12, 15, 16, Endzeitreden Mt 24/25, Mk 13, Lk 17 und 21).
+- **Kirchliche Lehre** (`church_teaching`) als neue Tradition; «Nostra aetate» bei Mt 27 und Joh 19 umgehängt.
+  **Jüdische Stimmen** ergänzt (Quellen nachgeschlagen, noch nicht von einer weiteren Instanz geprüft): Amy-Jill Levine zu
+  Lukas 15 und zum barmherzigen Samaritaner, Adele Reinhartz zum Johannesevangelium und zu Joh 9,22.
+- **Werkzeuge:** `kernanalyse.py` mit `revision_log` (vorige Fassung, `BIBLE_REVISION_DATE`/`BIBLE_REVISION_REASON`,
+  `asserted_at`/`authorship_de` nachgeführt) und nachträglichem Eintrag für die Kernaussagen (bei 73 in der Prüfung
+  berichtigten die Entwurfsfassung aus Git); `weiterdenken.py` mit Urheberschaft, Prozess und Prüfvermerk je Eintrag, ohne
+  `revision_log` für noch nicht erfasste Dateien, ein Eintrag je Tag und Grund, auch für gestrichene Felder. Validator: Fragen
+  dürfen mit «…?» bzw. «?»» enden; Stellen in Werktiteln gelten nicht als fehlende Marke. Schema v0.13.
+- **App:** «Was auffällt» kürzt Stellen statt sie zu löschen (kein «In bittet Jairus …» mehr) und entfernt rohe Kennungen;
+  Stelle und schliessende Klammer umbrechen nicht getrennt; Kapitelfragen mit `SUM-CH-…` (Mk 3) und über den Abschnitt des
+  ganzen Kapitels (Lk 11) werden beide gefunden. `test_bible_dom.cjs` bemisst den Speicher nach dem freien Arbeitsspeicher und
+  startet bei Speicherknappheit einmal klar gemeldet neu.
+- **Prozess:** PROC-WEITERDENKEN Fassung 1.1 (Prüfvermerk, Zitat-Prüfung, Kernaussage in Mundart, Kirchliche Lehre).
+- **Doku:** [WEITERDENKEN.md](docs/WEITERDENKEN.md) (Stand aller Bücher, Prüfvermerk, Zitate wörtlich, `ALL`-Präfix),
+  [DATENMODELL.md](docs/DATENMODELL.md), [LESEN-UND-VERTIEFEN.md](docs/LESEN-UND-VERTIEFEN.md), [PROZESSE.md](docs/PROZESSE.md).
+
 ## v0.145 — 2026-10-28 — Vertiefen: ein Knopf, Verstehen und Weiterdenken
 
 Entscheid Andi Neck (2026-10-28) nach den Skizzen «Vertiefen»: am Anfang das Wichtige, dann die Möglichkeit abzutauchen, ohne den Leser zu verlieren.
