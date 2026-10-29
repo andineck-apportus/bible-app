@@ -266,6 +266,16 @@ aq23 = ersetze(ersetze(aq22, "w5", s("w5", "pruefung", "Regeln prüfen", "Diesel
                                              prueft=["alle Pflichtregeln erfüllt"])),
                "w9", s("w9", "pruefung", "Schlussprüfung", "Eine weitere Instanz prüft die fertige Kachel: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste, gehaltenem Gegenstand oder Haupthandlung, alle Worte lesbar, Moment getroffen (mindestens 1 von 2). Was nicht besteht, fragt die zweite Instanz noch zweimal; die Mehrheit gilt.",
                        prueft=["Sprecher richtig", "nichts verdeckt", "lesbar", "Moment"], zurueck=("w8", "zweiter Blasenversuch nur im oberen Band")))
+aq24 = [
+    s("p1", "werkzeug", "Einträge fürs Bildlexikon", "Jeder Lexikon-Eintrag, den der Aquarellstil zeichnet, erhält ein Einzelbild: Personen als Ganzkörper- oder Kniestück-Porträt, Gruppen als kleine Gruppe, Gegenstände, Orte und Zeichen als Vignette, auf warmweissem Papier. Gemalt wird nach der Beschreibung des Stils, der Stilreferenz und, für die Personen von Joh 2, dem Figurenblatt.",
+      "Malauftrag und Porträtregeln je Eintrag"),
+    s("p2", "modell", "Porträt malen", "Das Bildmodell malt zwei Varianten im Hochformat."),
+    s("p3", "pruefung", "Porträt blind beschreiben", "Eine weitere Instanz sieht nur das Bild und beschreibt Personen bzw. Gegenstände, ohne Beschreibung oder Namen zu kennen."),
+    s("p4", "pruefung", "Porträt prüfen", "Dieselbe Instanz beantwortet die Regeln einzeln: allgemeine Regeln, Porträtregeln (eine Person bzw. kleine Gruppe bzw. Vignette, entspricht der Beschreibung, keine Attribute ausser denen von Beschreibung und Lexikon, passt zu den Erkennungsmerkmalen im Lexikon) und Figurenregeln (z. B. Maria sichtbar älter, Gesicht Jesu voll sichtbar). Verfehlte Pflichtregeln fragt die zweite Instanz noch zweimal, die Mehrheit gilt; ein Textvergleich bewertet, ob die Blindbeschreibung zur Beschreibung passt (mindestens 1 von 2).",
+      prueft=["alle Pflichtregeln erfüllt", "Blindbeschreibung passt"]),
+    s("p5", "werkzeug", "Porträt wählen und ablegen", "Gewählt wird die bestandene Variante mit den meisten Punkten; abgelegt klein (384 × 576) mit Prüfvermerk im Stil-Datensatz (Datum, Ergebnis, Regeln, Grenzen, Fingerabdrücke von Bild und Auftrag). Ändern sich Beschreibung oder Regeln, gilt das Porträt als veraltet.",
+      "Einzelporträt im Bildlexikon", zurueck=("p2", "keine Variante bestanden: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden; danach bleibt der Eintrag offen")),
+] + ersetze(aq23, "w3", s("w3", "modell", "Malen", "Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz, Figurenblatt und den geprüften Einzelporträts der vorkommenden Figuren (nur wenn die Figur im Szenenplan dieselbe Beschreibung hat wie im Porträt)."))
 aq20 = ersetze(ersetze(ohne(aq21, "w6"), "w5", s("w5", "pruefung", "Regeln prüfen", "Dieselbe Instanz beantwortet jede Regel einzeln (allgemein, Figur, Feld), zählt verlangte Dinge und gibt Kopfpositionen an.", prueft=["alle Pflichtregeln erfüllt"])),
                "w7", s("w7", "werkzeug", "Variante wählen", "Brauchbar ist eine Variante, die alle Pflichtregeln erfüllt; gewählt wird die mit den meisten Punkten.", prueft=["Pflichtregeln"],
                        zurueck=("w3", "keine brauchbare Variante: neu malen mit Hinweis, höchstens drei Runden")))
@@ -289,7 +299,10 @@ P["PROC-BILD-AQUARELL"] = {"names": {"de": "Bilder im Aquarellstil", "en": "Wate
         fassung("2.2", "2026-10-28", "Blasen nur auf leerem Papier (Belegungskarte aus dem Bild), Mindestabstand zum Rand, keine Spitze durch eine andere Blase; Umriss mit Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen (Hinweise Herausgeber).", aq22,
                 "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28b"], docs=["docs/BILDSTIL.md"]),
         fassung("2.3", "2026-10-28", "Zwei prüfende Instanzen: eine günstige prüft alles, eine genauere entscheidet nur, wo eine Pflichtregel nicht besteht (Messung am Prüfsatz mit 20 Bildern bekannten Urteils). Gesicht Jesu: auch schräg oder im Profil gilt als sichtbar.", aq23,
-                "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d"], docs=["docs/BILDSTIL.md"])]}
+                "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d"], docs=["docs/BILDSTIL.md"]),
+        fassung("2.4", "2026-10-28", "Bildlexikon im Aquarellstil (Entscheid Herausgeber): je Lexikon-Eintrag ein gemaltes Einzelporträt bzw. eine Vignette, automatisch geprüft wie die Szenen (Blindbeschreibung, Regeln, Vergleich mit Beschreibung und Lexikon); geprüfte Porträts gehen beim Malen der Szenen als Vorlage mit.", aq24,
+                "Alle Pflichtregeln und die Schlussprüfung bestanden; Porträts: alle Pflichtregeln bestanden.",
+                regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d", "scripts/authoring/bilder_aquarell_daten/portraets.json@2026-10-28"], docs=["docs/BILDSTIL.md"])]}
 
 # ------------------------------------------------------------------ Freigabe
 f20 = [

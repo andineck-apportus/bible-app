@@ -4,11 +4,15 @@
 Schritte:
   figurenblatt  Figuren- und Objektblatt im Stil der Referenz (docs/referenz/stilreferenz-aquarell-comic.jpg)
   felder        je Szene ein Bild; als Vorlage gehen Stilreferenz und Figurenblatt mit
-                (data/illustrations/aquarell/figurenblatt.webp, sobald ausgewählt und abgelegt)
+                (data/illustrations/aquarell/figurenblatt.webp, sobald ausgewählt und abgelegt) und, seit PROC-BILD-AQUARELL 2.4,
+                die geprüften Einzelporträts der vorkommenden Figuren (data/illustrations/aquarell/figuren/<ID>.webp)
+  figuren       je Lexikon-Eintrag des Stils ein Einzelporträt bzw. eine Vignette (nur malen; mit Prüfung und Ablage:
+                bilder_aquarell_lauf.py figuren, Werkzeug bilder_aquarell_figuren.py)
 
   python3 scripts/authoring/bilder_aquarell_gen.py figurenblatt --varianten 2
   python3 scripts/authoring/bilder_aquarell_gen.py felder --szenen JHN-002-K1,JHN-002-K2 --varianten 2
   python3 scripts/authoring/bilder_aquarell_gen.py felder --trocken          # nur Aufträge ausgeben
+  python3 scripts/authoring/bilder_aquarell_gen.py figuren --szenen FIG-JESUS,FIG-MARIA-MUTTER-JESU --trocken
 
 Ergebnis: ausgabe/aquarell/<lauf>/ mit PNG-Bildern, lauf.json (Auftrag, Modell, Zeit) und kontaktbogen.html.
 Die Auswahl und das Ablegen in data/ macht danach scripts/authoring/bilder_aquarell.py.
@@ -25,10 +29,15 @@ import urllib.error
 import urllib.request
 import uuid
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 DATEN = ROOT / "scripts/authoring/bilder_aquarell_daten"
 STILREF = ROOT / "docs/referenz/stilreferenz-aquarell-comic.jpg"
 FIGBLATT = ROOT / "data/illustrations/aquarell/figurenblatt.webp"
+# Personen auf dem Figurenblatt, von links nach rechts (Diener und Jünger je zwei)
+FIGBLATT_IDS = ("FIG-MARIA-MUTTER-JESU", "FIG-JESUS", "FIG-ROLLE-SPEISEMEISTER", "FIG-ROLLE-BRAEUTIGAM", "FIG-GRUPPE-DIENER", "FIG-GRUPPE-JUENGER")
+PORTRAETS_MAX = 6   # höchstens so viele Einzelporträts je Szene als Vorlage
 MODELLE = ["gpt-image-2.5-flare", "gpt-image-2", "gpt-image-1.5", "gpt-image-1"]
 API = "https://api.openai.com/v1/images"
 
@@ -44,7 +53,7 @@ def lade(name):
 
 
 def auftrag_figurenblatt(fig):
-    leute = "\n".join(f"- {fig['figuren'][k]}" for k in ("FIG-MARIA-MUTTER-JESU", "FIG-JESUS", "FIG-ROLLE-SPEISEMEISTER", "FIG-ROLLE-BRAEUTIGAM", "FIG-GRUPPE-DIENER", "FIG-GRUPPE-JUENGER"))
+    leute = "\n".join(f"- {fig['figuren'][k]}" for k in FIGBLATT_IDS)
     return (f"{fig['figurenblatt_en']}\n\nPEOPLE:\n{leute}\n\nSTYLE (match the drawing style of the attached reference image only – "
             f"its line, wash, palette and white space; ignore its content, layout, ages and text): {fig['stil_en']}")
 
@@ -55,7 +64,23 @@ def vorlagen_fuer(plan_d):
     return [STILREF] + ([ROOT / fb] if fb and (ROOT / fb).is_file() else [])
 
 
-def auftrag_feld(sz, fig, mit_blatt=None):
+def vorlagen_szene(plan_d, sz, fig):
+    """Vorlagen für eine Szene (PROC-BILD-AQUARELL 2.4): Stilreferenz, Figurenblatt wie bisher und dazu das geprüfte
+    Einzelporträt jeder vorkommenden Figur, sofern es nach derselben Beschreibung gemalt wurde wie die Figur in diesem Plan
+    (der Vater in Lk 15 ist ein anderer als in Tit 2). Gibt (Vorlagen, [(ID, Beschreibung), …]) zurück."""
+    import bilder_aquarell_figuren as BF
+    vorlagen = vorlagen_fuer(plan_d)
+    ids = list(dict.fromkeys([*sz["depicts"], *[x for sp in sz.get("speech", []) for x in (sp["from"], sp["to"])]]))
+    portr = []
+    for fid, pfad in BF.portraets_fuer(ids, fig):
+        if len(portr) >= PORTRAETS_MAX:
+            break
+        vorlagen.append(pfad)
+        portr.append((fid, fig["figuren"][fid].split(":")[0]))
+    return vorlagen, portr
+
+
+def auftrag_feld(sz, fig, mit_blatt=None, portraets=()):
     ids = list(dict.fromkeys([*sz["depicts"], *[x for sp in sz["speech"] for x in (sp["from"], sp["to"])]]))
     leute = "\n".join(f"- {fig['figuren'][k]}" for k in ids if k in fig["figuren"])
     def wer(f):
@@ -65,6 +90,12 @@ def auftrag_feld(sz, fig, mit_blatt=None):
                        f"\n- {wer(sp['from'])} is speaking to {wer(sp['to']).lower()} (shown through gaze and gesture)." for sp in sz["speech"])
     vorlagen = ("The first attached image shows the drawing style (use only its style). "
                 + ("The second attached image is the character sheet: use it only to know who is who (face shape, hair, beard, age, clothing colours) – not for its level of detail; paint everyone much simpler and looser than on the sheet." if (FIGBLATT.is_file() if mit_blatt is None else mit_blatt) else ""))
+    if portraets:
+        erst = 3 if (FIGBLATT.is_file() if mit_blatt is None else mit_blatt) else 2
+        vorlagen += (" The following attached images are checked single portraits, in this order: "
+                     + "; ".join(f"image {erst + i}: {wer_}" for i, (_, wer_) in enumerate(portraets))
+                     + ". Keep these people and objects looking exactly like their portrait (face, hair, beard, age, clothing colours, shape), "
+                       "but paint them as loosely as the style requires and in the pose the scene asks for.")
     return (f"{sz['bild_en']}\n\nPEOPLE AND OBJECTS (keep exactly):\n{leute}\n"
             + (f"\nWHO SPEAKS:{sprecher}\n" if sprecher else "")
             + f"\nPICTURE: {fig['bild_en']}\n\nSTYLE: {fig['stil_en']}\n\n{vorlagen}")
@@ -82,11 +113,11 @@ def multipart(felder, dateien):
     return b"".join(teile), f"multipart/form-data; boundary={grenze}"
 
 
-def male(prompt, vorlagen, schluessel, n):
+def male(prompt, vorlagen, schluessel, n, groesse="1536x1024"):
     letzter = None
     modelle = [os.environ["OPENAI_IMAGE_MODEL"]] if os.environ.get("OPENAI_IMAGE_MODEL") else MODELLE
     for m in modelle:
-        felder = {"model": m, "prompt": prompt, "size": "1536x1024", "quality": "high", "n": str(n)}
+        felder = {"model": m, "prompt": prompt, "size": groesse, "quality": "high", "n": str(n)}
         if vorlagen:
             daten, typ = multipart(felder, [("image[]", p) for p in vorlagen])
             req = urllib.request.Request(f"{API}/edits", data=daten, headers={"Authorization": f"Bearer {schluessel}", "Content-Type": typ})
@@ -107,7 +138,7 @@ def male(prompt, vorlagen, schluessel, n):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("schritt", choices=["figurenblatt", "felder"])
+    ap.add_argument("schritt", choices=["figurenblatt", "felder", "figuren"])
     ap.add_argument("--szenen", default="alle")
     ap.add_argument("--plan", default="szenen-jhn-002.json")
     ap.add_argument("--varianten", type=int, default=1)
@@ -116,8 +147,15 @@ def main():
     ap.add_argument("--trocken", action="store_true")
     a = ap.parse_args()
     fig = lade("figuren.json")
+    groesse = "1536x1024"
     if a.schritt == "figurenblatt":
         auftraege = [("FIGURENBLATT", auftrag_figurenblatt(fig), [STILREF])]
+    elif a.schritt == "figuren":  # Einzelporträts (bilder_aquarell_figuren.py), nur malen
+        import bilder_aquarell_figuren as BF
+        eintr = BF.eintraege()
+        wahl = BF.wahl(eintr, a.szenen, alle_ohne_bild=False)
+        auftraege = [(fid, BF.auftrag(eintr[fid]), BF.vorlagen(eintr[fid])) for fid in wahl]
+        groesse = BF.cfg()["groesse"]
     else:
         plan = lade(a.plan)["szenen"]
         wahl = list(plan) if a.szenen == "alle" else [s.strip() for s in a.szenen.split(",") if s.strip()]
@@ -125,7 +163,15 @@ def main():
         if fehlt:
             sys.exit(f"Unbekannte Szenen: {fehlt}")
         vorlagen = [STILREF] + ([FIGBLATT] if FIGBLATT.is_file() and not a.ohne_figurenblatt else [])
-        auftraege = [(s, auftrag_feld(plan[s], fig), vorlagen) for s in wahl]
+        plan_d = lade(a.plan)
+        auftraege = []
+        for s in wahl:
+            if a.ohne_figurenblatt:
+                auftraege.append((s, auftrag_feld(plan[s], fig), vorlagen))
+            else:
+                import bilder_aquarell as BA
+                v, portr = vorlagen_szene(plan_d, plan[s], BA.fig_fuer(fig, plan_d))
+                auftraege.append((s, auftrag_feld(plan[s], fig, len(v) > 1 + len(portr), portr), v))
     if a.hinweis:
         auftraege = [(i, p + f"\n\nADDITIONAL INSTRUCTION FOR THIS RUN: {a.hinweis}", v) for i, p, v in auftraege]
     if a.trocken:
@@ -143,7 +189,7 @@ def main():
     for i, p, v in auftraege:
         e = {"szene": i, "prompt": p, "vorlagen": [x.name for x in v]}
         try:
-            m, bilder = male(p, v, schluessel, a.varianten)
+            m, bilder = male(p, v, schluessel, a.varianten, groesse)
             e["modell"], e["dateien"] = m, []
             for k, b in enumerate(bilder, 1):
                 name = f"{i}__v{k}.png"

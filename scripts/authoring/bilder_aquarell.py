@@ -429,6 +429,35 @@ def fig_fuer(fig, plan_d):
     return f
 
 
+def beschreibungen(fig, alle):
+    """Beschreibung je Figur im Aquarellstil: figuren.json, sonst der (letzte) Szenenplan, der die Figur beschreibt."""
+    return dict(sorted({**fig["figuren"], **{x: y for pd in alle.values() for x, y in pd.get("figuren", {}).items() if x not in fig["figuren"]}}.items()))
+
+
+def renderings(fig, alle, alt):
+    """renderings des Stils; Einzelporträts (bilder_aquarell_figuren.py) bleiben mit «image» und «check» erhalten. Hat sich
+    seither Beschreibung, Regel oder Auftrag geändert, gilt die Prüfung als veraltet (Stufe «entwurf»)."""
+    import bilder_aquarell_figuren as BF
+    eintr = None
+    out = {}
+    for k, v in beschreibungen(fig, alle).items():
+        r = {"description_en": v}
+        a = (alt or {}).get(k) or {}
+        if a.get("image"):
+            eintr = eintr or BF.eintraege()
+            c = dict(a.get("check") or {})
+            if c and c.get("plan_sha") != BF.fingerabdruck(eintr[k]):
+                c["veraltet"] = True
+                c["stufe"] = "entwurf"
+            elif c.get("veraltet"):
+                c.pop("veraltet")
+                c["stufe"] = "ki-geprueft" if c.get("ergebnis") == "bestanden" and not c.get("trocken") else "entwurf"
+            r["image"] = a["image"]
+            r["check"] = c
+        out[k] = r
+    return out
+
+
 def plaene():
     return {p.name: lade(p) for p in sorted(DATEN.glob("szenen-*.json"))}
 
@@ -493,13 +522,14 @@ def main():
             "labels": {"de": "Aquarell", "en": "Watercolour"},
             "description_de": "Minimalistischer Aquarell-Comic nach dem Styleguide «Visuelle Bibel» V1.2 (docs/BILDSTIL.md): warmweisses Papier, wenige dünne Linien, transparente Flächen, natürliche erwachsene Figuren, viel Weissraum. Gemalte Szenen je Bildfeld; Worte als Text darüber in der gewählten Sprache. Ersetzt in der App die Stile Symbol und Anime, wo vorhanden.",
             "style_reference": "docs/referenz/stilreferenz-aquarell-comic.jpg", "character_sheet": "data/illustrations/aquarell/figurenblatt.webp",
-            "renderings": {k: {"description_en": v} for k, v in sorted({**fig["figuren"], **{x: y for pd in alle.values() for x, y in pd.get("figuren", {}).items() if x not in fig["figuren"]}}.items())},
+            "renderings": None,
             "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}
     alt_p = D / "styles/ILLSTYLE-AQUARELL.json"
-    if alt_p.exists():
-        alt = lade(alt_p)
+    alt = lade(alt_p) if alt_p.exists() else {}
+    if alt:
         stil["knowledge"] = alt.get("knowledge", stil["knowledge"])
         stil["revision_log"] = alt.get("revision_log", [])
+    stil["renderings"] = renderings(fig, alle, alt.get("renderings"))
     n += schreibe(alt_p, stil)
     for name, plan_d in alle.items():
         plan = plan_d["szenen"]

@@ -9,7 +9,7 @@
   },
   "group": "bild",
   "purpose_de": "Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Regeln, bis kein Mensch mehr drüberschauen muss.",
-  "current": "2.3",
+  "current": "2.4",
   "versions": [
     {
       "version": "1.0",
@@ -485,6 +485,153 @@
       "gate_de": "Alle Pflichtregeln und die Schlussprüfung bestanden.",
       "rules": [
         "scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d"
+      ],
+      "docs": [
+        "docs/BILDSTIL.md"
+      ]
+    },
+    {
+      "version": "2.4",
+      "valid_from": "2026-10-28",
+      "change_de": "Bildlexikon im Aquarellstil (Entscheid Herausgeber): je Lexikon-Eintrag ein gemaltes Einzelporträt bzw. eine Vignette, automatisch geprüft wie die Szenen (Blindbeschreibung, Regeln, Vergleich mit Beschreibung und Lexikon); geprüfte Porträts gehen beim Malen der Szenen als Vorlage mit.",
+      "steps": [
+        {
+          "id": "p1",
+          "role": "werkzeug",
+          "title_de": "Einträge fürs Bildlexikon",
+          "do_de": "Jeder Lexikon-Eintrag, den der Aquarellstil zeichnet, erhält ein Einzelbild: Personen als Ganzkörper- oder Kniestück-Porträt, Gruppen als kleine Gruppe, Gegenstände, Orte und Zeichen als Vignette, auf warmweissem Papier. Gemalt wird nach der Beschreibung des Stils, der Stilreferenz und, für die Personen von Joh 2, dem Figurenblatt.",
+          "result_de": "Malauftrag und Porträtregeln je Eintrag"
+        },
+        {
+          "id": "p2",
+          "role": "modell",
+          "title_de": "Porträt malen",
+          "do_de": "Das Bildmodell malt zwei Varianten im Hochformat."
+        },
+        {
+          "id": "p3",
+          "role": "pruefung",
+          "title_de": "Porträt blind beschreiben",
+          "do_de": "Eine weitere Instanz sieht nur das Bild und beschreibt Personen bzw. Gegenstände, ohne Beschreibung oder Namen zu kennen."
+        },
+        {
+          "id": "p4",
+          "role": "pruefung",
+          "title_de": "Porträt prüfen",
+          "do_de": "Dieselbe Instanz beantwortet die Regeln einzeln: allgemeine Regeln, Porträtregeln (eine Person bzw. kleine Gruppe bzw. Vignette, entspricht der Beschreibung, keine Attribute ausser denen von Beschreibung und Lexikon, passt zu den Erkennungsmerkmalen im Lexikon) und Figurenregeln (z. B. Maria sichtbar älter, Gesicht Jesu voll sichtbar). Verfehlte Pflichtregeln fragt die zweite Instanz noch zweimal, die Mehrheit gilt; ein Textvergleich bewertet, ob die Blindbeschreibung zur Beschreibung passt (mindestens 1 von 2).",
+          "checks_de": [
+            "alle Pflichtregeln erfüllt",
+            "Blindbeschreibung passt"
+          ]
+        },
+        {
+          "id": "p5",
+          "role": "werkzeug",
+          "title_de": "Porträt wählen und ablegen",
+          "do_de": "Gewählt wird die bestandene Variante mit den meisten Punkten; abgelegt klein (384 × 576) mit Prüfvermerk im Stil-Datensatz (Datum, Ergebnis, Regeln, Grenzen, Fingerabdrücke von Bild und Auftrag). Ändern sich Beschreibung oder Regeln, gilt das Porträt als veraltet.",
+          "result_de": "Einzelporträt im Bildlexikon",
+          "back": {
+            "to": "p2",
+            "when_de": "keine Variante bestanden: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden; danach bleibt der Eintrag offen"
+          }
+        },
+        {
+          "id": "w1",
+          "role": "bearbeitung",
+          "title_de": "Szenenplan",
+          "do_de": "Je Bildfeld: Malauftrag (Personen links/rechts nach Reihenfolge der Reden, Gefühle über Körper und Geste), wörtliche Rede aus dem Lesetext, Belege B/R/I und Feldregeln (was der Text verlangt oder verbietet).",
+          "result_de": "Szenenplan mit Prüfregeln"
+        },
+        {
+          "id": "w2",
+          "role": "werkzeug",
+          "title_de": "Zitate und Band",
+          "do_de": "Jede Blase steht wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen.",
+          "checks_de": [
+            "Zitat wörtlich",
+            "Band lesbar"
+          ],
+          "back": {
+            "to": "w1",
+            "when_de": "Abweichung"
+          }
+        },
+        {
+          "id": "w3",
+          "role": "modell",
+          "title_de": "Malen",
+          "do_de": "Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz, Figurenblatt und den geprüften Einzelporträts der vorkommenden Figuren (nur wenn die Figur im Szenenplan dieselbe Beschreibung hat wie im Porträt)."
+        },
+        {
+          "id": "w4",
+          "role": "pruefung",
+          "title_de": "Blind beschreiben",
+          "do_de": "Eine weitere Instanz sieht nur das Bild: Personen, Gegenstände, Handlung, vermutete Bibelstelle."
+        },
+        {
+          "id": "w5",
+          "role": "pruefung",
+          "title_de": "Regeln prüfen",
+          "do_de": "Dieselbe Instanz beantwortet jede Regel einzeln: allgemeine Regeln, Figurenregeln, Feldregeln; zählt verlangte Dinge. Verfehlte Pflichtregeln fragt eine zweite, genauere Instanz noch zweimal; die Mehrheit der drei Antworten gilt.",
+          "checks_de": [
+            "alle Pflichtregeln erfüllt"
+          ]
+        },
+        {
+          "id": "w6",
+          "role": "pruefung",
+          "title_de": "Köpfe orten",
+          "do_de": "Auf einem eingeblendeten Koordinatengitter werden alle Köpfe geortet und die erwarteten Figuren zugeordnet."
+        },
+        {
+          "id": "w7",
+          "role": "werkzeug",
+          "title_de": "Variante wählen",
+          "do_de": "Brauchbar ist eine Variante, die alle Pflichtregeln erfüllt, Platz für alle Blasen hat und die Reihenfolge der Sprecher einhält; gewählt wird die mit den meisten Punkten.",
+          "checks_de": [
+            "Pflichtregeln",
+            "Platz für Blasen",
+            "wer zuerst spricht, steht links"
+          ],
+          "back": {
+            "to": "w3",
+            "when_de": "keine brauchbare Variante: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden"
+          }
+        },
+        {
+          "id": "w8",
+          "role": "werkzeug",
+          "title_de": "Blasen setzen",
+          "do_de": "Blasen nur auf leerem Papier: eine Belegungskarte aus dem Bild selbst zeigt, wo gemalt ist (Figuren, Hände, gehaltene Dinge, Bauten); dazu die georteten Köpfe. Beste Anordnung aller Blasen über den Köpfen, mindestens 12 Punkte vom Bildrand, Schrift mindestens 19, keine Spitze läuft durch eine andere Blase. Umriss und Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen; Gedanken als Wolke."
+        },
+        {
+          "id": "w9",
+          "role": "pruefung",
+          "title_de": "Schlussprüfung",
+          "do_de": "Eine weitere Instanz prüft die fertige Kachel: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste, gehaltenem Gegenstand oder Haupthandlung, alle Worte lesbar, Moment getroffen (mindestens 1 von 2). Was nicht besteht, fragt die zweite Instanz noch zweimal; die Mehrheit gilt.",
+          "checks_de": [
+            "Sprecher richtig",
+            "nichts verdeckt",
+            "lesbar",
+            "Moment"
+          ],
+          "back": {
+            "to": "w8",
+            "when_de": "zweiter Blasenversuch nur im oberen Band"
+          }
+        },
+        {
+          "id": "w10",
+          "role": "werkzeug",
+          "title_de": "Prüfvermerk",
+          "do_de": "Ergebnis mit Fingerabdruck von Bild, Regeln, Szenenplan und Verfahren im Datensatz; Stufe «geprüft» nur, wenn alle Felder bestanden. Ändert sich etwas, gilt die Prüfung als veraltet.",
+          "result_de": "Prüfstufe im Datensatz"
+        }
+      ],
+      "gate_de": "Alle Pflichtregeln und die Schlussprüfung bestanden; Porträts: alle Pflichtregeln bestanden.",
+      "rules": [
+        "scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d",
+        "scripts/authoring/bilder_aquarell_daten/portraets.json@2026-10-28"
       ],
       "docs": [
         "docs/BILDSTIL.md"

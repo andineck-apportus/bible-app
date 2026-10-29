@@ -2,34 +2,38 @@
 # Start von Hand: Actions → «bilder-aquarell» → Run workflow. Geheimnis: OPENAI_API_KEY.
 # Schritte «auto-neu» und «auto-pruefen» (scripts/authoring/bilder_aquarell_lauf.py): malen, automatisch prüfen, wählen,
 # ablegen, Blasen setzen, Schlussprüfung; geänderte Daten auf Branch «bilder-auto/<Lauf>», Bericht auf «bildpilot-ausgabe».
-# Schritte «felder» und «figurenblatt»: nur malen (Auswahl von Hand). Berührt main und das Deployment nicht.
+# Schritt «auto-figuren» (bilder_aquarell_figuren.py): Einzelporträts für das Bildlexikon malen, prüfen, ablegen; «szenen» nennt
+# dann Lexikon-Einträge (z. B. FIG-JESUS,FIG-MARIA-MUTTER-JESU) oder «alle» (= alle ohne aktuelles, bestandenes Porträt).
+# Schritte «felder», «figurenblatt» und «figuren»: nur malen (Auswahl von Hand). Berührt main und das Deployment nicht.
+# Läufe auf einem anderen Branch als main (Run workflow → «Use workflow from») legen ihre Daten nur auf «bilder-auto/<Lauf>»
+# ab und werden nicht automatisch in main übernommen.
 name: bilder-aquarell
 
 on:
   workflow_dispatch:
     inputs:
       schritt:
-        description: "auto-neu (malen+prüfen+ablegen), auto-pruefen (abgelegte Bilder prüfen), felder, figurenblatt"
+        description: "auto-neu (malen+prüfen+ablegen), auto-pruefen (abgelegte Bilder prüfen), auto-figuren (Porträts Bildlexikon), felder, figurenblatt, figuren"
         type: choice
-        options: [auto-neu, auto-pruefen, auto-kalibrieren, auto-stilprobe, felder, figurenblatt]
+        options: [auto-neu, auto-pruefen, auto-figuren, auto-kalibrieren, auto-stilprobe, felder, figurenblatt, figuren]
         default: auto-neu
       szenen:
-        description: "Szenen (z. B. JHN-002-K1,JHN-002-T1) oder «alle»"
+        description: "Szenen (z. B. JHN-002-K1,JHN-002-T1) bzw. bei (auto-)figuren Lexikon-Einträge (z. B. FIG-JESUS,FIG-OBJ-BOOT) oder «alle»"
         default: "alle"
       varianten:
-        description: "Bilder je Szene"
+        description: "Bilder je Szene bzw. Eintrag"
         default: "2"
       hinweis:
         description: "Zusätzliche Anweisung für diesen Lauf (Englisch, optional)"
         default: ""
       runden:
-        description: "auto-neu: höchstens so viele Malrunden je Szene"
+        description: "auto-neu, auto-figuren: höchstens so viele Malrunden je Szene bzw. Eintrag"
         default: "3"
       pruefmodell:
         description: "Erste prüfende Instanz für diesen Lauf (Name oder Teil davon; leer = Vorgabe gpt-6.1-terra, Streitfälle entscheidet gpt-5.5)"
         default: ""
       erzwingen:
-        description: "auto-pruefen: auch unveränderte Bilder neu prüfen"
+        description: "auto-pruefen: auch unveränderte Bilder neu prüfen; auto-figuren mit «alle»: auch Einträge mit gültigem Porträt neu malen"
         type: boolean
         default: false
 
@@ -109,7 +113,7 @@ jobs:
       # Prozess PROC-FREIGABE 2.0 (Entscheid Andi Neck 2026-10-28): Lauf automatisch in main übernehmen, wenn Zusammenführen
       # und Validator bestehen; danach Bau, Tests und Veröffentlichung anstossen.
       - name: In main übernehmen
-        if: steps.daten.outputs.branch != ''
+        if: steps.daten.outputs.branch != '' && github.ref == 'refs/heads/main'
         env:
           BRANCH: ${{ steps.daten.outputs.branch }}
           GH_TOKEN: ${{ github.token }}
