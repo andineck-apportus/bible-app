@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.146 — 2026-10-28 — Bildlexikon im Aquarellstil
+
+Entscheid Andi Neck (2026-10-28): ein Bildlexikon mit gemalten Einzelbildern (PROC-BILD-AQUARELL 2.4, [docs/BILDSTIL.md](docs/BILDSTIL.md) Abschnitt 4).
+- **Einzelporträts:** neuer Schritt `auto-figuren` der Action «bilder-aquarell» (nur malen: `figuren`). Je Lexikon-Eintrag des Stils ein Bild – Personen als Ganzkörper- bzw. Kniestück-Porträt, Gruppen als kleine Gruppe, Gegenstände, Orte, Zeichen als Vignette – nach Beschreibung, Stilreferenz und (Personen aus Joh 2) Figurenblatt. Automatische Prüfung wie bei den Szenen: Blindbeschreibung, Regeln (allgemein, Porträt, Figur; z. B. Maria deutlich älter, auch im Vergleichsbild neben dem Porträt Jesu, Gesicht Jesu voll sichtbar, kein sichtbarer Widerspruch zur Beschreibung, keine Attribute ausser Beschreibung und Lexikon), Vergleich mit Beschreibung; bei Fehlschlag neu malen (höchstens drei Runden). Ablage `data/illustrations/aquarell/figuren/<ID>.webp` (384 × 576), Prüfvermerk in `renderings[ID].check` des Stils. Werkzeug `scripts/authoring/bilder_aquarell_figuren.py`, Regeln `bilder_aquarell_daten/portraets.json`; Trockenlauf ohne API mit `--trocken` (`--platzhalter` spielt die Ablage durch).
+- **Szenen:** Geprüfte Porträts der vorkommenden Figuren gehen beim Malen als Vorlage mit, sofern die Figur im Szenenplan gleich beschrieben ist.
+- **Läufe auf einem anderen Branch als main** bleiben auf `bilder-auto/<Lauf>` und werden nicht automatisch übernommen; `bilder_merge.py` übernimmt Porträts (Bild und Prüfvermerk) wie Szenen.
+- **Validator:** Darstellungen mit `image` brauchen eine vorhandene Datei und einen Prüfvermerk; «ki-geprueft» nur mit bestandenem, aktuellem Bild.
+- **App:** Menü › Bildlexikon › Aquarell zeigt Porträt (mit Alternativtext), Name, Erkennungsmerkmal und «Kommt vor in» (Abschnitte, antippbar); ohne Bild «noch nicht gemalt». Bilder im Paket `b/_figuren`. Test erweitert (`test_bible_bilder.cjs`).
+
 ## v0.145 — 2026-10-28 — Vertiefen: ein Knopf, Verstehen und Weiterdenken
 
 Entscheid Andi Neck (2026-10-28) nach den Skizzen «Vertiefen»: am Anfang das Wichtige, dann die Möglichkeit abzutauchen, ohne den Leser zu verlieren.

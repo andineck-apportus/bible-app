@@ -260,6 +260,35 @@ for rid, r in ill_recs.items():
         ill_core["styles"][r["key"]] = {"id": rid, "label": r["labels"], "description": r.get("description_de"),
                                         "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8") if r.get("library") else ""}
 ill_l10n = _l10n.load(ill_recs)
+# Bildlexikon im Aquarellstil (docs/BILDSTIL.md, Abschnitt 4): Einzelporträts als Bilder im Paket b/_figuren (wie die
+# Szenenbilder als data:-Adresse, damit die .gz.txt-Fassung sie trägt); im Kern nur «img», Prüfvermerk und «kommt vor in»
+# (Abschnitte der gemalten Bilder, in denen der Eintrag vorkommt).
+import os  # noqa: E402
+_occ = {}
+for r in ill_recs.values():
+    if r["type"] == "illustration" and r.get("level") == "section" and r.get("scenes") and r.get("reference"):
+        for d in r.get("depicts") or []:
+            _occ.setdefault(r["style"], {}).setdefault(d, set()).add(r["reference"])
+_bo0 = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
+_rk = lambda x: (_bo0.get(x.split(".")[0], 999), *(int(y) for y in x.split("-")[0].split(".")[1:]))  # noqa: E731
+for rid, r in ill_recs.items():
+    if r["type"] != "illustration_style":
+        continue
+    out_r = {}
+    for fid, rd in (r.get("renderings") or {}).items():
+        x = {k: v for k, v in rd.items() if k not in ("description_en", "image", "check")}
+        c = rd.get("check") or {}
+        if rd.get("image") and (ROOT / rd["image"]).is_file() and (not c.get("trocken") or os.environ.get("BIBLE_TROCKEN_BILDER")):  # Platzhalter nur zum Testen
+            f = ROOT / rd["image"]
+            bundle("b/_figuren").setdefault("figimg", {}).setdefault(r["key"], {})[fid] = (
+                f"data:image/webp;base64,{base64.b64encode(f.read_bytes()).decode()}")
+            x["img"] = 1
+            x["chk"] = (f"Geprüft am {c.get('datum')} (alle Pflichtregeln erfüllt)."
+                        if c.get("stufe") in ("ki-geprueft", "fachlich-geprueft") else f"In Prüfung (Stand {c.get('datum')}).")
+        if _occ.get(rid, {}).get(fid):
+            x["occ"] = sorted(_occ[rid][fid], key=_rk)
+        out_r[fid] = x
+    ill_core["styles"][r["key"]]["renderings"] = out_r
 
 
 def _check_text(c):

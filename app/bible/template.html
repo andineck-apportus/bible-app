@@ -539,6 +539,13 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .legend-panels b{font-weight:600}
 #bible-stream .ref-small{font:500 12px/1 var(--ui);color:var(--muted)}
 #bible-stream .legend-fig .sub{display:block;font-size:12px;color:var(--muted)}
+#bible-stream .legend-figs.paint{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+#bible-stream .legend-fig.fig-paint{align-items:flex-start}
+#bible-stream .fig-pic{flex:0 0 76px;width:76px;aspect-ratio:2/3;display:grid;place-items:center;border-radius:6px;background:#FBF8F1;overflow:hidden}
+#bible-stream .fig-pic img{width:100%;height:100%;object-fit:contain;display:block}
+#bible-stream .fig-none{width:100%;height:100%;display:grid;place-items:center;padding:6px;box-sizing:border-box;border:1px dashed var(--rule);border-radius:6px;font:12px/1.3 var(--ui);color:var(--muted);text-align:center;background:var(--soft)}
+#bible-stream .fig-occ{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:6px;font-size:12px;color:var(--muted)}
+#bible-stream .fig-chk{margin-top:4px;font-size:11px}
 #bible-stream .legend-ev{margin:8px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px;line-height:1.45}
 #bible-stream .legend-ev>li{display:flex;gap:10px;align-items:baseline}
 #bible-stream .legend-ev ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px}
@@ -616,6 +623,7 @@ function mergeBundle(d){
     for(const [r,arr] of Object.entries(d.compare||{}))(STUDY.compare[r]=STUDY.compare[r]||[]).push(...arr);
     SRC.alts[d.lang]=Object.assign(SRC.alts[d.lang]||{},d.alts||{});I18N[d.lang]=Object.assign(I18N[d.lang]||{},d.i18n||{});}
   if(d.book)for(const [k,v] of Object.entries(d.ill||{}))ILL.items[k]=Object.assign(ILL.items[k]||{},v);
+  if(d.figimg)for(const [k,v] of Object.entries(d.figimg))(ILL.figimg=ILL.figimg||{})[k]=Object.assign(ILL.figimg[k]||{},v);  // Bildlexikon: Einzelporträts (Paket b/_figuren)
   if(d.book){for(const k of ['words','variants','findings','interpretations','principles','applications','relations','questions','reflections','receptions'])(STUDY[k]=STUDY[k]||[]).push(...(d[k]||[]));
     Object.assign(STUDY.lexicon,d.lex||{});Object.assign(STUDY.ketiv,d.ketiv||{});Object.assign(STUDY.ketiv_only,d.kq_only||{});Object.assign(STUDY.ed_extra,d.ed_extra||{});
     BG.push(...(d.bg||[]));CORE.push(...(d.core||[]));Object.assign(XREF.verses,d.xref||{});Object.assign(SRC.readings,d.readings||{});Object.assign(SRC.variants,d.src_variants||{});}
@@ -1620,9 +1628,18 @@ function figIndexSheet(styleKey){const t=T(),L=lang==='de',keys=Object.keys(ILL.
   const k=styleKey||(ILL.styles[S.ill]?S.ill:keys[0]),st=ILL.styles[k];if(!st)return;
   const ORDER=['divine','people','thing','place','action','concept'],lex=ILL.lexicon||{},grp=l=>l.group||l.kind;
   const figs=Object.keys(st.renderings||{}).filter(id=>lex[id]).map(id=>({id,lx:lex[id],r:st.renderings[id]}));
+  // Gemalter Stil (Aquarell, docs/BILDSTIL.md Abschnitt 4): Einzelporträt statt Zeichen, «kommt vor in», ohne Bild ein ruhiger Platzhalter
+  const painted=figs.length&&figs.every(f=>!f.r.symbol),tx=L?{none:'noch nicht gemalt',occ:'Kommt vor in',pic:'Bild'}:{none:'not painted yet',occ:'Appears in',pic:'Picture'};
+  if(painted&&figs.some(f=>f.r.img)&&(MANIFEST.books||[]).includes('_figuren')&&!loadedBundles.has('b/_figuren')){const w=loadBundle('b/_figuren');if(w)w.then(()=>{if(sheet==='figindex')figIndexSheet(k);});}
+  const uri=f=>((ILL.figimg||{})[k]||{})[f.id];
+  const legendOf=f=>f.lx.legend?(f.lx.legend[S.text]||f.lx.legend.de):f.lx.traits.join(' · ');
+  const card=f=>{const nm=L?f.lx.name.de:f.lx.name.en;
+    if(!painted)return `<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(nm)}</b><span class="sub">${esc(legendOf(f))}</span></span></div>`;
+    const u=f.r.img&&uri(f),occ=(f.r.occ||[]).filter(refExists);
+    return `<div class="legend-fig fig-paint" data-fig="${f.id}"><span class="fig-pic">${u?`<img src="${u}" alt="${esc(tx.pic+': '+nm+' – '+legendOf(f))}" loading="lazy">`:`<span class="fig-none">${tx.none}</span>`}</span><span><b>${esc(nm)}</b><span class="sub">${esc(legendOf(f))}</span>${occ.length?`<span class="fig-occ">${tx.occ} ${occ.map(r=>`<button type="button" class="ref chip" data-ref-go="${r}">${esc(refShort(r))}</button>`).join(' ')}</span>`:''}${f.r.chk&&u?`<span class="sub fig-chk">${esc(f.r.chk)}</span>`:''}</span></div>`;};
   const sw=keys.length>1?`<span class="ill-styles" role="group" aria-label="${t.illStyle}">${keys.map(x=>`<button type="button" data-figindex-style="${x}" aria-pressed="${x===k}">${esc(L?ILL.styles[x].label.de:ILL.styles[x].label.en)}</button>`).join('')}</span>`:'';
   const groups=ORDER.map(kind=>{const fs=figs.filter(f=>grp(f.lx)===kind).sort((a,b)=>(L?a.lx.name.de:a.lx.name.en).localeCompare(L?b.lx.name.de:b.lx.name.en,lang));
-    return fs.length?`<h4 class="set-group">${esc(t.kinds[kind]||kind)} (${fs.length})</h4><div class="legend-figs">${fs.map(f=>`<div class="legend-fig"><svg viewBox="${f.r.viewbox}" aria-hidden="true"><use href="#${f.r.symbol}"/></svg><span><b>${esc(L?f.lx.name.de:f.lx.name.en)}</b><span class="sub">${esc(f.lx.legend?(f.lx.legend[S.text]||f.lx.legend.de):f.lx.traits.join(' · '))}</span></span></div>`).join('')}</div>`:'';}).join('');
+    return fs.length?`<h4 class="set-group">${esc(t.kinds[kind]||kind)} (${fs.length})</h4><div class="legend-figs${painted?' paint':''}">${fs.map(card).join('')}</div>`:'';}).join('');
   openSheet('figindex',head(t.figIndex)+`<button type="button" class="link soft back-menu" data-action="menu">${icon('arrow-up')}<span>${t.backMenu}</span></button><div>${sw}</div><p class="note">${figs.length} / ${Object.keys(lex).length} ${t.figIndexCount}. ${esc(st.description||'')}</p>${groups}`);}
 /* So arbeiten wir: Vorgehen, Prüfung, Stand und Zeichen im Text (docs/LESEN-UND-VERTIEFEN.md) */
 function methodSheet(){const L=lang==='de',t=T(),gh='https://github.com/andineck-apportus/bible-app';

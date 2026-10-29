@@ -7,6 +7,9 @@ Läuft in der GitHub-Action «bilder-aquarell» (OPENAI_API_KEY). Zwei Schritte:
            Je Szene Varianten malen und automatisch prüfen (bilder_pruefung.py). Gewählt wird die Variante, die alle
            Pflichtregeln erfüllt, mit den meisten Punkten. Erfüllt keine, wird mit einem Hinweis aus den verfehlten Regeln
            neu gemalt (höchstens --runden). Danach wie «pruefen».
+  figuren  --szenen alle|FIG-JESUS,… --varianten 2 --runden 3 [--erzwingen] [--trocken]
+           Einzelporträts für das Bildlexikon (bilder_aquarell_figuren.py): je Lexikon-Eintrag des Stils malen, blind
+           beschreiben, mit Beschreibung und Lexikon-Merkmalen vergleichen, bei Fehlschlag neu malen, Bestes ablegen.
   pruefen  --szenen alle [--erzwingen]
            Die abgelegten Bilder prüfen (nur, wenn Bild, Regeln oder Szenenplan sich geändert haben, oder mit --erzwingen),
            Blasen nach den Kopfpositionen setzen, Bilder schreiben, jede Kachel rendern und schlussprüfen, Prüfstufe in den
@@ -149,11 +152,12 @@ def neu(a, schluessel, out):
     for sid in a.szenen.split(","):
         sid = sid.strip()
         name, sz = szenen[sid]
-        vorlagen = G.vorlagen_fuer(plaene[name])
+        # Vorlagen (PROC-BILD-AQUARELL 2.4): Stilreferenz, Figurenblatt und die geprüften Einzelporträts der Figuren der Szene
+        vorlagen, portr = G.vorlagen_szene(plaene[name], sz, fig[sid])
         hinweis, beste = a.hinweis, None
-        e = bericht.setdefault(sid, {"varianten": []})
+        e = bericht.setdefault(sid, {"varianten": [], "portraets": [p_[0] for p_ in portr]})
         for runde in range(1, a.runden + 1):
-            prompt = G.auftrag_feld(sz, fig[sid], len(vorlagen) > 1) + (f"\n\nADDITIONAL INSTRUCTION FOR THIS RUN: {hinweis}" if hinweis else "")
+            prompt = G.auftrag_feld(sz, fig[sid], len(vorlagen) > 1 + len(portr), portr) + (f"\n\nADDITIONAL INSTRUCTION FOR THIS RUN: {hinweis}" if hinweis else "")
             try:
                 m, bilder = G.male(prompt, vorlagen, schluessel, a.varianten)
             except Exception as ex:
@@ -323,14 +327,20 @@ def bericht_html(out, bericht, titel):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("schritt", choices=["neu", "pruefen", "kalibrieren", "stilprobe"])
+    ap.add_argument("schritt", choices=["neu", "pruefen", "kalibrieren", "stilprobe", "figuren"])
     ap.add_argument("--szenen", default="alle")
     ap.add_argument("--varianten", type=int, default=2)
     ap.add_argument("--runden", type=int, default=3)
     ap.add_argument("--hinweis", default="")
     ap.add_argument("--erzwingen", action="store_true")
     ap.add_argument("--auch-unklar", action="store_true", help="auch Varianten mit unklarer Pflichtregel übernehmen")
+    ap.add_argument("--trocken", action="store_true", help="figuren: ohne API nur Aufträge und Regeln ausgeben")
+    ap.add_argument("--platzhalter", action="store_true", help="figuren mit --trocken: Ablage mit Platzhalterbildern testen (nicht committen)")
     a = ap.parse_args()
+    if a.schritt == "figuren" and a.trocken:
+        import bilder_aquarell_figuren as BF
+        BF.trocken(a)
+        return
     schluessel = os.environ.get("OPENAI_API_KEY")
     if not schluessel:
         BP.melde("OPENAI_API_KEY fehlt.")
@@ -344,7 +354,11 @@ def main():
     if a.schritt == "stilprobe":
         bericht_html(out, stilprobe(a, schluessel, out), f"Stilprobe {lauf}")
         return
-    bericht = neu(a, schluessel, out) if a.schritt == "neu" else pruefen(a, schluessel, out)
+    if a.schritt == "figuren":
+        import bilder_aquarell_figuren as BF
+        bericht = BF.lauf(a, schluessel, out)
+    else:
+        bericht = neu(a, schluessel, out) if a.schritt == "neu" else pruefen(a, schluessel, out)
     subprocess.run([sys.executable, str(ROOT / "scripts/authoring/bilder_aquarell.py")], check=True)
     bericht_html(out, bericht, f"Bildlauf {lauf}")
     print(f"Bericht: {out / 'bericht.html'}")

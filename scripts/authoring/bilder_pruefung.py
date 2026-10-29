@@ -40,7 +40,7 @@ VORZUG_ZWEIT = ["gpt-5.5", "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-4.1", "gpt-4o"]  
 _modell = {}
 NUTZUNG = {"anfragen": 0, "eingabe": 0, "ausgabe": 0}   # Tokens aller Anfragen dieses Laufs (für den Kostenvergleich)
 VERFAHREN = "2026-10-28d"   # Stand des Prüfverfahrens; ändert er sich, gelten alle Prüfungen als veraltet
-PROZESS = "PROC-BILD-AQUARELL@2.3"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
+PROZESS = "PROC-BILD-AQUARELL@2.4"   # Prozessfassung (scripts/authoring/prozesse.py) zu diesem Verfahren; bei neuer Fassung beides ändern
 
 
 def lade(p):

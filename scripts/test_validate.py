@@ -174,4 +174,24 @@ case("Herkunft nicht im Quellenkatalog", uncatalogued, "fehlt im Quellenkatalog"
 case("Verwendete Quelle ohne Dateien", used_without_files, "passt auf keine Datei")
 case("NC-Quelle im freien Kern", nc_in_core, "nicht kommerzielle Quelle im freien Kern")
 
-print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog, Weiterdenken)")
+
+
+def portraet_ohne_datei(root):
+    p = root / "data/illustrations/styles/ILLSTYLE-AQUARELL.json"
+    d = json.loads(p.read_text())
+    d["renderings"]["FIG-JESUS"].update(image="data/illustrations/aquarell/figuren/FIG-JESUS-FEHLT.webp",
+                                        check={"stufe": "entwurf", "ergebnis": "bestanden", "datum": "2026-10-28"})
+    write(p, d)
+
+
+def portraet_ohne_check(root):
+    p = root / "data/illustrations/styles/ILLSTYLE-AQUARELL.json"
+    d = json.loads(p.read_text())
+    d["renderings"]["FIG-JESUS"]["image"] = "data/illustrations/aquarell/figurenblatt.webp"
+    d["renderings"]["FIG-JESUS"].pop("check", None)
+    write(p, d)
+
+
+case("Porträt im Bildlexikon ohne Datei", portraet_ohne_datei, "für FIG-JESUS fehlt")
+case("Porträt im Bildlexikon ohne Prüfvermerk", portraet_ohne_check, "ohne Prüfvermerk")
+print("PASS: validator negative tests (NC-Trennung, Annotation, Bewertung, Bibelstelle, Hintergrund, Übersetzungsentscheidung, Lokalisierung inkl. veraltet, Stellen-Marken, Überschneidung, Quellenkatalog, Weiterdenken, Porträts im Bildlexikon)")
