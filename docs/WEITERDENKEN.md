@@ -165,5 +165,5 @@ von einer weiteren Instanz gegen den Text geprüft, Prüfvermerk `check`; keine 
 | Johannes | 127 | 250 | 17 |
 | Rut, Jona, Obadja, Philipper, Titus, 1.–3. Johannesbrief und obere Ebenen | 102 | 213 | 51 |
 
-Die jüdischen Stimmen zu Lukas und Johannes (RCPT-LUK-0017/0018, RCPT-JHN-0016/0017) sind nach der Prüfrunde ergänzt und noch
-nicht von einer weiteren Instanz geprüft. Anwendungen: Mt 6,5–6 mit der Zielgruppe «Jugendliche» (`APP-MAT-1007`).
+Die jüdischen Stimmen zu Lukas und Johannes (RCPT-LUK-0017/0018, RCPT-JHN-0016/0017) sind nach der Prüfrunde ergänzt und am
+2026-10-29 von einer getrennten Instanz nachgeschlagen und geprüft (drei berichtigt, eine bestätigt). Anwendungen: Mt 6,5–6 mit der Zielgruppe «Jugendliche» (`APP-MAT-1007`).

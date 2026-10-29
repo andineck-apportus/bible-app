@@ -1611,20 +1611,21 @@ RECEPTIONS = [
              "text_de": "De Caravaggio malt «S Abigmahl z Emmaus» als de Augeblick, wo de Jesus s Brot segnet und di beide ihn erchänned ([[LUK.24.30-LUK.24.31]]), mit heftige Gebärde vo de beide Jünger."}},
 ]
 
-# Jüdische Stimmen, ergänzt nach der Prüfrunde (2026-10-29; noch nicht von einer weiteren Instanz geprüft)
-_COMMON = {"process": "PROC-WEITERDENKEN@1.1", "date": "2026-10-29", "check": None, "authorship_de": "KI-Entwurf (Claude) vom 2026-10-29 (Ergänzung jüdischer Stimmen nach der Prüfrunde, Auftrag Andi Neck); Quelle im Web nachgeschlagen; noch nicht von einer weiteren Instanz geprüft; keine fachliche Prüfung."}
+# Jüdische Stimmen, ergänzt nach der Prüfrunde (2026-10-29); von einer getrennten Instanz am 2026-10-29 geprüft (check je Eintrag)
+_COMMON = {"process": "PROC-WEITERDENKEN@1.1", "date": "2026-10-29", "check": None, "authorship_de": "KI-Entwurf (Claude) vom 2026-10-29 (Ergänzung jüdischer Stimmen nach der Prüfrunde, Auftrag Andi Neck); Quelle im Web nachgeschlagen; keine fachliche Prüfung."}
 RECEPTIONS += [{**_COMMON, **_x} for _x in [
  {
   "id": "RCPT-LUK-0017",
-  "subject": "TU-LUK-015-001-032",
+  "check": {"date": "2026-10-29", "by": "weitere Instanz (KI)", "result": "corrected", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung; Quellen nur in frei zugänglichen Verlagsangaben, Katalogen, Besprechungen und Artikeln nachgeschlagen, das Buch selbst nicht eingesehen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.1"},
+  "subject": "TU-LUK-015-011-032",
   "tradition": "jewish",
   "period_de": "2014",
-  "text_de": "Die jüdische Neutestamentlerin Amy-Jill Levine liest die Gleichnisse Jesu als Geschichten eines jüdischen Lehrers für jüdische Hörer. Zum verlorenen Sohn meint sie, die ersten Hörer hätten ihn nicht als Geschichte von Busse und Vergebung gehört; zugleich kritisiert sie Auslegungen, die die Gleichnisse zur guten Nachricht für Christen und zur schlechten für Juden machen. Andere halten dagegen, die Erzählung laufe gerade auf Umkehr hinaus.",
+  "text_de": "Die jüdische Neutestamentlerin Amy-Jill Levine liest die Gleichnisse Jesu als Geschichten eines jüdischen Lehrers für jüdische Hörer. Zum verlorenen Sohn meint sie, die ersten Hörer hätten ihn nicht als Geschichte von Umkehr oder Vergebung gehört; sie rückt den älteren Sohn in die Mitte: Der Vater merke, dass gerade dieser ihm verloren gegangen sei, und wer verloren ist, könne im eigenen Haus sein. Zugleich kritisiert sie Auslegungen, die die Gleichnisse zur guten Nachricht für Christen und zur schlechten für Juden machen. Andere, etwa Luke Timothy Johnson in seiner Besprechung, halten dagegen, die Erzählung laufe gerade auf Umkehr hinaus.",
   "sources_de": [
    "Amy-Jill Levine, Short Stories by Jesus. The Enigmatic Parables of a Controversial Rabbi, New York: HarperOne 2014, S. 28"
   ],
   "confidence": "probable",
-  "uncertain_de": "Die Seitenangabe und die Zusammenfassung stützen sich auf eine Besprechung; das Buch selbst wurde nicht eingesehen.",
+  "uncertain_de": "Die Seitenangabe und die Zusammenfassung stützen sich auf Besprechungen; das Buch selbst wurde nicht eingesehen.",
   "source_check": {
    "date": "2026-10-29",
    "result": "partly",
@@ -1634,16 +1635,22 @@ RECEPTIONS += [{**_COMMON, **_x} for _x in [
      "source": "Amy-Jill Levine, Short Stories by Jesus (2014)",
      "found_at": "https://ejournals.bc.edu/index.php/scjr/article/download/9968/8663/17420 (Besprechung in Studies in Christian-Jewish Relations)",
      "finding_de": "Die Besprechung nennt New York: HarperOne 2014 und zitiert Levine, der verlorene Sohn wäre «nicht als Geschichte von Umkehr oder Vergebung gehört worden» (S. 28); sie würdigt ihre Kritik an Lesarten, die die Gleichnisse zur guten Nachricht für Christen und zur schlechten für Juden machen, und widerspricht der Deutung ohne Umkehr."
+    },
+    {
+     "source": "Amy-Jill Levine, Short Stories by Jesus (2014), Besprechung und Bericht",
+     "found_at": "https://ejournals.bc.edu/index.php/scjr/article/download/9968/8663/17420 (Luke Timothy Johnson, Studies in Christian-Jewish Relations 12, 2017); https://georgiabulletin.org/news/2015/08/jewish-author-presents-parables-as-jesus-tales-to-fellow-jews/ (Bericht über Levines Vortrag zum Buch, 2015)",
+     "finding_de": "Nachprüfung 2026-10-29 (weitere Instanz): Verlag, Ort und Jahr (HarperOne, New York 2014) bestätigt; bei Johnson steht S. 28 beim Satz über Werkgerechtigkeit und Gnade, der Satz «nicht als Geschichte von Umkehr oder Vergebung» folgt im selben Zusammenhang (Seite daher wahrscheinlich, nicht sicher). Berichtigt: «Busse» durch «Umkehr» ersetzt (Levine: repentance), Levines eigene Deutung ergänzt (der ältere Sohn als der eigentlich Verlorene; nach dem Bericht von 2015), den Widerspruch Johnson zugeordnet und den Bezug von Lk 15 als Ganzem auf das Gleichnis [[LUK.15.11-LUK.15.32]] (TU-LUK-015-011-032) gesetzt, zu dem die Aussage gehört."
     }
    ]
   },
   "gsw": {
    "period_de": "2014",
-   "text_de": "Di jüdisch Neutestamentlerin Amy-Jill Levine list d Gliichnis vom Jesus als Gschichte vo me jüdische Lehrer für jüdischi Zuehörer. Zum verlorne Sohn meint si, di erschte Zuehörer hettid en nöd als Gschicht vo Buess und Vergäbig ghört; zgliich kritisiert si Uslegige, wo d Gliichnis zur guete Nachricht für Chrischte und zur schlächte für Jude mached. Anderi händ dergäge, d Erzälig lauf grad uf Umkehr use."
+   "text_de": "Di jüdisch Neutestamentlerin Amy-Jill Levine list d Gliichnis vom Jesus als Gschichte vo me jüdische Lehrer für jüdischi Zuehörer. Zum verlorne Sohn meint si, di erschte Zuehörer hettid en nöd als Gschicht vo Umkehr oder Vergäbig ghört; si stellt de elter Sohn i d Mitti: De Vatter merki, dass grad dä ihm verlore gange seig, und wer verlore isch, chönn im eigete Huus sii. Zgliich kritisiert si Uslegige, wo d Gliichnis zur guete Nachricht für Chrischte und zur schlächte für Jude mached. Anderi, zum Biispil de Luke Timothy Johnson i sinere Bsprächig, haltet dergäge, d Erzälig lauf grad uf Umkehr use."
   }
  },
  {
   "id": "RCPT-LUK-0018",
+  "check": {"date": "2026-10-29", "by": "weitere Instanz (KI)", "result": "confirmed", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung; Quellen nur in frei zugänglichen Verlagsangaben, Katalogen, Besprechungen und Artikeln nachgeschlagen, das Buch selbst nicht eingesehen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.1"},
   "subject": "TU-LUK-010-025-037",
   "tradition": "jewish",
   "period_de": "2012",
@@ -1661,6 +1668,11 @@ RECEPTIONS += [{**_COMMON, **_x} for _x in [
      "source": "Amy-Jill Levine, The Many Faces of the Good Samaritan – Most Wrong (2012)",
      "found_at": "https://christianethicstoday.com/wp/?p=4733 (Wiederabdruck mit Erlaubnis, Christian Ethics Today 85, 2012; Erstdruck Biblical Archaeology Review, Jan./Feb. 2012)",
      "finding_de": "Im Artikel nachgelesen: Reinheitsgründe erklären das Vorbeigehen nicht (Leviten nicht gebunden, Priester von Jerusalem weg, Lebensrettung geht allen Geboten vor); Samaritaner als Feinde, nicht als Ausgestossene; «enemies can prove to be neighbors»."
+    },
+    {
+     "source": "Biblical Archaeology Review 38:1 (Januar/Februar 2012), Inhaltsverzeichnis",
+     "found_at": "https://old.biblicalarchaeology.org/node/123750; Wiederabdruck https://christianethicstoday.com/wp/?p=4733",
+     "finding_de": "Nachprüfung 2026-10-29 (weitere Instanz): Kolumne «Biblical Views: The Many Faces of the Good Samaritan—Most Wrong» von Amy-Jill Levine in BAR 38:1, Januar/Februar 2012, bestätigt. Im Wiederabdruck nachgelesen: «this law does not apply to Levites», der Priester geht von Jerusalem hinab, «saving a life trumps all other laws», «Samaritans were not outcasts at the time of Jesus; they were enemies», «enemies can prove to be neighbors». Wiedergabe trifft zu; bestätigt."
     }
    ]
   },

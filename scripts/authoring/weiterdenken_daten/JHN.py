@@ -1464,15 +1464,16 @@ RECEPTIONS = [
     },
 ]
 
-# Jüdische Stimmen, ergänzt nach der Prüfrunde (2026-10-29; noch nicht von einer weiteren Instanz geprüft)
-_COMMON = {"process": "PROC-WEITERDENKEN@1.1", "date": "2026-10-29", "check": None, "authorship_de": "KI-Entwurf (Claude) vom 2026-10-29 (Ergänzung jüdischer Stimmen nach der Prüfrunde, Auftrag Andi Neck); Quelle im Web nachgeschlagen; noch nicht von einer weiteren Instanz geprüft; keine fachliche Prüfung."}
+# Jüdische Stimmen, ergänzt nach der Prüfrunde (2026-10-29); von einer getrennten Instanz am 2026-10-29 geprüft (check je Eintrag)
+_COMMON = {"process": "PROC-WEITERDENKEN@1.1", "date": "2026-10-29", "check": None, "authorship_de": "KI-Entwurf (Claude) vom 2026-10-29 (Ergänzung jüdischer Stimmen nach der Prüfrunde, Auftrag Andi Neck); Quelle im Web nachgeschlagen; keine fachliche Prüfung."}
 RECEPTIONS += [{**_COMMON, **_x} for _x in [
  {
   "id": "RCPT-JHN-0016",
+  "check": {"date": "2026-10-29", "by": "weitere Instanz (KI)", "result": "corrected", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung; Quellen nur in frei zugänglichen Verlagsangaben, Katalogen, Besprechungen und Artikeln nachgeschlagen, das Buch selbst nicht eingesehen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.1"},
   "subject": "SUM-BOOK-JHN",
   "tradition": "jewish",
   "period_de": "2001",
-  "text_de": "Die jüdische Neutestamentlerin Adele Reinhartz beschreibt in «Befriending the Beloved Disciple» ihr Lesen des Johannesevangeliums als Beziehung zum «Jünger, den Jesus liebte», der im Buch für den Erzähler steht: Sie nimmt ihn nacheinander als Mentor (zustimmendes Lesen), als Gegner (widerständiges Lesen), als Kollegen (wohlwollendes Lesen) und als Anderen (engagiertes Lesen, das die Fremdheit des Textes stehen lässt).",
+  "text_de": "Die jüdische Neutestamentlerin Adele Reinhartz beschreibt in «Befriending the Beloved Disciple» ihr Lesen des Johannesevangeliums als Beziehung zum «Jünger, den Jesus liebte», den sie als den im Text greifbaren Verfasser (impliziten Autor) versteht: Sie nimmt ihn nacheinander als Mentor (zustimmendes Lesen), als Gegner (widerständiges Lesen), als Kollegen (wohlwollendes Lesen, das das Verbindende sucht) und als Anderen (engagiertes Lesen, das das Trennende ernst nimmt und ihn in seiner Andersheit gelten lässt).",
   "sources_de": [
    "Adele Reinhartz, Befriending the Beloved Disciple. A Jewish Reading of the Gospel of John, New York: Continuum 2001"
   ],
@@ -1487,20 +1488,26 @@ RECEPTIONS += [{**_COMMON, **_x} for _x in [
      "source": "Adele Reinhartz, Befriending the Beloved Disciple (2001)",
      "found_at": "https://4enoch.org/wiki5/index.php/Befriending_the_Beloved_Disciple_(2001_Reinhartz),_book (Titelangaben und Inhaltsverzeichnis); Bibliothekskatalog https://bibliotekils.johannelund.nu/bib/120531",
      "finding_de": "Titel, Untertitel «A Jewish Reading of the Gospel of John», New York: Continuum 2001 bestätigt; Inhaltsverzeichnis mit den Kapiteln Mentor (compliant reading), Opponent (resistant reading), Colleague (sympathetic reading) und Other (engaged reading)."
+    },
+    {
+     "source": "Adele Reinhartz, Befriending the Beloved Disciple (2001), Auszüge",
+     "found_at": "https://bibelwelt.de/wp-content/uploads/2021/04/Befriending.pdf (Helmut Schütz, Auseinandersetzung mit dem Buch, mit Zitaten); Verlagsangabe auch https://bibleodyssey.com/author/adele-reinhartz",
+     "finding_de": "Nachprüfung 2026-10-29 (weitere Instanz): Continuum 2001 bestätigt. In den Zitaten heisst der geliebte Jünger «the implied author of the Gospel of John», nicht Erzähler; das sympathetic reading sucht das Verbindende, das engaged reading nimmt das Trennende ernst und anerkennt die Andersheit des Anderen. Berichtigt: «Erzähler» durch «im Text greifbarer Verfasser (impliziter Autor)» ersetzt, die beiden letzten Lesarten genauer gefasst und das Mundart-Zitat an die Arbeitsübersetzung angeglichen (alt: «Jünger, wo de Jesus gern gha hät»)."
     }
    ]
   },
   "gsw": {
    "period_de": "2001",
-   "text_de": "Di jüdisch Neutestamentlerin Adele Reinhartz beschriibt i «Befriending the Beloved Disciple» ires Läse vom Johannesevangelium als Beziehig zum «Jünger, wo de Jesus gern gha hät», wo im Buech für de Erzäler staat: Si nimmt en nachenand als Mentor (zuestimmends Läse), als Gägner (widerständigs Läse), als Kolleg (wohlwollends Läse) und als Andere (engagierts Läse, wo d Frömdheit vom Text la staa)."
+   "text_de": "Di jüdisch Neutestamentlerin Adele Reinhartz beschriibt i «Befriending the Beloved Disciple» ires Läse vom Johannesevangelium als Beziehig zum «Jünger, wo de Jesus gliebt hät», wo si als de im Text greifbar Verfasser (impliziten Autor) verstaat: Si nimmt en nachenand als Mentor (zuestimmends Läse), als Gägner (widerständigs Läse), als Kolleg (wohlwollends Läse, wo s Verbindende suecht) und als de Ander (engagierts Läse, wo s Trännende ernscht nimmt und en i sinere Andersheit la gälte)."
   }
  },
  {
   "id": "RCPT-JHN-0017",
+  "check": {"date": "2026-10-29", "by": "weitere Instanz (KI)", "result": "corrected", "limits_de": "Nicht gegen den Urtext geprüft, sondern gegen die hochdeutsche und die Mundart-Arbeitsübersetzung; Quellen nur in frei zugänglichen Verlagsangaben, Katalogen, Besprechungen und Artikeln nachgeschlagen, das Buch selbst nicht eingesehen; keine fachliche und keine muttersprachliche Prüfung durch eine Person.", "process": "PROC-WEITERDENKEN@1.1"},
   "subject": "TU-JHN-009-013-023",
   "tradition": "jewish",
   "period_de": "2018",
-  "text_de": "Adele Reinhartz bezweifelt in «Cast Out of the Covenant» die verbreitete These, die Angst vor dem Ausschluss aus der Synagoge ([[JHN.9.22]]) spiegle eine tatsächliche Vertreibung der Gemeinde des Johannes (J. Louis Martyn). Sie liest die Rede von «den Juden» als Mittel, eine neue Gemeinschaft zu bilden, vielleicht vor allem aus Nichtjuden, und ruft christliche Leserinnen und Leser auf, den Antijudaismus des Evangeliums abzulehnen und zu bewahren, was sie darin wertvoll finden.",
+  "text_de": "Adele Reinhartz bezweifelt in «Cast Out of the Covenant» die verbreitete These, die Angst vor dem Ausschluss aus der Synagoge ([[JHN.9.22]]) spiegle eine tatsächliche Vertreibung der Gemeinde des Johannes (J. Louis Martyn). Sie liest die Rede von «den Juden» als Mittel, eine neue Gemeinschaft zu bilden, vielleicht vor allem aus Nichtjuden, und hofft, dass christliche Leserinnen und Leser den Antijudaismus des Evangeliums ablehnen und zugleich festhalten, was an ihm überzeugt.",
   "sources_de": [
    "Adele Reinhartz, Cast Out of the Covenant. Jews and Anti-Judaism in the Gospel of John, Lanham: Lexington Books / Fortress Academic 2018"
   ],
@@ -1514,12 +1521,17 @@ RECEPTIONS += [{**_COMMON, **_x} for _x in [
      "source": "Adele Reinhartz, Cast Out of the Covenant (2018)",
      "found_at": "https://readingreligion.org/books/cast-out-covenant (Besprechung, Reading Religion, 2019)",
      "finding_de": "Die Besprechung bestätigt: Kritik an J. Louis Martyns Deutung von Joh 9 als Spiegel einer Vertreibung, Gegenvorschlag einer Rhetorik, die eine neue Gemeinschaft (vielleicht aus Nichtjuden) bildet, und Aufruf an christliche Leser, den Antijudaismus abzulehnen; Verlag Lexington Books."
+    },
+    {
+     "source": "Adele Reinhartz, Cast Out of the Covenant (2018), Besprechung und Verlagsangaben",
+     "found_at": "https://readingreligion.org/books/cast-out-covenant (Sheldon Steen, 2019); https://bibleodyssey.com/author/adele-reinhartz (Lanham: Lexington/Fortress Academic 2018); Open Library (ISBN 978-1-9787-0117-5, 2018, 248 S.)",
+     "finding_de": "Nachprüfung 2026-10-29 (weitere Instanz): Verlag (Lexington Books / Fortress Academic, Lanham 2018) und die Kritik an Martyns Vertreibungsthese zu Joh 9 bestätigt; Reinhartz fragt, ob die Rhetorik eher Nichtjuden unter den Christusgläubigen anspricht und eine neue Gemeinschaft als Bundesvolk bilden will. Am Schluss ruft sie dazu auf, der Rhetorik zu widerstehen, und hofft, christliche Leser lehnten den Antijudaismus ab und hielten fest, was am Evangelium überzeugt. Berichtigt: «ruft … auf, … zu bewahren, was sie darin wertvoll finden» zu «hofft, … festhalten, was an ihm überzeugt» (genauer und ohne unklaren Bezug von «sie»)."
     }
    ]
   },
   "gsw": {
    "period_de": "2018",
-   "text_de": "D Adele Reinhartz bezwiiflet i «Cast Out of the Covenant» di verbreitet These, d Angscht vor em Usschluss us de Synagoge ([[JHN.9.22]]) spiegli e würklichi Vertriibig vo de Gmeind vom Johannes (J. Louis Martyn). Si list d Red vo «de Jude» als Mittel, e nöi Gmeinschaft z bilde, villicht vor allem us Nichtjude, und rüeft chrischtlichi Läserinne und Läser uf, de Antijudaismus vom Evangelium abzlehne und z bhalte, was si drin wärtvoll findet."
+   "text_de": "D Adele Reinhartz bezwiiflet i «Cast Out of the Covenant» di verbreitet These, d Angscht vor em Usschluss us de Synagoge ([[JHN.9.22]]) spiegli e würklichi Vertriibig vo de Gmeind vom Johannes (J. Louis Martyn). Si list d Red vo «de Jude» als Mittel, e nöi Gmeinschaft z bilde, villicht vor allem us Nichtjude, und hofft, dass chrischtlichi Läserinne und Läser de Antijudaismus vom Evangelium ablehned und glichziitig feschthebed, was a ihm überzüügt."
   }
  }
 ]]
