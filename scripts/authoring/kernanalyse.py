@@ -144,7 +144,7 @@ def check_gist(u, errs):
                     errs.append(f"{sid}: gist_de ({lang}) Zitat «{q}» steht nicht wörtlich in {u['reference']}")
     if g:
         try:
-            lukas_einheitlich.pruefe_mundart([g], sid)
+            lukas_einheitlich.pruefe_mundart([zitate.QUOTE_RE.sub("", g)], sid)  # Zitate folgen der Mundart-Schicht
         except SystemExit as e:
             errs.append(str(e))
 
