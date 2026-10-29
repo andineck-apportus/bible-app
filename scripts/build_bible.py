@@ -283,7 +283,7 @@ for rid, r in ill_recs.items():
             bundle("b/_figuren").setdefault("figimg", {}).setdefault(r["key"], {})[fid] = (
                 f"data:image/webp;base64,{base64.b64encode(f.read_bytes()).decode()}")
             x["img"] = 1
-            x["chk"] = (f"Geprüft am {c.get('datum')}: alle Pflichtregeln erfüllt (weitere Instanzen, Blindbeschreibung)."
+            x["chk"] = (f"Geprüft am {c.get('datum')} (alle Pflichtregeln erfüllt)."
                         if c.get("stufe") in ("ki-geprueft", "fachlich-geprueft") else f"In Prüfung (Stand {c.get('datum')}).")
         if _occ.get(rid, {}).get(fid):
             x["occ"] = sorted(_occ[rid][fid], key=_rk)
