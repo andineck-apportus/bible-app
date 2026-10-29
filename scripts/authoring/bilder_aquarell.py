@@ -407,7 +407,11 @@ def verse_von(ref):
     a, _, z = ref.partition("-")
     bk, c, v = a.split(".")
     c2, v2 = (z.split(".")[1], z.split(".")[2]) if z else (c, v)
-    return [f"{bk}.{c}.{x}" for x in range(int(v), int(v2) + 1)] if c == c2 else [f"{bk}.{c}.{v}"]
+    if c == c2:
+        return [f"{bk}.{c}.{x}" for x in range(int(v), int(v2) + 1)]
+    # über Kapitelgrenzen (Buchebene, z. B. TIT.2.1-TIT.3.7): fehlende Verse liefern im Text einfach nichts
+    return [f"{bk}.{k}.{x}" for k in range(int(c), int(c2) + 1)
+            for x in range(int(v) if k == int(c) else 1, (int(v2) if k == int(c2) else 200) + 1)]
 
 
 def pruefe_zitate(plan, texte):
