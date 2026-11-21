@@ -61,8 +61,18 @@ jobs:
           pip install -q pillow playwright numpy
           python -m playwright install --with-deps chromium
 
+      - name: Pilot Visuelle Sprache (nur malen)
+        if: inputs.schritt == 'pilot-visuell'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
+          SZENEN: ${{ inputs.szenen }}
+        run: |
+          nur=""; [ "$SZENEN" != "alle" ] && nur="$SZENEN"
+          python3 pilot/visuell/malen.py --nur "$nur"
+
       - name: Bilder malen
-        if: startsWith(inputs.schritt, 'auto-') == false
+        if: startsWith(inputs.schritt, 'auto-') == false && inputs.schritt != 'pilot-visuell'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_IMAGE_MODEL: ${{ vars.OPENAI_IMAGE_MODEL }}
