@@ -157,7 +157,7 @@ GSW = {
  "JHN.8.11": "[Si]{1} [aber]{2} [hät gseit]{3}: «[Niemer]{4}, [Herr]{5}.» [De Jesus]{8,9} [aber]{7} [hät gseit]{6}: «[Ich]{11} [verurteile]{13} [di]{12} [au nöd]{10}. [Gang]{14}, und{15} [sündig]{17} [nüme]{16}!»⟧",
  "JHN.8.12": "[Dänn]{2} [hät]{4} [de Jesus]{5,6} [wider]{1} [zu ine]{3} [gredt]{4} [und gseit]{7}: «[Ich]{8} [bi]{9} [s Liecht]{10,11} [vo de Wält]{12,13}. [Wär]{14} [mir]{16} [nachegaat]{15}, [lauft]{19} [sicher nöd]{17,18} [i]{20} [de Fiischteri]{21,22}, [sondern]{23} [hät]{24} [s Liecht]{25,26} [vom Läbe]{27,28}.»",
  "JHN.8.13": "[Dänn]{2} [händ]{1} [d Pharisäer]{4,5} [zu ihm]{3} [gseit]{1}: «[Du]{6} [gisch]{9} [über]{7} [dich sälber]{8} [Zügnis]{9}; [dis]{12} [Zügnis]{10,11} [isch]{14} [nöd]{13} [wahr]{15}.»",
- "JHN.8.14": "[De Jesus]{2} [hät]{1} [ine]{5} [gantwortet]{1} und{3} [gseit]{4}: «[Au wänn]{6} [ich]{7} [über]{9} [mich sälber]{10} [Zügnis gib]{8}, [isch]{12} [mis]{15} [Zügnis]{13,14} [wahr]{11}, [wil]{16} [ich weiss]{17}, [vo wo]{18} [ich choo bi]{19} und{20} [wo]{21} [ich ane gaa]{22}; [ir]{23} [aber]{24} [wüssed]{26} [nöd]{25}, [vo wo]{27} [ich chumm]{28} [oder]{29} [wo]{30} [ich ane gaa]{31}.",
+ "JHN.8.14": "[De Jesus]{2} [hät]{1} [ine]{5} [gantwortet]{1} und{3} [gseit]{4}: «[Au wänn]{6} [ich]{7} [über]{9} [mich sälber]{10} [Zügnis gib]{8}, [isch]{12} [mis]{15} [Zügnis]{13,14} [wahr]{11}, [wil]{16} [ich weiss]{17}, [vo wo]{18} [ich choo bi]{19} und{20} [wo]{21} [ich ane gaa]{22}; [ir]{23} [aber]{24} [wüssed]{26} [nöd]{25}, [vo wo]{27} [ich chume]{28} [oder]{29} [wo]{30} [ich ane gaa]{31}.",
  "JHN.8.15": "[Ir]{1} [richted]{5} [nach]{2} [em]{3} [Fleisch]{4}, [ich]{6} [richte]{8} [niemer]{7,9}.",
  "JHN.8.16": "[Und]{1} [wänn]{2} [ich]{5} [dänn]{4} [richte]{3}, [isch]{11} [mis]{8,9} [Urteil]{6,7} [wahr]{10}, [wil]{12} [ich]{15} [nöd]{14} [elei]{13} [bi]{15}, [sondern]{16} [ich]{17} und{18} [de Vatter]{22}, [wo]{19} [mich]{21} [gschickt hät]{20}.",
  "JHN.8.17": "[Au]{1,5} [i]{2} [öiem]{6,7} [Gsetz]{3,4} [staat gschribe]{8}, [dass]{9} [s Zügnis]{12,13} [vo zwei]{10} [Mänsche]{11} [wahr]{14} [isch]{15}.",
@@ -168,7 +168,7 @@ GSW = {
  "JHN.8.22": "[Dänn]{2} [händ]{1} [d Jude]{3,4} [gseit]{1}: «[Bringt er]{6} [sich]{7} [doch nöd öppe]{5} [sälber]{7} [um]{6}, [wil]{8} [er seit]{9}: ‹[Wo]{10} [ich]{11} [ane gaa]{12}, [chönd]{15} [ir]{13} [nöd]{14} [häre choo]{16}›?»",
  "JHN.8.23": "Und{1} [er hät]{2} [zu ine]{3} [gseit]{2}: «[Ir]{4} [sind]{8} [vo]{5} [unde]{6,7}, [ich]{9} [bi]{13} [vo]{10} [obe]{11,12}; [ir]{14} [sind]{19} [us]{15} [dere]{16} [Wält]{17,18}, [ich]{20} [bi]{22} [nöd]{21} [us]{23} [dere]{26} [Wält]{24,25}.",
  "JHN.8.24": "[Drum]{2} [han ich]{1} [öi]{3} [gseit]{1}, [dass]{4} [ir]{5} [i]{6} [öine]{7,9} [Sünde]{8} [sterbed]{5}; [dänn]{11} [wänn]{10} [ir]{13} [nöd]{12} [glaubed]{13}, [dass]{14} [ich]{15} [bi]{16}, [sterbed ir]{17} [i]{18} [öine]{19,21} [Sünde]{20}.»",
- "JHN.8.25": "[Dänn]{2} [händ si]{1} [zu ihm]{3} [gseit]{1}: «[Wär]{5} [bisch]{6} [du]{4}?» [De Jesus]{9,10} [hät]{7} [zu ine]{8} [gseit]{7}: «[Für was]{13,14} [red ich]{16} [überhaupt]{11,12} [no]{15} [mit öi]{17}?",
+ "JHN.8.25": "[Dänn]{2} [händ si]{1} [zu ihm]{3} [gseit]{1}: «[Wär]{5} [bisch]{6} [du]{4}?» [De Jesus]{9,10} [hät]{7} [zu ine]{8} [gseit]{7}: «[Für was]{13,14} [rede ich]{16} [überhaupt]{11,12} [no]{15} [mit öi]{17}?",
  "JHN.8.26": "[Ich han]{2} [vil]{1} [über]{3} [öi]{4} [z säge]{5} und{6} [z richte]{7}; [aber]{8} [dä]{9}, [wo]{10} [mich]{11} [gschickt hät]{10}, [isch]{13} [wahrhaftig]{12}, [und ich]{14} [säge]{20} [de Wält]{21-23} [das]{19}, [wo]{15} [ich]{16} [vo]{17} [ihm]{18} [ghört han]{16}.»",
  "JHN.8.27": "[Si händ]{2} [nöd]{1} [verstande]{2}, [dass]{3} [er]{7} [zu ine]{6} [vom]{4} [Vatter]{5} [gredt hät]{7}.",
  "JHN.8.28": "[Dänn]{2} [hät]{1} [de Jesus]{3,4} [gseit]{1}: «[Wänn]{5} [ir]{6} [de Mänschesohn]{7-10} [erhöcht händ]{6}, [dänn]{11} [erchänned ir]{12}, [dass]{13} [ich]{14} [bi]{15} und{16} [nüüt]{20} [vo]{17} [mir us]{18} [mache]{19}, [sondern]{21} [eso]{27} [rede]{28}, [wie]{22} [mich]{24} [de Vatter]{25,26} [glehrt hät]{23}.",
@@ -181,7 +181,7 @@ GSW = {
  "JHN.8.35": "[De]{1} [Sklav]{3} [aber]{2} [bliibt]{5} [nöd]{4} [für immer]{9-11} [im]{6,7} [Huus]{8}; [de]{12} [Sohn]{13} [bliibt]{14} [für immer]{15-17}.",
  "JHN.8.36": "[Wänn]{1} [öi]{5} [also]{2} [de Sohn]{3,4} [frei macht]{6}, [dänn sind ir]{9} [würkli]{7} [frei]{8}.",
  "JHN.8.37": "[Ich weiss]{1}, [dass]{2} [ir]{5} [Nachkomme]{3} [vom Abraham]{4} [sind]{5}; [aber]{6} [ir wänd]{7} [mich]{8} [umbringe]{9}, [wil]{10} [mis]{13,14} [Wort]{11,12} [bi]{17} [öi]{18} [kei Platz findet]{15,16}.",
- "JHN.8.38": "[Was]{1} [ich]{2} [bim]{4,5} [Vatter]{6} [gseh han]{3}, [das red ich]{7}; und{8} [ir]{9} [tüend]{16} [also]{10}, [was]{11} [ir]{12} [vom]{13,14} [Vatter]{15} [ghört händ]{12}.»",
+ "JHN.8.38": "[Was]{1} [ich]{2} [bim]{4,5} [Vatter]{6} [gseh han]{3}, [das rede ich]{7}; und{8} [ir]{9} [tüend]{16} [also]{10}, [was]{11} [ir]{12} [vom]{13,14} [Vatter]{15} [ghört händ]{12}.»",
  "JHN.8.39": "[Si händ gantwortet]{1} und{2} [zu ihm]{4} [gseit]{3}: «[Öise]{7} [Vatter]{5,6} [isch]{9} [de Abraham]{8}.» [De Jesus]{12,13} [seit]{10} [zu ine]{11}: «[Wänn]{14} [ir]{18} [Chind]{15} [vom Abraham]{16,17} [sind]{18}, [dänn würded ir]{23} [d Wärch]{19,20} [vom Abraham]{21,22} [tue]{23};",
  "JHN.8.40": "[jetzt]{1} [aber]{2} [wänd ir]{3} [mich]{4} [umbringe]{5}, [en Mänsch]{6}, [wo]{7} [öi]{10} [d Wahrheit]{8,9} [gseit hät]{11}, [so wie]{12} [ich]{13} [si]{12} [vo]{14} [Gott]{15,16} [ghört han]{13}. [Das]{17} [hät]{20} [de Abraham]{18} [nöd]{19} [gmacht]{20}.",
  "JHN.8.41": "[Ir]{1} [tüend]{2} [d Wärch]{3,4} [vo öiem]{7} [Vatter]{5,6}.» [Si händ]{8} [zu ihm]{9} [gseit]{8}: «[Mir]{10} [sind]{14} [nöd]{13} [us]{11} [Unzucht]{12} [gebore]{14}; [mir händ]{17} [en einzige]{15} [Vatter]{16}: [Gott]{18,19}.»",
@@ -258,7 +258,7 @@ PA_DE = ("In den im Projekt erfassten CNTR-Transkriptionen (Sekundärtranskripti
          "hier keinen Text.")
 PA_GSW = ("I de erfasste CNTR-Transkriptione staat für [[JHN.7.53]]–[[JHN.8.11]] bi 01 (Codex Sinaiticus), 03 (Codex Vaticanus), "
           "029, 032, 𝔓66 und 𝔓75 kei Text; dört chunnt nach [[JHN.7.52]] grad [[JHN.8.12]]. 05 (Codex Bezae) hät de Abschnitt, "
-          "mit eigetem Wortlut. 02 und 04 sind a dere Stell nöd erhalte und säged drum nüüt; au d Transkription vo 𝔓45 hät da "
+          "mit eigetem Wortluut. 02 und 04 sind a dere Stell nöd erhalte und säged drum nüüt; au d Transkription vo 𝔓45 hät da "
           "kei Text.")
 
 # (Stelle, Zieltext, Art, griechisch, wörtlicher, weitere Möglichkeiten, Begründung)
@@ -406,14 +406,11 @@ DEC_GSW = [
  ("JHN.8.12", "Ich bi s Liecht vo de Wält", "literal", "Ἐγώ εἰμι τὸ φῶς τοῦ κόσμου", None, None,
   "Grundentscheid für Johannes: ἐγώ εἰμι mit eme Bildwort heisst überall «Ich bi …»; κόσμος überall «Wält»."),
  ("JHN.8.22", "d Jude", "interpretive", "οἱ Ἰουδαῖοι", None, ["di jüdische Füerer", "d Judäer"],
-  "Grundentscheid für Johannes: οἱ Ἰουδαῖοι heisst wörtlich «d Jude». Das isch en Düütigsentscheid. De Johannes bruucht s Wort für s jüdisch Volk, für Lüüt us "
-  "Judäa und Jerusalem, mängisch aber für d Gägner vom Jesus, bsunders di füerende Chreis z Jerusalem (vgl. [[JHN.9.22]]). De Jesus, sini Jünger und di meischte "
-  "Persone i de Gschicht sind sälber Jude. «D Jude» bhaltet de Wortlut; es isch nöd als Ussag über s jüdisch Volk im Ganze z läse. Redaktionelle Entscheid; "
-  "gliich [[JHN.8.31]], [[JHN.8.48]], [[JHN.8.52]], [[JHN.8.57]], [[JHN.9.18]], [[JHN.9.22]]."),
+  "Grundentscheid für Johannes: οἱ Ἰουδαῖοι heisst wörtlich «d Jude». Das isch en Düütigsentscheid. De Johannes bruucht s Wort für s jüdisch Volk, für Lüüt us Judäa und Jerusalem, mängisch aber für d Gägner vom Jesus, bsunders di füerende Chreis z Jerusalem (vgl. [[JHN.9.22]]). De Jesus, sini Jünger und di meischte Persone i de Gschicht sind sälber Jude. «D Jude» bhaltet de Wortluut; es isch nöd als Ussag über s jüdisch Volk im Ganze z läse. Redaktionelle Entscheid; gliich [[JHN.8.31]], [[JHN.8.48]], [[JHN.8.52]], [[JHN.8.57]], [[JHN.9.18]], [[JHN.9.22]]."),
  ("JHN.8.24", "dass ich bi", "interpretive", "ἐγώ εἰμι", None, ["dass ich s bi"],
   "ἐγώ εἰμι staat da ohni Ergänzig; «ich bi» bliibt sichtbar wie i [[JHN.8.28]] und [[JHN.8.58]]. Vili ghöred drin, wie Gott sich i de griechische Bible vorstellt "
   "(vgl. [[ISA.43.10]]); anderi verstönd «dass ich s bi»."),
- ("JHN.8.25", "Für was red ich überhaupt no mit öi?", "interpretive", "Τὴν ἀρχὴν ὅ τι καὶ λαλῶ ὑμῖν", None, ["Was ich öi vo Aafang aa gseit han"],
+ ("JHN.8.25", "Für was rede ich überhaupt no mit öi?", "interpretive", "Τὴν ἀρχὴν ὅ τι καὶ λαλῶ ὑμῖν", None, ["Was ich öi vo Aafang aa gseit han"],
   "En sehr schwirige Satz; d Übersetzig folgt em Fragezeiche vom SBLGNT."),
  ("JHN.8.28", "erhöcht händ", "literal", "ὑψώσητε", None, None, "ὑψόω «erhöche»: bim Johannes s Ufrichte am Chrüüz und d Erhöchig zu Gott zgliich (vgl. [[JHN.3.14]], [[JHN.12.32]]–[[JHN.12.33]])."),
  ("JHN.8.28", "de Mänschesohn", "traditional", "τὸν υἱὸν τοῦ ἀνθρώπου", "de Sohn vom Mänsch", None, None),
@@ -476,7 +473,7 @@ ALTS = [
   ["«Euer» kann als Verdeutlichung ergänzt worden sein; ohne «euer» bleibt offen, welcher Vater gemeint ist (siehe die Entscheidung zu «ihr tut also»).",
    "Laut der automatischen Zuordnung lesen 03 und 𝔓75 ohne «euer», 01 und 04 mit «euer» (R2), 05 «bei eurem Vater» (R3); 032 und 𝔓66 sind als «liest anders» geführt, haben im erfassten Wortlaut aber τοῦ πατρός ohne ὑμῶν. 𝔓75 hat nach der Transkription statt ποιεῖτε «ihr tut» λαλεῖτε «ihr redet» (Buchstaben teils als unsicher markiert)."],
   ["«Öie» cha als Verdüütlichig ergänzt worde sii.",
-   "Nach de automatische Zueornig läsed 03 und 𝔓75 ohni «öie», 01 und 04 mit (R2), 05 «bi öiem Vatter» (R3); 032 und 𝔓66 händ im erfasste Wortlut τοῦ πατρός ohni ὑμῶν."]),
+   "Nach de automatische Zueornig läsed 03 und 𝔓75 ohni «öie», 01 und 04 mit (R2), 05 «bi öiem Vatter» (R3); 032 und 𝔓66 händ im erfasste Wortluut τοῦ πατρός ohni ὑμῶν."]),
  ("VAR-SBLGNTAPP-JHN-008-039-01:R2", "JHN.8.39", "ihr Kinder Abrahams seid", "ihr Kinder Abrahams wärt", "ir Chind vom Abraham sind", "ir Chind vom Abraham wäred", "gering",
   "ἦτε («wärt») statt ἐστε («seid»): ein durchgehend irrealer Bedingungssatz.", "ἦτε («wäred») statt ἐστε («sind»).",
   {"R1": [("ἐστε", "seid", None)], "R2": [("ἦτε", "wärt", None)]},
@@ -526,7 +523,7 @@ ALTS = [
   {"R1": [("ἐπέχρισεν", "hät gstriche", None)], "R2": [("ἐπέθηκεν", "hät gleit", None)]},
   ["ἐπέθηκεν steht in der Erzählung des Geheilten ([[JHN.9.15]]); der Wortlaut kann daran angeglichen sein.",
    "Laut der automatischen Zuordnung liest 03 ἐπέθηκεν; 01, 02, 04, 05, 032, 𝔓66 und 𝔓75 lesen ἐπέχρισεν."],
-  ["ἐπέθηκεν staat i [[JHN.9.15]]; de Wortlut cha dra aaglichen sii.",
+  ["ἐπέθηκεν staat i [[JHN.9.15]]; de Wortluut cha dra aaglichen sii.",
    "Nach de automatische Zueornig lisst 03 ἐπέθηκεν; 01, 02, 04, 05, 032, 𝔓66 und 𝔓75 läsed ἐπέχρισεν."]),
  ("VAR-SBLGNTAPP-JHN-009-008-01:R2", "JHN.9.8", "als Bettler", "als Blinden", "als Bettler", "als Blinde", "gering",
   "τυφλός («blind») statt προσαίτης («Bettler»).", "τυφλός («blind») statt προσαίτης («Bettler»).",
@@ -614,7 +611,7 @@ UNITS_GSW = {
   "im SBLGNT i Doppelklammere ⟦ ⟧). Dänn nännt sich de Jesus s Liecht vo de Wält und berüeft sich gägenüber de Pharisäer uf s Zügnis vom Vatter. Er seit, dass er wäggaat und "
   "dass si i irer Sünd sterbed, wänn si nöd glaubed, «dass ich bi»; wänn si de Mänschesohn erhöcht händ, wärded si s erchänne. Zu Jude, wo ihm glaubt händ, seit er, wänn si i sim Wort bliibed, wärd d Wahrheit "
   "si frei mache; im Striit, wär ire Vatter seig – de Abraham, Gott oder de Tüüfel –, wirft er ine vor, si welled en töte. Si heissed en en Samaritaner mit eme Dämon. Uf sis "
-  "Wort «Bevor de Abraham worde isch, bin ich» nämed si Stei uf; de Jesus versteckt sich und gaat us em Tempel use."),
+  "Wort «Bevor de Abraham worde isch, bin ich» nämed si Stei uuf; de Jesus versteckt sich und gaat us em Tempel use."),
  "TU-JHN-008-001-011": ("De Jesus und d Frau, wo bim Ehebruch verwütscht worde isch",
   "De Jesus gaat uf de Ölberg und lehrt am Morge früe im Tempel. D Schriftglehrte und d Pharisäer bringed e Frau, wo bim Ehebruch verwütscht worde isch, stelled si i d Mitti "
   "und fröged en, zum en uf d Prob z stelle, was er zum Gebot vom Mose säg, settigi z steinige. De Jesus bückt sich und schriibt uf de Bode; dänn seit er, wär vo ine ohni Sünd "
@@ -638,14 +635,10 @@ UNITS_GSW = {
  "TU-JHN-008-048-059": ("«Bevor de Abraham worde isch, bin ich»",
   "D Jude säged em Jesus, er seig en Samaritaner und heb en Dämon. De Jesus seit, er ehri sin Vatter, und wär sis Wort bhalti, wärd de Tod i Ewigkeit nöd gseh. Si händ em "
   "entgäge, de Abraham und d Prophete seiged gstorbe, und fröged, öb er grösser seig als de Abraham. De Jesus seit, sin Vatter verherrlichi en; de Abraham heb drüber gjublet, dass er "
-  "sin Tag söll gseh. Uf de Iiwand, er seig no nöd füfzg Jahr alt, antwortet er: «Bevor de Abraham worde isch, bin ich.» Si nämed Stei uf, zum uf en z rüere; de Jesus versteckt "
+  "sin Tag söll gseh. Uf de Iiwand, er seig no nöd füfzg Jahr alt, antwortet er: «Bevor de Abraham worde isch, bin ich.» Si nämed Stei uuf, zum uf en z rüere; de Jesus versteckt "
   "sich und gaat us em Tempel use."),
  "TU-JHN-009-001-041": ("En Blindgeborne wird sehend",
-  "De Jesus gseht en Mänsch, wo vo Geburt aa blind isch. Uf d Frag vo de Jünger, wär gsündiget heb, antwortet er: weder er no sini Eltere; a ihm söled d Wärch vo Gott offebar "
-  "wärde. Er striicht em en Brei uf d Auge und schickt en zum Teich Siloam; de Maa chunnt sehend zrugg. D Heilig isch amene Sabbat gscheh; d Pharisäer fröged en us, d Jude sini Eltere, und die wiiched "
-  "us, wil si Angscht händ, us de Synagoge usgschlosse z wärde. Bim zweite Verhör bliibt de Gheilt debii, dass de Jesus vo Gott sii müesi, und wird usegworfe. De Jesus findet en; de Maa "
-  "glaubt a de Mänschesohn. De Jesus seit, er seig zum Gricht choo, damit die, wo nöd gsehnd, gsehnd und die, wo gsehnd, blind wärded; de Pharisäer, wo fröged, öb au si blind "
-  "seiged, seit er, iri Sünd bliibi."),
+  "De Jesus gseht en Mänsch, wo vo Geburt aa blind isch. Uf d Frag vo de Jünger, wär gsündiget heb, antwortet er: weder er no sini Eltere; a ihm söled d Wärch vo Gott offebar wärde. Er striicht em en Brei uf d Auge und schickt en zum Teich Siloam; de Maa chunnt sehend zrugg. D Heilig isch amene Sabbat gscheh; d Pharisäer fröged en uus, d Jude sini Eltere, und die wiiched uus, wil si Angscht händ, us de Synagoge usgschlosse z wärde. Bim zweite Verhör bliibt de Gheilt debii, dass de Jesus vo Gott sii müesi, und wird usegworfe. De Jesus findet en; de Maa glaubt a de Mänschesohn. De Jesus seit, er seig zum Gricht choo, damit die, wo nöd gsehnd, gsehnd und die, wo gsehnd, blind wärded; de Pharisäer, wo fröged, öb au si blind seiged, seit er, iri Sünd bliibi."),
  "TU-JHN-009-001-012": ("D Heilig vom Blindgeborne",
   "D Jünger fröged, öb de Maa oder sini Eltere gsündiget hebed, dass er blind gebore worde isch. De Jesus seit zu beidem nei: A ihm söled d Wärch vo Gott offebar wärde; solang "
   "er i de Wält isch, isch er s Liecht vo de Wält. Er macht us Spöiz en Brei, striicht en em Blinde uf d Auge und schickt en zum Teich Siloam; de Maa wäscht sich und chunnt "
