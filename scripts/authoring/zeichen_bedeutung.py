@@ -36,7 +36,7 @@ def zeichen(nur=None):
     r = json.loads(STIL.read_text(encoding="utf-8"))["renderings"]
     out = []
     for k, v in sorted(r.items()):
-        if not k.startswith("FIG-ZEICHEN-") or (nur and k not in nur):
+        if not k.startswith("FIG-ZEICHEN-") or k in V.GEZEICHNET or (nur and k not in nur):   # gezeichnete Zeichen gesondert
             continue
         if v.get("image") and (v.get("check") or {}).get("stufe") == "ki-geprueft" and (ROOT / v["image"]).exists():
             out.append(k)
