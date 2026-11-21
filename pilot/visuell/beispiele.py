@@ -169,8 +169,8 @@ def zeitleiste():
     for j, lab in [(-1000, "1000"), (-800, "800"), (-600, "600"), (-400, "400"), (-200, "200"), (0, "0"), (100, "100")]:
         o.append(f'<line x1="{px(j):.0f}" x2="{px(j):.0f}" y1="{ya - 4}" y2="{ya + 4}" stroke="{INK}"/>' + t(px(j), ya + 18, lab, 10, MUTED, "middle"))
     o.append(t(X0 - 6, ya + 4, "v. Chr.", 10, MUTED, "end") + t(X1, ya + 32, "n. Chr.", 10, MUTED, "end"))
-    ep = [(-1050, -930, "Königtum", ["1–2 Sam", "1 Kön 1–11", "Ps, Spr"]), (-930, -586, "Zwei Reiche", ["1 Kön 12 – 2 Kön", "Jes, Am, Hos", "Jona, Mi"]),
-          (-586, -538, "Exil", ["Klgl", "Ez, Dan"]), (-538, -400, "Rückkehr", ["Esra, Neh, Est", "Hag, Sach, Mal"]),
+    ep = [(-1050, -930, "Königtum", ["1–2 Sam", "1 Kön 1–11", "1 Chr, 2 Chr 1–9"]), (-930, -586, "Zwei Reiche", ["1 Kön 12 – 2 Kön", "Jes, Jer, Am, Hos", "Jona, Mi, Nah, Hab, Zef"]),
+          (-586, -538, "Exil", ["Klgl, Obd", "Ez, Dan"]), (-538, -400, "Rückkehr", ["Esra, Neh, Est", "Hag, Sach, Mal"]),
           (-400, -5, "zwischen den Testamenten", ["kein biblisches Buch"]), (-5, 30, "Jesus", ["Evangelien"]), (30, 100, "Kirche", ["Apg", "Briefe, Offb"])]
     farben = ["#E3CDB0", "#E9D9C1", "#D9DFE2", "#E3E6D6", "#F0ECE4", "#EBD3C7", "#DCE3E6"]
     for i, (a, b, name, buecher) in enumerate(ep):
@@ -187,9 +187,9 @@ def zeitleiste():
         o.append(f'<line x1="{mitte:.1f}" x2="{mitte:.1f}" y1="{ya + 22}" y2="{188 + (36 if i in (2, 5) else 0)}" stroke="#D2C7B4"/>')
     for j in (-722, -586, -538):
         o.append(f'<circle cx="{px(j):.1f}" cy="{ya}" r="3.5" fill="#BD8067"/>')
-    o.append(t(px(-722), ya - 8, "722", 10, "#8A4B33", "middle") + t(px(-586) - 8, ya - 8, "586", 10, "#8A4B33", "middle") + t(px(-538) + 10, ya - 8, "538", 10, "#8A4B33", "middle"))
+    o.append(t(px(-722), ya - 10, "722", 10, "#8A4B33", "middle") + t(px(-586) - 3, ya - 10, "586", 10, "#8A4B33", "end") + t(px(-538) + 3, ya - 10, "538", 10, "#8A4B33", "start"))
     o.append(t(20, 300, "722 Samaria fällt · 586 Jerusalem zerstört · 538 Rückkehr erlaubt. Jahreszahlen sind gängige Schätzungen (R).", 10.5, MUTED))
-    o.append(t(20, 318, "Die Bücher stehen bei der Zeit, von der sie erzählen, nicht bei ihrer Entstehung.", 10.5, MUTED))
+    o.append(t(20, 318, "Die Bücher stehen bei der Zeit, von der sie erzählen oder in die sie sich selbst stellen; Psalmen, Weisheit und Joel haben keine feste Stelle.", 10.5, MUTED))
     o.append("</svg>")
     return "".join(o)
 
@@ -220,7 +220,7 @@ def jona_struktur():
         o.append(t(x + 6, y + 18, s, 11.5, INK) + t(x + 6, y + 32, r, 9.5, MUTED))
     o.append(f'<path d="M920 228 C 948 190, 948 120, 930 72" fill="none" stroke="#BD8067" stroke-width="2" marker-end="url(#pf)"/>')
     o.append('<defs><marker id="pf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#BD8067"/></marker></defs>')
-    o.append(t(990, 150, "«holtest mein", 10, "#8A4B33", "end") + t(990, 163, "Leben herauf»", 10, "#8A4B33", "end") + t(990, 176, "2,6", 9.5, MUTED, "end"))
+    o.append(t(990, 150, "«holtest du mein", 10, "#8A4B33", "end") + t(990, 163, "Leben … herauf»", 10, "#8A4B33", "end") + t(990, 176, "2,6", 9.5, MUTED, "end"))
     o.append("</svg>")
     return "".join(o)
 
@@ -429,7 +429,7 @@ def psalm1(vb, vs):
             o.append(f'<rect x="{x + 70}" y="14" width="300" height="210" fill="#EEE9E1"/>' + t(x + 220, 124, "(Vignette folgt)", 11, MUTED, "middle"))
         o.append(t(x + 220, 250, titel, 17, farbe, "middle", 600, fam="var(--f-display)") + t(x + 220, 272, z1, 12.5, INK, "middle") + t(x + 220, 290, z2, 10, MUTED, "middle"))
     o.append(f'<line x1="500" x2="500" y1="30" y2="290" stroke="{RULE}"/>')
-    o.append(t(500, 326, "Der HERR kennt den Weg der Gerechten, der Weg der Gottlosen vergeht (Ps 1,6)", 13, INK, "middle"))
+    o.append(t(500, 326, "JHWH kennt den Weg der Gerechten, der Weg der Gottlosen vergeht (Ps 1,6)", 13, INK, "middle"))
     o.append(t(500, 348, "Stichworte sinngemäss: Für die Psalmen gibt es noch keine Arbeitsübersetzung. Die Vignetten malen nur die Bildworte des Psalms.", 10, MUTED, "middle"))
     o.append("</svg>")
     return "".join(o)
@@ -453,7 +453,7 @@ def offb():
             xs = 150 + 6 * 92 + 40 + 40
             o.append(f'<path d="M{xs} {y + 40} C {xs} {y + 62}, 190 {y + 52}, 190 {y + 76}" fill="none" stroke="#9C8AA5" stroke-width="1.4" marker-end="url(#pf2)"/>')
     o.append('<defs><marker id="pf2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9C8AA5"/></marker></defs>')
-    o.append(t(20, 258, "Gestrichelt: Einschub vor dem siebten Glied (so im Text). Ob die Reihen nacheinander folgen oder dasselbe neu zeigen, ist Deutung und bleibt offen.", 10.5, MUTED))
+    o.append(t(20, 258, "Gestrichelt: Einschub vor dem siebten Glied bei Siegeln und Posaunen (so im Text). Ob die Reihen nacheinander folgen oder dasselbe neu zeigen, ist Deutung.", 10.5, MUTED))
     o.append("</svg>")
     return "".join(o)
 
@@ -467,4 +467,4 @@ def merkkarte(bild_url):
     return (f'<div class="merk"><div class="merk-v"><img src="{bild_url}" alt="Der Vater umarmt den heimgekehrten Sohn (Lk 15,20)">'
             f'<div><p class="merk-ref">Lukas 15,24</p><p class="merk-z">«denn dieser mein Sohn war <span class="luecke">tot</span> und ist wieder '
             f'<span class="luecke">lebendig</span> geworden; er war <span class="luecke">verloren</span> und ist gefunden worden.»</p>'
-            f'<p class="merk-h">Antippen deckt die Lücken auf. Wiederholen: heute · morgen · in einer Woche · in einem Monat</p></div></div></div>')
+            f'<p class="merk-h">Antippen deckt die Lücken auf. Wiederholen: heute · morgen · in einer Woche · später</p></div></div></div>')

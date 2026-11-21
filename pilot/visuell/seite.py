@@ -69,7 +69,7 @@ def main():
     erz = str(anteil["erz"]).replace(".", ",")
 
     jona_html = (img(B.bild(jona, breite=1100), "Jona in vier gemalten Stationen: Sturm, Fisch, Ninive, Rizinus") if jona else
-                 '<p class="platzhalter">Die vier gemalten Stationen von Jona werden gerade im regulären Prozess gemalt und geprüft.</p>')
+                 '<p class="platzhalter">Die vier gemalten Stationen von Jona folgen.</p>')
 
     seite = f"""<title>Visuelle Sprache der Bibel</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -183,12 +183,12 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 <section id="kurz">
 <h2>Kurzfassung</h2>
 <div class="kurz">
-  <div><b>{erz} % erzählen</b><p>Diese Teile der Bibel tragen gemalte Szenen im Aquarellstil. Die anderen {100 - anteil['erz']:.0f} % sind Lieder, Prophetenworte, Briefe, Gesetze, Listen und Visionen. Sie brauchen gezeichnete Strukturbilder, Karten, Zeitleisten und Modelle.</p></div>
+  <div><b>{erz} % erzählen</b><p>Diese Teile der Bibel tragen gemalte Szenen im Aquarellstil. Die anderen {100 - anteil['erz']:.0f} % sind unter anderem Prophetenworte, Lieder, Briefe, Weisheit, Gesetze, Listen und Visionen. Sie brauchen gezeichnete Strukturbilder, Karten, Zeitleisten und Modelle.</p></div>
   <div><b>Form je Feld, gemischt</b><p>Die Darstellung wird für jedes Bildfeld aus dem Inhalt gewählt, auch innerhalb eines Buchs. In den zwölf bisher analysierten Büchern passt die Szene für 47 % der Abschnitte. Für den Rest passt eine Strukturform.</p></div>
   <div><b>Daten zeichnen, das Bildmodell malt</b><p>Anordnung, Zahlen, Masse und Worte kommen aus Daten und sind genau. Figuren, Gegenstände und Landschaft malt das Bildmodell als Szene oder Vignette. Nie stehen Text oder Masse im gemalten Bild.</p></div>
   <div><b>Feste Anker auf allen Ebenen</b><p>Jedes Buch hat einen festen Platz, jede Figur ein festes Aussehen, jede Geschichte einen Ort auf der Karte und eine Zeit. Höhere Ebenen zeigen dieselben Bilder wie die Ebenen darunter.</p></div>
   <div><b>Jedes Bild hat eine Aufgabe</b><p>Schmückende Bilder schaden dem Lernen nachweislich. Gemalt wird, was der Text erzählt oder selbst als Bild gebraucht; alles Weitere ist als Ausgestaltung (R) oder Deutung (I) gekennzeichnet.</p></div>
-  <div><b>Einprägen heisst abrufen</b><p>Bilder werden nicht nur gezeigt, sondern abgefragt: Szenen ordnen, Merkvers ergänzen, nach einem Tag und nach einer Woche wiederholen. Dazu kommt Audio zu jeder Szene.</p></div>
+  <div><b>Einprägen heisst abrufen</b><p>Bilder werden nicht nur gezeigt, sondern abgefragt: Szenen ordnen, Merkvers ergänzen, nach einem Tag und nach einer Woche wiederholen, später in grösseren Abständen. Dazu kommt Audio zu jeder Szene.</p></div>
 </div>
 </section>
 
@@ -215,11 +215,11 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 <li><div><b>Erzähltes wird viel besser erinnert</b> als Sachtext (Erinnerung g = 0,72). Argumentierende Texte wie Briefe und Gesetze brauchen am Bildschirm deshalb mehr Strukturhilfe. <span class="ev">stark</span></div></li>
 <li><div><b>Beschriftung direkt am Bildteil</b>, Wesentliches hervorheben, in kleine Einheiten teilen, Namen vorab einführen. <span class="ev">stark (Mayer)</span></div></li>
 <li><div><b>Rund vier Einheiten</b> fasst das Arbeitsgedächtnis. Je Ebene sollten 3 bis 5 Hauptgruppen sichtbar sein, nicht mehr. <span class="ev">stark</span></div></li>
-<li><div><b>Abrufen festigt</b> mehr als nochmals lesen (g = 0,61). Am besten wirkt es mit Abständen von einem Tag bis einer Woche. <span class="ev">stark</span></div></li>
+<li><div><b>Abrufen festigt</b> mehr als nochmals lesen (g = 0,51 gegenüber Nochmal-Lesen). Am stärksten wirkt es, wenn nach einem Tag bis knapp einer Woche erneut geprüft wird. <span class="ev">stark</span></div></li>
 <li><div><b>Orte als Gedächtnishilfe</b> (Gedächtnispalast) helfen bei Reihenfolgen deutlich, die Studien sind aber methodisch schwach. <span class="ev">grosser Effekt, schwache Evidenz</span></div></li>
 <li><div><b>Bilder sind keine Weltsprache.</b> Bildzeichen wie Bewegungslinien oder Sterne werden je nach Kultur missverstanden. Wie Zeit angeordnet wird, folgt der Schreibrichtung. <span class="ev">mittel</span></div></li>
 </ol>
-<p class="text">Bestehende Ansätze bestätigen das. BibleProject zeigt die Gesamtstruktur jedes Buchs und erreicht sehr viele Menschen; eine unabhängige Wirkungsprüfung fehlt. Comic- und Kinderbibeln sind stark bei Geschichten, lassen aber Gesetz, Prophetie und Briefe meist weg oder fügen Dinge hinzu, die nicht im Text stehen. Datengezeichnete Übersichten (Stammbäume, Zeitleisten) sind genau, werden aber selten geliebt. Unser Weg verbindet beides: gemalt, wo erzählt wird, gezeichnet, wo geordnet wird, und alles aus derselben geprüften Analyse.</p>
+<p class="text">Bestehende Ansätze passen dazu. BibleProject zeigt die Gesamtstruktur jedes Buchs und erreicht sehr viele Menschen; eine unabhängige Wirkungsprüfung fehlt. Comic- und Kinderbibeln sind stark bei Geschichten, lassen aber Gesetz, Prophetie und Apokalyptik meist weg, Briefe kommen kaum vor, und manches Bild fügt hinzu, was nicht im Text steht. Datengezeichnete Übersichten (Stammbäume, Zeitleisten) sind genau, wirken aber nach unserer Einschätzung oft spröde. Unser Weg verbindet beides: gemalt, wo erzählt wird, gezeichnet, wo geordnet wird, und alles aus derselben geprüften Analyse.</p>
 </section>
 
 <section id="bestand">
@@ -232,7 +232,7 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 
 <section id="formen">
 <h2>Welche Form für welchen Inhalt</h2>
-<p class="text">Der Strukturkatalog kennt 33 Baumuster und 20 Darstellungen. Für die Planung lassen sie sich in sechs Familien bündeln. Die Tabelle zeigt die Hauptform, die Ergänzungen und das Beispiel weiter unten auf dieser Seite.</p>
+<p class="text">Der Strukturkatalog kennt 33 Baumuster und 20 Darstellungen. Für die Planung bündeln wir sie hier in sechs eigene Gruppen (der Katalog selbst ordnet die Baumuster in neun Familien). Die Tabelle zeigt die Hauptform, die Ergänzungen und das Beispiel weiter unten auf dieser Seite.</p>
 <div class="tbl"><table>
 <thead><tr><th>Inhalt</th><th>Anteil</th><th>Hauptform</th><th>Ergänzt durch</th><th>Beispiel</th><th>Achtung</th></tr></thead>
 <tbody>
@@ -282,10 +282,10 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 </div>
 
 <h3>Brief, Hymnus: Philipper 2</h3>
-{fig(B.phil2(), "Der Weg hinab und hinauf.", "Der Christushymnus als V: Bis zum Kreuz handelt er selbst, ab «Darum» handelt Gott. Die Form selbst ist die Merkhilfe.", "Kurve (stairs) für Abstieg und Erhöhung; Wende markiert.", "Wortlaut Phil 2,6–11, Arbeitsübersetzung.", "b-phil")}
+{fig(B.phil2(), "Der Weg hinab und hinauf.", "Der Christushymnus als V: Bis zum Kreuz handelt er selbst, ab «Darum» handelt Gott. Die Form selbst ist die Merkhilfe.", "Kurve für Abstieg und Erhöhung; Wende markiert.", "Wortlaut Phil 2,6–11, Arbeitsübersetzung.", "b-phil")}
 
 <h3>Prophetie: Obadja</h3>
-{fig(B.obadja(), "Hoch und tief, mit Karte.", "Edom wohnt hoch und wird hinabgestürzt, der Berg Zion steigt auf; in der Mitte steht der Spiegelsatz. Die kleine Karte verankert das Wort an seinem Ort.", "Umkehrung als gegenläufige Linien; Ort als Anker.", "Zitate Obd 3–4, 15, 21; Lage ungefähr (R).", "b-obadja")}
+{fig(B.obadja(), "Hoch und tief, mit Karte.", "Edom wohnt hoch und wird hinabgestürzt, der Berg Zion steigt auf; in der Mitte steht der Spiegelsatz. Die kleine Karte verankert das Wort an seinem Ort.", "Umkehrung als gegenläufige Linien; Ort als Anker.", "Zitate Obd 3, 4, 15, 21; Lage ungefähr (R).", "b-obadja")}
 
 <h3>Liste: Matthäus 1</h3>
 {fig(B.matthaeus1(), "Drei Reihen von Generationen.", "Der Text nennt die Ordnung selbst («vierzehn Generationen»). Das Bild zeigt alle Namen und die vier Frauen, die der Text nennt, und glättet die Zählung der dritten Reihe nicht.", "Zahl und Glieder vollständig; Musterbruch sichtbar.", "Namen aus Mt 1,2–16, Arbeitsübersetzung.", "b-mt1")}
@@ -294,7 +294,7 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 {fig(B.psalm1(p1, p2), "Zwei Wege.", "Ein Lied, das selbst in Bildern spricht. Gemalt werden genau diese Bildworte, Baum und Spreu, als kleine Vignetten; die Ordnung zeigt die Gegenüberstellung.", "Poesie → Gegenüberstellung; Vignette nur für Bildworte des Textes.", "Vignetten aus dem Pilotlauf, ausgeschnitten (siehe unten).", "b-ps1")}
 
 <h3>Vision: Offenbarung</h3>
-{fig(B.offb(), "Drei Siebenerreihen.", "Die Struktur ist im Text klar: dreimal sieben, Einschübe vor dem siebten Glied, aus dem siebten Siegel gehen die Posaunen hervor. Wie die Reihen zusammenhängen, ist Deutung; das Bild sagt es und legt sich nicht fest.", "Vision → Reihenbild; Deutungen offenlegen.", "Offb 6,1 – 8,1; 8,2 – 11,19; 16,1–21.", "b-offb")}
+{fig(B.offb(), "Drei Siebenerreihen.", "Im Text klar ist: dreimal sieben; bei Siegeln und Posaunen steht ein Einschub vor dem siebten Glied; auf das siebte Siegel folgen die Posaunen. Wie die Reihen zusammenhängen, ist Deutung; das Bild sagt es und legt sich nicht fest.", "Vision → Reihenbild; Deutungen offenlegen.", "Offb 6,1 – 8,1; 8,2 – 11,19; 16,1–21.", "b-offb")}
 
 <h3>Bereits gemalt: Szene, Reihe, Modell, Karte</h3>
 {fig(img(lk15, "Lukas 15,11–32 in drei gemalten Feldern"), "Szene: Lukas 15,11–32.", "Drei Felder nach den tragenden Momenten, mit wörtlicher Rede und Stichwortband. Automatisch geprüft und in der App.", "Erzählung → Szene.", None, "b-szene") if lk15 else ""}
@@ -306,7 +306,7 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 {fig(lexikon, "Bildlexikon.", "Jede Person, Rolle und jedes wichtige Ding hat ein festes Aussehen, gemalt und geprüft. So erkennt man Titus im Abschnitt, im Kapitel und im Buch wieder, und Figuren verwechseln sich nicht.", "Unterscheidbare Figuren; Menschen des antiken Vorderen Orients.", None, "b-lex")}
 
 <h3>Vers: Merkkarte</h3>
-{fig(B.merkkarte(l2), "Lukas 15,24 zum Einprägen.", "Das Bild aus dem Abschnitt trägt den Vers. Die Lücken werden beim Antippen sichtbar; die App fragt den Vers nach einem Tag, einer Woche und einem Monat wieder ab.", "Abruf statt nur Zeigen; Bild aus der Ebene darunter.", None, "b-merk")}
+{fig(B.merkkarte(l2), "Lukas 15,24 zum Einprägen.", "Das Bild aus dem Abschnitt trägt den Vers. Die Lücken werden beim Antippen sichtbar; die App fragt den Vers nach einem Tag und nach einer Woche wieder ab, danach in grösseren Abständen.", "Abruf statt nur Zeigen; Bild aus der Ebene darunter.", None, "b-merk")}
 
 <h3>Was die Prüfung abfangen muss</h3>
 <div class="zwei">
@@ -327,7 +327,7 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 <tr><td>Gestalt</td><td>wie der Text gebaut ist</td><td>Wiederkehrende Formen: V-Kurve, Spiegel, Raster, Treppe, Spalten</td></tr>
 <tr><td>Bildwort</td><td>der Satz, der bleibt</td><td>Merkvers mit Bild und Stichwortband in der eigenen Sprache</td></tr>
 </tbody></table></div>
-<p class="text">Dazu kommt das Abrufen. Die App zeigt Bilder nicht nur, sie fragt sie ab: Stationen eines Buchs in die richtige Reihenfolge bringen, ein Bild seinem Kapitel zuordnen, Lücken im Merkvers füllen. Abgefragt wird nach einem Tag, einer Woche und einem Monat. Der Lernmodus mit Merkversen, den es schon gibt, wird dafür um Bildfragen erweitert.</p>
+<p class="text">Dazu kommt das Abrufen. Die App zeigt Bilder nicht nur, sie fragt sie ab: Stationen eines Buchs in die richtige Reihenfolge bringen, ein Bild seinem Kapitel zuordnen, Lücken im Merkvers füllen. Abgefragt wird nach einem Tag und nach einer Woche, danach in grösseren Abständen. Der Lernmodus mit Merkversen, den es schon gibt, wird dafür um Bildfragen erweitert.</p>
 </section>
 
 <section id="zugang">
@@ -357,10 +357,10 @@ td.pct {{ font-variant-numeric: tabular-nums; white-space: nowrap }}
 
 <section id="umfang">
 <h2>Umfang, Kosten, Reihenfolge</h2>
-<p class="text">Hochgerechnet aus den analysierten Büchern hat die Bibel rund 4000 Abschnitte mit zusammen etwa 9500 Bildfeldern. Etwa ein Drittel davon sind Szenen. Gemalt haben bisher rund 0,40 Dollar je Szene gekostet, einschliesslich Wiederholungen und Prüfung. Strukturbilder kosten kaum etwas, nur ihre Vignetten. Die ganze Bibel liegt damit in der Grössenordnung von 1500 bis 2500 Dollar für Bilder, verteilt über die Zeit. Das ist eine grobe Schätzung.</p>
+<p class="text">Hochgerechnet aus den analysierten Büchern hat die Bibel rund 4000 Abschnitte mit zusammen etwa 9500 Bildfeldern. Etwa ein Drittel davon, rund 3200, sind Szenen. Gemalt haben bisher rund 0,40 Dollar je Szene gekostet, einschliesslich Wiederholungen und Prüfung; das ergibt rund 1300 Dollar. Dazu kommen Vignetten für Strukturbilder (vielleicht 2000 Stück), Neuprüfungen bei Regeländerungen und schwierige Fälle. Die ganze Bibel liegt damit grob bei 1500 bis 2500 Dollar für Bilder, verteilt über die Zeit.</p>
 <div class="phasen">
   <div><b>1 · Gerüst</b><p>Bibliothek, grosse Geschichte, Zeitleiste, Karte und für alle 66 Bücher die Buchebene mit 4–6 Stationen. Rund 350 Felder. Gibt sofort Orientierung über die ganze Bibel.</p></div>
-  <div><b>2 · Erzählungen</b><p>Abschnitte der erzählenden Bücher: Genesis bis Ester, Evangelien, Apostelgeschichte, dazu Jona, Rut, Daniel 1–6.</p></div>
+  <div><b>2 · Erzählungen</b><p>Abschnitte der erzählenden Bücher: Genesis bis Ester, Evangelien, Apostelgeschichte, dazu Jona und Daniel 1–6.</p></div>
   <div><b>3 · Struktur</b><p>Briefe, Psalmen, Weisheit, Propheten, Gesetz als Strukturbilder mit Vignetten. Braucht zuerst den Zeichner für die 20 Darstellungen.</p></div>
   <div><b>4 · Einprägen</b><p>Merkverse mit Bild, Bildfragen im Lernmodus, Audio, Wiederholungsplan. Danach Test mit Leserinnen und Lesern verschiedener Herkunft.</p></div>
 </div>
