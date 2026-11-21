@@ -220,6 +220,8 @@ def schreibe(buch, d):
             sz["struktur"] = s["struktur"]
         if s.get("ausnahmen"):
             sz["ausnahmen"] = s["ausnahmen"]
+        if s.get("moment_de"):
+            sz["moment_de"] = s["moment_de"]
         if not hat_brief or s.get("band"):
             sz["band"] = s["band"]   # bei Bildauftrag nur, wenn das Band dort zu lang ist (Wortlaut gekürzt)
         szenen[s["id"]] = sz

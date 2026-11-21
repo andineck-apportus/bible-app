@@ -47,7 +47,8 @@ def kontext():
         for b in pd["bilder"]:
             panels = BA.lade(BA.D / f"briefs/{b['brief']}.json")["panels"]
             for sid, p_ in zip(b["felder"], panels):
-                momente.setdefault(sid, p_["action_de"])
+                # Bildwort ohne Handlung (Lied, Weisheit): «moment_de» im Szenenplan beschreibt, was das Bild zeigen soll
+                momente.setdefault(sid, pd["szenen"][sid].get("moment_de") or p_["action_de"])
                 band.setdefault(sid, (b["felder"].index(sid) + 1, b.get("band", {}).get(sid) or pd["szenen"][sid].get("band") or p_.get("keywords") or {}))
     return plaene, fig, allg, szenen, momente, band
 
