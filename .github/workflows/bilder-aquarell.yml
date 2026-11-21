@@ -153,15 +153,20 @@ jobs:
           git reset -q --hard
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
-            git fetch --depth 1 origin bildpilot-ausgabe
-            git checkout -B bildpilot-ausgabe FETCH_HEAD
-          else
-            git checkout --orphan bildpilot-ausgabe
-            git rm -rfq .
-          fi
-          mkdir -p ausgabe/aquarell
-          cp -r "$RUNNER_TEMP/aquarell/." ausgabe/aquarell/
-          git add ausgabe
-          git commit -qm "Bilder Aquarell: Lauf $LAUF"
-          git push origin bildpilot-ausgabe
+          # parallele Läufe schreiben auf denselben Branch: bei Konflikt neu holen und wiederholen (Lauf 49 ohne Bericht)
+          for versuch in 1 2 3 4 5 6 7 8; do
+            if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
+              git fetch -q --depth 1 origin bildpilot-ausgabe
+              git checkout -qf -B bildpilot-ausgabe FETCH_HEAD
+            else
+              git checkout -q --orphan bildpilot-ausgabe
+              git rm -rfq . || true
+            fi
+            mkdir -p ausgabe/aquarell
+            cp -r "$RUNNER_TEMP/aquarell/." ausgabe/aquarell/
+            git add ausgabe
+            git commit -qm "Bilder Aquarell: Lauf $LAUF"
+            if git push -q origin bildpilot-ausgabe; then exit 0; fi
+            sleep $(( (RANDOM % 20) + 5 ))
+          done
+          exit 1
