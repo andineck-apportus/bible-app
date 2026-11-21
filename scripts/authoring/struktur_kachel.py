@@ -16,6 +16,7 @@ FARBE = {"a": ("#EFE3D4", "#BD8067"), "b": ("#E3EAEC", "#6F8F9B"), "n": ("#ECEEE
 SANS = "Inter, Helvetica, Arial, sans-serif"
 SERIF = "Georgia, 'Times New Roman', serif"
 FS, FS_REF = 17, 12.5
+BETONT = "#EDD3B4"   # Fläche betonter Glieder (Höhepunkt, Pointe)
 
 
 def esc(s):
@@ -72,8 +73,9 @@ def box(x, y, w, h, seite="n", betont=False, gestrichen=False):
     fill, rand = FARBE.get(seite, FARBE["n"])
     if gestrichen:
         fill = "#EEEAE3"
-    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="7" fill="{fill}" stroke="{FARBE["akzent"] if betont else rand}" '
-            f'stroke-width="{2.2 if betont else 1}" stroke-opacity="{1 if betont else .55}"/>')
+    if betont:   # betont = wärmere Fläche, kein Rahmen in Akzentfarbe (wirkte wie «ausgewählt», Rückmeldung Andi Neck 2026-11-21)
+        fill = BETONT
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="7" fill="{fill}" stroke="{rand}" stroke-width="1" stroke-opacity=".55"/>')
 
 
 def pfeil(x1, y1, x2, y2, farbe=MUTED):
@@ -126,8 +128,10 @@ def _spalten(sx, el, y0):
         for i, e in enumerate(reihe):
             y = start + i * (h + 8)
             o.append(box(x, y, w, h, s, e.get("betont"), e.get("gestrichen")))
-            svg, z = zweisprachig(x + 12, y + h / 2 - (5 if e.get("ref") and h > 44 else 0), e, 26, fs=FS if h > 40 else 15,
-                                  fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
+            mit_ref = e.get("ref") and h > 44
+            fs, zl = passend(e, w - 22, h - (24 if mit_ref else 8), FS if h > 40 else 15)
+            svg, z = zweisprachig(x + 12, y + (h - (14 if mit_ref else 0)) / 2, e, zl, fs=fs,
+                                  fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"), weight=600 if e.get("betont") else 400)
             o.append(svg)
             if e.get("ref") and h > 44:
                 o.append(ref_text(x + w - 10, y + h - 9, e["ref"], "end"))
@@ -163,20 +167,26 @@ def _raster(sx, el, y0):
     for i, e in enumerate(el):
         r, c = divmod(i, cols)
         x, y = 20 + c * (w + gap), y0 + r * (h + gap)
-        o.append(box(x, y, w, h, "a" if e.get("betont") else "n", e.get("betont")))
-        o.append(f'<circle cx="{x + 16}" cy="{y + 16}" r="11" fill="{PAPER}" stroke="{FARBE["n"][1]}"/>'
-                 f'<text x="{x + 16}" y="{y + 20.5}" font-family="{SANS}" font-size="12.5" text-anchor="middle" fill="{INK}">{i + 1}</text>')
-        fs0 = fs = FS if cols < 4 else 15
-        while fs > 12:   # lange Beschriftung: Schrift verkleinern, bis sie über Nummer und Stelle passt (Ex 11–12 ragte hinaus)
-            n_z = max(10, int(w / 9.4 * fs0 / fs))
-            if max(len(umbruch(e.get(lg) or e.get("de") or "", n_z)) for lg in ("de", "gsw")) * fs * 1.24 <= h - 30:
-                break
-            fs -= 1
-        svg, _ = zweisprachig(x + w / 2, y + h / 2 + 4, e, max(10, int(w / 9.4 * fs0 / fs)), fs=fs, anchor="middle")
+        o.append(box(x, y, w, h, "n", e.get("betont"), e.get("gestrichen")))
+        o.append(f'<text x="{x + 9}" y="{y + 15}" font-family="{SANS}" font-size="11.5" fill="{MUTED}">{i + 1}</text>')
+        oben, unten = y + 18, y + h - (17 if e.get("ref") else 6)   # Textfläche zwischen Nummer und Stelle
+        fs, zl = passend(e, w - 18, unten - oben, FS if cols < 4 else 15)
+        svg, _ = zweisprachig(x + w / 2, (oben + unten) / 2, e, zl, fs=fs, anchor="middle", weight=600 if e.get("betont") else 400,
+                              fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
         o.append(svg)
         if e.get("ref"):
-            o.append(ref_text(x + w - 8, y + h - 7, e["ref"], "end"))
+            o.append(ref_text(x + w - 8, y + h - 6, e["ref"], "end"))
     return "".join(o)
+
+
+def passend(e, breite, hoehe, fs=FS, fs_min=11.5):
+    """Grösste Schrift (bis fs), bei der beide Sprachen in die Fläche passen; liefert (Schriftgrösse, Zeichen je Zeile)."""
+    while True:
+        zl = max(6, int(breite / (fs * 0.56)))
+        z = max(len(umbruch(e.get(lg) or e.get("de") or "", zl)) for lg in ("de", "gsw"))
+        if z * fs * 1.24 <= hoehe or fs <= fs_min:
+            return fs, zl
+        fs -= 0.5
 
 
 def _kurve(sx, el, y0):
@@ -199,10 +209,10 @@ def _kurve(sx, el, y0):
         n = int((x - 14) / 8.4) if r == "ab" else int((W - x - 14) / 8.4)
         if r == "ab":
             svg, z = zweisprachig(x - 14, y, e, n, fs=15, anchor="end")
-            o.append(svg + ref_text(x - 14, y + 10 + z * 9.3, e.get("ref"), "end"))
+            o.append(svg + ref_text(x + 10, y - 8, e.get("ref"), "start"))   # Stelle innen neben dem Punkt, abwärts darüber, aufwärts darunter
         else:
             svg, z = zweisprachig(x + 14, y, e, n, fs=15)
-            o.append(svg + ref_text(x + 14, y + 10 + z * 9.3, e.get("ref")))
+            o.append(svg + ref_text(x - 10, y + 18, e.get("ref"), "end"))
     if sx.get("mitte"):
         svg, _ = zweisprachig(tief_x, tief_y + 26, sx["mitte"], 44, fs=15, anchor="middle", fill=FARBE["akzent"], italic=True)
         o.append(svg)
@@ -214,7 +224,7 @@ def _spiegel(sx, el, y0):
     kopf = sx.get("kopf") or {}
     a = [e for e in el if e.get("seite") == "a"]
     b = [e for e in el if e.get("seite") == "b"]
-    oben, unten, xl, xr = y0 + 34, H - 64, 80, 520
+    oben, unten, xl, xr = y0 + 34, H - 84, 80, 520   # unten Platz für zwei Zeilen und die Legende
     # Seite a fällt (oben links → unten rechts, gestrichelt), Seite b steigt (unten links → oben rechts); so schreiben es alle Buchgerüste
     o.append(f'<path d="M{xl} {oben} C 230 {oben + 10}, 370 {unten - 10}, {xr} {unten}" fill="none" stroke="{FARBE["a"][1]}" stroke-width="3.5" stroke-dasharray="9 6"/>')
     o.append(f'<path d="M{xl} {unten} C 230 {unten - 10}, 370 {oben + 10}, {xr} {oben}" fill="none" stroke="{FARBE["b"][1]}" stroke-width="3.5"/>')
@@ -231,9 +241,9 @@ def _spiegel(sx, el, y0):
         if kopf.get(s):
             leg.append((s, stil))
     for i, (s, stil) in enumerate(leg):
-        x = 150 + i * 190
+        x = 70 + i * 250
         o.append(f'<line x1="{x}" x2="{x + 36}" y1="{H - 16}" y2="{H - 16}" stroke="{FARBE[s][1]}" stroke-width="3.5" {stil}/>')
-        svg, _ = zweisprachig(x + 44, H - 16, kopf[s], 22, fs=14.5, fill=FARBE[s][1], weight=600)
+        svg, _ = zweisprachig(x + 44, H - 16, kopf[s], 60, fs=14.5, fill=FARBE[s][1], weight=600)
         o.append(svg)
     if sx.get("mitte"):
         o.append(f'<rect x="{W / 2 - 120}" y="{(oben + unten) / 2 - 24}" width="240" height="48" rx="8" fill="{PAPER}" stroke="{RULE}"/>')
@@ -243,25 +253,23 @@ def _spiegel(sx, el, y0):
 
 
 def _reihe(sx, el, y0):
+    """Nummerierte Stationen senkrecht (Ablauf von oben nach unten); waagrecht überlappten die Beschriftungen."""
     o = []
     n = len(el)
-    linie_y = y0 + (H - y0) / 2 - 6
-    x0, x1 = 50, W - 50
-    o.append(f'<line x1="{x0 - 20}" x2="{x1 + 20}" y1="{linie_y}" y2="{linie_y}" stroke="{RULE}" stroke-width="3"/>')
-    schritt = (x1 - x0) / max(1, n - 1)
-    zeichen = max(9, int(schritt / 8.6))
+    schritt = min(64, (H - y0 - 16) / n)
+    start = y0 + (H - y0 - 16 - schritt * n) / 2 + schritt / 2
+    xk = 62
+    o.append(f'<line x1="{xk}" x2="{xk}" y1="{start - schritt / 2 + 6}" y2="{start + schritt * (n - 0.5) - 6}" stroke="{RULE}" stroke-width="3"/>')
     for i, e in enumerate(el):
-        x = x0 + i * schritt
-        farbe = FARBE["akzent"] if e.get("betont") else FARBE["n"][1]
-        o.append(f'<circle cx="{x:.0f}" cy="{linie_y}" r="15" fill="{PAPER}" stroke="{farbe}" stroke-width="2"/>'
-                 f'<text x="{x:.0f}" y="{linie_y + 5}" font-family="{SANS}" font-size="14" text-anchor="middle" fill="{INK}">{i + 1}</text>')
-        oben = i % 2 == 0
-        y = linie_y - 40 if oben else linie_y + 44
-        svg, z = zweisprachig(x, y - (z_hoch(e, zeichen) - 1) * 9 if oben else y, e, zeichen, fs=15, anchor="middle", weight=600 if e.get("betont") else 400)
+        y = start + i * schritt
+        fuell = BETONT if e.get("betont") else PAPER
+        o.append(f'<circle cx="{xk}" cy="{y:.1f}" r="14" fill="{fuell}" stroke="{FARBE["n"][1]}" stroke-width="1.6"/>'
+                 f'<text x="{xk}" y="{y + 4.8:.1f}" font-family="{SANS}" font-size="13.5" text-anchor="middle" fill="{INK}">{i + 1}</text>')
+        fs, zl = passend(e, 410, schritt - 8, FS)
+        svg, _ = zweisprachig(xk + 28, y, e, zl, fs=fs, weight=600 if e.get("betont") else 400)
         o.append(svg)
         if e.get("ref"):
-            o.append(ref_text(x, (linie_y - 22) if oben else (y + z * 18 + 6), e["ref"], "middle") if not oben else
-                     ref_text(x, linie_y - 24, e["ref"], "middle"))
+            o.append(ref_text(W - 22, y + 4, e["ref"], "end"))
     return "".join(o)
 
 
@@ -306,16 +314,60 @@ def _ringe(sx, el, y0):
         for e, x, w, anchor, m in ((l, 20 + einzug, 250 - einzug, "start", marken[i]), (r, W - 20 - (250 - einzug), 250 - einzug, "start", marken[i] + "′")):
             o.append(box(x, y, w, h, "a" if x < W / 2 else "b", e.get("betont")))
             o.append(f'<text x="{x + 10}" y="{y + 18}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{m}</text>')
-            svg, _ = zweisprachig(x + 30, y + h / 2, e, max(10, int((w - 40) / 9)), fs=15.5)
+            fs, zl = passend(e, w - 40, h - (20 if e.get("ref") else 8), 15.5)
+            svg, _ = zweisprachig(x + 30, y + (h - (12 if e.get("ref") else 0)) / 2, e, zl, fs=fs)
             o.append(svg + ref_text(x + w - 8, y + h - 6, e.get("ref"), "end"))
     mitte = sx.get("mitte") or rest
+    y_frei = y0 + stufen * (h + 8) + 4
+    if rest is not None and sx.get("mitte"):   # ungerade Zahl mit eigener Mitte: innerstes Glied nicht verlieren (Num 2, Dtn 6, Jud, Klgl)
+        hr = min(52, (H - y_frei - 12) / 2 - 6)
+        x, w = W / 2 - 170, 340
+        o.append(box(x, y_frei, w, hr, "n", rest.get("betont")))
+        o.append(f'<text x="{x + 10}" y="{y_frei + 18}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{marken[stufen]}</text>')
+        fs, zl = passend(rest, w - 60, hr - (18 if rest.get("ref") else 8), 15.5)
+        svg, _ = zweisprachig(W / 2, y_frei + (hr - (12 if rest.get("ref") else 0)) / 2, rest, zl, fs=fs, anchor="middle")
+        o.append(svg + ref_text(x + w - 8, y_frei + hr - 6, rest.get("ref"), "end"))
+        y_frei += hr + 8
     if mitte:
-        y_frei = y0 + stufen * (h + 8) + 4
         hm = min(96, H - y_frei - 12)
         y = y_frei + (H - y_frei - 12 - hm) / 2
-        o.append(f'<rect x="{W / 2 - 170}" y="{y}" width="340" height="{hm}" rx="10" fill="#F4E7DA" stroke="{FARBE["akzent"]}" stroke-width="2"/>')
-        svg, _ = zweisprachig(W / 2, y + hm / 2 - 4, mitte, 34, fs=17, anchor="middle", weight=600)
+        o.append(f'<rect x="{W / 2 - 170}" y="{y}" width="340" height="{hm}" rx="10" fill="{BETONT}" stroke="{FARBE["a"][1]}" stroke-opacity=".55"/>')
+        fs, zl = passend(mitte, 300, hm - (22 if mitte.get("ref") else 8), 17)
+        svg, _ = zweisprachig(W / 2, y + hm / 2 - (6 if mitte.get("ref") else 0), mitte, zl, fs=fs, anchor="middle", weight=600)
         o.append(svg + ref_text(W / 2, y + hm - 8, mitte.get("ref"), "middle"))
+    return "".join(o)
+
+
+def _lager(sx, el, y0):
+    """Lagerplan um eine Mitte (Num 2): Norden oben, Osten rechts; «innen» als Ring um die Mitte. Elemente mit seite n/o/s/w/innen."""
+    o = []
+    cx, cy = W / 2, y0 + (H - y0 - 8) / 2
+    mw, mh = 150, 56
+    seiten = {e.get("seite"): e for e in el}
+    if seiten.get("innen"):
+        rw, rh = mw + 56, mh + 58
+        o.append(f'<rect x="{cx - rw / 2}" y="{cy - rh / 2}" width="{rw}" height="{rh}" rx="16" fill="none" stroke="{FARBE["b"][1]}" '
+                 f'stroke-width="1.6" stroke-dasharray="6 5"/>')
+        e = seiten["innen"]
+        svg, _ = zweisprachig(cx, cy - rh / 2 + 14, e, 30, fs=13, anchor="middle", fill=FARBE["b"][1], weight=600)
+        o.append(svg + ref_text(cx, cy + rh / 2 - 7, e.get("ref"), "middle"))
+    m = sx.get("mitte") or {}
+    o.append(f'<rect x="{cx - mw / 2}" y="{cy - mh / 2}" width="{mw}" height="{mh}" rx="9" fill="{BETONT}" stroke="{FARBE["a"][1]}" stroke-opacity=".55"/>')
+    fs, zl = passend(m, mw - 16, mh - 8, 15.5)
+    svg, _ = zweisprachig(cx, cy, m, zl, fs=fs, anchor="middle", weight=600)
+    o.append(svg)
+    bw, bh = 168, 64
+    lage = {"n": (cx - bw / 2, y0 + 2, "N"), "s": (cx - bw / 2, H - 12 - bh, "S"),
+            "w": (16, cy - bh / 2, "W"), "o": (W - 16 - bw, cy - bh / 2, "O")}
+    for k, (x, y, marke) in lage.items():
+        e = seiten.get(k)
+        if not e:
+            continue
+        o.append(box(x, y, bw, bh, "n", e.get("betont")))
+        o.append(f'<text x="{x + 9}" y="{y + 16}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{marke}</text>')
+        fs, zl = passend(e, bw - 30, bh - (20 if e.get("ref") else 8), 15)
+        svg, _ = zweisprachig(x + bw / 2 + 6, y + (bh - (12 if e.get("ref") else 0)) / 2 + 2, e, zl, fs=fs, anchor="middle")
+        o.append(svg + ref_text(x + bw - 8, y + bh - 6, e.get("ref"), "end"))
     return "".join(o)
 
 

@@ -46,7 +46,7 @@ FORMAT = """
      "evidence": [{"s": "B", "ref": "GEN.1.3", "de": "…"}, {"s": "R", "de": "…"}, {"s": "I", "de": "…"}],
      "pruefung": [{"id": "B1-…", "art": "muss|nicht", "stufe": "pflicht|soll", "s": "B|R|I", "ref": "GEN.1.3", "de": "…", "en": "…?"}]},
     {"id": "GEN-B2", "reference": "…", "action_de": "…", "band": {…}, "form": "struktur", "form_grund_de": "…",
-     "struktur": {"typ": "spalten|kette|raster|kurve|spiegel|reihe|ebenen|ringe",
+     "struktur": {"typ": "spalten|kette|raster|kurve|spiegel|reihe|ebenen|ringe|lager",
                   "titel": {"de": "…", "gsw": "…"},
                   "kopf": {"a": {"de": "…", "gsw": "…"}, "b": {"de": "…", "gsw": "…"}},
                   "mitte": {"de": "…", "gsw": "…", "ref": "…"},
@@ -57,7 +57,7 @@ FORMAT = """
 """
 
 TYPEN = {  # Anzahl Elemente (min, max) und erlaubte Zusatzfelder
-    "spalten": (4, 12), "kette": (3, 5), "raster": (3, 12), "kurve": (4, 8), "spiegel": (2, 4), "reihe": (3, 7), "ebenen": (2, 6), "ringe": (2, 6),
+    "spalten": (4, 12), "kette": (3, 5), "raster": (3, 12), "kurve": (4, 8), "spiegel": (2, 4), "reihe": (3, 7), "ebenen": (2, 6), "ringe": (2, 6), "lager": (3, 5),
 }
 LABEL_MAX = 40
 BAND_MAX = 46
@@ -180,8 +180,10 @@ def pruefe(d, buch):
                     f.append(f"{sid}: {typ}: kopf a und b nötig")
             if typ == "kurve" and not all(e.get("richtung") in ("ab", "auf") for e in el):
                 f.append(f"{sid}: kurve: jedes Element braucht richtung ab oder auf")
-            if typ == "ringe" and not sx.get("mitte"):
-                f.append(f"{sid}: ringe: mitte nötig")
+            if typ in ("ringe", "lager") and not sx.get("mitte"):
+                f.append(f"{sid}: {typ}: mitte nötig")
+            if typ == "lager" and any(e.get("seite") not in ("n", "o", "s", "w", "innen") for e in sx.get("elemente") or []):
+                f.append(f"{sid}: lager: seite je Element n, o, s, w oder innen")
         else:
             f.append(f"{sid}: form muss szene oder struktur sein")
     for fid, nf in (d.get("neue_figuren") or {}).items():
