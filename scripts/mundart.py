@@ -82,13 +82,14 @@ _ZIEL_R3 = {"läär": "leer", "lääre": "leere", "lääri": "leeri", "lääres"
             "dörfid": "dörfed", "seigid": "seiged"}
 _ERGAENZT["Runde 4"] = ("zügnis zügnisse ellei det gförchtet förchte förcht förchted verriisse umchert umchere umchered "
                        "umgchert chräie erniedriget erniedrige aagchündt stärn stärne eues voruusgseit voruussag "
-                       "voruussetze voruusgsetzt")
+                       "voruussetze voruusgsetzt chilelich chilchlich straaf")
 _ZIEL_R4 = {"zügnis": "züügnis", "zügnisse": "züügnisse", "ellei": "elei", "det": "dört", "gförchtet": "gfürchtet",
             "förchte": "fürchte", "förcht": "fürcht", "förchted": "fürchted", "verriisse": "verrisse",
             "umchert": "umchehrt", "umchere": "umchehre", "umchered": "umchehred", "umgchert": "umgchehrt",
             "chräie": "chrähe", "erniedriget": "ernidriget", "erniedrige": "ernidrige", "aagchündt": "aagchündet",
             "stärn": "stern", "stärne": "sterne", "eues": "öies", "voruusgseit": "vorusgseit",
-            "voruussag": "vorussag", "voruussetze": "vorussetze", "voruusgsetzt": "vorusgsetzt"}
+            "voruussag": "vorussag", "voruussetze": "vorussetze", "voruusgsetzt": "vorusgsetzt",
+            "chilelich": "chirchlich", "chilchlich": "chirchlich", "straaf": "straf"}
 _ZIEL = {
     "broot": "brot", "taag": "tag", "aabig": "abig", "raat": "rat", "schlaaf": "schlaf",
     "schlaafe": "schlafe", "lüüg": "lüg", "ee": "ehe", "vee": "veh", "befeel": "befehl", "befole": "befohle",
@@ -154,7 +155,7 @@ _WORT = re.compile(r"[A-Za-zÄÖÜäöüÀ-ÿ]+")
 
 # Werktitel und wörtliche fremdsprachige Zitate (Regel Runde 4): vor der Prüfung entfernt
 FREMD = ["Matthew's Gospel", "Luke's Gospel", "Abba Isn't Daddy", "Das Evangelium des Johannes", "La date de la Cène",
-         "Im Anfang war die Tat", "Giv'at ha-Mivtar", "Nevi'im", "ta'am", "La Légende des siècles", "Luke's"]
+         "Im Anfang war die Tat", "Giv'at ha-Mivtar", "Nevi'im", "ta'am", "La Légende des siècles", "Luke's", "ra'a"]
 
 
 def pruefe(text):

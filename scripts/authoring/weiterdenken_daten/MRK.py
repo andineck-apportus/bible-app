@@ -682,7 +682,7 @@ _Q = [
     (183, _tu("014-001-011"), 1, "Warum soll man überall von dieser Frau erzählen – obwohl ihr Name nicht genannt wird?",
      "Jesus sagt: «Wo immer das Evangelium verkündigt wird …, wird auch erzählt werden, was sie getan hat» ([[MRK.14.9]]).",
      "Wieso söll me überall vo dere Frau verzelle – obwohl ire Name nöd gnännt wird?",
-     "De Jesus seit: «Wo immer me i de ganze Wält s Evangelium verchündet, det verzellt me au, was die gmacht hät» ([[MRK.14.9]])."),
+     "De Jesus seit: «Wo immer me i de ganze Wält s Evangelium verchündet, dört verzellt me au, was die gmacht hät» ([[MRK.14.9]])."),
     (184, _tu("014-001-011"), 2, "Ist das Salböl verschwendet?",
      None, "Isch s Salböl verschwändet?", None),
     (185, _tu("014-001-011"), 3, "Was mag Judas bewogen haben, zu den Hohepriestern zu gehen – wo der Text keinen Grund nennt?",

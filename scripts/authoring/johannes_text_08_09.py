@@ -156,12 +156,12 @@ GSW = {
  "JHN.8.10": "[De Jesus]{3,4} [aber]{2} [hät sich ufgrichtet]{1}, und{5} [won er]{7} [niemer]{6} [gseh hät]{7} [usser]{8} [de]{9} [Frau]{10}, [hät er]{11} [zu ire]{12} [gseit]{11}: «[Wo]{13} [sind]{14} [si]{15}, [dini]{18} [Aachläger]{16,17}? [Hät]{21} [di]{20} [niemer]{19} [verurteilt]{21}?»",
  "JHN.8.11": "[Si]{1} [aber]{2} [hät gseit]{3}: «[Niemer]{4}, [Herr]{5}.» [De Jesus]{8,9} [aber]{7} [hät gseit]{6}: «[Ich]{11} [verurteile]{13} [di]{12} [au nöd]{10}. [Gang]{14}, und{15} [sündig]{17} [nüme]{16}!»⟧",
  "JHN.8.12": "[Dänn]{2} [hät]{4} [de Jesus]{5,6} [wider]{1} [zu ine]{3} [gredt]{4} [und gseit]{7}: «[Ich]{8} [bi]{9} [s Liecht]{10,11} [vo de Wält]{12,13}. [Wär]{14} [mir]{16} [nachegaat]{15}, [lauft]{19} [sicher nöd]{17,18} [i]{20} [de Fiischteri]{21,22}, [sondern]{23} [hät]{24} [s Liecht]{25,26} [vom Läbe]{27,28}.»",
- "JHN.8.13": "[Dänn]{2} [händ]{1} [d Pharisäer]{4,5} [zu ihm]{3} [gseit]{1}: «[Du]{6} [gisch]{9} [über]{7} [dich sälber]{8} [Zügnis]{9}; [dis]{12} [Zügnis]{10,11} [isch]{14} [nöd]{13} [wahr]{15}.»",
- "JHN.8.14": "[De Jesus]{2} [hät]{1} [ine]{5} [gantwortet]{1} und{3} [gseit]{4}: «[Au wänn]{6} [ich]{7} [über]{9} [mich sälber]{10} [Zügnis gib]{8}, [isch]{12} [mis]{15} [Zügnis]{13,14} [wahr]{11}, [wil]{16} [ich weiss]{17}, [vo wo]{18} [ich choo bi]{19} und{20} [wo]{21} [ich ane gaa]{22}; [ir]{23} [aber]{24} [wüssed]{26} [nöd]{25}, [vo wo]{27} [ich chume]{28} [oder]{29} [wo]{30} [ich ane gaa]{31}.",
+ "JHN.8.13": "[Dänn]{2} [händ]{1} [d Pharisäer]{4,5} [zu ihm]{3} [gseit]{1}: «[Du]{6} [gisch]{9} [über]{7} [dich sälber]{8} [Züügnis]{9}; [dis]{12} [Züügnis]{10,11} [isch]{14} [nöd]{13} [wahr]{15}.»",
+ "JHN.8.14": "[De Jesus]{2} [hät]{1} [ine]{5} [gantwortet]{1} und{3} [gseit]{4}: «[Au wänn]{6} [ich]{7} [über]{9} [mich sälber]{10} [Züügnis gib]{8}, [isch]{12} [mis]{15} [Züügnis]{13,14} [wahr]{11}, [wil]{16} [ich weiss]{17}, [vo wo]{18} [ich choo bi]{19} und{20} [wo]{21} [ich ane gaa]{22}; [ir]{23} [aber]{24} [wüssed]{26} [nöd]{25}, [vo wo]{27} [ich chume]{28} [oder]{29} [wo]{30} [ich ane gaa]{31}.",
  "JHN.8.15": "[Ir]{1} [richted]{5} [nach]{2} [em]{3} [Fleisch]{4}, [ich]{6} [richte]{8} [niemer]{7,9}.",
  "JHN.8.16": "[Und]{1} [wänn]{2} [ich]{5} [dänn]{4} [richte]{3}, [isch]{11} [mis]{8,9} [Urteil]{6,7} [wahr]{10}, [wil]{12} [ich]{15} [nöd]{14} [elei]{13} [bi]{15}, [sondern]{16} [ich]{17} und{18} [de Vatter]{22}, [wo]{19} [mich]{21} [gschickt hät]{20}.",
- "JHN.8.17": "[Au]{1,5} [i]{2} [öiem]{6,7} [Gsetz]{3,4} [staat gschribe]{8}, [dass]{9} [s Zügnis]{12,13} [vo zwei]{10} [Mänsche]{11} [wahr]{14} [isch]{15}.",
- "JHN.8.18": "[Ich]{1} [bi]{2} [dä]{3}, [wo]{4} [über]{5} [mich sälber]{6} [Zügnis git]{4}, und{7} [über]{9} [mich]{10} [git]{8} [de Vatter]{14} [Zügnis]{8}, [wo]{11} [mich]{13} [gschickt hät]{12}.»",
+ "JHN.8.17": "[Au]{1,5} [i]{2} [öiem]{6,7} [Gsetz]{3,4} [staat gschribe]{8}, [dass]{9} [s Züügnis]{12,13} [vo zwei]{10} [Mänsche]{11} [wahr]{14} [isch]{15}.",
+ "JHN.8.18": "[Ich]{1} [bi]{2} [dä]{3}, [wo]{4} [über]{5} [mich sälber]{6} [Züügnis git]{4}, und{7} [über]{9} [mich]{10} [git]{8} [de Vatter]{14} [Züügnis]{8}, [wo]{11} [mich]{13} [gschickt hät]{12}.»",
  "JHN.8.19": "[Dänn]{2} [händ si]{1} [zu ihm]{3} [gseit]{1}: «[Wo]{4} [isch]{5} [din]{8} [Vatter]{6,7}?» [De Jesus]{10} [hät gantwortet]{9}: «[Ir känned]{13} [weder]{11} [mich]{12} [no]{14} [min]{17} [Vatter]{15,16}; [wänn]{18} [ir]{20} [mich]{19} [würded känne]{20}, [dänn würded ir]{25} [au]{21} [min]{24} [Vatter]{22,23} [känne]{26}.»",
  "JHN.8.20": "[Die]{1} [Wort]{2,3} [hät er]{4} [bi]{5} [de]{6} [Schatzchammer]{7} [gredt]{4}, [won er]{8} [im]{9,10} [Tempel]{11} [glehrt hät]{8}; und{12} [niemer]{13} [hät]{14} [en]{15} [verhaftet]{14}, [wil]{16} [sini]{21} [Stund]{19,20} [no nöd]{17} [choo gsii isch]{18}.",
  "JHN.8.21": "[Dänn]{2} [hät er]{1} [wider]{3} [zu ine]{4} [gseit]{1}: «[Ich]{5} [gaa wäg]{6}, und{7} [ir sueched]{8} [mich]{9}, und{10} [ir sterbed]{15} [i]{11} [öiere]{12,14} [Sünd]{13}. [Wo]{16} [ich]{17} [ane gaa]{18}, [chönd]{21} [ir]{19} [nöd]{20} [häre choo]{22}.»",
@@ -608,7 +608,7 @@ UNITS = [
 UNITS_GSW = {
  "TU-JHN-008-001-059": ("D Frau vor em Jesus, s Liecht vo de Wält und de Striit um de Abraham",
   "Im Tempel bringed Schriftglehrti und Pharisäer e Frau zum Jesus, wo bim Ehebruch verwütscht worde isch; er verurteilt si nöd (dä Abschnitt, [[JHN.7.53]]–[[JHN.8.11]], staat "
-  "im SBLGNT i Doppelklammere ⟦ ⟧). Dänn nännt sich de Jesus s Liecht vo de Wält und berüeft sich gägenüber de Pharisäer uf s Zügnis vom Vatter. Er seit, dass er wäggaat und "
+  "im SBLGNT i Doppelklammere ⟦ ⟧). Dänn nännt sich de Jesus s Liecht vo de Wält und berüeft sich gägenüber de Pharisäer uf s Züügnis vom Vatter. Er seit, dass er wäggaat und "
   "dass si i irer Sünd sterbed, wänn si nöd glaubed, «dass ich bi»; wänn si de Mänschesohn erhöcht händ, wärded si s erchänne. Zu Jude, wo ihm glaubt händ, seit er, wänn si i sim Wort bliibed, wärd d Wahrheit "
   "si frei mache; im Striit, wär ire Vatter seig – de Abraham, Gott oder de Tüüfel –, wirft er ine vor, si welled en töte. Si heissed en en Samaritaner mit eme Dämon. Uf sis "
   "Wort «Bevor de Abraham worde isch, bin ich» nämed si Stei uuf; de Jesus versteckt sich und gaat us em Tempel use."),
@@ -619,9 +619,9 @@ UNITS_GSW = {
   "si nöd, und schickt si furt: Si söll nüme sündige. De SBLGNT setzt de Abschnitt ([[JHN.7.53]]–[[JHN.8.11]]) i Doppelklammere ⟦ ⟧; i de Textforschig wird er wiitume als "
   "spöteri Iifüegig is Johannesevangelium beurteilt. " + PA_GSW + " Nach Aagabe vo de Forschig staat er i es paar spöteri Handschrifte an ere andere Stell. Vili Chile läsed en "
   "als Teil vo de Heilige Schrift."),
- "TU-JHN-008-012-020": ("S Liecht vo de Wält und s Zügnis vom Vatter",
-  "De Jesus seit: «Ich bi s Liecht vo de Wält.» D Pharisäer händ em vor, sis Zügnis über sich sälber seig nöd wahr. De Jesus antwortet, er wüssi, vo won er chömi und wohi er "
-  "gang; nach irem Gsetz gälti s Zügnis vo zwei, und näbe ihm legi de Vatter, won en gschickt hät, Zügnis ab. Er wirft ine vor, si känned weder ihn no sin Vatter. Das seit er bi de "
+ "TU-JHN-008-012-020": ("S Liecht vo de Wält und s Züügnis vom Vatter",
+  "De Jesus seit: «Ich bi s Liecht vo de Wält.» D Pharisäer händ em vor, sis Züügnis über sich sälber seig nöd wahr. De Jesus antwortet, er wüssi, vo won er chömi und wohi er "
+  "gang; nach irem Gsetz gälti s Züügnis vo zwei, und näbe ihm legi de Vatter, won en gschickt hät, Züügnis ab. Er wirft ine vor, si känned weder ihn no sin Vatter. Das seit er bi de "
   "Schatzchammer im Tempel, und niemer nimmt en gfange, wil sini Stund no nöd choo isch."),
  "TU-JHN-008-021-030": ("«Wo ich ane gaa, chönd ir nöd häre choo»",
   "De Jesus seit, er gang wäg, si wärded en sueche und i irer Sünd sterbe. D Jude fröged sich, öb er sich sälber well umbringe. Er seit, si seiged vo unde, er vo obe; wänn si nöd glaubed, "

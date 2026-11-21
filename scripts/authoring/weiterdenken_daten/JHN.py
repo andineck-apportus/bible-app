@@ -150,7 +150,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wär redt da – de Johannes, de Jesus oder de Verzeller?", "note_de": "De Text setzt kei Aafüerigszeiche; d Übersetzige ziehnd d Gränze verschide ([[JHN.3.31]])."}},
     {"id": "REFL-JHN-0034", "subject": "TU-JHN-003-031-036", "order": 2,
      "question_de": "Was unterscheidet ein Zeugnis «von oben» von einem «von der Erde her»?",
-     "gsw": {"question_de": "Was unterscheidet es Zügnis «vo obe» vo eim «vo de Erde här»?"}},
+     "gsw": {"question_de": "Was unterscheidet es Züügnis «vo obe» vo eim «vo de Erde här»?"}},
     # SUM-CH-JHN-004
     {"id": "REFL-JHN-0035", "subject": "SUM-CH-JHN-004", "order": 1,
      "question_de": "Eine Fremde, eine ganze Stadt, ein königlicher Beamter: Wer findet in diesem Kapitel zum Glauben, und wie?",
@@ -497,7 +497,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0120", "subject": "TU-JHN-010-022-039", "order": 1,
      "question_de": "«Sag es uns offen!» – warum genügt eine klare Antwort hier nicht?",
      "note_de": "Jesus verweist auf seine Werke, die von ihm zeugen ([[JHN.10.24-JHN.10.25]]).",
-     "gsw": {"question_de": "«säg s öis offe!» – wieso längt da e klari Antwort nöd?", "note_de": "De Jesus verwiist uf sini Wärch, wo über ihn Zügnis gänd ([[JHN.10.24-JHN.10.25]])."}},
+     "gsw": {"question_de": "«säg s öis offe!» – wieso längt da e klari Antwort nöd?", "note_de": "De Jesus verwiist uf sini Wärch, wo über ihn Züügnis gänd ([[JHN.10.24-JHN.10.25]])."}},
     {"id": "REFL-JHN-0121", "subject": "TU-JHN-010-022-039", "order": 2,
      "question_de": "Was bedeutet es, dass niemand die Schafe «aus meiner Hand reissen» wird?",
      "gsw": {"question_de": "Was bedüütet s, dass niemer d Schaf «us minere Hand» riisst?"}},
@@ -505,7 +505,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0122", "subject": "TU-JHN-010-040-042", "order": 1,
      "question_de": "Johannes hat kein Zeichen getan – und doch glauben die Leute seinem Wort: Was macht ein Zeugnis glaubwürdig?",
      "note_de": "«Johannes hat zwar kein Zeichen getan, aber alles, was Johannes über diesen gesagt hat, war wahr» ([[JHN.10.41]]).",
-     "gsw": {"question_de": "De Johannes hät kei Zeiche gmacht – und glich glaubed d Lüüt sim Wort: Was macht es Zügnis glaubwürdig?", "note_de": "«De Johannes hät zwar kei Zeiche gmacht, aber alles, was de Johannes über dä gseit hät, isch wahr gsii» ([[JHN.10.41]])."}},
+     "gsw": {"question_de": "De Johannes hät kei Zeiche gmacht – und glich glaubed d Lüüt sim Wort: Was macht es Züügnis glaubwürdig?", "note_de": "«De Johannes hät zwar kei Zeiche gmacht, aber alles, was de Johannes über dä gseit hät, isch wahr gsii» ([[JHN.10.41]])."}},
     {"id": "REFL-JHN-0123", "subject": "TU-JHN-010-040-042", "order": 2,
      "question_de": "Warum geht Jesus gerade an den Ort zurück, wo Johannes zuerst getauft hatte?",
      "gsw": {"question_de": "Wieso gaat de Jesus grad a de Ort zrugg, wo de Johannes zerscht tauft hät?"}},
@@ -712,7 +712,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "D Jünger söled mit Hass rächne: Wie ghöred das Mänsche, wo würkli verfolgt wärded – und wie die, wo s nöd wärded?", "note_de": "«Wänn d Wält öi hasst, dänn wüssed, dass si mich vor öi ghasst hät» ([[JHN.15.18]])."}},
     {"id": "REFL-JHN-0173", "subject": "TU-JHN-015-018-027", "order": 2,
      "question_de": "Der Geist legt Zeugnis ab «und auch ihr»: Was ist das Eigene am Zeugnis der Jünger?",
-     "gsw": {"question_de": "De Geischt leit Zügnis ab «und au ir»: Was isch s Eigete am Zügnis vo de Jünger?"}},
+     "gsw": {"question_de": "De Geischt leit Züügnis ab «und au ir»: Was isch s Eigete am Züügnis vo de Jünger?"}},
     # SUM-CH-JHN-016
     {"id": "REFL-JHN-0174", "subject": "SUM-CH-JHN-016", "order": 1,
      "question_de": "Jesus sagt den Jüngern Schweres im Voraus: Hilft es, Schweres vorher zu wissen?",
@@ -928,7 +928,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0225", "subject": "TU-JHN-019-031-037", "order": 1,
      "question_de": "Warum betont der Erzähler so sehr, dass jemand das gesehen hat und sein Zeugnis wahr ist?",
      "note_de": "«Der es gesehen hat, hat es bezeugt, und sein Zeugnis ist wahr … damit auch ihr glaubt» ([[JHN.19.35]]).",
-     "gsw": {"question_de": "Wieso betont de Verzeller so fescht, dass öpper das gseh hät und sis Zügnis wahr isch?", "note_de": "«dä, wo s gseh hät, hät s bezüügt, und sis Zügnis isch wahr … damit au ir glaubed» ([[JHN.19.35]])."}},
+     "gsw": {"question_de": "Wieso betont de Verzeller so fescht, dass öpper das gseh hät und sis Züügnis wahr isch?", "note_de": "«dä, wo s gseh hät, hät s bezüügt, und sis Züügnis isch wahr … damit au ir glaubed» ([[JHN.19.35]])."}},
     {"id": "REFL-JHN-0226", "subject": "TU-JHN-019-031-037", "order": 2,
      "question_de": "Blut und Wasser: Was haben Leser aller Zeiten in diesem Detail gesehen – und was siehst du?",
      "gsw": {"question_de": "Bluet und Wasser: Was händ Läser vo allne Ziite i däm Detail gseh – und was gsehsch du?"}},
@@ -1024,7 +1024,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0249", "subject": "TU-JHN-021-024-025", "order": 1,
      "question_de": "«Wir wissen, dass sein Zeugnis wahr ist» – wer ist dieses «wir»?",
      "note_de": "Der Text unterscheidet den Jünger, der geschrieben hat, von einer Gruppe, die für ihn bürgt ([[JHN.21.24]]).",
-     "gsw": {"question_de": "«mir wüssed, dass sis Zügnis wahr isch» – wär isch das «mir»?", "note_de": "De Text unterscheidet de Jünger, wo gschribe hät, vo nere Gruppe, wo für ihn bürgt ([[JHN.21.24]])."}},
+     "gsw": {"question_de": "«mir wüssed, dass sis Züügnis wahr isch» – wär isch das «mir»?", "note_de": "De Text unterscheidet de Jünger, wo gschribe hät, vo nere Gruppe, wo für ihn bürgt ([[JHN.21.24]])."}},
     {"id": "REFL-JHN-0250", "subject": "TU-JHN-021-024-025", "order": 2,
      "question_de": "Die Welt könnte die Bücher nicht fassen: Was ist mit allem, was nicht aufgeschrieben ist?",
      "gsw": {"question_de": "D Wält chönnt d Büecher nöd fasse: Was isch mit allem, wo nöd ufgschribe isch?"}},
@@ -1055,7 +1055,7 @@ RECEPTIONS = [
      },
      "gsw": {
       "period_de": "um 180",
-      "text_de": "De Irenäus vo Lyon schriibt, de Johannes, de Jünger vom Herr, wo a sinere Bruscht gläge isch, heb s Evangelium usegää, won er z Ephesus i de Provinz Asia gläbt hät. Drus isch di verbreitet chilelich Überliferig zum Verfasser worde; s Buech sälber nännt kei Name ([[JHN.21.24]])."
+      "text_de": "De Irenäus vo Lyon schriibt, de Johannes, de Jünger vom Herr, wo a sinere Bruscht gläge isch, heb s Evangelium usegää, won er z Ephesus i de Provinz Asia gläbt hät. Drus isch di verbreitet chirchlich Überliferig zum Verfasser worde; s Buech sälber nännt kei Name ([[JHN.21.24]])."
      }
     },
     {

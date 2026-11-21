@@ -450,7 +450,7 @@ INTERPRETATIONS = [
    "De Augustinus (Traktat über s Johannesevangelium 122) wiist druf hi, dass 153 d Summe vo de Zahle vo 1 bis 17 isch, und düütet 17 als 10 Gebot und 7 Gabe vom Geischt.",
    "De John A. Emerton (1958) hät d Zahl mit [[EZK.47.10]] verbunde, wo Fischer vo En-Gedi bis En-Eglajim iri Netz usrüered; de Zahlewärt vo de hebräische Buechstabe gäb 17 und 153. Das bliibt e Rächehypothese.",
    "Anderi gsehnd i de Zahl eifach d Erinnerig vo eme Auezüüg, wo de ussergwöhnlich Fang zellt hät; de Erzähler betont au suscht, dass öpper debii gsii isch ([[JHN.21.24]])."],
-  ["verriisse, spalte", "Riss, Spaltig", "Netz", "En-Gedi (Ortsname)", "En-Eglajim (Ortsname)"]),
+  ["verrisse, spalte", "Riss, Spaltig", "Netz", "En-Gedi (Ortsname)", "En-Eglajim (Ortsname)"]),
  ("INT-JHN-3017", U(21, 20, 23), ["FIND-JHN-3019", "FIND-JHN-3021"],
   "Die Richtigstellung in [[JHN.21.23]] setzt voraus, dass unter den «Brüdern» das Wort umlief, der Jünger, den Jesus liebte, werde nicht sterben, und dass dieses Gerücht zur Zeit der Niederschrift erklärungsbedürftig geworden war – am wahrscheinlichsten, weil der Jünger inzwischen gestorben war. Zusammen mit der Ankündigung über Petrus' Tod ([[JHN.21.18-JHN.21.19]]) beantwortet das Kapitel damit Fragen der zweiten Generation: Wie geht es weiter, wenn die ersten Zeugen nicht mehr leben? Die Antwort ist nicht ein gleiches Schicksal für alle, sondern das «Folge mir!» für jeden Einzelnen ([[JHN.21.22]]).",
   "probable",

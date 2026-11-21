@@ -1697,7 +1697,7 @@ ILL = {
     "ILL-ANI-JHN-002-023-025": ("BRIEF-JHN-002-023-025", glaube,
                                 "Menschen in Jerusalem mit leuchtenden Augen unter goldenen Sternen (Zeichen), über ihnen Herzen (sie glauben); eine gestrichelte Linie trennt sie von Jesus, "
                                 "der sich ernst zur Seite abwendet; im Hintergrund der Tempel.",
-                                "Mänsche z Jerusalem mit lüüchtende Auge under goldige Stärn (Zeiche), über ine Härz (si glaubed); e gstrichleti Linie trännt si vom Jesus, "
+                                "Mänsche z Jerusalem mit lüüchtende Auge under goldige Stern (Zeiche), über ine Härz (si glaubed); e gstrichleti Linie trännt si vom Jesus, "
                                 "wo sich ernscht uf d Siite abwändet; im Hindergrund de Tämpel."),
     "ILL-ANI-JHN-002-001-012": ("BRIEF-JHN-002-001-012", kana,
                                 "Comic in vier Bildern ohne Text: 1 Beim Hochzeitsfest zeigt Maria besorgt auf den leeren Weinkrug und den leeren Becher; Jesus antwortet ruhig mit der Sanduhr. "

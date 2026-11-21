@@ -174,7 +174,7 @@ GSW = {
  "MRK.1.41": "Und{1} [voll Zorn]{2} [hät er]{3} [sini]{6} [Hand]{4,5} [usgstreckt]{3}, [hät en]{7} [aagrüert]{7} und{8} [seit]{9} [zu ihm]{10}: «[Ich wott]{11}. [Wird rein]{12}!»",
  "MRK.1.42": "Und{1} [grad]{2} [isch]{3} [de Ussatz]{6,7} [vo]{4} [ihm]{5} [gwiche]{3}, und{8} [er isch rein worde]{9}.",
  "MRK.1.43": "Und{1} [er hät]{2} [en]{3} [hert aagfahre]{2} und [hät]{5} [en]{6} [grad]{4} [furtgschickt]{5}.",
- "MRK.1.44": "Und{1} [er seit]{2} [zu ihm]{3}: «[Pass uuf]{4}, [säg]{7} [niemerem]{5} [nüüt]{6}! [Sondern]{8} [gang]{9}, [zeig]{11} [dich]{10} [em Prieschter]{12,13} und{14} [bring]{15} [für]{16} [dini]{19} [Reinigig]{17,18}, [was]{20} [de Mose]{22} [vorgschribe hät]{21}, [als]{23} [Zügnis]{24} [für si]{25}.»",
+ "MRK.1.44": "Und{1} [er seit]{2} [zu ihm]{3}: «[Pass uuf]{4}, [säg]{7} [niemerem]{5} [nüüt]{6}! [Sondern]{8} [gang]{9}, [zeig]{11} [dich]{10} [em Prieschter]{12,13} und{14} [bring]{15} [für]{16} [dini]{19} [Reinigig]{17,18}, [was]{20} [de Mose]{22} [vorgschribe hät]{21}, [als]{23} [Züügnis]{24} [für si]{25}.»",
  "MRK.1.45": "[Er]{1} [aber]{2} [isch gange]{3} [und hät aagfange]{4}, [vil]{6} [z verzelle]{5} und{7} [d Sach]{9,10} [überall bekannt z mache]{8}, [so dass]{11} [de Jesus]{13} [nüme]{12} [offe]{15} [in]{16} [e Stadt]{17} [hät chöne]{14} [gaa]{18}; [sondern]{19} [er isch]{24} [dusse]{20} [a]{21} [einsame]{22} [Ort]{23} [gsii]{24}. Und{25} d Lüüt [sind]{26} [vo überall här]{29} [zu]{27} [ihm]{28} [choo]{26}.",
  # ------------------------------------------------------------ Kapitel 2
  "MRK.2.1": "Und{1} [won er]{2} [nach es paar]{6} [Täg]{7} [wider]{3} [uf]{4} [Kafarnaum]{5} [choo isch]{2}, [hät me ghört]{8}, [dass]{9} [er]{12} [dihei]{10,11} [isch]{12}.",
@@ -329,7 +329,7 @@ DEC_GSW = [
  ("MRK.1.3", "vom Herr", "literal", "κυρίου", None, ["vo JHWH"], "I [[ISA.40.3]] staat im hebräische Text de Gottesname, i de griechische Bible κύριος. De Markus bezieht de «Wäg vom Herr» uf de Jesus."),
  ("MRK.1.4", "Umkehr", "interpretive", "μετανοίας", "Umdänke", ["Buess"], "μετάνοια isch wörtlich es Umdänke; mitgmeint isch d Rückkehr zu Gott. «Buess» tönt nach Straf. Gliich i [[MRK.1.15]]."),
  ("MRK.1.8", "mit heiligem Geischt", "literal", "ἐν πνεύματι ἁγίῳ", None, ["mit em Heilige Geischt"], "Ohni Artikel, im Gägesatz zu «mit Wasser». I [[MRK.3.29]] mit Artikel."),
- ("MRK.1.10", "ufriisse", "literal", "σχιζομένους", None, ["sich uftue"], "σχίζω heisst spalte, verriisse; es gwaltsams Bild. S gliich Verb staat i [[MRK.15.38]] für de Vorhang im Tempel. Villicht Aaklang a [[ISA.64.1]]."),
+ ("MRK.1.10", "ufriisse", "literal", "σχιζομένους", None, ["sich uftue"], "σχίζω heisst spalte, verrisse; es gwaltsams Bild. S gliich Verb staat i [[MRK.15.38]] für de Vorhang im Tempel. Villicht Aaklang a [[ISA.64.1]]."),
  ("MRK.1.11", "a dir han ich Fröid", "interpretive", "ἐν σοὶ εὐδόκησα", "a dir han ich Gfalle gfunde", ["a dir han ich Wohlgfalle"], "D Stimm us em Himmel nimmt wahrschiinli [[PSA.2.7]] und [[ISA.42.1]] uuf."),
  ("MRK.1.12", "tribt", "literal", "ἐκβάλλει", None, ["füert"], "S gliich Verb wie bim Dämone-Ustriibe ([[MRK.1.34]])."),
  ("MRK.1.14", "usgliferet worde isch", "literal", "παραδοθῆναι", None, ["verhaftet worde isch"], "παραδίδωμι («uslifere») bruucht de Markus au für de Jesus ([[MRK.3.19]], [[MRK.9.31]])."),

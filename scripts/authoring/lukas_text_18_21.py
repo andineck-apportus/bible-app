@@ -418,7 +418,7 @@ GSW = {
  "LUK.21.10": "[Dänn]{1} [hät er]{2} [zu ine]{3} [gseit]{2}: «[Es wird sich]{4} [Volk]{5} [gäge]{6} [Volk]{7} [erhebe]{4} und{8} [Riich]{9} [gäge]{10} [Riich]{11};",
  "LUK.21.11": "[es wird]{10} [grossi]{3} [Erdbebe]{1} [gää]{10} und{4} [a vilne Orte]{5,6} [Hungersnöt]{7} und{8} [Süüche]{9}; [Schrecklichs]{11} und{12,13} [grossi]{17} [Zeiche]{14} [vom]{15} [Himmel]{16} [wird s gää]{18}. ~2(τε «und»; nöd eigens widergää)",
  "LUK.21.12": "[Vor]{1} [all]{4} [däm]{3} [aber]{2} [wärded si]{5} [iri]{10} [Händ]{8,9} [a]{6} [öi]{7} [lege]{5} und{11} [öi verfolge]{12}; [si wärded öi]{13} [a]{14} [d Synagoge]{15,16} und{17} [i d Gfängnis]{18} [uslifere]{13}, und [ir wärded]{19} [vor]{20} [Chönig]{21} und{22} [Statthalter]{23} [gfüert]{19} [wäge]{24} [mim]{27} [Name]{25,26}.",
- "LUK.21.13": "[Das wird]{1} [für öi]{2} [zum]{3} [Zügnis]{4} [füere]{1}.",
+ "LUK.21.13": "[Das wird]{1} [für öi]{2} [zum]{3} [Züügnis]{4} [füere]{1}.",
  "LUK.21.14": "[Nämed öi]{1} [also]{2} [z Herze]{3-6}, öi [nöd]{7} [zum voruus Gedanke z mache]{8}, [wie ir öi verteidiged]{9};",
  "LUK.21.15": "[dänn]{2} [ich]{1} [gibe]{3} [öi]{4} [di richtige Wort]{5} und{6} [Wiisheit]{7}, [dene]{8} [alli]{14} [öii]{17} [Gägner]{15,16} [weder]{9} [chönd]{10} [standhalte]{11} [no]{12} [widerspräche]{13}.",
  "LUK.21.16": "[Ir wärded]{1} [aber]{2} [sogar]{3} [vo]{4} [Eltere]{5} und{6} [Brüeder]{7} und{8} [Verwandte]{9} und{10} [Fründ]{11} [usgliferet]{1}, und{12} [si wärded]{13} [es paar]{14} [vo öi]{15} [umbringe]{13},",

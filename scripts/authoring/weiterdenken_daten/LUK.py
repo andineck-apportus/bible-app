@@ -1515,7 +1515,7 @@ RECEPTIONS = [
           "found_at": "https://www.newadvent.org/fathers/0103301.htm (englisch)",
           "finding_de": "«Luke also, the companion of Paul, recorded in a book the Gospel preached by him.» Bestätigt. Nachprüfung 2026-10-29 (weitere Instanz): bestätigt."}]},
      "gsw": {"period_de": "um 180",
-             "text_de": "De Irenäus vo Lyon schriibt s Evangelium em Lukas zue, em Begleiter vom Paulus, wo s Evangelium, wo de Paulus verkündet hät, i me Buech ufgschribe heb. Die Zueschriibig hät d chilelich Überliferig prägt; s Buech sälber nennt sin Verfasser nöd."}},
+             "text_de": "De Irenäus vo Lyon schriibt s Evangelium em Lukas zue, em Begleiter vom Paulus, wo s Evangelium, wo de Paulus verkündet hät, i me Buech ufgschribe heb. Die Zueschriibig hät d chirchlich Überliferig prägt; s Buech sälber nennt sin Verfasser nöd."}},
     {"id": "RCPT-LUK-0008", "subject": "SUM-BOOK-LUK", "tradition": "modern_scholarship", "period_de": "1954",
      "text_de": "Hans Conzelmann liest Lukas in «Die Mitte der Zeit» als Theologen der Heilsgeschichte: Die Zeit Israels bis Johannes, die Zeit Jesu als Mitte und die Zeit der Kirche folgen aufeinander, weil das Ende auf sich warten lässt. Die These hat die Lukasforschung lange geprägt und ist in Einzelheiten vielfach bestritten worden.",
      "sources_de": ["Hans Conzelmann, Die Mitte der Zeit. Studien zur Theologie des Lukas, Tübingen 1954"],

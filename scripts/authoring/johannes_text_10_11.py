@@ -165,7 +165,7 @@ GSW = {
  "JHN.10.22": "[Dänn]{2} [isch]{1} [z]{5} [Jerusalem]{6,7} [s Fäscht vo de Tempelwiiig]{3,4} [gsii]{1}; [es isch]{9} [Winter]{8} [gsii]{9}.",
  "JHN.10.23": "Und{1} [de Jesus]{3,4} [isch]{2} [im]{5,6} [Tempel]{7} [umegloffe]{2}, [i]{8} [de Säulehalle]{9,10} [vom Salomo]{11,12}.",
  "JHN.10.24": "[Da]{2} [händ]{1} [d Jude]{4,5} [en]{3} [umringt]{1} und{6} [zu ihm]{8} [gseit]{7}: «[Wie lang]{9,10} [laasch öis no zable]{11-14:idiom}? [Wänn]{15} [du]{16} [de Christus]{18,19} [bisch]{17}, [dänn säg s]{20} [öis]{21} [offe]{22}!»",
- "JHN.10.25": "[De Jesus]{3,4} [hät]{1} [ine]{2} [gantwortet]{1}: «[Ich han]{5} [s öi]{6} [gseit]{5}, und{7} [ir glaubed]{9} [nöd]{8}. [D Wärch]{10,11}, [wo]{12} [ich]{13} [im]{15,16} [Name]{17} [vo mim]{20} [Vatter]{18,19} [tue]{14}, [die]{21} [gänd]{22} [über]{23} [mich]{24} [Zügnis]{22}.",
+ "JHN.10.25": "[De Jesus]{3,4} [hät]{1} [ine]{2} [gantwortet]{1}: «[Ich han]{5} [s öi]{6} [gseit]{5}, und{7} [ir glaubed]{9} [nöd]{8}. [D Wärch]{10,11}, [wo]{12} [ich]{13} [im]{15,16} [Name]{17} [vo mim]{20} [Vatter]{18,19} [tue]{14}, [die]{21} [gänd]{22} [über]{23} [mich]{24} [Züügnis]{22}.",
  "JHN.10.26": "[Aber]{1} [ir]{2} [glaubed]{4} [nöd]{3}, [wil]{5} [ir]{7} [nöd]{6} [zu]{8} [mine]{11,12} [Schaf]{9,10} [ghöred]{7}.",
  "JHN.10.27": "[Mini]{3,4} [Schaf]{1,2} [losed]{8} uf [mini]{7} [Stimm]{5,6}, [und ich]{9} [känne]{10} [si]{11}, und{12} [si folged]{13} [mir]{14}.",
  "JHN.10.28": "[Und ich]{1} [gibe]{2} [ine]{3} [ewigs]{5} [Läbe]{4}, und{6} [si gönd]{9} [nie]{7,8} [und nimmer]{10-12} [verlore]{9}, und{13} [niemer]{14,16} [riisst]{15} [si]{17} [us]{18} [minere]{21} [Hand]{19,20}.",

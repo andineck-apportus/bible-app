@@ -526,7 +526,7 @@ INTERPRETATIONS = [
   [("grc", "δίκαιος", "gerecht; unschuldig"), ("grc", "αἴτιον", "Schuld, Grund zur Anklage")],
   "D widerholti Feschtstellig, dass de Jesus unschuldig isch, hät bim Lukas zwei Siite, wo sich ergänzed. Theologisch zeigt si de Jesus als de Grächt, wo unschuldig liidet, wie s d Schrifte vom liidende Grächte und vom Gotteschnächt säged ([[ISA.53.9]]; [[ISA.53.12]]; [[LUK.22.37]]); drum seit de Hauptme «grächt» (δίκαιος, [[LUK.23.47]]). Für Läser im Römische Riich zeigt si glichziitig, dass en römische Statthalter kei Schuld gfunde hät: De Glaube a de Jesus gründet nöd uf eme Ufrüerer. S gliich Muschter prägt d Prozäss vom Paulus i de Apostelgschicht ([[ACT.23.29]]; [[ACT.26.31]]).",
   "Di apologetisch Absicht wird erschlosse; de Lukas seit niene, wieso er d Unschuld betont. De Pilatus liferet de Jesus trotzdem uus ([[LUK.23.24-LUK.23.25]]), Rom staat also nöd entlaschtet da.",
-  ["Gäge di apologetisch Läsart: En Statthalter, won en Unschuldige em Gschrei vo de Lüüt usliferet, isch kei guets Zügnis für Rom; de Lukas zeigt eher d Schwächi vo de Macht.",
+  ["Gäge di apologetisch Läsart: En Statthalter, won en Unschuldige em Gschrei vo de Lüüt usliferet, isch kei guets Züügnis für Rom; de Lukas zeigt eher d Schwächi vo de Macht.",
    "δίκαιος i [[LUK.23.47]] cha eifach «unschuldig» heisse, als Abschluss vo de Unschuldserklärige; e bsunderi theologischi Bedüütig isch dänn nöd gmeint.",
    "Wil d Schuld bim Lukas stärcher uf d Hoheprieschter und d Lüüt fallt, isch de Text gäge s jüdisch Volk gwändet worde; d Lüüt schlönd sich aber a d Brust ([[LUK.23.48]]), und d Fraue vo Jerusalem chlaged um de Jesus ([[LUK.23.27]]). E Kollektivschuld lönd sich drus nöd ableite (vgl. PRIN-JHN-3005)."],
   ["grächt; unschuldig", "Schuld, Grund zum Aachlage"]),
@@ -756,7 +756,7 @@ APPLICATIONS = [
  ("APP-LUK-0521", "PRIN-LUK-0521",
   "Gemeinden können das Zeugnis von Frauen ernst nehmen, wo es heute noch als «leeres Gerede» abgetan wird, und Glauben dort weitergeben, wo sie leben, angefangen in der eigenen Stadt.",
   "Der Text entscheidet nicht über heutige Ämterfragen; Weitergeben des Glaubens heisst nicht Druck oder Zwang (vgl. INT-LUK-0505).",
-  "Gmeinde chönd s Zügnis vo Fraue ernscht näh, wo s hüt no als «leers Gschwätz» abtaa wird, und de Glaube dört wiitergää, wo si läbed, aagfange i de eigete Stadt.",
+  "Gmeinde chönd s Züügnis vo Fraue ernscht näh, wo s hüt no als «leers Gschwätz» abtaa wird, und de Glaube dört wiitergää, wo si läbed, aagfange i de eigete Stadt.",
   "De Text entscheidet nöd über hütigi Ämterfrage; Glaube wiitergää heisst nöd Druck oder Zwang (vgl. INT-LUK-0505)."),
 ]
 

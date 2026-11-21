@@ -338,7 +338,7 @@ INTERPRETATIONS = [
   ["S «Gnadejahr» (ἐνιαυτὸς δεκτός) cha uf s Erlassjahr i [[LEV.25.10]] mit Schuldenerlass und Freilassig aaspile und dänn e soziali Ernöierig meine (so i de Befreiigstheologie und bim John Howard Yoder, The Politics of Jesus, 1972). Anderi verstönd s als Bild für d Heilsziit, ohni konkrets Programm.",
    "Dass d Wuet erscht a de Biispil vo Sarepta und vom Naaman ufchunnt, isch e Düütig vom Ablauf. [[LUK.4.22]] cha scho als skeptischi Reaktion gläse wärde («Isch das nöd de Sohn vom Josef?»), und s Verb μαρτυρέω, da «zuestimme», cha mit em Dativ au «gäge öpper züüge» heisse (so de Joachim Jeremias).",
    "D Biispil us de Gschicht vom Elija und vom Elischa läsed mängi nöd als Hiiwiis uf di spöter Mission, sondern als prophetischi Kritik a Israel, wie s si bi de Prophete sälber git."],
-  ["willkommes Jahr, Gnadejahr", "bezüüge; Zügnis ablegge (für oder gäge)"]),
+  ["willkommes Jahr, Gnadejahr", "bezüüge; Züügnis ablegge (für oder gäge)"]),
  ("INT-LUK-0006", U(6, 27, 36), ["FIND-LUK-0013"],
   "Die Feindesliebe ist die Mitte der Feldrede und wird mit Gottes eigenem Handeln begründet: Er «ist gütig gegen die Undankbaren und Bösen» ([[LUK.6.35]]); darum sollen die Jünger «barmherzig» sein wie der Vater ([[LUK.6.36]]). Die Beispiele (die andere Wange hinhalten, das Hemd nicht verweigern, jedem geben, [[LUK.6.29-LUK.6.30]]) sind zugespitzte Bilder: Sie sollen den Kreislauf von Vergeltung und blosser Gegenseitigkeit durchbrechen, den Jesus bei den «Sündern» sieht, die nur lieben, wer sie liebt ([[LUK.6.32-LUK.6.34]]). Massstab ist nicht eine Regel, sondern die Grosszügigkeit Gottes.",
   "probable",

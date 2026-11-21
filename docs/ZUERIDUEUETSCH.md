@@ -175,6 +175,9 @@ Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
 - Einheitlich: `Züügnis`, `züüge` (eu → üü, Regel 1.2), `elei`, `dört`, `fürchte`, `gfürchtet`, `verrisse`,
   `umchehre`, `umgchehrt`, `chrähe`, `ernidrige`, `aagchündet`, `Stern`.
 - Werktitel und wörtliche fremdsprachige Zitate bleiben in ihrer Sprache und Schreibung.
+- `am` bleibt, wo es `a` + `em` ist (`Brief am Titus`, `am Jona handle`); reiner Dativ vor Namen `em`. Nomen auf -kehr mit
+  k wie `Umkehr` (`Heimkehr`, `Rückkehr`); Adjektiv zu Chile `chirchlich`. Nachgestellte betonte Partikel lang (`vo dört
+  uus`). Kein Gleit-n nach Verben ausser `cha` vor er/es/em/en.
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 

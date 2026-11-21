@@ -437,7 +437,7 @@ DEC_GSW = [
  ("RUT.1.16", "Dis Volk isch mis Volk", "interpretive", "עַמֵּךְ עַמִּי", None, ["Dis Volk söll mis Volk sii"],
   "Im Hebräische staat en Satz ohni Verb; öb d Rut öppis feschtstellt oder öppis verspricht für d Zuekunft, mues d Übersetzig entscheide."),
  ("RUT.1.17", "So söll JHWH mit mir mache", "literal", "כֹּה יַעֲשֶׂה", None, ["JHWH söll mich straafe"],
-  "Feschti Schwuerformle: Wär schwört, rüeft e Straaf uf sich abe, falls er s Versproche bricht. D Rut schwört bim Gott vo Israel."),
+  "Feschti Schwuerformle: Wär schwört, rüeft e Straf uf sich abe, falls er s Versproche bricht. D Rut schwört bim Gott vo Israel."),
  ("RUT.1.17", "nume de Tod", "interpretive", "כִּי הַמָּוֶת", None, ["wänn mich öppis anders als de Tod vo dir trännt", "nöd emal de Tod"],
   "כִּי cha i Schwüer öppis beteuere oder e Bedingig iileite. Je nach Läsart trännt nu de Tod die zwei oder nöd emal er."),
  ("RUT.1.20", "Mara", "literal", "מָרָא", None, None,
@@ -453,7 +453,7 @@ DEC_GSW = [
  ("RUT.1.9", "händ lut briegget", "adapted", "וַתִּשֶּׂאנָה קוֹלָן וַתִּבְכֶּינָה", "händ iri Stimm erhobe und briegget", None,
   "«D Stimm erhebe» heisst lut aafange; so au i [[RUT.1.14]]. Nöi übersetzt 2026-11-21 (Züridüütsch nach docs/ZUERIDUEUETSCH.md)."),
  ("RUT.1.17", "no meh", "adapted", "וְכֹה יֹסִיף", "und so söll er wiitermache", None,
-  "Teil vo de Schwuerformle; «no meh» seit, dass d Straaf no grösser sii söll."),
+  "Teil vo de Schwuerformle; «no meh» seit, dass d Straf no grösser sii söll."),
  # Kapitel 2
  ("RUT.2.1", "Maa mit Vermöge", "interpretive", "גִּבּוֹר חַיִל", "en Held a Chraft", ["en aagsehnige Maa", "en tüchtige Maa"],
   "גִּבּוֹר חַיִל chan en Chriegsheld, en tüchtige oder en riiche, aagsehnige Maa bezeichne; da liit Vermöge und Aasehe nöch. S gliich "
