@@ -1,9 +1,10 @@
 """Gemeinsame Festlegungen für die sechs Lukas-Werkzeuge (lukas_text_01_04.py … lukas_text_22_24.py).
 
 Kein eigenes Werkzeug: Die Teile importieren von hier die gleichlautenden Entscheidungs- und Hinweistexte und prüfen ihre
-Mundart gegen die festgelegte Schreibung (pruefe_mundart). Festgelegt bei der Vereinheitlichung vom 2026-10-26
-(KI-Entwurf, Claude), damit Lukas wie aus einem Guss liest; [[LUK.11.1-LUK.11.4]] (vaterunser.py, zueridueuetsch.py)
-bleibt unverändert und ist Bezugspunkt.
+Mundart (pruefe_mundart). Festgelegt bei der Vereinheitlichung vom 2026-10-26 (KI-Entwurf, Claude), damit Lukas wie aus
+einem Guss liest. Seit der Neuübersetzung vom 2026-11-21 gilt für die Mundart das Regelwerk docs/ZUERIDUEUETSCH.md
+(Gallmann, SRF-Merkblatt; geprüft mit scripts/mundart.py); die frühere Mehrheitsschreibung aus Markus und Johannes
+(z. B. «fäält», «Söön», «üs», «ggää», «demit») ist abgelöst.
 
 Wiederkehrende Wendungen (Hochdeutsch / Züridüütsch):
 - ἐγένετο als Erzählformel: wiedergegeben, wo sie einen Abschnitt eröffnet (Erzähleinschnitt, wie [[LUK.11.1]]):
@@ -13,43 +14,32 @@ Wiederkehrende Wendungen (Hochdeutsch / Züridüütsch):
 - ἰδού: in der Erzählung «siehe» / «lueg»; in direkter Rede nach Zahl der Angesprochenen «sieh» / «seht»
   bzw. «lueg» / «lueged».
 - μὴ φοβοῦ / μὴ φοβεῖσθε / μὴ φοβηθῆτε: «Fürchte dich nicht» / «Fürchtet euch nicht»; Mundart «Häb kei Angscht» /
-  «Händ kei Angscht» (wie in Markus und Johannes mehrheitlich).
+  «Händ kei Angscht».
 - οἱ ὄχλοι «die Menschenmengen» (wie Matthäus), ὄχλος «die Menge»; Mundart «d Lüüt» bzw. «d Mängi».
 - νομικός «Gesetzeslehrer» / «Gsetzeslehrer» (wie Matthäus; ebenso νομοδιδάσκαλος, [[LUK.5.17]]).
-- οὐαί «Weh» / «Weh»; ἀληθῶς «Wahrhaftig»; ἀποκριθεὶς … εἶπεν ohne vorausgehende Frage «ergriff das Wort» /
-  «hät s Wort gnoo»; εὐθέως «sofort» / «grad», παραχρῆμα «sofort» / «sofort»; πλήν Mundart «aber» (Hochdeutsch je nach
-  Satz «doch», «vielmehr»).
-- Bereits einheitlich und so belassen: ἀμὴν λέγω ὑμῖν «Amen, ich sage euch» / «Amen, ich säg eu»; ὁ υἱὸς τοῦ ἀνθρώπου
-  «der Menschensohn» / «de Mänschesohn»; ἐπιστάτα «Meister» / «Meischter»; διδάσκαλε «Lehrer»; κύριε «Herr»;
-  μακάριος «selig» / «sälig»; γενεά «Geschlecht» / «Generation»; ἡ βασιλεία τοῦ θεοῦ «das Reich Gottes» / «s Riich vo
-  Gott»; ὑποκριταί «Heuchler» / «Hüüchler»; Rede-Ebenen « » / ‹ › / „ “.
+- οὐαί «Weh» / «Weh»; ἀληθῶς «Wahrhaftig»; εὐθέως «sofort» / «grad», παραχρῆμα «sofort» / «sofort»; πλήν Mundart «aber»
+  oder «lieber» (Hochdeutsch je nach Satz «doch», «vielmehr»).
+- Einheitlich: ἀμὴν λέγω ὑμῖν «Amen, ich sage euch» / «Amen, ich säge öi»; ὁ υἱὸς τοῦ ἀνθρώπου «der Menschensohn» /
+  «de Mänschesohn»; ἐπιστάτα «Meister» / «Meischter»; διδάσκαλε «Lehrer»; κύριε «Herr»; μακάριος «selig» / «sälig»;
+  γενεά «Geschlecht» / «Generation»; ἡ βασιλεία τοῦ θεοῦ «das Reich Gottes» / «s Riich vo Gott»; ὑποκριταί «Heuchler» /
+  «Hüüchler»; Rede-Ebenen « » / ‹ › / „ “.
 
-Mundart-Schreibung (MUNDART): Mehrheitsform in markus_text_*.py und johannes_text_*.py, gezählt am 2026-10-26 über alle
-Mundart-Texte dieser Werkzeuge (Bibeltext, Abschnittstitel und -zusammenfassungen, Entscheidungen, Hinweise, Lesarten);
-in Klammern Markus+Johannes festgelegte Form : abgelöste Form. Zusammengehörige Formen eines Wortes sind gemeinsam
-gezählt; ohne Beleg in Markus/Johannes gilt die Mehrheit in Lukas bzw. die Form des Grundworts.
-  userwählt, userwählte (8:6 uuserwäält-) · lehre, lehrt, glehrt, Lehr (44:16 leere, leert, gleert, Leer; das Nomen
-  «Schriftgleerte» bleibt) · dört (87:14 det) · Chnü (4:2 Chnüü; das Verb «chnüüle» bleibt) · usggää, Partizip
-  (Grundwort ggää) · gantwortet, Partizip (in Lukas 1–4 «antwortet») · gscheh (13:0 gschee) · Mueterliib (Mueter) ·
-  wiitergange (2:0) · fürchte, fürchted, fürcht, gfürchtet (5:2 förcht-) · elei (30:0 ellei) · frömde (3:1 fremde) ·
-  ggässe (17:0 gässe) · ghöre, ghöred (42:5 ghööre, ghööred) · ghüratet, hüratet, verhüratet (5:0 -hüraat-) · glöst
-  (1:0) · gmäldet, mäldet (2:0) · Höchi, gröscht, Grössi (7:0 hööchi, grööscht) · Herde (9:0 Härde) · iigschlaafe (3:0)
-  · chöm, chömende (3:1) · chönt, chönted (15:9 chönnt, chönnted) · Fälder (7:0) · riitet (2:0) · Schaf (42:0 Schaaf) ·
-  Städt (2:1) · stärbe (22:4 sterbe) · strited (6:0) · Tüüre (5:1 Türe) · ufgläse (3:1) · uftrete (6:0) · Umkehr (6:1
-  Umchehr) · ungläubig (2:0) · us- statt uus- in Zusammensetzungen (Ussendig, usfüerlich, usgaat, usrichte, ustriibed;
-  7:0) · verdorret, verdorreti, verdorrete (9:2 verdoret-) · verrisse (4:2) · villicht (3:2) · wäg, wäggange (86:0 wägg,
-  weggange) · wem (12:2 wäm) · wän (8:3 wen) · wärdi, wärfed (25:0) · zrugggange (Lukas 4:2) · choo, auch in
-  Zusammensetzungen (zruggchoo, anechoo, s Choo; Grundwort 221:8, obwohl Markus «anecho» 2 hat) · Zügnis (69:5) ·
-  böse, böses (10:6 bööse, bööses) · Greber (5:2 Gräber) · schnell (3:2 schnäll) · Jahr (14:0 Jaar) · Ohre (9:0 Oore) ·
-  Lohn (4:2 Loon) · Söhn (5:4 Söön) · glähmt, glähmte (9:0 gläämt-) · zie, ziend, zieht (18:0 zieh, ziehnd, ziet) ·
-  Wonige (4:0) · fahr, fahred, fahrt, gfahre (11:6 faar-) · befole (12:0) · fäält (26:14 fehlt) · nöi (14:2 nöii) · da
-  (daa) · häre (25:0 here) · liide (11:0 lide) · legged (8:3 leged) · söle (7:0 sölle) · nöch, Nöchi (22:7 nööch-) ·
-  Fäschtässe (Grundwort Fäscht; Markus/Johannes «Feschtässe» 3:1, das aber wie «fest» aussieht).
-Bewusst nicht vereinheitlicht (eigene Wörter oder Formen, nicht Schreibvarianten): bliibe (Infinitiv) / blibe
-(Partizip), triibe / tribe / tribt, gää (Infinitiv) / ggää (Partizip), «fiind» (feind), «Lischte» und «Liischte»
-(je ein Beleg), «Schaubroot» (Grundwort Broot), und alles in [[LUK.11.1-LUK.11.4]] (dort «leer üs bätte», «gleert»).
+Mundart-Schreibung: verbindlich ist docs/ZUERIDUEUETSCH.md; pruefe_mundart prüft mit scripts/mundart.py (pruefe: Sonderzeichen,
+Wortliste, Präteritum, «um z», Apostroph, Genitiv) und zusätzlich mit der Lukas-Liste MUNDART (abgelöste Form -> gültige
+Form). MUNDART enthält Formen, die in Lukas vorkamen und nach docs/ZUERIDUEUETSCH.md nicht mehr gelten, aber (noch) nicht
+in der allgemeinen Wortliste von scripts/mundart.py stehen; dazu die Festlegungen der Vereinheitlichung vom 2026-10-26,
+soweit sie mit dem Regelwerk übereinstimmen. Neu am 2026-11-21 (Begründung jeweils Regel im Regelwerk): Brot (1.3, nicht
+«Broot»), Ernte (Zweifel: nahe am Hochdeutschen), zwei auch vor männlichen Nomen (2 Zahlen, nicht «zwee»), Apostel (3),
+seig (2 Konjunktiv, nicht «sig»), jetzt (3), wieso (Pilot), überchoo (1.2 wie choo), schlafe/gschlafe (1.3, kein
+Doppelvokal, wo das Hochdeutsche die Länge schon trägt), Tür/Türe (1.3), chönnt/chönnted (1.9 Doppelmitlaut nach
+Hochdeutsch), befohle, Wohnig (1.3 Dehnungs-h), usgää/gässe (1.10), wäm (2 Fragewort), Fiischteri (Pilot Johannes).
 """
+import os
 import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import mundart  # noqa: E402  (scripts/mundart.py)
 
 DATUM = "2026-10-26"
 GRUND = "Vereinheitlichung Lukas 2026-10-26"
@@ -73,46 +63,54 @@ EGEN_DE = ("Erzählformel ἐγένετο («es geschah») nach dem Vorbild der 
            "ist es als solches übersetzt.")
 EGEN_GSW = ("Erzählformle ἐγένετο («es isch gsii») nach em Vorbild vo de griechische Bible. Regle für de ganz Lukas: Wo si "
             "en Abschnitt aafangt, isch si widergää – καὶ ἐγένετο «Und es isch gsii», ἐγένετο δέ «Es isch aber gsii», wie i "
-            "[[LUK.11.1]] (" + _marken(ABSCHNITTSBEGINN) + "). Innerhalb vom Abschnitt, wo si nu de nööchscht Schritt "
-            "aahänkt, isch si nöd eigens widergää, wil si de Satz dört nu schwärfällig macht (" + _marken(INNERHALB) + "). "
-            "Wo ἐγένετο es eigets Verb isch («isch worde», «isch choo», «isch gsii»), isch es eso übersetzt.")
+            "[[LUK.11.1]] (" + _marken(ABSCHNITTSBEGINN) + "). Innerhalb vom Abschnitt, wo si nume de nächscht Schritt "
+            "aahänkt, isch si nöd eigens widergää, wil si de Satz dört nume schwärfällig macht (" + _marken(INNERHALB) + "). "
+            "Wo ἐγένετο es eigets Verb isch («isch worde», «isch choo», «isch gsii», «hät s gää»), isch es eso übersetzt.")
 EGEN_SKIP_DE = "ἐγένετο «es geschah»: Erzählformel innerhalb des Abschnitts; nicht eigens wiedergegeben"
 EGEN_SKIP_GSW = "ἐγένετο «es isch gsii»: Erzählformle innerhalb vom Abschnitt; nöd eigens widergää"
 
 IDOU_DE = ("ἰδού ist in ganz Lukas gleich wiedergegeben: in der Erzählung «siehe», in direkter Rede nach der Zahl der "
            "Angesprochenen «sieh» oder «seht».")
-IDOU_GSW = ("ἰδού isch im ganze Lukas gliich widergää: i de Verzellig «lueg», i de diräkte Red nach de Zaal vo de "
+IDOU_GSW = ("ἰδού isch im ganze Lukas gliich widergää: i de Erzählig «lueg», i de diräkte Red nach de Zahl vo de "
             "Aagredete «lueg» oder «lueged».")
-FURCHT_GSW = ("μὴ φοβοῦ / μὴ φοβεῖσθε isch im ganze Lukas «Häb kei Angscht» / «Händ kei Angscht», wie bim Markus und "
-              "Johannes meischtens.")
+FURCHT_GSW = ("μὴ φοβοῦ / μὴ φοβεῖσθε isch im ganze Lukas «Häb kei Angscht» / «Händ kei Angscht»; so seit me s hüt.")
 OCHLOI_DE = ("οἱ ὄχλοι ist in ganz Lukas «die Menschenmengen» (wie bei Matthäus), ὄχλος «die Menge»; λαός ist «das Volk».")
 
-# Mundart: abgelöste Form -> festgelegte Form (klein geschrieben; Grossschreibung am Wortanfang wird übernommen).
+# Mundart: abgelöste Form -> gültige Form nach docs/ZUERIDUEUETSCH.md (klein geschrieben; Grossschreibung am Wortanfang
+# wird übernommen). Ergänzt die Wortliste in scripts/mundart.py um Formen, die in Lukas vorkamen.
 MUNDART = {
-    "uuserwäält": "userwählt", "uuserwäälte": "userwählte", "uuserwählt": "userwählt", "leert": "lehrt", "gleert": "glehrt", "leere": "lehre", "leer": "lehr", "det": "dört",
-    "chnüü": "chnü", "usgää": "usggää", "gschee": "gscheh", "muetterliib": "mueterliib", "witergange": "wiitergange",
-    "förchte": "fürchte", "förchted": "fürchted", "förcht": "fürcht", "gförchtet": "gfürchtet", "ellei": "elei",
-    "fremde": "frömde", "gässe": "ggässe", "ghööre": "ghöre", "ghööred": "ghöred", "ghüraatet": "ghüratet",
-    "hüraatet": "hüratet", "verhüraatet": "verhüratet", "glööst": "glöst", "gmeldet": "gmäldet", "meldet": "mäldet",
-    "hööchi": "höchi", "grööscht": "gröscht", "gröössi": "grössi", "härde": "herde", "iigschlafe": "iigschlaafe",
-    "chömm": "chöm", "chömmende": "chömende", "chönnt": "chönt", "chönnted": "chönted", "felder": "fälder",
-    "rittet": "riitet", "schaaf": "schaf", "stedt": "städt", "sterbe": "stärbe", "striited": "strited", "türe": "tüüre",
-    "ufglääse": "ufgläse", "ufträte": "uftrete", "umchehr": "umkehr", "unglöubig": "ungläubig", "uussändig": "ussendig",
-    "uusfüerlich": "usfüerlich", "uusgaat": "usgaat", "uusrichte": "usrichte", "uustriibed": "ustriibed",
-    "verdoret": "verdorret", "verdoreti": "verdorreti", "verdorete": "verdorrete", "verriisse": "verrisse",
-    "vilicht": "villicht", "weggange": "wäggange", "wägg": "wäg", "wäm": "wem", "wen": "wän", "werdi": "wärdi",
-    "werfed": "wärfed", "zruggange": "zrugggange", "zruggcho": "zruggchoo", "anecho": "anechoo", "cho": "choo",
-    "züügnis": "zügnis", "bööse": "böse", "bööses": "böses", "gräber": "greber", "schnäll": "schnell", "jaar": "jahr",
-    "oore": "ohre", "loon": "lohn", "söön": "söhn", "gläämt": "glähmt", "gläämte": "glähmte", "zieh": "zie",
-    "ziehnd": "ziend", "ziet": "zieht", "wohnige": "wonige", "faar": "fahr", "faared": "fahred", "faart": "fahrt",
-    "gfaare": "gfahre", "befohle": "befole", "fehlt": "fäält", "nöii": "nöi", "daa": "da", "here": "häre", "lide": "liide",
+    # Festlegungen vom 2026-10-26, die mit dem Regelwerk übereinstimmen
+    "uuserwäält": "userwählt", "uuserwäälte": "userwählte", "uuserwählt": "userwählt", "leert": "lehrt",
+    "gleert": "glehrt", "leere": "lehre", "leer": "lehr", "det": "dört", "chnüü": "chnü", "gschee": "gscheh",
+    "muetterliib": "mueterliib", "witergange": "wiitergange", "förchte": "fürchte", "förchted": "fürchted",
+    "förcht": "fürcht", "gförchtet": "gfürchtet", "ellei": "elei", "ghööre": "ghöre", "ghööred": "ghöred",
+    "ghüraatet": "ghüratet", "hüraatet": "hüratet", "verhüraatet": "verhüratet", "glööst": "glöst", "gmeldet": "gmäldet",
+    "meldet": "mäldet", "hööchi": "höchi", "grööscht": "gröscht", "gröössi": "grössi", "härde": "herde",
+    "chömm": "chöm", "chömmende": "chömende", "felder": "fälder", "rittet": "riitet", "schaaf": "schaf", "stedt": "städt",
+    "sterbe": "stärbe", "ufglääse": "ufgläse", "ufträte": "uftrete", "umchehr": "umkehr", "unglöubig": "ungläubig",
+    "uussändig": "ussendig", "uusfüerlich": "usfüerlich", "uusgaat": "usgaat", "uusrichte": "usrichte",
+    "uustriibed": "ustriibed", "verdoret": "verdorret", "verdoreti": "verdorreti", "verdorete": "verdorrete",
+    "verriisse": "verrisse", "vilicht": "villicht", "weggange": "wäggange", "wägg": "wäg", "wen": "wän",
+    "werdi": "wärdi", "werfed": "wärfed", "zruggange": "zrugggange", "zruggcho": "zruggchoo", "anecho": "anechoo",
+    "cho": "choo", "züügnis": "zügnis", "bööse": "böse", "bööses": "böses", "schnäll": "schnell", "jaar": "jahr",
+    "oore": "ohre", "loon": "lohn", "söön": "söhn", "gläämt": "glähmt", "gläämte": "glähmte", "faar": "fahr",
+    "faared": "fahred", "faart": "fahrt", "gfaare": "gfahre", "nöii": "nöi", "daa": "da", "here": "häre", "lide": "liide",
     "leged": "legged", "sölle": "söle", "nööch": "nöch", "nööchi": "nöchi", "feschtässe": "fäschtässe",
+    # Neu nach docs/ZUERIDUEUETSCH.md (2026-11-21); früher in Lukas festgelegt, jetzt abgelöst
+    "fäält": "fehlt", "ziet": "zieht", "zie": "zieh", "ziend": "ziehnd", "wonige": "wohnige", "befole": "befohle",
+    "usggää": "usgää", "ggässe": "gässe", "wem": "wäm", "chönt": "chönnt", "chönted": "chönnted",
+    "iigschlaafe": "iigschlafe", "schlaaft": "schlaft", "gschlaafe": "gschlafe", "tüüre": "türe", "tüür": "tür",
+    "broot": "brot", "schaubroot": "schaubrot", "zwee": "zwei", "aposchtel": "apostel", "sig": "seig", "jetz": "jetzt",
+    "werum": "wieso", "übercho": "überchoo", "hüchler": "hüüchler", "ärnt": "ernte", "ärnte": "ernte",
+    "fischter": "fiischter", "fischtere": "fiischtere", "fischternis": "fiischteri", "niemertem": "niemerem",
+    "niemert": "niemer", "drüü": "drü", "Tämpel": "tempel", "schriftgleerte": "schriftglehrte", "schriftgleerti": "schriftglehrti",
 }
+MUNDART = {k.lower(): v for k, v in MUNDART.items()}
 _WORT = re.compile(r"[A-Za-zÄÖÜäöüéèà]+")
 
 
 def mundart_schreibung(text):
-    """Ersetzt abgelöste Mundart-Formen durch die festgelegten (Grossschreibung am Wortanfang bleibt)."""
+    """Ersetzt abgelöste Mundart-Formen der Lukas-Liste durch die gültigen (Grossschreibung am Wortanfang bleibt)."""
     def repl(m):
         w = m.group(0)
         neu = MUNDART.get(w.lower())
@@ -122,8 +120,36 @@ def mundart_schreibung(text):
     return _WORT.sub(repl, text)
 
 
-def pruefe_mundart(texte, wo):
-    """Bricht ab, wenn ein Mundart-Text noch eine abgelöste Form enthält."""
+def _flach(x):
+    """Texte aus Strings, Listen, Tupeln und Dicts; ein als str(…) übergebenes Tupel oder eine Liste wird wieder zerlegt,
+    damit Python-Anführungszeichen nicht als Apostroph gelten."""
+    if x is None:
+        return
+    if isinstance(x, str):
+        if x[:1] in "([{" and x[-1:] in ")]}":
+            try:
+                import ast
+                y = ast.literal_eval(x)
+            except (ValueError, SyntaxError):
+                y = None
+            if isinstance(y, (list, tuple, dict)):
+                yield from _flach(y)
+                return
+        yield x
+    elif isinstance(x, dict):
+        for v in x.values():
+            yield from _flach(v)
+    elif isinstance(x, (list, tuple)):
+        for v in x:
+            yield from _flach(v)
+
+
+def pruefe_mundart(texte, wo, streng=True):
+    """Bricht ab, wenn ein Mundart-Text eine abgelöste Form der Lukas-Liste (MUNDART) oder – mit streng (Vorgabe) – einen
+    Fund von scripts/mundart.py (docs/ZUERIDUEUETSCH.md) enthält."""
+    texte = list(_flach(list(texte)))
     alt = sorted({w for t in texte for w in _WORT.findall(t) if w.lower() in MUNDART})
-    if alt:
-        raise SystemExit(f"{wo}: abgelöste Mundart-Schreibung {alt} (siehe scripts/authoring/lukas_einheitlich.py)")
+    funde = sorted({f"{g} -> {neu} [{regel}]" for t in texte for g, regel, neu in mundart.pruefe(t)}) if streng else []
+    if alt or funde:
+        raise SystemExit(f"{wo}: Mundart nach docs/ZUERIDUEUETSCH.md: abgelöst {alt} {funde} "
+                         "(scripts/mundart.py, scripts/authoring/lukas_einheitlich.py)")
