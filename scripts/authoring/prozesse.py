@@ -117,9 +117,20 @@ m10 = [
     s("m4", "pruefung", "Sprache prüfen", "Eine weitere Instanz prüft Schreibweise, Wortwahl und Lesefluss der Mundart.", prueft=["festgelegte Schreibweise", "idiomatisch"], zurueck=("m1", "Mangel")),
     s("m5", "herausgabe", "Muttersprachlich prüfen", "Eine Person mit dieser Muttersprache liest gegen; erst dann wird die Prüfung eingetragen."),
 ]
+m20 = [
+    s("m1", "bearbeitung", "Aus dem Urtext übersetzen", "Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle. Züridüütsch nach dem Regelwerk: Schreibung, Formen, Wortwahl, Satzbau."),
+    s("m2", "bearbeitung", "Schicht beschreiben", "Sprache, Zielgruppe, Schreibweise (Züridüütsch nach Regelwerk) und Ton festhalten; Entscheide wie bei der Übersetzung."),
+    s("m6", "werkzeug", "Regelwerk prüfen", "Das Werkzeug prüft Schreibung und Formen gegen die Wortliste und Muster des Regelwerks; Funde brechen die Prüfung ab.", prueft=["keine abgelöste Form", "keine Dieth-Sonderzeichen"], zurueck=("m1", "Fund")),
+    s("m3", "pruefung", "Inhalt prüfen", "Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung.", prueft=["treu zum Urtext"], zurueck=("m1", "Abweichung")),
+    s("m4", "pruefung", "Sprache prüfen", "Eine weitere Instanz prüft Wortwahl, Satzbau und Lesefluss gegen das Regelwerk. Ungeregelte Fälle werden als Regelvorschlag gemeldet, festgelegt und dann für alle Texte gleich angewendet.", prueft=["Regelwerk eingehalten", "idiomatisch", "keine Einzelkorrektur ohne Regel"], zurueck=("m1", "Mangel")),
+    s("m5", "herausgabe", "Muttersprachlich prüfen", "Eine Person mit dieser Muttersprache liest gegen; erst dann wird die Prüfung eingetragen."),
+]
 P["PROC-MUNDART"] = {"names": {"de": "Weitere Sprachen und Mundarten", "en": "Further languages and dialects"}, "group": "text",
     "purpose_de": "Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutschen abgeleitet.",
-    "versions": [fassung("1.0", "2026-10-13", "Erste Fassung (Züridüütsch).", m10, "Inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.", ENTWURF)]}
+    "versions": [fassung("1.0", "2026-10-13", "Erste Fassung (Züridüütsch).", m10, "Inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.", ENTWURF),
+                 fassung("2.0", "2026-11-21", "Züridüütsch nach verbindlichem Regelwerk (Gallmann, Zürichdeutsches Wörterbuch, für Formen und Wortschatz; SRF-Merkblatt für die Schreibung, im Zweifel nahe am Hochdeutschen); Rückmeldungen werden als allgemeine Regel gefasst und maschinell geprüft, nicht als Einzelkorrektur (Entscheid Herausgeber).",
+                         m20, "Regelwerk eingehalten (Werkzeug), inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.", ENTWURF,
+                         docs=["docs/ZUERIDUEUETSCH.md"])]}
 
 # ------------------------------------------------------------------ Studie
 st11 = [

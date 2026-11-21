@@ -2,6 +2,15 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.148 — 2026-11-21 — Züridüütsch neu: Regelwerk und Neuübersetzung aus dem Urtext
+
+- Verbindliches Regelwerk `docs/ZUERIDUEUETSCH.md`: Formen, Wortschatz und Grammatik nach Heinz Gallmann (Zürichdeutsches Wörterbuch, 3. Aufl.), Schreibung nach dem SRF-Merkblatt (Daniela Zimmermann): wie man heute schreibt, ohne Sonderzeichen, `ei` und Dehnungs-h wie im Hochdeutschen, im Zweifel nahe am Hochdeutschen (Entscheide Andi Neck). Ersetzt die Mehrheitsentscheide von `lukas_einheitlich.py`.
+- Der ganze Mundart-Bibeltext (MAT, MRK, LUK, JHN, RUT, JON, OBA, PHP, TIT, 1–3JN; rund 4200 Verse) ist neu aus dem Urtext übersetzt (Pilot Joh 1–3, dann alle Bücher), mit vollständiger Wortzuordnung; Entscheidungen, Lesarten, Titel und Notizen nachgeführt.
+- Alle Mundart-Texte (Studieninhalte, Zusammenfassungen, Kernaussagen, Fragen, Rezeption, Hintergrund, obere Ebenen, Bildaufträge, Bildlexikon-Legenden) in vier Runden nach dem Regelwerk vereinheitlicht; Festlegungen aus allen Bereichen als allgemeine Regeln (nicht als Einzelkorrekturen) ins Regelwerk.
+- Prüfwerkzeug `scripts/mundart.py` (Wortliste, Muster, automatische Ersetzung eindeutiger Fälle); im Validator: Funde im Bibeltext und in Lokalisierungen brechen ab, in Bildbeschreibungen gezeichneter Bilder WARN.
+- AGENTS.md: allgemeine Regeln statt Einzelkorrekturen, für das ganze Projekt, ohne Ausnahme. Prozess PROC-MUNDART 2.0.
+- Offen: Worte in gezeichneten Bildern (Sprechblasen, Stichwortbänder, rund 750 Bilder) und Bildlexikon-Einträge folgen im Bildlauf. Mundart weiterhin nicht muttersprachlich geprüft.
+
 ## v0.147 — 2026-10-29 — Vertiefen-Inhalte für alle ausgearbeiteten Bücher, geprüft
 
 Inhaltsrunde Vertiefen (Entscheid Andi Neck 2026-10-28): Kernaussage in einem Satz (`gist_de`), Fragen zum Weiterdenken
