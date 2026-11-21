@@ -42,7 +42,7 @@ def alt_text(b, lang="de", anime=False):
     caps = [p["caption_de" if lang == "de" else "caption_gsw"] for p in b["panels"]]
     if len(caps) == 1:
         return caps[0]
-    word = {2: ("zwei", "zwei"), 3: ("drei", "drüü"), 4: ("vier", "vier")}[len(caps)][0 if lang == "de" else 1]
+    word = {2: ("zwei", "zwei"), 3: ("drei", "drü"), 4: ("vier", "vier")}[len(caps)][0 if lang == "de" else 1]
     if lang == "de":
         head = (f"Comic in {word} Bildern ohne Text: " if anime else f"{word.capitalize()} Felder: ")
     else:
