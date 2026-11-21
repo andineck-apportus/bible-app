@@ -88,7 +88,10 @@ DEFS = ('<defs><marker id="sk-pf" viewBox="0 0 10 10" refX="8" refY="5" markerWi
         '<stop offset="1" stop-color="#FBF8F1" stop-opacity="0"/></radialGradient>'
         '<radialGradient id="sk-glorie" r="50%"><stop offset=".3" stop-color="#E9B954" stop-opacity=".95"/><stop offset="1" stop-color="#E9B954" stop-opacity="0"/></radialGradient>'
         '<filter id="sk-aq" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="7"/>'
-        '<feDisplacementMap in="SourceGraphic" scale="3.5"/><feGaussianBlur stdDeviation=".35"/></filter></defs>')
+        '<feDisplacementMap in="SourceGraphic" scale="3.5"/><feGaussianBlur stdDeviation=".35"/></filter>'
+        # Papier der gemalten Einzelbilder auf Weiss heben; mit Multiplizieren verschwindet es auf der Kachel
+        '<filter id="sk-papier" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="1.12"/>'
+        '<feFuncG type="linear" slope="1.12"/><feFuncB type="linear" slope="1.14"/></feComponentTransfer></filter></defs>')
 
 
 def gott_zeichen(cx, cy, s):
@@ -124,10 +127,18 @@ _V = {}   # Vignetten der Kachel, die gerade gezeichnet wird: Schlüssel («1»,
 def vign(k, x, y, s):
     """Gemalte Vignette (Hybrid): Papierweiss verschwindet durch Multiplizieren auf dem Kachelpapier."""
     h = _V.get(str(k))
+    if not h:
+        return ""
     if h == "#gott":
         return gott_zeichen(x + s / 2, y + s / 2, s)
-    return (f'<image href="{h}" x="{x:.1f}" y="{y:.1f}" width="{s:.1f}" height="{s:.1f}" preserveAspectRatio="xMidYMid meet" '
-            f'style="mix-blend-mode:multiply"/>') if h else ""
+    if isinstance(h, str):
+        h = (h, None)
+    href, r = h
+    if r:   # Ausschnitt mit dem Motiv, Papier wird durchsichtig (Filter sk-papier)
+        bx, by, bw, bh, w, hh = r
+        return (f'<svg x="{x:.1f}" y="{y:.1f}" width="{s:.1f}" height="{s:.1f}" viewBox="{bx} {by} {bw} {bh}" preserveAspectRatio="xMidYMid meet">'
+                f'<image href="{href}" x="0" y="0" width="{w}" height="{hh}" filter="url(#sk-papier)" style="mix-blend-mode:multiply"/></svg>')
+    return f'<image href="{href}" x="{x:.1f}" y="{y:.1f}" width="{s:.1f}" height="{s:.1f}" preserveAspectRatio="xMidYMid meet" filter="url(#sk-papier)" style="mix-blend-mode:multiply"/>'
 
 
 def zeichne(sx, vignetten=None):

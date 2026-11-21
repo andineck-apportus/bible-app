@@ -44,13 +44,32 @@ def auftraege(nur=None):
                 yield sid, "m", sx["mitte"]["depicts"][0]
 
 
+_rahmen = {}
+
+
+def rahmen(pfad):
+    """Ausschnitt mit dem eigentlichen Motiv (ohne leeres Papier), als «x y b h» in Bildpixeln: Die Einzelbilder des Lexikons
+    stehen klein auf grossem Hochformat-Papier; in der Kachel soll das Motiv die Fläche füllen."""
+    if pfad not in _rahmen:
+        from PIL import Image
+        im = Image.open(ROOT / pfad).convert("L")
+        w, h = im.size
+        maske = im.point(lambda v: 255 if v < 200 else 0)
+        bb = maske.getbbox() or (0, 0, w, h)
+        rand = int(0.06 * max(bb[2] - bb[0], bb[3] - bb[1])) + 2
+        x0, y0, x1, y1 = max(0, bb[0] - rand), max(0, bb[1] - rand), min(w, bb[2] + rand), min(h, bb[3] + rand)
+        _rahmen[pfad] = (x0, y0, x1 - x0, y1 - y0, w, h)
+    return _rahmen[pfad]
+
+
 def bild(fid):
+    """href (relativ zum Ordner der Bilder) und Ausschnitt; «#gott» für den gezeichneten Strahlenkranz."""
     if fid == GOTT:
         return "#gott"
     r = renderings().get(fid) or {}
     c = r.get("check") or {}
     if r.get("image") and c.get("stufe") == "ki-geprueft" and (ROOT / r["image"]).exists():
-        return r["image"].replace("data/illustrations/aquarell/", "")
+        return (r["image"].replace("data/illustrations/aquarell/", ""), rahmen(r["image"]))
     return None
 
 
