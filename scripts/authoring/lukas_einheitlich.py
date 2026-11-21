@@ -123,7 +123,14 @@ def mundart_schreibung(text):
 
 
 def pruefe_mundart(texte, wo):
-    """Bricht ab, wenn ein Mundart-Text noch eine abgelöste Form enthält."""
-    alt = sorted({w for t in texte for w in _WORT.findall(t) if w.lower() in MUNDART})
-    if alt:
-        raise SystemExit(f"{wo}: abgelöste Mundart-Schreibung {alt} (siehe scripts/authoring/lukas_einheitlich.py)")
+    """Bricht ab, wenn ein Mundart-Text gegen docs/ZUERIDUEUETSCH.md verstösst (Prüfung mit scripts/mundart.py).
+
+    Seit 2026-11-21 gilt scripts/mundart.py statt der Liste MUNDART oben (diese widerspricht den neuen Regeln,
+    z. B. «fäält», «zie»)."""
+    import pathlib
+    import sys
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
+    import mundart
+    funde = sorted({f"{g} -> {n} [{r}]" for t in texte for g, r, n in mundart.pruefe(t)})
+    if funde:
+        raise SystemExit(f"{wo}: Mundart-Schreibung nach docs/ZUERIDUEUETSCH.md: {funde} (scripts/mundart.py)")
