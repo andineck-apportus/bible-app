@@ -158,3 +158,15 @@ Szenen werden gemalt; was gemessen, gezählt oder verortet ist, kommt aus Daten 
 - **2026-10-28:** Prozessbeschreibung versioniert (PROC-BILD-AQUARELL 1.0, 2.0, 2.1); Bildläufe werden automatisch übernommen (PROC-FREIGABE 2.0).
 - **2026-10-28:** Automatische Prüfung mit Regeln auf drei Ebenen, Prüfstufen und automatisch gesetzten Blasen (Abschnitt 8); Pilot Strukturen (Abschnitt 9); weitere Beispiele Mk 4,35–41 und Lk 15,11–32 (Wunsch Andi Neck: Regelwerk an mehr Beispielen testen).
 - **2026-10-28:** Bildlexikon im Aquarellstil: Einzelporträts je Lexikon-Eintrag mit automatischer Prüfung, als Vorlage für die Szenen (Abschnitt 4, PROC-BILD-AQUARELL 2.4).
+
+## Farben der Strukturbilder als Rollen (2026-11-21)
+
+Entscheid Andi Neck: Die Farben der gezeichneten Strukturbilder sind Rollen, die die App von aussen setzen kann (Palette, Hell und
+Dunkel, später persönliche Farben), ohne dass die Bilder neu erzeugt werden. Jede Farbe steht im SVG als CSS-Variable mit Vorgabe,
+z. B. `style="fill:var(--sk-karte,#FFFFFF)"`; ohne Variable gilt die Vorgabe. Rollen (`scripts/authoring/struktur_kachel.py`, ROLLEN):
+`--sk-flaeche` (Fläche der Kachel), `--sk-karte` (Kasten), `--sk-text`, `--sk-text-leise` (Stellen), `--sk-linie`, `--sk-a` und
+`--sk-a-text` (Seite a, Koralle), `--sk-b` und `--sk-b-text` (Seite b, Petrol), `--sk-c` und `--sk-c-text` (Grün), `--sk-betont`
+(Höhepunkt, Zitrone), `--sk-marke-text` (Ziffer im Punkt), `--sk-gestrichen`, `--sk-pfeil`, dazu für die gemalten Bilder des
+Bildlexikons `--sk-bild-mischung` (hell: multiply, dunkel: normal) und `--sk-bild-filter` (hell: Papier aufhellen, dunkel: Papier
+freistellen). Die dunkle Palette steht in `app/bible/template.html` unter `.app[data-theme=dark]`. Flächen haben gleiche Helligkeit
+(OKLCH L ≈ 0,955). Kacheln ohne Rahmen, mit abgerundeten Ecken.

@@ -396,6 +396,9 @@ def kachel(i, sz_id, sz, aus, kw, x, y):
     bd = band(i, kw, None if struktur else PAPER)
     teile.append(f'<g transform="translate(0 {hb - H})">{bd}</g>' if hb != H else bd)
     teile.append("</g></svg>")
+    if struktur:   # Farben als Rollen (CSS-Variablen --sk-…), auch Fläche und Band der Kachel
+        import struktur_kachel as SK
+        return SK.rollen("".join(teile))
     return "".join(teile)
 
 

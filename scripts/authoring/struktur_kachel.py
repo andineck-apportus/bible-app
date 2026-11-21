@@ -73,7 +73,7 @@ def pfeil(x1, y1, x2, y2, farbe=MUTED):
 
 def marke_svg(x, y, m):
     return (f'<circle cx="{x + 9:.1f}" cy="{y + 9:.1f}" r="9" fill="{INK}" fill-opacity=".86"/>'
-            f'<text x="{x + 9:.1f}" y="{y + 13:.1f}" font-family="{SANS}" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF">{esc(m)}</text>')
+            f'<text x="{x + 9:.1f}" y="{y + 13:.1f}" font-family="{SANS}" font-size="11" font-weight="600" text-anchor="middle" fill="#FEFEFE">{esc(m)}</text>')
 
 
 class Glied:
@@ -131,6 +131,39 @@ def kopf_svg(e, x, y, w, seite):
     return s, h
 
 
+# Farben als Rollen (Rückmeldung Andi Neck 2026-11-21): jede Farbe der Kachel ist eine CSS-Variable mit Vorgabe, z. B.
+# style="fill:var(--sk-karte,#FFFFFF)". Die App kann Palette, Hell/Dunkel und persönliche Farben von aussen setzen, ohne die Bilder
+# neu zu erzeugen; ohne Variablen gilt die Vorgabe. Die App setzt die dunklen Werte unter .app[data-theme=dark].
+ROLLEN = {"flaeche": PAPER, "karte": FARBE["n"][0], "text": INK, "text-leise": MUTED, "linie": RULE,
+          "a": FARBE["a"][0], "a-text": FARBE["a"][1], "b": FARBE["b"][0], "b-text": FARBE["b"][1],
+          "c": "#E4F9E0", "c-text": FARBE["n"][1], "betont": BETONT, "marke-text": "#FEFEFE", "gestrichen": "#EEF0F0", "pfeil": "#7A8489"}
+_ROLLE_VON = {}
+for _r, _h in ROLLEN.items():
+    _ROLLE_VON.setdefault(_h.upper(), _r)
+for _h in ("#3B3D37", "#4A4D45"):   # Band der Kachel (bilder_aquarell.band)
+    _ROLLE_VON[_h] = "text"
+
+
+def rollen(svg):
+    """fill="#…"/stroke="#…" mit einer Rollenfarbe → ein style-Attribut je Element mit CSS-Variable und Vorgabe."""
+    import re as _re
+
+    def tag(m):
+        t = m.group(0)
+        teile = []
+        for attr, h in _re.findall(r'\b(fill|stroke)="(#[0-9A-Fa-f]{6})"', t):
+            r = _ROLLE_VON.get(h.upper())
+            if r:
+                teile.append(f"{attr}:var(--sk-{r},{h.upper()})")
+                t = t.replace(f'{attr}="{h}"', "", 1)
+        if not teile:
+            return t
+        if ' style="' in t:
+            return t.replace(' style="', ' style="' + ";".join(teile) + ";", 1)
+        return _re.sub(r"^<(\w+)", lambda x: f'<{x.group(1)} style="{";".join(teile)}"', t)
+    return _re.sub(r"<[a-zA-Z][^<>]*>", tag, svg)
+
+
 def zeichne(sx, vignetten=None):
     """SVG-Inhalt (ohne äusseres svg) und Höhe einer Strukturkachel in BREITE-Einheiten."""
     global _V
@@ -139,7 +172,7 @@ def zeichne(sx, vignetten=None):
     el = sx.get("elemente") or []
     inhalt, y = globals()[f"_{sx['typ']}"](sx, el, y)
     hoehe = y + RAND
-    return (DEFS + f'<rect width="{BREITE}" height="{hoehe:.1f}" fill="{PAPER}"/>'
+    return rollen(DEFS + f'<rect width="{BREITE}" height="{hoehe:.1f}" fill="{PAPER}"/>'
             + teile + inhalt), hoehe
 
 
@@ -460,7 +493,10 @@ DEFS = ('<defs><marker id="sk-pf" viewBox="0 0 10 10" refX="8" refY="5" markerWi
         '<feDisplacementMap in="SourceGraphic" scale="3.5"/><feGaussianBlur stdDeviation=".35"/></filter>'
         # Papier der gemalten Einzelbilder auf Weiss heben; mit Multiplizieren verschwindet es auf der Kachel
         '<filter id="sk-papier" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="1.12"/>'
-        '<feFuncG type="linear" slope="1.12"/><feFuncB type="linear" slope="1.14"/></feComponentTransfer></filter></defs>')
+        '<feFuncG type="linear" slope="1.12"/><feFuncB type="linear" slope="1.14"/></feComponentTransfer></filter>'
+        # dunkle Darstellung: Papier wird durchsichtig (Deckkraft aus der Helligkeit; ausserhalb des Bildes bleibt es durchsichtig)
+        '<filter id="sk-freistellen" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" '
+        'values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -4 -4 -4 11.45 0"/></filter></defs>')
 
 
 def gott_zeichen(cx, cy, s):
@@ -491,9 +527,9 @@ def _ein_bild(h, x, y, w, hh):
     if r:
         bx, by, bw, bh, iw, ih = r
         return (f'<svg x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" viewBox="{bx} {by} {bw} {bh}" preserveAspectRatio="xMidYMid meet">'
-                f'<image href="{href}" x="0" y="0" width="{iw}" height="{ih}" filter="url(#sk-papier)" style="mix-blend-mode:multiply"/></svg>')
+                f'<image href="{href}" x="0" y="0" width="{iw}" height="{ih}" style="filter:var(--sk-bild-filter,url(#sk-papier));mix-blend-mode:var(--sk-bild-mischung,multiply)"/></svg>')
     return (f'<image href="{href}" x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" preserveAspectRatio="xMidYMid meet" '
-            f'filter="url(#sk-papier)" style="mix-blend-mode:multiply"/>')
+            f'style="filter:var(--sk-bild-filter,url(#sk-papier));mix-blend-mode:var(--sk-bild-mischung,multiply)"/>')
 
 
 def _seitenverhaeltnis(h):
