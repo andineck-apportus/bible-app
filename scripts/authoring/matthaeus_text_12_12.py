@@ -116,7 +116,7 @@ GSW = {
  "MAT.12.10": "Und{1} [lueg]{2}, da isch [en Mänsch]{3} gsii [mit]{5} [ere verdorrte]{6} [Hand]{4}. Und{7} [si händ]{8} [de Jesus]{9} [gfröget]{8}: «[Darf me]{11,12} [am Sabbat]{13,14} [heile]{15}?» – [damit]{16} [si]{17} [en]{18} [chönted aachlage]{17}. ~10(λέγοντες «sägend» leitet d direkt Red ii)",
  "MAT.12.11": "[Er]{1} [aber]{2} [hät]{3} [zu ine]{4} [gseit]{3}: «[Wär]{5} [vo]{7} [öi]{8} [hät]{6,11} [es einzigs]{13} [Schaf]{12} und{14} [würd]{23} [s]{24} [nöd]{22} [packe]{23} und{25} [usezieh]{26}, [wänn]{15} [es]{17} [am Sabbat]{18,19} [in]{20} [e Gruebe]{21} [gheit]{16}? ~9(ἄνθρωπος «Mänsch» nöd eigens widergää; im «Wär» enthalte) ~10(ὅς «wo» nöd eigens widergää; d Frag isch eifacher baut)",
  "MAT.12.12": "[Wie vil]{1} [meh wärt]{3} [isch]{3} [aber]{2} [en Mänsch]{4} [als es Schaf]{5}! [Drum]{6} [darf me]{7} [am Sabbat]{8,9} [Guets]{10} [tue]{11}.»",
- "MAT.12.13": "[Dänn]{1} [seit er]{2} [zu dem Maa]{3,4}: «[Streck]{5} [dini]{6} [Hand]{7,8} [us]{5}!» Und{9} [er hät si usgstreckt]{10}, und{11} [si isch wider]{12} [gsund]{13} [worde]{12} [wie]{14} [di]{15} [ander]{16}.",
+ "MAT.12.13": "[Dänn]{1} [seit er]{2} [zu däm Maa]{3,4}: «[Streck]{5} [dini]{6} [Hand]{7,8} [us]{5}!» Und{9} [er hät si usgstreckt]{10}, und{11} [si isch wider]{12} [gsund]{13} [worde]{12} [wie]{14} [di]{15} [ander]{16}.",
  "MAT.12.14": "[D Pharisäer]{3,4} [aber]{2} [sind usegange]{1} [und händ]{6} [gäge]{7} [ihn]{8} [Rat]{5} [ghalte]{6}, [wie]{9} [si]{11} [en]{10} [chönted umbringe]{11}.",
  "MAT.12.15": "[De Jesus]{1,3} [aber]{2} [hät das gmerkt]{4} und [isch]{5} [vo dört]{6} [weggange]{5}. Und{7} [vili]{10} [sind]{8} [ihm]{9} [nachegange]{8}, und{11} [er hät]{12} [si]{13} [alli]{14} [gheilt]{12}.",
  "MAT.12.16": "Und{1} [er hät]{2} [ine]{3} [streng verbote]{2}, [en]{7} [bekannt]{6} [z mache]{8}, ~4(ἵνα «dass» im Infinitiv enthalte) ~5(μή «nöd» im «verbote» enthalte)",
@@ -288,7 +288,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
- ('MAT.12.1', 'Zu dere Ziit', 'literal', 'Ἐν ἐκείνῳ τῷ καιρῷ', None, None, 'Lockeri Überleitig vom Matthäus; si nännt kein gnaue Ziitpunkt.'),
+ ('MAT.12.1', 'Zu dere Ziit', 'literal', 'Ἐν ἐκείνῳ τῷ καιρῷ', None, None, 'Lockeri Überleitig vom Matthäus; si nännt kei gnaue Ziitpunkt.'),
  ('MAT.12.1', 'am Sabbat', 'adapted', 'τοῖς σάββασιν', 'a de Sabbate', None, 'De Plural meint oft en einzelne Sabbat. Gliich i [[MAT.12.5]], [[MAT.12.10]], [[MAT.12.11]] und [[MAT.12.12]].'),
  ('MAT.12.1', 'Hunger ghaa', 'literal', 'ἐπείνασαν', None, None, 'Nu de Matthäus nännt de Hunger vo de Jünger (vgl. [[MRK.2.23]]); das verbindet d Szene mit em David ([[MAT.12.3]]). Ähre abrupfe erlaubt [[DEU.23.25]]; de Vorwurf gaat um de Sabbat.'),
  ('MAT.12.2', 'Lueg', 'literal', 'Ἰδοὺ', 'Lueg', None, 'Einheitlichi Widergab vo ἰδού für alli Matthäus-Teil: «lueg».'),

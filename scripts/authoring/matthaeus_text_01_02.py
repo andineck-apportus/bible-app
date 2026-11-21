@@ -382,7 +382,7 @@ DEC_GSW = [
  ("MAT.2.20", "as Läbe händ wele", "adapted", "ζητοῦντες τὴν ψυχὴν", "d Seel gsuecht händ", None,
   "Hebräisch prägti Wändig; erinneret a [[EXO.4.19]] (Mose)."),
  ("MAT.2.23", "Me wird em Nazoräer säge", "interpretive", "ὅτι Ναζωραῖος κληθήσεται", "Er wird Nazoräer gnännt wärde", ["dass me em Nazoräer seit"],
-  "Es Prophetewort mit dem Wortlaut git s im Alte Teschtament nöd. Erklärt wird s über nēṣer «Schoss» ([[ISA.11.1]]), über nāzîr «Nasiräer» ([[JDG.13.5]]) oder über de schlächt Ruef vo Nazaret ([[JHN.1.46]]). Aktiv mit «me» statt Passiv."),
+  "Es Prophetewort mit däm Wortlaut git s im Alte Teschtament nöd. Erklärt wird s über nēṣer «Schoss» ([[ISA.11.1]]), über nāzîr «Nasiräer» ([[JDG.13.5]]) oder über de schlächt Ruef vo Nazaret ([[JHN.1.46]]). Aktiv mit «me» statt Passiv."),
 ]
 
 # Alternativen: (Variante:Lesart, Stelle, von de, zu de, von gsw, zu gsw, Wirkung, Hinweis de, Hinweis gsw,

@@ -145,7 +145,7 @@ GSW = {
  "MAT.7.19": "[Jede]{1} [Baum]{2}, [wo]{4} [kei]{3} [gueti]{6} [Frucht]{5} [bringt]{4}, [wird umghaue]{7} und{8} [is]{9} [Füür]{10} [gworfe]{11}.",
  "MAT.7.20": "[Also]{1,2} [a]{3} [ire]{6} [Frücht]{4,5} [wärded ir]{7} [si]{8} [erchänne]{7}.",
  "MAT.7.21": "[Nöd]{1} [jede]{2}, [wo]{3} [zu mir]{5} [seit]{4}: «Herr{6}, Herr{7}!», [chunnt]{8} [is]{9,10} [Himmelriich]{11-13} [ine]{8}, sondern{14} [wär]{15} [de Wille]{17,18} [vo mim]{21} [Vatter]{19,20} [i de Himmel]{22-25} [tuet]{16}.",
- "MAT.7.22": "[A]{4} [dem]{5} [Tag]{6,7} [säged]{2} vil{1} [zu mir]{3}: «Herr{8}, Herr{9}, [händ mir]{14} nöd{10} [i dim]{11,12} [Name]{13} [prophezeit]{14} und{15} [i dim]{16,17} [Name]{18} [Dämone]{19} [usgtribe]{20} und{21} [i dim]{22,23} [Name]{24} [vil]{26} [Machttate]{25} [taa]{27}?»",
+ "MAT.7.22": "[A]{4} [däm]{5} [Tag]{6,7} [säged]{2} vil{1} [zu mir]{3}: «Herr{8}, Herr{9}, [händ mir]{14} nöd{10} [i dim]{11,12} [Name]{13} [prophezeit]{14} und{15} [i dim]{16,17} [Name]{18} [Dämone]{19} [usgtribe]{20} und{21} [i dim]{22,23} [Name]{24} [vil]{26} [Machttate]{25} [taa]{27}?»",
  "MAT.7.23": "Und{1} dänn{2} [säg ich]{3} [ine]{4} [offe]{3}: «[Nie]{6} [han ich]{7} [öi]{8} [kännt]{7}. [Gönd wäg]{9} [vo]{10} [mir]{11}, [ir, wo]{12,13} [Gsetzlosigkeit]{14,15} [tüend]{12,13}!» ~5(ὅτι leitet di direkt Red ii)",
  "MAT.7.24": "[Jede]{1} also{2}, [wo]{3} [die]{8} [Wort]{6,7} [vo mir]{5} [ghört]{4} und{9} [si]{11} [tuet]{10}, [isch wien]{12} [en gschiide]{14} [Maa]{13}, [wo]{15} [sis]{17} [Huus]{18,19} [uf]{20} [de Fels]{21,22} [baut hät]{16}.",
  "MAT.7.25": "Und{1} [de Räge]{3,4} [isch abechoo]{2}, und{5} [s Hochwasser]{7,8} [isch choo]{6}, und{9} [d Wind]{11,12} [händ blase]{10} und{13} [sind]{14} [gäge]{15} [das]{17} [Huus]{16} [prallt]{14}, und{18} [es isch]{20} nöd{19} [iigstürzt]{20}; [es isch]{21} nämli{22} [uf]{23} [de Fels]{24,25} [baut gsii]{21}.",
@@ -551,7 +551,7 @@ UNITS_GSW = {
  "TU-MAT-007-013-014": ("S äng Tor",
   "De Jesus rüeft uf, dur s äng Tor ine z gaa: Wiit isch s Tor und breit de Wäg is Verderbe, und vil gönd dört ine; äng isch s Tor und schmal de Wäg is Läbe, und wenig finded en."),
  "TU-MAT-007-015-023": ("A de Frücht erchänne",
-  "De Jesus warnt vor falsche Prophete, wo i Schafchleider chömed und inne riissendi Wölf sind: A ire Frücht wird me si erchänne, wien en Baum a sine Frücht; jede Baum ohni gueti Frucht wird umghaue und is Füür gworfe. Nöd jede, wo «Herr, Herr» seit, chunnt is Riich vo de Himmel ine, sondern wär de Wille vom Vatter tuet. Vilne, wo sich a dem Tag uf Profezeie, Dämone-Ustriibe und Machttate i sim Name berüefed, wird er offe säge: «Nie han ich öi kännt», und si vo sich wegschicke."),
+  "De Jesus warnt vor falsche Prophete, wo i Schafchleider chömed und inne riissendi Wölf sind: A ire Frücht wird me si erchänne, wien en Baum a sine Frücht; jede Baum ohni gueti Frucht wird umghaue und is Füür gworfe. Nöd jede, wo «Herr, Herr» seit, chunnt is Riich vo de Himmel ine, sondern wär de Wille vom Vatter tuet. Vilne, wo sich a däm Tag uf Profezeie, Dämone-Ustriibe und Machttate i sim Name berüefed, wird er offe säge: «Nie han ich öi kännt», und si vo sich wegschicke."),
  "TU-MAT-007-024-027": ("S Huus uf em Fels",
   "De Jesus seit: Wär sini Wort ghört und tuet, isch wien en gschiide Maa, wo sis Huus uf de Fels baut hät; Räge, Hochwasser und Wind bringed s nöd zum Iistürze. Wär si ghört und nöd tuet, isch wien en dumme Maa, wo uf Sand baut hät; sis Huus stürzt ii, und de Iisturz isch gwaltig."),
  "TU-MAT-007-028-029": ("D Lüüt sind überwältiget",
@@ -594,7 +594,7 @@ NOTES_GSW = [
  ("Abgränzig: [[MAT.6.5-MAT.6.15]] staat i TRANS-MAT-006-005-015-GSW-ZH-WORKING (scripts/authoring/vaterunser.py) und wird da nöd aagrüert. "
   "Wörter sind druf abgstimmt: «Hüüchler», «Synagoge», «Si händ ire Lohn scho überchoo», «din Vatter, wo is Verborgne gseht, wird s dir "
   "vergälte», «i de Himmel», «himmlisch Vatter», «d Heide», «d Lüüt», «ir»."),
- ("Einheitlichi Wörter: «s Himmelriich», «Amen, ich säg öi», «Vatter i de Himmel», «lueg», «Schriftglehrti», «Dämon»; neu i dem Bereich: "
+ ("Einheitlichi Wörter: «s Himmelriich», «Amen, ich säg öi», «Vatter i de Himmel», «lueg», «Schriftglehrti», «Dämon»; neu i däm Bereich: "
   "δικαιοσύνη «Grächtigkeit», μισθός «Lohn», ἐλεημοσύνη «Almose», μεριμνάω «sich Sorge mache», ὀλιγόπιστοι «Chliigläubigi», ἔθνη «d Heide», "
   "μαμωνᾶς «Mammon», κρίνω «richte», ἀνομία «Gsetzlosigkeit», δυνάμεις «Machttate», ὄχλος «d Mängi», οἱ ὄχλοι «d Lüüt». ὑποκριταί heisst wie im Vaterunser-Stuck "
   "und bim Markus «Hüüchler»."),

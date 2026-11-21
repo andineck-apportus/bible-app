@@ -457,7 +457,7 @@ ALTS = [
   'vo mim Vatter i de Himmel. De Mänschesohn isch nämli choo, für das z rette, wo verlore isch.',
   'mittel',
   'Der Zusatz bildet den Vers [[MAT.18.11]] der KJV-Zählung; im SBLGNT fehlt er, deshalb hat [[MAT.18.11]] hier keinen Übersetzungstext. Er gleicht [[LUK.19.10]].',
-  'De Zuesatz isch de Vers [[MAT.18.11]] (KJV-Zellig); im SBLGNT fehlt er, drum hät [[MAT.18.11]] da kein Text. Er gliicht [[LUK.19.10]].',
+  'De Zuesatz isch de Vers [[MAT.18.11]] (KJV-Zellig); im SBLGNT fehlt er, drum hät [[MAT.18.11]] da kei Text. Er gliicht [[LUK.19.10]].',
   {'R1': [('οὐρανοῖς', '(ohne Vers 11)', 'WH, Treg, NA28')],
    'R2': [('οὐρανοῖς. Ἦλθεν γὰρ ὁ υἱὸς τοῦ ἀνθρώπου σῶσαι τὸ ἀπολωλός', 'Denn der Menschensohn ist gekommen, das Verlorene zu retten', 'RP')]},
   {'R1': [('οὐρανοῖς', '(ohni Vers 11)', 'WH, Treg, NA28')],
@@ -825,7 +825,7 @@ NOTES_GSW = [
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte. Wo si em Apparat widerspricht, gilt de Apparat.',
  'Einheitlichi Begriff fürs ganz Matthäusevangelium: «s Himmelriich», «s Riich vo Gott»; «de Mänschesohn»; «Amen, ich säge öi»; «de Vatter i de Himmel», «himmlisch»; «lueg»; «dänn»; «Gmeind». Au: σκανδαλίζω «z Fall bringe», σκάνδαλον «Fallstrick»; προσέρχομαι «härechoo»; προσκυνέω «sich niderwärfe»; οἱ ὄχλοι «d Lüüt»; ἀφίημι «vergää», bi Gäldschuld «erlaa»; ἀδελφός «Brüeder»; δοῦλος «Chnächt», σύνδουλος «Mitchnächt»; ἐν οὐρανοῖς «i de Himmel», ἐν οὐρανῷ «im Himmel»; γέεννα «Höll»; ἀπολύω «entlaa»; πορνεία «Unzucht»; στρέφομαι «sich umwände».',
  'Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich», «s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv).',
- '[[MAT.18.11]] staat nöd im SBLGNT und hät kein Text; de Wortlut staat als Alternative bi [[MAT.18.10]]. D Läsart vo RP i [[MAT.19.17]] staat als Alternative (de Iitrag vom Apparat isch nachtreit).',
+ '[[MAT.18.11]] staat nöd im SBLGNT und hät kei Text; de Wortlut staat als Alternative bi [[MAT.18.10]]. D Läsart vo RP i [[MAT.19.17]] staat als Alternative (de Iitrag vom Apparat isch nachtreit).',
  'Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.',
 ]
 

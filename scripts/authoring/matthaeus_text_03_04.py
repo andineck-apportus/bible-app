@@ -455,7 +455,7 @@ ALTS = [
   ["αὐτῷ kann ergänzt sein, um zu sagen, wem sich die Himmel öffnen; ebenso kann es weggefallen sein, etwa unter dem Einfluss von [[LUK.3.21]].",
    "Laut der automatischen Zuordnung liest 03 ohne αὐτῷ, 04 und 032 mit; die Erstschrift von 01 ohne, eine Korrektur mit. Für 05 liefert die Zuordnung keinen verwertbaren Befund."],
   ["αὐτῷ cha ergänzt sii, zum säge, für wär sich d Himmel uftüend; oder es isch wäggfalle, öppe under em Iifluss vo [[LUK.3.21]].",
-   "Nach de automatische Zueornig list 03 ohni αὐτῷ, 04 und 032 mit; d Erschtschrift vo 01 ohni, e Korrektur mit. Für 05 git d Zueornig kein bruuchbare Befund."]),
+   "Nach de automatische Zueornig list 03 ohni αὐτῷ, 04 und 032 mit; d Erschtschrift vo 01 ohni, e Korrektur mit. Für 05 git d Zueornig kei bruuchbare Befund."]),
  ("VAR-SBLGNTAPP-MAT-004-005-01:R2", "MAT.4.5", "er stellte ihn", "er stellt ihn",
   "er hät en uf d Zinne vom Tempel gstellt", "er stellt en uf d Zinne vom Tempel", "gering",
   "Mit dem Präsens läuft das erzählende Präsens («nimmt … mit») weiter.",
