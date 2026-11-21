@@ -124,30 +124,62 @@ def titel(sx):
 _V = {}   # Vignetten der Kachel, die gerade gezeichnet wird: Schlüssel («1», «2», …, «m») → href
 
 
+def _ein_bild(h, x, y, w, hh):
+    """Ein Bild des Bildlexikons in das Feld x, y, w × hh (Ausschnitt mit dem Motiv, Papier verschwindet)."""
+    if h == "#gott":
+        g = min(w, hh)
+        return gott_zeichen(x + w / 2, y + hh / 2, g)
+    href, r = h if isinstance(h, tuple) else (h, None)
+    if r:
+        bx, by, bw, bh, iw, ih = r
+        return (f'<svg x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" viewBox="{bx} {by} {bw} {bh}" preserveAspectRatio="xMidYMid meet">'
+                f'<image href="{href}" x="0" y="0" width="{iw}" height="{ih}" filter="url(#sk-papier)" style="mix-blend-mode:multiply"/></svg>')
+    return (f'<image href="{href}" x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" preserveAspectRatio="xMidYMid meet" '
+            f'filter="url(#sk-papier)" style="mix-blend-mode:multiply"/>')
+
+
+def _seitenverhaeltnis(h):
+    if h == "#gott" or not isinstance(h, tuple) or not h[1]:
+        return 1.0
+    return h[1][2] / h[1][3]
+
+
 def vign(k, x, y, s, hoehe=None):
-    """Bilder des Bildlexikons für ein Glied (Hybrid) in einem Feld s × hoehe, mehrere nebeneinander; Papierweiss verschwindet durch
-    Aufhellen und Multiplizieren auf dem Kachelpapier. FIG-GOTT: gezeichneter Strahlenkranz."""
+    """Bilder des Bildlexikons für ein Glied im Feld s × hoehe. Mehrere Bilder ordnet das Werkzeug so an, dass sie zusammen am
+    grössten werden (nebeneinander, untereinander oder zwei und eins); die Anordnung selbst trägt keine Bedeutung."""
     liste = _V.get(str(k))
     if not liste:
         return ""
     if not isinstance(liste, list):
         liste = [liste]
     hoehe = hoehe or s
-    n = len(liste)
-    b = s / n
+    a = [_seitenverhaeltnis(h) for h in liste]
+    n, gap = len(liste), 4
+    def zeilen_teilung(teilung):   # Liste von Zeilen (Indizes); Bilder je Zeile gleich hoch
+        hs = []
+        for zeile in teilung:
+            summe = sum(a[i] for i in zeile)
+            hs.append((s - gap * (len(zeile) - 1)) / summe)   # Höhe, bei der die Zeile die Breite füllt
+        gesamt = sum(hs) + gap * (len(teilung) - 1)
+        f = min(1.0, (hoehe - gap * (len(teilung) - 1)) / max(1e-6, sum(hs)))
+        hs = [h * f for h in hs]
+        flaeche = sum(hs[z] ** 2 * a[i] for z, zeile in enumerate(teilung) for i in zeile)
+        return flaeche, hs
+    moeglich = [[list(range(n))], [[i] for i in range(n)]]
+    if n == 3:
+        moeglich += [[[0, 1], [2]], [[0], [1, 2]]]
+    best = max(moeglich, key=lambda t: zeilen_teilung(t)[0])
+    _, hs = zeilen_teilung(best)
     o = []
-    for i, h in enumerate(liste):
-        xx = x + i * b
-        if h == "#gott":
-            g = min(b, hoehe)
-            o.append(gott_zeichen(xx + b / 2, y + hoehe / 2, g))
-            continue
-        href, r = h if isinstance(h, tuple) else (h, None)
-        bx, by, bw, bh, w, hh = r if r else (0, 0, 1, 1, 1, 1)
-        vb = f' viewBox="{bx} {by} {bw} {bh}"' if r else ""
-        bild = (f'<image href="{href}" x="0" y="0" width="{w}" height="{hh}" filter="url(#sk-papier)" style="mix-blend-mode:multiply"/>' if r else
-                f'<image href="{href}" x="0" y="0" width="1" height="1" preserveAspectRatio="xMidYMid meet" filter="url(#sk-papier)" style="mix-blend-mode:multiply"/>')
-        o.append(f'<svg x="{xx:.1f}" y="{y:.1f}" width="{b:.1f}" height="{hoehe:.1f}"{vb} preserveAspectRatio="xMidYMid meet">{bild}</svg>')
+    gesamt_h = sum(hs) + gap * (len(best) - 1)
+    yy = y + (hoehe - gesamt_h) / 2
+    for zeile, zh in zip(best, hs):
+        breite = sum(a[i] * zh for i in zeile) + gap * (len(zeile) - 1)
+        xx = x + (s - breite) / 2
+        for i in zeile:
+            o.append(_ein_bild(liste[i], xx, yy, a[i] * zh, zh))
+            xx += a[i] * zh + gap
+        yy += zh + gap
     return "".join(o)
 
 
@@ -203,19 +235,14 @@ def _spalten(sx, el, y0):
 def _kette(sx, el, y0):
     o = []
     n = len(el)
-    gap = 18
-    h = min(60, (H - y0 - 14 - gap * (n - 1)) / n)
+    gap = 16
+    mit_bild = any(_V.get(str(k)) for k in range(1, n + 1))
+    x0, x1 = (24, W - 24) if mit_bild else (70, W - 70)
+    h = min(110, (H - y0 - 10 - gap * (n - 1)) / n)
+    start = y0 + (H - y0 - 10 - (n * h + gap * (n - 1))) / 2
     for i, e in enumerate(el):
-        y = y0 + i * (h + gap)
-        o.append(box(90, y, 420, h, "a" if e.get("betont") else "n", e.get("betont"), e.get("gestrichen")))
-        vs = min(h - 6, 60) if _V.get(str(i + 1)) else 0
-        if vs:
-            o.append(vign(i + 1, 96, y + (h - vs) / 2, vs))
-        svg, _ = zweisprachig(W / 2 + (vs / 2 if vs else 0), y + h / 2 - (4 if h > 46 else 0), e, 40 - (int(vs / 9) if vs else 0), anchor="middle", weight=600 if e.get("betont") else 400,
-                              fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
-        o.append(svg)
-        if e.get("ref"):
-            o.append(ref_text(500, y + h - 8, e["ref"], "end"))
+        y = start + i * (h + gap)
+        o.append(zelle(x0, y, x1 - x0, h, e, i + 1, None, "a" if e.get("betont") else "n"))
         if i < n - 1:
             o.append(pfeil(W / 2, y + h + 2, W / 2, y + h + gap - 2))
     return "".join(o)
@@ -224,27 +251,15 @@ def _kette(sx, el, y0):
 def _raster(sx, el, y0):
     o = []
     n = len(el)
-    cols = 2 if n <= 4 else 3 if n <= 9 else 4
-    rows = (n + cols - 1) // cols
-    gap = 10
-    w = (W - 40 - gap * (cols - 1)) / cols
-    h = min(96, (H - y0 - 14 - gap * (rows - 1)) / rows)
+    mit_bild = any(_V.get(str(k)) for k in range(1, n + 1))
+    gap, rand = 8, 14
+    cols, rows, w, h = raster_masse(n, W - 2 * rand, H - y0 - 10, gap, 1.05 if mit_bild else 1.9)
     for i, e in enumerate(el):
         r, c = divmod(i, cols)
-        x, y = 20 + c * (w + gap), y0 + r * (h + gap)
-        o.append(box(x, y, w, h, "n", e.get("betont"), e.get("gestrichen")))
-        o.append(f'<text x="{x + 9}" y="{y + 15}" font-family="{SANS}" font-size="11.5" fill="{MUTED}">{i + 1}</text>')
-        oben, unten = y + 20, y + h - (22 if e.get("ref") else 8)   # Textfläche zwischen Nummer und Stelle
-        if _V.get(str(i + 1)):   # Vignette oben in der Mitte, Text darunter
-            vs = min((unten - oben) * 0.55, w * 0.6)
-            o.append(vign(i + 1, x + (w - vs) / 2, y + 20, vs))
-            oben = y + 20 + vs + 4
-        fs, zl = passend(e, w - 20, unten - oben, FS if cols < 4 else 15, 10)
-        svg, _ = zweisprachig(x + w / 2, (oben + unten) / 2, e, zl, fs=fs, anchor="middle", weight=600 if e.get("betont") else 400,
-                              fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
-        o.append(svg)
-        if e.get("ref"):
-            o.append(ref_text(x + w - 8, y + h - 8, e["ref"], "end"))
+        if r == rows - 1 and n % cols:   # letzte Zeile mittig
+            c += (cols - n % cols) / 2
+        x, y = rand + c * (w + gap), y0 + r * (h + gap)
+        o.append(zelle(x, y, w, h, e, i + 1, str(i + 1), fs_max=FS if w > 150 else 15))
     return "".join(o)
 
 
@@ -256,6 +271,60 @@ def passend(e, breite, hoehe, fs=FS, fs_min=10.5):
         if z * fs * 1.24 <= hoehe or fs <= fs_min:
             return fs, zl
         fs -= 0.5
+
+
+def zelle(x, y, w, h, e, k=None, marke=None, seite="n", fs_max=FS, mitte_text=True):
+    """Ein Glied als Kasten, der seine Fläche nutzt: Marke (Nummer, Buchstabe) oben links, Stelle unten rechts, Bilder des
+    Bildlexikons so gross wie möglich (breiter Kasten: Bild links, Text rechts; hoher Kasten: Bild oben, Text darunter)."""
+    o = [box(x, y, w, h, seite, e.get("betont"), e.get("gestrichen"))]
+    pad = 8
+    if marke is not None:
+        o.append(f'<text x="{x + pad}" y="{y + pad + 9}" font-family="{SERIF}" font-size="12.5" fill="{FARBE["akzent"]}">{esc(marke)}</text>')
+    ref = e.get("ref")
+    if ref:
+        o.append(ref_text(x + w - pad, y + h - pad, ref, "end"))
+    ix0, ix1 = x + pad, x + w - pad
+    iy0, iy1 = y + pad + (12 if marke is not None else 0), y + h - pad - (13 if ref else 0)
+    aw, ah = ix1 - ix0, iy1 - iy0
+    stil = dict(weight=600 if e.get("betont") else 400, fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
+    if k is not None and _V.get(str(k)):
+        n = len(_V[str(k)]) if isinstance(_V[str(k)], list) else 1
+        if aw > ah * 1.9:   # breit: Bild links
+            lx = ix0 + (16 if marke is not None else 0)   # neben der Marke
+            bw = min(ah * 1.15 * n, aw * 0.45)
+            o.append(vign(k, lx, y + pad, bw, h - 2 * pad))
+            tx0 = lx + bw + 8
+            fs, zl = passend(e, ix1 - tx0, ah, fs_max)
+            svg, _ = zweisprachig((tx0 + ix1) / 2, (iy0 + iy1) / 2, e, zl, fs=fs, anchor="middle", **stil)
+        else:               # hoch: Bild oben, Text darunter
+            fs, zl = passend(e, aw, max(ah * 0.38, 20), min(fs_max, 15.5))
+            zeilen = max(len(umbruch(e.get(lg) or e.get("de") or "", zl)) for lg in ("de", "gsw"))
+            th = zeilen * fs * 1.24
+            bh = ah - th - 6
+            o.append(vign(k, ix0, iy0, aw, bh))
+            svg, _ = zweisprachig((ix0 + ix1) / 2, iy1 - th / 2, e, zl, fs=fs, anchor="middle", **stil)
+    else:
+        fs, zl = passend(e, aw, ah, fs_max)
+        if mitte_text:
+            svg, _ = zweisprachig((ix0 + ix1) / 2, (iy0 + iy1) / 2, e, zl, fs=fs, anchor="middle", **stil)
+        else:
+            svg, _ = zweisprachig(ix0 + 4, (iy0 + iy1) / 2, e, zl, fs=fs, **stil)
+    o.append(svg)
+    return "".join(o)
+
+
+def raster_masse(n, breite, hoehe, gap, ziel=1.5):
+    """Spalten und Zeilen, die die Fläche füllen: Zellen nahe am Seitenverhältnis «ziel», wenig leere Plätze."""
+    import math
+    best = None
+    for cols in range(1, min(n, 6) + 1):
+        rows = math.ceil(n / cols)
+        w = (breite - gap * (cols - 1)) / cols
+        h = (hoehe - gap * (rows - 1)) / rows
+        score = abs(math.log((w / h) / ziel)) + 0.35 * (cols * rows - n)
+        if best is None or score < best[0]:
+            best = (score, cols, rows, w, h)
+    return best[1:]
 
 
 def _kurve(sx, el, y0):
@@ -352,30 +421,7 @@ def _reihe(sx, el, y0):
 
 
 def _karten(el, y0):
-    o = []
-    n = len(el)
-    cols = n if n <= 4 else (n + 1) // 2
-    rows = (n + cols - 1) // cols
-    gap = 8
-    w = (W - 32 - gap * (cols - 1)) / cols
-    h = (H - y0 - 10 - gap * (rows - 1)) / rows
-    for i, e in enumerate(el):
-        r, c = divmod(i, cols)
-        if r == rows - 1 and n % cols:   # letzte Zeile mittig
-            c += (cols - n % cols) / 2
-        x, y = 16 + c * (w + gap), y0 + r * (h + gap)
-        o.append(box(x, y, w, h, "n", e.get("betont")))
-        o.append(f'<circle cx="{x + 13}" cy="{y + 13}" r="9.5" fill="{PAPER}" stroke="{FARBE["n"][1]}" stroke-width="1.2"/>'
-                 f'<text x="{x + 13}" y="{y + 17}" font-family="{SANS}" font-size="11.5" text-anchor="middle" fill="{INK}">{i + 1}</text>')
-        text_h = 46
-        bh = h - text_h - 30          # Bildfeld unter der Nummer, mit Abstand zum Kastenrand
-        bw = w - 16
-        o.append(vign(i + 1, x + 8, y + 26, bw, bh))
-        oben, unten = y + 26 + bh + 6, y + h - 22
-        fs, zl = passend(e, w - 12, unten - oben, 14.5)
-        svg, _ = zweisprachig(x + w / 2, (oben + unten) / 2, e, zl, fs=fs, anchor="middle", weight=600 if e.get("betont") else 400)
-        o.append(svg + ref_text(x + w - 8, y + h - 8, e.get("ref"), "end"))
-    return "".join(o)
+    return _raster({}, el, y0)
 
 
 def z_hoch(e, n):
@@ -456,68 +502,32 @@ def _ringe(sx, el, y0):
 
 
 def _lager(sx, el, y0):
-    """Lagerplan um eine Mitte (Num 2): Norden oben, Osten rechts; «innen» als Ring um die Mitte. Elemente mit seite n/o/s/w/innen.
-    Feste Abstände (Rückmeldung 2026-11-21: Ring und Seitenkästen überlappten)."""
+    """Lagerplan um eine Mitte (Num 2), Norden oben: West und Ost als hohe Kästen über die ganze Höhe, Nord und Süd oben und unten in
+    der Mitte, im Zentrum der Ring («innen») mit der Mitte. Die Fläche wird ganz genutzt (Rückmeldung 2026-11-21)."""
     o = []
     seiten = {e.get("seite"): e for e in el}
     nr = {e.get("seite"): k for k, e in enumerate(el, 1)}
-    luft = 10
-    bw_s, bh = 150, 62                       # Kästen West und Ost
-    bw_n = 230                               # Kästen Nord und Süd
-    oben, unten = y0 + 2, H - 10
-    ny0, sy0 = oben, unten - bh              # Nord- und Südkasten
-    ry0, ry1 = ny0 + bh + luft, sy0 - luft   # Ring zwischen Nord und Süd
-    rx0, rx1 = 12 + bw_s + luft, W - 12 - bw_s - luft
-    cy = (ry0 + ry1) / 2
+    rand, gap = 14, 8
+    x0, x1, yy0, yy1 = rand, W - rand, y0, H - 10
+    sw = (x1 - x0) * 0.25                      # Breite West/Ost
+    cx0, cx1 = x0 + sw + gap, x1 - sw - gap     # Mittelspalte
+    zh = (yy1 - yy0) * 0.25                    # Höhe Nord/Süd
+    ry0, ry1 = yy0 + zh + gap, yy1 - zh - gap
+    for k, (x, y, w, h, m) in {"w": (x0, yy0, sw, yy1 - yy0, "W"), "o": (x1 - sw, yy0, sw, yy1 - yy0, "O"),
+                               "n": (cx0, yy0, cx1 - cx0, zh, "N"), "s": (cx0, yy1 - zh, cx1 - cx0, zh, "S")}.items():
+        if seiten.get(k):
+            o.append(zelle(x, y, w, h, seiten[k], nr[k], m, fs_max=15.5))
+    mx0, mx1, my0, my1 = cx0, cx1, ry0, ry1
     if seiten.get("innen"):
-        o.append(f'<rect x="{rx0}" y="{ry0}" width="{rx1 - rx0}" height="{ry1 - ry0}" rx="16" fill="none" stroke="{FARBE["b"][1]}" '
-                 f'stroke-width="1.6" stroke-dasharray="6 5"/>')
         e = seiten["innen"]
-        fs_i, zl = passend(e, rx1 - rx0 - 24, 18, 13)
-        svg, _ = zweisprachig((rx0 + rx1) / 2, ry0 + 15, e, zl, fs=fs_i, anchor="middle", fill=FARBE["b"][1], weight=600)
-        o.append(svg + ref_text((rx0 + rx1) / 2, ry1 - 8, e.get("ref"), "middle"))
-        mx0, mx1, my0, my1 = rx0 + 14, rx1 - 14, ry0 + 28, ry1 - 24
-    else:
-        mx0, mx1, my0, my1 = rx0, rx1, ry0, ry1
-    m = sx.get("mitte") or {}
-    o.append(f'<rect x="{mx0}" y="{my0}" width="{mx1 - mx0}" height="{my1 - my0}" rx="9" fill="{BETONT}" stroke="{FARBE["a"][1]}" stroke-opacity=".55"/>')
-    mh = my1 - my0
-    if _V.get("m"):
-        bildh = mh - 34
-        o.append(vign("m", mx0 + 10, my0 + 6, mx1 - mx0 - 20, bildh))
-        fs, zl = passend(m, mx1 - mx0 - 16, 22, 15.5)
-        svg, _ = zweisprachig((mx0 + mx1) / 2, my1 - 15, m, zl, fs=fs, anchor="middle", weight=600)
-    else:
-        fs, zl = passend(m, mx1 - mx0 - 16, mh - 10, 15.5)
-        svg, _ = zweisprachig((mx0 + mx1) / 2, my0 + mh / 2, m, zl, fs=fs, anchor="middle", weight=600)
-    o.append(svg)
-    lage = {"n": ((W - bw_n) / 2, ny0, bw_n, "N"), "s": ((W - bw_n) / 2, sy0, bw_n, "S"),
-            "w": (12, cy - bh / 2, bw_s, "W"), "o": (W - 12 - bw_s, cy - bh / 2, bw_s, "O")}
-    for k, (x, y, bw, marke) in lage.items():
-        e = seiten.get(k)
-        if not e:
-            continue
-        hoch = k in ("w", "o")   # schmale Seitenkästen: Bild oben, Text darunter
-        h = min(ry1 - ry0, 124) if hoch else bh
-        y = cy - h / 2 if hoch else y
-        o.append(box(x, y, bw, h, "n", e.get("betont")))
-        o.append(f'<text x="{x + 8}" y="{y + 17}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{marke}</text>')
-        hat = bool(_V.get(str(nr[k])))
-        if hoch:
-            vs = 42 if hat else 0
-            if vs:
-                o.append(vign(nr[k], x + (bw - vs) / 2, y + 8, vs))
-            oben_t, unten_t = y + 10 + vs + 6, y + h - 22
-            fs, zl = passend(e, bw - 20, unten_t - oben_t, 15)
-            svg, _ = zweisprachig(x + bw / 2, (oben_t + unten_t) / 2, e, zl, fs=fs, anchor="middle")
-        else:
-            vs = 44 if hat else 0
-            if vs:
-                o.append(vign(nr[k], x + 22, y + (h - vs) / 2, vs))
-            tl = x + 24 + (vs + 6 if vs else 0)
-            fs, zl = passend(e, x + bw - 10 - tl, h - 26, 15)
-            svg, _ = zweisprachig((tl + x + bw - 8) / 2, y + (h - 14) / 2, e, zl, fs=fs, anchor="middle")
-        o.append(svg + ref_text(x + bw - 8, y + h - 8, e.get("ref"), "end"))
+        o.append(f'<rect x="{cx0}" y="{ry0}" width="{cx1 - cx0}" height="{ry1 - ry0}" rx="14" fill="none" stroke="{FARBE["b"][1]}" '
+                 f'stroke-width="1.6" stroke-dasharray="6 5"/>')
+        fs_i, zl = passend(e, cx1 - cx0 - 70, 16, 13)
+        svg, _ = zweisprachig((cx0 + cx1) / 2, ry0 + 17, e, zl, fs=fs_i, anchor="middle", fill=FARBE["b"][1], weight=600)
+        o.append(svg + ref_text(cx1 - 12, ry0 + 21, e.get("ref"), "end"))
+        mx0, mx1, my0, my1 = cx0 + 10, cx1 - 10, ry0 + 30, ry1 - 10
+    m = dict(sx.get("mitte") or {}, betont=True)
+    o.append(zelle(mx0, my0, mx1 - mx0, my1 - my0, m, "m", None, "a", fs_max=17))
     return "".join(o)
 
 
