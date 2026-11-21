@@ -66,7 +66,7 @@ _ERGAENZT = {
            "nää schöön böös hööch nööch nooch ääre zäänte bewaare zale",
     "1.6": "härz härze ärnt ärnte gärn stärbe ewägg weg",
     "1.8": "könig könige knecht knächt",
-    "2": "zwee zwo füüf ali mane irne öisne welle sölle werum sig sigi seg seigid heig heg häig heiged heigid häb "
+    "2": "zwee zwo füüf ali mane irne öisne welle sölle werum sig sigi seg seigid heig heg häig heiged heigid "
          "wärdi wärdid wüssid übercho niemert chünige jumpfere gsehne frögt",
     "3": "himel schriftgleerte schriftgleert schriftgelehrte hüchler find spraach spraache schleeg uussag lieferet "
          "fischternis fischteri tämpelwiiig brüedere stedt diräkt tumm",
@@ -81,7 +81,7 @@ _ZIEL = {
     "könige": "chönige", "knecht": "chnächt", "knächt": "chnächt", "zwee": "zwei", "zwo": "zwei", "füüf": "föif",
     "ali": "alli", "mane": "manne", "irne": "ire", "öisne": "öise", "welle": "wele", "sölle": "söle",
     "werum": "wieso", "sig": "seig", "sigi": "seig", "seg": "seig", "seigid": "seiged", "heig": "heb", "heg": "heb",
-    "häig": "heb", "heiged": "hebed", "heigid": "hebed", "häb": "heb", "wärdi": "wärd", "wärdid": "wärded",
+    "häig": "heb", "heiged": "hebed", "heigid": "hebed", "wärdi": "wärd", "wärdid": "wärded",
     "wüssid": "wüssed", "übercho": "überchoo", "niemert": "niemer", "chünige": "chönige", "jumpfere": "jungfraue",
     "gsehne": "gseh", "frögt": "fröget", "himel": "himmel", "schriftgleerte": "schriftglehrte",
     "schriftgleert": "schriftglehrt", "schriftgelehrte": "schriftglehrte", "hüchler": "hüüchler", "find": "fiind",
@@ -95,7 +95,7 @@ for _regel, _woerter in _ERGAENZT.items():
 
 # Formen, die automatisch ersetzt werden dürfen (eindeutig, nur in Mundart-Texten); alle übrigen nur melden.
 NICHT_AUTOMATISCH = {"ihr", "war", "waren", "hatte", "hatten", "kam", "kamen", "sagte", "sagten", "ging", "gingen",
-                     "sprach", "wurde", "wurden", "weg", "find", "ee", "ali", "zale", "sig", "heg", "seg", "gha"}
+                     "sprach", "wurde", "wurden", "weg", "find", "ee", "ali", "zale", "sig", "heg", "seg", "gha", "loo"}
 
 MUSTER = [
     (re.compile(r"[èòùì]"), "Sonderzeichen", "1.1", "nur ä, ö, ü"),
@@ -104,7 +104,7 @@ MUSTER = [
     (re.compile(r"\bdes\b"), "Genitiv «des»", "2 Genitiv", "vo + Dativ"),
     (re.compile(r"\b(?:[Ww]o|[Ww]ie|[Zz]ue|[Cc]ha) (?:er|es|em|en)\b"), "Gleit-n fehlt", "1.12", "won er, wien es, zuen em, chan er"),
     (re.compile(r"\b(?:[Ww]on|[Ww]ien) (?:ich|si|me|mer|ir)\b"), "Gleit-n zu viel", "1.12", "wo ich, wie si"),
-    (re.compile(r"\b[A-ZÄÖÜ][a-zäöü]+ung(?:e|en)?\b"), "Endung -ung", "1.13", "-ig"),
+    (re.compile(r"\b(?!(?:Sprung|Ursprung|Absprung|Schwung|Zwung)\b)[A-ZÄÖÜ][a-zäöü]+ung(?:e|en)?\b"), "Endung -ung", "1.13", "-ig"),
     (re.compile(r"\b(?:sinds|solls|isch's|hät's|gits)\b"), "Kleinwort angehängt", "1.11", "sind s, soll s"),
 ]
 
@@ -136,6 +136,8 @@ def pruefe(text):
     """Funde in einem Mundart-Text: Liste (gefunden, Regel, Vorschlag)."""
     funde = []
     for w in _WORT.findall(text or ""):
+        if len(w) > 1 and w.isupper():
+            continue  # Datensatz-IDs wie FIND-LUK-0008
         k = w.lower()
         if k in WORTLISTE:
             neu, regel = WORTLISTE[k]
