@@ -58,8 +58,9 @@ welche Form gilt.
 9. **Mitlaute** (b, p, d, t, m, n, l, r): wie im Hochdeutschen, auch wenn anders gesprochen. Doppelmitlaut im
    Wortinnern nach Hochdeutsch (`Sunne`, `Himmel`, `alli`), nie am Wortanfang.
 10. **Partizip:** kein `gg-` oder `gch-` für die Vorsilbe ge-: `gange`, `gää`, `gässe`, `kauft`, `bracht`, `treit`
-    (nicht «ggange», «ggää», «ggässe», «gchauft», «praacht»). Bei Verben mit ch-Anlaut den Satz so bauen, dass kein
-    «gch-» nötig ist, oder ein anderes Verb wählen.
+    (nicht «ggange», «ggää», «ggässe», «gchauft», «praacht»). Verben, die in der Mundart mit ch anfangen, behalten es
+    nach g-: `gchrüüziget`, `umgchehrt`, `gchochet`, `aagchündet`; einzige Ausnahme ist `kauft`/`verkauft`
+    (Merkblatt-Beispiel, allgemein üblich).
 11. **Wortgrenzen und Apostroph:** Wörter getrennt schreiben, auch Einbuchstabenwörter: `s Wort`, `d Frau`, `i de
     Wält`, `hät s gseh`, `z Jerusalem`. Kein Apostroph (`s Huus`, nicht «'s Huus»). Zusammen nur, was nicht mehr zu
     trennen ist: `gömmer`, `wämmer`, `hämmer`, `simmer`; sonst getrennt: `sind s`, `soll s`, `isch s` (nicht «sinds»).
@@ -73,9 +74,9 @@ welche Form gilt.
 Manne`. Unbestimmt `en Maa`, `e Frau`, `es Chind`; Dativ `eme Maa`, `ere Frau`, `eme Chind`. Zusammengezogen: `vom`,
 `im`, `am`, `ufem`, `bim`, `zum`, `zur`; `amene`, `imene`, `vomene`, `zumene`.
 
-**Adjektiv:** nach bestimmtem Artikel schwach (`de guet Maa`, `di schöön Frau`, `s lieb Chind`, Dativ `em guete
-Maa`), nach unbestimmtem stark (`en guete Maa`, `e gueti Frau`, `es chliises Chind`). Steigerung `schööner`,
-`am schöönschte`; `guet – besser – bescht`, `vil – meh – am meischte`.
+**Adjektiv:** nach bestimmtem Artikel schwach (`de guet Maa`, `di schön Frau`, `s lieb Chind`, Dativ `em guete
+Maa`), nach unbestimmtem stark (`en guete Maa`, `e gueti Frau`, `es chliises Chind`). Steigerung `schöner`,
+`am schönschte`; `guet – besser – bescht`, `vil – meh – am meischte`.
 
 **Persönliche Fürwörter** (betont / unbetont):
 
@@ -148,6 +149,24 @@ Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
   Aktiv mit `me`.
 - Matthäus: βασιλεία τῶν οὐρανῶν `s Himmelriich`; Erfüllungsformel `damit sich erfüllt, was (vom Herr) dur de Prophet …
   gseit worde isch`.
+
+**Festlegungen Runde 3 (2026-11-21, aus den Rückmeldungen aller Bereiche):**
+- Länge: Hat die Mundart einen anderen Vokal als das Hochdeutsche, die Länge aber dieselbe, einfach schreiben:
+  `spät`, `spöter`, `fröge`, `höch`, `nöch`, `schön`. Langes i, das hochdeutsch `ie` geschrieben wird, als `ii`
+  (`Ziil`, `Spiil` als Nomen), kurzes als `i` (`spile`, `wider`, `vil`). `leer` (nicht «läär»), `Häggli`, `eher`.
+- Dehnungs-h auch bei Verben auf -h: `dräht`, `umdräht`, `chräht`, `gchräht` (nicht «dräit», «chräit»); `chehrt`.
+- Vorsilben `us-`, `uf-` kurz (`usliefere` nicht, sondern `uslifere`; `Ufstand`, `Ussag`); allein stehende betonte
+  Partikel `uus`, `uuf`, `voruus` (`er schlüüsst si uus`).
+- `säie`, Partizip `gsäit` (gesät; nicht «gsät»), `gseit` (gesagt).
+- `öi` in Mundartwörtern (`nöi`, `nöii`, `tröi`, `Fröid`, `fröie`); in gelehrten Wörtern bleibt `eu` (`verleugne`,
+  `Betreuig`).
+- 1. Person Einzahl auf -e (`ich säge`, `ich mache`; aber `ich gaa`, `ich chume`, `ich han`); `ich wird`. Konjunktiv I
+  ausser `seig`/`heb`/`wärd` mit -i erlaubt (`er chömi`, `er wüssi`); Mehrzahl immer -ed, nie -id.
+- Dativ vor Personennamen `em` (`em Titus`), nicht «am»; `däm` (nicht «dem») als hinweisendes Wort; `kei` auch vor
+  Vokal.
+- `cho` nur vor Infinitiv (`cho luege`), sonst `choo`.
+- Wortschatz: `Chile` (nicht «Chilche»), `Volk`, `Ängel`, `Frömd`, `Chnü`, `chnüle`, `Stern`, `Fäscht` (Fest) /
+  `fescht` (fest), `Zahn`/`Zäh` (Zähne), `zäh` (zehn), `Wortluut`, `ränned`, `Umkehr`.
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 

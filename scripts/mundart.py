@@ -71,6 +71,15 @@ _ERGAENZT = {
     "3": "himel schriftgleerte schriftgleert schriftgelehrte hüchler find spraach spraache schleeg uussag lieferet "
          "fischternis fischteri tämpelwiiig brüedere stedt diräkt tumm",
 }
+_ERGAENZT["Runde 3"] = ("läär lääre lääri lääres spaat spoot spööter schöön schööni schööner schöönscht chräit "
+                       "gchräit dräit umdräit gsät chilche volch hääggli hääkli wortlut kein dem bliibid glaubid "
+                       "dörfid seigid")
+_ZIEL_R3 = {"läär": "leer", "lääre": "leere", "lääri": "leeri", "lääres": "leeres", "spaat": "spät", "spoot": "spät",
+            "spööter": "spöter", "schöön": "schön", "schööni": "schöni", "schööner": "schöner",
+            "schöönscht": "schönscht", "chräit": "chräht", "gchräit": "gchräht", "dräit": "dräht", "umdräit": "umdräht",
+            "gsät": "gsäit", "chilche": "chile", "volch": "volk", "hääggli": "häggli", "hääkli": "häggli",
+            "wortlut": "wortluut", "kein": "kei", "dem": "däm", "bliibid": "bliibed", "glaubid": "glaubed",
+            "dörfid": "dörfed", "seigid": "seiged"}
 _ZIEL = {
     "broot": "brot", "taag": "tag", "aabig": "abig", "raat": "rat", "schlaaf": "schlaf",
     "schlaafe": "schlafe", "lüüg": "lüg", "ee": "ehe", "vee": "veh", "befeel": "befehl", "befole": "befohle",
@@ -89,13 +98,14 @@ _ZIEL = {
     "fischternis": "fiischteri", "fischteri": "fiischteri", "tämpelwiiig": "tempelweihi", "brüedere": "brüeder",
     "stedt": "städt", "diräkt": "direkt", "tumm": "dumm",
 }
+_ZIEL.update(_ZIEL_R3)
 for _regel, _woerter in _ERGAENZT.items():
     for _w in _woerter.split():
         WORTLISTE.setdefault(_w, (_ZIEL[_w], _regel))
 
 # Formen, die automatisch ersetzt werden dürfen (eindeutig, nur in Mundart-Texten); alle übrigen nur melden.
 NICHT_AUTOMATISCH = {"ihr", "war", "waren", "hatte", "hatten", "kam", "kamen", "sagte", "sagten", "ging", "gingen",
-                     "sprach", "wurde", "wurden", "weg", "find", "ee", "ali", "zale", "sig", "heg", "seg", "gha", "loo"}
+                     "sprach", "wurde", "wurden", "weg", "find", "ee", "ali", "zale", "sig", "heg", "seg", "gha", "loo", "dem"}
 
 MUSTER = [
     (re.compile(r"[èòùì]"), "Sonderzeichen", "1.1", "nur ä, ö, ü"),
@@ -141,6 +151,8 @@ def pruefe(text):
         k = w.lower()
         if k in WORTLISTE:
             neu, regel = WORTLISTE[k]
+            if k == "find" and not w[0].isupper():
+                continue  # «ich find» (finden) ist richtig; nur das Nomen «Find» → «Fiind»
             if regel == "2 Präteritum" and w[0].isupper():
                 continue  # «Sprach», «War» als Nomen; Präteritum am Satzanfang fängt die getrennte Prüfung
             funde.append((w, regel, neu))
