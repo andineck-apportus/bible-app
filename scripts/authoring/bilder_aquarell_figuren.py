@@ -82,7 +82,17 @@ def eintraege():
     return out
 
 
-def regeln(e, c=None):
+def lockern(r, e, c, an=True):
+    """Lockerung (portraets.json «lockerung», Entscheid 2026-11-21): Eine Regel verbietet nur, was die Beschreibung nicht selbst
+    verlangt (G-EFFEKT sagt es schon: «die der Text nicht nennt»). Ohne diesen Zusatz fielen Zeichen durch, deren Inhalt Licht,
+    eine Sprechblase, ein Verbotskreis oder ein Kind ist (Läufe 61–77)."""
+    lo = c.get("lockerung") or {}
+    if not an or r["id"] not in lo.get("regeln", []):
+        return r
+    return {**r, "en": r["en"] + lo["zusatz_en"].replace("{beschreibung}", e["beschreibung"])}
+
+
+def regeln(e, c=None, lockerung=True):
     c = c or cfg()
     allg = BA.lade(DATEN / "pruefregeln.json")
     out = []
@@ -93,9 +103,9 @@ def regeln(e, c=None):
             continue
         if r["id"] == "G-PROPORTION" and e["art"] == "vignette":
             continue
-        out.append({**r, "ebene": "allgemein"})
+        out.append({**lockern(r, e, c, lockerung), "ebene": "allgemein"})
     for r in c["regeln"][e["art"]]:
-        out.append({**r, "ebene": "portraet"})
+        out.append({**lockern(r, e, c, lockerung), "ebene": "portraet"})
     for r in c["regeln"]["alle"]:
         if r["id"] == "P-LEXIKON" and not e["lexikon"]:
             continue
@@ -113,10 +123,17 @@ def regeln(e, c=None):
     return out
 
 
-def fingerabdruck(e, c=None):
+def fingerabdruck(e, c=None, lockerung=True):
     """Was das Porträt bestimmt: Verfahren, Beschreibung, Regeln, Malauftrag. Ändert sich etwas, gilt die Prüfung als veraltet."""
     c = c or cfg()
-    return BP.sha({"verfahren": BP.VERFAHREN, "portraets": c["version"], "beschreibung": e["beschreibung"], "regeln": regeln(e, c), "auftrag": auftrag(e, c)})
+    return BP.sha({"verfahren": BP.VERFAHREN, "portraets": c["version"], "beschreibung": e["beschreibung"], "regeln": regeln(e, c, lockerung),
+                   "auftrag": auftrag(e, c)})
+
+
+def aktuell(ch, e, c=None):
+    """Prüfung noch gültig? Eine Lockerung macht Bilder nicht veraltet, die die strengere Fassung bestanden haben."""
+    c = c or cfg()
+    return ch.get("plan_sha") in (fingerabdruck(e, c), fingerabdruck(e, c, lockerung=False))
 
 
 def beschreibung_sha(text):
@@ -160,7 +177,7 @@ def gueltig(r, e, c=None):
     """Hat der Eintrag ein abgelegtes, bestandenes und aktuelles Porträt?"""
     ch = (r or {}).get("check") or {}
     return bool(r and r.get("image") and (ROOT / r["image"]).is_file() and ch.get("ergebnis") == "bestanden"
-                and not ch.get("trocken") and ch.get("plan_sha") == fingerabdruck(e, c))
+                and not ch.get("trocken") and aktuell(ch, e, c))
 
 
 def wahl(eintr, szenen, alle_ohne_bild=True, erzwingen=False):

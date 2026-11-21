@@ -187,3 +187,5 @@ kaum sichtbar, im Dunkeln gelb-schwarz). Allgemeine Regeln für jedes Bild und Z
    (`vignetten.freistellen`, beim Bau der App).
 5. **Prüfen:** Neben der Bildprüfung beim Malen eine Bedeutungsprüfung für Zeichen: eine weitere Instanz sieht nur das Bild und
    nennt die Bedeutung; weicht sie vom Lexikon ab, wird das Zeichen überarbeitet (geplant nach dem Malen aller Lexikon-Bilder).
+
+- **Prüfregeln verbieten nur, was die Beschreibung nicht verlangt** (2026-11-21, nach den Läufen 61–77): Ist Licht, eine Sprechblase, ein Verbotskreis, ein Kind oder eine zweite Person selbst Inhalt eines Lexikon-Eintrags, gilt das nicht als Verstoss gegen G-EFFEKT, G-SCHRIFT, G-NIMBUS, G-MODERN, G-PROPORTION oder P-EINZELN (portraets.json «lockerung»). Merkmale, die nur im Vergleich sichtbar sind (z. B. «einen Kopf grösser als alle»), werden im Einzelporträt nicht geprüft («ersetzt»). Eine Lockerung macht bereits bestandene Bilder nicht veraltet.

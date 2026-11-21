@@ -509,7 +509,7 @@ def renderings(fig, alle, alt):
         if a.get("image"):
             eintr = eintr or BF.eintraege()
             c = dict(a.get("check") or {})
-            if c and c.get("plan_sha") != BF.fingerabdruck(eintr[k]):
+            if c and not BF.aktuell(c, eintr[k]):
                 c["veraltet"] = True
                 c["stufe"] = "entwurf"
             elif c.get("veraltet"):
