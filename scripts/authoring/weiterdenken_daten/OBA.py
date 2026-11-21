@@ -69,7 +69,7 @@ REFLECTIONS = [
     {"id": "REFL-OBA-0010", "subject": "TU-OBA-001-010-014", "order": 3,
      "question_de": "Wo beginnt Schadenfreude, und wo endet sie?",
      "note_de": "Die Reihe beginnt mit «schau nicht … herab» und «freu dich nicht» ([[OBA.1.12]]) und endet mit Gewalt an Flüchtlingen ([[OBA.1.14]]).",
-     "gsw": {"question_de": "Wo fangt Schadefröid aa, und wo hört si uf?",
+     "gsw": {"question_de": "Wo fangt Schadefröid aa, und wo hört si uuf?",
              "note_de": "D Reihe fangt mit «lueg nöd … abe» und «fröi dich nöd» aa ([[OBA.1.12]]) und hört mit Gwalt a Flüchtling uf ([[OBA.1.14]])."}},
     # 15–18
     {"id": "REFL-OBA-0011", "subject": "TU-OBA-001-015-018", "order": 1,

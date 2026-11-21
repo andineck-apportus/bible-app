@@ -26,7 +26,7 @@ NOTES = [
   "sources": [], "terms": [],
   "gsw": {"topic": "En Brief a e Gmeind, wo de Paulus nöd gründet ghaa hät",
           "text": "Rom isch d Hauptstadt vom Riich gsii und mit vilicht ere Million Iiwohner di gröscht Stadt vo de "
-                  "Mittelmeerwält; det hät au e grossi jüdischi Gmeinschaft gläbt. D christlich Gmeind isch ohni de Paulus "
+                  "Mittelmeerwält; dört hät au e grossi jüdischi Gmeinschaft gläbt. D christlich Gmeind isch ohni de Paulus "
                   "entstande und hät sich i mehreri Husgmeinde troffe ([[ROM.16.3-ROM.16.5]]; [[ROM.16.14-ROM.16.15]]). De "
                   "Paulus hät wahrschiinli um 56/57 n. Chr. vo Korinth us gschribe: Er empfiilt d Phöbe us em nöche "
                   "Hafeort Kenchreä ([[ROM.16.1-ROM.16.2]]) und grüesst vo sim Gaschtgeber Gaius ([[ROM.16.23]]). Er isch "
@@ -123,7 +123,7 @@ NOTES = [
           "text": "Nach em 1. Korintherbrief isch s Verhältnis zwüsche em Paulus und de Gmeind schlächter worde. Er hät en "
                   "schmerzliche Zwüschebsuech gmacht ([[2CO.2.1]]) und dänn en Brief «under vile Träne» gschribe "
                   "([[2CO.2.4]]). De Titus hät en wahrschiinli überbracht und isch mit guete Nachrichte zrugg choo, wo de Paulus z "
-                  "Makedonie uf en gwartet hät ([[2CO.2.12-2CO.2.13]]; [[2CO.7.5-2CO.7.7]]). Vo det us hät de Paulus "
+                  "Makedonie uf en gwartet hät ([[2CO.2.12-2CO.2.13]]; [[2CO.7.5-2CO.7.7]]). Vo dört us hät de Paulus "
                   "wahrschiinli um 55/56 n. Chr. de 2. Korintherbrief gschribe. Er wirbt drin für d Sammlig für Jerusalem "
                   "([[2CO.8.1-2CO.9.15]]) und setzt sich mit Gägner usenand, won er spöttisch «Überapostel» nännt "
                   "([[2CO.11.5]]). Gliichziitig chündt er en dritte Bsuech aa ([[2CO.12.14]]; [[2CO.13.1]]). Dass de Brief "
@@ -242,12 +242,12 @@ NOTES = [
                   "Ort vo de Provinz Asia, wo de römisch Statthalter oft residiert hät. Berüemt isch de Tempel vo de "
                   "Artemis gsii, eis vo de sibe Wältwunder; um iren Kult umme hät es Gwärb blüet, wo sich dur d Predig vom "
                   "Paulus bedroht gfüült hät ([[ACT.19.23-ACT.19.41]]). Au e jüdischi Gmeind hät i de Stadt gläbt "
-                  "([[ACT.19.8]]). De Paulus hät nach de Apostelgschicht zwei bis drü Jahr det gwürkt ([[ACT.19.10]]; "
+                  "([[ACT.19.8]]). De Paulus hät nach de Apostelgschicht zwei bis drü Jahr dört gwürkt ([[ACT.19.10]]; "
                   "[[ACT.20.31]]), wahrschiinli um 52–55 n. Chr.; vo da us sind i de ganze Region Gmeinde entstande. "
                   "Spöter gilt Ephesus als de Ort, wo de Timotheus gwürkt hät ([[1TI.1.3]]), und erschiint under de sibe "
                   "Gmeinde vo de Offebarig ([[REV.2.1-REV.2.7]]).",
           "uncertain": "Öb Ephesus förmlich d Hauptstadt vo de Provinz gsii isch oder die Rolle mit Pergamon teilt hät, isch "
-                       "nöd ganz klar; Iiwohnerzahle sind blossi Schätzige. Wie lang de Paulus det gsii isch, wüssed mer nu "
+                       "nöd ganz klar; Iiwohnerzahle sind blossi Schätzige. Wie lang de Paulus dört gsii isch, wüssed mer nu "
                        "us de Apostelgschicht. E Haft vom Paulus z Ephesus wird vermuetet, isch aber nöd bleit.",
           "terms": []}},
  {"id": "BG-EPH-BOOK-0002", "book": "EPH", "context": EC, "confidence": "possible",
@@ -300,7 +300,7 @@ NOTES = [
   "sources": [], "terms": [],
   "gsw": {"topic": "Philippi: e römischi Kolonie z Makedonie",
           "text": "Philippi isch vom Chönig Philipp II. vo Makedonie gründet und nach im benännt worde. Nach de Schlacht bi "
-                  "Philippi (42 v. Chr.) und nomal nach 31 v. Chr. händ d Römer det Veterane aagsidlet; d Stadt isch e "
+                  "Philippi (42 v. Chr.) und nomal nach 31 v. Chr. händ d Römer dört Veterane aagsidlet; d Stadt isch e "
                   "römischi Kolonie worde, mit römischem Rächt und Latiin als Amtssprach ([[ACT.16.12]]). Si isch a de Via "
                   "Egnatia gläge, de grosse Strass vo de Adria Richtig Oschte. D Apostelgschicht verzellt d Gründig vo de "
                   "Gmeind mit de Lydia und andere um 49/50 n. Chr. als erschte Schritt vom Paulus uf Europa "
@@ -332,10 +332,10 @@ NOTES = [
                   "([[PHP.4.22]]). Traditionell dänkt me a d Haft z Rom um 60–62 n. Chr. ([[ACT.28.16]]; [[ACT.28.30]]): "
                   "Defür reded s Prätorium, wo da di kaiserlich Garde cha meine, und de kaiserlich Huushalt. Vili Forscher "
                   "vermueted defür e Haft z Ephesus um 54/55 n. Chr., wo suscht nöd bezüügt isch ([[2CO.1.8-2CO.1.9]]; "
-                  "[[2CO.11.23]]): Di vile Botegäng zwüsche em Paulus und Philippi ([[PHP.2.19-PHP.2.30]]) wäred vo det us "
+                  "[[2CO.11.23]]): Di vile Botegäng zwüsche em Paulus und Philippi ([[PHP.2.19-PHP.2.30]]) wäred vo dört uus "
                   "liechter möglich gsii, und Amtssitz vom Statthalter wie au kaiserlichi Sklave und Freiglassni hät s au i "
                   "de Provinze gää. E dritti Möglichkeit isch d Haft z Cäsarea um 57–59 n. Chr. ([[ACT.23.33-ACT.24.27]]).",
-          "uncertain": "Kei vo de drü Aanaame isch gsicheret. E Haft z Ephesus wird nu erschlosse; d Apostelgschicht "
+          "uncertain": "Kei vo de drü Aanahme isch gsicheret. E Haft z Ephesus wird nu erschlosse; d Apostelgschicht "
                        "erwähnt si nöd. D Wahl beiiflusst d Datierig und d Iiornig vom Brief under di andere Paulusbrief; di "
                        "gliich Frag stellt sich bim Philemonbrief und, falls vom Paulus, bim Kolosserbrief.",
           "terms": ["Prätorium: Amtssitz vo me Statthalter oder di kaiserlich Garde"]}},
@@ -401,7 +401,7 @@ NOTES = [
                   "([[1TH.1.9]]). Bsorgt hät de Paulus de Timotheus vo Athen us zrugg gschickt; nach sim guete Bricht hät "
                   "er de Brief gschribe, wahrschiinli um 50/51 n. Chr. vo Korinth us ([[1TH.3.1-1TH.3.6]]). De Brief isch "
                   "unbestritte vom Paulus und gilt meischtens als di ältischt erhalte Schrift vom Nöie Teschtamänt.",
-          "uncertain": "Wie lang de Paulus det gsii isch, isch umstritte: D Apostelgschicht nännt drü Sabbat "
+          "uncertain": "Wie lang de Paulus dört gsii isch, isch umstritte: D Apostelgschicht nännt drü Sabbat "
                        "([[ACT.17.2]]), d Understützig us Philippi, wo meh als eimal choo isch ([[PHP.4.16]]), laat eher a "
                        "es paar Mönet dänke. Öb de 1. Thessalonicherbrief oder de Galaterbrief elter isch, hangt devo ab, "
                        "wie me de Galaterbrief datiert.",
@@ -428,10 +428,10 @@ NOTES = [
                   "seig scho da, und es paar nüme gschaffet händ ([[2TH.2.1-2TH.2.2]]; [[2TH.3.6-2TH.3.12]]). Er nännt de "
                   "Paulus, de Silvanus und de Timotheus als Absänder ([[2TH.1.1]]) und gliicht im Ufbau stark em 1. "
                   "Thessalonicherbrief. Wär en em Paulus zueschriibt, datiert en churz nach em erschte Brief, um 50/51 n. "
-                  "Chr. vo Korinth us; de Paulus hett dänn es Missverständnis korrigiert. Anderi halted en für e spöteri "
+                  "Chr. vo Korinth uus; de Paulus hett dänn es Missverständnis korrigiert. Anderi halted en für e spöteri "
                   "Schrift (öppe 80–100 n. Chr.) im Name vom Paulus: D Erwartig vo Vorzeiche vor em Änd "
                   "([[2TH.2.3-2TH.2.12]]) würki anders als s plötzlich Choo i [[1TH.5.1-1TH.5.3]], und d Warnig vor eme "
-                  "Brief, «wie wänn er vo öis wär», mitsamt em eigehändige Gruess ([[2TH.2.2]]; [[2TH.3.17]]) fall uf.",
+                  "Brief, «wie wänn er vo öis wär», mitsamt em eigehändige Gruess ([[2TH.2.2]]; [[2TH.3.17]]) fall uuf.",
           "uncertain": "D Verfasserschaft isch i de Forschig stark umstritte. D Ähnlichkeit zum 1. Thessalonicherbrief "
                        "düüted di einte als Zeiche vo ziitlicher Nöchi, di andere als Nachamig. E Minderheit haltet de 2. "
                        "Thessalonicherbrief sogar für de früener vo de beide.",

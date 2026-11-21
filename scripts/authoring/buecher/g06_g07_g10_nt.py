@@ -84,7 +84,7 @@ NOTES = [
   "evidence_refs": ["ACT.1.1", "ACT.28.30-ACT.28.31"],
   "sources": ["Irenäus, Gegen die Häresien 3,1,1", "Muratorisches Fragment"],
   "terms": [],
-  "gsw": {"topic": "Wieso hört d Apostelgschicht z Rom uf?",
+  "gsw": {"topic": "Wieso hört d Apostelgschicht z Rom uuf?",
           "text": "Nach alter Überliferig (Irenäus, Muratorisches Fragment) stammt d Apostelgschicht vom gliiche Lukas wie s Lukasevangelium; dass beidi Büecher de gliich Verfasser händ, isch au i de Forschig wiitgehend aagnoo. Uffällig isch s Änd: De Paulus läbt zwei Jahr under Bewachig z Rom und verchündet «ungehinderet» ([[ACT.28.16]]; [[ACT.28.30-ACT.28.31]]); vo sim Prozess und Tod verzellt s Buech nüüt. Es paar schlüssed drus, es seig um 62 n. Chr. gschribe worde. Di meischte datiered s um 80–90 n. Chr., nach em Lukasevangelium, und verstönd s offe Änd als bewusst gwählt: D Botschaft isch i de Hauptstadt aachoo. S Buech zeigt römischi Beamti oft als unparteiisch ([[ACT.18.14-ACT.18.16]]; [[ACT.26.31-ACT.26.32]]) und beschriibt, wie d Gmeinde iren Wäg zwüsche Synagoge und Völker finded ([[ACT.15.1-ACT.15.29]]).",
           "uncertain": "Umstritte sind de Verfasser (Paulusbegleiter oder en spötere Autor) und d Ziit (um 62, um 80–90 oder Aafang 2. Jahrhundert). Öb s Buech d Chrischte gägenüber Rom verteidige, d Gmeinde i irem Sälbschtverständnis stärche oder beides wott, isch offe. Dass de Paulus z Rom under em Nero gstorbe isch, bricht nöd d Bible, sondern spöteri Überliferig, öppe de Eusebius.",
           "terms": []}},
@@ -98,7 +98,7 @@ NOTES = [
   "terms": [T("grc", "πολιτάρχης", "Stadtvorsteher")],
   "gsw": {"topic": "De Lukas als Gschichtsschriiber",
           "text": "De Lukas schriibt wien en antike Historiker: mit ere Widmig, mit Rede a Wändepünkt ([[ACT.2.14-ACT.2.36]]; [[ACT.17.22-ACT.17.31]]) und mit Ortskänntnis. Es paar Einzelheite cha me usserhalb vo de Bible prüefe, öppe de Titel Politarche für d Stadtbeamte z Thessalonich ([[ACT.17.6]]), wo Inschrifte beleged, oder de Statthalter Gallio ([[ACT.18.12]]). D Mir-Abschnitt ([[ACT.16.10-ACT.16.17]]; [[ACT.20.5-ACT.20.15]]; [[ACT.21.1-ACT.21.18]]; [[ACT.27.1-ACT.28.16]]) verzelled bsunders aaschaulich vo Seereise. Gliichziitig git s Spannige zu de Brief vom Paulus, öppe bi sim erschte Bsuech z Jerusalem ([[GAL.1.18-GAL.1.19]]; [[ACT.9.26-ACT.9.30]]) und bim Apostelkonzil ([[GAL.2.1-GAL.2.10]]; [[ACT.15.1-ACT.15.29]]). Antiki Historiker wie de Thukydides händ Rede bewusst sälber gstaltet, nach däm, was d Lag verlangt hät.",
-          "uncertain": "Öb d Mir-Abschnitt uf de Verfasser als Augezüüg, uf es Reisetagebuech, won er übernoo hät, oder uf es literarischs Stilmittel zruggönd, isch umstritte. Wie me d Underschid zum Paulus erklärt (anderi Blickwinkel, anderi Ereignis oder theologischi Gstaltig), isch au offe. De Thukydides hät debii möglichscht nöch bim würkli Gseite wele bliibe; wie wiit de Lukas Rede überliferet oder sälber formt, wird verschide beurteilt.",
+          "uncertain": "Öb d Mir-Abschnitt uf de Verfasser als Augezüüg, uf es Reisetagebuech, won er übernoo hät, oder uf es literarischs Stilmittel zruggönd, isch umstritte. Wie me d Underschiid zum Paulus erklärt (anderi Blickwinkel, anderi Ereignis oder theologischi Gstaltig), isch au offe. De Thukydides hät debii möglichscht nöch bim würkli Gseite wele bliibe; wie wiit de Lukas Rede überliferet oder sälber formt, wird verschide beurteilt.",
           "terms": ["Stadtvorsteher"]}},
 
  {"id": "BG-REV-BOOK-0001", "book": "REV", "context": "CTX-HIST-EARLY-CHRISTIANITY", "confidence": "possible",

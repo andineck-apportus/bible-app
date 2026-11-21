@@ -49,10 +49,10 @@ DE = {
  "OBA.1.21": "Und{1} [Retter]{3} [werden hinaufziehen]{2} [auf]{4} [den Berg]{5} [Zion]{6}, [um]{7} [das Gebirge]{10} [Esau]{11} [zu richten]{8}; und{12} [die]{16} [Königsherrschaft]{17} [wird]{13} [JHWH]{15} [gehören]{14}. ~9(" + OBJ + ")",
 }
 GSW = {
- "OBA.1.1": "[D Schauig]{1} [vom Obadja]{2}. [So]{3} [seit]{4} [de Herr]{5,6} [JHWH]{7} [über]{8} [Edom]{9}: [E Nachricht]{10} [händ mir ghört]{11} [vo]{12,13} [JHWH]{14}, und{15} [en Bote]{16} [isch]{19} [under]{17} [d Völker]{18} [gschickt worde]{19}: [Stönd uf]{20}, und{21} [mir wänd]{22} [gäge]{23} [Edom]{24} [in]{25} [Chrieg]{26} [zieh]{22}!",
+ "OBA.1.1": "[D Schauig]{1} [vom Obadja]{2}. [So]{3} [seit]{4} [de Herr]{5,6} [JHWH]{7} [über]{8} [Edom]{9}: [E Nachricht]{10} [händ mir ghört]{11} [vo]{12,13} [JHWH]{14}, und{15} [en Bote]{16} [isch]{19} [under]{17} [d Völker]{18} [gschickt worde]{19}: [Stönd uuf]{20}, und{21} [mir wänd]{22} [gäge]{23} [Edom]{24} [in]{25} [Chrieg]{26} [zieh]{22}!",
  "OBA.1.2": "[Lueg]{1}, [ich han]{3} [dich]{4} [chlii]{2} [gmacht]{3} [under]{5} [de Völker]{6}; [du bisch]{8} [sehr]{9} [verachtet]{7}.",
  "OBA.1.3": "[De Hochmuet]{1} [vo dim]{3} [Herz]{2} [hät]{4} [dich]{5} [tüüscht]{4}, [du, wo wohnsch]{6} [i]{7} [de Chlüft]{8} [vom Fels]{9}, [höch obe]{10} [sis]{12} [Daheim]{11}, [wo]{13} [i]{14} [sim]{16} [Herz]{15} [seit]{13}: [Wär]{17} [holt]{18} [mich]{19} [abe uf de Bode]{20}?",
- "OBA.1.4": "[Wänn]{1} [du au so höch ufestiigsch]{2} [wie]{3} [de Adler]{4} und{5} [wänn]{6} [dis]{11} [Näscht]{10} [zwüsche]{7} [de Stärne]{8} [gsetzt isch]{9}: [vo]{12} [dört]{13} [hol ich]{14} [dich]{15} [abe]{14}, [Spruch]{16} [vo JHWH]{17}.",
+ "OBA.1.4": "[Wänn]{1} [du au so höch ufestiigsch]{2} [wie]{3} [de Adler]{4} und{5} [wänn]{6} [dis]{11} [Näscht]{10} [zwüsche]{7} [de Sterne]{8} [gsetzt isch]{9}: [vo]{12} [dört]{13} [hole ich]{14} [dich]{15} [abe]{14}, [Spruch]{16} [vo JHWH]{17}.",
  "OBA.1.5": "[Wänn]{1} [Dieb]{2} [zu]{4} [dir]{5} [chämed]{3}, [wänn]{6} [Röiber]{7} [i de Nacht]{8} – [wie bisch du]{9} [vernichtet worde]{10}! – [würded si]{13} [nöd]{12} [nume stähle]{13}, [was si bruuched]{14,15}? [Wänn]{16} [Wiiläser]{17} [zu]{19} [dir]{20} [chämed]{18}, [würded si]{23} [nöd]{22} [e Nachläsi]{24} [übrig laa]{23}? ~11(" + Q_G + ") ~21(" + Q_G + ")",
  "OBA.1.6": "[Wie]{1} [händ si]{2} [de Esau]{3} [dursuecht]{2}, [sini]{6} [versteckte Schätz]{5} [ufgspürt]{4}!",
  "OBA.1.7": "[Bis]{1} [a]{2} [d Gränze]{3} [händ si]{4} [dich]{5} [gjagt]{4}, [alli]{6} [dini]{9} [Verbündete]{7,8}; [si händ]{10} [dich]{11} [tüüscht]{10}, [si händ]{12,13} [dich]{14} [überwältigt]{12,13}, [dini]{17} [Fründe]{15,16}; [dis]{19} [Brot]{18} [leged si]{20} [als Falle]{21} [under]{22} [dich]{23}. [Er]{26,27} [hät kei]{24} [Verstand]{25}.",
@@ -66,7 +66,7 @@ GSW = {
  "OBA.1.15": "Dänn{1} [nöch]{2} isch [de Tag]{3} [vo JHWH]{4} [über]{5} [alli]{6} [Völker]{7,8}. [Wie]{9,10} [du gmacht häsch]{11}, [so wird]{12} [mit dir]{13,14} [gmacht]{12}; [dis]{16} [Tue]{15} [fallt]{17} [uf]{18} [din]{20} [Chopf]{19} [zrugg]{17}.",
  "OBA.1.16": "Dänn{1} [wie]{2,3} [ir trunke händ]{4} [uf]{5} [mim]{8} [heilige]{7} [Bärg]{6}, [so trinked]{9} [alli]{10} [Völker]{11,12} [immer wiiter]{13}; und{14} [si trinked]{15} und{16} [schlürfed]{17} und{18} [wärded]{19}, [wie]{20} [wänn si nie]{21} [gsii wäred]{22}.",
  "OBA.1.17": "[Aber]{1} [uf]{2} [em Bärg]{3} [Zion]{4} [git s]{5} [Rettig]{6}, und{7} [er wird]{8} [heilig]{9} [sii]{8}; und{10} [s Huus]{12} [Jakob]{13} [nimmt]{11} [sis]{16} [Eigetum]{15} [in Bsitz]{11}. ~14(" + OBJ_G + ")",
- "OBA.1.18": "Und{1} [s Huus]{3} [Jakob]{4} [wird]{2} [es Füür]{5} [sii]{2} und{6} [s Huus]{7} [Josef]{8} [e Flamme]{9}, und{10} [s Huus]{11} [Esau]{12} [zu]{13} [Strau]{14}; und{15} [si zünded]{16} [si]{17,18} [aa]{16} und{19} [zehred si uf]{20,21}; und{22} [em]{26} [Huus]{27} [Esau]{28} [bliibt]{24} [kein]{23} [Überläbende]{25}, [dänn]{29} [JHWH]{30} [hät s gseit]{31}.",
+ "OBA.1.18": "Und{1} [s Huus]{3} [Jakob]{4} [wird]{2} [es Füür]{5} [sii]{2} und{6} [s Huus]{7} [Josef]{8} [e Flamme]{9}, und{10} [s Huus]{11} [Esau]{12} [zu]{13} [Strau]{14}; und{15} [si zünded]{16} [si]{17,18} [aa]{16} und{19} [zehred si uuf]{20,21}; und{22} [em]{26} [Huus]{27} [Esau]{28} [bliibt]{24} [kei]{23} [Überläbende]{25}, [dänn]{29} [JHWH]{30} [hät s gseit]{31}.",
  "OBA.1.19": "Und{1} [die im]{3} [Negev]{4} [nämed]{2} [s Gebirg]{6} [Esau]{7} [in Bsitz]{2}, und{8} [die i]{9} [de Schefela]{10} [d Philischter]{12}; und{13} [si nämed]{14} [s Gebiet]{16} [Efraim]{17} und{18} [s Gebiet]{20} [Samaria]{21} [in Bsitz]{14}, und{22} [Benjamin]{23} [Gilead]{25,26}. ~5(" + OBJ_G + ") ~11(" + OBJ_G + ") ~15(" + OBJ_G + ") ~19(" + OBJ_G + ") ~24(" + OBJ_G + ")",
  "OBA.1.20": "Und{1} [di Verbannte]{2} [vo däm]{5,6} [Heer]{3,4} [vo de]{7} [Israelite]{8,9}, [wo]{10} [under de Kanaaniter]{11} sind [bis]{12} [Sarepta]{13}, und{14} [di Verbannte]{15} [vo Jerusalem]{16}, [wo]{17} [i]{18} [Sefarad]{19} sind, [nämed]{20} [d Städt]{22} [vom]{23} [Negev]{24} [in Bsitz]{20}. ~21(" + OBJ_G + ")",
  "OBA.1.21": "Und{1} [Retter]{3} [ziehnd]{2} [uf]{4} [de Bärg]{5} [Zion]{6} [ufe]{2}, [damit si]{7} [s Gebirg]{10} [Esau]{11} [richted]{8}; und{12} [d]{16} [Chönigsherrschaft]{17} [ghört]{13} [JHWH]{14,15}. ~9(" + OBJ_G + ")",
@@ -102,7 +102,7 @@ DEC_GSW = [
   "De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili düütschi Bible schriibed «der HERR». Da staat de Name i sine vier Konsonante, damit me gseht, dass im Hebräische en Name staat."),
  ("OBA.1.1", "D Schauig", "literal", "חֲזוֹן", None, ["D Vision"], "חָזוֹן isch das, was en Prophet «gseht»; als Buechüberschrift au i [[ISA.1.1]] und [[NAM.1.1]]."),
  ("OBA.1.1", "gäge Edom", "adapted", "עָלֶיהָ", "gäge si", None, "Wörtlich «gäge si»: Edom als Land isch im Hebräische wiiblich."),
- ("OBA.1.2", "ich han", "interpretive", "נְתַתִּיךָ", "ich han dich gää", ["mach ich dich", "wird ich dich mache"],
+ ("OBA.1.2", "ich han", "interpretive", "נְתַתִּיךָ", "ich han dich gää", ["mache ich dich", "wird ich dich mache"],
   "D Vergangeheitsform cha e sicher erwarteti Zuekunft usdrucke (prophetischs Perfekt); anderi läsed si als Ruggblick uf d Gschicht vo Edom."),
  ("OBA.1.3", "vom Fels", "literal", "סֶלַע", None, ["vo Sela"], "Sela («Fels») cha au en Ortsname z Edom sii; es Wortspiil isch möglich."),
  ("OBA.1.4", "Spruch", "literal", "נְאֻם", None, ["seit"], "נְאֻם יְהוָה isch e feschti Formle am Änd vo me Prophetewort, traditionell übersetzt mit «spricht der HERR»."),
@@ -118,7 +118,7 @@ DEC_GSW = [
  ("OBA.1.20", "vo däm", "interpretive", "הַחֵל הַזֶּה", None, ["vo däm Wall", "vo dere Feschtig"],
   "De Vers isch schwär verständlich; חֵל cha «Heer» oder «Wall» heisse."),
  ("OBA.1.20", "Sefarad", "literal", "סְפָרַד", None, None,
-  "Wo Sefarad gläge isch, weiss me nöd; oft dänkt me a Sardes z Chliiasie. Sit de Spötantike (Targum) hät me de Name uf Spanie bezoge."),
+  "Wo Sefarad gläge isch, weiss me nöd; oft dänkt me a Sardes z Chliiasie. Sit de Spätantike (Targum) hät me de Name uf Spanie bezoge."),
  ("OBA.1.21", "Retter", "interpretive", "מוֹשִׁעִים", None, ["Grettete"], "D Septuaginta liest «Grettete»."),
  ("OBA.1.6", "händ si", "adapted", "נֶחְפְּשׂוּ", "isch … dursuecht worde", None,
   "Im Hebräische Passiv (Nifal) ohni gnännte Täter; gmeint sind d Plünderer vo [[OBA.1.5]]. D Mundart zieht s Aktiv vor (docs/ZUERIDUEUETSCH.md)."),
@@ -140,7 +140,7 @@ UNITS = [
   "Die im Negev und in der Schefela, Benjamin und die Verbannten Israels und Jerusalems werden Land in alle Richtungen in Besitz nehmen, auch das Gebirge Esau. Retter werden auf den Zion hinaufziehen, um Esau zu richten, und die Königsherrschaft wird JHWH gehören."),
 ]
 UNITS_GSW = {
- "TU-OBA-001-001-021": ("D Schauig vom Obadja: gäge Edom", "S chürzischt Buech vom Alte Teschtamänt chündet em Nachbarvolk Edom s Gricht aa, wil es sich am Tag vo de Eroberig vo Jerusalem gäge sin «Brüeder» Jakob gstellt hät, und hört mit de Hoffnig uf, dass d Chönigsherrschaft em JHWH wird ghöre."),
+ "TU-OBA-001-001-021": ("D Schauig vom Obadja: gäge Edom", "S chürzischt Buech vom Alte Teschtamänt chündet em Nachbarvolk Edom s Gricht aa, wil es sich am Tag vo de Eroberig vo Jerusalem gäge sin «Brüeder» Jakob gstellt hät, und hört mit de Hoffnig uuf, dass d Chönigsherrschaft em JHWH wird ghöre."),
  "TU-OBA-001-001-004": ("De Hochmuet vo Edom", "En Bote rüeft d Völker zum Chrieg gäge Edom. Edom füült sich i sine Felse unaagriifbar; JHWH chündet aa, es vo dört abezstürze."),
  "TU-OBA-001-005-009": ("Usplünderet und verrate", "Diebe und Wiibuure würded öppis übrig laa, Edom aber wird gründlich dursuecht; sini Verbündete tüüsched s. A däm Tag wird JHWH d Wiise vo Edom vernichte; sini Helde wärded verschräcke, und vom Gebirg Esau wird jede usgrottet."),
  "TU-OBA-001-010-014": ("Am Tag vo de Not vo dim Brüeder", "Wäg de Gwalttat a sim Brüeder Jakob wird Edom mit Schand bedeckt und usgrottet: Wo Frömdi Jerusalem iignaa händ, isch es danebe gstande und isch gsii wie eine vo ine. Dänn chömed Verbot: nöd schadefroh abeluege, nöd plündere, Flüchtling nöd umbringe oder uslifere."),

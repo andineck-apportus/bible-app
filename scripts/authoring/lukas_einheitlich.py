@@ -91,7 +91,7 @@ OCHLOI_DE = ("οἱ ὄχλοι ist in ganz Lukas «die Menschenmengen» (wie be
 MUNDART = {
     # Festlegungen vom 2026-10-26, die mit dem Regelwerk übereinstimmen
     "uuserwäält": "userwählt", "uuserwäälte": "userwählte", "uuserwählt": "userwählt", "leert": "lehrt",
-    "gleert": "glehrt", "leere": "lehre", "leer": "lehr", "det": "dört", "chnüü": "chnü", "gschee": "gscheh",
+    "gleert": "glehrt", "det": "dört", "chnüü": "chnü", "gschee": "gscheh",
     "muetterliib": "mueterliib", "witergange": "wiitergange", "förchte": "fürchte", "förchted": "fürchted",
     "förcht": "fürcht", "gförchtet": "gfürchtet", "ellei": "elei", "ghööre": "ghöre", "ghööred": "ghöred",
     "ghüraatet": "ghüratet", "hüraatet": "hüratet", "verhüraatet": "verhüratet", "glööst": "glöst", "gmeldet": "gmäldet",
@@ -102,7 +102,7 @@ MUNDART = {
     "uustriibed": "ustriibed", "verdoret": "verdorret", "verdoreti": "verdorreti", "verdorete": "verdorrete",
     "verriisse": "verrisse", "vilicht": "villicht", "weggange": "wäggange", "wägg": "wäg", "wen": "wän",
     "werdi": "wärd", "werfed": "wärfed", "zruggange": "zrugggange", "zruggcho": "zruggchoo", "anecho": "anechoo",
-    "züügnis": "zügnis", "bööse": "böse", "bööses": "böses", "schnäll": "schnell", "jaar": "jahr",
+    "bööse": "böse", "bööses": "böses", "schnäll": "schnell", "jaar": "jahr",
     "oore": "ohre", "loon": "lohn", "söön": "söhn", "gläämt": "glähmt", "gläämte": "glähmte", "faar": "fahr",
     "faared": "fahred", "faart": "fahrt", "gfaare": "gfahre", "nöii": "nöi", "daa": "da", "here": "häre", "lide": "liide",
     "leged": "legged", "sölle": "söle", "nööch": "nöch", "nööchi": "nöchi", "feschtässe": "fäschtässe",
