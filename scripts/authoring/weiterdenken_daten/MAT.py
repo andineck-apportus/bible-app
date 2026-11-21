@@ -21,7 +21,7 @@ REFLECTIONS = [
              "note_de": "De Name Immanuel wird übersetzt mit «Gott mit öis» ([[MAT.1.23]]); de letscht Satz vom Jesus heisst: «Ich bi bi öi alli Täg bis zur Vollendig vo de Wältziit» ([[MAT.28.20]])."}},
     {"id": "REFL-MAT-0002", "subject": "SUM-BOOK-MAT", "order": 2,
      "question_de": "Immer wieder heisst es «damit erfüllt würde»: Was gewinnt die Geschichte Jesu, wenn sie so an die alten Schriften gebunden wird – und welche Fragen wirft das auf?",
-     "gsw": {"question_de": "Immer wider heisst s «damit erfüllt wird»: Was gwünnt d Gschicht vom Jesus, wänn si eso a di alte Schrifte bunde wird – und weli Frage wirft das uf?"}},
+     "gsw": {"question_de": "Immer wider heisst s «damit sich erfüllt»: Was gwünnt d Gschicht vom Jesus, wänn si eso a di alte Schrifte bunde wird – und weli Frage wirft das uf?"}},
     {"id": "REFL-MAT-0003", "subject": "SUM-BOOK-MAT", "order": 3,
      "question_de": "Am Anfang kommen Sterndeuter aus dem Osten, am Schluss sendet Jesus zu allen Völkern: Wer gehört in diesem Buch dazu?",
      "gsw": {"question_de": "Am Aafang chömed Stärndüüter us em Oste, am Schluss schickt de Jesus zu allne Völker: Wer ghört i dem Buech dezue?"}},
