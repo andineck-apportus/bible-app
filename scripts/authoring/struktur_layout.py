@@ -16,25 +16,41 @@ sys.path.insert(0, str(ROOT / "scripts/authoring"))
 import struktur_kachel as SK  # noqa: E402
 import vignetten as VG  # noqa: E402
 
+RAND_KACHEL, RAND_KASTEN = 10, 4   # Mindestabstand des Textes zum Kachelrand und zum Rand seines Kastens (Rückmeldung 2026-11-21)
+
 JS = """(lg) => {
   const r = [];
   const svg = document.querySelector('svg');
   const t = [...svg.querySelectorAll('text')].filter(x => !x.classList.contains('lw') || x.classList.contains('lw-' + lg));
-  const box = e => { const b = e.getBBox(); return {x: b.x, y: b.y, w: b.width, h: b.height}; };
+  const box = e => { if (e.tagName === 'text') { const b = e.getBBox(); return {x: b.x, y: b.y, w: b.width, h: b.height}; }
+    const b = e.getBoundingClientRect(); return {x: b.x, y: b.y, w: b.width, h: b.height}; };
   const T = t.map(e => ({b: box(e), s: e.textContent.trim().slice(0, 40)})).filter(o => o.b.w > 0);
-  const K = [...svg.querySelectorAll('rect,circle')].map(box).filter(b => b.w < 590);
-  const I = [...svg.querySelectorAll('image')].map(box);
+  const K = [...svg.querySelectorAll('rect')].map(box).filter(b => b.w < 590 && b.w > 0);
+  const C = [...svg.querySelectorAll('circle')].map(box);
+  // Bildfeld: verschachteltes svg nach seinen Attributen (getBoundingClientRect zählt den abgeschnittenen Rest des Bildes mit)
+  const I = [...svg.querySelectorAll('image')].map(e => { const p = e.parentElement;
+    if (p.tagName === 'svg' && p !== svg) { const v = n => parseFloat(p.getAttribute(n)); return {x: v('x'), y: v('y'), w: v('width'), h: v('height')}; }
+    return box(e); });
   const ov = (a, b, m) => a.x + m < b.x + b.w && b.x + m < a.x + a.w && a.y + m < b.y + b.h && b.y + m < a.y + a.h;
-  const inside = (a, b) => a.x >= b.x - 1 && a.y >= b.y - 1 && a.x + a.w <= b.x + b.w + 1 && a.y + a.h <= b.y + b.h + 1;
+  const inside = (a, b, p) => a.x >= b.x + p && a.y >= b.y + p && a.x + a.w <= b.x + b.w - p && a.y + a.h <= b.y + b.h - p;
+  const RK = %d, RB = %d;
   for (let i = 0; i < T.length; i++) {
     const a = T[i].b;
-    if (a.x < 2 || a.y < 2 || a.x + a.w > 598 || a.y + a.h > 398) r.push('ausserhalb: ' + T[i].s);
-    for (let j = i + 1; j < T.length; j++) if (ov(a, T[j].b, 2)) r.push('überlappt: «' + T[i].s + '» / «' + T[j].s + '»');
-    for (const k of K) if (ov(a, k, 2) && !inside(a, k) && !inside(k, a)) { r.push('über den Rand: ' + T[i].s); break; }
-    for (const k of I) if (ov(a, k, 3)) { r.push('auf der Vignette: ' + T[i].s); break; }
+    if (a.x < RK || a.y < RK - 4 || a.x + a.w > 600 - RK || a.y + a.h > 400 - 2) r.push('zu nah am Kachelrand: ' + T[i].s);
+    for (let j = i + 1; j < T.length; j++) if (ov(a, T[j].b, 1)) r.push('überlappt: «' + T[i].s + '» / «' + T[j].s + '»');
+    for (const k of K) if (ov(a, k, -RB) && !inside(a, k, RB) && !inside(k, a, 0) && !(inside(a, k, 0) && false)) {
+      r.push((inside(a, k, 0) ? 'zu nah am Kastenrand: ' : 'über den Rand: ') + T[i].s); break; }
+    for (const k of C) if (ov(a, k, 1) && !inside(a, k, -1)) { r.push('auf einem Kreis: ' + T[i].s); break; }
+    for (const k of I) if (ov(a, k, 2)) { r.push('auf einem Bild: ' + T[i].s); break; }
   }
+  for (let i = 0; i < K.length; i++) {
+    if (K[i].x < 4 || K[i].y < 4 || K[i].x + K[i].w > 596 || K[i].y + K[i].h > 398) r.push('Kasten am Kachelrand');
+    for (let j = i + 1; j < K.length; j++)
+      if (ov(K[i], K[j], 0) && !inside(K[i], K[j], 0) && !inside(K[j], K[i], 0)) r.push('Kästen überlappen (' + Math.round(K[i].x) + ',' + Math.round(K[i].y) + ' / ' + Math.round(K[j].x) + ',' + Math.round(K[j].y) + ')');
+  }
+  for (const im of I) for (const k of K) if (ov(im, k, 1) && !inside(im, k, 2) && !inside(k, im, 0)) { r.push('Bild über den Kastenrand'); break; }
   return r;
-}"""
+}""" % (RAND_KACHEL, RAND_KASTEN)
 
 
 VIGN = {}   # zum Testen: Schlüssel → href für alle Glieder mit Auftrag (Platzhalter), sonst die geprüften

@@ -54,6 +54,12 @@ Vorbilder: `buch/TIT.json`, `szenen-jon.json`, `szenen-luk-015.json`; Regeln in 
   Stelle `ref`. Keine wörtlichen Zitate erfinden. Zahl der Glieder nicht glätten; wo der Text mehr Glieder hat als Platz ist, die
   tragenden wählen und im `note_de` oder `form_grund_de` sagen.
 - `titel` optional (höchstens 40 Zeichen). `kopf.a`/`kopf.b` bei spalten, spiegel, ebenen.
+- Bilder je Glied (Entscheid 2026-11-21): `depicts` mit 1–3 Einträgen des Bildlexikons, die das Glied zeigen (Person, Gruppe, Ort,
+  Gegenstand, Zeichen; z. B. Fisch und Vogel für «Tiere im Wasser, Vögel»), auch bei `mitte`. Gott: `FIG-GOTT` (gezeichneter
+  Strahlenkranz mit יהוה, nur in Strukturbildern). Jeder andere Eintrag braucht eine Malbeschreibung in `figuren` (Englisch, als
+  Vignette: was gross und deutlich zu sehen ist), sofern er noch keine hat; fehlt er im Lexikon, unter `neue_figuren` anlegen.
+  Wiederverwenden, was es schon gibt (`ls data/illustrations/lexicon`), damit ein Ding überall gleich aussieht.
+- Layout prüft `python3 scripts/authoring/struktur_layout.py` (keine Überlappungen, Text mit Abstand zu Kasten- und Kachelrand).
 
 ## Band, Texte, Sprache
 

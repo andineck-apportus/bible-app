@@ -2,8 +2,8 @@
 """Bilder in Strukturbildern aus dem Bildlexikon (Rückmeldung Andi Neck 2026-11-21: auf die früheren Definitionen
 zurückgreifen, aber gut gezeichnet; Gott wird gezeichnet).
 
-Je Element einer Struktur (und bei «mitte») nennt «depicts» Einträge des Bildlexikons (data/illustrations/lexicon/). Gezeigt wird
-der erste Eintrag:
+Je Element einer Struktur (und bei «mitte») nennt «depicts» Einträge des Bildlexikons (data/illustrations/lexicon/), höchstens drei
+(z. B. Fisch und Vogel); sie stehen nebeneinander:
 - FIG-GOTT: der goldene Strahlenkranz mit dem Gottesnamen יהוה, gezeichnet (struktur_kachel.gott_zeichen), nie als Mensch;
 - sonst das gemalte Einzelbild des Eintrags im Aquarellstil (data/illustrations/aquarell/figuren/<ID>.webp), sobald es die
   automatische Prüfung bestanden hat (bilder_aquarell_figuren.py, Action «auto-figuren»). So sieht ein Ding, ein Ort, eine Person
@@ -38,10 +38,10 @@ def auftraege(nur=None):
                 continue
             sx = sz["struktur"]
             for k, e in enumerate(sx.get("elemente") or [], 1):
-                if e.get("depicts"):
-                    yield sid, str(k), e["depicts"][0]
-            if (sx.get("mitte") or {}).get("depicts"):
-                yield sid, "m", sx["mitte"]["depicts"][0]
+                for fid in (e.get("depicts") or [])[:3]:
+                    yield sid, str(k), fid
+            for fid in ((sx.get("mitte") or {}).get("depicts") or [])[:3]:
+                yield sid, "m", fid
 
 
 _rahmen = {}
@@ -74,8 +74,16 @@ def bild(fid):
 
 
 def gueltig(sid):
-    """Schlüssel → href (relativ zum Ordner der Bilder) bzw. «#gott»."""
-    return {k: h for _s, k, fid in auftraege({sid}) if (h := bild(fid))}
+    """Schlüssel → Liste der Bilder (href relativ zum Ordner der Bilder mit Ausschnitt, bzw. «#gott»), höchstens drei je Glied
+    (z. B. Fisch und Vogel); ein Glied erscheint nur mit Bild, wenn alle seine Einträge ein Bild haben."""
+    alle, fehlt = {}, set()
+    for _s, k, fid in auftraege({sid}):
+        h = bild(fid)
+        if h:
+            alle.setdefault(k, []).append(h)
+        else:
+            fehlt.add(k)
+    return {k: v for k, v in alle.items() if k not in fehlt}
 
 
 def stand():

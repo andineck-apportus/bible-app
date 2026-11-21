@@ -89,6 +89,8 @@ def regeln(e, c=None):
     for r in allg["regeln"]:
         if r["id"] in c["allgemein_ohne"] or (r.get("wenn") and r["wenn"] != e["id"]):
             continue
+        if r["id"] in (c["pruef"].get(e["id"], {}).get("ohne") or {}):   # Ausnahme je Eintrag, mit Grund (z. B. Zeichen, das selbst Licht ist)
+            continue
         if r["id"] == "G-PROPORTION" and e["art"] == "vignette":
             continue
         out.append({**r, "ebene": "allgemein"})

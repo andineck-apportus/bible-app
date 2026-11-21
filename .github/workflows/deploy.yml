@@ -44,6 +44,12 @@ jobs:
       - name: App bauen
         run: python3 scripts/build_bible.py | tail -1
 
+      - name: Layout der Strukturbilder (Überlappungen, Abstände, Ränder)
+        run: |
+          pip install -q playwright pillow
+          python3 -m playwright install chromium
+          python3 scripts/authoring/struktur_layout.py
+
       - name: Testwerkzeuge
         run: |
           npm install --no-save --no-audit --no-fund jsdom playwright
