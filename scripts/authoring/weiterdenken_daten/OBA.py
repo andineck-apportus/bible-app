@@ -37,13 +37,13 @@ REFLECTIONS = [
     {"id": "REFL-OBA-0004", "subject": "TU-OBA-001-001-004", "order": 1,
      "question_de": "Woran merkt man, dass Sicherheit in Übermut umschlägt?",
      "note_de": "Edom wohnt hoch in den Felsen und sagt in seinem Herzen: «Wer stürzt mich zu Boden?» ([[OBA.1.3]]).",
-     "gsw": {"question_de": "Wora merkt mer, dass Sicherheit i Übermuet umschlaat?",
-             "note_de": "Edom wont höch i de Fälse und seit i sim Härz: «Wär holt mich abe uf de Bode?» ([[OBA.1.3]])."}},
+     "gsw": {"question_de": "Wora merkt me, dass Sicherheit i Übermuet umschlaat?",
+             "note_de": "Edom wont höch i de Fälse und seit i sim Herz: «Wär holt mich abe uf de Bode?» ([[OBA.1.3]])."}},
     {"id": "REFL-OBA-0005", "subject": "TU-OBA-001-001-004", "order": 2,
      "question_de": "Wer spricht in diesem Abschnitt eigentlich zu wem?",
      "note_de": "Ein «wir» hört eine Kunde, ein Bote ruft die Völker, und JHWH redet Edom direkt an ([[OBA.1.1-OBA.1.2]]).",
-     "gsw": {"question_de": "Wär redt i dem Abschnitt eigetli zu wem?",
-             "note_de": "Es «mir» ghört e Nachricht, en Bote rüeft d Völker, und JHWH redt Edom diräkt aa ([[OBA.1.1-OBA.1.2]])."}},
+     "gsw": {"question_de": "Wär redt i däm Abschnitt eigetli zu wem?",
+             "note_de": "Es «mir» ghört e Nachricht, en Bote rüeft d Völker, und JHWH redt Edom direkt aa ([[OBA.1.1-OBA.1.2]])."}},
     # 5–9
     {"id": "REFL-OBA-0006", "subject": "TU-OBA-001-005-009", "order": 1,
      "question_de": "Was bleibt von Bündnissen, wenn es ernst wird?",
@@ -59,7 +59,7 @@ REFLECTIONS = [
     {"id": "REFL-OBA-0008", "subject": "TU-OBA-001-010-014", "order": 1,
      "question_de": "Kann man schuldig werden, indem man nur danebensteht?",
      "note_de": "Der Vorwurf beginnt nicht mit einer Tat: «Am Tag, als du abseits standest … warst auch du wie einer von ihnen» ([[OBA.1.11]]).",
-     "gsw": {"question_de": "Chan mer schuldig wärde, wänn mer nu dernäbe staat?",
+     "gsw": {"question_de": "Chan me schuldig wärde, wänn me nu dernäbe staat?",
              "note_de": "De Vorwurf fangt nöd mit ere Tat aa: «Am Tag, wo du abseits gstande bisch … bisch au du wie eine vo ine gsii» ([[OBA.1.11]])."}},
     {"id": "REFL-OBA-0009", "subject": "TU-OBA-001-010-014", "order": 2,
      "question_de": "Was bewirkt es, dass «am Tag» so oft wiederholt wird?",
@@ -87,12 +87,12 @@ REFLECTIONS = [
      "question_de": "Was erhofften Verbannte, die solche Ortsnamen hörten?",
      "note_de": "Von den Verbannten Jerusalems, «die in Sefarad sind», heisst es, sie würden die Städte des Negev in Besitz nehmen ([[OBA.1.20]]).",
      "gsw": {"question_de": "Was händ Verbannti ghoffet, wo settigi Ortsnäme ghört händ?",
-             "note_de": "Vo de Verbannte vo Jerusalem, «wo i Sefarad sind», heisst s, si wärdid d Städt vom Negev in Bsitz nää ([[OBA.1.20]])."}},
+             "note_de": "Vo de Verbannte vo Jerusalem, «wo i Sefarad sind», heisst s, si wärded d Städt vom Negev in Bsitz näh ([[OBA.1.20]])."}},
     {"id": "REFL-OBA-0014", "subject": "TU-OBA-001-019-021", "order": 2,
      "question_de": "Was ändert der letzte Satz an allem, was vorher kam?",
      "note_de": "Nach der Landnahme ([[OBA.1.19-OBA.1.20]]) lautet der letzte Satz: «Die Königsherrschaft wird JHWH gehören» ([[OBA.1.21]]).",
      "gsw": {"question_de": "Was änderet de letscht Satz a allem, wo vorher choo isch?",
-             "note_de": "Nach de Landnaam ([[OBA.1.19-OBA.1.20]]) heisst de letscht Satz: «D Königsherrschaft ghört JHWH» ([[OBA.1.21]])."}},
+             "note_de": "Nach de Landnahm ([[OBA.1.19-OBA.1.20]]) heisst de letscht Satz: «D Chönigsherrschaft ghört JHWH» ([[OBA.1.21]])."}},
 ]
 
 RECEPTIONS = [
@@ -101,7 +101,7 @@ RECEPTIONS = [
      "sources_de": ["Haftara zum Wochenabschnitt Wajischlach (1. Mose 32–36)"],
      "confidence": "high",
      "gsw": {"period_de": "bis hüt",
-             "text_de": "I de meischte Synagogegmeinde list mer s ganz Buech Obadja als Prophetelesig (Haftara) zum Wuche-Abschnitt «Wajischlach», wo de Jakob sim Brueder Esau wider begägnet ([[GEN.32.3-GEN.36.43]]). So staat em Obadja sis Wort über Edom näbe de Gschicht vo de zwei Brüedere."}},
+             "text_de": "I de meischte Synagogegmeinde list me s ganz Buech Obadja als Prophetelesig (Haftara) zum Wuche-Abschnitt «Wajischlach», wo de Jakob sim Brueder Esau wider begägnet ([[GEN.32.3-GEN.36.43]]). So staat em Obadja sis Wort über Edom näbe de Gschicht vo de zwei Brüeder."}},
     {"id": "RCPT-OBA-0002", "subject": "SUM-BOOK-OBA", "tradition": "jewish", "period_de": "Babylonischer Talmud, etwa 3.–6. Jahrhundert",
      "text_de": "Der Talmud setzt den Propheten mit Obadja gleich, der am Hof Ahabs lebte und Propheten vor Isebel versteckte ([[1KI.18.3-1KI.18.4]]), und erzählt, er sei ein Edomiter gewesen, der zum Judentum übertrat. Dazu passt das Sprichwort: Aus dem Wald selbst kommt der Stiel der Axt. Das Buch selbst sagt über seinen Verfasser nur den Namen ([[OBA.1.1]]).",
      "sources_de": ["Babylonischer Talmud, Sanhedrin 39b"],
@@ -118,7 +118,7 @@ RECEPTIONS = [
      "text_de": "Die Forschung verbindet die Anklage mit der Eroberung Jerusalems durch die Babylonier 587/586 v. Chr. Auch andere biblische Texte werfen Edom vor, sich an jenem Tag gegen Jerusalem gestellt zu haben (etwa [[PSA.137.7]]); zudem haben [[OBA.1.1-OBA.1.9]] eine enge Parallele in [[JER.49.7-JER.49.22]]. Wann Obadja selbst entstand, ist umstritten.",
      "confidence": "probable",
      "gsw": {"period_de": "20. und 21. Jahrhundert",
-             "text_de": "D Forschig verbindet d Aachlag mit de Eroberig vo Jerusalem dur d Babylonier 587/586 v. Chr. Au anderi biblischi Text wärfed Edom vor, es heb sich a dem Tag gäge Jerusalem gstellt (öppe [[PSA.137.7]]); usserdem händ [[OBA.1.1-OBA.1.9]] e engi Parallele i [[JER.49.7-JER.49.22]]. Wänn de Obadja sälber entstande isch, isch umstritte."}},
+             "text_de": "D Forschig verbindet d Aachlag mit de Eroberig vo Jerusalem dur d Babylonier 587/586 v. Chr. Au anderi biblischi Text wärfed Edom vor, es heb sich a däm Tag gäge Jerusalem gstellt (öppe [[PSA.137.7]]); usserdem händ [[OBA.1.1-OBA.1.9]] e engi Parallele i [[JER.49.7-JER.49.22]]. Wänn de Obadja sälber entstande isch, isch umstritte."}},
 ]
 
 # Quellenprüfung (docs/QUELLENPRUEFUNG.md)
