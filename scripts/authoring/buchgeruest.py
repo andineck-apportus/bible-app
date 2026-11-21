@@ -211,8 +211,8 @@ def schreibe(buch, d):
             sz["struktur"] = s["struktur"]
         if s.get("ausnahmen"):
             sz["ausnahmen"] = s["ausnahmen"]
-        if not hat_brief:
-            sz["band"] = s["band"]
+        if not hat_brief or s.get("band"):
+            sz["band"] = s["band"]   # bei Bildauftrag nur, wenn das Band dort zu lang ist (Wortlaut gekürzt)
         szenen[s["id"]] = sz
     plan = {"_hinweis": f"Buchgerüst {buch} (scripts/authoring/buchgeruest.py aus buch/{buch}.json). Form je Station: «szene» wird gemalt und "
                         "automatisch geprüft, «struktur» zeichnet das Werkzeug aus den Elementen. " + ("Vorläufig von oben; Band ist ein Titel in eigenen Worten."

@@ -1,0 +1,559 @@
+{
+  "_hinweis": "Buchgerüst JOS (scripts/authoring/buchgeruest.py aus buch/JOS.json). Form je Station: «szene» wird gemalt und automatisch geprüft, «struktur» zeichnet das Werkzeug aus den Elementen. Vorläufig von oben; Band ist ein Titel in eigenen Worten.",
+  "basis": [],
+  "tags": [],
+  "figurenblatt": null,
+  "stand": "2026-11-21",
+  "figuren": {
+    "FIG-JOSUA": "Joshua: a sturdy, weathered man with a short grey-streaked dark beard and close-cropped greying hair; an olive-green knee-length tunic with a broad brown leather belt and a short sword in a plain sheath, a dark olive mantle. His age is given in each scene.",
+    "FIG-GRUPPE-PRIESTER": "Priests: men of different ages in plain white linen tunics with white linen head-wraps and a narrow blue sash, barefoot.",
+    "FIG-OBJ-LADE": "The ark of the covenant: a wooden chest about as long as a man is tall, carried on two long poles on the shoulders of four priests; while it is carried it is wrapped in a plain blue cloth, so that nothing on its lid is seen.",
+    "FIG-GRUPPE-ISRAEL": "The people of Israel: men and women of different ages in light undyed robes with blue mantles; behind them more as loose outlines; no child in front.",
+    "FIG-ORT-JORDAN": "The Jordan: a river valley between green banks with reeds.",
+    "FIG-OBJ-STEINE": "Rounded grey river stones, each as big as a man can carry on his shoulder.",
+    "FIG-OBJ-WIDDERHORN": "A ram's horn (shofar): a long, curved, ridged natural horn, pale ochre to brown, blown from the narrow end.",
+    "FIG-OBJ-STEIN": "A single large upright standing stone, rough and grey, about as tall as a man.",
+    "FIG-OBJ-SCHRIFTROLLE": "A scroll on two plain wooden rods."
+  },
+  "kenn_en": {
+    "FIG-JOSUA": "a sturdy man in an olive-green tunic with a broad brown belt and a short sword",
+    "FIG-GRUPPE-PRIESTER": "men in white linen tunics with white head-wraps",
+    "FIG-GRUPPE-ISRAEL": "people in light robes with blue mantles"
+  },
+  "pruef": {
+    "FIG-JOSUA": [
+      {
+        "id": "F-JOSUA",
+        "art": "muss",
+        "stufe": "pflicht",
+        "de": "Josua erkennbar (olivgrüne Tunika, breiter Gürtel, Kurzschwert)",
+        "en": "Is there a sturdy man in an olive-green tunic with a broad brown belt?"
+      }
+    ],
+    "FIG-OBJ-LADE": [
+      {
+        "id": "F-LADE-VERHUELLT",
+        "art": "nicht",
+        "stufe": "soll",
+        "de": "Keine Figuren auf der Lade (verhüllt getragen)",
+        "en": "Are there winged figures or statues visible on top of the carried chest?"
+      }
+    ]
+  },
+  "bilder": [
+    {
+      "id": "ILL-AQU-JOS",
+      "brief": "BRIEF-JOS",
+      "level": "book",
+      "reference": "JOS",
+      "target": "SUM-BOOK-JOS",
+      "felder": [
+        "JOS-B1",
+        "JOS-B2",
+        "JOS-B3",
+        "JOS-B4",
+        "JOS-B5",
+        "JOS-B6"
+      ],
+      "note_de": "Sechs Stationen ([[JOS.3.1-JOS.24.33]]): drei gemalte Szenen (Jordan, Jericho, Sichem), drei Strukturbilder (Los, Landverteilung, erfüllt und doch offen). Die Kämpfe und die Steinigung Achans ([[JOS.7.25]]) sind nicht gemalt; bei Jericho ist der Augenblick des Einsturzes gezeigt, ohne Kampf. Die Spannung zwischen vollständiger Gabe ([[JOS.21.43-JOS.21.45]]) und unvollständiger Einnahme ([[JOS.13.1]]) bleibt stehen."
+    }
+  ],
+  "szenen": {
+    "JOS-B1": {
+      "brief": "BRIEF-JOS",
+      "panel": 1,
+      "reference": "JOS.3.1-JOS.4.24",
+      "form": "szene",
+      "form_grund_de": "Der Text erzählt hier ein Geschehen an einem Ort (Durchzug durch den Fluss).",
+      "depicts": [
+        "FIG-JOSUA",
+        "FIG-GRUPPE-PRIESTER",
+        "FIG-OBJ-LADE",
+        "FIG-GRUPPE-ISRAEL",
+        "FIG-ORT-JORDAN",
+        "FIG-OBJ-STEINE"
+      ],
+      "bild_en": "Ancient Canaan, the Jordan valley at harvest time. The riverbed is dry, cracked pale mud between green banks with reeds; far upstream on the upper LEFT the water stands still as one faint blue wash. In the CENTRE of the dry bed four priests in white linen stand still and carry the ark – a chest wrapped in a plain blue cloth – on two poles on their shoulders. From LEFT to RIGHT in front of them the people of Israel, men and women with bundles, walk across the dry ground. On the RIGHT bank, Joshua (about sixty, olive-green tunic, broad brown belt) points back into the riverbed, and a man in front lifts a large round river stone onto his shoulder. Medium-wide shot, the upper third empty paper.",
+      "speech": [],
+      "evidence": [
+        {
+          "s": "B",
+          "ref": "JOS.3.17",
+          "de": "Die Priester mit der Lade stehen fest auf trockenem Boden mitten im Jordan, bis das ganze Volk hinüber ist."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.3.15-JOS.3.16",
+          "de": "Zur Erntezeit; das Wasser von oben bleibt stehen, weit entfernt."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.4.5",
+          "de": "Josua lässt jeden der zwölf Männer einen Stein auf die Schulter nehmen."
+        },
+        {
+          "s": "R",
+          "de": "Die verhüllte Lade (blaues Tuch nach [[NUM.4.6]]), Kleidung und Landschaft: plausible Ausgestaltung."
+        },
+        {
+          "s": "I",
+          "de": "Von den zwölf Steinträgern ist nur einer vorn gezeigt."
+        }
+      ],
+      "pruefung": [
+        {
+          "id": "B1-LADE-TROCKEN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JOS.3.17",
+          "de": "Priester tragen die Lade im trockenen Flussbett",
+          "en": "Are men in white carrying a chest on poles while standing on dry ground in a riverbed?"
+        },
+        {
+          "id": "B1-VOLK",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JOS.3.17",
+          "de": "Das Volk zieht durch",
+          "en": "Are men and women walking across the dry riverbed?"
+        },
+        {
+          "id": "B1-STEIN",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "B",
+          "ref": "JOS.4.5",
+          "de": "Ein Mann trägt einen Stein auf der Schulter",
+          "en": "Is a man lifting or carrying a large stone on his shoulder?"
+        },
+        {
+          "id": "JOS-KEIN-GOTT",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Gott nicht gemalt, kein Lichteffekt",
+          "en": "Is there any figure, face or hand in the sky, any rays or beams of light, or any figure that looks like God?"
+        }
+      ]
+    },
+    "JOS-B2": {
+      "brief": "BRIEF-JOS",
+      "panel": 2,
+      "reference": "JOS.6.1-JOS.6.27",
+      "form": "szene",
+      "form_grund_de": "Der Text erzählt ein Geschehen mit klarem Augenblick (Hörner, Geschrei, Einsturz).",
+      "depicts": [
+        "FIG-JOSUA",
+        "FIG-GRUPPE-PRIESTER",
+        "FIG-OBJ-WIDDERHORN",
+        "FIG-OBJ-LADE",
+        "FIG-GRUPPE-ISRAEL"
+      ],
+      "bild_en": "Ancient Canaan, before the small walled town of Jericho with a few palm trees. On the LEFT the people of Israel, men and women, shout with open mouths and raised arms; in front of them Joshua (about sixty, olive-green tunic, broad brown belt) has one arm raised high, giving the signal. In the CENTRE seven priests in white linen walk in a line, each blowing a long curved ram's horn, and behind them four priests carry the ark wrapped in blue cloth on poles. On the RIGHT the mud-brick town wall slumps and falls down flat in loose ochre washes and dust. Nobody stands on the wall; no fighting, no weapons raised, no one hurt. Medium-wide shot, the upper third empty paper.",
+      "speech": [],
+      "evidence": [
+        {
+          "s": "B",
+          "ref": "JOS.6.20",
+          "de": "Als das Volk den Hörnerschall hört und ein grosses Geschrei erhebt, fällt die Mauer in sich zusammen."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.6.4",
+          "de": "Sieben Priester tragen sieben Widderhörner vor der Lade her."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.6.16",
+          "de": "Josua sagt dem Volk: Erhebt das Geschrei!"
+        },
+        {
+          "s": "R",
+          "de": "Lehmziegelmauer und Palmen (Jericho als Palmenstadt, [[DEU.34.3]]): plausible Ausgestaltung."
+        },
+        {
+          "s": "I",
+          "de": "Der Kampf nach dem Einsturz ([[JOS.6.21]]) ist nicht gemalt; die Rettung Rahabs ([[JOS.6.22-JOS.6.25]]) fehlt im Buchbild."
+        }
+      ],
+      "pruefung": [
+        {
+          "id": "B2-MAUER",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JOS.6.20",
+          "de": "Die Stadtmauer stürzt ein",
+          "en": "Is a town wall collapsing or falling down?"
+        },
+        {
+          "id": "B2-HOERNER",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JOS.6.4",
+          "de": "Priester blasen Widderhörner",
+          "en": "Are men in white blowing long curved horns?"
+        },
+        {
+          "id": "B2-KEIN-KAMPF",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Kein Kampf, kein Blut, keine Verletzten",
+          "en": "Is anyone fighting, wounded, lying dead or bleeding?"
+        },
+        {
+          "id": "JOS-KEIN-GOTT",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Gott nicht gemalt, kein Lichteffekt",
+          "en": "Is there any figure, face or hand in the sky, any rays or beams of light, or any figure that looks like God?"
+        }
+      ]
+    },
+    "JOS-B3": {
+      "brief": "BRIEF-JOS",
+      "panel": 3,
+      "reference": "JOS.7.1-JOS.7.26",
+      "form": "struktur",
+      "form_grund_de": "Der Text verengt in festen Stufen vom Volk auf einen Mann (Strukturkatalog: Los als Auswahlweg); eine Kette zeigt diese Gestalt deutlicher als eine Szene.",
+      "depicts": [],
+      "bild_en": "",
+      "speech": [],
+      "evidence": [
+        {
+          "s": "B",
+          "ref": "JOS.7.1",
+          "de": "Achan nimmt vom Gebannten; Gottes Zorn trifft Israel."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.7.16-JOS.7.18",
+          "de": "Juda, dann die Sippe der Serachiter, dann das Haus Sabdis, dann Achan werden getroffen."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.7.20",
+          "de": "Achan bekennt: Ich habe gesündigt."
+        },
+        {
+          "s": "I",
+          "de": "Die Steinigung ([[JOS.7.25]]) ist nicht dargestellt."
+        }
+      ],
+      "pruefung": [],
+      "struktur": {
+        "typ": "kette",
+        "titel": {
+          "de": "Vom ganzen Volk zu einem Mann",
+          "gsw": "Vom ganze Volk zu eim Maa"
+        },
+        "elemente": [
+          {
+            "de": "Bann gebrochen, Niederlage bei Ai",
+            "gsw": "Bann broche, Niderlaag bi Ai",
+            "ref": "JOS.7.1-JOS.7.5"
+          },
+          {
+            "de": "Stamm Juda getroffen",
+            "gsw": "De Stamm Juda isch troffe",
+            "ref": "JOS.7.16"
+          },
+          {
+            "de": "Sippe der Serachiter",
+            "gsw": "D Sippe vo de Serachiter",
+            "ref": "JOS.7.17"
+          },
+          {
+            "de": "Haus Sabdis",
+            "gsw": "S Huus vom Sabdi",
+            "ref": "JOS.7.17"
+          },
+          {
+            "de": "Achan bekennt",
+            "gsw": "De Achan git s zue",
+            "ref": "JOS.7.18-JOS.7.21",
+            "betont": true
+          }
+        ]
+      }
+    },
+    "JOS-B4": {
+      "brief": "BRIEF-JOS",
+      "panel": 4,
+      "reference": "JOS.13.1-JOS.19.51",
+      "form": "struktur",
+      "form_grund_de": "Die Kapitel sind Grenz- und Städtelisten (Strukturkatalog: Landverteilung als Gebiet); ein Raster der zwölf Stämme mit Land zeigt den Hauptteil, statt ihn zu streichen. Levi (ohne Land, [[JOS.13.14]], Städte in [[JOS.21.1-JOS.21.42]]) steht in der Legende, weil das Raster nur zwölf Felder hat.",
+      "depicts": [],
+      "bild_en": "",
+      "speech": [],
+      "evidence": [
+        {
+          "s": "B",
+          "ref": "JOS.13.8",
+          "de": "Ruben, Gad und halb Manasse haben ihr Erbteil jenseits des Jordan erhalten."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.14.2",
+          "de": "Das Erbteil der übrigen Stämme wird durch das Los bestimmt."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.13.14",
+          "de": "Der Stamm Levi erhält kein Erbteil."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.17.1-JOS.17.13",
+          "de": "Westlicher Teil Manasses."
+        },
+        {
+          "s": "I",
+          "de": "Manasse ist in einem Feld zusammengefasst; Kalebs und Josuas eigenes Erbteil ([[JOS.14.6-JOS.14.15]], [[JOS.19.49-JOS.19.50]]) sind nicht eingetragen."
+        }
+      ],
+      "pruefung": [],
+      "struktur": {
+        "typ": "raster",
+        "titel": {
+          "de": "Das Erbteil der Stämme",
+          "gsw": "S Erbteil vo de Stämm"
+        },
+        "elemente": [
+          {
+            "de": "Ruben – östlich des Jordan",
+            "gsw": "Ruben – öschtlich vom Jordan",
+            "ref": "JOS.13.15-JOS.13.23"
+          },
+          {
+            "de": "Gad – östlich des Jordan",
+            "gsw": "Gad – öschtlich vom Jordan",
+            "ref": "JOS.13.24-JOS.13.28"
+          },
+          {
+            "de": "Manasse – östlich und westlich",
+            "gsw": "Manasse – öschtlich und weschtlich",
+            "ref": "JOS.13.29-JOS.13.31"
+          },
+          {
+            "de": "Juda",
+            "gsw": "Juda",
+            "ref": "JOS.15.1-JOS.15.63"
+          },
+          {
+            "de": "Efraim",
+            "gsw": "Efraim",
+            "ref": "JOS.16.1-JOS.16.10"
+          },
+          {
+            "de": "Benjamin",
+            "gsw": "Benjamin",
+            "ref": "JOS.18.11-JOS.18.28"
+          },
+          {
+            "de": "Simeon",
+            "gsw": "Simeon",
+            "ref": "JOS.19.1-JOS.19.9"
+          },
+          {
+            "de": "Sebulon",
+            "gsw": "Sebulon",
+            "ref": "JOS.19.10-JOS.19.16"
+          },
+          {
+            "de": "Issachar",
+            "gsw": "Issachar",
+            "ref": "JOS.19.17-JOS.19.23"
+          },
+          {
+            "de": "Ascher",
+            "gsw": "Ascher",
+            "ref": "JOS.19.24-JOS.19.31"
+          },
+          {
+            "de": "Naftali",
+            "gsw": "Naftali",
+            "ref": "JOS.19.32-JOS.19.39"
+          },
+          {
+            "de": "Dan",
+            "gsw": "Dan",
+            "ref": "JOS.19.40-JOS.19.48"
+          }
+        ]
+      }
+    },
+    "JOS-B5": {
+      "brief": "BRIEF-JOS",
+      "panel": 5,
+      "reference": "JOS.21.43-JOS.21.45",
+      "form": "struktur",
+      "form_grund_de": "Der Text stellt Summarien und Restnotizen nebeneinander (Strukturkatalog: Summarien ↔ Restnotizen; Fallstrick: Spannung nicht glätten); zwei Spalten zeigen beides.",
+      "depicts": [],
+      "bild_en": "",
+      "speech": [],
+      "evidence": [
+        {
+          "s": "B",
+          "ref": "JOS.21.43-JOS.21.45",
+          "de": "JHWH gab Israel das ganze Land und Ruhe ringsum; nichts fiel dahin von allen guten Worten."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.13.1",
+          "de": "Es bleibt noch sehr viel Land einzunehmen."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.15.63",
+          "de": "Die Jebusiter in Jerusalem konnte Juda nicht vertreiben."
+        }
+      ],
+      "pruefung": [],
+      "struktur": {
+        "typ": "spalten",
+        "titel": {
+          "de": "Ganz gegeben – noch nicht eingenommen",
+          "gsw": "Ganz gä – no nöd iignoh"
+        },
+        "kopf": {
+          "a": {
+            "de": "JHWH hat gegeben",
+            "gsw": "JHWH hät gä"
+          },
+          "b": {
+            "de": "es bleibt noch",
+            "gsw": "es bliibt no"
+          }
+        },
+        "elemente": [
+          {
+            "de": "das ganze Land, den Vätern zugeschworen",
+            "gsw": "s ganz Land, de Vätter zuegschwore",
+            "ref": "JOS.21.43",
+            "seite": "a"
+          },
+          {
+            "de": "Ruhe ringsum",
+            "gsw": "Rue rundume",
+            "ref": "JOS.21.44",
+            "seite": "a"
+          },
+          {
+            "de": "kein Wort ist hinfällig geworden",
+            "gsw": "kes Wort isch dehine bliibe",
+            "ref": "JOS.21.45",
+            "seite": "a",
+            "betont": true
+          },
+          {
+            "de": "noch sehr viel Land übrig",
+            "gsw": "no sehr vill Land übrig",
+            "ref": "JOS.13.1",
+            "seite": "b"
+          },
+          {
+            "de": "Jebusiter in Jerusalem bleiben",
+            "gsw": "D Jebusiter z Jerusalem bliibed",
+            "ref": "JOS.15.63",
+            "seite": "b"
+          },
+          {
+            "de": "Kanaaniter in Geser bleiben",
+            "gsw": "D Kanaaniter z Geser bliibed",
+            "ref": "JOS.16.10",
+            "seite": "b"
+          },
+          {
+            "de": "Manasse nimmt Städte nicht ein",
+            "gsw": "Manasse nimmt Stedt nöd ii",
+            "ref": "JOS.17.12",
+            "seite": "b"
+          }
+        ]
+      }
+    },
+    "JOS-B6": {
+      "brief": "BRIEF-JOS",
+      "panel": 6,
+      "reference": "JOS.24.1-JOS.24.33",
+      "form": "szene",
+      "form_grund_de": "Der Bundesschluss wird erzählt, mit Handlung an einem Ort (Stein unter der Eiche); die Form des Vertrags steht in der Legende.",
+      "depicts": [
+        "FIG-JOSUA",
+        "FIG-OBJ-STEIN",
+        "FIG-OBJ-SCHRIFTROLLE",
+        "FIG-GRUPPE-ISRAEL"
+      ],
+      "bild_en": "Ancient Canaan, at Shechem: a wide open place in the hills with one great old oak tree. On the LEFT under the oak, Joshua – now a very old man of about a hundred and ten, white beard, still in his olive-green tunic with a broad brown belt – stands beside a tall rough upright stone; one hand rests on the stone, in the other he holds a scroll, and he looks earnestly at the people. On the RIGHT the people of Israel, men and women of different ages in light robes with blue mantles, face him and raise their right hands to promise. Calm and solemn; no altar fire, nothing in the sky. Medium-wide shot, the upper third empty paper.",
+      "speech": [],
+      "evidence": [
+        {
+          "s": "B",
+          "ref": "JOS.24.26",
+          "de": "Josua schreibt die Worte in das Buch des Gesetzes Gottes und richtet einen grossen Stein unter der Eiche auf."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.24.24",
+          "de": "Das Volk sagt: Wir wollen JHWH dienen und auf seine Stimme hören."
+        },
+        {
+          "s": "B",
+          "ref": "JOS.24.29",
+          "de": "Josua stirbt im Alter von hundertzehn Jahren."
+        },
+        {
+          "s": "R",
+          "de": "Erhobene Hände als Zeichen der Zusage; Schriftrolle für das Aufschreiben."
+        },
+        {
+          "s": "I",
+          "de": "Der Aufbau der Rede als Bundesformular (Geschichte, Forderung, Zeugen) ist ein Vorschlag der Forschung."
+        }
+      ],
+      "pruefung": [
+        {
+          "id": "B6-STEIN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JOS.24.26",
+          "de": "Grosser aufgerichteter Stein unter einem Baum",
+          "en": "Is there a large upright stone standing under a big tree?"
+        },
+        {
+          "id": "B6-ALT",
+          "art": "muss",
+          "stufe": "soll",
+          "s": "B",
+          "ref": "JOS.24.29",
+          "de": "Josua ist sehr alt",
+          "en": "Does the man in the olive-green tunic look very old, with a white beard?"
+        },
+        {
+          "id": "B6-VOLK",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "JOS.24.24",
+          "de": "Das Volk sagt zu (erhobene Hände)",
+          "en": "Are several people facing the old man and raising their hands?"
+        },
+        {
+          "id": "JOS-KEIN-GOTT",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Gott nicht gemalt, kein Lichteffekt",
+          "en": "Is there any figure, face or hand in the sky, any rays or beams of light, or any figure that looks like God?"
+        }
+      ]
+    }
+  }
+}

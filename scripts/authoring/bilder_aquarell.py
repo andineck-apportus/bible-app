@@ -382,7 +382,10 @@ def texte_von(plan_d):
     for tid in plan_d["basis"]:
         rec = lade(ROOT / f"data/translations/{tid}.json")
         lg = "gsw" if rec.get("language", "").startswith("gsw") or "-GSW" in tid else "de"
-        t.setdefault(lg, {}).update(rec["text_by_reference"])
+        if "text_by_reference" in rec:
+            t.setdefault(lg, {}).update(rec["text_by_reference"])
+        elif rec.get("text") and rec.get("reference"):
+            t.setdefault(lg, {})[rec["reference"]] = rec["text"]
     return t
 
 
