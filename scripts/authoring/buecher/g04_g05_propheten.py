@@ -31,20 +31,20 @@ NOTES = [
      "terms": [T("heb", "יְשַׁעְיָהוּ", "Jesaja: «JHWH ist Rettung»", "jeschajahu"),
                T("heb", "קְדוֹשׁ יִשְׂרָאֵל", "der Heilige Israels", "kedosch jisra'el")],
      "gsw": {"topic": "De Jesaja z Jerusalem: Prophet under assyrischem Druck",
-             "text": "Nach de Überschrift hät de Jesaja, de Sohn vom Amoz, z Jerusalem under de König Usija, Jotam, "
+             "text": "Nach de Überschrift hät de Jesaja, de Sohn vom Amoz, z Jerusalem under de Chönig Usija, Jotam, "
                      "Ahas und Hiskija gwürkt ([[ISA.1.1]]); sin Name heisst «JHWH isch Rettig». Sini Berüefig "
-                     "fallt is Todesjaar vom Usija, um 740 v. Chr. ([[ISA.6.1]]). Dänn isch Assyrie gäge Weschte "
+                     "fallt is Todesjahr vom Usija, um 740 v. Chr. ([[ISA.6.1]]). Dänn isch Assyrie gäge Weschte "
                      "vorgstosse: Chrieg vo Aram und Israel gäge Juda um 734–732 v. Chr. ([[ISA.7.1-ISA.7.9]]), Fall "
                      "vo Samaria 722/720 v. Chr., Feldzug vom Sanherib 701 v. Chr., wo Juda verwüeschtet, Jerusalem "
-                     "aber nöd iignoo hät ([[ISA.36.1-ISA.37.38]]). De Sanherib schriibt sälber, er heg de Hiskija z "
-                     "Jerusalem «wie en Vogel im Chäfig» iigschlosse. Typisch für s ganz Buech isch de Gottesname "
+                     "aber nöd iignoo hät ([[ISA.36.1-ISA.37.38]]). De Sanherib schriibt sälber, er heb de Hiskija z "
+                     "Jerusalem «wien en Vogel im Chäfig» iigschlosse. Typisch für s ganz Buech isch de Gottesname "
                      "«de Heilig vo Israel» ([[ISA.1.4]]; [[ISA.41.14]]). D Verzellige i [[ISA.36.1-ISA.39.8]] "
                      "stönd fascht gliich i [[2KI.18.13-2KI.20.19]].",
              "uncertain": "Weli Wort i [[ISA.1.1-ISA.39.8]] uf de Jesaja sälber zruggönd, isch umstritte; vili "
-                          "Forscher halted öppe [[ISA.13.1-ISA.14.23]] und [[ISA.24.1-ISA.27.13]] für spööteri "
+                          "Forscher halted öppe [[ISA.13.1-ISA.14.23]] und [[ISA.24.1-ISA.27.13]] für spöteri "
                           "Teil, traditionelli Usleger schriibed si em Jesaja zue. Öb d Verzellige zerscht im "
-                          "Königebuech oder im Jesajabuech gstande sind, isch offe. De Abzug vo de Assyrer 701 v. "
-                          "Chr. ([[ISA.37.36-ISA.37.37]]) erklääred d Bible und d assyrische Quälle verschide; de "
+                          "Chönigebuech oder im Jesajabuech gstande sind, isch offe. De Abzug vo de Assyrer 701 v. "
+                          "Chr. ([[ISA.37.36-ISA.37.37]]) erkläred d Bible und d assyrische Quälle verschide; de "
                           "Sanherib bricht vo Belagerig und Tribut, nöd vo Verluscht.",
              "terms": ["Jesaja: «JHWH isch Rettig»", "de Heilig vo Israel"]}},
     {"id": "BG-ISA-BOOK-0002", "book": "ISA", "context": IP, "confidence": "probable",
@@ -67,24 +67,24 @@ NOTES = [
      "evidence_refs": ["ISA.40.1", "ISA.44.28", "ISA.45.1", "ISA.48.20", "SIR.48.24", "MAT.3.3"],
      "sources": ["Grosse Jesajarolle 1QIsaᵃ (Qumran, um 125 v. Chr.)", "Kyros-Zylinder (nach 539 v. Chr.)"],
      "terms": [],
-     "gsw": {"topic": "Troscht für Verbannti und di Groosse Jesajarolle",
+     "gsw": {"topic": "Troscht für Verbannti und di Grosse Jesajarolle",
              "text": "Ab [[ISA.40.1]] änderet sich d Lag: D Schuld vo Jerusalem gilt als abtreit, d Verbannte "
-                     "söled us Babel heichoo ([[ISA.48.20]]), und de Perserkönig Kyros, wo Babylon 539 v. Chr. "
+                     "söled us Babel heichoo ([[ISA.48.20]]), und de Perserchönig Kyros, wo Babylon 539 v. Chr. "
                      "iignoo hät, wird mit Name gnännt ([[ISA.44.28]]; [[ISA.45.1]]). Sit em spoote 18. "
-                     "Jaarhundert schriibed vili Forscher [[ISA.40.1-ISA.55.13]] eme unbekannte Prophet im Exil zue "
-                     "(«Deuterojesaja»), sit em Bernhard Duhm (1892) [[ISA.56.1-ISA.66.24]] eme spöötere z "
+                     "Jahrhundert schriibed vili Forscher [[ISA.40.1-ISA.55.13]] eme unbekannte Prophet im Exil zue "
+                     "(«Deuterojesaja»), sit em Bernhard Duhm (1892) [[ISA.56.1-ISA.66.24]] eme spötere z "
                      "Jerusalem («Tritojesaja»). Traditionelli Usleger gsend s ganz Buech als Wärch vom Jesaja, wo "
-                     "de Kyros vorusgseit heg; scho de Jesus Sirach schriibt em Jesaja de Troscht für Zion zue "
+                     "de Kyros vorusgseit heb; scho de Jesus Sirach schriibt em Jesaja de Troscht für Zion zue "
                      "([[SIR.48.24]]), und s Nöi Teschtamänt ([[MAT.3.3]]; [[JHN.12.38-JHN.12.41]]) füert die "
                      "Kapitel under em Name vom Jesaja aa. Di "
-                     "Groosse Jesajarolle us Qumran (um 125 v. Chr.) enthaltet alli 66 Kapitel als eis Buech; trotz "
-                     "vilne chliine Abwiichige stimmt si wiitgehend mit de öppe tuusig Jaar jüngere "
+                     "Grosse Jesajarolle us Qumran (um 125 v. Chr.) enthaltet alli 66 Kapitel als eis Buech; trotz "
+                     "vilne chliine Abwiichige stimmt si wiitgehend mit de öppe tuusig Jahr jüngere "
                      "mittelalterliche Handschrifte überii.",
-             "uncertain": "Öb d Kapitel vo eim, zwei oder drüü Verfasser stammed, isch zwüsche traditioneller und "
-                          "historisch-kritischer Uslegig umstritte. Vili Forscher gsend hüt statt drüü trännte "
+             "uncertain": "Öb d Kapitel vo eim, zwei oder drü Verfasser stammed, isch zwüsche traditioneller und "
+                          "historisch-kritischer Uslegig umstritte. Vili Forscher gsend hüt statt drü trännte "
                           "Büecher eis Buech, wo über Generatione wiitergschribe worde isch; d Gränze bi "
-                          "[[ISA.56.1]] und de Aateil vo spöötere Zuesätz sind au under ine umstritte. D Rolle zeigt "
-                          "d Gstalt vom Buech im 2. Jaarhundert v. Chr., nöd sini Entstehig.",
+                          "[[ISA.56.1]] und de Aateil vo spötere Zuesätz sind au under ine umstritte. D Rolle zeigt d "
+                          "Gstalt vom Buech im 2. Jahrhundert v. Chr., nöd sini Entstehig.",
              "terms": []}},
     # ---------------------------------------------------------------- Jeremia
     {"id": "BG-JER-BOOK-0001", "book": "JER", "context": IP, "confidence": "probable",
@@ -106,21 +106,21 @@ NOTES = [
      "evidence_refs": ["JER.1.1-JER.1.3", "JER.34.7", "JER.36.4", "JER.36.32", "JER.46.2"],
      "sources": ["Lachisch-Briefe (um 588 v. Chr.)", "Babylonische Chronik (zu 605 und 597 v. Chr.)"],
      "terms": [],
-     "gsw": {"topic": "De Jeremia: vier Jaarzäänt bis zum Undergang vo Juda",
-             "text": "Nach de Überschrift hät de Jeremia, en Priestersohn us Anatot bi Jerusalem, vom 13. Jaar vom "
-                     "König Joschija (627/626 v. Chr.) bis zur Eroberig vo Jerusalem 587/586 v. Chr. gwürkt "
-                     "([[JER.1.1-JER.1.3]]). I die Ziit fallet de Zämebruch vo Assyrie, de Sieg vo Babylon über "
-                     "Ägypte bi Karkemisch 605 v. Chr. ([[JER.46.2]]), di erscht Verschleppig 597 v. Chr. und d "
-                     "Zerstörig vo de Stadt. Brief uf Tonscherbe us Lachisch stammed us de letschte Mönet vor em "
-                     "Fall; i eim heisst s, me passi uf d Füürzeiche vo Lachisch uf, will me Aseka nöd gseei – nach "
-                     "[[JER.34.7]] sind Lachisch und Aseka di letschte feschte Stedt gsii. S Buech verzellt sälber, "
-                     "wie de Jeremia sim Schriiber Baruch diktiert und d Rolle nach irer Verbrännig erwiiteret nöi "
-                     "hät lah schriibe ([[JER.36.4]]; [[JER.36.32]]). Am Schluss isch de Jeremia uf Ägypte "
-                     "mitgnoo worde ([[JER.43.6-JER.43.7]]).",
+     "gsw": {"topic": "De Jeremia: vier Jahrzehnt bis zum Undergang vo Juda",
+             "text": "Nach de Überschrift hät de Jeremia, en Prieschtersohn us Anatot bi Jerusalem, vom 13. Jahr "
+                     "vom Chönig Joschija (627/626 v. Chr.) bis zur Eroberig vo Jerusalem 587/586 v. Chr. "
+                     "gwürkt ([[JER.1.1-JER.1.3]]). I die Ziit fallet de Zämebruch vo Assyrie, de Sieg vo "
+                     "Babylon über Ägypte bi Karkemisch 605 v. Chr. ([[JER.46.2]]), di erscht Verschleppig 597 "
+                     "v. Chr. und d Zerstörig vo de Stadt. Brief uf Tonscherbe us Lachisch stammed us de letschte "
+                     "Mönet vor em Fall; i eim heisst s, me passi uf d Füürzeiche vo Lachisch uf, will me Aseka nöd "
+                     "gsäch – nach [[JER.34.7]] sind Lachisch und Aseka di letschte feschte Städt gsii. S Buech "
+                     "verzellt sälber, wie de Jeremia sim Schriiber Baruch diktiert und d Rolle nach irer "
+                     "Verbrännig erwiiteret nöi hät lah schriibe ([[JER.36.4]]; [[JER.36.32]]). Am Schluss "
+                     "isch de Jeremia uf Ägypte mitgnoo worde ([[JER.43.6-JER.43.7]]).",
              "uncertain": "Öb de Jeremia würkli 627/626 v. Chr. aagfange hät, isch umstritte; es paar Forscher "
-                          "setzed de Aafang spööter aa, will chuum Wort sicher i d Ziit vom Joschija datiert sind. "
-                          "Wie vil vom Buech uf de Jeremia und de Baruch zruggaat und wie vil uf spööteri "
-                          "Bearbeiter, wo iri Prosareden nööch bi de Sprach vom Deuteronomium sind, isch offe. Öb "
+                          "setzed de Aafang spöter aa, will chuum Wort sicher i d Ziit vom Joschija datiert sind. "
+                          "Wie vil vom Buech uf de Jeremia und de Baruch zruggaat und wie vil uf spöteri "
+                          "Bearbeiter, wo iri Prosareden nöch bi de Sprach vom Deuteronomium sind, isch offe. Öb "
                           "de Lachisch-Brief heisst, dass Aseka scho gfalle gsii isch, wird verschide düütet.",
              "terms": []}},
     {"id": "BG-JER-BOOK-0002", "book": "JER", "context": "CTX-HIST-BIBLE-FORMATION", "confidence": "probable",
@@ -145,14 +145,14 @@ NOTES = [
                      "hebräisch Täxt vo de mittelalterliche Handschrifte, wo di meischte Bibelübersetzige druf "
                      "baued. Es fehlt zum Biispil [[JER.33.14-JER.33.26]], und d Sprüch gäge d Völker, im "
                      "Hebräische [[JER.46.1-JER.51.64]], stönd dört nach [[JER.25.13]] und in ere andere "
-                     "Reiefolg. Das isch nöd nur Freiheit vo de Übersetzer: Under de hebräische "
+                     "Reihefolg. Das isch nöd nu Freiheit vo de Übersetzer: Under de hebräische "
                      "Jeremia-Fragmänt us Qumran entspräched es paar de chürzere Form, anderi de längere. Beid "
                      "Fassige sind also uf Hebräisch im Umlauf gsii. Vili Forscher halted di chürzer für en elteri "
-                     "Usgaab vom Buech und di länger für e spööteri Erwiiterig.",
+                     "Usgaab vom Buech und di länger für e spöteri Erwiiterig.",
              "uncertain": "Öb di chürzer Fassig elter isch oder öb d griechisch Übersetzig oder iri hebräisch "
                           "Vorlag kürzt hät, isch umstritte; mögli isch au, dass sich beid Fassige trännt "
-                          "wiiterentwicklet händ. Wie groos de Unterschiid gnau isch, hangt vo de Zellwiis ab. D "
-                          "Qumran-Fragmänt sind chlii und decked nur weni Abschnitt ab.",
+                          "wiiterentwicklet händ. Wie gross de Underschiid gnau isch, hangt vo de Zellwiis ab. D "
+                          "Qumran-Fragmänt sind chlii und decked nu weni Abschnitt ab.",
              "terms": []}},
     # ---------------------------------------------------------------- Klagelieder
     {"id": "BG-LAM-BOOK-0001", "book": "LAM", "context": IP, "confidence": "probable",
@@ -172,19 +172,19 @@ NOTES = [
      "evidence_refs": ["LAM.1.1", "LAM.2.7", "LAM.3.1-LAM.3.66", "LAM.5.1-LAM.5.22"],
      "sources": [],
      "terms": [T("heb", "אֵיכָה", "«Ach, wie!» (hebräischer Name des Buches)", "echa")],
-     "gsw": {"topic": "Chlaaglieder: Truur nach de Zerstörig vo Jerusalem",
-             "text": "Di füüf Lieder beklaged d Eroberig vo Jerusalem dur d Babylonier 587/586 v. Chr.: di "
+     "gsw": {"topic": "Chlaglieder: Truur nach de Zerstörig vo Jerusalem",
+             "text": "Di föif Lieder beklaged d Eroberig vo Jerusalem dur d Babylonier 587/586 v. Chr.: di "
                      "verlasse Stadt, de verworfe Tempel, de Hunger wäred de Belagerig und d Verschleppig "
                      "([[LAM.1.1-LAM.1.5]]; [[LAM.2.7]]; [[LAM.4.10]]). De hebräisch Name vom Buech isch sis erscht "
                      "Wort, «Echa», «Ach, wie!». D Lieder [[LAM.1.1-LAM.4.22]] sind Alphabet-Gedicht: D Strophe "
                      "fanged dr Reie nach mit de 22 Buechstabe vom hebräische Alphabet aa, i [[LAM.3.1-LAM.3.66]] "
-                     "je drüü Värs. S letscht Lied ([[LAM.5.1-LAM.5.22]]) hät au 22 Värs, folgt aber nöd em "
-                     "Alphabet. S Buech nännt kein Verfasser. D griechisch Übersetzig und di jüdisch Überlieferig "
+                     "je drü Värs. S letscht Lied ([[LAM.5.1-LAM.5.22]]) hät au 22 Värs, folgt aber nöd em "
+                     "Alphabet. S Buech nännt kei Verfasser. D griechisch Übersetzig und di jüdisch Überliferig "
                      "schriibed s em Jeremia zue (vgl. [[2CH.35.25]]). I de hebräische Bible staat s bi de "
                      "Schrifte und wird am Gedänktag vo de Tempelzerstörig (9. Av) gläse.",
-             "uncertain": "Vili Forscher nämed meereri Dichter aa, wo z Juda bald nach 586 v. Chr. gschribe händ; "
-                          "öb einzelni Lieder erscht spööter entstande sind, isch offe. Dass s Buech vom Jeremia "
-                          "isch, isch Überlieferig, s Buech sälber nännt kein Name. Öb d Lieder für Chlaagfiire "
+             "uncertain": "Vili Forscher nämed mehreri Dichter aa, wo z Juda bald nach 586 v. Chr. gschribe händ; "
+                          "öb einzelni Lieder erscht spöter entstande sind, isch offe. Dass s Buech vom Jeremia "
+                          "isch, isch Überliferig, s Buech sälber nännt kei Name. Öb d Lieder für Chlagfiire "
                           "dichtet worde sind, isch e Vermuetig.",
              "terms": ["«Ach, wie!» (hebräisch Name vom Buech)"]}},
     # ---------------------------------------------------------------- Ezechiel
@@ -207,19 +207,19 @@ NOTES = [
      "evidence_refs": ["EZK.1.1-EZK.1.3", "EZK.3.15", "EZK.29.17", "EZK.33.21", "2KI.24.14-2KI.24.16"],
      "sources": ["Jojachin-Täfelchen aus Babylon (um 592 v. Chr.)"],
      "terms": [T("heb", "בֶּן־אָדָם", "Menschensohn, Mensch", "ben adam")],
-     "gsw": {"topic": "De Ezechiel: en Priester under de Verschleppte",
-             "text": "De Ezechiel, de Sohn vom Busi, isch Priester gsii und isch 597 v. Chr. mit em König Jojachin "
-                     "uf Babylonie verschleppt worde ([[EZK.1.1-EZK.1.3]]; [[2KI.24.14-2KI.24.16]]). Er hät bi de "
-                     "Verbannte am Kanal Kebar z Tel-Abib gläbt ([[EZK.3.15]]). Vili Wort sind nach Jaar vo de "
-                     "Verschleppig vom Jojachin datiert, vo 593 v. Chr. ([[EZK.1.2]]) bis 571 v. Chr. "
-                     "([[EZK.29.17]]). Babylonischi Tontafele (um 592 v. Chr.) nänned Ölratione für «Jojachin, de "
-                     "König vo Juda». S Buech isch klar gliederet: Grichtswort gäge Jerusalem bis zur Nachricht "
-                     "vom Fall vo de Stadt ([[EZK.33.21]]), Sprüch gäge d Völker, dänn Hoffnig uf Ernöierig, mit de "
-                     "Vision vo de Totechnoche ([[EZK.37.1-EZK.37.14]]) und em Entwurf vo me nöie Tempel "
-                     "([[EZK.40.1-EZK.48.35]]). Gott redt de Ezechiel immer als «ben adam» aa, «Menschesohn».",
-             "uncertain": "Wie vil vom Buech uf de Ezechiel sälber zruggaat und wie vil uf e spööteri Schuel, isch "
+     "gsw": {"topic": "De Ezechiel: en Prieschter under de Verschleppte",
+             "text": "De Ezechiel, de Sohn vom Busi, isch Prieschter gsii und isch 597 v. Chr. mit em Chönig "
+                     "Jojachin uf Babylonie verschleppt worde ([[EZK.1.1-EZK.1.3]]; [[2KI.24.14-2KI.24.16]]). Er "
+                     "hät bi de Verbannte am Kanal Kebar z Tel-Abib gläbt ([[EZK.3.15]]). Vili Wort sind nach "
+                     "Jahr vo de Verschleppig vom Jojachin datiert, vo 593 v. Chr. ([[EZK.1.2]]) bis "
+                     "571 v. Chr. ([[EZK.29.17]]). Babylonischi Tontafele (um 592 v. Chr.) nänned Ölratione für "
+                     "«Jojachin, de Chönig vo Juda». S Buech isch klar gliederet: Grichtswort gäge Jerusalem bis "
+                     "zur Nachricht vom Fall vo de Stadt ([[EZK.33.21]]), Sprüch gäge d Völker, dänn Hoffnig uf "
+                     "Ernöierig, mit de Vision vo de Totechnoche ([[EZK.37.1-EZK.37.14]]) und em Entwurf "
+                     "vo me nöie Tempel ([[EZK.40.1-EZK.48.35]]). Gott redt de Ezechiel immer als «ben adam» aa, «Menschesohn».",
+             "uncertain": "Wie vil vom Buech uf de Ezechiel sälber zruggaat und wie vil uf e spöteri Schuel, isch "
                           "umstritte; vili Forscher rächned mit Fortschriibige, anderi läsed s Buech als "
-                          "wiitgehend einheitlich. Was s «driissigscht Jaar» i [[EZK.1.1]] meint (vilicht s Alter "
+                          "wiitgehend einheitlich. Was s «driissigscht Jahr» i [[EZK.1.1]] meint (vilicht s Alter "
                           "vom Ezechiel), isch unklar. E früeni griechischi Handschrift (Papyrus 967) hät i "
                           "[[EZK.36.1-EZK.39.29]] en chürzere Täxt und e anderi Kapitelfolg.",
              "terms": ["Menschesohn, Mänsch"]}},
@@ -243,21 +243,21 @@ NOTES = [
      "evidence_refs": ["DAN.1.1", "DAN.1.21", "DAN.5.1", "DAN.5.31", "DAN.7.13-DAN.7.14"],
      "sources": ["Nabonid-Chronik", "Nabonid-Zylinder aus Ur"],
      "terms": [],
-     "gsw": {"topic": "De Daniel: Gschichte am Königshof und Visione vo de Wältriich",
-             "text": "S Buech spilt am babylonische und persische Königshof: De Daniel chunnt als junge "
+     "gsw": {"topic": "De Daniel: Gschichte am Chönigshof und Visione vo de Wältriich",
+             "text": "S Buech spilt am babylonische und persische Chönigshof: De Daniel chunnt als junge "
                      "Verschleppte uf Babel ([[DAN.1.1-DAN.1.6]]) und bliibt bis i d Ziit vom Kyros ([[DAN.1.21]]; "
                      "[[DAN.10.1]]). [[DAN.1.1-DAN.6.28]] verzellt i de dritte Person, wie Jude am frömde Hof irem "
                      "Gott tröi bliibed; i [[DAN.7.1-DAN.12.13]] bricht de Daniel sälber vo Visione vo vier "
-                     "Wältriich und vom choomende Riich vo Gott ([[DAN.7.13-DAN.7.14]]). De Belsazar ([[DAN.5.1]]) "
-                     "isch us babylonische Täxt bekannt: als Sohn vom König Nabonid, wo de Vater wäred eme lange "
-                     "Ufenthalt z Arabie d Herrschaft z Babylon überlaa hät. En «Darius de Meder» ([[DAN.5.31]]) "
-                     "isch usserhalb vo de Bible nöd belegt. I de hebräische Bible staat de Daniel bi de Schrifte, "
-                     "i christliche Bible bi de Prophete.",
-             "uncertain": "Öb de Daniel e gschichtlichi Person isch, wo s Buech vo irne Erläbnis bricht, oder e "
+                     "Wältriich und vom chömende Riich vo Gott ([[DAN.7.13-DAN.7.14]]). De Belsazar ([[DAN.5.1]]) "
+                     "isch us babylonische Täxt bekannt: als Sohn vom Chönig Nabonid, wo de Vatter wäred eme "
+                     "lange Ufenthalt z Arabie d Herrschaft z Babylon überlaa hät. En «Darius de Meder» "
+                     "([[DAN.5.31]]) isch usserhalb vo de Bible nöd belegt. I de hebräische Bible staat de Daniel "
+                     "bi de Schrifte, i christliche Bible bi de Prophete.",
+             "uncertain": "Öb de Daniel e gschichtlichi Person isch, wo s Buech vo ire Erläbnis bricht, oder e "
                           "Verzellfigur, isch umstritte. Traditionelli Usleger düüted de «Darius de Meder» als "
                           "andere Name vo me bekannte Herrscher (öppe de Kyros oder sin Statthalter Gubaru); "
                           "kritischi Forscher gsend drin es spöters Gschichtsbild mit eme Mederriich vor de Perser. "
-                          "Au s «dritt Jaar vom Jojakim» ([[DAN.1.1]]) laat sich mit [[JER.25.1]] nur über "
+                          "Au s «dritt Jahr vom Jojakim» ([[DAN.1.1]]) laat sich mit [[JER.25.1]] nu über "
                           "verschideni Zellwiise in Iiklang bringe.",
              "terms": []}},
     {"id": "BG-DAN-BOOK-0002", "book": "DAN", "context": "CTX-HIST-SECOND-TEMPLE", "confidence": "probable",
@@ -284,17 +284,17 @@ NOTES = [
              "text": "Vo [[DAN.2.4]] bis [[DAN.7.28]] isch s Buech nöd hebräisch, sondern aramäisch gschribe, i de "
                      "Verchehrssprach vom Alte Orient; de Sprachwächsel deckt sich nöd mit de Gränze zwüsche "
                      "Verzellige und Visione. Di griechisch Bible enthaltet zuesätzlichi Stuck (Gebät vom Asarja "
-                     "und Lied vo de drüü Manne, Susanna, Bel und de Drache). D Überlieferig gseet de Daniel im 6. "
-                     "Jaarhundert v. Chr. als Verfasser, wo chünftigi Riich vorusgseit hät. D historisch-kritisch "
+                     "und Lied vo de drü Manne, Susanna, Bel und de Drache). D Überliferig gseht de Daniel im 6. "
+                     "Jahrhundert v. Chr. als Verfasser, wo chünftigi Riich vorusgseit hät. D historisch-kritisch "
                      "Forschig datiert d Ändgstalt i d Verfolgig under em Seleukide Antiochus IV. (167–164 v. Chr.): "
                      "[[DAN.11.21-DAN.11.39]] beschriibt die Ziit bis zur Entweihig vom Tempel ([[DAN.11.31]]; vgl. "
-                     "[[1MA.1.54]]) sehr gnau, s Änd vom König i [[DAN.11.40-DAN.11.45]] entspricht aber nöd sim "
+                     "[[1MA.1.54]]) sehr gnau, s Änd vom Chönig i [[DAN.11.40-DAN.11.45]] entspricht aber nöd sim "
                      "Tod 164 v. Chr. z Persie. Z Qumran hät me Räscht vo acht Daniel-Handschrifte gfunde und es "
                      "«Gebät vom Nabonid», wo a [[DAN.4.1-DAN.4.37]] erinneret.",
              "uncertain": "Öb [[DAN.11.1-DAN.11.45]] vorusgseiti oder im Ruggblick verzellti Gschicht isch, hangt "
                           "a Grundentscheidige und bliibt zwüsche traditioneller und historisch-kritischer "
                           "Uslegig umstritte; au kritischi Forscher halted d Verzellige oft für elter als d "
-                          "Ändgstalt. Warum grad [[DAN.2.4-DAN.7.28]] aramäisch isch, isch nöd klar. D Zaal vo de "
+                          "Ändgstalt. Warum grad [[DAN.2.4-DAN.7.28]] aramäisch isch, isch nöd klar. D Zahl vo de "
                           "Qumran-Handschrifte hangt dervo ab, wie me d Fragmänt zueornet.",
              "terms": []}},
     # ---------------------------------------------------------------- Hosea
@@ -316,20 +316,20 @@ NOTES = [
      "evidence_refs": ["HOS.1.1", "HOS.1.2-HOS.1.9", "HOS.7.11", "2KI.15.8-2KI.15.30"],
      "sources": ["Annalen Tiglat-Pilesers III. (zu Menahem und Hoschea)"],
      "terms": [],
-     "gsw": {"topic": "De Hosea: di letschte Jaarzäänt vom Nordriich",
-             "text": "De Hosea hät im Nordriich Israel gwürkt und isch wohl au vo dört cho, anders als de Amos, wo "
-                     "us Juda cho isch. D Überschrift nännt de König Jerobeam II. vo Israel und di judäische König Usija bis "
-                     "Hiskija ([[HOS.1.1]]); meischtens wird sis Würke um 750–725 v. Chr. aagsetzt. Uf d Blüeteziit "
-                     "under em Jerobeam sind Königsmord churz hinderenand gfolgt ([[2KI.15.8-2KI.15.30]]; vgl. "
-                     "[[HOS.8.4]]) und es Hin und Här zwüsche Assyrie und Ägypte ([[HOS.7.11]]); d Annale vom "
-                     "Assyrerkönig Tiglat-Pileser III. nänned de Tribut vom Menahem und d Iisetzig vom Hoschea. De "
-                     "Hosea düütet sini Ehe mit de Gomer als Zeiche für d Untröii vo Israel gägenüber Gott, wo "
-                     "glich a sim Volk feschthaltet ([[HOS.1.2-HOS.1.9]]; [[HOS.3.1-HOS.3.5]]; "
-                     "[[HOS.11.1-HOS.11.9]]). Nach em Fall vo Samaria 722/720 v. Chr. isch s Buech wohl z Juda "
-                     "überliferet und wiitergschribe worde.",
+     "gsw": {"topic": "De Hosea: di letschte Jahrzehnt vom Nordriich",
+             "text": "De Hosea hät im Nordriich Israel gwürkt und isch wohl au vo dört choo, anders als de Amos, wo "
+                     "us Juda choo isch. D Überschrift nännt de Chönig Jerobeam II. vo Israel und di judäische Chönig Usija "
+                     "bis Hiskija ([[HOS.1.1]]); meischtens wird sis Würke um 750–725 v. Chr. aagsetzt. Uf d "
+                     "Blüeteziit under em Jerobeam sind Chönigsmord churz hinderenand gfolgt "
+                     "([[2KI.15.8-2KI.15.30]]; vgl. [[HOS.8.4]]) und es Hin und Här zwüsche Assyrie und Ägypte "
+                     "([[HOS.7.11]]); d Annale vom Assyrerchönig Tiglat-Pileser III. nänned de Tribut vom Menahem "
+                     "und d Iisetzig vom Hoschea. De Hosea düütet sini Ehe mit de Gomer als Zeiche für d "
+                     "Untröii vo Israel gägenüber Gott, wo gliich a sim Volk feschthaltet "
+                     "([[HOS.1.2-HOS.1.9]]; [[HOS.3.1-HOS.3.5]]; [[HOS.11.1-HOS.11.9]]). Nach em Fall vo "
+                     "Samaria 722/720 v. Chr. isch s Buech wohl z Juda überliferet und wiitergschribe worde.",
              "uncertain": "Öb d Ehe vom Hosea es würklichs Gscheh, e Zeichehandlig oder es Glichnis isch und öb "
                           "[[HOS.1.2-HOS.1.9]] und [[HOS.3.1-HOS.3.5]] di gliich Frau meined, isch umstritte. Wie "
-                          "wiit d Erwäänige vo Juda (z. B. [[HOS.1.7]]) uf e spööteri judäischi Bearbeitig "
+                          "wiit d Erwähnige vo Juda (z. B. [[HOS.1.7]]) uf e spöteri judäischi Bearbeitig "
                           "zruggönd, isch offe. De hebräisch Täxt isch a vilne Stelle schwär z verstaa.",
              "terms": []}},
     # ---------------------------------------------------------------- Joel
@@ -353,22 +353,22 @@ NOTES = [
      "sources": [],
      "terms": [T("heb", "יוֹאֵל", "Joel: «JHWH ist Gott»", "joel"),
                T("heb", "יוֹם יְהוָה", "Tag JHWHs", "jom JHWH")],
-     "gsw": {"topic": "De Joel: Heuschrecke und de Tag vo JHWH",
-             "text": "D Überschrift nännt weder König no Jaar ([[JOL.1.1]]); wänn de Joel gwürkt hät, isch offe. Sin "
-                     "Name heisst «JHWH isch Gott». Aalass isch e Heuschreckeplag mit Tröchni ([[JOL.1.4]]; "
+     "gsw": {"topic": "De Joel: Höischrecke und de Tag vo JHWH",
+             "text": "D Überschrift nännt weder Chönig no Jahr ([[JOL.1.1]]); wänn de Joel gwürkt hät, isch offe. Sin "
+                     "Name heisst «JHWH isch Gott». Aalass isch e Höischreckeplag mit Tröchni ([[JOL.1.4]]; "
                      "[[JOL.1.17-JOL.1.20]]), wo de Joel als Vorzeiche vom «Tag vo JHWH», hebräisch «jom JHWH», "
-                     "düütet ([[JOL.2.1-JOL.2.11]]); er rüeft zu Faschte und Umkeer am Tempel uf "
-                     "([[JOL.2.12-JOL.2.17]]). Bekannt isch d Verheissig, Gott wärdi sin Geischt uf alli usgüüsse "
+                     "düütet ([[JOL.2.1-JOL.2.11]]); er rüeft zu Faschte und Umkehr am Tempel uf "
+                     "([[JOL.2.12-JOL.2.17]]). Bekannt isch d Verheissig, Gott wärd sin Geischt uf alli usgüüsse "
                      "([[JOL.2.28-JOL.2.32]]); de Petrus füert si a de Pfingschte aa ([[ACT.2.16-ACT.2.21]]). De "
-                     "Joel teilt vili Wändige mit andere Prophete: «Schwärter zu Pflueg-Schare» chunnt bi im umgcheert vor "
+                     "Joel teilt vili Wändige mit andere Prophete: «Schwärter zu Pflueg-Schare» chunnt bi ihm umgchehrt vor "
                      "([[JOL.3.10]]; vgl. [[MIC.4.3]]), und Sätz stönd gliich au bim Amos und bim Obadja ([[JOL.3.16]] mit "
                      "[[AMO.1.2]]; [[JOL.2.32]] mit [[OBA.1.17]]).",
              "uncertain": "Traditionell wird de Joel wäge sim Platz im Buech vo de Zwölf früe datiert, oft is 9. "
-                          "Jaarhundert v. Chr. Vili Forscher setzed s Buech i persischi Ziit (um 400 v. Chr.): Es "
-                          "nännt kein König, aber Priester und Ältischti, setzt en Tempel und d Zerstreuig vom Volk "
-                          "voruus ([[JOL.3.2]]) und erwäänt Grieche als Chäufer vo verchaufte Judäer ([[JOL.3.6]]). "
-                          "Wer bi de gmeinsame Sätz wer zitiert, isch offe. Öb d Heuschrecke wörtlich oder als Bild "
-                          "für es Heer gmeint sind, isch au umstritte.",
+                          "Jahrhundert v. Chr. Vili Forscher setzed s Buech i persischi Ziit (um 400 v. Chr.): Es "
+                          "nännt kei Chönig, aber Prieschter und Ältischti, setzt en Tempel und d Zerstreuig vom "
+                          "Volk voruus ([[JOL.3.2]]) und erwähnt Grieche als Chäufer vo verchaufte Judäer "
+                          "([[JOL.3.6]]). Wär bi de gmeinsame Sätz wär zitiert, isch offe. Öb d Höischrecke wörtlich "
+                          "oder als Bild für es Heer gmeint sind, isch au umstritte.",
              "terms": ["Joel: «JHWH isch Gott»", "Tag vo JHWH"]}},
     # ---------------------------------------------------------------- Amos
     {"id": "BG-AMO-BOOK-0001", "book": "AMO", "context": IP, "confidence": "probable",
@@ -391,23 +391,23 @@ NOTES = [
      "sources": ["Elfenbeinschnitzereien aus Samaria (9./8. Jh. v. Chr.)"],
      "terms": [T("heb", "נֹקֵד", "Schafzüchter, Herdenhalter", "noked")],
      "gsw": {"topic": "De Amos: en Judäer prediget im riiche Nordriich",
-             "text": "De Amos isch vo Tekoa z Juda cho und isch Schaafzüchter gsii, hebräisch «noked» ([[AMO.1.1]]; "
-                     "vgl. [[AMO.7.14]]). Er isch im Nordriich Israel ufträte, under anderem am Königsheiligtum vo "
-                     "Bet-El, und isch vo dört uusgwise worde ([[AMO.7.10-AMO.7.17]]). D Überschrift datiert en "
-                     "under em Jerobeam II. «zwei Jaar vor em Ärdbebe», meischtens um 760–750 v. Chr.; Archäologe "
-                     "bringed Zerstörigsspure a meerere Ort, öppe z Hazor, mit eme starche Bebe um d Mitti vom 8. "
-                     "Jaarhundert in Verbindig, und no [[ZEC.14.5]] erinneret dra. Es isch e Ziit vo Wohlstand und "
+             "text": "De Amos isch vo Tekoa z Juda choo und isch Schafzüchter gsii, hebräisch «noked» ([[AMO.1.1]]; "
+                     "vgl. [[AMO.7.14]]). Er isch im Nordriich Israel ufträte, under anderem am Chönigsheiligtum vo "
+                     "Bet-El, und isch vo dört usgwise worde ([[AMO.7.10-AMO.7.17]]). D Überschrift datiert en "
+                     "under em Jerobeam II. «zwei Jahr vor em Erdbebe», meischtens um 760–750 v. Chr.; Archäologe "
+                     "bringed Zerstörigsspure a mehreri Ort, öppe z Hazor, mit eme starche Bebe um d Mitti vom 8. "
+                     "Jahrhundert in Verbindig, und no [[ZEC.14.5]] erinneret draa. Es isch e Ziit vo Wohlstand und "
                      "wachsender Ungliichheit gsii: De Amos kritisiert «Elfebeihüüser» und Prunkbett "
                      "([[AMO.3.15]]; [[AMO.6.4]]) – z Samaria hät me gschnitzti Elfebeiplatte gfunde – und d "
                      "Rächtsbüügig a de Arme ([[AMO.5.11-AMO.5.12]]). De Amos gilt für vili als ältischte Prophet, "
                      "wo sini Wort als Buech überliferet sind.",
-             "uncertain": "Weli Teil spööter dezuechoo sind, isch umstritte: Vili Forscher halted öppe de Spruch "
+             "uncertain": "Weli Teil spöter dezuechoo sind, isch umstritte: Vili Forscher halted öppe de Spruch "
                           "gäge Juda ([[AMO.2.4-AMO.2.5]]), d Lobpriisstuck ([[AMO.4.13]]; [[AMO.5.8-AMO.5.9]]; "
                           "[[AMO.9.5-AMO.9.6]]) und de hoffnigsvoll Schluss ([[AMO.9.11-AMO.9.15]]) für Ergänzige, "
                           "traditionelli Usleger für Wort vom Amos. D Zueornig vo de archäologische Spure zum Bebe, "
                           "wo [[AMO.1.1]] nännt, isch e Vermuetig; au öb de Hosea oder de Amos zerscht ufträte "
                           "isch, isch offe.",
-             "terms": ["Schaafzüchter, Herdehalter"]}},
+             "terms": ["Schafzüchter, Herdehalter"]}},
     # ---------------------------------------------------------------- Jona
     {"id": "BG-JON-BOOK-0001", "book": "JON", "context": IP, "confidence": "probable",
      "topic": "Jona: eine Erzählung über einen Propheten",
@@ -464,22 +464,22 @@ NOTES = [
      "sources": [TAYLOR, LACHISH_RELIEFS],
      "terms": [T("heb", "מִיכָה", "Micha: Kurzform von «Wer ist wie JHWH?»", "micha")],
      "gsw": {"topic": "De Micha: en Prophet vom Land gäge Samaria und Jerusalem",
-             "text": "De Micha isch vo Moreschet cho, eme Landstädtli im Hügelland südweschtlich vo Jerusalem, und "
+             "text": "De Micha isch vo Moreschet choo, eme Landstädtli im Hügelland südweschtlich vo Jerusalem, und "
                      "hät nach de Überschrift under em Jotam, em Ahas und em Hiskija gwürkt, also öppe 735–700 v. "
-                     "Chr. ([[MIC.1.1]]). Sini Chlaag über d Ort vo sinere Heimet, drunder Lachisch "
+                     "Chr. ([[MIC.1.1]]). Sini Chlag über d Ort vo sinere Heimet, drunder Lachisch "
                      "([[MIC.1.10-MIC.1.16]]), passt zum Feldzug vom Sanherib 701 v. Chr., wo die Gäged verwüeschtet "
-                     "hät. De Micha griift Landraub, bestächlichi Richter, Priester und Prophete aa "
-                     "([[MIC.2.1-MIC.2.2]]; [[MIC.3.11]]) und kündet sogar d Zerstörig vo Jerusalem aa "
-                     "([[MIC.3.12]]). Es Jaarhundert spööter wird das Wort zitiert, zum de Jeremia verteidige "
-                     "([[JER.26.18]]) – en sältene Fall, wo d Bible en Prophet mit Name und Wortluut aafüert. "
-                     "Bekannt sind au [[MIC.5.2]] (Betlehem, vgl. [[MAT.2.6]]) und [[MIC.6.8]]. De Name isch e "
-                     "Churzform vo «Wer isch wie JHWH?» (vgl. [[MIC.7.18]]).",
+                     "hät. De Micha griift Landraub, bestächlichi Richter, Prieschter und Prophete "
+                     "aa ([[MIC.2.1-MIC.2.2]]; [[MIC.3.11]]) und kündet sogar d Zerstörig vo Jerusalem "
+                     "aa ([[MIC.3.12]]). Es Jahrhundert spöter wird das Wort zitiert, zum de Jeremia "
+                     "verteidige ([[JER.26.18]]) – en sältene Fall, wo d Bible en Prophet mit Name und "
+                     "Wortluut aafüert. Bekannt sind au [[MIC.5.2]] (Betlehem, vgl. [[MAT.2.6]]) und "
+                     "[[MIC.6.8]]. De Name isch e Churzform vo «Wär isch wie JHWH?» (vgl. [[MIC.7.18]]).",
              "uncertain": "Vili Forscher schriibed vor allem [[MIC.1.1-MIC.3.12]] em Micha sälber zue und gsend i "
-                          "[[MIC.4.1-MIC.7.20]] au Stuck us em Exil und em Nachexil, öppe wäg de Erwäänig vo Babel "
+                          "[[MIC.4.1-MIC.7.20]] au Stuck us em Exil und em Nachexil, öppe wäg de Erwähnig vo Babel "
                           "([[MIC.4.10]]); traditionelli Usleger halted s ganz Buech für s Wärch vom Micha. Öb "
                           "[[MIC.4.1-MIC.4.3]] zerscht bim Micha oder bim Jesaja ([[ISA.2.2-ISA.2.4]]) gstande isch "
                           "oder öb beid en eltere Täxt ufnänd, isch offe.",
-             "terms": ["Micha: Churzform vo «Wer isch wie JHWH?»"]}},
+             "terms": ["Micha: Churzform vo «Wär isch wie JHWH?»"]}},
     # ---------------------------------------------------------------- Nahum
     {"id": "BG-NAM-BOOK-0001", "book": "NAM", "context": IP, "confidence": "probable",
      "topic": "Nahum: der Fall Ninives",
@@ -500,18 +500,18 @@ NOTES = [
      "terms": [T("heb", "נַחוּם", "Nahum: «Trost»", "nachum")],
      "gsw": {"topic": "De Nahum: de Fall vo Ninive",
              "text": "S Buech hät es einzigs Thema: de Undergang vo Ninive, de Hauptstadt vom Assyrerriich, wo Juda "
-                     "über es Jaarhundert beherrscht und drückt hät ([[NAM.1.1]]; [[NAM.3.1-NAM.3.7]]). Über de Nahum "
-                     "vo Elkosch weiss me susch nüt; wo Elkosch gläge isch, isch unsicher. De Name heisst «Troscht». "
-                     "En Ziitraame gänd zwei Ereigniss: [[NAM.3.8-NAM.3.10]] erinneret a d Eroberig vo de "
+                     "über es Jahrhundert beherrscht und drückt hät ([[NAM.1.1]]; [[NAM.3.1-NAM.3.7]]). Über de Nahum "
+                     "vo Elkosch weiss me susch nüüt; wo Elkosch gläge isch, isch unsicher. De Name heisst «Troscht». "
+                     "En Ziitrahme gänd zwei Ereigniss: [[NAM.3.8-NAM.3.10]] erinneret a d Eroberig vo de "
                      "ägyptische Stadt No-Amon (Theben) dur d Assyrer um 663 v. Chr.; Ninive sälber isch 612 v. "
                      "Chr. a d Babylonier und d Meder gfalle, wie d Babylonisch Chronik bricht. Am Aafang staat en "
                      "Hymnus über s Iigriife vo Gott, wo zum Teil em Alphabet folgt ([[NAM.1.2-NAM.1.8]]) und a "
-                     "[[EXO.34.6-EXO.34.7]] aaknüpft ([[NAM.1.3]]) – wie de Jona, aber mit umgcheertem Blick uf "
+                     "[[EXO.34.6-EXO.34.7]] aaknüpft ([[NAM.1.3]]) – wie de Jona, aber mit umgchehrtem Blick uf "
                      "Ninive.",
-             "uncertain": "Öb s Buech vor 612 v. Chr. als Aakündigung entstande oder dänach als Ruggblick, öppe für "
+             "uncertain": "Öb s Buech vor 612 v. Chr. als Aachündigig entstande oder dänach als Ruggblick, öppe für "
                           "de Gottesdienscht, gstaltet worde isch, isch umstritte. Öb de Hymnus "
                           "[[NAM.1.2-NAM.1.8]] emal es vollständigs Alphabet-Gedicht gsii isch, isch offe. Wie me d "
-                          "Freud über de Undergang vo me Feind hüt söll läse, wird theologisch verschide beurteilt.",
+                          "Fröid über de Undergang vo me Feind hüt söll läse, wird theologisch verschide beurteilt.",
              "terms": ["Nahum: «Troscht»"]}},
     # ---------------------------------------------------------------- Habakuk
     {"id": "BG-HAB-BOOK-0001", "book": "HAB", "context": IP, "confidence": "probable",
@@ -534,7 +534,7 @@ NOTES = [
      "terms": [T("heb", "אֱמוּנָה", "Verlässlichkeit, Treue, Vertrauen", "emuna")],
      "gsw": {"topic": "De Habakuk: Warum laat Gott Unrächt zue?",
              "text": "D Überschrift nännt kei Ziit ([[HAB.1.1]]). Nach [[HAB.1.6]] laat Gott d «Chaldäer», d "
-                     "Nöibabylonier, ufstaa; das wiist meischtens i d Jaar um 605 v. Chr., wo Babylon nach em Sieg "
+                     "Nöibabylonier, ufstaa; das wiist meischtens i d Jahr um 605 v. Chr., wo Babylon nach em Sieg "
                      "bi Karkemisch zur Vormacht worde isch. S Buech isch als Zwiegspröch baut: De Habakuk chlaget "
                      "über Gwalt und Unrächt, Gott antwortet. De Kärnsatz vo de Antwort isch [[HAB.2.4]]: De "
                      "Grächt wird dur sini «emuna» läbe; s hebräisch Wort meint Verlässlichkeit, Tröii und "
@@ -542,9 +542,9 @@ NOTES = [
                      "[[HAB.3.1-HAB.3.19]] isch en Psalm mit musikalische Aagabe wie im Psalter. En Kommentar us "
                      "Qumran (1. Jh. v. Chr.) leit [[HAB.1.1-HAB.2.20]] Satz für Satz uf di eige Gägewart uus.",
              "uncertain": "D Datierig isch umstritte: Vorgschlage wärded Ziite vor, wäred oder nach em Ufstiig vo "
-                          "Babylon; es paar Forscher vermueted, elteri Chlaage über Unrächt z Juda seged spööter uf "
-                          "d Babylonier bezoge worde. Öb de Psalm [[HAB.3.1-HAB.3.19]] ursprünglich zum Buech "
-                          "ghört hät, isch offe; dass de Qumran-Kommentar en nöd uslegt, bewiist nüt. Wie me "
+                          "Babylon; es paar Forscher vermueted, elteri Chlage über Unrächt z Juda seged spöter uf d "
+                          "Babylonier bezoge worde. Öb de Psalm [[HAB.3.1-HAB.3.19]] ursprünglich zum Buech "
+                          "ghört hät, isch offe; dass de Qumran-Kommentar en nöd uslegt, bewiist nüüt. Wie me "
                           "«emuna» i [[HAB.2.4]] söll widergää (Glaube oder Tröii, und weme sini Tröii), wird "
                           "verschide beurteilt.",
              "terms": ["Verlässlichkeit, Tröii, Vertroue"]}},
@@ -568,17 +568,17 @@ NOTES = [
      "terms": [T("lat", "dies irae", "Tag des Zorns", "dies irae")],
      "gsw": {"topic": "De Zefanja: de Tag vom Zorn i de Ziit vom Joschija",
              "text": "D Überschrift füert de Stammbaum vom Zefanja über vier Generatione bis uf en Hiskija zrugg und "
-                     "datiert en under em König Joschija (640–609 v. Chr.; [[ZEP.1.1]]). Assyrie isch dänn im "
-                     "Niedergang gsii; [[ZEP.2.13-ZEP.2.15]] kündet de Undergang vo Ninive aa, wo 612 v. Chr. "
+                     "datiert en under em Chönig Joschija (640–609 v. Chr.; [[ZEP.1.1]]). Assyrie isch dänn im "
+                     "Nidergang gsii; [[ZEP.2.13-ZEP.2.15]] kündet de Undergang vo Ninive aa, wo 612 v. Chr. "
                      "iiträte isch. De Zefanja kritisiert Kult für de Baal, s Himmelsheer und de Milkom z Jerusalem "
                      "([[ZEP.1.4-ZEP.1.6]]), wo de Joschija nach [[2KI.23.4-2KI.23.14]] bi sinere Reform um 622 v. "
-                     "Chr. hät lah wegmache. I de Mitti staat de «Tag vo JHWH» als Tag vom Gricht "
+                     "Chr. hät lah wägmache. I de Mitti staat de «Tag vo JHWH» als Tag vom Gricht "
                      "([[ZEP.1.14-ZEP.1.18]]); di latiinisch Übersetzig vo [[ZEP.1.15]], «dies irae», «Tag vom "
                      "Zorn», hät em mittelalterliche Hymnus vom Jüngschte Gricht de Name gää. S Buech hört mit "
                      "Heilswort für en «demüetige und arme» Räscht uf ([[ZEP.3.12-ZEP.3.20]]).",
-             "uncertain": "Öb de gnännt Hiskija de König isch, bliibt offe. Umstritte isch, öb de Zefanja vor de "
+             "uncertain": "Öb de gnännt Hiskija de Chönig isch, bliibt offe. Umstritte isch, öb de Zefanja vor de "
                           "Reform vom Joschija gwürkt hät, wo d Kultkritik derfür spricht, oder dänach. Vili Forscher "
-                          "halted de Schluss ([[ZEP.3.14-ZEP.3.20]]) und Teil vo de Völkersprüch für spööteri "
+                          "halted de Schluss ([[ZEP.3.14-ZEP.3.20]]) und Teil vo de Völkersprüch für spöteri "
                           "Ergänzige us em Exil oder em Nachexil; traditionelli Usleger schriibed s ganz Buech em "
                           "Zefanja zue.",
              "terms": ["Tag vom Zorn"]}},
@@ -603,20 +603,20 @@ NOTES = [
      "sources": ["Behistun-Inschrift des Darius I. (um 520 v. Chr.)"],
      "terms": [],
      "gsw": {"topic": "De Haggai: Ufruef zum Tempelbau 520 v. Chr.",
-             "text": "D Wort vom Haggai sind uf de Tag gnau datiert, vom sächste bis zum nüünte Monet im zweite Jaar "
-                     "vom Perserkönig Darius I., also 520 v. Chr. ([[HAG.1.1]]; [[HAG.2.10]]; [[HAG.2.20]]). Fascht "
-                     "zwänzg Jaar nach de Erlaubnis zur Ruggkeer isch de Tempel no immer i Trümmer gläge, und d "
-                     "Heicheerte händ under Missernte glitte ([[HAG.1.2-HAG.1.11]]). De Haggai drängt de "
-                     "Statthalter Serubbabel us em Huus vom David und de Hohepriester Josua zum Wideruufbau. De "
-                     "Darius hät grad Ufständ im ganze Riich niedergschlage gha, wo sini Inschrift vo Behistun "
-                     "devo bricht; de Haggai kündet aa, Gott wärdi Himmel und Ärde erschüttere "
-                     "([[HAG.2.6-HAG.2.7]]), und nännt de Serubbabel de «Siegelring» vo Gott "
-                     "([[HAG.2.21-HAG.2.23]]). Nach [[EZR.5.1]] hät er zäme mit em Sacharja gwürkt; de Tempel isch "
-                     "515 v. Chr. iigweit worde ([[EZR.6.15]]).",
+             "text": "D Wort vom Haggai sind uf de Tag gnau datiert, vom sächschte bis zum nüünte Monet im zweite "
+                     "Jahr vom Perserchönig Darius I., also 520 v. Chr. ([[HAG.1.1]]; [[HAG.2.10]]; [[HAG.2.20]]). "
+                     "Fascht zwänzg Jahr nach de Erlaubnis zur Ruggkehr isch de Tempel no immer i Trümmer gläge, "
+                     "und d Heichehrte händ under Missernte glitte ([[HAG.1.2-HAG.1.11]]). De Haggai "
+                     "drängt de Statthalter Serubbabel us em Huus vom David und de Hoheprieschter Josua zum "
+                     "Wideruufbau. De Darius hät grad Ufständ im ganze Riich nidergschlage ghaa, wo sini "
+                     "Inschrift vo Behistun devo bricht; de Haggai kündet aa, Gott wärd Himmel "
+                     "und Erde erschüttere ([[HAG.2.6-HAG.2.7]]), und nännt de Serubbabel de "
+                     "«Siegelring» vo Gott ([[HAG.2.21-HAG.2.23]]). Nach [[EZR.5.1]] hät er zäme mit em Sacharja "
+                     "gwürkt; de Tempel isch 515 v. Chr. iigweit worde ([[EZR.6.15]]).",
              "uncertain": "S Buech redt vom Haggai i de dritte Person; öb er s sälber gschribe hät oder öb Schüeler "
                           "s bald dänach zämegstellt händ, isch offe. Was de Haggai für de Serubbabel erwartet hät, "
-                          "es ernöierts davidischs Königtum oder e bescheideneri Rolle, und warum de Serubbabel "
-                          "spööter nüme erwäänt wird, isch nöd klar. Wie sich d früener Grundsteilegig nach "
+                          "es ernöierts davidischs Chönigtum oder e bescheideneri Rolle, und warum de Serubbabel "
+                          "spöter nüme erwähnt wird, isch nöd klar. Wie sich d früener Grundsteilegig nach "
                           "[[EZR.3.8-EZR.3.10]] zum Ufruef vom Haggai verhaltet, wird verschide rekonstruiert.",
              "terms": []}},
     # ---------------------------------------------------------------- Sacharja
@@ -641,16 +641,16 @@ NOTES = [
      "gsw": {"topic": "De Sacharja: Nachtgsicht und en zweite Buechteil",
              "text": "De Sacharja hät zur gliiche Ziit wie de Haggai gwürkt; sini Wort sind vo 520 bis 518 v. Chr. "
                      "datiert ([[ZEC.1.1]]; [[ZEC.1.7]]; [[ZEC.7.1]]). I de Mitti vo [[ZEC.1.7-ZEC.6.15]] stönd acht "
-                     "nächtlichi Visione, wo en Ängel düütet: Jerusalem wird wider bewohnt, Tempel und Füerig, de "
-                     "Statthalter Serubbabel und de Hohepriester Josua, wärded ernöieret ([[ZEC.3.1-ZEC.3.10]]; "
-                     "[[ZEC.4.6-ZEC.4.10]]). [[ZEC.9.1-ZEC.14.21]] isch anders: kei Date, kein Name vom Sacharja, "
-                     "Sprüch über d Völker und s chünftig Jerusalem, mit de Überschrift «Usspruch», hebräisch "
-                     "«massa» ([[ZEC.9.1]]; [[ZEC.12.1]]), wie i [[MAL.1.1]]. Us däm Teil füered d Evangelie de "
-                     "König uf em Esel aa ([[ZEC.9.9]]; [[MAT.21.5]]) und de Durchbohrt ([[ZEC.12.10]]; "
-                     "[[JHN.19.37]]).",
-             "uncertain": "D historisch-kritisch Forschig schriibt [[ZEC.9.1-ZEC.14.21]] meischtens eim oder meerere "
-                          "spöötere Verfasser zue («Deuterosacharja»), oft i spootpersischer oder früehellenistischer "
-                          "Ziit; derfür wird under anderem d Erwäänig vo de Grieche ([[ZEC.9.13]]) aagfüert. "
+                     "nächtlichi Visione, won en Ängel düütet: Jerusalem wird wider bewohnt, Tempel und Füerig, de "
+                     "Statthalter Serubbabel und de Hoheprieschter Josua, wärded ernöieret "
+                     "([[ZEC.3.1-ZEC.3.10]]; [[ZEC.4.6-ZEC.4.10]]). [[ZEC.9.1-ZEC.14.21]] isch anders: kei Date, "
+                     "kei Name vom Sacharja, Sprüch über d Völker und s chünftig Jerusalem, mit de Überschrift "
+                     "«Usspruch», hebräisch «massa» ([[ZEC.9.1]]; [[ZEC.12.1]]), wie i [[MAL.1.1]]. Us däm Teil "
+                     "füered d Evangelie de Chönig uf em Esel aa ([[ZEC.9.9]]; [[MAT.21.5]]) und de "
+                     "Durchbohrt ([[ZEC.12.10]]; [[JHN.19.37]]).",
+             "uncertain": "D historisch-kritisch Forschig schriibt [[ZEC.9.1-ZEC.14.21]] meischtens eim oder mehreri "
+                          "spötere Verfasser zue («Deuterosacharja»), oft i spootpersischer oder früehellenistischer "
+                          "Ziit; derfür wird under anderem d Erwähnig vo de Grieche ([[ZEC.9.13]]) aagfüert. "
                           "Traditionelli Usleger gsend s ganz Buech als Wärch vom Sacharja. Dass "
                           "[[MAT.27.9-MAT.27.10]] es Wort us [[ZEC.11.12-ZEC.11.13]] under em Name vom Jeremia "
                           "aafüert, wird verschide erklärt.",
@@ -683,13 +683,13 @@ NOTES = [
                      "Statthalter, hebräisch «pecha» ([[MAL.1.8]]), wie au de Haggai eine für Juda under persischer "
                      "Herrschaft nännt ([[HAG.1.1]]). Mischehe ([[MAL.2.11]]) und vernachlässigti Zehnteabgabe "
                      "([[MAL.3.8-MAL.3.10]]) erinnered a de Nehemia ([[NEH.13.10-NEH.13.12]]; "
-                     "[[NEH.13.23-NEH.13.27]]); meischtens wird de Maleachi drum is 5. Jaarhundert v. Chr. datiert. "
+                     "[[NEH.13.23-NEH.13.27]]); meischtens wird de Maleachi drum is 5. Jahrhundert v. Chr. datiert. "
                      "Typisch sind Strittgspröch: Gott seit öppis, s Volk fröget zrugg «Wodrin …?», Gott antwortet "
-                     "([[MAL.1.2]]). I de meischte weschtliche christliche Bible hört s Alt Teschtamänt mit de Aakündigung vom Elia uf "
+                     "([[MAL.1.2]]). I de meischte weschtliche christliche Bible hört s Alt Teschtamänt mit de Aachündigig vom Elia uf "
                      "([[MAL.4.5-MAL.4.6]]), wo s Nöi Teschtamänt uf de Johannes de Täufer bezieht ([[MAT.11.14]]).",
-             "uncertain": "Öb de Maleachi vor, wäred oder nach em Nehemia (Mitti 5. Jaarhundert v. Chr.) ufträte "
-                          "isch, isch umstritte. Di jüdisch Überlieferig (Targum) setzt de Bott em Esra gliich; das "
-                          "isch e spööteri Düütig. Vili Forscher halted [[MAL.4.4-MAL.4.6]] für en Nachtrag, wo di "
+             "uncertain": "Öb de Maleachi vor, wäred oder nach em Nehemia (Mitti 5. Jahrhundert v. Chr.) ufträte "
+                          "isch, isch umstritte. Di jüdisch Überliferig (Targum) setzt de Bott em Esra gliich; das "
+                          "isch e spöteri Düütig. Vili Forscher halted [[MAL.4.4-MAL.4.6]] für en Nachtrag, wo di "
                           "ganz Prophetesammlig abschliesst; i hebräische Bible ghöred die Värs zum Kapitel 3.",
              "terms": ["Maleachi: «mi Bott»", "Statthalter"]}},
 ]
