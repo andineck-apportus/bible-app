@@ -428,19 +428,19 @@ NOTES = [
      "sources": [],
      "terms": [T("heb", "יוֹנָה", "Jona: «Taube»", "jona")],
      "gsw": {"topic": "De Jona: e Verzellig über en Prophet",
-             "text": "Anders als di andere Prophetebüecher sammlet s Buech Jona chuum Prophetewort – es enthaltet nur "
+             "text": "Anders als di andere Prophetebüecher sammlet s Buech Jona chuum Prophetewort – es enthaltet nu "
                      "en einzige Spruch ([[JON.3.4]]) –, sondern verzellt vo me Prophet. En Jona, Sohn vom Amittai, "
-                     "wird under em Jerobeam II. im 8. Jaarhundert v. Chr. erwäänt ([[2KI.14.25]]). Er sött Ninive "
-                     "s Gricht aasäge, de groosse assyrische Stadt, wo um 700 v. Chr. Hauptstadt worde und 612 v. "
+                     "wird under em Jerobeam II. im 8. Jahrhundert v. Chr. erwähnt ([[2KI.14.25]]). Er sött Ninive "
+                     "s Gricht aasäge, de grosse assyrische Stadt, wo um 700 v. Chr. Hauptstadt worde und 612 v. "
                      "Chr. undergange isch. De Jona flüchtet und erläbt dänn, wie Gott sich über d Stadt, wo "
-                     "umcheert, erbarmet; dergäge protestiert er mit em Bekänntnis us [[EXO.34.6]] ([[JON.4.2]]). S "
+                     "umchehrt, erbarmet; dergäge protestiert er mit em Bekänntnis us [[EXO.34.6]] ([[JON.4.2]]). S "
                      "Buech hört mit ere offene Frag vo Gott uf ([[JON.4.11]]). De Jesus redt vom «Zeiche vom Jona» "
                      "([[MAT.12.39-MAT.12.41]]). De Name Jona heisst «Tuube».",
-             "uncertain": "Traditionell wird s Buech als Bricht über Ereigniss vom 8. Jaarhundert v. Chr. gläse; "
+             "uncertain": "Traditionell wird s Buech als Bricht über Ereigniss vom 8. Jahrhundert v. Chr. gläse; "
                           "defür wird oft uf d Wort vom Jesus verwise. Vili Forscher läsed s als Lehrverzellig us "
-                          "persischer oder hellenistischer Ziit, wäge spoote Sprachforme, em Titel «König vo "
-                          "Ninive» ([[JON.3.6]]), de Gröössi vo de Stadt ([[JON.3.3]]) und will assyrischi Quälle "
-                          "kei Umkeer vo Ninive känned. Öb de Psalm [[JON.2.2-JON.2.9]] vo Aafang aa zum Buech "
+                          "persischer oder hellenistischer Ziit, wäge spaate Sprachforme, em Titel «Chönig vo "
+                          "Ninive» ([[JON.3.6]]), de Grössi vo de Stadt ([[JON.3.3]]) und will assyrischi Quälle "
+                          "kei Umkehr vo Ninive känned. Öb de Psalm [[JON.2.2-JON.2.9]] vo Aafang aa zum Buech "
                           "ghört hät, isch umstritte.",
              "terms": ["Jona: «Tuube»"]}},
     # ---------------------------------------------------------------- Micha

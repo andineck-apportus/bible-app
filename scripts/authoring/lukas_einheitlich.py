@@ -87,7 +87,7 @@ MUNDART = {
     "ghüraatet": "ghüratet", "hüraatet": "hüratet", "verhüraatet": "verhüratet", "glööst": "glöst", "gmeldet": "gmäldet",
     "meldet": "mäldet", "hööchi": "höchi", "grööscht": "gröscht", "gröössi": "grössi", "härde": "herde",
     "chömm": "chöm", "chömmende": "chömende", "felder": "fälder", "rittet": "riitet", "schaaf": "schaf", "stedt": "städt",
-    "sterbe": "stärbe", "ufglääse": "ufgläse", "ufträte": "uftrete", "umchehr": "umkehr", "unglöubig": "ungläubig",
+    "ufglääse": "ufgläse", "ufträte": "uftrete", "umchehr": "umkehr", "unglöubig": "ungläubig",
     "uussändig": "ussendig", "uusfüerlich": "usfüerlich", "uusgaat": "usgaat", "uusrichte": "usrichte",
     "uustriibed": "ustriibed", "verdoret": "verdorret", "verdoreti": "verdorreti", "verdorete": "verdorrete",
     "verriisse": "verrisse", "vilicht": "villicht", "weggange": "wäggange", "wägg": "wäg", "wen": "wän",

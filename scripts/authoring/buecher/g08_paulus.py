@@ -299,17 +299,17 @@ NOTES = [
   "evidence_refs": ["ACT.16.11-ACT.16.40", "PHP.2.25", "PHP.4.15-PHP.4.18"],
   "sources": [], "terms": [],
   "gsw": {"topic": "Philippi: e römischi Kolonie z Makedonie",
-          "text": "Philippi isch vom König Philipp II. vo Makedonie gründet und nach im benännt worde. Nach de Schlacht bi "
+          "text": "Philippi isch vom Chönig Philipp II. vo Makedonie gründet und nach im benännt worde. Nach de Schlacht bi "
                   "Philippi (42 v. Chr.) und nomal nach 31 v. Chr. händ d Römer det Veterane aagsidlet; d Stadt isch e "
                   "römischi Kolonie worde, mit römischem Rächt und Latiin als Amtssprach ([[ACT.16.12]]). Si isch a de Via "
-                  "Egnatia gläge, de groosse Strass vo de Adria Richtig Oschte. D Apostelgschicht verzellt d Gründig vo de "
+                  "Egnatia gläge, de grosse Strass vo de Adria Richtig Oschte. D Apostelgschicht verzellt d Gründig vo de "
                   "Gmeind mit de Lydia und andere um 49/50 n. Chr. als erschte Schritt vom Paulus uf Europa "
-                  "([[ACT.16.9-ACT.16.40]]). D Gmeind hät en mee als eimal mit Gäld understützt ([[PHP.4.15-PHP.4.16]]). "
-                  "Aalass vom Brief isch e nöii Gaab gsii, wo de Epaphroditus em Paulus is Gfängnis bracht hät "
+                  "([[ACT.16.9-ACT.16.40]]). D Gmeind hät en meh als eimal mit Gäld understützt ([[PHP.4.15-PHP.4.16]]). "
+                  "Aalass vom Brief isch e nöii Gab gsii, wo de Epaphroditus em Paulus is Gfängnis bracht hät "
                   "([[PHP.2.25]]; [[PHP.4.18]]). Dass de Brief vom Paulus isch, isch unbestritte.",
           "uncertain": "Wänn und wo de Brief entstande isch, hangt vom Ort vo de Haft ab (lueg di zweit Notiz). Es paar "
-                       "halted de Brief wäge em abrupte Überggang i [[PHP.3.1-PHP.3.2]] für e Zämestellig us zwei oder drüü "
-                       "Brief, anderi für e Einheit. S Gründigsjaar isch us de Chronologie vo de Apostelgschicht "
+                       "halted de Brief wäge em abrupte Überggang i [[PHP.3.1-PHP.3.2]] für e Zämestellig us zwei oder drü "
+                       "Brief, anderi für e Einheit. S Gründigsjahr isch us de Chronologie vo de Apostelgschicht "
                        "erschlosse.",
           "terms": []}},
  {"id": "BG-PHP-BOOK-0002", "book": "PHP", "context": EC, "confidence": "possible",
@@ -335,8 +335,8 @@ NOTES = [
                   "[[2CO.11.23]]): Di vile Botegäng zwüsche em Paulus und Philippi ([[PHP.2.19-PHP.2.30]]) wäred vo det us "
                   "liechter möglich gsii, und Amtssitz vom Statthalter wie au kaiserlichi Sklave und Freiglassni hät s au i "
                   "de Provinze gää. E dritti Möglichkeit isch d Haft z Cäsarea um 57–59 n. Chr. ([[ACT.23.33-ACT.24.27]]).",
-          "uncertain": "Kei vo de drüü Aanaame isch gsicheret. E Haft z Ephesus wird nu erschlosse; d Apostelgschicht "
-                       "erwäänt si nöd. D Waal beiiflusst d Datierig und d Iiornig vom Brief under di andere Paulusbrief; di "
+          "uncertain": "Kei vo de drü Aanaame isch gsicheret. E Haft z Ephesus wird nu erschlosse; d Apostelgschicht "
+                       "erwähnt si nöd. D Wahl beiiflusst d Datierig und d Iiornig vom Brief under di andere Paulusbrief; di "
                        "gliich Frag stellt sich bim Philemonbrief und, falls vom Paulus, bim Kolosserbrief.",
           "terms": ["Prätorium: Amtssitz vo me Statthalter oder di kaiserlich Garde"]}},
 
