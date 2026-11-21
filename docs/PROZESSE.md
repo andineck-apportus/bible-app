@@ -350,7 +350,30 @@ Bilder aus Zeichen des Bildlexikons, mit Blindtest geprüft. Abgelöst durch den
 
 Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Regeln, bis kein Mensch mehr drüberschauen muss.
 
-### Fassung 2.4 – gültig ab 2026-11-21 (aktuell)
+### Fassung 2.5 – gültig ab 2026-11-21 (aktuell)
+
+*Änderung:* Strukturbilder mit gemalten Vignetten (Rückmeldung Herausgeber): die Anordnung zeichnet das Werkzeug aus Daten, Dinge, Orte und Figuren der Glieder malt das Bildmodell als kleine geprüfte Vignetten; Betonung als Fläche statt Rahmen, Layoutprüfung aller Kacheln auf Überlappungen.
+
+1. **Szenenplan** (Bearbeitende Instanz): Je Bildfeld: Malauftrag (Personen links/rechts nach Reihenfolge der Reden, Gefühle über Körper und Geste), wörtliche Rede aus dem Lesetext, Belege B/R/I und Feldregeln (was der Text verlangt oder verbietet).
+2. **Form je Feld** (Bearbeitende Instanz): Aus dem Inhalt wird für jedes Feld die Form gewählt und begründet: gemalte Szene, wo der Text erzählt oder ein Geschehen schildert; sonst ein gezeichnetes Strukturbild (Spalten, Kette, Raster, Kurve, Spiegel, Reihe, Ebenen, Ringe).
+3. **Zitate und Band** (Werkzeug (feste Prüfung)): Jede Blase steht wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen. Prüft: Zitat wörtlich, Band lesbar. Zurück zu «Szenenplan», wenn Abweichung.
+4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züridüütsch.
+5. **Vignetten malen** (Bildmodell): Für Glieder eines Strukturbilds mit Malauftrag malt das Bildmodell eine kleine Vignette (Ding, Ort, Figur des Textes; Gott nie als Figur) nach Stilreferenz, zwei Varianten.
+6. **Vignetten prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft jede Vignette mit festen Fragen: zeigt den Auftrag, keine Schrift, kein Heiligenschein und kein Licht- oder Strahleneffekt, keine Figur am Himmel, nichts Modernes, kleine Vignette auf weissem Papier. Verfehlte Pflichtfragen entscheidet die zweite Instanz. Prüft: alle Pflichtfragen erfüllt. Zurück zu «Vignetten malen», wenn keine Variante bestanden: neu malen, höchstens zwei Runden; danach bleibt das Glied ohne Vignette.
+7. **Malen** (Bildmodell): Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz und Figurenblatt.
+8. **Blind beschreiben** (Weitere Instanz (prüft)): Eine weitere Instanz sieht nur das Bild: Personen, Gegenstände, Handlung, vermutete Bibelstelle.
+9. **Regeln prüfen** (Weitere Instanz (prüft)): Dieselbe Instanz beantwortet jede Regel einzeln: allgemeine Regeln, Figurenregeln, Feldregeln; zählt verlangte Dinge. Verfehlte Pflichtregeln fragt eine zweite, genauere Instanz noch zweimal; die Mehrheit der drei Antworten gilt. Prüft: alle Pflichtregeln erfüllt.
+10. **Köpfe orten** (Weitere Instanz (prüft)): Auf einem eingeblendeten Koordinatengitter werden alle Köpfe geortet und die erwarteten Figuren zugeordnet.
+11. **Variante wählen** (Werkzeug (feste Prüfung)): Brauchbar ist eine Variante, die alle Pflichtregeln erfüllt, Platz für alle Blasen hat und die Reihenfolge der Sprecher einhält; gewählt wird die mit den meisten Punkten. Prüft: Pflichtregeln, Platz für Blasen, wer zuerst spricht, steht links. Zurück zu «Malen», wenn keine brauchbare Variante: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden.
+12. **Blasen setzen** (Werkzeug (feste Prüfung)): Blasen nur auf leerem Papier: eine Belegungskarte aus dem Bild selbst zeigt, wo gemalt ist (Figuren, Hände, gehaltene Dinge, Bauten); dazu die georteten Köpfe. Beste Anordnung aller Blasen über den Köpfen, mindestens 12 Punkte vom Bildrand, Schrift mindestens 19, keine Spitze läuft durch eine andere Blase. Umriss und Spitze als eine Linie, abgeschwächt und leicht von Hand gezogen; Gedanken als Wolke.
+13. **Schlussprüfung** (Weitere Instanz (prüft)): Eine weitere Instanz prüft die fertige Kachel: Spitze beim richtigen Sprecher, keine Blase über Gesicht, Geste, gehaltenem Gegenstand oder Haupthandlung, alle Worte lesbar, Moment getroffen (mindestens 1 von 2). Was nicht besteht, fragt die zweite Instanz noch zweimal; die Mehrheit gilt. Prüft: Sprecher richtig, nichts verdeckt, lesbar, Moment. Zurück zu «Blasen setzen», wenn zweiter Blasenversuch nur im oberen Band.
+14. **Prüfvermerk** (Werkzeug (feste Prüfung)): Ergebnis mit Fingerabdruck von Bild, Regeln, Szenenplan und Verfahren im Datensatz; Stufe «geprüft» nur, wenn alle Felder bestanden. Ändert sich etwas, gilt die Prüfung als veraltet.
+
+*Weiter, wenn:* Gemalte Felder: alle Pflichtregeln und die Schlussprüfung bestanden; Strukturfelder: feste Prüfungen und Layoutprüfung bestanden; Vignetten: alle Pflichtfragen bestanden.
+*Regeln:* scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d
+*Ausführlich:* docs/BILDSTIL.md, docs/VISUELLE-SPRACHE.md
+
+### Fassung 2.4 – gültig ab 2026-11-21
 
 *Änderung:* Form je Feld (Entscheid Herausgeber nach der Analyse Visuelle Sprache): gemalt wird nur, was erzählt wird; Strukturbilder zeichnet das Werkzeug aus Daten. Buchgerüst aller 66 Bücher, vorläufig von oben, wo Abschnittsanalysen fehlen.
 

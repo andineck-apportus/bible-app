@@ -51,7 +51,7 @@ def main():
         ours[k] = theirs[k]
     (ROOT / F).write_text(json.dumps(ours, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for f in git("diff", "--name-only", "--diff-filter=U").stdout.split():
-        if f.startswith(("data/illustrations/aquarell/img/", "data/illustrations/aquarell/figuren/")):
+        if f.startswith(("data/illustrations/aquarell/img/", "data/illustrations/aquarell/figuren/", "scripts/authoring/bilder_aquarell_daten/vignetten/")):
             git("checkout", "--theirs", "--", f)
         elif f.startswith("data/illustrations/aquarell/") or f in (F, STIL):
             git("checkout", "--ours", "--", f)

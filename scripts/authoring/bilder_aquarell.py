@@ -366,7 +366,8 @@ def kachel(i, sz_id, sz, aus, kw, x, y):
     teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{H + BAND}" viewBox="0 0 {W} {H + BAND}">']
     if sz.get("form") == "struktur":  # gezeichnet aus Daten (struktur_kachel.py), Form je Feld (Entscheid 2026-11-21)
         import struktur_kachel as SK
-        teile.append(SK.zeichne(sz["struktur"]))
+        import vignetten as VG   # gemalte Vignetten je Glied, sofern geprüft (Hybrid, Rückmeldung 2026-11-21)
+        teile.append(SK.zeichne(sz["struktur"], VG.gueltig(sz_id)))
     else:
         teile.append(f'<image href="{a["datei"]}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice"/>')
     for n, (sp, b) in enumerate(zip(sz["speech"], blasen_von(a))):
@@ -392,7 +393,7 @@ def texte_von(plan_d):
 BAND_MAX = 54   # Zeichen; länger wird die Schrift im Band kleiner als 16 px und auf dem Handy zu klein (Lauf 12, Lk 15)
 
 
-STRUKTUR_PROZESS = "PROC-BILD-AQUARELL@2.4"
+STRUKTUR_PROZESS = "PROC-BILD-AQUARELL@2.5"
 
 
 def struktur_eintraege(alle, aus, fig, allg):

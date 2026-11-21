@@ -113,11 +113,11 @@ def multipart(felder, dateien):
     return b"".join(teile), f"multipart/form-data; boundary={grenze}"
 
 
-def male(prompt, vorlagen, schluessel, n, groesse="1536x1024"):
+def male(prompt, vorlagen, schluessel, n, groesse="1536x1024", versuch=0, qualitaet="high"):
     letzter = None
     modelle = [os.environ["OPENAI_IMAGE_MODEL"]] if os.environ.get("OPENAI_IMAGE_MODEL") else MODELLE
     for m in modelle:
-        felder = {"model": m, "prompt": prompt, "size": groesse, "quality": "high", "n": str(n)}
+        felder = {"model": m, "prompt": prompt, "size": groesse, "quality": qualitaet, "n": str(n)}
         if vorlagen:
             daten, typ = multipart(felder, [("image[]", p) for p in vorlagen])
             req = urllib.request.Request(f"{API}/edits", data=daten, headers={"Authorization": f"Bearer {schluessel}", "Content-Type": typ})
@@ -135,7 +135,7 @@ def male(prompt, vorlagen, schluessel, n, groesse="1536x1024"):
             if e.code in (429, 500, 502, 503) and versuch < 4:  # Parallelläufe: Ratenlimit abwarten
                 import time
                 time.sleep(30 * (versuch + 1))
-                return male(prompt, vorlagen, schluessel, n, versuch + 1)
+                return male(prompt, vorlagen, schluessel, n, groesse, versuch + 1, qualitaet)
             raise RuntimeError(letzter) from None
     raise RuntimeError(f"Kein Bildmodell verfügbar. Zuletzt: {letzter}")
 
