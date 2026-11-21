@@ -50,7 +50,8 @@ FORMAT = """
                   "titel": {"de": "…", "gsw": "…"},
                   "kopf": {"a": {"de": "…", "gsw": "…"}, "b": {"de": "…", "gsw": "…"}},
                   "mitte": {"de": "…", "gsw": "…", "ref": "…"},
-                  "elemente": [{"de": "…", "gsw": "…", "ref": "GEN.1.3", "seite": "a|b", "richtung": "ab|auf", "betont": true, "gestrichen": true}]},
+                  "elemente": [{"de": "…", "gsw": "…", "ref": "GEN.1.3", "seite": "a|b", "richtung": "ab|auf", "betont": true, "gestrichen": true,
+                                "depicts": ["FIG-… aus dem Bildlexikon; FIG-GOTT = Strahlenkranz"]}]},
      "evidence": [{"s": "B", "ref": "…", "de": "…"}]}
   ]
 }
@@ -184,6 +185,14 @@ def pruefe(d, buch):
                 f.append(f"{sid}: {typ}: mitte nötig")
             if typ == "lager" and any(e.get("seite") not in ("n", "o", "s", "w", "innen") for e in sx.get("elemente") or []):
                 f.append(f"{sid}: lager: seite je Element n, o, s, w oder innen")
+            # Bilder aus dem Bildlexikon je Element (Rückmeldung Andi Neck 2026-11-21); FIG-GOTT wird gezeichnet (Strahlenkranz)
+            beschrieben = set((d.get("figuren") or {})) | set(lade(DATEN / "figuren.json")["figuren"]) | set(stil_renderings())
+            for e in el + ([sx["mitte"]] if sx.get("mitte") else []):
+                for x in e.get("depicts") or []:
+                    if x not in lex:
+                        f.append(f"{sid}: {x} nicht im Bildlexikon (in neue_figuren beschreiben)")
+                    elif x != "FIG-GOTT" and x not in beschrieben:
+                        f.append(f"{sid}: {x} ohne Malbeschreibung in figuren")
         else:
             f.append(f"{sid}: form muss szene oder struktur sein")
     for fid, nf in (d.get("neue_figuren") or {}).items():
@@ -195,6 +204,11 @@ def pruefe(d, buch):
             if not nf.get(k):
                 f.append(f"neue_figuren {fid}: {k} fehlt")
     return f
+
+
+def stil_renderings():
+    p = ROOT / "data/illustrations/styles/ILLSTYLE-AQUARELL.json"
+    return {k for k, v in (json.loads(p.read_text(encoding="utf-8")).get("renderings") or {}).items() if v.get("description_en")} if p.exists() else set()
 
 
 def eigener_brief(brief_p):

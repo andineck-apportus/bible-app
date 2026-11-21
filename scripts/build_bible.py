@@ -317,7 +317,7 @@ def _ill_svg(fp):
         f = fp.parent / m.group(1)
         typ = {"webp": "image/webp", "jpg": "image/jpeg", "png": "image/png"}[f.suffix[1:]]
         return f'href="data:{typ};base64,{base64.b64encode(f.read_bytes()).decode()}"'
-    return re.sub(r'href="(img/[^"]+)"', _emb, svg)
+    return re.sub(r'href="((?:img|figuren)/[^"]+)"', _emb, svg)   # figuren/: Bilder des Bildlexikons in Strukturbildern
 
 
 for rid, r in ill_recs.items():

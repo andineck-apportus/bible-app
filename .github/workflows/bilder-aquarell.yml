@@ -15,7 +15,7 @@ on:
       schritt:
         description: "auto-neu (malen+prüfen+ablegen), auto-pruefen (abgelegte Bilder prüfen), auto-figuren (Porträts Bildlexikon), felder, figurenblatt, figuren"
         type: choice
-        options: [auto-neu, auto-pruefen, auto-figuren, auto-vignetten, auto-kalibrieren, auto-stilprobe, pilot-visuell, felder, figurenblatt, figuren]
+        options: [auto-neu, auto-pruefen, auto-figuren, auto-kalibrieren, auto-stilprobe, pilot-visuell, felder, figurenblatt, figuren]
         default: auto-neu
       szenen:
         description: "Szenen (z. B. JHN-002-K1,JHN-002-T1) bzw. bei (auto-)figuren Lexikon-Einträge (z. B. FIG-JESUS,FIG-OBJ-BOOT) oder «alle»"
@@ -100,11 +100,7 @@ jobs:
           extra=""
           [ "$ERZWINGEN" = "true" ] && extra="--erzwingen"
           rc=0
-          if [ "$SCHRITT" = "auto-vignetten" ]; then   # Vignetten der Strukturbilder (scripts/authoring/vignetten.py)
-            python3 scripts/authoring/vignetten.py lauf --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$([ "$RUNDEN" -gt 2 ] && echo 2 || echo "$RUNDEN")" --hinweis "$HINWEIS" $extra || rc=$?
-          else
-            python3 scripts/authoring/bilder_aquarell_lauf.py "${SCHRITT#auto-}" --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$RUNDEN" --hinweis "$HINWEIS" $extra || rc=$?
-          fi
+          python3 scripts/authoring/bilder_aquarell_lauf.py "${SCHRITT#auto-}" --szenen "$SZENEN" --varianten "$VARIANTEN" --runden "$RUNDEN" --hinweis "$HINWEIS" $extra || rc=$?
           # Bericht sofort sichern: nach der Übernahme in main fehlte ausgabe/ (Läufe 30 und 33 ohne Bericht)
           if [ -d ausgabe/aquarell ]; then cp -r ausgabe/aquarell "$RUNNER_TEMP/aquarell"; fi
           exit $rc

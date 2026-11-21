@@ -85,7 +85,29 @@ def pfeil(x1, y1, x2, y2, farbe=MUTED):
 DEFS = ('<defs><marker id="sk-pf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">'
         '<path d="M0 0L10 5L0 10z" fill="#7A7C73"/></marker>'
         '<radialGradient id="sk-wash" cx="30%" cy="25%" r="80%"><stop offset="0" stop-color="#EFE6D6" stop-opacity=".9"/>'
-        '<stop offset="1" stop-color="#FBF8F1" stop-opacity="0"/></radialGradient></defs>')
+        '<stop offset="1" stop-color="#FBF8F1" stop-opacity="0"/></radialGradient>'
+        '<radialGradient id="sk-glorie" r="50%"><stop offset=".3" stop-color="#E9B954" stop-opacity=".95"/><stop offset="1" stop-color="#E9B954" stop-opacity="0"/></radialGradient>'
+        '<filter id="sk-aq" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".06" numOctaves="2" seed="7"/>'
+        '<feDisplacementMap in="SourceGraphic" scale="3.5"/><feGaussianBlur stdDeviation=".35"/></filter></defs>')
+
+
+def gott_zeichen(cx, cy, s):
+    """Gott nach dem Bildlexikon (FIG-GOTT, Entscheid Andi Neck 2026-10-14): goldener Strahlenkranz um eine helle Scheibe mit dem
+    Gottesnamen יהוה; nie als Mensch. Gezeichnet (die Buchstaben müssen stimmen), mit Aquarellrand."""
+    import math
+    r = s / 2
+    o = [f'<g filter="url(#sk-aq)"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="url(#sk-glorie)" opacity=".55"/>']
+    for k in range(24):
+        a = k * math.pi / 12
+        lang = r * (0.98 if k % 2 == 0 else 0.78)
+        b = 0.075
+        p = [(cx + r * 0.36 * math.cos(a - b), cy + r * 0.36 * math.sin(a - b)), (cx + lang * math.cos(a), cy + lang * math.sin(a)),
+             (cx + r * 0.36 * math.cos(a + b), cy + r * 0.36 * math.sin(a + b))]
+        o.append(f'<path d="M{p[0][0]:.1f} {p[0][1]:.1f}L{p[1][0]:.1f} {p[1][1]:.1f}L{p[2][0]:.1f} {p[2][1]:.1f}z" fill="#D9A441" opacity=".75"/>')
+    o.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r * 0.4:.1f}" fill="#FFFDF6" stroke="#D9A441" stroke-width="1.2"/></g>')
+    o.append(f'<text x="{cx:.1f}" y="{cy + r * 0.13:.1f}" font-family="\'Ezra SIL\', \'SBL Hebrew\', \'Frank Ruehl CLM\', \'Taamey Frank CLM\', David, \'Times New Roman\', serif" '
+             f'font-size="{r * 0.36:.1f}" text-anchor="middle" fill="#8A5A12" direction="rtl" font-weight="600">יהוה</text>')
+    return "".join(o)
 
 
 def titel(sx):
@@ -102,6 +124,8 @@ _V = {}   # Vignetten der Kachel, die gerade gezeichnet wird: Schlüssel («1»,
 def vign(k, x, y, s):
     """Gemalte Vignette (Hybrid): Papierweiss verschwindet durch Multiplizieren auf dem Kachelpapier."""
     h = _V.get(str(k))
+    if h == "#gott":
+        return gott_zeichen(x + s / 2, y + s / 2, s)
     return (f'<image href="{h}" x="{x:.1f}" y="{y:.1f}" width="{s:.1f}" height="{s:.1f}" preserveAspectRatio="xMidYMid meet" '
             f'style="mix-blend-mode:multiply"/>') if h else ""
 
@@ -145,12 +169,12 @@ def _spalten(sx, el, y0):
             vs = min(h - 8, 60) if _V.get(str(k)) else 0
             if vs:
                 o.append(vign(k, x + 6, y + (h - vs) / 2, vs))
-            fs, zl = passend(e, w - 22 - (vs + 4 if vs else 0), h - (24 if mit_ref else 8), FS if h > 40 else 15)
-            svg, z = zweisprachig(x + 12 + (vs + 4 if vs else 0), y + (h - (14 if mit_ref else 0)) / 2, e, zl, fs=fs,
+            fs, zl = passend(e, w - 22 - (vs + 4 if vs else 0) - (44 if e.get("ref") else 0), h - 8, FS if h > 40 else 15)   # Stelle rechts daneben
+            svg, z = zweisprachig(x + 12 + (vs + 4 if vs else 0), y + h / 2, e, zl, fs=fs,
                                   fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"), weight=600 if e.get("betont") else 400)
             o.append(svg)
-            if e.get("ref") and h > 44:
-                o.append(ref_text(x + w - 10, y + h - 9, e["ref"], "end"))
+            if e.get("ref"):
+                o.append(ref_text(x + w - 8, y + h / 2 + 4, e["ref"], "end"))
     return "".join(o)
 
 
@@ -276,7 +300,10 @@ def _spiegel(sx, el, y0):
 
 
 def _reihe(sx, el, y0):
-    """Nummerierte Stationen senkrecht (Ablauf von oben nach unten); waagrecht überlappten die Beschriftungen."""
+    """Nummerierte Stationen senkrecht (Ablauf von oben nach unten); waagrecht überlappten die Beschriftungen. Mit Bildern aus dem
+    Bildlexikon als Karten (Bild gross, Beschriftung darunter), gelesen von links nach rechts, Zeile um Zeile."""
+    if any(_V.get(str(k)) for k in range(1, len(el) + 1)):
+        return _karten(el, y0)
     o = []
     n = len(el)
     schritt = min(64, (H - y0 - 16) / n)
@@ -297,6 +324,32 @@ def _reihe(sx, el, y0):
         o.append(svg)
         if e.get("ref"):
             o.append(ref_text(W - 22, y + 4, e["ref"], "end"))
+    return "".join(o)
+
+
+def _karten(el, y0):
+    o = []
+    n = len(el)
+    cols = n if n <= 4 else (n + 1) // 2
+    rows = (n + cols - 1) // cols
+    gap = 8
+    w = (W - 32 - gap * (cols - 1)) / cols
+    h = (H - y0 - 10 - gap * (rows - 1)) / rows
+    for i, e in enumerate(el):
+        r, c = divmod(i, cols)
+        if r == rows - 1 and n % cols:   # letzte Zeile mittig
+            c += (cols - n % cols) / 2
+        x, y = 16 + c * (w + gap), y0 + r * (h + gap)
+        o.append(box(x, y, w, h, "n", e.get("betont")))
+        o.append(f'<circle cx="{x + 13}" cy="{y + 13}" r="9.5" fill="{PAPER}" stroke="{FARBE["n"][1]}" stroke-width="1.2"/>'
+                 f'<text x="{x + 13}" y="{y + 17}" font-family="{SANS}" font-size="11.5" text-anchor="middle" fill="{INK}">{i + 1}</text>')
+        text_h = 44
+        vs = min(w - 14, h - text_h - 16)
+        o.append(vign(i + 1, x + (w - vs) / 2, y + 6, vs))
+        oben, unten = y + 6 + vs + 2, y + h - 15
+        fs, zl = passend(e, w - 12, unten - oben, 14.5)
+        svg, _ = zweisprachig(x + w / 2, (oben + unten) / 2, e, zl, fs=fs, anchor="middle", weight=600 if e.get("betont") else 400)
+        o.append(svg + ref_text(x + w - 6, y + h - 5, e.get("ref"), "end"))
     return "".join(o)
 
 
@@ -328,43 +381,51 @@ def _ebenen(sx, el, y0):
 
 
 def _ringe(sx, el, y0):
+    """Rahmen und Mitte als ineinanderliegende Rahmen (Rückmeldung Andi Neck 2026-11-21: eingerückte Kästen wirkten nicht wie
+    Ringe). Jeder Rahmen trägt oben sein erstes Glied (A) und unten das entsprechende letzte (A′); innen die Mitte."""
     o = []
     n = len(el)
     paare = [(el[i], el[n - 1 - i]) for i in range(n // 2)]
     rest = el[n // 2] if n % 2 else None
-    stufen = len(paare)
-    h = min(58, (H - y0 - 70) / max(1, stufen) - 8)
-    marken = "ABCDEF"
-    for i, (l, r) in enumerate(paare):
-        y = y0 + i * (h + 8)
-        einzug = i * 34
-        for e, x, w, anchor, m in ((l, 20 + einzug, 250 - einzug, "start", marken[i]), (r, W - 20 - (250 - einzug), 250 - einzug, "start", marken[i] + "′")):
-            o.append(box(x, y, w, h, "a" if x < W / 2 else "b", e.get("betont")))
-            o.append(f'<text x="{x + 10}" y="{y + 18}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{m}</text>')
-            fs, zl = passend(e, w - 40, h - (20 if e.get("ref") else 8), 15.5)
-            svg, _ = zweisprachig(x + 30, y + (h - (12 if e.get("ref") else 0)) / 2, e, zl, fs=fs)
-            o.append(svg + ref_text(x + w - 8, y + h - 6, e.get("ref"), "end"))
     mitte = sx.get("mitte") or rest
-    y_frei = y0 + stufen * (h + 8) + 4
-    if rest is not None and sx.get("mitte"):   # ungerade Zahl mit eigener Mitte: innerstes Glied nicht verlieren (Num 2, Dtn 6, Jud, Klgl)
-        hr = min(52, (H - y_frei - 12) / 2 - 6)
-        x, w = W / 2 - 170, 340
-        o.append(box(x, y_frei, w, hr, "n", rest.get("betont")))
-        o.append(f'<text x="{x + 10}" y="{y_frei + 18}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{marken[stufen]}</text>')
-        fs, zl = passend(rest, w - 60, hr - (18 if rest.get("ref") else 8), 15.5)
-        svg, _ = zweisprachig(W / 2, y_frei + (hr - (12 if rest.get("ref") else 0)) / 2, rest, zl, fs=fs, anchor="middle")
-        o.append(svg + ref_text(x + w - 8, y_frei + hr - 6, rest.get("ref"), "end"))
-        y_frei += hr + 8
+    if rest is not None and sx.get("mitte"):   # ungerade Zahl mit eigener Mitte: innerstes Glied als eigener Rahmen ohne Gegenstück
+        paare.append((rest, None))
+    marken = "ABCDEF"
+    dx, rand = 26, 14
+    fs = 14.5
+    def band_h(i, e):
+        if not e:
+            return 10
+        w = W - 2 * (rand + i * dx) - 2 * 16 - 64
+        return max(len(umbruch(e.get(lg) or e.get("de") or "", int(w / (fs * 0.56)))) for lg in ("de", "gsw")) * fs * 1.24 + 14
+    oben = [band_h(i, l) for i, (l, r) in enumerate(paare)]
+    unten = [band_h(i, r) for i, (l, r) in enumerate(paare)]
+    y_top, y_bot = y0, H - 8
+    farben = ["#F3EADF", "#EEF1EA", "#F6EEE3", "#EDF0EE"]
+    for i, (l, r) in enumerate(paare):
+        x, w = rand + i * dx, W - 2 * (rand + i * dx)
+        o.append(f'<rect x="{x}" y="{y_top:.1f}" width="{w}" height="{y_bot - y_top:.1f}" rx="{22 - i * 3}" fill="{farben[i % 4]}" '
+                 f'stroke="{FARBE["a"][1] if i % 2 == 0 else FARBE["b"][1]}" stroke-opacity=".45" stroke-width="1.2"/>')
+        for e, y_mitte, m in ((l, y_top + oben[i] / 2, marken[i]), (r, y_bot - unten[i] / 2, marken[i] + "′")):
+            if not e:
+                continue
+            o.append(f'<text x="{x + 12}" y="{y_mitte + 4.5:.1f}" font-family="{SERIF}" font-size="13" fill="{FARBE["akzent"]}">{m}</text>')
+            zl = int((w - 2 * 16 - 64) / (fs * 0.56))
+            svg, _ = zweisprachig(x + 32, y_mitte, e, zl, fs=fs, weight=600 if e.get("betont") else 400)
+            o.append(svg + ref_text(x + w - 12, y_mitte + 4, e.get("ref"), "end"))
+        y_top += oben[i]
+        y_bot -= unten[i]
     if mitte:
-        hm = min(96, H - y_frei - 12)
-        y = y_frei + (H - y_frei - 12 - hm) / 2
-        o.append(f'<rect x="{W / 2 - 170}" y="{y}" width="340" height="{hm}" rx="10" fill="{BETONT}" stroke="{FARBE["a"][1]}" stroke-opacity=".55"/>')
+        i = len(paare)
+        x, w = rand + i * dx, W - 2 * (rand + i * dx)
+        hm = y_bot - y_top
+        o.append(f'<rect x="{x}" y="{y_top:.1f}" width="{w}" height="{hm:.1f}" rx="12" fill="{BETONT}" stroke="{FARBE["a"][1]}" stroke-opacity=".55"/>')
         mvs = min(hm - 12, 70) if _V.get("m") else 0
         if mvs:
-            o.append(vign("m", W / 2 - 165, y + (hm - mvs) / 2, mvs))
-        fs, zl = passend(mitte, 300 - (mvs + 6 if mvs else 0), hm - (22 if mitte.get("ref") else 8), 17)
-        svg, _ = zweisprachig(W / 2 + (mvs / 2 if mvs else 0), y + hm / 2 - (6 if mitte.get("ref") else 0), mitte, zl, fs=fs, anchor="middle", weight=600)
-        o.append(svg + ref_text(W / 2, y + hm - 8, mitte.get("ref"), "middle"))
+            o.append(vign("m", x + 10, y_top + (hm - mvs) / 2, mvs))
+        fs_m, zl = passend(mitte, w - 30 - (mvs + 8 if mvs else 0), hm - (22 if mitte.get("ref") else 8), 17)
+        svg, _ = zweisprachig(x + w / 2 + (mvs / 2 if mvs else 0), y_top + hm / 2 - (6 if mitte.get("ref") else 0), mitte, zl, fs=fs_m, anchor="middle", weight=600)
+        o.append(svg + ref_text(x + w / 2, y_top + hm - 8, mitte.get("ref"), "middle"))
     return "".join(o)
 
 

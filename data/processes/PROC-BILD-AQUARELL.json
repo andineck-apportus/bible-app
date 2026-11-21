@@ -743,7 +743,7 @@
     {
       "version": "2.5",
       "valid_from": "2026-11-21",
-      "change_de": "Strukturbilder mit gemalten Vignetten (Rückmeldung Herausgeber): die Anordnung zeichnet das Werkzeug aus Daten, Dinge, Orte und Figuren der Glieder malt das Bildmodell als kleine geprüfte Vignetten; Betonung als Fläche statt Rahmen, Layoutprüfung aller Kacheln auf Überlappungen.",
+      "change_de": "Strukturbilder mit Bildern aus dem Bildlexikon (Rückmeldung Herausgeber): die Anordnung zeichnet das Werkzeug aus Daten, Personen, Orte, Gegenstände und Zeichen der Glieder sind die gemalten, geprüften Einzelbilder des Bildlexikons, Gott der gezeichnete Strahlenkranz; Rahmen und Mitte als ineinanderliegende Rahmen; Betonung als Fläche statt Rahmen, Layoutprüfung aller Kacheln auf Überlappungen.",
       "steps": [
         {
           "id": "w1",
@@ -786,22 +786,9 @@
         },
         {
           "id": "w2c",
-          "role": "modell",
-          "title_de": "Vignetten malen",
-          "do_de": "Für Glieder eines Strukturbilds mit Malauftrag malt das Bildmodell eine kleine Vignette (Ding, Ort, Figur des Textes; Gott nie als Figur) nach Stilreferenz, zwei Varianten."
-        },
-        {
-          "id": "w2d",
-          "role": "pruefung",
-          "title_de": "Vignetten prüfen",
-          "do_de": "Eine weitere Instanz prüft jede Vignette mit festen Fragen: zeigt den Auftrag, keine Schrift, kein Heiligenschein und kein Licht- oder Strahleneffekt, keine Figur am Himmel, nichts Modernes, kleine Vignette auf weissem Papier. Verfehlte Pflichtfragen entscheidet die zweite Instanz.",
-          "checks_de": [
-            "alle Pflichtfragen erfüllt"
-          ],
-          "back": {
-            "to": "w2c",
-            "when_de": "keine Variante bestanden: neu malen, höchstens zwei Runden; danach bleibt das Glied ohne Vignette"
-          }
+          "role": "werkzeug",
+          "title_de": "Bilder aus dem Bildlexikon",
+          "do_de": "Glieder eines Strukturbilds nennen Einträge des Bildlexikons (Person, Gruppe, Ort, Gegenstand, Zeichen). Gezeigt wird das gemalte und geprüfte Einzelbild des Eintrags (Schritte p1–p5), dasselbe wie im Bildlexikon; Gott als goldener Strahlenkranz mit dem Gottesnamen, gezeichnet, nie als Mensch. Fehlt das Bild noch, bleibt das Glied ohne Bild."
         },
         {
           "id": "w3",
@@ -875,7 +862,7 @@
           "result_de": "Prüfstufe im Datensatz"
         }
       ],
-      "gate_de": "Gemalte Felder: alle Pflichtregeln und die Schlussprüfung bestanden; Strukturfelder: feste Prüfungen und Layoutprüfung bestanden; Vignetten: alle Pflichtfragen bestanden.",
+      "gate_de": "Gemalte Felder: alle Pflichtregeln und die Schlussprüfung bestanden; Strukturfelder: feste Prüfungen und Layoutprüfung bestanden; Bilder des Bildlexikons: alle Pflichtregeln bestanden.",
       "rules": [
         "scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d"
       ],
