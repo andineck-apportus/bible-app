@@ -136,7 +136,7 @@ GSW = {
  "MRK.1.3": "[E Stimm]{1} [vo eim, wo]{2} [i]{3} [de Wüeschti]{4,5} [rüeft]{2}: ‹[Mached]{6} [de Wäg]{7,8} [vom Herr]{9} [parat]{6}, [mached]{11} [sini]{14} [Pfäd]{12,13} [grad]{10}!›»",
  "MRK.1.4": "[De Johannes]{2} [de Täufer]{3,4} [isch]{1} [i]{5} [de Wüeschti]{6,7} [uftrete]{1} [und hät]{8} [e Taufi]{9} [vo de Umkehr]{10} [verchündet]{8}, [damit]{11} [d Sünde]{13} [vergää wärded]{12}.",
  "MRK.1.5": "Und{1} [s ganz]{5,6} [Land]{8} [Judäa]{7} und{9} [alli]{12} [Lüüt vo Jerusalem]{10,11} [sind]{2} [zu]{3} [ihm]{4} [usegange]{2}, und{13} [si händ sich]{14} [vo]{15} [ihm]{16} [im]{17,18} [Jordan]{19} [la taufe]{14} [und händ]{21} debii [iri]{24} [Sünde]{22,23} [bekännt]{21}. ~20(ποταμῷ «Fluss»; i de Mundart seit me eifach «im Jordan»)",
- "MRK.1.6": "Und{1} [de Johannes]{3,4} [hät]{2,5} [Chleider us Kamelhaar]{6,7} [aaghaa]{2,5} und{8} [en Gurt]{9} [us Läder]{10} [um]{11} [d Hüfte]{12,13}, und{15} [er hät]{16} [Heuschrecke]{17} und{18} [wilde]{20} [Hung]{19} [gässe]{16}. ~14(αὐτοῦ «sini»; mit em Artikel «d Hüfte» widergää)",
+ "MRK.1.6": "Und{1} [de Johannes]{3,4} [hät]{2,5} [Chleider us Kamelhaar]{6,7} [aaghaa]{2,5} und{8} [en Gurt]{9} [us Läder]{10} [um]{11} [d Hüfte]{12,13}, und{15} [er hät]{16} [Höischrecke]{17} und{18} [wilde]{20} [Hung]{19} [gässe]{16}. ~14(αὐτοῦ «sini»; mit em Artikel «d Hüfte» widergää)",
  "MRK.1.7": "Und{1} [er hät verchündet]{2}: «[Nach]{8} [mir]{9} [chunnt]{4} [dä]{5}, [wo stärcher isch]{6} [als ich]{7}. [Ich bi]{12} [nöd]{11} [wärt]{13}, [mich z bücke]{14} und [ihm]{10} [d Rieme]{16,17} [vo de]{20} [Sandale]{18,19} [ufzmache]{15}. ~3(λέγων «sägend» leitet d direkt Red ii)",
  "MRK.1.8": "[Ich]{1} [han]{2} [öi]{3} [mit Wasser]{4} [tauft]{2}, [er]{5} [aber]{6} [wird]{7} [öi]{8} [mit]{9} [heiligem]{11} [Geischt]{10} [taufe]{7}.»",
  "MRK.1.9": "Und{1} [i]{3} [dene]{4} [Täg]{5,6} [isch]{7} [de Jesus]{8} [vo]{9} [Nazaret]{10} [z Galiläa]{11,12} [choo]{7} und{13} [hät sich]{14} [vom Johannes]{18,19} [im]{15,16} [Jordan]{17} [la taufe]{14}. ~2(ἐγένετο «es isch gscheh» leitet d Erzählig ii; nöd eigens widergää)",
@@ -168,13 +168,13 @@ GSW = {
  "MRK.1.35": "Und{1} [am Morge früe]{2}, [no tüüf]{4} [i de Nacht]{3}, [isch er ufgstande]{5} [und usegange]{6} und{7} [isch]{8} [an]{9} [en einsame]{10} [Ort]{11} [gange]{8}, [und dört]{12} [hät er bättet]{13}.",
  "MRK.1.36": "Und{1} [de Simon]{4} und{5} [die, wo]{6} [bi]{7} [ihm]{8} [gsii sind]{6}, [sind]{2} [ihm]{3} [nachegange]{2}.",
  "MRK.1.37": "Und{1} [si händ]{2} [en]{3} [gfunde]{2} und{4} [säged]{5} [zu ihm]{6}: «[Alli]{8} [sueched]{9} [dich]{10}!» ~7(ὅτι leitet d direkt Red ii)",
- "MRK.1.38": "Und{1} [er seit]{2} [zu ine]{3}: «[Gömmer]{4} [anderswohii]{5}, [i]{6} [d]{7} [Städtli]{9} [rundume]{8}, [damit]{10} [ich]{13} [au]{11} [dört]{12} d Botschaft [verchünde]{13}; [dänn]{16} [defür]{14,15} [bin ich usegange]{17}.»",
+ "MRK.1.38": "Und{1} [er seit]{2} [zu ine]{3}: «[Gömmer]{4} [anderswohii]{5}, [i]{6} [d]{7} [Städtli]{9} [rundume]{8}, [damit]{10} [ich]{13} [au]{11} [dört]{12} d Botschaft [verchünde]{13}; [dänn]{16} [defür]{14,15} [bi ich usegange]{17}.»",
  "MRK.1.39": "Und{1} [er isch]{2} [dur]{8} [ganz]{9,10} [Galiläa]{11} [zoge]{2}, [hät]{3} [i]{4} [ire]{7} [Synagoge]{5,6} [verchündet]{3} und{12} [d Dämone]{13,14} [ustribe]{15}.",
- "MRK.1.40": "Und{1} [es chunnt]{2} [en Ussätzige]{5} [zu]{3} [ihm]{4}, [bittet]{6} [en]{7}, und{8} [er gaat uf d Chnüü]{9} [und seit]{10} [zu ihm]{11}: «[Wänn]{13} [du wottsch]{14}, [chasch]{15} [mich]{16} [rein mache]{17}.» ~12(ὅτι leitet d direkt Red ii)",
+ "MRK.1.40": "Und{1} [es chunnt]{2} [en Ussätzige]{5} [zu]{3} [ihm]{4}, [bittet]{6} [en]{7}, und{8} [er gaat uf d Chnü]{9} [und seit]{10} [zu ihm]{11}: «[Wänn]{13} [du wottsch]{14}, [chasch]{15} [mich]{16} [rein mache]{17}.» ~12(ὅτι leitet d direkt Red ii)",
  "MRK.1.41": "Und{1} [voll Zorn]{2} [hät er]{3} [sini]{6} [Hand]{4,5} [usgstreckt]{3}, [hät en]{7} [aagrüert]{7} und{8} [seit]{9} [zu ihm]{10}: «[Ich wott]{11}. [Wird rein]{12}!»",
  "MRK.1.42": "Und{1} [grad]{2} [isch]{3} [de Ussatz]{6,7} [vo]{4} [ihm]{5} [gwiche]{3}, und{8} [er isch rein worde]{9}.",
  "MRK.1.43": "Und{1} [er hät]{2} [en]{3} [hert aagfahre]{2} und [hät]{5} [en]{6} [grad]{4} [furtgschickt]{5}.",
- "MRK.1.44": "Und{1} [er seit]{2} [zu ihm]{3}: «[Pass uf]{4}, [säg]{7} [niemerem]{5} [nüüt]{6}! [Sondern]{8} [gang]{9}, [zeig]{11} [dich]{10} [em Prieschter]{12,13} und{14} [bring]{15} [für]{16} [dini]{19} [Reinigig]{17,18}, [was]{20} [de Mose]{22} [vorgschribe hät]{21}, [als]{23} [Zügnis]{24} [für si]{25}.»",
+ "MRK.1.44": "Und{1} [er seit]{2} [zu ihm]{3}: «[Pass uuf]{4}, [säg]{7} [niemerem]{5} [nüüt]{6}! [Sondern]{8} [gang]{9}, [zeig]{11} [dich]{10} [em Prieschter]{12,13} und{14} [bring]{15} [für]{16} [dini]{19} [Reinigig]{17,18}, [was]{20} [de Mose]{22} [vorgschribe hät]{21}, [als]{23} [Zügnis]{24} [für si]{25}.»",
  "MRK.1.45": "[Er]{1} [aber]{2} [isch gange]{3} [und hät aagfange]{4}, [vil]{6} [z verzelle]{5} und{7} [d Sach]{9,10} [überall bekannt z mache]{8}, [so dass]{11} [de Jesus]{13} [nüme]{12} [offe]{15} [in]{16} [e Stadt]{17} [hät chöne]{14} [gaa]{18}; [sondern]{19} [er isch]{24} [dusse]{20} [a]{21} [einsame]{22} [Ort]{23} [gsii]{24}. Und{25} d Lüüt [sind]{26} [vo überall här]{29} [zu]{27} [ihm]{28} [choo]{26}.",
  # ------------------------------------------------------------ Kapitel 2
  "MRK.2.1": "Und{1} [won er]{2} [nach es paar]{6} [Täg]{7} [wider]{3} [uf]{4} [Kafarnaum]{5} [choo isch]{2}, [hät me ghört]{8}, [dass]{9} [er]{12} [dihei]{10,11} [isch]{12}.",
@@ -185,9 +185,9 @@ GSW = {
  "MRK.2.6": "[Es sind]{1} [aber]{2} [es paar]{3} [vo de Schriftglehrte]{4,5} [dört]{6} [gsässe]{7} und{8} [händ]{9} [bi]{10} [sich]{11-13} [dänkt]{9}:",
  "MRK.2.7": "«[Wieso]{1} [redt]{4} [dä]{2} [eso]{3}? [Er läschteret Gott]{5}! [Wär]{6} [cha]{7} [Sünde]{9} [vergää]{8} [usser]{10,11} [Gott]{13,14} [elei]{12}?»",
  "MRK.2.8": "Und{1} [grad]{2} [hät]{3} [de Jesus]{4,5} [i sim Geischt]{6-8} [gmerkt]{3}, [dass]{9} [si]{11} [bi]{12} [sich]{13} [eso]{10} [dänked]{11}, und [seit]{14} [zu ine]{15}: «[Wieso]{16} [dänked er]{18} [das]{17} [i]{19} [öine]{22} [Herze]{20,21}?",
- "MRK.2.9": "[Was]{1} [isch]{2} [eifacher]{3}: [zum Glähmte]{5,6} [z säge]{4}: ‹[Dini]{8} [Sünde]{9,10} [sind vergää]{7}›, [oder]{11} [z säge]{12}: ‹[Stand uf]{13}, und{14} [nimm]{15} [dini]{18} [Matte]{16,17} und{19} [lauf]{20}›?",
+ "MRK.2.9": "[Was]{1} [isch]{2} [eifacher]{3}: [zum Glähmte]{5,6} [z säge]{4}: ‹[Dini]{8} [Sünde]{9,10} [sind vergää]{7}›, [oder]{11} [z säge]{12}: ‹[Stand uuf]{13}, und{14} [nimm]{15} [dini]{18} [Matte]{16,17} und{19} [lauf]{20}›?",
  "MRK.2.10": "[Ir söled]{3} [aber]{2} [wüsse]{3}, [dass]{4} [de Mänschesohn]{7-10} [d Vollmacht]{5} [hät]{6}, [uf]{11} [de Erde]{12,13} [Sünde]{15} [z vergää]{14}.» [Und er seit]{16} [zum Glähmte]{17,18}: ~1(ἵνα «damit»; als «Ir söled … wüsse» widergää)",
- "MRK.2.11": "«[Dir]{1} [säg ich]{2}: [Stand uf]{3}, [nimm]{4} [dini]{7} [Matte]{5,6} und{8} [gang]{9} [hei]{10-13}!»",
+ "MRK.2.11": "«[Dir]{1} [säge ich]{2}: [Stand uuf]{3}, [nimm]{4} [dini]{7} [Matte]{5,6} und{8} [gang]{9} [hei]{10-13}!»",
  "MRK.2.12": "Und{1} [er isch ufgstande]{2}, und{3} [grad]{4} [hät er]{5} [d Matte]{6,7} [gnoo]{5} [und isch]{8} [vor]{9} [allne]{10} [usegange]{8}, [so dass]{11} [alli]{13} [usser sich gsii sind]{12} und{14} [Gott]{16,17} [globt händ]{15}: «[So öppis]{20} [händ mir]{22} [no nie]{21} [gseh]{22}!» ~18(λέγοντας «sägend» leitet d direkt Red ii) ~19(ὅτι leitet d direkt Red ii)",
  "MRK.2.13": "Und{1} [er isch]{2} [wider]{3} [use]{2} [an]{4} [See]{5,6} [gange]{2}; und{7} [di ganz]{8,9} [Mängi]{10} [isch]{11} [zu]{12} [ihm]{13} [choo]{11}, und{14} [er hät]{15} [si]{16} [glehrt]{15}.",
  "MRK.2.14": "Und{1} [im Verbiigaa]{2} [hät er]{3} [de Levi]{4}, [de Sohn]{5,6} [vom Alphäus]{7}, [a]{9} [de Zollstell]{10,11} [gseh]{3} [sitze]{8}, und{12} [seit]{13} [zu ihm]{14}: «[Chumm]{15} [mir]{16} [nache]{15}!» Und{17} [er isch ufgstande]{18} [und isch]{19} [ihm]{20} [nachegange]{19}.",
@@ -208,9 +208,9 @@ GSW = {
  # ------------------------------------------------------------ Kapitel 3
  "MRK.3.1": "Und{1} [er isch]{2} [wider]{3} [in]{4} [e Synagoge]{5} [gange]{2}, und{6} [dört]{8} [isch]{7} [en Mänsch]{9} [gsii]{7}, [wo]{11} [e verdorreti]{10} [Hand]{12,13} [ghaa hät]{11}.",
  "MRK.3.2": "Und{1} [si händ]{2} [en]{3} [gnau beobachtet]{2}, [öb]{4} [er]{7} [en]{8} [am Sabbat]{5,6} [heilt]{7}, [damit]{9} [si]{10} [en]{11} [chönnted aachlage]{10}.",
- "MRK.3.3": "Und{1} [er seit]{2} [zum Mänsch]{3,4}, [wo]{5} [di]{6} [verdorret]{9} [Hand]{7} [hät]{8}: «[Stand uf]{10} [und chumm i]{11} [d Mitti]{12,13}!»",
+ "MRK.3.3": "Und{1} [er seit]{2} [zum Mänsch]{3,4}, [wo]{5} [di]{6} [verdorret]{9} [Hand]{7} [hät]{8}: «[Stand uuf]{10} [und chumm i]{11} [d Mitti]{12,13}!»",
  "MRK.3.4": "Und{1} [er seit]{2} [zu ine]{3}: «[Isch es erlaubt]{4}, [am Sabbat]{5,6} [Guets z tue]{7} [oder]{8} [Böses z tue]{9}, [es Läbe]{10} [z rette]{11} [oder]{12} [z töte]{13}?» [Si]{14} [aber]{15} [händ gschwige]{16}.",
- "MRK.3.5": "Und{1} [er hät]{2} [si]{3} [voll]{4} [Zorn]{5} [ringsum aagluegt]{2}, [truurig]{6} [über]{7} [iri]{12} [verhärtete]{8,9} [Herze]{10,11}, [und seit]{13} [zum Mänsch]{14,15}: «[Streck]{16} [d Hand]{17,18} [us]{16}!» Und{19} [er hät si usgstreckt]{20}, und{21} [sini]{25} [Hand]{23,24} [isch wider gsund worde]{22}.",
+ "MRK.3.5": "Und{1} [er hät]{2} [si]{3} [voll]{4} [Zorn]{5} [ringsum aagluegt]{2}, [truurig]{6} [über]{7} [iri]{12} [verhärtete]{8,9} [Herze]{10,11}, [und seit]{13} [zum Mänsch]{14,15}: «[Streck]{16} [d Hand]{17,18} [uus]{16}!» Und{19} [er hät si usgstreckt]{20}, und{21} [sini]{25} [Hand]{23,24} [isch wider gsund worde]{22}.",
  "MRK.3.6": "Und{1} [d Pharisäer]{3,4} [sind usegange]{2} [und händ]{9,10} [grad]{5} [mit]{6} [de Herodianer]{7,8} [beraate]{9,10} [gäge]{11} [ihn]{12}, [wie]{13} [si]{15} [en]{14} [chönnted umbringe]{15}.",
  "MRK.3.7": "Und{1} [de Jesus]{2,3} [hät sich]{8} [mit]{4} [sine]{7} [Jünger]{5,6} [an]{9} [See]{10,11} [zruggzoge]{8}, und{12} [e grossi]{13} [Mängi]{14} [us]{15} [Galiläa]{16,17} [isch]{18} ihm [nachegange]{18}. [Au]{19} [us]{20} [Judäa]{21,22}",
  "MRK.3.8": "und{1} [us]{2} [Jerusalem]{3} und{4} [us]{5} [Idumäa]{6,7} und{8} [vo ännet]{9} [em Jordan]{10,11} und{12} [us de Gäged um]{13} [Tyros]{14} und{15} [Sidon]{16} [isch]{22} [e grossi]{18} [Mängi]{17} [zu]{23} [ihm]{24} [choo]{22}, [wil si ghört händ]{19}, [was er alles]{20} [gmacht hät]{21}.",
@@ -219,7 +219,7 @@ GSW = {
  "MRK.3.11": "Und{1} [wänn]{6} [di unreine Geischter]{2-5} [en]{7} [gseh händ]{8}, [sind si]{9} [vor ihm]{10} [anegheit]{9} und{11} [händ gschroue]{12}: «[Du]{15} [bisch]{16} [de Sohn]{17,18} [vo Gott]{19,20}!» ~13(λέγοντα «sägend» leitet d direkt Red ii) ~14(ὅτι leitet d direkt Red ii)",
  "MRK.3.12": "Und{1} [er hät]{3} [si]{4} [scharf]{2} [aagfahre]{3}, [si söled]{5} [en]{7} [nöd]{6} [bekannt]{8} [mache]{9}.",
  "MRK.3.13": "Und{1} [er gaat]{2} [uf]{3} [de Bärg]{4,5} [ufe]{2} und{6} [rüeft]{7} [die]{8} [zu sich]{7}, [won er sälber]{10} [hät wele]{9}; und{11} [si sind]{12} [zu]{13} [ihm]{14} [choo]{12}.",
- "MRK.3.14": "Und{1} [er hät]{2} [zwölf]{3} [iigsetzt]{2}, [damit]{4} [si]{5} [bi]{6} [ihm]{7} [sind]{5} und{8} [damit]{9} [er]{10} [si]{11} [cha uusschicke]{10} [go verchünde]{12}",
+ "MRK.3.14": "Und{1} [er hät]{2} [zwölf]{3} [iigsetzt]{2}, [damit]{4} [si]{5} [bi]{6} [ihm]{7} [sind]{5} und{8} [damit]{9} [er]{10} [si]{11} [cha usschicke]{10} [go verchünde]{12}",
  "MRK.3.15": "und{1} damit si [Vollmacht]{3} [händ]{2}, [d Dämone]{5,6} [usztriibe]{4}.",
  "MRK.3.16": "Und{1} [er hät]{2} [di Zwölf]{3,4} [iigsetzt]{2}, und{5} [em Simon]{8,9} [hät er]{6} [de Name]{7} [Petrus]{10} [gää]{6},",
  "MRK.3.17": "und{1} [de Jakobus]{2}, [de Sohn]{3,4} [vom Zebedäus]{5}, und{6} [de Johannes]{7}, [de Brüeder]{8,9} [vom Jakobus]{10,11} – und{12} [ine]{14} [hät er]{13} [de Name]{15} [Boanerges]{16} [gää]{13}, [das heisst]{17,18} «[Söhn]{19} [vom Donner]{20}» –,",
@@ -330,9 +330,9 @@ DEC_GSW = [
  ("MRK.1.4", "Umkehr", "interpretive", "μετανοίας", "Umdänke", ["Buess"], "μετάνοια isch wörtlich es Umdänke; mitgmeint isch d Rückkehr zu Gott. «Buess» tönt nach Straf. Gliich i [[MRK.1.15]]."),
  ("MRK.1.8", "mit heiligem Geischt", "literal", "ἐν πνεύματι ἁγίῳ", None, ["mit em Heilige Geischt"], "Ohni Artikel, im Gägesatz zu «mit Wasser». I [[MRK.3.29]] mit Artikel."),
  ("MRK.1.10", "ufriisse", "literal", "σχιζομένους", None, ["sich uftue"], "σχίζω heisst spalte, verriisse; es gwaltsams Bild. S gliich Verb staat i [[MRK.15.38]] für de Vorhang im Tempel. Villicht Aaklang a [[ISA.64.1]]."),
- ("MRK.1.11", "a dir han ich Fröid", "interpretive", "ἐν σοὶ εὐδόκησα", "a dir han ich Gfalle gfunde", ["a dir han ich Wohlgfalle"], "D Stimm us em Himmel nimmt wahrschiinli [[PSA.2.7]] und [[ISA.42.1]] uf."),
+ ("MRK.1.11", "a dir han ich Fröid", "interpretive", "ἐν σοὶ εὐδόκησα", "a dir han ich Gfalle gfunde", ["a dir han ich Wohlgfalle"], "D Stimm us em Himmel nimmt wahrschiinli [[PSA.2.7]] und [[ISA.42.1]] uuf."),
  ("MRK.1.12", "tribt", "literal", "ἐκβάλλει", None, ["füert"], "S gliich Verb wie bim Dämone-Ustriibe ([[MRK.1.34]])."),
- ("MRK.1.14", "usgliferet worde isch", "literal", "παραδοθῆναι", None, ["verhaftet worde isch"], "παραδίδωμι («usliefere») bruucht de Markus au für de Jesus ([[MRK.3.19]], [[MRK.9.31]])."),
+ ("MRK.1.14", "usgliferet worde isch", "literal", "παραδοθῆναι", None, ["verhaftet worde isch"], "παραδίδωμι («uslifere») bruucht de Markus au für de Jesus ([[MRK.3.19]], [[MRK.9.31]])."),
  ("MRK.1.15", "D Ziit isch erfüllt", "literal", "Πεπλήρωται ὁ καιρὸς", None, ["D Ziit isch choo"], "καιρός isch de bestimmt, entscheidend Ziitpunkt; dä isch jetzt da."),
  ("MRK.1.15", "isch nöch choo", "literal", "ἤγγικεν", None, ["isch da"], "Öb s Riich scho aagfange hät oder grad bevorstaat, isch umstritte; «nöch choo» laat beides offe."),
  ("MRK.1.15", "s Riich", "traditional", "ἡ βασιλεία", "d Chönigsherrschaft", ["d Herrschaft"], "βασιλεία meint zersch d Herrschaft vo Gott als Gscheh, nöd es Gebiet. Gliich wie i [[MRK.3.24]] («Riich»)."),
@@ -357,7 +357,7 @@ DEC_GSW = [
  ("MRK.2.16", "Wieso", "interpretive", "Ὅτι", None, ["Er isst ja"], "ὅτι cha Fragwort sii («wieso?») oder d Red iileite."),
  ("MRK.2.19", "d Hochziitsgäscht", "adapted", "οἱ υἱοὶ τοῦ νυμφῶνος", "d Söhn vom Brutgmach", None, "Semitischi Wändig für d Gäscht oder Fründ vom Brüütigam."),
  ("MRK.2.21", "Blätz", "adapted", "ἐπίβλημα", "Ufsatz", ["Flick"], "Schwiizerdüütsch «Blätz» = Flickstuck."),
- ("MRK.2.23", "underwägs", "interpretive", "ὁδὸν ποιεῖν", "en Wäg z mache", ["sich en Wäg z bahne"], "Wörtlich «en Wäg mache». S Ährerupfe uf eme fremde Fäld erlaubt [[DEU.23.25]]; de Vorwurf gaat um de Sabbat."),
+ ("MRK.2.23", "underwägs", "interpretive", "ὁδὸν ποιεῖν", "en Wäg z mache", ["sich en Wäg z bahne"], "Wörtlich «en Wäg mache». S Ährerupfe uf eme frömde Fäld erlaubt [[DEU.23.25]]; de Vorwurf gaat um de Sabbat."),
  ("MRK.2.26", "zur Ziit vom Hoheprieschter Abjatar", "interpretive", "ἐπὶ Ἀβιαθὰρ ἀρχιερέως", "under em Abjatar, em Hoheprieschter", ["im Abschnitt über de Abjatar"], "Nach [[1SA.21.1-1SA.21.6]] isch de Ahimelech Prieschter gsii, sin Sohn Abjatar spöter bekannter. Erklärigsversüech: es Versehe; ἐπί meini de Schriftabschnitt; de bekannter Name seig gnännt. [[MAT.12.4]] und [[LUK.6.4]] lönd de Name wäg."),
  ("MRK.2.26", "d Schaubrot", "traditional", "τοὺς ἄρτους τῆς προθέσεως", "d Brot vo de Uslegig", None, "Di zwölf Brot, wo im Heiligtum vor Gott usgleit worde sind ([[LEV.24.5-LEV.24.9]])."),
  ("MRK.2.27", "isch für de Mänsch da", "interpretive", "διὰ τὸν ἄνθρωπον ἐγένετο", "isch wäge em Mänsch worde", ["isch für de Mänsch gschaffe worde"], "ἐγένετο cha a d Schöpfig erinnere ([[GEN.2.2-GEN.2.3]]). De Sabbat isch em Wohl vom Mänsch zueordnet."),
@@ -526,15 +526,15 @@ UNITS = [
   "Auf dem Berg ruft Jesus die zu sich, die er will, und setzt zwölf ein: Sie sollen bei ihm sein, verkündigen und Vollmacht haben, Dämonen auszutreiben. Die Liste nennt ihre Namen und Beinamen, zuletzt Judas Iskariot, der ihn auslieferte."),
 ]
 UNITS_GSW = {
- "TU-MRK-001-001-045": ("De Aafang vom Evangelium", "De Johannes de Täufer chündet en Stärchere aa. De Jesus wird tauft, vom Geischt i d Wüeschti tribe und verchündet z Galiläa, dass s Riich vo Gott nöch isch. Er rüeft di erschte Jünger, lehrt mit Vollmacht, tribt Dämone us, heilt Chranki und macht en Ussätzige rein; sin Ruef verbreitet sich eso, dass er nüme offe in e Stadt cha."),
+ "TU-MRK-001-001-045": ("De Aafang vom Evangelium", "De Johannes de Täufer chündet en Stärchere aa. De Jesus wird tauft, vom Geischt i d Wüeschti tribe und verchündet z Galiläa, dass s Riich vo Gott nöch isch. Er rüeft di erschte Jünger, lehrt mit Vollmacht, tribt Dämone uus, heilt Chranki und macht en Ussätzige rein; sin Ruef verbreitet sich eso, dass er nüme offe in e Stadt cha."),
  "TU-MRK-001-001-008": ("De Johannes de Täufer", "Nach de Überschrift fangt s Buech mit eme Schriftwort und em Uftrete vom Johannes i de Wüeschti aa. Er verchündet e Taufi vo de Umkehr zur Vergäbig vo de Sünde und chündet en Stärchere aa, wo mit heilige Geischt wird taufe."),
- "TU-MRK-001-009-011": ("D Taufi vom Jesus", "De Jesus chunnt vo Nazaret und laat sich vom Johannes taufe. Er gseht d Himmel ufriisse und de Geischt abecho; e Stimm nännt en de lieb Sohn."),
+ "TU-MRK-001-009-011": ("D Taufi vom Jesus", "De Jesus chunnt vo Nazaret und laat sich vom Johannes taufe. Er gseht d Himmel ufriisse und de Geischt abechoo; e Stimm nännt en de lieb Sohn."),
  "TU-MRK-001-012-013": ("I de Wüeschti", "De Geischt tribt de Jesus i d Wüeschti; dört wird er vierzg Täg vom Satan versuecht, isch bi de wilde Tier, und Ängel dieneds em."),
  "TU-MRK-001-014-015": ("S Riich vo Gott isch nöch", "Nachdem de Johannes usgliferet worde isch, verchündet de Jesus z Galiläa: D Ziit isch erfüllt, s Riich vo Gott isch nöch choo; chehred um und glaubed as Evangelium."),
  "TU-MRK-001-016-020": ("Di erschte Jünger", "Am See rüeft de Jesus d Fischer Simon und Andreas, dänn de Jakobus und de Johannes. Si lönd Netz, Boot und Vatter zrugg und gönd em nache."),
- "TU-MRK-001-021-028": ("Vollmacht i de Synagoge vo Kafarnaum", "De Jesus lehrt am Sabbat mit Vollmacht, andersch als d Schriftglehrte. En unreine Geischt kännt en als de Heilig vo Gott; de Jesus bringt en zum Schwiige und tribt en us. De Ruef verbreitet sich i ganz Galiläa."),
- "TU-MRK-001-029-034": ("Am Abig wärded vil Chranki gheilt", "Im Huus vom Simon und vom Andreas richtet de Jesus d Schwigermueter mit Fieber uf. Am Abig bringt me alli Chranke und Bsässne; er heilt vil und verbüütet de Dämone z rede."),
- "TU-MRK-001-035-039": ("Ufbruch i anderi Ort", "Früe, no i de Nacht, bättet de Jesus amene einsame Ort. De Simon und sini Begleiter finded en und säged: «Alli sueched dich.» Er aber wott wiiterzie, zum au anderswo verchünde, und zieht dur ganz Galiläa."),
+ "TU-MRK-001-021-028": ("Vollmacht i de Synagoge vo Kafarnaum", "De Jesus lehrt am Sabbat mit Vollmacht, andersch als d Schriftglehrte. En unreine Geischt kännt en als de Heilig vo Gott; de Jesus bringt en zum Schwiige und tribt en uus. De Ruef verbreitet sich i ganz Galiläa."),
+ "TU-MRK-001-029-034": ("Am Abig wärded vil Chranki gheilt", "Im Huus vom Simon und vom Andreas richtet de Jesus d Schwigermueter mit Fieber uuf. Am Abig bringt me alli Chranke und Bsässne; er heilt vil und verbüütet de Dämone z rede."),
+ "TU-MRK-001-035-039": ("Ufbruch i anderi Ort", "Früe, no i de Nacht, bättet de Jesus amene einsame Ort. De Simon und sini Begleiter finded en und säged: «Alli sueched dich.» Er aber wott wiiterzieh, zum au anderswo verchünde, und zieht dur ganz Galiläa."),
  "TU-MRK-001-040-045": ("En Ussätzige wird rein", "En Ussätzige bittet de Jesus: «Wänn du wottsch, chasch du mich rein mache.» De Jesus rüert en aa und macht en rein, schickt en zum Prieschter und verbüütet em, öppis z säge. De Maa verzellt s überall, so dass de Jesus nüme offe in e Stadt cha."),
  "TU-MRK-002-001-028": ("Striitgspröch z Galiläa", "I vier Szene chunnt de Jesus mit Schriftglehrte und Pharisäer in Striit: über s Vergää vo Sünde, s Ässe mit Zöllner und Sünder, s Faschte und de Sabbat. Mit [[MRK.3.1-MRK.3.6]] bildeds e Reihe vo Striitgspröch; am Schluss beroted Pharisäer und Herodianer, wie si de Jesus chönnted umbringe."),
  "TU-MRK-002-001-012": ("De Glähmt und s Vergää vo de Sünde", "Vier Manne bringed en Glähmte dur s Dach zum Jesus. Er seit em zue, dass sini Sünde vergää sind; es paar Schriftglehrti dänked bi sich, das seig Läschterig. De Jesus heilt de Maa, damit si gsehnd, dass de Mänschesohn uf de Erde Vollmacht hät, Sünde z vergää."),
@@ -544,7 +544,7 @@ UNITS_GSW = {
  "TU-MRK-003-001-019": ("Heilig am Sabbat, Aadrang und di Zwölf", "De Jesus heilt am Sabbat e verdorreti Hand; drufabe beroted Pharisäer und Herodianer, wie si en chönnted umbringe. E grossi Mängi us allne Gägede chunnt zu ihm. Uf em Bärg setzt er di Zwölf ii."),
  "TU-MRK-003-001-006": ("Di verdorret Hand", "I de Synagoge fröget de Jesus, öb me am Sabbat Läbe rette oder töte därf. Zornig und truurig über di verhärtete Herz heilt er d Hand. D Pharisäer beroted mit de Herodianer, wie si en chönnted umbringe."),
  "TU-MRK-003-007-012": ("Aadrang am See", "Lüüt us Galiläa, Judäa, Jerusalem, Idumäa, vo ännet em Jordan und us de Gäged vo Tyros und Sidon chömed zum Jesus. Chranki stürzed sich uf en, zum en aarüere; di unreine Geischter schreied: «Du bisch de Sohn vo Gott!», und er verbüütet ene, en bekannt z mache."),
- "TU-MRK-003-013-019": ("D Iisetzig vo de Zwölf", "Uf em Bärg rüeft de Jesus die zu sich, won er wott, und setzt zwölf ii: Si söled bi ihm sii, verchünde und Vollmacht ha, Dämone usztriibe. D Liischte nännt iri Näme und Bii-Näme, zletscht de Judas Iskariot, won en usgliferet hät."),
+ "TU-MRK-003-013-019": ("D Iisetzig vo de Zwölf", "Uf em Bärg rüeft de Jesus die zu sich, won er wott, und setzt zwölf ii: Si söled bi ihm sii, verchünde und Vollmacht haa, Dämone usztriibe. D Liischte nännt iri Näme und Bii-Näme, zletscht de Judas Iskariot, won en usgliferet hät."),
 }
 
 NOTES_DE = [
@@ -650,7 +650,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erklärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-MRK-{c:03d}-001-{last:03d}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {

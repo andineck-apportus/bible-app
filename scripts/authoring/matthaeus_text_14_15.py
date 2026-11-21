@@ -436,7 +436,7 @@ ALTS = [
    'R2': [('ἐλυπήθη ὁ βασιλεύς διὰ δὲ', 'de Chönig isch truurig worde; wäge aber', 'RP')]},
   ['R2 kann den Satz geglättet haben (Hauptverb statt Partizip, δέ als deutlicher Neueinsatz, vgl. [[MRK.6.26]]); umgekehrt kann R1 eine stilistische Straffung sein.',
    'Laut der automatischen Zuordnung lesen 03 und 05 R1, 01, 04 und 032 R2.'],
-  ['R2 cha de Satz glättet ha (Hauptverb statt Partizip, δέ als düütliche Neuaasatz, vgl. [[MRK.6.26]]); umgekehrt cha R1 e stilistischi Straffig sii.',
+  ['R2 cha de Satz glättet haa (Hauptverb statt Partizip, δέ als düütliche Neuaasatz, vgl. [[MRK.6.26]]); umgekehrt cha R1 e stilistischi Straffig sii.',
    'Nach de automatische Zueornig läsed 03 und 05 R1, 01, 04 und 032 R2.']),
  ('VAR-SBLGNTAPP-MAT-014-012-01:R2',
   'MAT.14.12',
@@ -452,7 +452,7 @@ ALTS = [
   ['σῶμα kann das harte πτῶμα ersetzt haben, vielleicht nach dem Sprachgebrauch von [[MAT.27.58]]–[[MAT.27.59]]; πτῶμα steht auch in [[MRK.6.29]].',
    'Laut der automatischen Zuordnung lesen 01 (auch die Korrektur), 03, 04 und 05 πτῶμα, 032 σῶμα. 04, 05 und 032 haben am Versende αὐτό statt αὐτόν; das ändert die '
    'Übersetzung nicht.'],
-  ['σῶμα cha s harte πτῶμα ersetzt ha, vilicht nach em Sprachgebruuch vo [[MAT.27.58]]–[[MAT.27.59]]; πτῶμα staat au i [[MRK.6.29]].',
+  ['σῶμα cha s harte πτῶμα ersetzt haa, vilicht nach em Sprachgebruuch vo [[MAT.27.58]]–[[MAT.27.59]]; πτῶμα staat au i [[MRK.6.29]].',
    'Nach de automatische Zueornig läsed 01 (au d Korrektur), 03, 04 und 05 πτῶμα, 032 σῶμα.']),
  ('VAR-SBLGNTAPP-MAT-014-024-01:R2',
   'MAT.14.24',
@@ -485,7 +485,7 @@ ALTS = [
   {'R1': [('ἦλθεν', 'isch choo', 'WH, Treg, NA28')], 'R2': [('ἀπῆλθεν', 'isch anegange', 'NIV, RP')]},
   ['Die Vorsilbe ἀπ- kann stilistisch hinzugefügt oder als überflüssig weggelassen worden sein.',
    'Laut der automatischen Zuordnung lesen 01 und 03 ἦλθεν, 04, 032 und 05 ἀπῆλθεν (05 ohne πρὸς αὐτούς).'],
-  ['D Vorsilbe ἀπ- cha stilistisch dezuecho oder als überflüssig ewägglaa worde sii.', 'Nach de automatische Zueornig läsed 01 und 03 ἦλθεν, 04, 032 und 05 ἀπῆλθεν.']),
+  ['D Vorsilbe ἀπ- cha stilistisch dezuechoo oder als überflüssig ewägglaa worde sii.', 'Nach de automatische Zueornig läsed 01 und 03 ἦλθεν, 04, 032 und 05 ἀπῆλθεν.']),
  ('VAR-SBLGNTAPP-MAT-014-029-02:R2',
   'MAT.14.29',
   'und kam zu Jesus',
@@ -517,7 +517,7 @@ ALTS = [
   {'R1': [('ἰσχυρὸν', 'starch', 'Treg, RP, NA28')], 'R2': [('–', '(fehlt)', 'WH, NIV')]},
   ['ἰσχυρόν kann als Verdeutlichung hinzugekommen oder versehentlich ausgefallen sein.',
    'Laut der automatischen Zuordnung lesen 01 und die Erstschrift von 03 ohne ἰσχυρόν; eine Korrektur in 03 sowie 04, 05 und 032 haben es, 032 dazu σφόδρα («sehr»).'],
-  ['ἰσχυρόν cha als Verdüütlichig dezuecho oder us Versehe usgfalle sii.',
+  ['ἰσχυρόν cha als Verdüütlichig dezuechoo oder us Versehe usgfalle sii.',
    'Nach de automatische Zueornig läsed 01 und d Erschtschrift vo 03 ohni ἰσχυρόν; e Korrektur i 03 und 04, 05 und 032 händ s.']),
  ('VAR-SBLGNTAPP-MAT-014-033-01:R2',
   'MAT.14.33',
@@ -532,7 +532,7 @@ ALTS = [
   {'R1': [('πλοίῳ', 'im Boot', 'WH, NA28')], 'R2': [('πλοίῳ ἐλθόντες', 'im Boot sind choo und', 'Treg, RP')]},
   ['ἐλθόντες kann als erzählerische Ausmalung hinzugefügt oder als überflüssig weggelassen worden sein.',
    'Laut der automatischen Zuordnung lesen 01, 03 und 04 ohne Zusatz, 032 und 05 mit ihm.'],
-  ['ἐλθόντες cha als erzählerischi Usmalig dezuecho oder als überflüssig ewägglaa worde sii.',
+  ['ἐλθόντες cha als erzählerischi Usmalig dezuechoo oder als überflüssig ewägglaa worde sii.',
    'Nach de automatische Zueornig läsed 01, 03 und 04 ohni Zuesatz, 032 und 05 mit.']),
  ('VAR-SBLGNTAPP-MAT-015-004-01:R2',
   'MAT.15.4',
@@ -563,7 +563,7 @@ ALTS = [
   ['Der Zusatz gleicht an das Gebot ([[MAT.15.4]]) und an [[MAT.15.5]] («zum Vater oder zur Mutter») an; die kürzere Lesart kann ihn auch durch Überspringen verloren '
    'haben (zweimal αὐτοῦ).',
    'Laut der automatischen Zuordnung lesen 01, 03 und 05 ohne Zusatz, 04 und 032 mit ihm.'],
-  ['De Zuesatz glicht a s Gebot ([[MAT.15.4]]) und a [[MAT.15.5]] aa; di chürzer Läsart chan en au dur Überspringe verlore ha (zweimal αὐτοῦ).',
+  ['De Zuesatz glicht a s Gebot ([[MAT.15.4]]) und a [[MAT.15.5]] aa; di chürzer Läsart chan en au dur Überspringe verlore haa (zweimal αὐτοῦ).',
    'Nach de automatische Zueornig läsed 01, 03 und 05 ohni Zuesatz, 04 und 032 mit.']),
  ('VAR-SBLGNTAPP-MAT-015-006-04:R2',
   'MAT.15.6',
@@ -573,7 +573,7 @@ ALTS = [
   's Gebot vo Gott',
   'gering',
   '«Gebot» statt «Wort» nimmt [[MAT.15.3]] auf.',
-  '«Gebot» statt «Wort» nimmt [[MAT.15.3]] uf.',
+  '«Gebot» statt «Wort» nimmt [[MAT.15.3]] uuf.',
   {'R1': [('τὸν λόγον', 'das Wort', 'WH, Treg, NA28')], 'R2': [('τὴν ἐντολὴν', 'das Gebot', 'RP')]},
   {'R1': [('τὸν λόγον', 's Wort', 'WH, Treg, NA28')], 'R2': [('τὴν ἐντολὴν', 's Gebot', 'RP')]},
   ['ἐντολή gleicht an [[MAT.15.3]] an, νόμος («Gesetz») an den geläufigen Ausdruck «Gesetz Gottes»; λόγος entspricht [[MRK.7.13]]. Welche Form die älteste ist, ist '
@@ -595,7 +595,7 @@ ALTS = [
   {'R1': [('Ὁ λαὸς οὗτος', 'Das Volk', 'WH, Treg, NA28')], 'R2': [('Ἐγγίζει μοι ὁ λαὸς οὗτος τῷ στόματι αὐτῶν καὶ', 'Das Volk chunnt mir nöch mit sim Muul und', 'RP')]},
   ['Der längere Text gleicht das Zitat an den Wortlaut von [[ISA.29.13]] in der Septuaginta an; die kürzere Form entspricht [[MRK.7.6]].',
    'Laut der automatischen Zuordnung lesen 01, 03 und 05 die kürzere Form, 04 und 032 die längere.'],
-  ['De länger Text glicht s Zitat a de Wortlut vo [[ISA.29.13]] i de Septuaginta aa; di chürzer Form entspricht [[MRK.7.6]].',
+  ['De länger Text glicht s Zitat a de Wortluut vo [[ISA.29.13]] i de Septuaginta aa; di chürzer Form entspricht [[MRK.7.6]].',
    'Nach de automatische Zueornig läsed 01, 03 und 05 di chürzer Form, 04 und 032 di länger.']),
  ('VAR-SBLGNTAPP-MAT-015-014-01:R2',
   'MAT.15.14',
@@ -615,8 +615,8 @@ ALTS = [
   ['τυφλῶν kann ergänzt sein, um das Bild an den folgenden Satz anzugleichen, oder wegen der gleichen Endung (-ων) ausgefallen sein. R3 hat dieselben Wörter wie R1 in '
    'anderer Folge.',
    'Laut der automatischen Zuordnung lesen 03 und 05 R2, 01, 04 und 032 R3; den Wortlaut von R1 hat keine der erfassten Handschriften genau so.'],
-  ['τυφλῶν cha dezuecho sii, für s Bild em nächschte Satz aazgliiche, oder wäg de gliiche Endig (-ων) usgfalle sii. R3 hät di gliiche Wort wie R1 in anderer Reihefolg.',
-   'Nach de automatische Zueornig läsed 03 und 05 R2, 01, 04 und 032 R3; de Wortlut vo R1 hät keini vo de erfasste Handschrifte gnau eso.']),
+  ['τυφλῶν cha dezuechoo sii, für s Bild em nächschte Satz aazgliiche, oder wäg de gliiche Endig (-ων) usgfalle sii. R3 hät di gliiche Wort wie R1 in anderer Reihefolg.',
+   'Nach de automatische Zueornig läsed 03 und 05 R2, 01, 04 und 032 R3; de Wortluut vo R1 hät keini vo de erfasste Handschrifte gnau eso.']),
  ('VAR-SBLGNTAPP-MAT-015-017-01:R2',
   'MAT.15.17',
   'Begreift ihr nicht',
@@ -630,7 +630,7 @@ ALTS = [
   {'R1': [('οὐ', 'nöd', 'WH, Treg, NA28')], 'R2': [('Οὔπω', 'no nöd', 'RP')]},
   ['οὔπω nimmt ἀκμήν («noch immer») aus [[MAT.15.16]] auf und entspricht [[MRK.8.17]]; es kann von dort beeinflusst sein.',
    'Laut der automatischen Zuordnung lesen 03 und 05 οὐ, 01, 04 und 032 οὔπω.'],
-  ['οὔπω nimmt ἀκμήν («immer no») us [[MAT.15.16]] uf und entspricht [[MRK.8.17]]; es cha vo dört beiiflusst sii.',
+  ['οὔπω nimmt ἀκμήν («immer no») us [[MAT.15.16]] uuf und entspricht [[MRK.8.17]]; es cha vo dört beiiflusst sii.',
    'Nach de automatische Zueornig läsed 03 und 05 οὐ, 01, 04 und 032 οὔπω.']),
  ('VAR-SBLGNTAPP-MAT-015-022-01:R2',
   'MAT.15.22',
@@ -677,7 +677,7 @@ ALTS = [
   {'R1': [('Μαγαδάν', 'Magadan', 'WH, Treg, NA28')], 'R2': [('Μαγδαλά', 'Magdala', 'RP')]},
   ['Abschreiber können den unbekannten Namen durch das bekannte Magdala ersetzt haben; [[MRK.8.10]] nennt an der Stelle Dalmanuta.',
    'Laut der automatischen Zuordnung lesen 01, 03 und 05 Μαγαδάν (05 mit Artikel), 04 und 032 Μαγδαλάν.'],
-  ['Abschriiber chönd de unbekannt Name dur s bekannt Magdala ersetzt ha; [[MRK.8.10]] nännt a dere Stell Dalmanuta.',
+  ['Abschriiber chönd de unbekannt Name dur s bekannt Magdala ersetzt haa; [[MRK.8.10]] nännt a dere Stell Dalmanuta.',
    'Nach de automatische Zueornig läsed 01, 03 und 05 Μαγαδάν, 04 und 032 Μαγδαλάν.']),
 ]
 
@@ -709,15 +709,15 @@ UNITS = [
 ]
 UNITS_GSW = {
  'TU-MAT-014-001-036': ('De Tod vom Täufer, Brot i de Wüeschti und de Jesus uf em Wasser', 'De Herodes, de Tetrarch, meint, de Jesus seig de Johannes de Täufer, vo de Tote uferweckt. Im Rückblick wird verzellt, wie de Herodes de Johannes wäge de Herodias gfange gnoo und en uf s Verlange vo irer Tochter, won er mit eme Eid öppis versproche hät, im Gfängnis hät la chöpfe. Wo de Jesus das ghört, zieht er sich an en einsame Ort zrugg; d Lüüt gönd em nache, er heilt iri Chranke und macht mit föif Brot und zwei Fisch öppe föiftuusig Manne satt, ohni Fraue und Chind. I de Nacht chunnt er uf em See zum Boot vo de Jünger; de Petrus lauft uf em Wasser zu ihm, fangt im Wind aa versinke, wird vom Jesus packt, und dä nännt en chliigläubig; die im Boot wärfed sich vor em Jesus nider und bekänned en als Sohn vo Gott. Z Gennesaret wärded alli grettet, wo de Saum vo sim Mantel aarüered.'),
- 'TU-MAT-014-001-012': ('De Herodes laat de Johannes de Täufer chöpfe', 'De Herodes, de Tetrarch, ghört d Nachricht vom Jesus und seit zu sine Diener, das seig de Johannes de Täufer, vo de Tote uferweckt; drum würkid d Chräft i ihm. Im Rückblick verzellt de Text: De Herodes hät de Johannes feschtgnoo und is Gfängnis bracht wäge de Herodias, de Frau vo sim Brüeder Philippus, wil de Johannes ihm gseit hät, es seig ihm nöd erlaubt, si z haa. De Herodes hät en wele umbringe, hät aber d Mängi gförchtet, won en für en Prophet ghalte hät. Bim Fiire vo sim Geburtstag tanzt d Tochter vo de Herodias; si gfallt em Herodes, und er verspricht ere mit eme Eid, was si au heuscht. Vo irer Mueter aagstiftet, verlangt si de Chopf vom Johannes uf ere Platte; de Chönig isch truurig, laat de Johannes aber wäge de Eid und de Gäscht im Gfängnis chöpfe. De Chopf wird em Meitli gää, und es bringt en sinere Mueter. D Jünger vom Johannes begrabed d Liich und melded s em Jesus.'),
- 'TU-MAT-014-013-021': ('D Spiisig vo de Föiftuusig', 'Wo de Jesus das ghört, zieht er sich imene Boot an en einsame Ort zrugg; d Lüüt gönd em z Fuess us de Städt nache. Er gseht e grossi Mängi, hät Erbarme mit ine und heilt iri Chranke. Am Abig wänd d Jünger d Lüüt furtschicke, damit si sich i de Dörfer öppis z ässe chaufed; de Jesus seit: «Gänd ir ine z ässe!» Si händ nu föif Brot und zwei Fisch. De Jesus laat d Lüüt sich ufs Gras setze, nimmt d Brot und d Fisch, lueget zum Himmel ufe, spricht de Säge, bricht d Brot und git si de Jünger, und die gänd si de Lüüt. Alli ässed und wärded satt, und si läsed zwölf Chörb voll übrigi Brocke uf. Es sind öppe föiftuusig Manne, ohni Fraue und Chind.'),
+ 'TU-MAT-014-001-012': ('De Herodes laat de Johannes de Täufer chöpfe', 'De Herodes, de Tetrarch, ghört d Nachricht vom Jesus und seit zu sine Diener, das seig de Johannes de Täufer, vo de Tote uferweckt; drum würkid d Chräft i ihm. Im Rückblick verzellt de Text: De Herodes hät de Johannes feschtgnoo und is Gfängnis bracht wäge de Herodias, de Frau vo sim Brüeder Philippus, wil de Johannes ihm gseit hät, es seig ihm nöd erlaubt, si z haa. De Herodes hät en wele umbringe, hät aber d Mängi gförchtet, won en für en Prophet ghalte hät. Bim Fiire vo sim Geburtstag tanzt d Tochter vo de Herodias; si gfallt em Herodes, und er verspricht ere mit eme Eid, was si au höischt. Vo irer Mueter aagstiftet, verlangt si de Chopf vom Johannes uf ere Platte; de Chönig isch truurig, laat de Johannes aber wäge de Eid und de Gäscht im Gfängnis chöpfe. De Chopf wird em Meitli gää, und es bringt en sinere Mueter. D Jünger vom Johannes begrabed d Liich und melded s em Jesus.'),
+ 'TU-MAT-014-013-021': ('D Spiisig vo de Föiftuusig', 'Wo de Jesus das ghört, zieht er sich imene Boot an en einsame Ort zrugg; d Lüüt gönd em z Fuess us de Städt nache. Er gseht e grossi Mängi, hät Erbarme mit ine und heilt iri Chranke. Am Abig wänd d Jünger d Lüüt furtschicke, damit si sich i de Dörfer öppis z ässe chaufed; de Jesus seit: «Gänd ir ine z ässe!» Si händ nu föif Brot und zwei Fisch. De Jesus laat d Lüüt sich ufs Gras setze, nimmt d Brot und d Fisch, lueget zum Himmel ufe, spricht de Säge, bricht d Brot und git si de Jünger, und die gänd si de Lüüt. Alli ässed und wärded satt, und si läsed zwölf Chörb voll übrigi Brocke uuf. Es sind öppe föiftuusig Manne, ohni Fraue und Chind.'),
  'TU-MAT-014-022-033': ('De Jesus und de Petrus uf em Wasser', 'De Jesus drängt d Jünger, mit em Boot voruszfahre, schickt d Lüüt furt und gaat elei uf de Bärg go bätte. S Boot isch wiit vom Land wäg und wird vo de Wälle plaget, dänn de Wind isch ine entgäge. I de vierte Nachtwach chunnt de Jesus uf em See zu ine; d Jünger meined, er seig es Gspängscht, und schreied vor Angscht, er aber seit: «Nu Muet, ich bi s; händ kei Angscht!» De Petrus antwortet: «Herr, wänn du s bisch, befil mir, uf em Wasser zu dir z choo!» Uf s «Chumm!» vom Jesus stiigt er us em Boot, lauft uf em Wasser und chunnt zum Jesus. Won er de starch Wind gseht, überchunnt er Angscht, fangt aa versinke und schreit: «Herr, rett mich!» De Jesus packt en und seit: «Du Chliigläubige, wieso häsch zwiiflet?» Wo si is Boot stiiged, leit sich de Wind; die im Boot wärfed sich vor ihm nider und säged: «Würkli, du bisch de Sohn vo Gott!»'),
  'TU-MAT-014-034-036': ('Heilige z Gennesaret', 'Nach de Überfahrt chömed si z Gennesaret a Land. D Manne vo däm Ort erchänned de Jesus, schicked Bote i die ganz Gäged und bringed alli Chranke zu ihm. Si bitted en, dass si nu de Saum vo sim Mantel dörfed aarüere, und alli, won en aarüered, wärded grettet.'),
  'TU-MAT-015-001-039': ('Rein und unrein, d kanaanäisch Frau und d Spiisig vo de Viertuusig', 'Pharisäer und Schriftglehrti us Jerusalem fröged, wieso d Jünger vom Jesus gäge d Überliferig vo de Ältischte verstossed und sich vor em Ässe d Händ nöd wäsched. De Jesus haltet ine vor, dass si für iri Überliferig gäge s Gebot vo Gott verstossed, Vatter und Mueter z ehre, nännt si Hüüchler und bezieht [[ISA.29.13]] uf si. De Mängi seit er, nöd was is Muul ine gaat, mach de Mänsch unrein, sondern was us em Muul usechunnt; de Jünger erklärt er, das chömm us em Herz. I de Gäged vo Tyros und Sidon bittet e kanaanäischi Frau für iri bsässni Tochter; de Jesus antwortet zerscht nöd und seit, er seig nu zu de verlorne Schaf vom Huus Israel gschickt, aber uf iri Antwort hii nännt er ire Glaube gross, und d Tochter isch gheilt. Am See vo Galiläa heilt er uf em Bärg vili Chranki, und d Mängi priist de Gott vo Israel. Mit sibe Brot und es paar Fisch macht er viertuusig Manne satt, ohni Fraue und Chind, und fahrt dänn is Gebiet vo Magadan.'),
  'TU-MAT-015-001-020': ('Was de Mänsch unrein macht', 'Pharisäer und Schriftglehrti us Jerusalem fröged de Jesus, wieso sini Jünger gäge d Überliferig vo de Ältischte verstossed und sich vor em Ässe d Händ nöd wäsched. De Jesus fröget zrugg, wieso si für iri Überliferig gäge s Gebot vo Gott verstossed: Gott hät gseit, me söll Vatter und Mueter ehre; si aber lehred, wär zum Vatter oder zur Mueter seit, was er ine a Hilf chönnt gää, seig e Opfergab, dä müess sin Vatter nöd ehre. Er nännt si Hüüchler und bezieht [[ISA.29.13]] uf si. Dänn rüeft er d Mängi zu sich und seit: Nöd was is Muul ine gaat, macht de Mänsch unrein, sondern was us em Muul usechunnt. D Jünger verzelled, d Pharisäer hebed Aastoss gnoo; de Jesus antwortet, jedi Pflanze, wo sin himmlisch Vatter nöd pflanzt hät, wärd usgrisse; si seiged Blindi, Füerer vo Blinde, und wänn en Blinde en Blinde füert, gheied beidi i e Grueb. Uf d Bitt vom Petrus erklärt er s Gliichnis: Was is Muul ine gaat, gaat in Buuch und wird usgschide; us em Herz aber chömed bösi Gedanke, Mord, Ehebrüch, Unzucht, Diebstähl, falschi Zügnis und Läschterige. Das macht de Mänsch unrein, nöd s Ässe mit ungwäschne Händ.'),
  'TU-MAT-015-021-028': ('D kanaanäisch Frau', 'De Jesus zieht sich i d Gäged vo Tyros und Sidon zrugg. E kanaanäischi Frau us däm Gebiet schreit: «Häb Erbarme mit mir, Herr, Sohn vom David! Mini Tochter isch schlimm bsässe.» De Jesus git ere kei Antwort; d Jünger bitted en, er söll si furtschicke, wil si hinder ine här schreit. Er seit, er seig nu zu de verlorne Schaf vom Huus Israel gschickt. D Frau wirft sich vor ihm nider und bittet: «Herr, hilf mir!» Er antwortet, es seig nöd rächt, s Brot vo de Chind z näh und de Hündli anezrüere. Si seit: «Ja, Herr; dänn au d Hündli ässed vo de Brösmeli, wo vom Tisch vo ire Herre abegheied.» Dänn seit de Jesus: «Frau, din Glaube isch gross! Dir söll gscheh, wie du wottsch.» Vo dere Stund aa isch iri Tochter gheilt.'),
  'TU-MAT-015-029-031': ('Heilige am See vo Galiläa', 'De Jesus chunnt an de See vo Galiläa, stiigt uf de Bärg und sitzt dört. Vil Lüüt chömed mit Stumme, Blinde, Lahme, Verchrüpplete und vilne andere zu ihm häre und leged si ihm vor d Füess, und er heilt si. D Mängi stuunt, wo si gseht, wie Stummi reded, Verchrüppleti gsund sind, Lahmi umelaufed und Blindi gsehnd, und si priist de Gott vo Israel.'),
- 'TU-MAT-015-032-039': ('D Spiisig vo de Viertuusig', 'De Jesus rüeft sini Jünger und seit, er heb Erbarme mit de Mängi, wo scho drü Täg bi ihm bliibi und nüüt z ässe heb; er well si nöd hungrig furtschicke, damit si understwägs nöd zämebrächid. D Jünger fröged, vo wo si i de Wüeschti so vil Brot söled näh. Si händ sibe Brot und es paar Fischli. De Jesus laat d Mängi sich uf de Bode setze, nimmt d Brot und d Fisch, dankt, bricht si und git si de Jünger, und die gänd si de Lüüt. Alli ässed und wärded satt, und si läsed sibe Chörb voll übrigi Brocke uf. Es sind viertuusig Manne, ohni Fraue und Chind. Dänn schickt de Jesus d Lüüt furt, stiigt is Boot und chunnt is Gebiet vo Magadan.'),
+ 'TU-MAT-015-032-039': ('D Spiisig vo de Viertuusig', 'De Jesus rüeft sini Jünger und seit, er heb Erbarme mit de Mängi, wo scho drü Täg bi ihm bliibi und nüüt z ässe heb; er well si nöd hungrig furtschicke, damit si understwägs nöd zämebrächid. D Jünger fröged, vo wo si i de Wüeschti so vil Brot söled näh. Si händ sibe Brot und es paar Fischli. De Jesus laat d Mängi sich uf de Bode setze, nimmt d Brot und d Fisch, dankt, bricht si und git si de Jünger, und die gänd si de Lüüt. Alli ässed und wärded satt, und si läsed sibe Chörb voll übrigi Brocke uuf. Es sind viertuusig Manne, ohni Fraue und Chind. Dänn schickt de Jesus d Lüüt furt, stiigt is Boot und chunnt is Gebiet vo Magadan.'),
 }
 
 NOTES_DE = [
@@ -839,7 +839,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erklärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-MAT-{c:03d}-001-{last:03d}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {
