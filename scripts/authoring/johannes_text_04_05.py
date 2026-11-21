@@ -312,7 +312,7 @@ DEC_GSW = [
  ("JHN.4.35", "Scho", "interpretive", "ἤδη", None, ["dass si scho wiiss sind"], "De SBLGNT zieht ἤδη zum nächschte Satz ([[JHN.4.36]])."),
  ("JHN.4.42", "de Retter", "literal", "ὁ σωτὴρ τοῦ κόσμου", None, ["de Heiland vo de Wält"], "κόσμος einheitlich «Wält»."),
  ("JHN.4.48", "Zeiche", "literal", "σημεῖα", None, None, "σημεῖον einheitlich «Zeiche», nöd «Wunder»; τέρατα isch «Wunder»."),
- ("JHN.5.2", "Schaftor", "interpretive", "ἐπὶ τῇ προβατικῇ", None, ["Schafteich"], "«Tor» isch ergänzt (vgl. [[Näh.3.1]])."),
+ ("JHN.5.2", "Schaftor", "interpretive", "ἐπὶ τῇ προβατικῇ", None, ["Schafteich"], "«Tor» isch ergänzt (vgl. [[NEH.3.1]])."),
  ("JHN.5.8", "Matte", "adapted", "κράβαττόν", None, ["Bahre", "Liegi"], None),
  ("JHN.5.10", "d Jude", "interpretive", "οἱ Ἰουδαῖοι", None, ["di jüdische Füerer", "di jüdische Behörde"], "Wörtlich «d Jude» (Grundentscheid). Gmeint sind da Autoritäte z Jerusalem; de Gheilt und de Jesus sind sälber Jude."),
  ("JHN.5.19", "Amen", "literal", "Ἀμὴν ἀμὴν", None, None, "S doppelt Amen einheitlich «Amen, amen, ich säge öi»."),
