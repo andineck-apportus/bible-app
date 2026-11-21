@@ -33,6 +33,16 @@ soweit sie mit dem Regelwerk übereinstimmen. Neu am 2026-11-21 (Begründung jew
 seig (2 Konjunktiv, nicht «sig»), jetzt (3), wieso (Pilot), überchoo (1.2 wie choo), schlafe/gschlafe (1.3, kein
 Doppelvokal, wo das Hochdeutsche die Länge schon trägt), Tür/Türe (1.3), chönnt/chönnted (1.9 Doppelmitlaut nach
 Hochdeutsch), befohle, Wohnig (1.3 Dehnungs-h), usgää/gässe (1.10), wäm (2 Fragewort), Fiischteri (Pilot Johannes).
+
+Angleichung an docs/ZUERIDUEUETSCH.md (2026-11-21, zweiter Durchgang): Aus MUNDART gestrichen, was dem Regelwerk
+widerspricht: «sterbe» -> «stärbe» (Regel 1.6: «sterbe»), «cho» -> «choo» (Abschnitt 2 Infinitiv: «cho luege» bei
+Bewegung bleibt); «werdi» zeigt jetzt auf «wärd» (Abschnitt 2, indirekte Rede «er wärd»). MUNDART und pruefe_mundart
+behalten ihre Schnittstelle (kernanalyse.py nutzt sie für alle Bücher).
+Fehlalarm (FEHLALARM, nur in pruefe_mundart ausgenommen): Die Wortliste von scripts/mundart.py führt «häb» -> «heb» für
+die indirekte Rede (Konjunktiv «er heb»). Der Imperativ von «haa» heisst aber «häb» («Häb kei Angscht», «häb Erbarme»;
+«heb» ist der Imperativ von «hebe», halten). Imperative in festen Wendungen werden deshalb nicht gemeldet, ebenso der
+Apostroph in englischen Buchtiteln («The Preface to Luke's Gospel») und Datensatz-IDs im Text («FIND-LUK-0008» als Wort
+«FIND»); Regelvorschläge in der Rückmeldung vom 2026-11-21.
 """
 import os
 import re
@@ -71,7 +81,7 @@ EGEN_SKIP_GSW = "ἐγένετο «es isch gsii»: Erzählformle innerhalb vom A
 
 IDOU_DE = ("ἰδού ist in ganz Lukas gleich wiedergegeben: in der Erzählung «siehe», in direkter Rede nach der Zahl der "
            "Angesprochenen «sieh» oder «seht».")
-IDOU_GSW = ("ἰδού isch im ganze Lukas gliich widergää: i de Erzählig «lueg», i de diräkte Red nach de Zahl vo de "
+IDOU_GSW = ("ἰδού isch im ganze Lukas gliich widergää: i de Erzählig «lueg», i de direkte Red nach de Zahl vo de "
             "Aagredete «lueg» oder «lueged».")
 FURCHT_GSW = ("μὴ φοβοῦ / μὴ φοβεῖσθε isch im ganze Lukas «Häb kei Angscht» / «Händ kei Angscht»; so seit me s hüt.")
 OCHLOI_DE = ("οἱ ὄχλοι ist in ganz Lukas «die Menschenmengen» (wie bei Matthäus), ὄχλος «die Menge»; λαός ist «das Volk».")
@@ -87,12 +97,12 @@ MUNDART = {
     "ghüraatet": "ghüratet", "hüraatet": "hüratet", "verhüraatet": "verhüratet", "glööst": "glöst", "gmeldet": "gmäldet",
     "meldet": "mäldet", "hööchi": "höchi", "grööscht": "gröscht", "gröössi": "grössi", "härde": "herde",
     "chömm": "chöm", "chömmende": "chömende", "felder": "fälder", "rittet": "riitet", "schaaf": "schaf", "stedt": "städt",
-    "sterbe": "stärbe", "ufglääse": "ufgläse", "ufträte": "uftrete", "umchehr": "umkehr", "unglöubig": "ungläubig",
+    "ufglääse": "ufgläse", "ufträte": "uftrete", "umchehr": "umkehr", "unglöubig": "ungläubig",
     "uussändig": "ussendig", "uusfüerlich": "usfüerlich", "uusgaat": "usgaat", "uusrichte": "usrichte",
     "uustriibed": "ustriibed", "verdoret": "verdorret", "verdoreti": "verdorreti", "verdorete": "verdorrete",
     "verriisse": "verrisse", "vilicht": "villicht", "weggange": "wäggange", "wägg": "wäg", "wen": "wän",
-    "werdi": "wärdi", "werfed": "wärfed", "zruggange": "zrugggange", "zruggcho": "zruggchoo", "anecho": "anechoo",
-    "cho": "choo", "züügnis": "zügnis", "bööse": "böse", "bööses": "böses", "schnäll": "schnell", "jaar": "jahr",
+    "werdi": "wärd", "werfed": "wärfed", "zruggange": "zrugggange", "zruggcho": "zruggchoo", "anecho": "anechoo",
+    "züügnis": "zügnis", "bööse": "böse", "bööses": "böses", "schnäll": "schnell", "jaar": "jahr",
     "oore": "ohre", "loon": "lohn", "söön": "söhn", "gläämt": "glähmt", "gläämte": "glähmte", "faar": "fahr",
     "faared": "fahred", "faart": "fahrt", "gfaare": "gfahre", "nöii": "nöi", "daa": "da", "here": "häre", "lide": "liide",
     "leged": "legged", "sölle": "söle", "nööch": "nöch", "nööchi": "nöchi", "feschtässe": "fäschtässe",
@@ -104,6 +114,58 @@ MUNDART = {
     "werum": "wieso", "übercho": "überchoo", "hüchler": "hüüchler", "ärnt": "ernte", "ärnte": "ernte",
     "fischter": "fiischter", "fischtere": "fiischtere", "fischternis": "fiischteri", "niemertem": "niemerem",
     "niemert": "niemer", "drüü": "drü", "Tämpel": "tempel", "schriftgleerte": "schriftglehrte", "schriftgleerti": "schriftglehrti",
+    # Zweiter Durchgang 2026-11-21 (Anwendung der Regeln 1.3, 1.5–1.8, Abschnitte 2 und 3 auf Formen, die in Lukas
+    # vorkamen; Kontextfälle wie «naa» = nach/nah, «root» = Rat/rät, «mer» = man/wir von Hand gelöst)
+    "aabigmahl": "abigmahl", "aagaab": "aagab", "aagaabe": "aagabe", "gaab": "gab", "gaabe": "gabe", "aasaag":
+    "aasag", "aanaam": "aanahm", "aateilnaam": "aateilnahm", "ufnaam": "ufnahm", "ufenaam": "ufenahm", "gfangenaam":
+    "gfangenahm", "brootbräche": "brotbräche", "fladebroot": "fladebrot", "johannisbroot": "johannisbrot", "daar":
+    "dar", "daarstelle": "darstelle", "daarstellig": "darstellig", "daarstellt": "darstellt", "daarzstelle":
+    "darzstelle", "daate": "date", "einzaal": "einzahl", "zaal": "zahl", "zaale": "zahle", "zaalt": "zahlt",
+    "zaalzeiche": "zahlzeiche", "meerzaal": "mehrzahl", "värszaale": "värszahle", "erchläärt": "erchlärt",
+    "erkläärig": "erklärig", "erkläärige": "erklärige", "erfaart": "erfahrt", "faarplan": "fahrplan", "himmelfaart":
+    "himmelfahrt", "widerfaare": "widerfahre", "gfaar": "gfahr", "fleet": "fleht", "frööge": "fröge", "fääled":
+    "fehled", "fäälentwicklige": "fehlentwicklige", "fääler": "fehler", "verfäält": "verfehlt", "gleerte": "glehrte",
+    "gläägeheit": "glägeheit", "gnaad": "gnad", "graabe": "grabe", "groosszügig": "grosszügig", "gseend": "gsehnd",
+    "gseet": "gseht", "gsehned": "gsehnd", "aagsee": "aagseh", "gstraaft": "gstraft", "gwöönlich": "gwöhnlich",
+    "gwöönliche": "gwöhnliche", "gwöönlichs": "gwöhnlichs", "ungwöönlich": "ungwöhnlich", "hööred": "höred",
+    "iicheert": "iichehrt", "umgcheert": "umgchehrt", "iiglaadne": "iigladne", "iiglaadni": "iigladni", "laadt":
+    "ladt", "klaagfrau": "klagfrau", "klaagfraue": "klagfraue", "klaaglieder": "klaglieder", "kolleege": "kollege",
+    "laag": "lag", "laage": "lage", "leewort": "lehnwort", "loond": "lohnd", "maal": "mahl", "maalziit": "mahlziit",
+    "maalziite": "mahlziite", "passamaal": "passamahl", "maanig": "mahnig", "maant": "mahnt", "usgmaalt": "usgmalt",
+    "usmaalt": "usmalt", "mee": "meh", "meerere": "mehreri", "meereri": "mehreri", "meermaals": "mehrmals", "määntig":
+    "mäntig", "naach": "nöch", "denaa": "dernach", "dernaa": "dernach", "naalaat": "nachlaat", "naazgää": "nachzgää",
+    "nööche": "nöche", "nööchschte": "nöchschte", "erhööcht": "erhöcht", "erhööhe": "erhöhe", "erhööht": "erhöht",
+    "plaage": "plage", "raame": "rahme", "raamt": "rahmt", "rääge": "räge", "saame": "same", "schaarfi": "scharfi",
+    "schlaafed": "schlafed", "schlaafende": "schlafende", "spoot": "spot", "spoote": "spote", "spööte": "spöte",
+    "spööter": "spöter", "spöötere": "spötere", "spööteri": "spöteri", "spraachaagab": "sprachaagab",
+    "spraachgebruuch": "sprachgebruuch", "säät": "sät", "sääit": "säit", "sääed": "säed", "taat": "tat", "taate":
+    "tate", "taglöön": "taglöhn", "toose": "tose", "troon": "thron", "tröön": "thrön", "ufgheebti": "ufghebti",
+    "ufhööre": "ufhöre", "ussaag": "ussag", "usreede": "usrede", "uswaal": "uswahl", "waal": "wahl", "verraat":
+    "verrat", "verraate": "verrate", "verroot": "verrat", "verrääter": "verräter", "verdrääti": "verdrähti",
+    "versööne": "versöhne", "versöönig": "versöhnig", "versöönigstag": "versöhnigstag", "voruussaag": "voruussag",
+    "wäält": "wählt", "zuesaag": "zuesag", "zäänechnirsche": "zähnechnirsche", "zäätuusig": "zähtuusig",
+    "ältischteraat": "ältischterat", "ungefäär": "ungefähr", "ungfääri": "ungfähri", "unternäämer": "unternehmer",
+    "erwäänt": "erwähnt", "bloosgstellt": "blossgstellt", "bewaared": "bewahred", "bewaart": "bewahrt", "abgleent":
+    "abglehnt", "chliivee": "chliiveh", "nadelööhr": "nadelöhr", "gwonte": "gwohnte", "lidet": "liidet", "ziitaagaab":
+    "ziitaagab", "ortsaagaab": "ortsaagab", "ortsaagaabe": "ortsaagabe", "werkaagaab": "werkaagab", "rückgaab":
+    "rückgab", "ufgaab": "ufgab", "ufgaabe": "ufgabe", "usgaab": "usgab", "widergaab": "widergab", "hingaab":
+    "hingab", "süschteem": "süschtem", "riichssüschteem": "riichssüschtem", "schwääre": "schwäre", "schwääri":
+    "schwäri", "zieed": "ziehnd", "zied": "ziehnd", "mitzie": "mitzieh", "bezie": "bezieh", "usezie": "usezieh",
+    "wiiterzie": "wiiterzieh", "zruggziet": "zruggzieht", "iigloo": "iiglaa", "wäggloo": "wägglaa", "wiederholti":
+    "widerholti", "barmhärzig": "barmherzig", "barmhärzige": "barmherzige", "barmhärzigkeit": "barmherzigkeit",
+    "ärnted": "ernted", "ärntisch": "erntisch", "priester": "prieschter", "hohepriester": "hoheprieschter",
+    "verdienst": "verdienscht", "königin": "chönigin", "königliche": "chönigliche", "königriich": "chönigriich",
+    "königsherrschaft": "chönigsherrschaft", "königslinie": "chönigslinie", "königspalascht": "chönigspalascht",
+    "königspaläscht": "chönigspalascht", "königspalääscht": "chönigspalascht", "königswürde": "chönigswürde",
+    "königswürdi": "chönigswürdi", "dreikönigstag": "dreichönigstag", "gottesknächt": "gotteschnächt", "diräkter":
+    "direkter", "diräkts": "direkts", "indiräkt": "indirekt", "drüümal": "drümal", "sölled": "söled", "welles":
+    "weles", "sigid": "seiged", "chöntsch": "chönntsch", "kein": "kei", "dem": "däm", "achtzää": "achtzäh", "achzää":
+    "achtzäh", "drizää": "drizäh", "föifzää": "füfzäh", "nüünzää": "nüünzäh", "siebezää": "siebezäh", "dezueggää":
+    "dezuegää", "mitggää": "mitgää", "zruggzale": "zruggzahle", "heuchler": "hüüchler", "aposchtelgschicht":
+    "apostelgschicht", "jaarhundert": "jahrhundert", "jaarzähnt": "jahrzähnt", "tämpelbezirk": "tempelbezirk",
+    "tämpelgäld": "tempelgäld", "tämpelhuus": "tempelhuus", "tämpelreinigig": "tempelreinigig", "tämpelvorhang":
+    "tempelvorhang", "tämpelvorhof": "tempelvorhof", "gfüelt": "gfühlt", "überlieferet": "überliferet",
+    "überliefered": "überlifered", "überlieferig": "überliferig", "uslieferig": "usliferig", "uszliefere": "uszlifere",
 }
 MUNDART = {k.lower(): v for k, v in MUNDART.items()}
 _WORT = re.compile(r"[A-Za-zÄÖÜäöüéèà]+")
@@ -144,12 +206,26 @@ def _flach(x):
             yield from _flach(v)
 
 
+# Imperativ «häb» (von «haa») in festen Wendungen; scripts/mundart.py meldet «häb» als Konjunktiv (-> «heb»).
+# Auszeichnungsfest ([Häb]{3} [kei Angscht]{4,5}). Dazu englische Buchtitel mit Genitiv-Apostroph («Luke's Gospel»), die
+# das Apostroph-Muster (Regel 1.11) sonst meldet.
+FEHLALARM = re.compile(r"\b([Hh])äb(?=(?:\]\{[^}]*\})?\s+\[?(?:kei|keis|keini|Erbarme|Geduld|Sorg|Acht|Vertroue|Muet)\b)")
+FEHLALARM_TITEL = re.compile(r"\b(Luke|Mark|Matthew|John)['’]s (?=Gospel\b)")
+# Datensatz-IDs im Text (FIND-LUK-0008): «FIND» ist kein Mundartwort (Wortliste: «find» -> «fiind»).
+FEHLALARM_ID = re.compile(r"\b[A-Z]{2,}(?:-[A-Z0-9]+)+\b")
+
+
+def _ohne_fehlalarm(t):
+    return FEHLALARM_ID.sub("", FEHLALARM_TITEL.sub(r"\1s ", FEHLALARM.sub(r"\1aa", t)))
+
+
 def pruefe_mundart(texte, wo, streng=True):
     """Bricht ab, wenn ein Mundart-Text eine abgelöste Form der Lukas-Liste (MUNDART) oder – mit streng (Vorgabe) – einen
-    Fund von scripts/mundart.py (docs/ZUERIDUEUETSCH.md) enthält."""
+    Fund von scripts/mundart.py (docs/ZUERIDUEUETSCH.md) enthält. Ausgenommen sind die Fehlalarme in FEHLALARM."""
     texte = list(_flach(list(texte)))
     alt = sorted({w for t in texte for w in _WORT.findall(t) if w.lower() in MUNDART})
-    funde = sorted({f"{g} -> {neu} [{regel}]" for t in texte for g, regel, neu in mundart.pruefe(t)}) if streng else []
+    funde = sorted({f"{g} -> {neu} [{regel}]" for t in texte
+                    for g, regel, neu in mundart.pruefe(_ohne_fehlalarm(t))}) if streng else []
     if alt or funde:
         raise SystemExit(f"{wo}: Mundart nach docs/ZUERIDUEUETSCH.md: abgelöst {alt} {funde} "
                          "(scripts/mundart.py, scripts/authoring/lukas_einheitlich.py)")
