@@ -495,6 +495,8 @@ DEFS = ('<defs><marker id="sk-pf" viewBox="0 0 10 10" refX="8" refY="5" markerWi
         '<filter id="sk-papier" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="1.12"/>'
         '<feFuncG type="linear" slope="1.12"/><feFuncB type="linear" slope="1.14"/></feComponentTransfer></filter>'
         # dunkle Darstellung: Papier wird durchsichtig (Deckkraft aus der Helligkeit; ausserhalb des Bildes bleibt es durchsichtig)
+        # Bilder des Bildlexikons kommen freigestellt (vignetten.freistellen, beim Bau der App); leichter Schatten hebt Weisses ab
+        '<filter id="sk-bild" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="1.2" stdDeviation="1.3" flood-color="#22292C" flood-opacity=".22"/></filter>'
         '<filter id="sk-freistellen" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" '
         'values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -4 -4 -4 11.45 0"/></filter></defs>')
 
@@ -518,21 +520,46 @@ def gott_zeichen(cx, cy, s):
     return "".join(o)
 
 
+def sabbat_zeichen(x, y, w, hh):
+    """Sabbat (FIG-ZEICHEN-SABBAT): sieben Kalenderblätter mit den Ziffern 1–7, das siebte golden. Gezeichnet, weil das Zählen die
+    Aussage trägt (Rückmeldung Andi Neck 2026-11-21: graue und goldene Kreise wirkten wie Münzen, ohne Ziffern kein Zählen)."""
+    n, luecke = 7, 3
+    bw = min((w - luecke * (n - 1)) / n, hh * 0.8)
+    bh = bw * 1.2
+    x0 = x + (w - (n * bw + (n - 1) * luecke)) / 2
+    y0 = y + (hh - bh) / 2
+    o = ['<g class="sk-zeichen">']
+    for i in range(n):
+        xx = x0 + i * (bw + luecke)
+        siebter = i == n - 1
+        o.append(f'<rect x="{xx:.1f}" y="{y0:.1f}" width="{bw:.1f}" height="{bh:.1f}" rx="{bw * 0.16:.1f}" '
+                 f'fill="{"#F2C14E" if siebter else "#FBFCFD"}" stroke="{"#C9931E" if siebter else "#AEB8BD"}" stroke-width="1"/>'
+                 f'<rect x="{xx:.1f}" y="{y0:.1f}" width="{bw:.1f}" height="{bh * 0.24:.1f}" rx="{bw * 0.16:.1f}" fill="{"#C9931E" if siebter else "#AEB8BD"}"/>'
+                 f'<text x="{xx + bw / 2:.1f}" y="{y0 + bh * 0.82:.1f}" font-family="{SANS}" font-size="{bw * 0.55:.1f}" font-weight="{700 if siebter else 500}" '
+                 f'text-anchor="middle" fill="{"#5A3D00" if siebter else "#4A555A"}">{i + 1}</text>')
+    return "".join(o) + "</g>"
+
+
+GEZEICHNET = {"FIG-GOTT": lambda x, y, w, hh: gott_zeichen(x + w / 2, y + hh / 2, min(w, hh)), "FIG-ZEICHEN-SABBAT": sabbat_zeichen}
+
+
 def _ein_bild(h, x, y, w, hh):
-    """Ein Bild des Bildlexikons in das Feld x, y, w × hh (Ausschnitt mit dem Motiv, Papier verschwindet)."""
-    if h == "#gott":
-        g = min(w, hh)
-        return gott_zeichen(x + w / 2, y + hh / 2, g)
+    """Ein Bild des Bildlexikons in das Feld x, y, w × hh (Ausschnitt mit dem Motiv); «#ID» = gezeichnetes Zeichen."""
+    if isinstance(h, str) and h.startswith("#"):
+        fid = "FIG-GOTT" if h == "#gott" else h[1:]
+        return GEZEICHNET[fid](x, y, w, hh)
     href, r = h if isinstance(h, tuple) else (h, None)
     if r:
         bx, by, bw, bh, iw, ih = r
         return (f'<svg x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" viewBox="{bx} {by} {bw} {bh}" preserveAspectRatio="xMidYMid meet">'
-                f'<image href="{href}" x="0" y="0" width="{iw}" height="{ih}" style="filter:var(--sk-bild-filter,url(#sk-papier));mix-blend-mode:var(--sk-bild-mischung,multiply)"/></svg>')
+                f'<image href="{href}" x="0" y="0" width="{iw}" height="{ih}" style="filter:var(--sk-bild-filter,url(#sk-bild))"/></svg>')
     return (f'<image href="{href}" x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{hh:.1f}" preserveAspectRatio="xMidYMid meet" '
-            f'style="filter:var(--sk-bild-filter,url(#sk-papier));mix-blend-mode:var(--sk-bild-mischung,multiply)"/>')
+            f'style="filter:var(--sk-bild-filter,url(#sk-bild))"/>')
 
 
 def _seitenverhaeltnis(h):
+    if h == "#FIG-ZEICHEN-SABBAT":
+        return 3.6
     if h == "#gott" or not isinstance(h, tuple) or not h[1]:
         return 1.0
     return h[1][2] / h[1][3]

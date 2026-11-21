@@ -170,3 +170,20 @@ z. B. `style="fill:var(--sk-karte,#FFFFFF)"`; ohne Variable gilt die Vorgabe. Ro
 Bildlexikons `--sk-bild-mischung` (hell: multiply, dunkel: normal) und `--sk-bild-filter` (hell: Papier aufhellen, dunkel: Papier
 freistellen). Die dunkle Palette steht in `app/bible/template.html` unter `.app[data-theme=dark]`. Flächen haben gleiche Helligkeit
 (OKLCH L ≈ 0,955). Kacheln ohne Rahmen, mit abgerundeten Ecken.
+
+## Zeichen und Bilder verständlich machen (2026-11-21)
+
+Rückmeldung Andi Neck zum Sabbat-Zeichen (sechs graue und ein goldener Kreis wirkten wie Münzen) und zum Lamm (weiss auf weiss
+kaum sichtbar, im Dunkeln gelb-schwarz). Allgemeine Regeln für jedes Bild und Zeichen in Strukturbildern und im Bildlexikon:
+1. **Die Aussage muss ohne Erklärung erkennbar sein.** Für jedes Zeichen fragen: Was würde jemand ohne Legende darin sehen? Ist es
+   mit etwas anderem verwechselbar (Kreise ↔ Münzen, Totenkopf ↔ Gift)? Dann ein konkreteres Bild wählen.
+2. **Zählen zeigt Ziffern.** Geht es um eine Zahl, Reihenfolge oder ein Zählen (sieben Tage, zwölf Stämme, drei Mal), stehen die
+   Ziffern sichtbar im Bild. Ziffern und Schrift werden gezeichnet, nie gemalt (das Bildmodell schreibt unzuverlässig); solche Zeichen
+   stehen in `struktur_kachel.GEZEICHNET` (Gott: Strahlenkranz mit יהוה; Sabbat: sieben Kalenderblätter 1–7, das siebte golden).
+3. **Das naheliegende Sinnbild wählen.** Ein Tag ist ein Kalenderblatt oder Sonne über Land, kein Kreis; Ruhe ein ruhender Mensch,
+   nicht eine Farbe. Abstraktes über eine konkrete Handlung oder ein Bildwort des Textes zeigen.
+4. **Motiv hebt sich ab, hell wie dunkel.** Die Bilder des Bildlexikons kommen in Strukturbildern freigestellt (Papier vom Rand her
+   durchsichtig, weiss Gemaltes innerhalb der Umrisse bleibt), mit leichtem Schatten und etwas kräftigeren Farben
+   (`vignetten.freistellen`, beim Bau der App).
+5. **Prüfen:** Neben der Bildprüfung beim Malen eine Bedeutungsprüfung für Zeichen: eine weitere Instanz sieht nur das Bild und
+   nennt die Bedeutung; weicht sie vom Lexikon ab, wird das Zeichen überarbeitet (geplant nach dem Malen aller Lexikon-Bilder).

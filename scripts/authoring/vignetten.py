@@ -20,6 +20,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 DATEN = ROOT / "scripts/authoring/bilder_aquarell_daten"
 STIL = ROOT / "data/illustrations/styles/ILLSTYLE-AQUARELL.json"
 GOTT = "FIG-GOTT"
+GEZEICHNET = {"FIG-ZEICHEN-SABBAT"}
 _st = None
 
 
@@ -66,6 +67,8 @@ def bild(fid):
     """href (relativ zum Ordner der Bilder) und Ausschnitt; «#gott» für den gezeichneten Strahlenkranz."""
     if fid == GOTT:
         return "#gott"
+    if fid in GEZEICHNET:   # Zeichen, deren Aussage Ziffern oder Schrift braucht: gezeichnet (struktur_kachel.GEZEICHNET)
+        return "#" + fid
     r = renderings().get(fid) or {}
     c = r.get("check") or {}
     if r.get("image") and c.get("stufe") == "ki-geprueft" and (ROOT / r["image"]).exists():
@@ -101,3 +104,39 @@ if __name__ == "__main__":
         stand()
     else:
         print(__doc__)
+
+
+_frei = {}
+
+
+def freistellen(pfad):
+    """Einzelbild des Bildlexikons ohne Papier (WebP mit Transparenz), für Strukturbilder in hell und dunkel (Rückmeldung Andi Neck
+    2026-11-21: weisses Lamm auf weisser Karte unsichtbar, im Dunkeln gelb-schwarz). Hintergrund = das Papier, das vom Bildrand her
+    zusammenhängt (Flutfüllung mit Toleranz); weiss Gemaltes innerhalb der Umrisse (Lamm, Kleid) bleibt deckend. Weiche Kante aus dem
+    Farbabstand zum Papier; dazu etwas kräftigere Farben (Sättigung, Kontrast). Wird beim Bau der App erzeugt, nicht gespeichert."""
+    if pfad in _frei:
+        return _frei[pfad]
+    import io
+    from PIL import Image, ImageChops, ImageEnhance, ImageFilter, ImageDraw
+    im = Image.open(ROOT / pfad).convert("RGB")
+    w, h = im.size
+    rand = [im.getpixel((x, y)) for x in range(0, w, 8) for y in (0, h - 1)] + [im.getpixel((x, y)) for y in range(0, h, 8) for x in (0, w - 1)]
+    papier = tuple(sorted(c[i] for c in rand)[len(rand) // 2] for i in range(3))
+    diff = ImageChops.difference(im, Image.new("RGB", im.size, papier)).convert("L")   # Farbabstand zum Papier
+    # Flutfüllung über «nahe am Papier» vom Rand aus: nur zusammenhängendes Papier wird Hintergrund
+    # Umrisse sind oft gestrichelt: Motiv-Maske erst verdicken (Lücken schliessen), dann fluten, dann Hintergrund wieder zurücknehmen
+    motiv = diff.point(lambda v: 255 if v >= 22 else 0).filter(ImageFilter.MaxFilter(15))
+    nah = motiv.point(lambda v: 0 if v else 255)
+    flut = nah.copy()
+    for x, y in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1), (w // 2, 0), (w // 2, h - 1), (0, h // 2), (w - 1, h // 2)):
+        if flut.getpixel((x, y)) == 255:
+            ImageDraw.floodfill(flut, (x, y), 128)
+    hinter = flut.point(lambda v: 255 if v == 128 else 0).filter(ImageFilter.MaxFilter(15))
+    weich = diff.point(lambda v: max(0, min(255, (v - 6) * 255 // 22)))            # Lavierung am Rand bleibt halb sichtbar
+    alpha = ImageChops.composite(weich, Image.new("L", im.size, 255), hinter).filter(ImageFilter.GaussianBlur(0.6))
+    farbig = ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.35)).enhance(1.12)
+    farbig.putalpha(alpha)
+    b = io.BytesIO()
+    farbig.save(b, "WEBP", quality=82, method=6)   # WebP mit Transparenz (PNG wäre rund achtmal grösser)
+    _frei[pfad] = b.getvalue()
+    return _frei[pfad]

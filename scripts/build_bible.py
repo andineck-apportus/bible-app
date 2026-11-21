@@ -251,6 +251,7 @@ for vid, v in variants_extra.items():
 # Bilder samt Bildauftrag (Felder, Deutungshinweis) im Paket ihres Buchs (Buchebene in b/_overview).
 # Schlüssel in der App: Bibel, Testamente, Buchgruppen = ID der Zusammenfassung; Buch «JHN», Kapitel «JHN.2», Abschnitt = ID der Texteinheit.
 import localizations as _l10n  # noqa: E402
+sys.path.insert(0, str(ROOT / "scripts/authoring"))
 ill_recs = {}
 for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
     r = json.loads(p.read_text(encoding="utf-8"))
@@ -316,7 +317,11 @@ def _ill_svg(fp):
     def _emb(m):
         f = fp.parent / m.group(1)
         typ = {"webp": "image/webp", "jpg": "image/jpeg", "png": "image/png"}[f.suffix[1:]]
-        return f'href="data:{typ};base64,{base64.b64encode(f.read_bytes()).decode()}"'
+        daten = f.read_bytes()
+        if m.group(1).startswith("figuren/"):   # Bilder des Bildlexikons in Strukturbildern: freigestellt, kräftigere Farben
+            import vignetten as _vg
+            daten, typ = _vg.freistellen(str(f.relative_to(ROOT))), "image/webp"
+        return f'href="data:{typ};base64,{base64.b64encode(daten).decode()}"'
     return re.sub(r'href="((?:img|figuren)/[^"]+)"', _emb, svg)   # figuren/: Bilder des Bildlexikons in Strukturbildern
 
 

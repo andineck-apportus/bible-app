@@ -42,7 +42,9 @@ jobs:
           python3 scripts/test_versification.py
           python3 scripts/test_import.py
       - name: App bauen
-        run: python3 scripts/build_bible.py | tail -1
+        run: |
+          pip install -q pillow   # Freistellen der Lexikon-Bilder in Strukturbildern (vignetten.freistellen)
+          python3 scripts/build_bible.py | tail -1
 
       - name: Layout der Strukturbilder (Überlappungen, Abstände, Ränder)
         run: |

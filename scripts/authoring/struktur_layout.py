@@ -21,11 +21,11 @@ RAND_KACHEL, RAND_KASTEN = 6, 3   # Mindestabstand des Textes zum Kachelrand und
 JS = """(lg) => {
   const r = [];
   const svg = document.querySelector('svg');
-  const t = [...svg.querySelectorAll('text')].filter(x => !x.classList.contains('lw') || x.classList.contains('lw-' + lg));
+  const t = [...svg.querySelectorAll('text')].filter(x => !x.closest('.sk-zeichen')).filter(x => !x.classList.contains('lw') || x.classList.contains('lw-' + lg));
   const box = e => { if (e.tagName === 'text') { const b = e.getBBox(); return {x: b.x, y: b.y, w: b.width, h: b.height}; }
     const b = e.getBoundingClientRect(); return {x: b.x, y: b.y, w: b.width, h: b.height}; };
   const T = t.map(e => ({b: box(e), s: e.textContent.trim().slice(0, 40)})).filter(o => o.b.w > 0);
-  const K = [...svg.querySelectorAll('rect')].map(box).filter(b => b.w < +svg.getAttribute('width') - 2 && b.w > 0);
+  const K = [...svg.querySelectorAll('rect')].filter(x => !x.closest('.sk-zeichen')).map(box).filter(b => b.w < +svg.getAttribute('width') - 2 && b.w > 0);
   const C = [...svg.querySelectorAll('circle')].map(box);
   // Bildfeld: verschachteltes svg nach seinen Attributen (getBoundingClientRect zählt den abgeschnittenen Rest des Bildes mit)
   const I = [...svg.querySelectorAll('image')].map(e => { const p = e.parentElement;
