@@ -82,14 +82,19 @@ def eintraege():
     return out
 
 
+STUFE = 2   # Stufen der Lockerung; jede Stufe lockert nur, darum bleiben Bilder gültig, die eine frühere Stufe bestanden haben
+
+
 def lockern(r, e, c, an=True):
     """Lockerung (portraets.json «lockerung», Entscheid 2026-11-21): Eine Regel verbietet nur, was die Beschreibung nicht selbst
     verlangt (G-EFFEKT sagt es schon: «die der Text nicht nennt»). Ohne diesen Zusatz fielen Zeichen durch, deren Inhalt Licht,
     eine Sprechblase, ein Verbotskreis oder ein Kind ist (Läufe 61–77)."""
     lo = c.get("lockerung") or {}
+    an = STUFE if an is True else int(an or 0)   # Stufe 1: Zusatz zur Beschreibung (Lauf 78/79); Stufe 2: je Regel (ab Lauf 80)
     if not an or r["id"] not in lo.get("regeln", []):
         return r
-    return {**r, "en": r["en"] + lo["zusatz_en"].replace("{beschreibung}", e["beschreibung"])}
+    return {**r, "en": r["en"] + ((lo.get("je_regel_en") or {}).get(r["id"], "") if an >= 2 else "")
+            + lo["zusatz_en"].replace("{beschreibung}", e["beschreibung"])}
 
 
 def regeln(e, c=None, lockerung=True):
@@ -127,23 +132,25 @@ def fingerabdruck(e, c=None, lockerung=True):
     """Was das Porträt bestimmt: Verfahren, Beschreibung, Regeln, Malauftrag. Ändert sich etwas, gilt die Prüfung als veraltet."""
     c = c or cfg()
     return BP.sha({"verfahren": BP.VERFAHREN, "portraets": c["version"], "beschreibung": e["beschreibung"], "regeln": regeln(e, c, lockerung),
-                   "auftrag": auftrag(e, c)})
+                   "auftrag": auftrag(e, c, lockerung)})
 
 
 def aktuell(ch, e, c=None):
     """Prüfung noch gültig? Eine Lockerung macht Bilder nicht veraltet, die die strengere Fassung bestanden haben."""
     c = c or cfg()
-    return ch.get("plan_sha") in (fingerabdruck(e, c), fingerabdruck(e, c, lockerung=False))
+    return ch.get("plan_sha") in {fingerabdruck(e, c, s) for s in range(STUFE + 1)}
 
 
 def beschreibung_sha(text):
     return BP.sha({"beschreibung": text})
 
 
-def auftrag(e, c=None):
+def auftrag(e, c=None, lockerung=True):
     c = c or cfg()
     fig = BA.lade(DATEN / "figuren.json")
     t = c["auftrag_en"][e["art"]].replace("{beschreibung}", e["beschreibung"])
+    if (STUFE if lockerung is True else int(lockerung or 0)) >= 2 and e["art"] == "gruppe":
+        t += (c.get("lockerung") or {}).get("gruppe_anzahl_en", "")
     erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
     if erl:
         t += f" Allowed in addition: {erl}."
