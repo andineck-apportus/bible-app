@@ -88,7 +88,7 @@ Ein gemeinsames Figuren- und Objektblatt gilt für Szenen, Nahaufnahmen, Übersi
 
 Aus [BILDSPRACHE.md](BILDSPRACHE.md), unverändert verbindlich auch im Aquarellstil:
 - **Jesus** hat ein Gesicht wie alle Menschen – er ist Mensch geworden; nie verdeckt, reduziert oder abgewandt, um ihn auszunehmen (Andi Neck, 2026-10-27). Kein Heiligenschein nötig; erkennbar an Gesicht, Haar, Bart und Kleidungsfarben.
-- **Gott** nie als Mensch; Zeichen bleibt der Strahlenkranz mit יהוה.
+- **Gott** nie als Mensch; Zeichen bleibt der Strahlenkranz mit יהוה. In Strukturbildern wird er gezeichnet (Glied mit FIG-GOTT); in den gemalten Szenen steht kein Gottessymbol, Gottes Reden und Handeln wird aus dem Zusammenhang ersichtlich (Entscheid Andi Neck 2026-11-21).
 - **«Die Juden»** im Johannesevangelium als neutrale, würdige Menge verschiedenen Alters; nie karikiert, eingefärbt oder vereinheitlicht; keine typisierten Merkmale.
 - **Gewalt und starke Gefühle:** erkennbar zeigen, was geschieht, ohne auszumalen (Bewegung, Folge, Augenblick davor/danach); Tod und Böses nicht ausblenden, nicht beschönigen.
 - **Kennzeichnung:** Jedes Bild ist Deutung und verweist auf den Prozess und die Fassung, nach der es entstanden ist ([PROZESSE.md](PROZESSE.md), PROC-BILD-AQUARELL); Modell, Datum und Prüfstand stehen im Datensatz, der Prüfstand auch in der Legende (Entscheid Andi Neck 2026-10-28: in der App keine KI-Hinweise, sondern der Prozessverweis).
