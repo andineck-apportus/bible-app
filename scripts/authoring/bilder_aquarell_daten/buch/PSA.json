@@ -6,7 +6,16 @@
   "figuren": {
     "FIG-OBJ-SCHAF": "A sheep: a single white sheep with a cream woolly fleece and a calm, gentle face, drawn simply, not a cartoon.",
     "FIG-OBJ-HIRTENSTAB": "A shepherd's staff and rod: a long plain wooden staff with a curved crook at the top, and beside it a short, thick wooden club; no ornaments.",
-    "FIG-ORT-WEIDE": "A green pasture in the Judean hill country: lush green grass around a small, still pool of clear water; faint grey-blue hills far behind, drawn with a few washes."
+    "FIG-ORT-WEIDE": "A green pasture in the Judean hill country: lush green grass around a small, still pool of clear water; faint grey-blue hills far behind, drawn with a few washes.",
+    "FIG-GRUPPE-GOTTLOSE": "The wicked: three men of different ages in fine dark red-brown and black robes with gold-edged belts, sitting close together with their heads bent in whispered counsel, haughty, dismissive faces; dignified, never caricatured.",
+    "FIG-OBJ-BAUM-AM-WASSER": "A tree planted by streams of water: a healthy fruit tree with a full green crown and ripe fruits, its roots reaching into a small clear blue stream that flows past it.",
+    "FIG-OBJ-KLEIDER-VERLOST": "Clothes cast for by lot: a pale garment lying folded on the ground, and a hand throwing three angular lot stones with scratched marks (two light, one dark) onto it.",
+    "FIG-OBJ-SPREU": "Chaff: a cloud of light golden-yellow husks and bits of straw whirling away in the wind above a threshing floor, the heavy grain lying below.",
+    "FIG-OBJ-WURM": "A small pink earthworm curling on dark soil.",
+    "FIG-ORT-TIEFE": "The depth of the sea: dark blue water seen from below, heavy waves rolling along the surface above, strands of seaweed and reeds drifting.",
+    "FIG-ZEICHEN-AUGE": "A sign as a small watercolour vignette: a single open human eye with a brown iris.",
+    "FIG-ZEICHEN-MORGEN": "A sign as a small watercolour vignette: a yellow sun rising over a calm sea, the sky pale pink and gold.",
+    "FIG-ZEICHEN-WIND": "A sign as a small watercolour vignette: a cloud with a puffed-cheek face blowing a stream of wind lines."
   },
   "kenn_en": {
     "FIG-OBJ-SCHAF": "a white sheep"
@@ -40,6 +49,47 @@
       ],
       "legend_de": "Grünes Gras am stillen Wasser",
       "legend_gsw": "Grüens Gras am stille Wasser"
+    },
+    "FIG-GRUPPE-GOTTLOSE": {
+      "de": "Gottlose",
+      "en": "the wicked",
+      "gsw": "Gottlosi",
+      "kind": "group",
+      "era": "ot",
+      "identity_de": "Menschen, die nicht nach Gott fragen und auf ihrem eigenen Weg gehen, in Psalmen und Sprüchen den Gerechten gegenübergestellt ([[PSA.1.1]], [[PSA.1.4-PSA.1.6]]).",
+      "traits_de": [
+        "Drei Männer in feinen dunklen Gewändern, zusammengesteckte Köpfe",
+        "Ernste, abweisende Mienen, keine Karikatur"
+      ],
+      "legend_de": "drei Männer in dunklen feinen Gewändern",
+      "legend_gsw": "drei Manne i dunkle, fiine Gwänder"
+    },
+    "FIG-OBJ-BAUM-AM-WASSER": {
+      "de": "Baum am Wasser",
+      "en": "Tree by streams of water",
+      "gsw": "Baum am Wasser",
+      "kind": "object",
+      "era": "ot",
+      "identity_de": "Ein Baum, an Wasserbächen gepflanzt, der zu seiner Zeit Frucht bringt und dessen Blätter nicht welken: Bild für den, der Gott vertraut ([[PSA.1.3]], [[JER.17.7-JER.17.8]]).",
+      "traits_de": [
+        "Grüner Fruchtbaum mit voller Krone und Früchten",
+        "Ein Bach fliesst an seinen Wurzeln vorbei"
+      ],
+      "legend_de": "Fruchtbaum an einem Bach",
+      "legend_gsw": "Fruchtbaum amene Bach"
+    },
+    "FIG-OBJ-SPREU": {
+      "de": "Spreu",
+      "en": "Chaff",
+      "gsw": "Spreuer",
+      "kind": "object",
+      "era": "ot",
+      "identity_de": "Spreu, die beim Worfeln vom Wind weggeweht wird: Bild für die Gottlosen ([[PSA.1.4]], [[PSA.35.5]], [[HOS.13.3]]).",
+      "traits_de": [
+        "Leichte goldgelbe Spelzen, die vom Wind fortgewirbelt werden"
+      ],
+      "legend_de": "vom Wind verwehte Spelzen",
+      "legend_gsw": "vom Wind verwäiti Spreuer"
     }
   },
   "stationen": [
@@ -75,65 +125,103 @@
             "gsw": "im Rat vo de Gottlose gaa",
             "ref": "PSA.1.1",
             "seite": "a",
-            "gestrichen": true
+            "gestrichen": true,
+            "depicts": [
+              "FIG-GRUPPE-GOTTLOSE",
+              "FIG-ORT-WEG"
+            ]
           },
           {
             "de": "auf dem Weg der Sünder stehen",
             "gsw": "uf em Wääg vo de Sünder staa",
             "ref": "PSA.1.1",
             "seite": "a",
-            "gestrichen": true
+            "gestrichen": true,
+            "depicts": [
+              "FIG-ORT-WEG",
+              "FIG-ZEICHEN-SUENDE"
+            ]
           },
           {
             "de": "bei den Spöttern sitzen",
             "gsw": "bi de Spötter hocke",
             "ref": "PSA.1.1",
             "seite": "a",
-            "gestrichen": true
+            "gestrichen": true,
+            "depicts": [
+              "FIG-GRUPPE-GOTTLOSE",
+              "FIG-ZEICHEN-GEREDE"
+            ]
           },
           {
             "de": "Freude an der Weisung des HERRN",
             "gsw": "Fröid a de Wiisig vom HERR",
             "ref": "PSA.1.2",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-OBJ-SCHRIFTROLLE",
+              "FIG-ZEICHEN-FREUDE"
+            ]
           },
           {
             "de": "wie ein Baum am Wasser",
             "gsw": "wie en Baum am Wasser",
             "ref": "PSA.1.3",
             "seite": "a",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-OBJ-BAUM-AM-WASSER"
+            ]
           },
           {
             "de": "wie Spreu, die der Wind verweht",
             "gsw": "wie Spröi, wo de Wind vertreit",
             "ref": "PSA.1.4",
             "seite": "b",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-OBJ-SPREU",
+              "FIG-ZEICHEN-WIND"
+            ]
           },
           {
             "de": "bestehen nicht im Gericht",
             "gsw": "bestönd nöd im Gricht",
             "ref": "PSA.1.5",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-GRUPPE-GOTTLOSE",
+              "FIG-ZEICHEN-GERICHT"
+            ]
           },
           {
             "de": "der HERR kennt ihren Weg",
             "gsw": "de HERR kännt ire Wääg",
             "ref": "PSA.1.6",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-GOTT",
+              "FIG-ORT-WEG"
+            ]
           },
           {
             "de": "ihr Weg verliert sich",
             "gsw": "ire Wääg verlüürt sich",
             "ref": "PSA.1.6",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-ORT-WEG",
+              "FIG-ZEICHEN-FINSTERNIS"
+            ]
           },
           {
             "de": "glücklich, wer bei ihm Zuflucht sucht",
             "gsw": "glücklich, wer bi im Zueflucht suecht",
             "ref": "PSA.2.12",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-ZEICHEN-ZUFLUCHT"
+            ]
           }
         ]
       },
@@ -178,57 +266,93 @@
         "mitte": {
           "de": "du hast mich erhört",
           "gsw": "du häsch mich erhört",
-          "ref": "PSA.22.21"
+          "ref": "PSA.22.21",
+          "depicts": [
+            "FIG-GOTT",
+            "FIG-ZEICHEN-RETTUNG"
+          ]
         },
         "elemente": [
           {
             "de": "mein Gott, warum verlassen?",
             "gsw": "mi Gott, worum verlaa?",
             "ref": "PSA.22.1",
-            "richtung": "ab"
+            "richtung": "ab",
+            "depicts": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-TRAUER"
+            ]
           },
           {
             "de": "unsere Väter vertrauten dir",
             "gsw": "üsi Vätter händ dir vertraut",
             "ref": "PSA.22.4",
-            "richtung": "auf"
+            "richtung": "auf",
+            "depicts": [
+              "FIG-GRUPPE-ISRAEL",
+              "FIG-ZEICHEN-GLAUBEN"
+            ]
           },
           {
             "de": "ein Wurm, kein Mensch; verspottet",
             "gsw": "en Wurm, kein Mänsch; verspottet",
             "ref": "PSA.22.6-PSA.22.7",
-            "richtung": "ab"
+            "richtung": "ab",
+            "depicts": [
+              "FIG-OBJ-WURM",
+              "FIG-ZEICHEN-GEREDE"
+            ]
           },
           {
             "de": "Kräfte zerflossen, Kleider verlost",
             "gsw": "Chraft verlaufe, Chleider verloset",
             "ref": "PSA.22.14-PSA.22.18",
-            "richtung": "ab"
+            "richtung": "ab",
+            "depicts": [
+              "FIG-OBJ-KLEIDER-VERLOST",
+              "FIG-OBJ-LOS"
+            ]
           },
           {
             "de": "Bitte: eile mir zu helfen",
             "gsw": "Bitt: chumm mir schnäll z Hilf",
             "ref": "PSA.22.19-PSA.22.20",
-            "richtung": "ab"
+            "richtung": "ab",
+            "depicts": [
+              "FIG-ZEICHEN-BETEN",
+              "FIG-ZEICHEN-RETTUNG"
+            ]
           },
           {
             "de": "deinen Namen in der Gemeinde rühmen",
             "gsw": "dis Name i de Gmeind rüeme",
             "ref": "PSA.22.22",
-            "richtung": "auf"
+            "richtung": "auf",
+            "depicts": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-ZEICHEN-PREISEN"
+            ]
           },
           {
             "de": "alle Enden der Erde kehren um",
             "gsw": "alli Änd vo de Wält chehred um",
             "ref": "PSA.22.27",
-            "richtung": "auf"
+            "richtung": "auf",
+            "depicts": [
+              "FIG-GRUPPE-VOELKER",
+              "FIG-ZEICHEN-UMKEHR"
+            ]
           },
           {
             "de": "kommende Geschlechter erzählen",
             "gsw": "chömendi Gschlächter verzelled",
             "ref": "PSA.22.30-PSA.22.31",
             "richtung": "auf",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-GRUPPE-KINDER",
+              "FIG-ZEICHEN-STAMMBAUM"
+            ]
           }
         ]
       },
@@ -363,35 +487,54 @@
           {
             "de": "Durst nach Gott wie die Hirschkuh",
             "gsw": "Durscht nach Gott wie d Hirschchue",
-            "ref": "PSA.42.1-PSA.42.4"
+            "ref": "PSA.42.1-PSA.42.4",
+            "depicts": [
+              "FIG-OBJ-HIRSCHKUH"
+            ]
           },
           {
             "de": "Kehrvers: hoffe auf Gott",
             "gsw": "Chehrvers: hoff uf Gott",
             "ref": "PSA.42.5",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-ZEICHEN-HOFFNUNG"
+            ]
           },
           {
             "de": "Fluten gehen über mich",
             "gsw": "Flute gönd über mich",
-            "ref": "PSA.42.6-PSA.42.10"
+            "ref": "PSA.42.6-PSA.42.10",
+            "depicts": [
+              "FIG-ORT-TIEFE"
+            ]
           },
           {
             "de": "Kehrvers: hoffe auf Gott",
             "gsw": "Chehrvers: hoff uf Gott",
             "ref": "PSA.42.11",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-ZEICHEN-HOFFNUNG"
+            ]
           },
           {
             "de": "Bitte: sende dein Licht",
             "gsw": "Bitt: schick dis Liecht",
-            "ref": "PSA.43.1-PSA.43.4"
+            "ref": "PSA.43.1-PSA.43.4",
+            "depicts": [
+              "FIG-ZEICHEN-LICHT",
+              "FIG-ORT-TEMPEL"
+            ]
           },
           {
             "de": "Kehrvers: hoffe auf Gott",
             "gsw": "Chehrvers: hoff uf Gott",
             "ref": "PSA.43.5",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-ZEICHEN-HOFFNUNG"
+            ]
           }
         ]
       },
@@ -437,57 +580,100 @@
           {
             "de": "Alef · Bet",
             "gsw": "Alef · Bet",
-            "ref": "PSA.119.1-PSA.119.16"
+            "ref": "PSA.119.1-PSA.119.16",
+            "depicts": [
+              "FIG-ORT-WEG",
+              "FIG-ROLLE-JUNGER-MANN"
+            ]
           },
           {
             "de": "Gimel · Dalet",
             "gsw": "Gimel · Dalet",
-            "ref": "PSA.119.17-PSA.119.32"
+            "ref": "PSA.119.17-PSA.119.32",
+            "depicts": [
+              "FIG-ZEICHEN-AUGE",
+              "FIG-OBJ-SCHRIFTROLLE"
+            ]
           },
           {
             "de": "He · Waw",
             "gsw": "He · Waw",
-            "ref": "PSA.119.33-PSA.119.48"
+            "ref": "PSA.119.33-PSA.119.48",
+            "depicts": [
+              "FIG-ORT-WEG",
+              "FIG-ZEICHEN-FREIHEIT"
+            ]
           },
           {
             "de": "Sajin · Chet",
             "gsw": "Sajin · Chet",
-            "ref": "PSA.119.49-PSA.119.64"
+            "ref": "PSA.119.49-PSA.119.64",
+            "depicts": [
+              "FIG-ZEICHEN-TROST",
+              "FIG-ZEICHEN-NACHT"
+            ]
           },
           {
             "de": "Tet · Jod",
             "gsw": "Tet · Jod",
-            "ref": "PSA.119.65-PSA.119.80"
+            "ref": "PSA.119.65-PSA.119.80",
+            "depicts": [
+              "FIG-OBJ-MUENZEN",
+              "FIG-ZEICHEN-HAND"
+            ]
           },
           {
             "de": "Kaf · Lamed",
             "gsw": "Kaf · Lamed",
-            "ref": "PSA.119.81-PSA.119.96"
+            "ref": "PSA.119.81-PSA.119.96",
+            "depicts": [
+              "FIG-ZEICHEN-HIMMELSGEWOELBE",
+              "FIG-ZEICHEN-LAND-UND-PFLANZEN"
+            ]
           },
           {
             "de": "Mem · Nun",
             "gsw": "Mem · Nun",
-            "ref": "PSA.119.97-PSA.119.112"
+            "ref": "PSA.119.97-PSA.119.112",
+            "depicts": [
+              "FIG-OBJ-LAMPE",
+              "FIG-ORT-WEG"
+            ]
           },
           {
             "de": "Samech · Ajin",
             "gsw": "Samech · Ajin",
-            "ref": "PSA.119.113-PSA.119.128"
+            "ref": "PSA.119.113-PSA.119.128",
+            "depicts": [
+              "FIG-ZEICHEN-ZUFLUCHT"
+            ]
           },
           {
             "de": "Pe · Zade",
             "gsw": "Pe · Zade",
-            "ref": "PSA.119.129-PSA.119.144"
+            "ref": "PSA.119.129-PSA.119.144",
+            "depicts": [
+              "FIG-ZEICHEN-LICHT",
+              "FIG-ZEICHEN-TRAUER"
+            ]
           },
           {
             "de": "Kof · Resch",
             "gsw": "Kof · Resch",
-            "ref": "PSA.119.145-PSA.119.160"
+            "ref": "PSA.119.145-PSA.119.160",
+            "depicts": [
+              "FIG-ZEICHEN-MORGEN",
+              "FIG-ZEICHEN-BETEN"
+            ]
           },
           {
             "de": "Schin · Taw",
             "gsw": "Schin · Taw",
-            "ref": "PSA.119.161-PSA.119.176"
+            "ref": "PSA.119.161-PSA.119.176",
+            "depicts": [
+              "FIG-ZEICHEN-PREISEN",
+              "FIG-OBJ-SCHAF"
+            ]
           }
         ]
       },
@@ -533,33 +719,56 @@
           {
             "de": "Buch I: Ps 1–41",
             "gsw": "Buech I: Ps 1–41",
-            "ref": "PSA.41.13"
+            "ref": "PSA.41.13",
+            "depicts": [
+              "FIG-DAVID",
+              "FIG-OBJ-LEIER"
+            ]
           },
           {
             "de": "Buch II: Ps 42–72",
             "gsw": "Buech II: Ps 42–72",
-            "ref": "PSA.72.18-PSA.72.20"
+            "ref": "PSA.72.18-PSA.72.20",
+            "depicts": [
+              "FIG-DAVID",
+              "FIG-SALOMO"
+            ]
           },
           {
             "de": "Buch III: Ps 73–89",
             "gsw": "Buech III: Ps 73–89",
-            "ref": "PSA.89.52"
+            "ref": "PSA.89.52",
+            "depicts": [
+              "FIG-ORT-TEMPELRUINE"
+            ]
           },
           {
             "de": "Buch IV: Ps 90–106",
             "gsw": "Buech IV: Ps 90–106",
-            "ref": "PSA.106.48"
+            "ref": "PSA.106.48",
+            "depicts": [
+              "FIG-MOSE"
+            ]
           },
           {
             "de": "Buch V: Ps 107–150",
             "gsw": "Buech V: Ps 107–150",
-            "ref": "PSA.107.1"
+            "ref": "PSA.107.1",
+            "depicts": [
+              "FIG-GRUPPE-VERBANNTE",
+              "FIG-ZEICHEN-PREISEN"
+            ]
           },
           {
             "de": "Schluss: alles, was atmet, lobe",
             "gsw": "Schluss: alles, wo schnuufet, lobi",
             "ref": "PSA.150.6",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-OBJ-WIDDERHORN",
+              "FIG-OBJ-LEIER",
+              "FIG-OBJ-ZIMBELN"
+            ]
           }
         ]
       },
