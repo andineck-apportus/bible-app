@@ -82,7 +82,7 @@ def eintraege():
     return out
 
 
-STUFE = 2   # Stufen der Lockerung; jede Stufe lockert nur, darum bleiben Bilder gültig, die eine frühere Stufe bestanden haben
+STUFE = 3   # Stufen der Lockerung; jede Stufe lockert nur, darum bleiben Bilder gültig, die eine frühere Stufe bestanden haben
 
 
 def lockern(r, e, c, an=True):
@@ -91,6 +91,9 @@ def lockern(r, e, c, an=True):
     eine Sprechblase, ein Verbotskreis oder ein Kind ist (Läufe 61–77)."""
     lo = c.get("lockerung") or {}
     an = STUFE if an is True else int(an or 0)   # Stufe 1: Zusatz zur Beschreibung (Lauf 78/79); Stufe 2: je Regel (ab Lauf 80)
+    s3 = (lo.get("stufe3") or {}).get("je_regel_en", {})                         # Stufe 3: weitere Regeln (ab Lauf 83)
+    if an >= 3 and r["id"] in s3:
+        r = {**r, "en": r["en"] + s3[r["id"]]}
     if not an or r["id"] not in lo.get("regeln", []):
         return r
     return {**r, "en": r["en"] + ((lo.get("je_regel_en") or {}).get(r["id"], "") if an >= 2 else "")
@@ -151,6 +154,8 @@ def auftrag(e, c=None, lockerung=True):
     t = c["auftrag_en"][e["art"]].replace("{beschreibung}", e["beschreibung"])
     if (STUFE if lockerung is True else int(lockerung or 0)) >= 2 and e["art"] == "gruppe":
         t += (c.get("lockerung") or {}).get("gruppe_anzahl_en", "")
+    if (STUFE if lockerung is True else int(lockerung or 0)) >= 3 and e["art"] == "gruppe":
+        t += ((c.get("lockerung") or {}).get("stufe3") or {}).get("gruppe_en", "")
     erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
     if erl:
         t += f" Allowed in addition: {erl}."
