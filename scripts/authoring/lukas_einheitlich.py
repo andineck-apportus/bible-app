@@ -38,6 +38,15 @@ Angleichung an docs/ZUERIDUEUETSCH.md (2026-11-21, zweiter Durchgang): Aus MUNDA
 widerspricht: «sterbe» -> «stärbe» (Regel 1.6: «sterbe»), «cho» -> «choo» (Abschnitt 2 Infinitiv: «cho luege» bei
 Bewegung bleibt); «werdi» zeigt jetzt auf «wärd» (Abschnitt 2, indirekte Rede «er wärd»). MUNDART und pruefe_mundart
 behalten ihre Schnittstelle (kernanalyse.py nutzt sie für alle Bücher).
+Angleichung an die Festlegungen Runde 3 (docs/ZUERIDUEUETSCH.md, 2026-11-21): gestrichen «leer» -> «lehr» und «leere» ->
+«lehre» («leer», «leere» heisst jetzt leer), «nöii» -> «nöi» («nöii» gilt); «säät» zeigt auf «säit», «sääed» auf «säied»
+(säie, gsäit), «spoot»/«spoote» auf «spät»/«späte», «siebezää» auf «sibezäh» (langes i nur als ii, kurzes als i).
+Ergänzt um die in Lukas abgelösten Formen der Runde 3: Dehnungs-h bei chehre/chräie (umchere -> umchehre, chräie ->
+chrähe), Vorsilben us-/uf- kurz (uufhört -> ufhört), Konjunktiv-Mehrzahl auf -ed (segid -> seiged), öi in Mundartwörtern
+(eues -> öies), kurzes i (Gliederig -> Gliderig), Wortschatz (Stärne -> Sterne), cho nur vor Infinitiv (überiicho ->
+überiichoo). Formen, die auch hochdeutsch sind (treu, fremd, Paradies), und Formen, die in Kernanalysen anderer Bücher
+noch stehen, sind nicht aufgenommen, weil kernanalyse.py die Liste für alle Bücher benutzt; sie sind an der Quelle
+umgestellt.
 Fehlalarm (FEHLALARM, nur in pruefe_mundart ausgenommen): Die Wortliste von scripts/mundart.py führt «häb» -> «heb» für
 die indirekte Rede (Konjunktiv «er heb»). Der Imperativ von «haa» heisst aber «häb» («Häb kei Angscht», «häb Erbarme»;
 «heb» ist der Imperativ von «hebe», halten). Imperative in festen Wendungen werden deshalb nicht gemeldet, ebenso der
@@ -104,7 +113,7 @@ MUNDART = {
     "werdi": "wärd", "werfed": "wärfed", "zruggange": "zrugggange", "zruggcho": "zruggchoo", "anecho": "anechoo",
     "züügnis": "zügnis", "bööse": "böse", "bööses": "böses", "schnäll": "schnell", "jaar": "jahr",
     "oore": "ohre", "loon": "lohn", "söön": "söhn", "gläämt": "glähmt", "gläämte": "glähmte", "faar": "fahr",
-    "faared": "fahred", "faart": "fahrt", "gfaare": "gfahre", "nöii": "nöi", "daa": "da", "here": "häre", "lide": "liide",
+    "faared": "fahred", "faart": "fahrt", "gfaare": "gfahre", "daa": "da", "here": "häre", "lide": "liide",
     "leged": "legged", "sölle": "söle", "nööch": "nöch", "nööchi": "nöchi", "feschtässe": "fäschtässe",
     # Neu nach docs/ZUERIDUEUETSCH.md (2026-11-21); früher in Lukas festgelegt, jetzt abgelöst
     "fäält": "fehlt", "ziet": "zieht", "zie": "zieh", "ziend": "ziehnd", "wonige": "wohnige", "befole": "befohle",
@@ -136,9 +145,9 @@ MUNDART = {
     "mäntig", "naach": "nöch", "denaa": "dernach", "dernaa": "dernach", "naalaat": "nachlaat", "naazgää": "nachzgää",
     "nööche": "nöche", "nööchschte": "nöchschte", "erhööcht": "erhöcht", "erhööhe": "erhöhe", "erhööht": "erhöht",
     "plaage": "plage", "raame": "rahme", "raamt": "rahmt", "rääge": "räge", "saame": "same", "schaarfi": "scharfi",
-    "schlaafed": "schlafed", "schlaafende": "schlafende", "spoot": "spot", "spoote": "spote", "spööte": "spöte",
+    "schlaafed": "schlafed", "schlaafende": "schlafende", "spoot": "spät", "spoote": "späte", "spööte": "spöte",
     "spööter": "spöter", "spöötere": "spötere", "spööteri": "spöteri", "spraachaagab": "sprachaagab",
-    "spraachgebruuch": "sprachgebruuch", "säät": "sät", "sääit": "säit", "sääed": "säed", "taat": "tat", "taate":
+    "spraachgebruuch": "sprachgebruuch", "säät": "säit", "sääit": "säit", "sääed": "säied", "taat": "tat", "taate":
     "tate", "taglöön": "taglöhn", "toose": "tose", "troon": "thron", "tröön": "thrön", "ufgheebti": "ufghebti",
     "ufhööre": "ufhöre", "ussaag": "ussag", "usreede": "usrede", "uswaal": "uswahl", "waal": "wahl", "verraat":
     "verrat", "verraate": "verrate", "verroot": "verrat", "verrääter": "verräter", "verdrääti": "verdrähti",
@@ -160,12 +169,31 @@ MUNDART = {
     "königswürdi": "chönigswürdi", "dreikönigstag": "dreichönigstag", "gottesknächt": "gotteschnächt", "diräkter":
     "direkter", "diräkts": "direkts", "indiräkt": "indirekt", "drüümal": "drümal", "sölled": "söled", "welles":
     "weles", "sigid": "seiged", "chöntsch": "chönntsch", "kein": "kei", "dem": "däm", "achtzää": "achtzäh", "achzää":
-    "achtzäh", "drizää": "drizäh", "föifzää": "füfzäh", "nüünzää": "nüünzäh", "siebezää": "siebezäh", "dezueggää":
+    "achtzäh", "drizää": "drizäh", "föifzää": "füfzäh", "nüünzää": "nüünzäh", "siebezää": "sibezäh", "dezueggää":
     "dezuegää", "mitggää": "mitgää", "zruggzale": "zruggzahle", "heuchler": "hüüchler", "aposchtelgschicht":
     "apostelgschicht", "jaarhundert": "jahrhundert", "jaarzähnt": "jahrzähnt", "tämpelbezirk": "tempelbezirk",
     "tämpelgäld": "tempelgäld", "tämpelhuus": "tempelhuus", "tämpelreinigig": "tempelreinigig", "tämpelvorhang":
     "tempelvorhang", "tämpelvorhof": "tempelvorhof", "gfüelt": "gfühlt", "überlieferet": "überliferet",
     "überliefered": "überlifered", "überlieferig": "überliferig", "uslieferig": "usliferig", "uszliefere": "uszlifere",
+    # Festlegungen Runde 3 (2026-11-21), Formen, die in Lukas vorkamen. Nicht aufgenommen sind Formen, die in den
+    # Kernanalysen anderer Bücher noch stehen (umchert, umchered, umgchert, erniedriget, aagchündt), damit
+    # kernanalyse.py für diese Bücher nicht an der Lukas-Liste scheitert; sie gehören in die Wortliste von scripts/mundart.py.
+    "umchere": "umchehre", "zruggchert":
+    "zruggchehrt", "zruggchered": "zruggchehred", "chräie": "chrähe", "uufhört": "ufhört", "uufhöre": "ufhöre",
+    "uufnää": "ufnäh", "uussäge": "ussäge", "uusprobiere": "usprobiere", "uufrässed": "ufrässed", "uufgnoo": "ufgnoo",
+    "uusgsproche": "usgsproche", "uufruer": "ufruer", "uufrüerer": "ufrüerer", "uufschlag": "ufschlag",
+    "uuszeichnig": "uszeichnig", "uufwiegle": "ufwiegle", "uusleihe": "usleihe", "uusdur": "usduur",
+    "voruussetzt": "vorussetzt", "voruussetzige": "vorussetzige", "voruussag": "vorussag", "voruussicht": "vorussicht",
+    "segid": "seiged", "hettid": "hetted", "gsehid": "gsehed", "nämid": "nämed", "eues": "öies", "eune": "öie",
+    "eurem": "öiem", "euem": "öiem", "eusi": "öisi", "freued": "fröied", "neueri": "nöieri", "erneuerig": "ernöierig",
+    "treui": "tröii", "niedrigi": "nidrigi", "niedrigkeit": "nidrigkeit",
+    "gliederig": "gliderig", "gliederigsbild": "gliderigsbild", "siebezäh": "sibezäh", "siebetägig": "sibetägig",
+    "siebetägige": "sibetägige", "underschid": "underschiid", "unterschid": "underschiid", "abschid": "abschiid",
+    "abschidsred": "abschiidsred", "erkläärige": "erklärige", "erkläärig": "erklärig", "stärn": "stern",
+    "stärne": "sterne", "abegchnüület": "abegchnület", "chnüület": "chnület", "umchehrig": "umkehrig",
+    "umchehr": "umkehr", "krüüzti": "gchrüüzti", "chrüzigig": "chrüüzigig",
+    "überiicho": "überiichoo", "umcho": "umchoo", "inezcho": "inezchoo", "entcho": "entchoo", "ender": "eher",
+    "dräit": "dräht", "umdräit": "umdräht",
 }
 MUNDART = {k.lower(): v for k, v in MUNDART.items()}
 _WORT = re.compile(r"[A-Za-zÄÖÜäöüéèà]+")

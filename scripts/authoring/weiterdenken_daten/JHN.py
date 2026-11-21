@@ -23,10 +23,10 @@ REFLECTIONS = [
      "gsw": {"question_de": "S Buech seit sälber, für was s gschribe isch: Was erwartisch du, wänn d s lisisch?", "note_de": "«Die aber sind ufgschribe, damit ir glaubed … und damit ir, wänn ir glaubed, Läbe händ in sim Name» ([[JHN.20.31]])."}},
     {"id": "REFL-JHN-0002", "subject": "SUM-BOOK-JHN", "order": 2,
      "question_de": "Viele Menschen in diesem Buch fragen, woher Jesus kommt: Welche Antwort geben sie, und welche das Buch?",
-     "gsw": {"question_de": "Vil Lüüt i dem Buech fröged, wohär de Jesus chunnt: Weli Antwort gäbed si, und weli s Buech?"}},
+     "gsw": {"question_de": "Vil Lüüt i däm Buech fröged, wohär de Jesus chunnt: Weli Antwort gäbed si, und weli s Buech?"}},
     {"id": "REFL-JHN-0003", "subject": "SUM-BOOK-JHN", "order": 3,
      "question_de": "Das Buch erzählt von Menschen, die glauben, zweifeln oder weggehen: Bei wem verweilst du am längsten?",
-     "gsw": {"question_de": "S Buech verzellt vo Mänsche, wo glaubed, zwiifled oder wäggönd: Bi wem bliibsch du am längschte?"}},
+     "gsw": {"question_de": "S Buech verzellt vo Mänsche, wo glaubed, zwiifled oder wäggönd: Bi wäm bliibsch du am längschte?"}},
     # SUM-CH-JHN-001
     {"id": "REFL-JHN-0004", "subject": "SUM-CH-JHN-001", "order": 1,
      "question_de": "Was suchst du, wenn du dieses Buch zu lesen beginnst?",
@@ -67,7 +67,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "«Chömed, dänn gsehnd ir s!» – wieso git de Jesus kei Antwort, sondern e Iiladig?", "note_de": "Di beide händ gfröget, won er bliibt ([[JHN.1.38-JHN.1.39]])."}},
     {"id": "REFL-JHN-0013", "subject": "TU-JHN-001-035-042", "order": 2,
      "question_de": "Andreas holt zuerst seinen Bruder: Wem würdest du von etwas Wichtigem zuerst erzählen?",
-     "gsw": {"question_de": "De Andreas holt zerscht sin Brüeder: Wem würdsch du vo öppis Wichtigem zerscht verzelle?"}},
+     "gsw": {"question_de": "De Andreas holt zerscht sin Brüeder: Wäm würdsch du vo öppis Wichtigem zerscht verzelle?"}},
     # TU-JHN-001-043-051
     {"id": "REFL-JHN-0014", "subject": "TU-JHN-001-043-051", "order": 1,
      "question_de": "Natanaël zweifelt an Nazaret – was bewegt ihn trotzdem zu gehen?",
@@ -83,7 +83,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0017", "subject": "SUM-CH-JHN-002", "order": 1,
      "question_de": "Was haben Wein bei einer Hochzeit und ein geräumter Tempel miteinander zu tun?",
      "note_de": "Beide Szenen enden damit, dass die Jünger glauben ([[JHN.2.11]], [[JHN.2.22]]).",
-     "gsw": {"question_de": "Was händ Wii a nere Hochziit und en usgrüümte Tempel mitenand z tue?", "note_de": "Beid Szene höred dermit uf, dass d Jünger glaubed ([[JHN.2.11]], [[JHN.2.22]])."}},
+     "gsw": {"question_de": "Was händ Wii a nere Hochziit und en usgrüümte Tempel mitenand z tue?", "note_de": "Beid Szene höred dermit uuf, dass d Jünger glaubed ([[JHN.2.11]], [[JHN.2.22]])."}},
     # TU-JHN-002-001-012
     {"id": "REFL-JHN-0018", "subject": "TU-JHN-002-001-012", "order": 1,
      "question_de": "Jesus sagt «Meine Stunde ist noch nicht gekommen» – und handelt dann doch: Was hat seine Mutter verstanden?",
@@ -123,7 +123,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wieso chunnt de Nikodemus znacht?", "note_de": "De Text seit s nöd; er nännt nu d Ziit ([[JHN.3.2]])."}},
     {"id": "REFL-JHN-0027", "subject": "TU-JHN-003-001-015", "order": 2,
      "question_de": "«Von oben geboren» – man kann auch übersetzen: neu geboren. Was hörst du in diesem Wort?",
-     "gsw": {"question_de": "«Vo obe gebore» – me cha au übersetze: nöi gebore. Was ghörsch du i dem Wort?"}},
+     "gsw": {"question_de": "«Vo obe gebore» – me cha au übersetze: nöi gebore. Was ghörsch du i däm Wort?"}},
     {"id": "REFL-JHN-0028", "subject": "TU-JHN-003-001-015", "order": 3,
      "question_de": "Ein Lehrer Israels versteht etwas nicht: Wie geht es dir, wenn du Vertrautes plötzlich nicht mehr verstehst?",
      "gsw": {"question_de": "En Lehrer vo Israel verstaat öppis nöd: Wie gaat s dir, wänn d Vertrauts plötzlich nüme verstaasch?"}},
@@ -155,7 +155,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0035", "subject": "SUM-CH-JHN-004", "order": 1,
      "question_de": "Eine Fremde, eine ganze Stadt, ein königlicher Beamter: Wer findet in diesem Kapitel zum Glauben, und wie?",
      "note_de": "Am Ende sagen die Samariter: «… dass dieser wirklich der Retter der Welt ist» ([[JHN.4.42]]).",
-     "gsw": {"question_de": "E Frömdi, e ganzi Stadt, en chönigliche Beamte: Wär findet i dem Kapitel zum Glaube, und wie?", "note_de": "Am Schluss säged d Samariter: «… dass dä würkli de Retter vo de Wält isch» ([[JHN.4.42]])."}},
+     "gsw": {"question_de": "E Frömdi, e ganzi Stadt, en chönigliche Beamte: Wär findet i däm Kapitel zum Glaube, und wie?", "note_de": "Am Schluss säged d Samariter: «… dass dä würkli de Retter vo de Wält isch» ([[JHN.4.42]])."}},
     # TU-JHN-004-001-015
     {"id": "REFL-JHN-0036", "subject": "TU-JHN-004-001-015", "order": 1,
      "question_de": "Jesus bittet zuerst um Wasser: Was ändert es, dass er selbst durstig ist?",
@@ -174,7 +174,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "De Jesus redt ires Läbe aa, ohni es Urteil uszspräche: Wie ghört si das?", "note_de": "Si antwortet: «Herr, ich gseh, dass du en Prophet bisch» ([[JHN.4.19]])."}},
     {"id": "REFL-JHN-0040", "subject": "TU-JHN-004-016-026", "order": 2,
      "question_de": "Auf diesem Berg oder in Jerusalem? Warum fragt sie gerade das?",
-     "gsw": {"question_de": "Uf dem Bärg oder z Jerusalem? Wieso fröget si grad das?"}},
+     "gsw": {"question_de": "Uf däm Bärg oder z Jerusalem? Wieso fröget si grad das?"}},
     {"id": "REFL-JHN-0041", "subject": "TU-JHN-004-016-026", "order": 3,
      "question_de": "Was könnte es heissen, «in Geist und Wahrheit» anzubeten?",
      "gsw": {"question_de": "Was chönnt s heisse, «i Geischt und Wahrheit» aazbätte?"}},
@@ -198,7 +198,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0046", "subject": "TU-JHN-004-043-054", "order": 1,
      "question_de": "Der Mann geht los, bevor er weiss, ob es stimmt: Was trägt ihn auf diesem Weg?",
      "note_de": "«Der Mann glaubte dem Wort, das Jesus zu ihm gesagt hatte, und machte sich auf den Weg» ([[JHN.4.50]]).",
-     "gsw": {"question_de": "De Maa gaat los, bevor er weiss, öb s stimmt: Was treit en uf dem Wäg?", "note_de": "«De Maa hät em Wort glaubt, wo de Jesus zu ihm gseit hät, und hät sich uf de Wäg gmacht» ([[JHN.4.50]])."}},
+     "gsw": {"question_de": "De Maa gaat los, bevor er weiss, öb s stimmt: Was treit en uf däm Wäg?", "note_de": "«De Maa hät em Wort glaubt, wo de Jesus zu ihm gseit hät, und hät sich uf de Wäg gmacht» ([[JHN.4.50]])."}},
     {"id": "REFL-JHN-0047", "subject": "TU-JHN-004-043-054", "order": 2,
      "question_de": "Jesus scheint die Bitte zuerst abzuweisen: Warum bleibt der Vater dran?",
      "gsw": {"question_de": "De Jesus schiint d Bitt zerscht abzwiise: Wieso bliibt de Vatter dra?"}},
@@ -206,7 +206,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0048", "subject": "SUM-CH-JHN-005", "order": 1,
      "question_de": "Eine Heilung löst einen Streit aus: Worüber wird hier eigentlich gestritten?",
      "note_de": "Zuerst geht es um die Matte am Sabbat, dann darum, dass Jesus Gott seinen Vater nennt ([[JHN.5.10]], [[JHN.5.18]]).",
-     "gsw": {"question_de": "E Heilig löst en Striit us: Über was wird da eigentlich gstritte?", "note_de": "Zerscht gaat s um d Matte am Sabbat, dänn drum, dass de Jesus Gott sin Vatter nännt ([[JHN.5.10]], [[JHN.5.18]])."}},
+     "gsw": {"question_de": "E Heilig löst en Striit uus: Über was wird da eigentlich gstritte?", "note_de": "Zerscht gaat s um d Matte am Sabbat, dänn drum, dass de Jesus Gott sin Vatter nännt ([[JHN.5.10]], [[JHN.5.18]])."}},
     # TU-JHN-005-001-009
     {"id": "REFL-JHN-0049", "subject": "TU-JHN-005-001-009", "order": 1,
      "question_de": "Warum fragt Jesus einen, der seit achtunddreissig Jahren krank ist, ob er gesund werden will?",
@@ -222,12 +222,12 @@ REFLECTIONS = [
      "gsw": {"question_de": "De Gheilt weiss nöd, wär en gheilt hät: Was bedüütet ihm de Jesus?", "note_de": "Spöter mäldet er de Jude, dass es de Jesus gsii isch ([[JHN.5.13]], [[JHN.5.15]])."}},
     {"id": "REFL-JHN-0052", "subject": "TU-JHN-005-010-018", "order": 2,
      "question_de": "Wie sieht der Streit um den Sabbat aus der Sicht derer aus, die das Gebot ernst nehmen?",
-     "gsw": {"question_de": "Wie gseht de Striit um de Sabbat us de Sicht vo dene us, wo s Gebot ärnscht nämed?"}},
+     "gsw": {"question_de": "Wie gseht de Striit um de Sabbat us de Sicht vo dene uus, wo s Gebot ärnscht nämed?"}},
     # TU-JHN-005-019-030
     {"id": "REFL-JHN-0053", "subject": "TU-JHN-005-019-030", "order": 1,
      "question_de": "Der Sohn tut nichts von sich aus: Ist das Abhängigkeit oder Nähe?",
      "note_de": "«Der Sohn kann nichts von sich selbst aus tun, ausser was er den Vater tun sieht» ([[JHN.5.19]]).",
-     "gsw": {"question_de": "De Sohn macht nüüt vo sich us: Isch das Abhängigkeit oder Nöchi?", "note_de": "«De Sohn cha nüüt vo sich us mache, nu das, won er de Vatter gseht mache» ([[JHN.5.19]])."}},
+     "gsw": {"question_de": "De Sohn macht nüüt vo sich uus: Isch das Abhängigkeit oder Nöchi?", "note_de": "«De Sohn cha nüüt vo sich us mache, nu das, won er de Vatter gseht mache» ([[JHN.5.19]])."}},
     {"id": "REFL-JHN-0054", "subject": "TU-JHN-005-019-030", "order": 2,
      "question_de": "«Aus dem Tod in das Leben hinübergegangen» – schon jetzt: Was könnte das heissen?",
      "gsw": {"question_de": "«Vom Tod is Läbe übere gange» – scho jetzt: Was chönnt das heisse?"}},
@@ -278,7 +278,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "«Ich bi s Brot vom Läbe»: Für was staat Brot im Alltag vo de Zuehörer dänn?", "note_de": "D Mängi hät churz vorher vom Manna i de Wüeschti gredt ([[JHN.6.31]], [[JHN.6.35]])."}},
     {"id": "REFL-JHN-0066", "subject": "TU-JHN-006-035-040", "order": 2,
      "question_de": "«Wer zu mir kommt, den werde ich gewiss nicht hinausstossen»: Wem könnte dieser Satz gelten?",
-     "gsw": {"question_de": "«wär zu mir chunnt, dä rüer ich sicher nöd use»: Wem chönnt dä Satz gälte?"}},
+     "gsw": {"question_de": "«wär zu mir chunnt, dä rüere ich sicher nöd use»: Wäm chönnt dä Satz gälte?"}},
     # TU-JHN-006-041-051
     {"id": "REFL-JHN-0067", "subject": "TU-JHN-006-041-051", "order": 1,
      "question_de": "Sie berufen sich darauf, seine Eltern zu kennen: Kann Vertrautheit den Blick verstellen – oder auch schärfen?",
@@ -286,7 +286,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "Si beruefed sich druf, dass si sini Eltere känned: Chan Vertrautheit de Blick verstelle – oder au schärfe?", "note_de": "«Isch das nöd de Jesus, de Sohn vom Josef, wo mir sin Vatter und sini Mueter känned?» ([[JHN.6.42]])"}},
     {"id": "REFL-JHN-0068", "subject": "TU-JHN-006-041-051", "order": 2,
      "question_de": "Niemand kann kommen, wenn der Vater ihn nicht «zieht»: Was löst dieses Wort bei dir aus?",
-     "gsw": {"question_de": "Niemer chan choo, wänn de Vatter en nöd «zieht»: Was löst das Wort bi dir us?"}},
+     "gsw": {"question_de": "Niemer chan choo, wänn de Vatter en nöd «zieht»: Was löst das Wort bi dir uus?"}},
     # TU-JHN-006-052-059
     {"id": "REFL-JHN-0069", "subject": "TU-JHN-006-052-059", "order": 1,
      "question_de": "Die Zuhörer streiten über das Wort vom Fleisch: Was macht es so anstössig?",
@@ -294,15 +294,15 @@ REFLECTIONS = [
      "gsw": {"question_de": "D Zuehörer strited über s Wort vom Fleisch: Was macht s so aastössig?", "note_de": "«Wie cha dä öis sis Fleisch z ässe gää?» ([[JHN.6.52]])"}},
     {"id": "REFL-JHN-0070", "subject": "TU-JHN-006-052-059", "order": 2,
      "question_de": "Christen verschiedener Kirchen lesen diesen Abschnitt verschieden: Was hörst du darin?",
-     "gsw": {"question_de": "Chrischte vo verschidene Chilche läsed dä Abschnitt verschide: Was ghörsch du drin?"}},
+     "gsw": {"question_de": "Chrischte vo verschidene Chile läsed dä Abschnitt verschide: Was ghörsch du drin?"}},
     # TU-JHN-006-060-071
     {"id": "REFL-JHN-0071", "subject": "TU-JHN-006-060-071", "order": 1,
      "question_de": "«Herr, zu wem sollen wir gehen?» – ist das Gewissheit oder Ratlosigkeit?",
      "note_de": "Petrus antwortet auf die Frage «Wollt etwa auch ihr weggehen?» ([[JHN.6.67-JHN.6.68]]).",
-     "gsw": {"question_de": "«Herr, zu wem söled mer gaa?» – isch das Gwüssheit oder Ratlosigkeit?", "note_de": "De Petrus antwortet uf d Frag «Wänd öppe au ir gaa?» ([[JHN.6.67-JHN.6.68]])."}},
+     "gsw": {"question_de": "«Herr, zu wäm söled mer gaa?» – isch das Gwüssheit oder Ratlosigkeit?", "note_de": "De Petrus antwortet uf d Frag «Wänd öppe au ir gaa?» ([[JHN.6.67-JHN.6.68]])."}},
     {"id": "REFL-JHN-0072", "subject": "TU-JHN-006-060-071", "order": 2,
      "question_de": "Jesus hält die Gehenden nicht auf: Was sagt das über ihn?",
-     "gsw": {"question_de": "De Jesus hebt die, wo gönd, nöd uf: Was seit das über ihn?"}},
+     "gsw": {"question_de": "De Jesus hebt die, wo gönd, nöd uuf: Was seit das über ihn?"}},
     {"id": "REFL-JHN-0073", "subject": "TU-JHN-006-060-071", "order": 3,
      "question_de": "Welches Wort ist dir «hart», sodass du es kaum hören kannst?",
      "gsw": {"question_de": "Weles Wort isch für dich «hert», dass d s chuum chasch ghöre?"}},
@@ -310,7 +310,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0074", "subject": "SUM-CH-JHN-007", "order": 1,
      "question_de": "Viele reden über Jesus, nur manche mit ihm: Welche Stimmen hörst du in diesem Kapitel?",
      "note_de": "«Er ist gut» – «Nein, sondern er verführt das Volk» ([[JHN.7.12]]).",
-     "gsw": {"question_de": "Vil redet über de Jesus, nu es paar mit ihm: Weli Stimme ghörsch du i dem Kapitel?", "note_de": "«Er isch guet» – «Nei, er verfüert s Volk» ([[JHN.7.12]])."}},
+     "gsw": {"question_de": "Vil redet über de Jesus, nu es paar mit ihm: Weli Stimme ghörsch du i däm Kapitel?", "note_de": "«Er isch guet» – «Nei, er verfüert s Volk» ([[JHN.7.12]])."}},
     # TU-JHN-007-001-009
     {"id": "REFL-JHN-0075", "subject": "TU-JHN-007-001-009", "order": 1,
      "question_de": "Seine Brüder glauben nicht an ihn und raten ihm doch, sich zu zeigen: Was wollen sie?",
@@ -371,7 +371,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0089", "subject": "TU-JHN-007-053-053", "order": 1,
      "question_de": "«Und jeder ging in sein Haus»: Was bedeutet es dir, dass dieser Übergang in den ältesten Handschriften fehlt?",
      "note_de": "Mit diesem Vers beginnt der Abschnitt [[JHN.7.53-JHN.8.11]], den die ältesten Handschriften nicht enthalten.",
-     "gsw": {"question_de": "«Und jede isch i sis Huus gange»: Was bedüütet s dir, dass dä Übergang i de ältischte Handschrifte fehlt?", "note_de": "Mit dem Vers fangt de Abschnitt [[JHN.7.53-JHN.8.11]] aa, wo i de ältischte Handschrifte nöd drin isch."}},
+     "gsw": {"question_de": "«Und jede isch i sis Huus gange»: Was bedüütet s dir, dass dä Übergang i de ältischte Handschrifte fehlt?", "note_de": "Mit däm Vers fangt de Abschnitt [[JHN.7.53-JHN.8.11]] aa, wo i de ältischte Handschrifte nöd drin isch."}},
     {"id": "REFL-JHN-0090", "subject": "TU-JHN-007-053-053", "order": 2,
      "question_de": "Was nehmen die Menschen nach einem langen Streittag mit nach Hause?",
      "gsw": {"question_de": "Was nämed d Mänsche nach eme lange Striittag mit hei?"}},
@@ -379,7 +379,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0091", "subject": "SUM-CH-JHN-008", "order": 1,
      "question_de": "Am Anfang des Kapitels ist vom ersten Stein die Rede, am Ende heben sie Steine auf: Was hat sich dazwischen verändert?",
      "note_de": "Zuerst geht es um eine Frau ([[JHN.8.7]]), am Ende um Jesus selbst ([[JHN.8.59]]).",
-     "gsw": {"question_de": "Am Aafang vom Kapitel isch vom erschte Stei d Red, am Schluss läsed si Stei uf: Was hät sich dezwüsche veränderet?", "note_de": "Zerscht gaat s um e Frau ([[JHN.8.7]]), am Schluss um de Jesus sälber ([[JHN.8.59]])."}},
+     "gsw": {"question_de": "Am Aafang vom Kapitel isch vom erschte Stei d Red, am Schluss läsed si Stei uuf: Was hät sich dezwüsche veränderet?", "note_de": "Zerscht gaat s um e Frau ([[JHN.8.7]]), am Schluss um de Jesus sälber ([[JHN.8.59]])."}},
     # TU-JHN-008-001-011
     {"id": "REFL-JHN-0092", "subject": "TU-JHN-008-001-011", "order": 1,
      "question_de": "Was schreibt Jesus auf die Erde?",
@@ -387,7 +387,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "Was schriibt de Jesus uf de Bode?", "note_de": "De Text seit s nöd; er verzellt nu, dass de Jesus sich bückt und mit em Finger schriibt ([[JHN.8.6]], [[JHN.8.8]])."}},
     {"id": "REFL-JHN-0093", "subject": "TU-JHN-008-001-011", "order": 2,
      "question_de": "Wo ist der Mann, mit dem die Frau ergriffen wurde?",
-     "gsw": {"question_de": "Wo isch de Maa, mit dem d Frau ertappt worde isch?"}},
+     "gsw": {"question_de": "Wo isch de Maa, mit däm d Frau ertappt worde isch?"}},
     {"id": "REFL-JHN-0094", "subject": "TU-JHN-008-001-011", "order": 3,
      "question_de": "Die Ältesten gehen zuerst: Was könnte sie dazu bewegen?",
      "gsw": {"question_de": "Di Ältischte gönd zerscht: Was chönnt si derzue bringe?"}},
@@ -420,15 +420,15 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0101", "subject": "TU-JHN-008-048-059", "order": 1,
      "question_de": "«Bevor Abraham wurde, bin ich» – warum heben sie gerade bei diesem Satz Steine auf?",
      "note_de": "Vorher hatten sie gefragt: «Bist du etwa grösser als unser Vater Abraham?» ([[JHN.8.53]], [[JHN.8.58-JHN.8.59]])",
-     "gsw": {"question_de": "«Bevor de Abraham worde isch, bin ich» – wieso läsed si grad bi dem Satz Stei uf?", "note_de": "Vorher händ si gfröget: «Bisch du öppe grösser als öise Vatter Abraham, wo gstorbe isch?» ([[JHN.8.53]], [[JHN.8.58-JHN.8.59]])"}},
+     "gsw": {"question_de": "«Bevor de Abraham worde isch, bin ich» – wieso läsed si grad bi däm Satz Stei uuf?", "note_de": "Vorher händ si gfröget: «Bisch du öppe grösser als öise Vatter Abraham, wo gstorbe isch?» ([[JHN.8.53]], [[JHN.8.58-JHN.8.59]])"}},
     {"id": "REFL-JHN-0102", "subject": "TU-JHN-008-048-059", "order": 2,
      "question_de": "Jesus verbirgt sich und geht hinaus: Warum weicht er hier aus?",
-     "gsw": {"question_de": "De Jesus versteckt sich und gaat use: Wieso wiicht er da us?"}},
+     "gsw": {"question_de": "De Jesus versteckt sich und gaat use: Wieso wiicht er da uus?"}},
     # SUM-CH-JHN-009
     {"id": "REFL-JHN-0103", "subject": "SUM-CH-JHN-009", "order": 1,
      "question_de": "Am Anfang sieht einer nichts, am Ende sagen andere «Wir sehen»: Wer sieht in diesem Kapitel wirklich?",
      "note_de": "«Damit die nicht Sehenden sehen und die Sehenden blind werden» ([[JHN.9.39]]).",
-     "gsw": {"question_de": "Am Aafang gseht eine nüüt, am Schluss säged anderi «Mir gsehnd»: Wär gseht i dem Kapitel würkli?", "note_de": "«damit die, wo nöd gsehnd, gsehnd und die, wo gsehnd, blind wärded» ([[JHN.9.39]])."}},
+     "gsw": {"question_de": "Am Aafang gseht eine nüüt, am Schluss säged anderi «Mir gsehnd»: Wär gseht i däm Kapitel würkli?", "note_de": "«damit die, wo nöd gsehnd, gsehnd und die, wo gsehnd, blind wärded» ([[JHN.9.39]])."}},
     # TU-JHN-009-001-012
     {"id": "REFL-JHN-0104", "subject": "TU-JHN-009-001-012", "order": 1,
      "question_de": "Die Jünger fragen nach Schuld, Jesus antwortet mit einem «damit»: Was verschiebt sich da?",
@@ -441,7 +441,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0106", "subject": "TU-JHN-009-013-023", "order": 1,
      "question_de": "Die Eltern weichen aus: Wie hättest du an ihrer Stelle geantwortet?",
      "note_de": "Sie fürchten, aus der Synagoge ausgeschlossen zu werden ([[JHN.9.22]]).",
-     "gsw": {"question_de": "D Eltere wiiched us: Wie hettsch du a irere Stell gantwortet?", "note_de": "Si fürchted, us de Synagoge usgschlosse z wärde ([[JHN.9.22]])."}},
+     "gsw": {"question_de": "D Eltere wiiched uus: Wie hettsch du a irere Stell gantwortet?", "note_de": "Si fürchted, us de Synagoge usgschlosse z wärde ([[JHN.9.22]])."}},
     {"id": "REFL-JHN-0107", "subject": "TU-JHN-009-013-023", "order": 2,
      "question_de": "Die einen sagen «nicht von Gott», die andern «Wie kann ein sündiger Mensch solche Zeichen tun?»: Welche Gründe haben beide Seiten?",
      "gsw": {"question_de": "Di eine säged «nöd vo Gott», di andere «Wie chan en sündige Mänsch settigi Zeiche tue?»: Weli Gründ händ beidi Siite?"}},
@@ -457,7 +457,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0110", "subject": "TU-JHN-009-035-041", "order": 1,
      "question_de": "Jesus sucht den Hinausgeworfenen auf: Was bedeutet das für ihn?",
      "note_de": "«Jesus hörte, dass sie ihn hinausgeworfen hatten, und als er ihn fand …» ([[JHN.9.35]])",
-     "gsw": {"question_de": "De Jesus suecht dä uf, wo si usegjagt händ: Was bedüütet das für ihn?", "note_de": "«De Jesus hät ghört, dass si en usegjagt händ, und won er en gfunde hät …» ([[JHN.9.35]])"}},
+     "gsw": {"question_de": "De Jesus suecht dä uuf, wo si usegjagt händ: Was bedüütet das für ihn?", "note_de": "«De Jesus hät ghört, dass si en usegjagt händ, und won er en gfunde hät …» ([[JHN.9.35]])"}},
     {"id": "REFL-JHN-0111", "subject": "TU-JHN-009-035-041", "order": 2,
      "question_de": "«Sind etwa auch wir blind?» – wie stellt man diese Frage ehrlich?",
      "gsw": {"question_de": "«Sind öppe au mir blind?» – wie stellt me die Frag ehrlich?"}},
@@ -513,7 +513,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0124", "subject": "SUM-CH-JHN-011", "order": 1,
      "question_de": "Jesus sagt, die Krankheit führe nicht zum Tod – und als er kommt, liegt Lazarus schon vier Tage im Grab: Wie hält das Kapitel diese Spannung aus?",
      "note_de": "Marta und Maria sagen beide: «Herr, wenn du hier gewesen wärst, wäre mein Bruder nicht gestorben» ([[JHN.11.21]], [[JHN.11.32]]).",
-     "gsw": {"question_de": "De Jesus seit, d Chranket füeri nöd zum Tod – und won er chunnt, liit de Lazarus scho vier Täg im Grab: Wie haltet s Kapitel die Spannig us?", "note_de": "D Marta und d Maria säged beidi: «Herr, wänn du da gsii wärsch, wär min Brüeder nöd gstorbe» ([[JHN.11.21]], [[JHN.11.32]])."}},
+     "gsw": {"question_de": "De Jesus seit, d Chranket füeri nöd zum Tod – und won er chunnt, liit de Lazarus scho vier Täg im Grab: Wie haltet s Kapitel die Spannig uus?", "note_de": "D Marta und d Maria säged beidi: «Herr, wänn du da gsii wärsch, wär min Brüeder nöd gstorbe» ([[JHN.11.21]], [[JHN.11.32]])."}},
     # TU-JHN-011-001-016
     {"id": "REFL-JHN-0125", "subject": "TU-JHN-011-001-016", "order": 1,
      "question_de": "Jesus liebt die drei Geschwister – und wartet trotzdem zwei Tage: Wie passt das zusammen?",
@@ -554,7 +554,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0134", "subject": "TU-JHN-011-045-053", "order": 2,
      "question_de": "Wovor fürchtet sich der Hohe Rat, und wie sieht die Lage aus seiner Sicht aus?",
      "note_de": "«… und die Römer werden kommen und uns sowohl den Ort als auch die Nation wegnehmen» ([[JHN.11.48]]).",
-     "gsw": {"question_de": "Vor was fürcht sich de Hoch Rat, und wie gseht d Lag us sinere Sicht us?", "note_de": "«… und d Römer chömed und nämed öis de Ort und d Nation wäg» ([[JHN.11.48]])."}},
+     "gsw": {"question_de": "Vor was fürcht sich de Hoch Rat, und wie gseht d Lag us sinere Sicht uus?", "note_de": "«… und d Römer chömed und nämed öis de Ort und d Nation wäg» ([[JHN.11.48]])."}},
     # TU-JHN-011-054-057
     {"id": "REFL-JHN-0135", "subject": "TU-JHN-011-054-057", "order": 1,
      "question_de": "«Dass er gewiss nicht zum Fest kommt?» – was erwarten die Leute, die im Tempel nach ihm fragen?",
@@ -591,7 +591,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "Grieche möchted de Jesus gseh, und er redt vom Weizechorn: Isch das e Antwort uf iri Bitt?", "note_de": "«Herr, mir wetted de Jesus gseh» ([[JHN.12.21]], [[JHN.12.24]])."}},
     {"id": "REFL-JHN-0143", "subject": "TU-JHN-012-020-036", "order": 2,
      "question_de": "Jesus ist erschüttert und betet doch nicht um Rettung: Was hörst du in diesem Gebet?",
-     "gsw": {"question_de": "De Jesus isch erschüttered und bättet glich nöd um Rettig: Was ghörsch du i dem Gebätt?"}},
+     "gsw": {"question_de": "De Jesus isch erschüttered und bättet glich nöd um Rettig: Was ghörsch du i däm Gebätt?"}},
     {"id": "REFL-JHN-0144", "subject": "TU-JHN-012-020-036", "order": 3,
      "question_de": "Dieselbe Stimme vom Himmel – die einen hören Donner, die andern einen Engel: Wovon hängt ab, was man hört?",
      "gsw": {"question_de": "Di gliich Stimm vom Himmel – di eine ghöred en Dunner, di andere en Ängel: Vo was hangt s ab, was me ghört?"}},
@@ -640,7 +640,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0155", "subject": "TU-JHN-013-021-030", "order": 1,
      "question_de": "Die Jünger blicken einander ratlos an, und auch nach dem Bissen versteht keiner am Tisch, wozu Jesus Judas das sagt: Was sagt das über Judas – und über die anderen?",
      "note_de": "Die Jünger blicken einander ratlos an ([[JHN.13.22]], [[JHN.13.28]]).",
-     "gsw": {"question_de": "D Jünger lueged enand ratlos aa, und au nach em Bisse verstaat kein am Tisch, für was de Jesus em Judas das seit: Was seit das über de Judas – und über di andere?", "note_de": "D Jünger lueged enand ratlos aa ([[JHN.13.22]], [[JHN.13.28]])."}},
+     "gsw": {"question_de": "D Jünger lueged enand ratlos aa, und au nach em Bisse verstaat kei am Tisch, für was de Jesus em Judas das seit: Was seit das über de Judas – und über di andere?", "note_de": "D Jünger lueged enand ratlos aa ([[JHN.13.22]], [[JHN.13.28]])."}},
     {"id": "REFL-JHN-0156", "subject": "TU-JHN-013-021-030", "order": 2,
      "question_de": "«Es war aber Nacht» – was trägt dieser kurze Satz?",
      "gsw": {"question_de": "«Es isch aber Nacht gsii» – was treit dä churz Satz?"}},
@@ -648,7 +648,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0157", "subject": "TU-JHN-013-031-038", "order": 1,
      "question_de": "«Ein neues Gebot gebe ich euch»: Was ist neu daran, einander zu lieben?",
      "note_de": "Jesus fügt hinzu: «Wie ich euch geliebt habe» ([[JHN.13.34]]).",
-     "gsw": {"question_de": "«Es nöis Gebot gib ich öi»: Was isch nöi dra, enand z liebe?", "note_de": "De Jesus seit derzue: «Wie ich öi gliebt han» ([[JHN.13.34]])."}},
+     "gsw": {"question_de": "«Es nöis Gebot gibe ich öi»: Was isch nöi dra, enand z liebe?", "note_de": "De Jesus seit derzue: «Wie ich öi gliebt han» ([[JHN.13.34]])."}},
     {"id": "REFL-JHN-0158", "subject": "TU-JHN-013-031-038", "order": 2,
      "question_de": "Petrus verspricht viel und meint es ernst: Wie geht es dir mit Versprechen, die grösser sind als du?",
      "gsw": {"question_de": "De Petrus verspricht vil und meint s ärnscht: Wie gaat s dir mit Verspräche, wo grösser sind als du?"}},
@@ -664,7 +664,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "De Thomas und de Philippus stelled ganz eifachi Frage: Weli eifachi Frag würdsch du stelle?", "note_de": "«Herr, mir wüssed nöd, wo du ane gaasch» – «Herr, zeig öis de Vatter» ([[JHN.14.5]], [[JHN.14.8]])."}},
     {"id": "REFL-JHN-0161", "subject": "TU-JHN-014-001-014", "order": 2,
      "question_de": "«Viele Wohnungen» im Haus des Vaters: Was löst dieses Bild aus?",
-     "gsw": {"question_de": "«vil Wohnige» im Huus vom Vatter: Was löst das Bild us?"}},
+     "gsw": {"question_de": "«vil Wohnige» im Huus vom Vatter: Was löst das Bild uus?"}},
     {"id": "REFL-JHN-0162", "subject": "TU-JHN-014-001-014", "order": 3,
      "question_de": "Der Satz «Niemand kommt zum Vater ausser durch mich» wird sehr verschieden verstanden: Wie hörst du ihn?",
      "gsw": {"question_de": "De Satz «Niemer chunnt zum Vatter usser dur mich» wird sehr verschide verstande: Wie ghörsch du ihn?"}},
@@ -680,15 +680,15 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0165", "subject": "TU-JHN-014-027-031", "order": 1,
      "question_de": "Was unterscheidet den Frieden, den Jesus gibt, von dem, den die Welt gibt?",
      "note_de": "«Nicht wie die Welt gibt, gebe ich euch» ([[JHN.14.27]]).",
-     "gsw": {"question_de": "Was unterscheidet de Fride, wo de Jesus git, vo dem, wo d Wält git?", "note_de": "«Nöd wie d Wält git, gib ich öi» ([[JHN.14.27]])."}},
+     "gsw": {"question_de": "Was unterscheidet de Fride, wo de Jesus git, vo däm, wo d Wält git?", "note_de": "«Nöd wie d Wält git, gibe ich öi» ([[JHN.14.27]])."}},
     {"id": "REFL-JHN-0166", "subject": "TU-JHN-014-027-031", "order": 2,
      "question_de": "«Steht auf, lasst uns von hier gehen!» – wohin führt dieser Aufbruch?",
-     "gsw": {"question_de": "«Stönd uf, mir gönd vo da wäg!» – wohi füert dä Ufbruch?"}},
+     "gsw": {"question_de": "«Stönd uuf, mir gönd vo da wäg!» – wohi füert dä Ufbruch?"}},
     # SUM-CH-JHN-015
     {"id": "REFL-JHN-0167", "subject": "SUM-CH-JHN-015", "order": 1,
      "question_de": "Bleiben ist das Leitwort dieses Kapitels: Was heisst es, in einer Beziehung zu bleiben?",
      "note_de": "«Bleibt in mir» – «Bleibt in meiner Liebe!» ([[JHN.15.4]], [[JHN.15.9]])",
-     "gsw": {"question_de": "Bliibe isch s Leitwort vo dem Kapitel: Was heisst s, i nere Beziehig z bliibe?", "note_de": "«Bliibed in mir» – «Bliibed i minere Liebi!» ([[JHN.15.4]], [[JHN.15.9]])"}},
+     "gsw": {"question_de": "Bliibe isch s Leitwort vo däm Kapitel: Was heisst s, i nere Beziehig z bliibe?", "note_de": "«Bliibed in mir» – «Bliibed i minere Liebi!» ([[JHN.15.4]], [[JHN.15.9]])"}},
     # TU-JHN-015-001-008
     {"id": "REFL-JHN-0168", "subject": "TU-JHN-015-001-008", "order": 1,
      "question_de": "Was erfährt die Rebe vom Weinstock, was sie allein nicht hätte?",
@@ -701,7 +701,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0170", "subject": "TU-JHN-015-009-017", "order": 1,
      "question_de": "Was ändert es, nicht mehr Knecht, sondern Freund genannt zu werden?",
      "note_de": "«Ich nenne euch nicht mehr Knechte … euch aber habe ich Freunde genannt» ([[JHN.15.15]]).",
-     "gsw": {"question_de": "Was änderet s, nüme Chnächt, sondern Fründ gnännt z wärde?", "note_de": "«Ich säg öi nüme Chnächt … Öi aber han ich Fründe gseit» ([[JHN.15.15]])."}},
+     "gsw": {"question_de": "Was änderet s, nüme Chnächt, sondern Fründ gnännt z wärde?", "note_de": "«Ich säge öi nüme Chnächt … Öi aber han ich Fründe gseit» ([[JHN.15.15]])."}},
     {"id": "REFL-JHN-0171", "subject": "TU-JHN-015-009-017", "order": 2,
      "question_de": "Liebe als Gebot – geht das?",
      "gsw": {"question_de": "Liebi als Gebot – gaat das?"}},
@@ -747,7 +747,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0181", "subject": "TU-JHN-016-025-033", "order": 1,
      "question_de": "Die Jünger sagen «Darum glauben wir», und Jesus kündigt an, dass sie ihn allein lassen: Wie passt das zusammen?",
      "note_de": "«Siehe, es kommt die Stunde … dass ihr zerstreut werdet … und mich allein lasst» ([[JHN.16.30-JHN.16.32]]).",
-     "gsw": {"question_de": "D Jünger säged «Drum glaubed mir», und de Jesus chündt aa, dass si en elei lönd: Wie passt das zäme?", "note_de": "«Lueg, es chunnt d Stund … wo ir verstreut wärded … und mich elei lönd» ([[JHN.16.30-JHN.16.32]])."}},
+     "gsw": {"question_de": "D Jünger säged «Drum glaubed mir», und de Jesus chündt aa, dass si en elei lönd: Wie passt das zäme?", "note_de": "«Lueg, es chunnt d Stund … wo ir verströit wärded … und mich elei lönd» ([[JHN.16.30-JHN.16.32]])."}},
     {"id": "REFL-JHN-0182", "subject": "TU-JHN-016-025-033", "order": 2,
      "question_de": "«In der Welt habt ihr Bedrängnis; aber seid getrost»: Was macht diesen Trost glaubwürdig – oder nicht?",
      "gsw": {"question_de": "«I de Wält händ ir Not; aber händ Muet»: Was macht dä Troscht glaubwürdig – oder nöd?"}},
@@ -780,7 +780,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "«damit alli eis sind» – was hiess Einheit under Mänsche, wo verschide glaubed?", "note_de": "De Jesus bittet um Einheit, «damit d Wält glaubt» ([[JHN.17.21]])."}},
     {"id": "REFL-JHN-0189", "subject": "TU-JHN-017-020-026", "order": 2,
      "question_de": "Jesus bittet auch für die, die später glauben werden: Welcher Satz dieses Gebets spricht dich an, welcher bleibt dir fremd?",
-     "gsw": {"question_de": "De Jesus bittet au für die, wo spöter glaubed: Wele Satz vo dem Gebätt redt dich aa, wele bliibt dir frömd?"}},
+     "gsw": {"question_de": "De Jesus bittet au für die, wo spöter glaubed: Wele Satz vo däm Gebätt redt dich aa, wele bliibt dir frömd?"}},
     # SUM-CH-JHN-018
     {"id": "REFL-JHN-0190", "subject": "SUM-CH-JHN-018", "order": 1,
      "question_de": "Jesus sagt «Ich bin es», Petrus «Ich bin es nicht»: Was zeigt dieser Gegensatz?",
@@ -809,7 +809,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "De Petrus staat bim Füür vo de andere und wärmt sich: Wo staasch du, wänn s chalt wird?", "note_de": "Chnächt und Diener händ es Cholefüür gmacht, wil s chalt isch ([[JHN.18.18]])."}},
     {"id": "REFL-JHN-0196", "subject": "TU-JHN-018-015-018", "order": 2,
      "question_de": "Die Magd fragt nur: «Bist du etwa auch einer der Jünger dieses Menschen?» Warum fällt die Antwort so aus?",
-     "gsw": {"question_de": "D Magd fröget nu: «Bisch du öppe au eine vo de Jünger vo dem Mänsch?» Wieso fallt d Antwort eso us?"}},
+     "gsw": {"question_de": "D Magd fröget nu: «Bisch du öppe au eine vo de Jünger vo däm Mänsch?» Wieso fallt d Antwort eso uus?"}},
     # TU-JHN-018-019-024
     {"id": "REFL-JHN-0197", "subject": "TU-JHN-018-019-024", "order": 1,
      "question_de": "«Wenn aber recht, warum schlägst du mich?» – wie widersteht Jesus hier?",
@@ -822,7 +822,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0199", "subject": "TU-JHN-018-025-027", "order": 1,
      "question_de": "Der Hahn kräht, und der Text schweigt über Petrus: Was mag in ihm vorgehen?",
      "note_de": "Anders als andere Evangelien erzählt Johannes hier nicht, dass Petrus weint ([[JHN.18.27]]).",
-     "gsw": {"question_de": "De Güggel chräit, und de Text schwiigt über de Petrus: Was gaat ächt i ihm vor?", "note_de": "Anders als anderi Evangelie verzellt de Johannes da nöd, dass de Petrus brüelet ([[JHN.18.27]])."}},
+     "gsw": {"question_de": "De Güggel chräht, und de Text schwiigt über de Petrus: Was gaat ächt i ihm vor?", "note_de": "Anders als anderi Evangelie verzellt de Johannes da nöd, dass de Petrus brüelet ([[JHN.18.27]])."}},
     {"id": "REFL-JHN-0200", "subject": "TU-JHN-018-025-027", "order": 2,
      "question_de": "Ein Verwandter des Malchus erkennt ihn: Holt die Vergangenheit Petrus ein?",
      "gsw": {"question_de": "En Verwandte vom Malchus erchännt en: Holt d Vergangeheit de Petrus ii?"}},
@@ -834,7 +834,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0202", "subject": "TU-JHN-018-028-032", "order": 2,
      "question_de": "Wie sieht die Lage aus der Sicht des Pilatus aus?",
      "note_de": "Zuerst will er den Fall abgeben: «Nehmt ihr ihn und richtet ihn nach eurem Gesetz!» ([[JHN.18.31]])",
-     "gsw": {"question_de": "Wie gseht d Lag us de Sicht vom Pilatus us?", "note_de": "Zerscht wott er de Fall abgää: «Nämed ir en und richted en nach öiem Gsetz!» ([[JHN.18.31]])"}},
+     "gsw": {"question_de": "Wie gseht d Lag us de Sicht vom Pilatus uus?", "note_de": "Zerscht wott er de Fall abgää: «Nämed ir en und richted en nach öiem Gsetz!» ([[JHN.18.31]])"}},
     # TU-JHN-018-033-038
     {"id": "REFL-JHN-0203", "subject": "TU-JHN-018-033-038", "order": 1,
      "question_de": "«Was ist Wahrheit?» – fragt Pilatus spöttisch, müde oder ernsthaft?",
@@ -847,7 +847,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0205", "subject": "TU-JHN-018-039-040", "order": 1,
      "question_de": "Barabbas statt Jesus: Was sagt diese Wahl über die Stimmung des Augenblicks?",
      "note_de": "«Barabbas aber war ein Räuber» – mit diesem knappen Satz endet das Kapitel ([[JHN.18.40]]).",
-     "gsw": {"question_de": "De Barabbas statt de Jesus: Was seit die Wahl über d Stimmig vom Augeblick?", "note_de": "«De Barabbas aber isch en Röiber gsii» – mit dem churze Satz hört s Kapitel uf ([[JHN.18.40]])."}},
+     "gsw": {"question_de": "De Barabbas statt de Jesus: Was seit die Wahl über d Stimmig vom Augeblick?", "note_de": "«De Barabbas aber isch en Röiber gsii» – mit däm churze Satz hört s Kapitel uf ([[JHN.18.40]])."}},
     {"id": "REFL-JHN-0206", "subject": "TU-JHN-018-039-040", "order": 2,
      "question_de": "Wie hat Barabbas diesen Tag wohl erlebt?",
      "gsw": {"question_de": "Wie hät de Barabbas dä Tag ächt erläbt?"}},
@@ -855,7 +855,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0207", "subject": "SUM-CH-JHN-019", "order": 1,
      "question_de": "Pilatus findet keine Schuld und liefert Jesus doch aus: Was entscheidet am Ende?",
      "note_de": "Er sagt dreimal, er finde keine Schuld an ihm ([[JHN.18.38]], [[JHN.19.4]], [[JHN.19.6]]).",
-     "gsw": {"question_de": "De Pilatus findet kei Schuld und liferet de Jesus glich us: Was entscheidet am Schluss?", "note_de": "Er seit drü Mal, er findi kei Schuld a ihm ([[JHN.18.38]], [[JHN.19.4]], [[JHN.19.6]])."}},
+     "gsw": {"question_de": "De Pilatus findet kei Schuld und liferet de Jesus glich uus: Was entscheidet am Schluss?", "note_de": "Er seit drü Mal, er findi kei Schuld a ihm ([[JHN.18.38]], [[JHN.19.4]], [[JHN.19.6]])."}},
     {"id": "REFL-JHN-0208", "subject": "SUM-CH-JHN-019", "order": 2,
      "question_de": "Dieses Kapitel wurde oft gegen Juden gewendet: Was steht im Text, und was haben Leser daraus gemacht?",
      "note_de": "Im Text schreien zuerst «die Hohepriester und die Diener» ([[JHN.19.6]]), später heisst es «die Juden» ([[JHN.19.12]]); gekreuzigt wird Jesus von Soldaten ([[JHN.19.23]]).",
@@ -931,7 +931,7 @@ REFLECTIONS = [
      "gsw": {"question_de": "Wieso betont de Verzeller so fescht, dass öpper das gseh hät und sis Zügnis wahr isch?", "note_de": "«dä, wo s gseh hät, hät s bezüügt, und sis Zügnis isch wahr … damit au ir glaubed» ([[JHN.19.35]])."}},
     {"id": "REFL-JHN-0226", "subject": "TU-JHN-019-031-037", "order": 2,
      "question_de": "Blut und Wasser: Was haben Leser aller Zeiten in diesem Detail gesehen – und was siehst du?",
-     "gsw": {"question_de": "Bluet und Wasser: Was händ Läser vo allne Ziite i dem Detail gseh – und was gsehsch du?"}},
+     "gsw": {"question_de": "Bluet und Wasser: Was händ Läser vo allne Ziite i däm Detail gseh – und was gsehsch du?"}},
     # TU-JHN-019-038-042
     {"id": "REFL-JHN-0227", "subject": "TU-JHN-019-038-042", "order": 1,
      "question_de": "Zwei, die bisher im Verborgenen waren, treten jetzt hervor: Warum gerade jetzt?",
@@ -939,12 +939,12 @@ REFLECTIONS = [
      "gsw": {"question_de": "Zwei, wo bis jetzt im Verborgne gsii sind, chömed jetzt füre: Wieso grad jetzt?", "note_de": "De Josef isch us Angscht en heimliche Jünger gsii; de Nikodemus isch zerscht znacht choo ([[JHN.19.38-JHN.19.39]])."}},
     {"id": "REFL-JHN-0228", "subject": "TU-JHN-019-038-042", "order": 2,
      "question_de": "Hundert Pfund Myrrhe und Aloe: Was drückt diese Menge aus?",
-     "gsw": {"question_de": "Hundert Pfund Myrrhe und Aloe: Was drückt die Mängi us?"}},
+     "gsw": {"question_de": "Hundert Pfund Myrrhe und Aloe: Was drückt die Mängi uus?"}},
     # SUM-CH-JHN-020
     {"id": "REFL-JHN-0229", "subject": "SUM-CH-JHN-020", "order": 1,
      "question_de": "Sehen und glauben: Wie gehen die Menschen in diesem Kapitel damit um, jeder auf seine Weise?",
      "note_de": "Gegen Ende sagt Jesus zu Thomas: «Selig sind, die nicht gesehen und doch geglaubt haben!» ([[JHN.20.29]]).",
-     "gsw": {"question_de": "Gseh und glaube: Wie gönd d Mänsche i dem Kapitel dermit um, jede uf sini Art?", "note_de": "Gäge de Schluss seit de Jesus zum Thomas: «Sälig sind die, wo nöd gseh und doch glaubt händ!» ([[JHN.20.29]])."}},
+     "gsw": {"question_de": "Gseh und glaube: Wie gönd d Mänsche i däm Kapitel dermit um, jede uf sini Art?", "note_de": "Gäge de Schluss seit de Jesus zum Thomas: «Sälig sind die, wo nöd gseh und doch glaubt händ!» ([[JHN.20.29]])."}},
     # TU-JHN-020-001-010
     {"id": "REFL-JHN-0230", "subject": "TU-JHN-020-001-010", "order": 1,
      "question_de": "Der andere Jünger «sah und glaubte» – was genau hat er gesehen?",
@@ -987,7 +987,7 @@ REFLECTIONS = [
     {"id": "REFL-JHN-0240", "subject": "TU-JHN-020-030-031", "order": 1,
      "question_de": "Das Buch sagt, es habe ausgewählt: Was fehlt dir vielleicht in dieser Auswahl?",
      "note_de": "«Noch viele andere Zeichen hat Jesus … getan, die nicht in diesem Buch aufgeschrieben sind» ([[JHN.20.30]]).",
-     "gsw": {"question_de": "S Buech seit, es heb usgwählt: Was fehlt dir villicht i dere Uswahl?", "note_de": "«No vil anderi Zeiche hät de Jesus … vor de Jünger gmacht, wo nöd i dem Buech ufgschribe sind» ([[JHN.20.30]])."}},
+     "gsw": {"question_de": "S Buech seit, es heb usgwählt: Was fehlt dir villicht i dere Uswahl?", "note_de": "«No vil anderi Zeiche hät de Jesus … vor de Jünger gmacht, wo nöd i däm Buech ufgschribe sind» ([[JHN.20.30]])."}},
     {"id": "REFL-JHN-0241", "subject": "TU-JHN-020-030-031", "order": 2,
      "question_de": "«Damit ihr glaubt»: Darf ein Text so offen sagen, was er bei den Lesenden erreichen will?",
      "gsw": {"question_de": "«damit ir glaubed»: Törf en Text so offe säge, was er bi de Läsende erreiche wott?"}},
@@ -1055,7 +1055,7 @@ RECEPTIONS = [
      },
      "gsw": {
       "period_de": "um 180",
-      "text_de": "De Irenäus vo Lyon schriibt, de Johannes, de Jünger vom Herr, wo a sinere Bruscht gläge isch, heb s Evangelium usegää, won er z Ephesus i de Provinz Asia gläbt hät. Drus isch di verbreitet chilchlich Überlieferig zum Verfasser worde; s Buech sälber nännt kein Name ([[JHN.21.24]])."
+      "text_de": "De Irenäus vo Lyon schriibt, de Johannes, de Jünger vom Herr, wo a sinere Bruscht gläge isch, heb s Evangelium usegää, won er z Ephesus i de Provinz Asia gläbt hät. Drus isch di verbreitet chilelich Überliferig zum Verfasser worde; s Buech sälber nännt kei Name ([[JHN.21.24]])."
      }
     },
     {
@@ -1224,7 +1224,7 @@ RECEPTIONS = [
      },
      "gsw": {
       "period_de": "bis hüt",
-      "text_de": "I de orthodoxe Chilche isch de füft Sunntig vo de Oschterziit de «Sunntig vo de Samariterin». D Überlieferig git de Frau ohni Name de Name Photini (di «Erlüüchtet») und verehrt si als Märtyrin, wo Christus verchündet hät ([[JHN.4.28-JHN.4.29]])."
+      "text_de": "I de orthodoxe Chile isch de füft Sunntig vo de Oschterziit de «Sunntig vo de Samariterin». D Überliferig git de Frau ohni Name de Name Photini (di «Erlüüchtet») und verehrt si als Märtyrin, wo Christus verchündet hät ([[JHN.4.28-JHN.4.29]])."
      }
     },
     {
@@ -1251,7 +1251,7 @@ RECEPTIONS = [
      },
      "gsw": {
       "period_de": "1529",
-      "text_de": "Im Abigmahlsstriit vo de Reformation beruefft sich de Huldrych Zwingli am Marburger Religionsgspröch uf s Wort «S Fleisch nützt nüüt» ([[JHN.6.63]]) für es geischtlichs Verständnis vom Abigmahl; de Martin Luther hebt am Wortlut vo de Iisetzigswort fescht und schriibt nach em Bricht «Hoc est corpus meum» («Das isch min Liib») mit Chriide uf de Tisch. D Frag, wie [[JHN.6.51-JHN.6.58]] mit em Abigmahl zämehangt, wird bis hüt verschide beantwortet."
+      "text_de": "Im Abigmahlsstriit vo de Reformation beruefft sich de Huldrych Zwingli am Marburger Religionsgspröch uf s Wort «S Fleisch nützt nüüt» ([[JHN.6.63]]) für es geischtlichs Verständnis vom Abigmahl; de Martin Luther hebt am Wortluut vo de Iisetzigswort fescht und schriibt nach em Bricht «Hoc est corpus meum» («Das isch min Liib») mit Chriide uf de Tisch. D Frag, wie [[JHN.6.51-JHN.6.58]] mit em Abigmahl zämehangt, wird bis hüt verschide beantwortet."
      }
     },
     {
@@ -1345,7 +1345,7 @@ RECEPTIONS = [
      },
      "gsw": {
       "period_de": "1724",
-      "text_de": "De Johann Sebastian Bach vertont i de Johannes-Passion de Bricht vo [[JHN.18.1-JHN.19.42]] mit Choräl und Arie. Di erscht Uffüerig isch am Karfriitig, 7. April 1724, i de Nikolaichilche z Leipzig gsii. Wil im vertonte Bibeltext Sätz, wo s Evangelium «de Jude» zueschriibt, vom Chor gsunge wärded (öppe [[JHN.19.7]], [[JHN.19.12]]), wird gfröget, öb s Wärch Judefeindschaft wiitergit; de Michael Marissen chunnt 1998 zum Schluss, Feindschaft gäge Jude z fördere seig weder s Thema no de Zwäck vo de Vertonig vom Bach."
+      "text_de": "De Johann Sebastian Bach vertont i de Johannes-Passion de Bricht vo [[JHN.18.1-JHN.19.42]] mit Choräl und Arie. Di erscht Uffüerig isch am Karfriitig, 7. April 1724, i de Nikolaichile z Leipzig gsii. Wil im vertonte Bibeltext Sätz, wo s Evangelium «de Jude» zueschriibt, vom Chor gsunge wärded (öppe [[JHN.19.7]], [[JHN.19.12]]), wird gfröget, öb s Wärch Judefeindschaft wiitergit; de Michael Marissen chunnt 1998 zum Schluss, Feindschaft gäge Jude z fördere seig weder s Thema no de Zwäck vo de Vertonig vom Bach."
      }
     },
     {
