@@ -26,12 +26,12 @@ WORTLISTE = {
     "fäält": ("fehlt", "1.3"), "fääle": ("fehle", "1.3"), "jaar": ("jahr", "1.3"), "jaare": ("jahre", "1.3"),
     "oore": ("ohre", "1.3"), "oor": ("ohr", "1.3"), "loon": ("lohn", "1.3"), "söön": ("söhn", "1.3"),
     "soon": ("sohn", "1.3"), "ooni": ("ohni", "1.3"), "gsee": ("gseh", "1.3"), "gschee": ("gscheh", "1.3"),
-    "leere": ("lehre", "1.3"), "leert": ("lehrt", "1.3"), "gleert": ("glehrt", "1.3"), "leerer": ("lehrer", "1.3"),
+    "leert": ("lehrt", "1.3"), "gleert": ("glehrt", "1.3"), "leerer": ("lehrer", "1.3"),
     "gläämt": ("glähmt", "1.3"), "gläämte": ("glähmte", "1.3"), "faare": ("fahre", "1.3"), "faart": ("fahrt", "1.3"),
     "gfaare": ("gfahre", "1.3"), "waar": ("wahr", "1.3"), "waarhäit": ("wahrheit", "1.3"), "zie": ("zieh", "1.3"),
     "ziend": ("ziehnd", "1.3"),
     # 1.4 ei statt äi
-    "gsäit": ("gseit", "1.4"), "säit": ("seit", "1.4"), "zwäi": ("zwei", "1.4"), "gäischt": ("geischt", "1.4"),
+    "zwäi": ("zwei", "1.4"), "gäischt": ("geischt", "1.4"),
     "häilig": ("heilig", "1.4"), "häilige": ("heilige", "1.4"), "käi": ("kei", "1.4"), "äis": ("eis", "1.4"),
     # 1.5 ie nur Zwielaut
     "wieder": ("wider", "1.5"), "viel": ("vil", "1.5"), "vieli": ("vili", "1.5"), "spiele": ("spile", "1.5"),
@@ -59,12 +59,75 @@ WORTLISTE = {
     "wurden": ("sind … worde", "2 Präteritum"),
 }
 
+
+# Ergänzungen aus der Neuübersetzung 2026-11-21 (Abschnitt 2 «Weitere Festlegungen» und Regeln 1.3, 1.6, 1.8, 1.13)
+_ERGAENZT = {
+    "1.3": "broot taag aabig raat tüür tüüre schlaaf schlaafe lüüg ee vee befeel befole loo oor zää zäät gwont seer "
+           "nää schöön böös hööch nööch nooch ääre zäänte bewaare zale",
+    "1.6": "härz härze ärnt ärnte gärn stärbe ewägg weg",
+    "1.8": "könig könige knecht knächt",
+    "2": "zwee zwo füüf ali mane irne öisne welle sölle werum sig sigi seg seigid heig heg häig heiged heigid häb "
+         "wärdi wärdid wüssid übercho niemert chünige jumpfere gsehne frögt",
+    "3": "himel schriftgleerte schriftgleert schriftgelehrte hüchler find spraach spraache schleeg uussag lieferet "
+         "fischternis fischteri tämpelwiiig brüedere stedt diräkt tumm",
+}
+_ZIEL = {
+    "broot": "brot", "taag": "tag", "aabig": "abig", "raat": "rat", "tüür": "tür", "tüüre": "türe", "schlaaf": "schlaf",
+    "schlaafe": "schlafe", "lüüg": "lüg", "ee": "ehe", "vee": "veh", "befeel": "befehl", "befole": "befohle",
+    "loo": "lohn", "oor": "ohr", "zää": "zäh", "zäät": "zäht", "gwont": "gwohnt", "seer": "sehr", "nää": "näh",
+    "schöön": "schön", "böös": "bös", "hööch": "höch", "nööch": "nöch", "nooch": "nöch", "ääre": "ähre",
+    "zäänte": "zehnte", "bewaare": "bewahre", "zale": "zahle", "härz": "herz", "härze": "herze", "ärnt": "ernte",
+    "ärnte": "ernte", "gärn": "gern", "stärbe": "sterbe", "ewägg": "wäg", "weg": "wäg", "könig": "chönig",
+    "könige": "chönige", "knecht": "chnächt", "knächt": "chnächt", "zwee": "zwei", "zwo": "zwei", "füüf": "föif",
+    "ali": "alli", "mane": "manne", "irne": "ire", "öisne": "öise", "welle": "wele", "sölle": "söle",
+    "werum": "wieso", "sig": "seig", "sigi": "seig", "seg": "seig", "seigid": "seiged", "heig": "heb", "heg": "heb",
+    "häig": "heb", "heiged": "hebed", "heigid": "hebed", "häb": "heb", "wärdi": "wärd", "wärdid": "wärded",
+    "wüssid": "wüssed", "übercho": "überchoo", "niemert": "niemer", "chünige": "chönige", "jumpfere": "jungfraue",
+    "gsehne": "gseh", "frögt": "fröget", "himel": "himmel", "schriftgleerte": "schriftglehrte",
+    "schriftgleert": "schriftglehrt", "schriftgelehrte": "schriftglehrte", "hüchler": "hüüchler", "find": "fiind",
+    "spraach": "sprach", "spraache": "sprache", "schleeg": "schläg", "uussag": "ussag", "lieferet": "liferet",
+    "fischternis": "fiischteri", "fischteri": "fiischteri", "tämpelwiiig": "tempelweihi", "brüedere": "brüeder",
+    "stedt": "städt", "diräkt": "direkt", "tumm": "dumm",
+}
+for _regel, _woerter in _ERGAENZT.items():
+    for _w in _woerter.split():
+        WORTLISTE.setdefault(_w, (_ZIEL[_w], _regel))
+
+# Formen, die automatisch ersetzt werden dürfen (eindeutig, nur in Mundart-Texten); alle übrigen nur melden.
+NICHT_AUTOMATISCH = {"ihr", "war", "waren", "hatte", "hatten", "kam", "kamen", "sagte", "sagten", "ging", "gingen",
+                     "sprach", "wurde", "wurden", "weg", "find", "ee", "ali", "zale", "sig", "heg", "seg", "gha"}
+
 MUSTER = [
     (re.compile(r"[èòùì]"), "Sonderzeichen", "1.1", "nur ä, ö, ü"),
     (re.compile(r"\bum z\b", re.I), "um z", "2 Infinitiv", "zum / damit"),
     (re.compile(r"[A-Za-zäöü]['’][A-Za-zäöü]|(?<![A-Za-zäöü])['’]s\b|\b[sdz]['’]"), "Apostroph", "1.11", "ohne Apostroph"),
     (re.compile(r"\bdes\b"), "Genitiv «des»", "2 Genitiv", "vo + Dativ"),
+    (re.compile(r"\b(?:[Ww]o|[Ww]ie|[Zz]ue|[Cc]ha) (?:er|es|em|en)\b"), "Gleit-n fehlt", "1.12", "won er, wien es, zuen em, chan er"),
+    (re.compile(r"\b(?:[Ww]on|[Ww]ien) (?:ich|si|me|mer|ir)\b"), "Gleit-n zu viel", "1.12", "wo ich, wie si"),
+    (re.compile(r"\b[A-ZÄÖÜ][a-zäöü]+ung(?:e|en)?\b"), "Endung -ung", "1.13", "-ig"),
+    (re.compile(r"\b(?:sinds|solls|isch's|hät's|gits)\b"), "Kleinwort angehängt", "1.11", "sind s, soll s"),
 ]
+
+_GLEIT = re.compile(r"\b([Ww]o|[Ww]ie|[Zz]ue|[Cc]ha) (er|es|em|en)\b")
+_GLEIT_ZUVIEL = re.compile(r"\b([Ww]o|[Ww]ie)n (ich|si|me|mer|ir)\b")
+
+
+def ersetze(text):
+    """Wendet die eindeutigen Regeln automatisch an (Wortliste ausser NICHT_AUTOMATISCH, Gleit-n). Gross-/Kleinschreibung
+    am Wortanfang bleibt erhalten. Nur auf Mundart-Text anwenden."""
+    def wort(m):
+        w = m.group(0)
+        k = w.lower()
+        if k not in WORTLISTE or k in NICHT_AUTOMATISCH or WORTLISTE[k][1] == "2 Präteritum":
+            return w
+        neu = WORTLISTE[k][0]
+        if "…" in neu or "/" in neu:
+            return w
+        return neu[:1].upper() + neu[1:] if w[:1].isupper() else neu
+    text = _WORT.sub(wort, text)
+    text = _GLEIT.sub(lambda m: m.group(1) + "n " + m.group(2), text)
+    text = _GLEIT_ZUVIEL.sub(lambda m: m.group(1) + " " + m.group(2), text)
+    return text
 
 _WORT = re.compile(r"[A-Za-zÄÖÜäöüÀ-ÿ]+")
 

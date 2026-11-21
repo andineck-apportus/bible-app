@@ -35,28 +35,37 @@ welche Form gilt.
    Hochdeutschen (Nomen gross). Die Anrede Gottes «du» klein.
 2. **Lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt:** wo hochdeutsch `au`, `ei`, `eu` steht, die
    Mundart aber einen langen Einzellaut hat: `Huus`, `Muur`, `Ziit`, `schriibe`, `Lüüt`, `tüür`, `Chrüüz`. Ebenso
-   bei mundarteigenen Längen: `gaa`, `staa`, `choo`, `gsii`, `haa`, `laa`, `nüüt`, `Aabig`, `Aafang`.
+   bei mundarteigenen Längen, die das Hochdeutsche nicht hat: `gaa`, `staa`, `choo`, `überchoo`, `gsii`, `haa`, `laa`,
+   `nüüt`, `Aafang`, `Fiind`, `Fiischteri`.
 3. **Sonst wie im Hochdeutschen:** Dehnungs-h und Doppelvokale nach hochdeutschem Vorbild, auch wenn kurz gesprochen:
    `ihm`, `ihn`, `ohni`, `Jahr`, `mehr`/`meh`, `gseh`, `Lehrer`, `wahr`, `Wahrheit`, `fehlt`, `Sohn`, `Söhn`. Bei
-   einsilbigen Verben mit langem Vokal ebenfalls h: `gseh`, `gscheh`, `zieh`.
+   einsilbigen Verben mit langem Vokal ebenfalls h: `gseh`, `gscheh`, `zieh`, `näh`. Hat das Hochdeutsche denselben
+   langen Vokal ohne Zeichen, einfach schreiben: `Brot`, `Tür`, `Rat`, `Tag`, `Abig`, `Schlaf`, `Lüge`, `Ehe`, `Veh`,
+   `Thron`, `schön`, `bös`, `höch`, `nöch` (nicht «Broot», «Tüür», «Raat», «Taag», «Aabig», «schöön», «nööch»).
 4. **`ei`, `au`, `öi`:** Der Zürcher ei-Laut wird `ei` geschrieben (`zwei`, `gseit`, `Geischt`, `heilig`, `kei`).
    `au` bleibt (`Frau`, `Baum`, `glaube`), `öi` bleibt (`nöi`, `Fröid`, `Höi`).
 5. **`ie`, `ue`, `üe` nur für Zwielaute:** `lieb`, `Liecht`, `Chrieg`, `guet`, `Bluet`, `Brüeder`, `früe`. Nie `ie`
    für ein langes i: `wider` (nicht «wieder»), `vil` (nicht «viel»), `spile`.
-6. **e oder ä:** `ä`, wo ä gesprochen wird (`Mänsch`, `Wält`, `Läbe`, `läse`, `schlächt`, `Bärg`), auch wo Gallmann
-   das offene `è` schreibt (`dä`, `wär`, `wärde`, `gää`, `här`, `gärn`). Sonst `e` wie im Hochdeutschen (`Bett`,
-   `See`, `Herr`, `Herz`, `Erde`, `fertig`). Das unbetonte e (Schwa) immer `e` (`säge`, `luege`).
+6. **e oder ä:** `ä`, wo ä gesprochen wird und das Hochdeutsche e oder ä hat (`Mänsch`, `Wält`, `Läbe`, `läse`,
+   `schlächt`, `Bärg`, `wäg`). Gallmanns offenes `è`: `e`, wo das Hochdeutsche e hat (`Herr`, `Herz`, `Erde`, `Ernte`,
+   `gern`, `sterbe`, `fertig`, `merke`); `ä` nur in den häufigen Grundwörtern, wo das heute allgemein so geschrieben
+   wird: `dä`, `däm`, `wär`, `wäm`, `gää`, `wärde`, `här`. Das unbetonte e (Schwa) immer `e` (`säge`, `luege`).
 7. **sp, st:** am Wort- und Stammanfang wie im Hochdeutschen (`Stei`, `Stimm`, `spile`, `verstaa`); im Wortinnern und
    am Ende `scht`, `schp` (`Geischt`, `Prieschter`, `fescht`, `Fänschter`).
 8. **k und ch:** `ch`, wo ch gesprochen wird (`Chind`, `chunnt`, `Chrüüz`, `Chile`); `k`/`ck` wie im Hochdeutschen,
-   wo kch gesprochen wird; `gg`, wo ein weiches k gesprochen wird (`Schnägg`, `Schoggi`).
+   wo kch gesprochen wird; `gg`, wo ein weiches k gesprochen wird (`Schnägg`, `Schoggi`). Also `Chönig`, `Chnächt`,
+   `Chrankheit` (nicht «König», «Knecht»).
 9. **Mitlaute** (b, p, d, t, m, n, l, r): wie im Hochdeutschen, auch wenn anders gesprochen. Doppelmitlaut im
    Wortinnern nach Hochdeutsch (`Sunne`, `Himmel`, `alli`), nie am Wortanfang.
 10. **Partizip:** kein `gg-` oder `gch-` für die Vorsilbe ge-: `gange`, `gää`, `gässe`, `kauft`, `bracht`, `treit`
-    (nicht «ggange», «ggää», «ggässe», «gchauft», «praacht»).
+    (nicht «ggange», «ggää», «ggässe», «gchauft», «praacht»). Bei Verben mit ch-Anlaut den Satz so bauen, dass kein
+    «gch-» nötig ist, oder ein anderes Verb wählen.
 11. **Wortgrenzen und Apostroph:** Wörter getrennt schreiben, auch Einbuchstabenwörter: `s Wort`, `d Frau`, `i de
     Wält`, `hät s gseh`, `z Jerusalem`. Kein Apostroph (`s Huus`, nicht «'s Huus»). Zusammen nur, was nicht mehr zu
-    trennen ist: `gömmer`, `wämmer`, `hämmer`, `simmer`. Das Gleit-n gehört ans Wort davor: `won er`, `wien er`, `zuen em`.
+    trennen ist: `gömmer`, `wämmer`, `hämmer`, `simmer`; sonst getrennt: `sind s`, `soll s`, `isch s` (nicht «sinds»).
+12. **Gleit-n:** nach `wo`, `wie`, `zue`, `cha` vor `er`, `es`, `em`, `en` (Fürwort oder Artikel) ans Wort davor:
+    `won er`, `won en Maa`, `wien es Chind`, `zuen em`, `chan er`. Nicht vor `ich`, `si`, `me`, `mer`, `ir`.
+13. **Endung -ung** wird `-ig`: `Wohnig`, `Beerdigig`, `Chrüüzigig`, `Ussag`, `Überliferig` (nicht «-ung»).
 
 ## 2 Formen (nach Gallmann, Kap. 6)
 
@@ -122,10 +131,23 @@ Ordnungszahl `erscht`, `zweit`, `dritt`. Nach Zahl Einzahl bei Massen: `zwei Gla
 nicht «des Vaters», «Gottes Riich». In Namen von Personen und festen Begriffen ist `Gottes` zulässig, wo es ein
 Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
 
-**Weitere Festlegungen (Pilot Johannes 1–3):** `öi`, `öie`, `öii` (nicht «eu», «eui»); Fragewort und
-verallgemeinerndes `wär` (`wär glaubt, …`); `damit` (nicht «demit»); `drü`; `bracht`, `ghaa`; Dativ Plural ohne -e
-(`de Brüeder`, nicht «de Brüedere»); indirekte Rede `er seig`, `er heb`, `si hebed`; `wieso`. Das Gleit-n steht nach
-jedem Wort auf Vokal vor `er`, `es`, `em`, `en` (`won er`, `chan er`, `wien es`).
+**Weitere Festlegungen (Neuübersetzung 2026-11-21, aus allen Büchern zusammengeführt):**
+- Fürwörter: `öi`, `öie`, `öii` (nicht «eu», «eui»); Dativ der Besitzwörter `minere`, `irere`, `öiere`, `öiem`;
+  Mehrzahl `ire`, `öise` (nicht «irne», «öisne»); Fragewort und verallgemeinerndes `wär`; `me` für «man», `mer` nur für
+  «wir»/«mir»; `niemer`, Dativ `niemerem`; `alli` (nicht «ali»).
+- Zahlen: `zwei` für alle Geschlechter (nicht «zwee», «zwo»), `drü`, `drümal`, `drühundert`, `föif`, `zäh`, `vierzäh`,
+  `füfzäh`, `zähtuusig`; Zahlen im Dativ unverändert (`zwei vo ine`).
+- Nomen: `Manne` (Mehrzahl von Maa), `Brüeder` (Ein- und Mehrzahl), `Schriftglehrte` (mit Artikel) / `Schriftglehrti`,
+  `Hüüchler`, `Fiind`, `Chönig`, `Tempel`, `Erde`, `Ernte`, `Herz`, `Brot`, `Lohn`, `Himmel`, `Himmelriich`.
+- Verben: `damit` (nicht «demit»); `bracht`, `ghaa`, `überchoo`; `han` (ich habe) und `haa` (haben); `wele`, `söle`
+  (nicht «welle», «sölle»); `chönnt`, `chönnted`; Mehrzahl auf `-ed` auch im Konjunktiv (`seiged`, `wüssed`); indirekte
+  Rede `er seig`, `si seiged`, `er heb`, `si hebed`, `er wärd`; `wieso` (nicht «werum»); `zum` + Infinitiv ohne `z`
+  (`zum s Gsetz ufhebe`); nach Bewegung Absicht mit `go` (`isch ine gange, go öppis hole`).
+- Zukunft mit `wärde` bleibt, wo eine Lesart sich nur in der Zeitform unterscheidet oder der Urtext das Künftige
+  betont; sonst Präsens. Passiv bleibt beim göttlichen Passiv und wo eine Lesart sonst nicht unterscheidbar wäre; sonst
+  Aktiv mit `me`.
+- Matthäus: βασιλεία τῶν οὐρανῶν `s Himmelriich`; Erfüllungsformel `damit sich erfüllt, was (vom Herr) dur de Prophet …
+  gseit worde isch`.
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 
