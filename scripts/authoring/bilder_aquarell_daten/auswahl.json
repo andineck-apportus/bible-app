@@ -47320,5 +47320,679 @@
       "datum": "2026-11-21",
       "prozess": "PROC-BILD-AQUARELL@2.4"
     }
+  },
+  "PSA-B3": {
+    "datei": "img/PSA-B3.webp",
+    "lauf": "20261121-111031-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-21",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 4,
+      "kern": 2,
+      "kern_fehlt_de": "Das dunkle Tal im Hintergrund und dass das Schaf satt ist, werden nicht erwähnt.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The sheep and staff are fully inside the picture; the landscape fades out."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No modern objects or clothing are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visible."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visible."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a light watercolour with extensive white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty white paper."
+        },
+        {
+          "id": "P3-SCHAF",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Ein Schaf ruht auf grüner Weide am Wasser",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A white sheep lies in green grass beside calm water."
+        },
+        {
+          "id": "P3-STAB",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Hirtenstab beim Schaf",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A wooden shepherd's crook stands near the sheep."
+        },
+        {
+          "id": "P3-KEIN-MENSCH",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Kein Hirte und kein Mensch gemalt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No human figure, face or hand is visible."
+        },
+        {
+          "id": "PSA-KEIN-GOTT",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Nichts am Himmel (keine Figur, keine Strahlen)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The sky contains no visible figure, face, hand, rays or glow."
+        }
+      ],
+      "koepfe": {
+        "FIG-OBJ-SCHAF": {
+          "kopf": [
+            537,
+            503,
+            652,
+            633
+          ],
+          "sicher": "high"
+        }
+      },
+      "blind": {
+        "action": "A sheep rests in the grass beside a pool. A crook and a wooden stick stand nearby; no person is visible.",
+        "story_guess": "Possibly an illustration of Psalm 23's green pastures and still waters, suggested by the sheep and shepherd's crook. No specific narrative moment is identifiable.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor illustration with loose, moderately detailed natural forms and ample blank space."
+      },
+      "personen": [],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "9d985b737d5a8383",
+      "datum": "2026-11-21",
+      "plan_sha": "298cfa5d0e128e9b",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Das dunkle Tal im Hintergrund und das Sattsein des Schafs werden nicht erwähnt.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is complete and readable; no bubble text is present."
+        }
+      ],
+      "blind": {
+        "action": "A sheep rests in the grass beside a pool of water. A shepherd's crook and a wooden rod stand nearby, but no shepherd is visible.",
+        "story_guess": "The sheep, water and shepherd's implements may evoke Psalm 23, with its image of the Lord as shepherd and rest beside quiet waters. No specific Bible story or narrative moment can be identified with certainty.",
+        "text_in_picture": [
+          {
+            "text": "3",
+            "location": "bottom left"
+          },
+          {
+            "text": "Geborgen wie ein Schaf beim Hirten",
+            "location": "bottom center"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "e8256381c117b063",
+      "datum": "2026-11-21",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "SNG-B1": {
+    "datei": "img/SNG-B1.webp",
+    "lauf": "20261121-111031-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-21",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 5,
+      "kern": 2,
+      "kern_fehlt_de": "",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and scenery fade into the paper rather than being cut off by the picture edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No painted writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "Neither person has a halo."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No obvious extra or malformed body parts are visible; the lower bodies fade out."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The two visible people are distinct."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "Neither person is visibly drawn as a caricature or stereotype."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible adult proportions appear natural."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a light watercolour with extensive white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "F-GELIEBTE-BEKLEIDET",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Die junge Frau ist, soweit sichtbar, schlicht bekleidet",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Her visible clothing is modest, with long sleeves."
+        },
+        {
+          "id": "H1-RUFEN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Er ruft ihr von draussen zu",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The man stands outside, facing the woman with his mouth open and a hand raised."
+        },
+        {
+          "id": "H1-FENSTER",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Sie schaut durchs Gitterfenster",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The woman looks out through a window in the wall."
+        },
+        {
+          "id": "H1-FRUEHLING",
+          "ebene": "feld",
+          "stufe": "soll",
+          "de": "Frühling: Blumen, Feigenbaum, Rebe",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Small yellow flowers are visible among the landscape plants."
+        },
+        {
+          "id": "H1-ABSTAND",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Keine Berührung, keine Umarmung, nichts Intimes",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The pair are apart, and neither is visibly wearing revealing clothing."
+        }
+      ],
+      "koepfe": {
+        "FIG-GELIEBTER": {
+          "kopf": [
+            347,
+            562,
+            426,
+            683
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-GELIEBTE": {
+          "kopf": [
+            778,
+            482,
+            864,
+            590
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "A man outside gestures and appears to call up to a woman at a window. She leans on the sill and smiles back at him.",
+        "story_guess": "Possibly the beloved calling to his lover to come away in spring in Song of Songs 2:8–14. The window, lattice, vines and bird fit that passage, though the scene cannot be identified with certainty from the picture alone.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with loose textures and moderately detailed figures and scenery."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Dark-haired, bearded man in a yellow tunic",
+          "head": [
+            347,
+            562,
+            426,
+            683
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Woman in a pale rose headscarf and blue dress",
+          "head": [
+            778,
+            482,
+            864,
+            590
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "e9f9c7791ac570e1",
+      "datum": "2026-11-21",
+      "plan_sha": "7aece7ce9ebdeece",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Frühling und Fenstergitter werden nicht erwähnt.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is complete and readable; no speech bubbles are visible."
+        }
+      ],
+      "blind": {
+        "action": "A man calls up toward a woman leaning from a window, extending one arm as he does so. She smiles down at him.",
+        "story_guess": "Possibly the Song of Songs 2:8–14, particularly the beloved calling the woman to come out in spring. The image alone does not establish the identification.",
+        "text_in_picture": [
+          {
+            "text": "1",
+            "location": "bottom left"
+          },
+          {
+            "text": "Der Ruf im Frühling",
+            "location": "bottom center"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "67eac2ca4920520f",
+      "datum": "2026-11-21",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "ECC-B5": {
+    "datei": "img/ECC-B5.webp",
+    "lauf": "20261121-111031-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-21",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 5,
+      "kern": 1,
+      "kern_fehlt_de": "Das kaputte Schöpfrad, die gerissene silberne Schnur und der blühende Mandelbaum fehlen; das goldene Gefäß wird nicht als zersprungen beschrieben.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person or important object is visibly cut off by the picture edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person or halo is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visible."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visible."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The illustration is a light watercolour with abundant white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly white paper."
+        },
+        {
+          "id": "E5-KRUG",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Zerbrochener Tonkrug beim Brunnen",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A broken clay pitcher and fragments lie beside the stone well."
+        },
+        {
+          "id": "E5-SCHALE",
+          "ebene": "feld",
+          "stufe": "soll",
+          "de": "Goldene Schale am Brunnenrand",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A small golden bowl rests on the well's rim."
+        },
+        {
+          "id": "E5-MANDEL",
+          "ebene": "feld",
+          "stufe": "soll",
+          "de": "Blühender Mandelbaum",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A tree with white blossoms stands beside the well."
+        },
+        {
+          "id": "E5-KEIN-MENSCH",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Kein Mensch, kein Toter, nichts am Himmel",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No human figure, body part or light rays from the sky are visible."
+        }
+      ],
+      "koepfe": {},
+      "blind": {
+        "action": "A broken clay pitcher and its fragments lie beside a stone well. A rope hangs into the well, and a small golden vessel rests on its rim; no people are present.",
+        "story_guess": "Possibly an illustration of Ecclesiastes 12:6, with its imagery of a broken pitcher and wheel at a well. This is poetic imagery rather than a definite narrative moment, and the identification is uncertain.",
+        "cut_off": "Some branches of the tree extend beyond the right edge.",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with loose textures and moderate detail."
+      },
+      "personen": [],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "10844d5c0d2f3b3a",
+      "datum": "2026-11-21",
+      "plan_sha": "cba66c05c374f40b",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Das kaputte Schöpfrad, die zersprungene goldene Schale, die gerissene silberne Schnur und der blühende Mandelbaum sind nicht erkennbar.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "A broken clay jug lies in pieces beside a stone well. A rope hangs from a pulley into the well, and a small gold-coloured object rests on its rim.",
+        "story_guess": "Probably an illustration of Ecclesiastes 12:6, which mentions a pitcher broken at a spring and a wheel broken at a well. This is a poetic image of mortality rather than a specific narrative scene; the jug is already broken in the picture, although the caption says 'Before the jug breaks at the well.'",
+        "text_in_picture": [
+          {
+            "text": "5",
+            "location": "bottom left, inside a circle"
+          },
+          {
+            "text": "Bevor der Krug am Brunnen zerbricht",
+            "location": "bottom caption"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "98968401752d4c46",
+      "datum": "2026-11-21",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
   }
 }
