@@ -25,6 +25,10 @@ Sonderzeichen ausser ä, ö, ü; `ei` und Dehnungs-h wie im Hochdeutschen (nicht
 (nicht «Mäntsch»). Gallmanns lautnahe Dieth-Schreibung bestimmt also nicht die Buchstaben, wohl aber, welches Wort und
 welche Form gilt.
 
+**Im Zweifel** (Andi, 2026-11-21): so, wie man heute schreibt, nach der SRF-Regel nahe am Hochdeutschen (z. B.
+`damit`, `Tempel`, `Erde`, `wieso`). Gallmanns Formen gelten für die häufigen Grundwörter (`hät`, `gää`, `gaat`,
+`Dänn`, `öis`), nicht für jede seltene Lautung.
+
 ## 1 Schreibung
 
 1. **Buchstaben:** nur a–z, ä, ö, ü. Kein è, é, ò, ù, ì, keine Unterstreichung. Gross- und Kleinschreibung wie im
@@ -117,6 +121,12 @@ Ordnungszahl `erscht`, `zweit`, `dritt`. Nach Zahl Einzahl bei Massen: `zwei Gla
 **Kein Genitiv** (ausser in festen Wendungen): `s Huus vo mim Vatter` oder `em Vatter sis Huus`, `s Riich vo Gott`,
 nicht «des Vaters», «Gottes Riich». In Namen von Personen und festen Begriffen ist `Gottes` zulässig, wo es ein
 Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
+
+**Weitere Festlegungen (Pilot Johannes 1–3):** `öi`, `öie`, `öii` (nicht «eu», «eui»); Fragewort und
+verallgemeinerndes `wär` (`wär glaubt, …`); `damit` (nicht «demit»); `drü`; `bracht`, `ghaa`; Dativ Plural ohne -e
+(`de Brüeder`, nicht «de Brüedere»); indirekte Rede `er seig`, `er heb`, `si hebed`; `wieso`. Das Gleit-n steht nach
+jedem Wort auf Vokal vor `er`, `es`, `em`, `en` (`won er`, `chan er`, `wien es`). Absicht darf statt `damit` auch mit
+`dass` stehen, wo das natürlicher klingt (Joh 3,16).
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 

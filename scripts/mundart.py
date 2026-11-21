@@ -44,6 +44,9 @@ WORTLISTE = {
     "üs": ("öis", "2"), "üse": ("öise", "2"), "üsi": ("öisi", "2"), "üses": ("öises", "2"), "üsere": ("öisere", "2"),
     "üsem": ("öisem", "2"), "sie": ("si", "2"), "ihr": ("ir / ire", "2"), "nüt": ("nüüt", "2"), "öpis": ("öppis", "2"),
     "gsi": ("gsii", "2"),
+    "eu": ("öi", "2"), "euch": ("öi", "2"), "eue": ("öie", "2"), "eui": ("öii", "2"), "wer": ("wär", "2"),
+    "demit": ("damit", "2"), "tämpel": ("tempel", "3"), "ärde": ("erde", "1.6"), "drüü": ("drü", "2"),
+    "brocht": ("bracht", "1.10"), "gha": ("ghaa", "2"), "brüedere": ("brüeder", "3"),
     # 3 Wortwahl: falsche Vermundartlichung
     "gfüel": ("gfühl", "3"), "stuefe": ("stufe", "3"),
     # Präteritum (2 Verb)
