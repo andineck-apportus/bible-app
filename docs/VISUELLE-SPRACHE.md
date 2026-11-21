@@ -74,3 +74,11 @@ zeigten eine nicht verlangte Figur aus der Stilvorlage und wurden zugeschnitten.
 3. Der Zoom-Zugang bleibt Hauptzugang; Bibliothek, Zeit und Ort werden als weitere Zugänge in Varianten geprüft.
 4. Kein besonderer Modus ohne Personenbilder; Text allein lesen bleibt möglich, Bilder sind zuschaltbar.
 5. Audio später.
+
+**Umsetzung der Zugänge (2026-11-21):** Auf der Ebene Bibel schaltet ein Umschalter «Zoom · Bibliothek · Geschichte · Zeit · Ort»
+(Zoom vorgewählt, Wahl gemerkt) zwischen den Zugängen. Bibliothek: 66 Buchrücken, Breite nach Versen, Anteile der Inhaltsarten
+(Schätzung je Kapitel). Geschichte: acht Stationen mit den Pilot-Vignetten (noch nicht geprüft) und Sprung zur Stelle. Zeit: Folge ohne
+Jahreszahlen bis zu den Richtern, ab der Königszeit ungefähre Jahre; Psalmen, Weisheit und Joel ohne feste Stelle. Ort: Übersichtskarte
+(Natural Earth) mit Ausschnitt Land Israel; ein Ort zeigt die Bücher, die dort spielen. Antippen eines Buchs öffnet es im Zoom. Inhalte
+in `scripts/authoring/zugaenge_daten.json` (de, gsw), Werkzeug `scripts/authoring/zugaenge.py`, Prüfung `scripts/test_bible_zugaenge.cjs`.
+Zuordnungen von Büchern zu Zeiten und Orten sind redaktionelle Vereinfachungen (ein Buch kann an mehreren Stellen stehen).

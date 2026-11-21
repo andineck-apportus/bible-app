@@ -352,6 +352,10 @@ for rid, r in ill_recs.items():
             m["captions"] = f["captions_de"]
         if m:
             bundle(f"l/{lg}/common").setdefault("i18n", {}).setdefault(rid, {}).update(m)
+# Weitere Zugänge der Ebene Bibel (Bibliothek, Geschichte, Zeit, Ort; Entscheid Andi Neck 2026-11-21): im Übersichtspaket
+sys.path.insert(0, str(ROOT / "scripts/authoring"))
+import zugaenge  # noqa: E402
+bundle("b/_overview")["zug"] = zugaenge.daten()
 # Merkverse (Bilder der Ebene «verse»): Liste im Kern, damit Menü und Lernmodus sie kennen, bevor ein Buch geladen ist
 _bo = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
 ill_core["merk"] = sorted({r["reference"] for r in ill_recs.values() if r["type"] == "illustration" and r["level"] == "verse"},

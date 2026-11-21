@@ -76,10 +76,10 @@ def _dp(pts, eps):
 
 
 def _ringe(geom):
-    if geom["type"] == "Polygon":
-        return [geom["coordinates"][0]]
+    if geom["type"] == "Polygon":   # Aussenring und Löcher (z. B. Schwarzes Meer, Kaspisches Meer); gezeichnet mit evenodd
+        return geom["coordinates"]
     if geom["type"] == "MultiPolygon":
-        return [p[0] for p in geom["coordinates"]]
+        return [r for p in geom["coordinates"] for r in p]
     if geom["type"] == "LineString":
         return [geom["coordinates"]]
     if geom["type"] == "MultiLineString":
@@ -160,7 +160,7 @@ def karte_svg(name, k, ne, mit_rahmen=None):
             land.append(_pfad(c, p, True))
     o = [f'<svg class="zg-map-svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">',
          f'<rect width="{W}" height="{H}" style="fill:var(--sk-b,#DDF2F3)"/>',
-         f'<path class="zg-land" d="{"".join(land)}" style="fill:var(--sk-karte,#FFFFFF);stroke:var(--sk-linie,#DCE4E7);stroke-width:.8"/>']
+         f'<path class="zg-land" d="{"".join(land)}" style="fill:var(--sk-karte,#FFFFFF);fill-rule:evenodd;stroke:var(--sk-linie,#DCE4E7);stroke-width:.8"/>']
     breit = 1.6 if name == "ausschnitt" else 1.1
     for fl, linien in sorted(ne["fluesse"].items()):
         for ln in linien:

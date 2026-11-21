@@ -25,8 +25,8 @@ from _lib import D, write  # noqa: E402
 
 DATE = "2026-10-13"
 # Einträge, deren Angaben später geprüft bzw. geändert wurden (Prüfdatum je Eintrag; die übrigen behalten DATE)
-CHECKED = {k: "2026-10-14" for k in ("SRC-SDBH", "SRC-STEP-TAHOT", "SRC-BDB", "SRC-STEP-TBESH", "SRC-UBS-DBH", "SRC-STEP-TAGNT",
-                                     "SRC-MARBLE", "SRC-GREEK-LEXICA-FREE", "SRC-STEP-TBESG", "SRC-UBS-DGNT")}
+CHECKED = {"SRC-NATURAL-EARTH": "2026-11-21", **{k: "2026-10-14" for k in ("SRC-SDBH", "SRC-STEP-TAHOT", "SRC-BDB", "SRC-STEP-TBESH", "SRC-UBS-DBH", "SRC-STEP-TAGNT",
+                                     "SRC-MARBLE", "SRC-GREEK-LEXICA-FREE", "SRC-STEP-TBESG", "SRC-UBS-DGNT")}}
 AUTH = "Katalogangaben KI-Entwurf (Claude) vom 2026-10-13 nach docs/QUELLEN.md; Lizenzen vor jedem Import erneut prüfen."
 
 # (ID, Titel, Bereich, Schicht, Recht, Kürzel, Verwendung, used_in, urls, Adresse, warum)
@@ -192,6 +192,10 @@ C = [
   ["https://github.com/STEPBible/STEPBible-Data"], "https://github.com/STEPBible/STEPBible-Data", "Umrechnung der Verszählungen."),
  ("SRC-OPENBIBLE-XREF", "OpenBible.info Querverweise", "all", "aux", "free", "BY", "used", ["data/crossrefs/XREF-OPENBIBLE-*.json"],
   ["https://www.openbible.info/labs/cross-references/", "https://github.com/scrollmapper/bible_databases"], "https://www.openbible.info/labs/cross-references/", "344 799 Querverweise (Kopie über scrollmapper/bible_databases)."),
+ ("SRC-NATURAL-EARTH", "Natural Earth (Küsten, Flüsse, Seen 1:50 Mio.)", "all", "aux", "free", "PD", "used", ["vendor/naturalearth/naturalearth-orient.json"],
+  ["https://www.naturalearthdata.com", "https://github.com/nvkelso/natural-earth-vector"], "https://www.naturalearthdata.com",
+  "Umrisse der Übersichtskarte (Zugang «Ort» auf der Ebene Bibel, seit 2026-11-21): Land, Nil, Euphrat, Tigris, Jordan, Totes Meer und See Genezareth, "
+  "auf den Vorderen Orient beschnitten und vereinfacht (scripts/authoring/zugaenge.py). Gemeinfrei."),
  ("SRC-TWEMOJI", "Twemoji (Twitter, Inc. und Mitwirkende)", "all", "aux", "free", "BY", "used", ["vendor/twemoji/twemoji-auszug.json"],
   ["https://github.com/jdecked/twemoji", "https://www.npmjs.com/package/@iconify-json/twemoji"], "https://github.com/jdecked/twemoji",
   "Grundlage der Bildzeichen seit 2026-10-25 (Entscheid Andi Neck: Emoji, wo es geht); nur benutzte Emoji als Auszug, Hautton gewählt, teils kombiniert."),

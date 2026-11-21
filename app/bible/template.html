@@ -365,6 +365,119 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 /* Strukturbilder: Farben als Rollen (--sk-…, Vorgaben stehen im SVG), hier die dunkle Palette (Rückmeldung Andi Neck 2026-11-21) */
 #bible-stream .app[data-theme=dark]{--sk-flaeche:#1B2225;--sk-karte:#273035;--sk-text:#E8EEF0;--sk-text-leise:#9DA9AF;--sk-linie:#3A4549;--sk-a:#4A2C25;--sk-a-text:#FF9479;--sk-b:#1D3B3E;--sk-b-text:#55C8CE;--sk-c:#24402A;--sk-c-text:#8BCB7D;--sk-betont:#4A4A1E;--sk-marke-text:#1B2225;--sk-gestrichen:#30393D;--sk-pfeil:#9DA9AF;--sk-bild-filter:url(#sk-bild)}
 #bible-stream .app[data-theme=dark]{--r-free:#6cc58f;--r-sa:#62c4bf;--r-nc:#8cb0ef;--r-ask:#e2b552;--r-prot:#ef8a7e}
+/* Weitere Zugänge auf der Ebene Bibel (Entscheid Andi Neck 2026-11-21): Zoom · Bibliothek · Geschichte · Zeit · Ort.
+   Farben als Rollen wie die Strukturbilder (--sk-…, Vorgabe hell im var()-Rückfall); neue Rollen: --sk-art-… (Inhaltsarten der
+   Bibliothek), --sk-schatten (weicher Schatten der Karten). Daten: scripts/authoring/zugaenge.py */
+#bible-stream .app[data-theme=dark]{--sk-art-erz:#D96A4F;--sk-art-rede:#CDA73F;--sk-art-ordnung:#669B5A;--sk-art-lied:#2B9095;--sk-art-proph:#8C73C2;--sk-art-brief:#5B7DAE;--sk-schatten:rgba(0,0,0,.42)}
+#bible-stream .app{--zg-font:Inter,"Helvetica Neue",Arial,sans-serif}
+#bible-stream .app[data-level="0"] .reader .column:has(.has-zg){max-width:min(1120px,calc(100% - 32px))}
+#bible-stream .app[data-level] .reader .stream-entry.has-zg:not(.has-ill){max-width:none}
+#bible-stream .zg-tm+.zg-tm{margin-top:28px}
+#bible-stream .zg-switch{display:flex;gap:1px;padding:3px;margin:2px 0 16px;border-radius:999px;background:var(--sk-flaeche,#F3F8FA);overflow-x:auto;scrollbar-width:none;font:500 13px/1.1 var(--zg-font);max-width:560px}
+#bible-stream .app .zg-switch button{flex:1 1 auto;padding:9px 5px;border-radius:999px;color:var(--sk-text-leise,#76828A);text-align:center;white-space:nowrap}
+#bible-stream .app .zg-switch button[aria-pressed=true]{background:var(--sk-karte,#FFFFFF);color:var(--sk-text,#1E2629);font-weight:600;box-shadow:0 1px 3px var(--sk-schatten,rgba(30,38,41,.14))}
+#bible-stream .zg{font:400 15px/1.45 var(--zg-font);color:var(--sk-text,#1E2629);background:var(--sk-flaeche,#F3F8FA);border-radius:18px;padding:16px}
+#bible-stream .zg p{margin:0}
+#bible-stream .zg .zg-intro{font-size:14px;color:var(--sk-text-leise,#76828A);margin:0 0 14px;max-width:46em}
+#bible-stream .zg .zg-note{font-size:12.5px;color:var(--sk-text-leise,#76828A);margin:14px 0 0}
+#bible-stream .zg .zg-h{font:650 16px/1.3 var(--zg-font);margin:18px 0 10px;color:var(--sk-text,#1E2629)}
+#bible-stream .zg .zg-h span{font-weight:400;color:var(--sk-text-leise,#76828A)}
+#bible-stream .zg .zg-h:first-child{margin-top:0}
+#bible-stream .zg-card{background:var(--sk-karte,#FFFFFF);border-radius:14px;box-shadow:0 1px 2px var(--sk-schatten,rgba(30,38,41,.08)),0 4px 16px var(--sk-schatten,rgba(30,38,41,.06))}
+#bible-stream .app .zg-chip{display:inline-flex;align-items:baseline;gap:5px;padding:6px 11px;border-radius:999px;background:var(--sk-b,#DDF2F3);color:var(--sk-text,#1E2629);font:500 13.5px/1.25 var(--zg-font)}
+#bible-stream .app .zg-chip small{font-size:12px;color:var(--sk-b-text,#00939A);font-weight:600}
+#bible-stream .app .zg-chip:hover{background:var(--sk-betont,#F6F6BC)}
+#bible-stream .zg-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+#bible-stream .app .zg button:focus-visible{outline:2px solid var(--sk-a-text,#E76444);outline-offset:2px}
+/* Bibliothek: Buchrücken, Breite nach Versen, Anteile der Inhaltsarten übereinander */
+#bible-stream .zg-lib{--pv:.045}
+#bible-stream .zg-leg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;color:var(--sk-text,#1E2629);margin:0 0 6px}
+#bible-stream .zg-leg span{display:inline-flex;align-items:center;gap:6px}
+#bible-stream .zg-leg i{width:12px;height:12px;border-radius:3px;flex:none}
+#bible-stream .zg-grps{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:flex-end}
+#bible-stream .zg-grp{display:flex;flex-direction:column;max-width:100%;min-width:0}
+#bible-stream .zg-grp-h{font:600 12px/1.25 var(--zg-font);color:var(--sk-text-leise,#76828A);margin:0 0 6px;letter-spacing:.01em}
+#bible-stream .zg-shelf{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 2px;padding-bottom:5px}
+#bible-stream .app .zg-spine{position:relative;display:flex;flex-direction:column;width:max(20px,calc(var(--v) * var(--pv) * 1px));height:112px;border-radius:5px 5px 2px 2px;overflow:visible;background:var(--sk-karte,#FFFFFF);box-shadow:0 1px 2px var(--sk-schatten,rgba(30,38,41,.16))}
+#bible-stream .app .zg-spine::after{content:"";position:absolute;left:-2px;right:0;bottom:-6px;height:4px;border-radius:1px;background:var(--sk-linie,#DCE4E7)}
+#bible-stream .zg-plate{flex:none;display:flex;align-items:center;justify-content:center;height:46px;border-radius:5px 5px 0 0;background:var(--sk-karte,#FFFFFF);color:var(--sk-text,#1E2629)}
+#bible-stream .zg-plate span{writing-mode:vertical-rl;transform:rotate(180deg);font:650 11px/1 var(--zg-font);white-space:nowrap}
+#bible-stream .zg-segs{flex:1;display:flex;flex-direction:column;border-radius:0 0 2px 2px;overflow:hidden}
+#bible-stream .app .zg-spine:hover{transform:translateY(-3px)}
+#bible-stream .app .zg-spine:hover::after{bottom:-3px}
+@media (prefers-reduced-motion:no-preference){#bible-stream .app .zg-spine{transition:transform .15s}}
+/* Grosse Geschichte: acht Stationen */
+#bible-stream .zg-st-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:10px}
+#bible-stream .app .zg-st{display:grid;grid-template-columns:100px 1fr;gap:12px;width:100%;padding:8px;text-align:left;align-items:start;align-content:start}
+#bible-stream .zg-st-img{position:relative;display:block;aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:#FBF8F2}
+#bible-stream .zg-st-img img{width:100%;height:100%;object-fit:cover;display:block}
+#bible-stream .app[data-theme=dark] .zg-st-img img{filter:brightness(.93)}
+#bible-stream .zg-num{position:absolute;left:6px;top:6px;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--sk-text,#1E2629);color:var(--sk-marke-text,#FEFEFE);font:650 12px/1 var(--zg-font);opacity:.9}
+#bible-stream .zg-st-b{display:flex;flex-direction:column;gap:3px;padding:2px 4px 2px 0;min-width:0}
+#bible-stream .zg-st-b b{font:650 15.5px/1.25 var(--zg-font)}
+#bible-stream .zg-st-x{font-size:13.5px;line-height:1.4;color:var(--sk-text,#1E2629)}
+#bible-stream .zg-st-r{margin-top:2px;white-space:nowrap;font:600 12.5px/1.3 var(--zg-font);color:var(--sk-b-text,#00939A)}
+/* Zeitleiste */
+#bible-stream .zg-tl{list-style:none;margin:0;padding:0 0 0 30px;position:relative}
+#bible-stream .zg-tl::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;border-left:2px solid var(--sk-linie,#DCE4E7)}
+#bible-stream .zg-tl-seq::before{border-left-style:dashed}
+#bible-stream .zg-tl>li{position:relative;margin:0 0 10px}
+#bible-stream .zg-mark{position:absolute;left:-30px;top:10px;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--sk-karte,#FFFFFF);color:var(--sk-text,#1E2629);font:650 11.5px/1 var(--zg-font);box-shadow:0 0 0 2px var(--sk-linie,#DCE4E7)}
+#bible-stream .zg-tl-dated .zg-mark{width:12px;height:12px;left:-25px;top:15px;background:var(--sk-b-text,#00939A);box-shadow:0 0 0 3px var(--sk-flaeche,#F3F8FA)}
+#bible-stream .zg-ep-c{padding:10px 12px 12px}
+#bible-stream .zg-ep-c b{display:block;font:650 15px/1.3 var(--zg-font)}
+#bible-stream .zg-when{display:block;font:600 12.5px/1.3 var(--zg-font);color:var(--sk-b-text,#00939A);margin-bottom:2px}
+#bible-stream .zg-empty{display:block;margin-top:6px;font-size:13px;color:var(--sk-text-leise,#76828A)}
+#bible-stream .zg-tl>li.zg-evt{display:flex;gap:8px;align-items:baseline;margin:2px 0 12px;font-size:13px;color:var(--sk-text,#1E2629)}
+#bible-stream .zg-evt b{font:650 13px/1.3 var(--zg-font);color:var(--sk-a-text,#E76444)}
+#bible-stream .zg-evt .zg-mark{width:10px;height:10px;left:-24px;top:4px;background:var(--sk-a-text,#E76444);box-shadow:0 0 0 3px var(--sk-flaeche,#F3F8FA)}
+#bible-stream .zg-free{padding:10px 12px 12px;margin-top:6px}
+#bible-stream .zg-free b{font:650 15px/1.3 var(--zg-font)}
+/* Karte */
+#bible-stream .zg-maps{display:grid;grid-template-columns:1fr;gap:12px}
+#bible-stream .zg-map{margin:0;padding:8px;min-width:0}
+#bible-stream .zg-map figcaption{font:650 13px/1.3 var(--zg-font);margin:2px 4px 6px}
+#bible-stream .zg-map-scroll{overflow-x:auto;border-radius:10px;scrollbar-width:thin}
+#bible-stream .zg-map-in{position:relative;border-radius:10px;overflow:hidden}
+#bible-stream .zg-map-haupt .zg-map-in{min-width:600px}
+#bible-stream .zg-map-aus{justify-self:center;width:100%;max-width:262px}
+#bible-stream .zg-map-in svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+#bible-stream .app .zg-dot{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;z-index:2}
+#bible-stream .app .zg-dot::before{content:"";position:absolute;left:6px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--sk-a-text,#E76444);box-shadow:0 0 0 2px var(--sk-karte,#FFFFFF)}
+#bible-stream .app .zg-dot.zg-dot-area::before{left:4px;top:4px;width:14px;height:14px;background:transparent;box-shadow:0 0 0 2px var(--sk-a-text,#E76444)}
+#bible-stream .app .zg-dot.on::before{background:var(--sk-text,#1E2629);box-shadow:0 0 0 3px var(--sk-betont,#F6F6BC)}
+#bible-stream .app .zg-lbl{position:absolute;left:0;top:0;z-index:3;padding:1px 3px;border-radius:4px;font:600 12px/1.2 var(--zg-font);color:var(--sk-text,#1E2629);white-space:nowrap;text-shadow:0 0 2px var(--sk-karte,#FFFFFF),0 0 2px var(--sk-karte,#FFFFFF),0 0 3px var(--sk-karte,#FFFFFF)}
+#bible-stream .app .zg-lbl.on{background:var(--sk-betont,#F6F6BC);text-shadow:none}
+#bible-stream .zg-lbl[hidden],#bible-stream .zg-water[hidden]{display:none}
+#bible-stream .zg-water{position:absolute;left:0;top:0;z-index:1;font:italic 400 11.5px/1.2 var(--zg-font);color:var(--sk-b-text,#00939A);white-space:nowrap;pointer-events:none}
+#bible-stream .zg-panel{margin-top:12px;padding:12px 14px;min-height:52px}
+#bible-stream .zg-panel h4{margin:0;font:650 16px/1.3 var(--zg-font)}
+#bible-stream .zg-panel .zg-sub,#bible-stream .zg-all .zg-sub{display:block;margin-top:2px;font-size:12.5px;color:var(--sk-text-leise,#76828A)}
+#bible-stream .zg-panel .zg-hint{color:var(--sk-text-leise,#76828A);font-size:14px}
+#bible-stream .zg-all{margin-top:14px}
+#bible-stream .app .zg-all .zg-chip{background:var(--sk-karte,#FFFFFF);box-shadow:0 1px 2px var(--sk-schatten,rgba(30,38,41,.12))}
+#bible-stream .app .zg-all .zg-chip.on{background:var(--sk-betont,#F6F6BC)}
+@container (min-width:520px){
+  #bible-stream .zg-lib{--pv:.075}
+  #bible-stream .zg{padding:20px}
+  #bible-stream .zg-st-list{grid-template-columns:1fr 1fr}
+}
+@container (min-width:760px){
+  #bible-stream .zg-lib{--pv:.1}
+  #bible-stream .app .zg-spine{height:132px}
+  #bible-stream .zg-st-list{grid-template-columns:repeat(4,1fr);gap:14px}
+  #bible-stream .app .zg-st{grid-template-columns:1fr;gap:10px;height:100%;padding:8px 8px 12px}
+  #bible-stream .zg-st-img{aspect-ratio:4/3}
+  #bible-stream .zg-tl{padding-left:190px}
+  #bible-stream .zg-tl::before{left:170px}
+  #bible-stream .zg-mark{left:-30px}
+  #bible-stream .zg-tl-seq .zg-mark{left:-30px}
+  #bible-stream .zg-when{position:absolute;left:-190px;width:150px;top:12px;text-align:right;margin:0}
+  #bible-stream .zg-tl>li.zg-evt{margin-left:0}
+  #bible-stream .zg-evt b{position:absolute;left:-190px;width:150px;text-align:right}
+  #bible-stream .zg-maps{grid-template-columns:minmax(0,1fr) 250px;align-items:start}
+}
+@container (min-width:1000px){#bible-stream .zg-lib{--pv:.125}}
 #bible-stream .src-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;margin:0 0 12px}
 #bible-stream .src-key{display:flex;gap:10px;align-items:flex-start;font:500 14px/1.35 var(--ui)}
 #bible-stream .src-key .sub{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
@@ -620,7 +733,9 @@ const INLINE=/*__INLINE__*/null;
 const I18N={};const loadedBundles=new Set(),pendingBundles=new Map();let dataError=false;
 STUDY.de=STUDY.layers.de.text;STUDY.de_source=STUDY.layers.de.source;STUDY.alternatives=STUDY.layers.de.alternatives;STUDY.decisions=STUDY.layers.de.decisions;STUDY.tok_de=STUDY.layers.de.align;
 const DSS={};let NC_INFO=null;const CORE=[];
+let ZUG=null;  // weitere Zugänge der Ebene Bibel (Übersichtspaket, Schlüssel «zug»; scripts/authoring/zugaenge.py)
 function mergeBundle(d){
+  if(d.zug)ZUG=d.zug;
   if(d.dss){for(const [r,arr] of Object.entries(d.dss))(DSS[r]=DSS[r]||[]).push(...arr);NC_INFO=d.nc||NC_INFO;}
   if(d.lang){const L=STUDY.layers[d.lang];const y=d.layer||{};if(L){Object.assign(L.text,y.text||{});Object.assign(L.source,y.source||{});Object.assign(L.decisions,y.decisions||{});L.alternatives.push(...(y.alternatives||[]));Object.assign(L.align,y.align||{});}
     for(const [r,arr] of Object.entries(d.compare||{}))(STUDY.compare[r]=STUDY.compare[r]||[]).push(...arr);
@@ -652,7 +767,7 @@ const ui={
   noSummary:'Zu diesem Kapitel gibt es noch keine Zusammenfassung.',noPart:'Für diesen Abschnitt gibt es noch keine Zusammenfassung.',placeholder:'Text noch nicht eingebunden',
   verses:'Verse',loadNext:'Weiterlesen',loadPrev:'Früheres anzeigen',end:'Ende',empty:'Kein passendes Buch und keine gültige Bibelstelle.',
   example:'Ausgearbeitet',examples:'Ausgearbeitete Stellen',recent:'Zuletzt gelesen',illStyle:'Bildstil',figIndex:'Bildlexikon',figIndexSub:'Alle Figuren, Gegenstände und Zeichen je Bildstil',figIndexCount:'Einträge in diesem Stil gezeichnet',kinds:{divine:'Gott, Jesus, Heiliger Geist',people:'Menschen',thing:'Dinge, Natur und Zeit',place:'Orte',action:'Handlungen und Gefühle',concept:'Begriffe'},settings:'Einstellungen',settingsSub:'Darstellung, Bilder, Bibeltext, Aussprache, Vorlesen',grpView:'Darstellung',grpText:'Bibeltext',grpOrig:'Urtext anhören',grpRead:'Vorlesen',backMenu:'Zurück zum Menü',ill:'Bilder',illSub:'Bildliche Deutung auf allen Ebenen über den Versen: bisher Bibel, Testamente, Buchgruppen sowie Johannes und Johannes 2. «Anime»: Comic ohne Text, auf denselben Ebenen wie «Symbol»; wo es noch fehlt, erscheint das Symbolbild. Auf breiten Bildschirmen neben dem Text, auf dem Handy umschaltbar. Weitere Stile (z. B. Skizze) folgen.',illOff:'Aus',viewText:'Text',viewImage:'Bild',legend:'Legende und Hinweise',explainHint:'Antippen für die Erklärung',tileHint:'Antippen: Legende zu diesem Bild',legendTitle:'Erklärung zum Bild',legendFigures:'Figuren und Zeichen',legendCheck:'Prüfung:',legendNote:'Ein Bild ist Deutung: Es legt mehr fest als der Text (Kleidung, Anordnung, Gewichtung). Entwurf; eigene Zeichnung (CC0), Bildzeichen teils aus Twemoji (© Twitter, Inc. und Mitwirkende, CC BY 4.0, github.com/jdecked/twemoji). Stil:',godName:'Gottesname beim Vorlesen',godNameSub:'Im Text steht JHWH, wie im hebräischen Text ohne Vokale; in jüdischer Tradition wird der Name nicht ausgesprochen. Vorgelesen wird «Jahwe» (in der Forschung rekonstruierte Aussprache) oder «Adonai» («mein Herr», wie im Judentum gelesen).',readVoice:'Vorlesestimme',readVoiceSub:'Stimmen dieses Geräts; «Auto» nimmt die vermutlich natürlichste.',readRate:'Vorlesetempo',calm:'Ruhig',brisk:'Zügig',readSample:'Vorlesen probehören',readSampleBtn:'Probe',readSampleShort:'Im Anfang war das Wort …',readSampleText:'Im Anfang war das Wort, und das Wort war bei Gott, und das Wort war Gott. Dieses war im Anfang bei Gott.',readVoiceHint:'Natürlichere Stimmen lassen sich meist nachinstallieren: auf dem iPhone und iPad unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Deutsch eine «Erweitert»- oder «Premium»-Stimme laden; auf dem Mac unter Systemeinstellungen → Bedienungshilfen → Gesprochene Inhalte → Systemstimme → Stimmen verwalten (danach den Browser neu starten); in Chrome steht zusätzlich «Google Deutsch» zur Verfügung; unter Windows klingen in Edge die «Natural»-Stimmen am besten; auf Android in den Einstellungen der Sprachausgabe (Text-in-Sprache) die Sprachdaten für Deutsch installieren.',readAloud:'Ab hier vorlesen',raPrev:'Zurück',raNext:'Weiter',raPlay:'Weiterlesen',raPause:'Anhalten',raClose:'Vorlesen beenden',raEnd:'Ende – kein weiterer Text',raNone:'Dieser Browser kann nicht vorlesen.',recentClear:'Verlauf löschen (nur auf diesem Gerät gespeichert)',background:'Hintergrund damals',toSource:'Bis zur Quelle',then:'Damals',more:'Mehr zu Vers',
-  readText:'Übersetzung (Lesetext)',readTextSub:'Übersetzungen aus dem Urtext; die Mundart-Fassung ist ein Entwurf, der noch von einer muttersprachlichen Person geprüft wird.',colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache (Bedienung)',
+  readText:'Übersetzung (Lesetext)',readTextSub:'Übersetzungen aus dem Urtext.',colors:'Farben',auto:'Auto',light:'Hell',dark:'Dunkel',size:'Textgrösse',language:'Sprache (Bedienung)',
   advanced:'Urtext und Details',advancedSub:'Für Fortgeschrittene: Griechisch Wort für Wort, Grammatik, Vergleich der Textausgaben, Quellen.',
   inline:'Andere Lesarten im Text zeigen',inlineSub:'Zeigt unter einem Vers, wo alte Handschriften anders lauten.',bgInline:'Hintergrund im Text zeigen',flow:'Verse fortlaufend',flowSub:'Verse als Fliesstext hintereinander statt je auf einer eigenen Zeile.',translit:'Umschrift zeigen',translitSub:'Griechische Wörter zusätzlich in unserer Schrift, z. B. ponēroú.',pron:'Aussprache Griechisch und Hebräisch',pronSub:'Heutig: Stimme des Geräts (Neugriechisch bzw. Neuhebräisch). Schulaussprache: Umschrift wie im Theologiestudium, gelesen von einer deutschen Stimme. Aramäisch wird immer über die Umschrift gelesen. Alles nähert die Aussprache zur Zeit Jesu nur an.',pronModern:'Heutig',pronSchool:'Schulaussprache',voiceEl:'Stimme Griechisch',voiceHe:'Stimme Hebräisch',voiceDe:'Stimme für die Umschrift',voice:'Stimme',voiceAuto:'Automatisch',noVoice:'Auf diesem Gerät ist keine passende Stimme installiert. In den Systemeinstellungen lassen sich Stimmen nachladen (z. B. Griechisch).',rate:'Tempo',slow:'Langsam',normal:'Normal',sample:'Probe Ursprachen',bgInlineSub:'Zeigt unter einem Vers kurze Hinweise auf Zeit, Ort und Kultur damals.',about:'Über diese Fassung',sourcesMap:'Quellen und Rechte',sourcesMapSub:'Welche Quellen es gibt, was wir dürfen, was wir nutzen'},
  en:{bible:'The Bible',menu:'Menu',close:'Close',done:'Done',search:'Find a book or reference',hint:'e.g. Mark 3:24 or Ps 23',home:'Whole Bible',up:'Context',down:'Explore',contents:'Navigate',here:'You are here',open:'open',xrefs:'Cross references',xrefsSub:'Sorted by OpenBible.info user votes (CC BY); not reviewed.',back:'Back to',levelsTitle:'Choose reading depth',
@@ -771,7 +886,7 @@ const CONF={high:'gut begründet',probable:'wahrscheinlich',possible:'möglich'}
 
 root.querySelectorAll('.app').forEach((app,appIndex)=>{
 let current='all',lang='de',sheet=null,query='';
-let S={v:3,text:'de',flow:true,theme:'auto',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',show:'both',merk:'mark',nowords:false,apps:false};
+let S={v:3,text:'de',flow:true,theme:'auto',zugang:'zoom',read:19,advanced:true,inline:true,bgInline:true,translit:true,pron:'modern',rate:0.85,voice:{},readVoice:'',readRate:1,godName:'Jahwe',ill:'anime',show:'both',merk:'mark',nowords:false,apps:false};
 try{const s=JSON.parse(localStorage.getItem('bible:settings')||localStorage.getItem('lesestrom')||'null');if(s){const keep={...s};if(!(s.v>=2)){delete keep.advanced;delete keep.inline;delete keep.bgInline;}if(!(s.v>=3))delete keep.flow;S={...S,...keep,v:3};}}catch(e){}
 S.nowords=false;  // «ohne Worte» startet immer ausgeschaltet (Hinweis Andi Neck 2026-10-25)
 /* Feste Darstellung (Andi Neck, 2026-10-23; docs/LESEN-UND-VERTIEFEN.md): Verse fortlaufend, Urtext und Details, Umschrift an;
@@ -1186,6 +1301,67 @@ function legendSheet(key){const it0=illItem(key),st=it0&&ILL.styles[it0.style];i
 
 /* ---------- Einträge ---------- */
 const entryM=id=>{const n=nodes.get(id);return marks(entry(id),n&&n.b!==undefined?DATA[n.b].code:null);};
+/* ---------- Weitere Zugänge auf der Ebene Bibel (Entscheid Andi Neck 2026-11-21, docs/VISUELLE-SPRACHE.md) ----------
+   Zoom bleibt Hauptzugang und Vorgabe; Bibliothek, Geschichte, Zeit und Ort sind Varianten (Wahl gemerkt in S.zugang).
+   Antippen eines Buchs öffnet es im Zoom, eine Station springt zur Stelle. Beschriftung nach Lesesprache (de, gsw). */
+const ZG_VIEWS=['zoom','lib','story','time','map'];
+const ZG_ART={erz:'#F07A5A',rede:'#EDBE45',ordnung:'#7DB56E',lied:'#2FA7AD',proph:'#9B7FD1',brief:'#5D83B8'};
+let zgPlace=null,zgRO=null;
+const ZL=()=>S.text==='gsw'?'gsw':'de';
+const zgLb=()=>ZUG.labels[ZL()];
+const zgBook=c=>{const i=CODE_IDX[c];return i===undefined?c:DATA[i][lang];};
+const zgChip=x=>`<button type="button" class="zg-chip" data-zbook="${x[0]}">${esc(zgBook(x[0]))}${x[1]?` <small>${esc(x[1])}</small>`:''}</button>`;
+function zgSwitch(){const lb=zgLb(),cur=ZG_VIEWS.includes(S.zugang)?S.zugang:'zoom';
+  return `<div class="zg-switch" role="group" aria-label="${esc(lb.switch)}">${ZG_VIEWS.map(k=>`<button type="button" data-zugang="${k}" aria-pressed="${k===cur}">${esc(lb[k])}</button>`).join('')}</div>`;}
+function zgLib(){const L=ZL(),lb=zgLb(),Z=ZUG;
+  const spine=c=>{const b=Z.books[c];const parts=Z.fam.map((f,k)=>[f,b.f[k]]).filter(x=>x[1]>0),tot=parts.reduce((s,x)=>s+x[1],0)||1;
+    const lab=`${zgBook(c)}, ${b.v} ${lb.verses}: `+parts.map(([f,v])=>`${f[L]} ${Math.round(100*v/tot)} %`).join(', ');
+    return `<button type="button" class="zg-spine" data-zbook="${c}" style="--v:${b.v}" aria-label="${esc(lab)}" title="${esc(lab)}"><span class="zg-plate"><span>${esc(b.a)}</span></span><span class="zg-segs">${parts.map(([f,v])=>`<span style="flex:${v};background:var(--sk-art-${f.k},${ZG_ART[f.k]})"></span>`).join('')}</span></button>`;};
+  const tm=t=>{const gs=Z.groups.filter(g=>g.t===t),n=gs.reduce((s,g)=>s+g.b.length,0);
+    return `<section class="zg-tm"><h3 class="zg-h">${esc(lb[t==='OT'?'ot':'nt'])} <span>· ${n} ${esc(lb.books)}</span></h3><div class="zg-grps">${gs.map(g=>`<div class="zg-grp"><div class="zg-grp-h">${esc(g[L])}</div><div class="zg-shelf">${g.b.map(spine).join('')}</div></div>`).join('')}</div></section>`;};
+  return `<div class="zg zg-lib"><p class="zg-intro">${esc(lb.lib_intro)}</p><div class="zg-leg">${Z.fam.map(f=>`<span><i style="background:var(--sk-art-${f.k},${ZG_ART[f.k]})"></i>${esc(f[L])}</span>`).join('')}</div>${tm('OT')}${tm('NT')}</div>`;}
+function zgStory(){const L=ZL(),lb=zgLb();
+  return `<div class="zg zg-story"><p class="zg-intro">${esc(lb.story_intro)}</p><ol class="zg-st-list">${ZUG.story.map((s,i)=>`<li><button type="button" class="zg-card zg-st" data-zref="${s.ref}"><span class="zg-st-img">${s.img?`<img src="${s.img}" alt="" loading="lazy" decoding="async">`:''}<span class="zg-num" aria-hidden="true">${i+1}</span></span><span class="zg-st-b"><b>${esc(s[L].t)}</b><span class="zg-st-x">${esc(s[L].x)}</span><span class="zg-st-r">${esc(refAny(s.ref))}&nbsp;→</span></span></button></li>`).join('')}</ol><p class="zg-note">${esc(lb.story_note)}</p></div>`;}
+function zgTime(){const L=ZL(),lb=zgLb(),Z=ZUG.time;
+  const span=e=>e.bis<=0?`${lb.about} ${-e.von}–${-e.bis} ${lb.bc}`:e.von<0?`${lb.about} ${-e.von} ${lb.bc} – ${e.bis} ${lb.ad}`:`${lb.about} ${e.von}–${e.bis} ${lb.ad}`;
+  const card=(e,when)=>`<div class="zg-card zg-ep-c"><b>${esc(e[L])}</b>${e.b.length?`<div class="zg-chips">${e.b.map(zgChip).join('')}</div>`:`<span class="zg-empty">${esc((e.leer||{})[L]||'')}</span>`}</div>`;
+  const seq=Z.folge.map((e,i)=>`<li class="zg-ep" data-ep="${e.id}"><span class="zg-mark" aria-hidden="true">${i+1}</span>${card(e)}</li>`).join('');
+  const dated=Z.epochen.map(e=>`<li class="zg-ep" data-ep="${e.id}"><span class="zg-mark" aria-hidden="true"></span><span class="zg-when">${esc(span(e))}</span>${card(e)}</li>`+
+    Z.ereignisse.filter(v=>v.nach===e.id).map(v=>`<li class="zg-evt"><span class="zg-mark" aria-hidden="true"></span><b>${lb.about} ${-v.jahr} ${esc(lb.bc)}</b><span>${esc(v[L])}</span></li>`).join('')).join('');
+  return `<div class="zg zg-time"><p class="zg-intro">${esc(lb.time_intro)}</p><h3 class="zg-h">${esc(lb.time_seq)}</h3><ol class="zg-tl zg-tl-seq">${seq}</ol><h3 class="zg-h">${esc(lb.time_dated)}</h3><ol class="zg-tl zg-tl-dated">${dated}</ol><div class="zg-card zg-free"><b>${esc(lb.time_free)}</b><div class="zg-chips">${Z.frei.map(zgChip).join('')}</div></div><p class="zg-note">${esc(lb.time_note)}</p></div>`;}
+const zgPlaces=()=>[...ZUG.map.ausschnitt.orte,...ZUG.map.haupt.orte];
+function zgPanel(){const L=ZL(),lb=zgLb(),o=zgPlace&&zgPlaces().find(x=>x.id===zgPlace);
+  if(!o)return `<p class="zg-hint">${esc(lb.map_pick)}</p>`;
+  return `<h4>${esc(o[L])}${o.u?' (?)':''}</h4><span class="zg-sub">${esc(lb.map_books)}</span><div class="zg-chips">${o.b.map(zgChip).join('')}</div>`;}
+function zgMap(){const L=ZL(),lb=zgLb(),M=ZUG.map;
+  const pane=(k,cls,cap)=>{const m=M[k];return `<figure class="zg-card zg-map ${cls}">${cap?`<figcaption>${esc(cap)}</figcaption>`:''}<div class="zg-map-scroll"><div class="zg-map-in" data-map="${k}" style="aspect-ratio:${m.w}/${m.h}">${m.svg}`+
+    m.wasser.filter(w=>w[L]).map(w=>`<span class="zg-water" data-x="${w.x}" data-y="${w.y}">${esc(w[L])}</span>`).join('')+
+    m.orte.map(o=>`<button type="button" class="zg-dot${o.zu?' zg-dot-area':''}${zgPlace===o.id?' on':''}" data-zplace="${o.id}" style="left:${o.x}%;top:${o.y}%" aria-label="${esc(o[L])}"></button><button type="button" class="zg-lbl${zgPlace===o.id?' on':''}" data-zplace="${o.id}" tabindex="-1" aria-hidden="true">${esc(o[L])}</button>`).join('')+`</div></div></figure>`;};
+  const seen=new Set(),all=zgPlaces().filter(o=>!seen.has(o.id)&&seen.add(o.id));
+  return `<div class="zg zg-mapv"><p class="zg-intro">${esc(lb.map_intro)}</p><div class="zg-maps">${pane('haupt','zg-map-haupt','')}${pane('ausschnitt','zg-map-aus',lb.map_inset)}</div>`+
+    `<div class="zg-card zg-panel" aria-live="polite">${zgPanel()}</div><div class="zg-all"><span class="zg-sub">${esc(lb.map_all)}</span><div class="zg-chips">${all.map(o=>`<button type="button" class="zg-chip${zgPlace===o.id?' on':''}" data-zplace="${o.id}">${esc(o[L])}</button>`).join('')}</div></div><p class="zg-note">${esc(lb.map_note)}</p></div>`;}
+function zgView(k){return k==='lib'?zgLib():k==='story'?zgStory():k==='time'?zgTime():k==='map'?zgMap():'';}
+// Beschriftung der Karte ohne Überlappung: je Ort (nach Wichtigkeit) die erste freie Lage rechts, links, oben, unten oder schräg;
+// passt keine, bleibt nur der Punkt (der Ort steht in der Liste darunter). Gewässernamen nur, wo sie frei sind.
+function zgLayoutMap(m){const W=m.clientWidth,H=m.clientHeight;if(!W||!H)return;const P=3,placed=[];
+  const hit=(a,b)=>a.x<b.x+b.w&&b.x<a.x+a.w&&a.y<b.y+b.h&&b.y<a.y+a.h;
+  const dots=[...m.querySelectorAll('.zg-dot')].map(d=>({id:d.dataset.zplace,cx:d.offsetLeft+11,cy:d.offsetTop+11}));
+  const dr=dots.map(d=>({id:d.id,x:d.cx-7,y:d.cy-7,w:14,h:14}));
+  const free=(r,id)=>r.x>=P&&r.y>=P&&r.x+r.w<=W-P&&r.y+r.h<=H-P&&!placed.some(p=>hit(r,p))&&!dr.some(d=>d.id!==id&&hit(r,d));
+  for(const l of m.querySelectorAll('.zg-lbl')){const d=dots.find(x=>x.id===l.dataset.zplace);l.hidden=false;const w=l.offsetWidth,h=l.offsetHeight;
+    const C=[[d.cx+9,d.cy-h/2],[d.cx-9-w,d.cy-h/2],[d.cx-w/2,d.cy-9-h],[d.cx-w/2,d.cy+9],[d.cx+6,d.cy-6-h],[d.cx+6,d.cy+6],[d.cx-6-w,d.cy-6-h],[d.cx-6-w,d.cy+6]];
+    const c=C.map(([x,y])=>({x,y,w,h})).find(r=>free(r,d.id));
+    if(c){l.style.left=c.x+'px';l.style.top=c.y+'px';placed.push({x:c.x-2,y:c.y-1,w:w+4,h:h+2});}else l.hidden=true;}
+  for(const s of m.querySelectorAll('.zg-water')){s.hidden=false;const w=s.offsetWidth,h=s.offsetHeight,r={x:W*s.dataset.x/100-w/2,y:H*s.dataset.y/100-h/2,w,h};
+    if(free(r,null)){s.style.left=r.x+'px';s.style.top=r.y+'px';placed.push(r);}else s.hidden=true;}}
+function zgAfter(){if(zgRO){zgRO.disconnect();zgRO=null;}const ms=[...reader.querySelectorAll('.zg-map-in')];if(!ms.length)return;
+  ms.forEach(zgLayoutMap);
+  // Schmaler Bildschirm: Übersichtskarte seitlich verschiebbar, zu Beginn mit dem Land Israel in der Mitte
+  for(const sc of reader.querySelectorAll('.zg-map-haupt .zg-map-scroll')){const d=sc.querySelector('.zg-dot-area');if(d&&sc.scrollWidth>sc.clientWidth)sc.scrollLeft=Math.max(0,d.offsetLeft+11-sc.clientWidth/2);}
+  if(globalThis.ResizeObserver){zgRO=new ResizeObserver(es=>es.forEach(e=>zgLayoutMap(e.target)));ms.forEach(m=>zgRO.observe(m));}}
+function zgPick(id){zgPlace=id;const v=reader.querySelector('.zg-mapv');if(!v)return;
+  v.querySelectorAll('[data-zplace]').forEach(b=>b.classList.toggle('on',b.dataset.zplace===id));
+  const p=v.querySelector('.zg-panel');p.innerHTML=zgPanel();if(p.scrollIntoView)p.scrollIntoView({block:'nearest',behavior:'smooth'});}
 function entry(id){
   const n=nodes.get(id),t=T();
   if(n.level===6)return verseEntry(n);
@@ -1199,7 +1375,9 @@ function entry(id){
   const tl=tools(id);
   const nw=il&&/dg-nw/.test(il.svg);  // «ohne Worte» auf allen Bildern mit Worten (Hinweis Andi Neck 2026-10-25: hilft beim Lernen)
   const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}${deep?`<div class="actions actions-side">${deep}</div>`:''}</div>${illFigure(il,nw)}</div>`:copy;
-  return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}<span class="view-tools">${nw?nwBtn():''}${tg}</span></div>`:tl}${body}<div class="actions${il?' actions-under':''}">${deep}</div></article>`;
+  const zs=n.level===0&&ZUG?zgSwitch():'';
+  if(zs&&S.zugang!=='zoom'&&ZG_VIEWS.includes(S.zugang))return `<article class="stream-entry has-zg" data-stream="${id}"><h2>${esc(heading)}${readBtn(id)}</h2><div class="entry-tools">${tl}</div>${zs}${zgView(S.zugang)}</article>`;
+  return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}<span class="view-tools">${nw?nwBtn():''}${tg}</span></div>`:tl}${zs}${body}<div class="actions${il?' actions-under':''}">${deep}</div></article>`;
 }
 // Ein Knopf «Vertiefen» am Titel jeder Ebene; der Punkt sagt nur «hier oder darunter gibt es etwas» (keine Zahlen)
 function tools(id){const n=nodes.get(id),L=lang==='de',has=n&&deepHas(n);return `<span class="part-tools"><button type="button" class="tool deep-btn" data-vertiefen="${id}" aria-label="${L?'Vertiefen':'Deepen'}${has?(L?' (es gibt etwas)':' (content available)'):''}">${icon('deep')}<span>${L?'Vertiefen':'Deepen'}</span>${has?'<i class="deep-dot" aria-hidden="true"></i>':''}</button></span>`;}
@@ -1413,13 +1591,13 @@ function pinTo(id){holdPin(id,padTop());}
 if('ResizeObserver' in globalThis){const ro=new ResizeObserver(()=>applyPin());ro.observe(reader);new MutationObserver(()=>{const c=reader.querySelector('.column');if(c)ro.observe(c);}).observe(reader,{childList:true});}
 for(const ev of ['wheel','touchstart','keydown','pointerdown'])reader.addEventListener(ev,()=>{pin=null;},{passive:true});
 function render(after){const n=nodes.get(current);const r=savedStreams.get(n.level);const [s0,e0]=(r&&r.id===current)?[r.start,r.end]:[n.si,Math.min(n.si+10,streams[n.level].length)];
-  withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;loadRevert=null;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();if(after)after();});}
+  withData(codesOf(streams[n.level].slice(s0,e0)),()=>{if(nodes.get(current)!==n)return;loadRevert=null;applyPrefs();chrome();sidebar();readerStart=s0;readerEnd=e0;reader.innerHTML=streamMarkup();zgAfter();if(after)after();});}
 function rerenderKeep(){withData(codesOf(streams[nodes.get(current).level].slice(readerStart,readerEnd)),rerenderNow);}
 function rerenderNow(){
   // Gleiche geladene Einträge neu zeichnen und den obersten sichtbaren Eintrag an derselben Stelle halten
   const top=reader.getBoundingClientRect().top;const els=[...reader.querySelectorAll('[data-stream]')];
   const anchor=els.find(el=>el.getBoundingClientRect().top>=top-1)||els.find(el=>el.getBoundingClientRect().bottom>top+1);const id=anchor&&anchor.dataset.stream,off=anchor?anchor.getBoundingClientRect().top-top:0,pos=reader.scrollTop;
-  applyPrefs();chrome();sidebar();reader.innerHTML=streamMarkup();
+  applyPrefs();chrome();sidebar();reader.innerHTML=streamMarkup();zgAfter();
   const again=id&&reader.querySelector(`[data-stream="${id}"]`);
   if(again&&again.getBoundingClientRect().height)reader.scrollTop+=again.getBoundingClientRect().top-top-off;else reader.scrollTop=pos;
 }
@@ -1891,6 +2069,10 @@ app.addEventListener('click',e=>{
   if(b.dataset.dec!==undefined){const c=b.closest('[data-ref]');if(c){decisionSheet(c.dataset.ref,Number(b.dataset.dec));return;}}
   if(b.dataset.read){e.stopPropagation();if(RA.on&&RA.activeBtn===b.dataset.read)raControl('toggle');else readStart(b.dataset.read);return;}
   if(b.dataset.ra){raControl(b.dataset.ra);return;}
+  if(b.dataset.zugang){S.zugang=b.dataset.zugang;save();rerenderKeep();return;}  // weitere Zugänge der Ebene Bibel
+  if(b.dataset.zbook){const i=CODE_IDX[b.dataset.zbook];if(i!==undefined)go('b'+i);return;}
+  if(b.dataset.zref){const id=idOfHash(b.dataset.zref);if(id)go(id);return;}
+  if(b.dataset.zplace){zgPick(b.dataset.zplace);return;}
   if(b.dataset.showT){const k=b.dataset.showT,o=k==='text'?'img':'text',on={text:S.show!=='img',img:S.show!=='text'};on[k]=!on[k];if(!on.text&&!on.img)on[o]=true;
     S.show=on.text&&on.img?'both':on.text?'text':'img';save();applyPrefs();rerenderKeep();return;}
   if(b.dataset.legend){legendSheet(b.dataset.legend);return;}
