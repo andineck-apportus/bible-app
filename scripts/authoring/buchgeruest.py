@@ -108,7 +108,7 @@ def pruefe(d, buch):
         if not d.get(k):
             f.append(f"{k} fehlt")
     brief_p = BRIEFS / f"BRIEF-{buch}.json"
-    brief = lade(brief_p) if brief_p.exists() else None
+    brief = eigener_brief(brief_p)
     st = d.get("stationen") or []
     if not 3 <= len(st) <= 6:
         f.append(f"{len(st)} Stationen, erlaubt 3–6")
@@ -195,11 +195,20 @@ def pruefe(d, buch):
     return f
 
 
+def eigener_brief(brief_p):
+    """Bildauftrag, der nicht vom Buchgerüst erzeugt wurde (dessen Felder gelten genau)."""
+    if not brief_p.exists():
+        return None
+    b = lade(brief_p)
+    erzeugt = any(str(x.get("record", "")).startswith("SUM-BOOK-") for x in b.get("basis") or []) and "Buchgerüst" in b.get("basis_note_de", "")
+    return None if erzeugt else b
+
+
 def schreibe(buch, d):
     code = buch.lower()
     brief_p = BRIEFS / f"BRIEF-{buch}.json"
     st = d["stationen"]
-    hat_brief = brief_p.exists()
+    hat_brief = eigener_brief(brief_p) is not None
     trans = sorted(p.stem for p in (ROOT / "data/translations").glob(f"TRANS-{buch}-*-WORKING.json"))
     tag = next((p.stem for p in (ROOT / "data/tags").glob("TAG-*.json") if lade(p).get("book") == buch), None)
     szenen = {}
