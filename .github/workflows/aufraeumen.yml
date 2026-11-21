@@ -1,0 +1,28 @@
+# Alte Arbeitsbranches löschen (Entscheid Andi Neck 2026-11-21: Berichte raus aus dem Repo). Löscht den Berichts-Branch
+# bildpilot-ausgabe (Prüfberichte mit Probebildern, über 1,5 GB) und die Lauf-Branches bilder-auto/<Lauf>, die schon in main sind.
+# Danach lokal: git fetch --prune && git gc --prune=now (oder neu klonen).
+name: aufraeumen
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  branches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Branches löschen
+        run: |
+          git fetch -q origin '+refs/heads/*:refs/remotes/origin/*'
+          if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
+            git push origin --delete bildpilot-ausgabe && echo "gelöscht: bildpilot-ausgabe"
+          fi
+          for b in $(git branch -r --merged origin/main | sed 's#^ *origin/##' | grep -E '^bilder-auto/'); do
+            git push -q origin --delete "$b" && echo "gelöscht: $b"
+          done
+          echo "verbleibend:"; git ls-remote --heads origin | wc -l
