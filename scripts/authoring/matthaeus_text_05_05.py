@@ -106,15 +106,15 @@ GSW = {
  "MAT.5.15": "[Me zündt]{2} [au kei]{1} [Lampe]{3} [aa]{2} und{4} [stellt]{5} [si]{6} [under]{7} [de Schäffel]{8,9}, [sondern]{10} [uf]{11} [de Lüüchter]{12,13}; und{14} [dänn lüüchtet si]{15} [allne]{16}, [wo]{17} [im]{18,19} [Huus]{20} sind.",
  "MAT.5.16": "[So]{1} [söll]{2} [öies]{5} [Liecht]{3,4} [vor]{6} [de Lüüt]{7,8} [lüüchte]{2}, [damit]{9} [si]{10} [öii]{11} [guete]{12,13} [Tate]{14} [gsehnd]{10} und{15} [öie]{19} [Vatter]{17,18} [i]{20,21} [de Himmel]{22,23} [priised]{16}.",
  "MAT.5.17": "[Meined]{2} [nöd]{1}, [dass]{3} [ich choo bi]{4}, [zum]{5} [s Gsetz]{6,7} [oder]{8} [d Prophete]{9,10} [ufhebe]{5}. [Ich bi]{12} [nöd]{11} [choo]{12} [zum Ufhebe]{13}, [sondern]{14} [zum Erfülle]{15}.",
- "MAT.5.18": "[Amen]{1}, [ich säg]{3} [öi]{4} [nämli]{2}: [Bis]{5} [de Himmel]{8,9} und{10} [d Erde]{11,12} [vergönd]{7}, [gaat]{20} [vom]{21,22} [Gsetz]{23} [sicher nöd]{18,19} [es einzigs]{14} [Jota]{13} [oder]{15} [es einzigs]{16} [Häggli]{17} [verlore]{20}, [bis]{24} [alles]{26} [gscheh isch]{27}. ~6(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää) ~25(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
+ "MAT.5.18": "[Amen]{1}, [ich säge]{3} [öi]{4} [nämli]{2}: [Bis]{5} [de Himmel]{8,9} und{10} [d Erde]{11,12} [vergönd]{7}, [gaat]{20} [vom]{21,22} [Gsetz]{23} [sicher nöd]{18,19} [es einzigs]{14} [Jota]{13} [oder]{15} [es einzigs]{16} [Häggli]{17} [verlore]{20}, [bis]{24} [alles]{26} [gscheh isch]{27}. ~6(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää) ~25(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
  "MAT.5.19": "[Wär]{1,2} [also]{3} [eis]{5} [vo dene]{8} [chliinschte]{9,10} [Gebot]{6,7} [uflöst]{4} und{11} [d Lüüt]{14,15} [so]{13} [lehrt]{12}, [dä wird]{17} [im]{18,19} [Himmelriich]{20-22} [de Chliinscht]{16} [gnännt]{17}; [wär]{23,25} si [aber]{24} [tuet]{26} und{27} [lehrt]{28}, [dä]{29} [wird]{31} [im]{32,33} [Himmelriich]{34-36} [gross]{30} [gnännt]{31}.",
- "MAT.5.20": "[Ich säg]{1} [öi]{3} [nämli]{2}: [Wänn]{5} [öii]{8} [Grächtigkeit]{9,10} [nöd]{6} [wiit über]{11} [die vo de Schriftglehrte]{12,13} und{14} [Pharisäer]{15} [usegaat]{7}, [chömed ir]{18} [sicher nöd]{16,17} [is]{19} [Himmelriich]{20-23} [ine]{18}. ~4(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
+ "MAT.5.20": "[Ich säge]{1} [öi]{3} [nämli]{2}: [Wänn]{5} [öii]{8} [Grächtigkeit]{9,10} [nöd]{6} [wiit über]{11} [die vo de Schriftglehrte]{12,13} und{14} [Pharisäer]{15} [usegaat]{7}, [chömed ir]{18} [sicher nöd]{16,17} [is]{19} [Himmelriich]{20-23} [ine]{18}. ~4(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.5.21": "[Ir händ ghört]{1}, [dass]{2} [zu de Alte]{4,5} [gseit worde isch]{3}: «[Du söllsch]{7} [nöd]{6} [töte]{7}; [wär]{8,10} [aber]{9} [tötet]{11}, [mues]{12,13} [vors Gricht]{14,15}.»",
  "MAT.5.22": "[Ich]{1} [aber]{2} [säg]{3} [öi]{4}: [Jede, wo]{6,7} [uf sin]{11} [Brueder]{9,10} [wüetig isch]{8}, [mues]{12,13} [vors Gricht]{14,15}; [wär]{16,18} [aber]{17} zu [sim]{22} [Brueder]{20,21} [seit]{19}: «[Raka]{23}!», [mues]{24,25} [vor de Hoch Rat]{26,27}; [wär]{28,30} [aber]{29} [seit]{31}: «[Du Tubel]{32}!», [mues]{33,34} [is Füür]{38,39} [vo de Höll]{35-37}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.5.23": "[Wänn]{1} [du]{3} [also]{2} [dis]{6} [Gschänk]{4,5} [zum]{7,8} [Altar]{9} [bringsch]{3} [und]{10} [dir]{11} [dört]{10} [in Sinn chunnt]{11}, [dass]{12} [din]{15} [Brueder]{13,14} [öppis]{17} [gäge]{18} [dich]{19} [hät]{16},",
  "MAT.5.24": "dänn [lass]{1} [dis]{5} [Gschänk]{3,4} [dört]{2} [vor]{6} [em Altar]{7,8} staa und{9} [gang]{10}; [versöhn di]{12} [zerscht]{11} [mit]{13} [dim]{15} [Brueder]{14}, und{16} [dänn]{17} [chumm]{18} und [bring]{19} [dis]{22} [Gschänk]{20,21} [dar]{19}.",
  "MAT.5.25": "[Wird]{1} [schnäll]{6} [einig]{2} [mit]{3} [dim]{5} [Gägner]{4}, [solang]{7,8} [du]{9} [mit]{10} [ihm]{11} [underwägs]{12-14} [bisch]{9}, [damit]{15} [di]{16} [de Gägner]{18,19} [nöd]{15} [em Richter]{20,21} [übergit]{17} und{22} [de Richter]{23,24} [em Grichtsdiener]{25,26} und{27} [me di]{30} [is]{28} [Gfängnis]{29} [wirft]{30}.",
- "MAT.5.26": "[Amen]{1}, [ich säg]{2} [dir]{3}: [Du chunnsch]{6} [sicher nöd]{4,5} [vo dört]{7} [use]{6}, [bis]{8} [du]{10} [de letscht]{11,12} [Quadrans]{13} [zahlt häsch]{10}. ~9(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
+ "MAT.5.26": "[Amen]{1}, [ich säge]{2} [dir]{3}: [Du chunnsch]{6} [sicher nöd]{4,5} [vo dört]{7} [use]{6}, [bis]{8} [du]{10} [de letscht]{11,12} [Quadrans]{13} [zahlt häsch]{10}. ~9(ἄν macht de Nebesatz unbestimmt; nöd eigens widergää)",
  "MAT.5.27": "[Ir händ ghört]{1}, [dass]{2} [gseit worde isch]{3}: «[Du söllsch]{5} [nöd]{4} [d Ehe breche]{5}.»",
  "MAT.5.28": "[Ich]{1} [aber]{2} [säg]{3} [öi]{4}: [Jede, wo]{6,7} [e Frau]{9} [aaluegt]{8}, [so dass er]{10,11} [si]{13} [begehrt]{12}, [hät]{15} [i]{17} [sim]{20} [Herz]{18,19} [scho]{14} [mit ire]{16} [d Ehe broche]{15}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.5.29": "[Wänn]{1} [aber]{2} [dis]{5} [rächt]{6,7} [Aug]{3,4} [dich]{9} [z Fall bringt]{8}, [riiss]{10} [s]{11} [use]{10} und{12} [wirf]{13} s [vo]{14} [dir]{15} [wäg]{13}! [Es isch]{16} [nämli]{17} [besser]{16} [für dich]{18}, [dass]{19} [eis]{21} [vo dine]{24} [Glider]{22,23} [verlore gaat]{20} und{25} [nöd]{26} [din]{30} [ganz]{27} [Liib]{28,29} [i]{32} [d Höll]{33} [gworfe wird]{31}.",
@@ -390,7 +390,7 @@ ALTS = [
   ["Der Zusatz kann die harte Forderung abgemildert haben, damit sie zu berechtigtem Zorn passt (vgl. Jesu Zorn in [[MRK.3.5]], [[EPH.4.26]]).",
    "Umgekehrt könnte das Wort gestrichen worden sein, um die Forderung zu verschärfen oder weil es überflüssig schien.",
    AUTO + " lesen 01 und 03 ohne Zusatz, 05 und 032 mit εἰκῇ. 04 ist an dieser Stelle nicht erhalten."],
-  ["De Zuesatz cha di hert Forderig abgschwächt ha, damit si zu berächtigtem Zorn passt (vgl. [[MRK.3.5]], [[EPH.4.26]]).",
+  ["De Zuesatz cha di hert Forderig abgschwächt haa, damit si zu berächtigtem Zorn passt (vgl. [[MRK.3.5]], [[EPH.4.26]]).",
    "Umgekeert chönnt s Wort gstriche worde sii, zum d Forderig verschärfe.",
    AUTO_G + " läsed 01 und 03 ohni Zuesatz, 05 und 032 mit εἰκῇ. 04 isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-005-025-02:R2", "MAT.5.25", "und der Richter dem Gerichtsdiener", "und der Richter dich dem Gerichtsdiener übergibt",
@@ -401,7 +401,7 @@ ALTS = [
   {"R1": [("κριτὴς", "de Richter", "SBLGNT, WH, NA28")], "R2": [("κριτὴς σε παραδῷ", "de Richter dich übergit", "Treg, RP")]},
   ["Der Zusatz kann die knappe Ausdrucksweise geglättet haben; ebenso kann er wegen der Wiederholung desselben Verbs ausgefallen sein.",
    AUTO + " lesen 01 und 03 ohne Zusatz, 05 und 032 mit ihm. 04 ist an dieser Stelle nicht erhalten."],
-  ["De Zuesatz cha di chnapp Usdrucksiis glättet ha; oder er isch wäge de Widerholig usgfalle.",
+  ["De Zuesatz cha di chnapp Usdrucksiis glättet haa; oder er isch wäge de Widerholig usgfalle.",
    AUTO_G + " läsed 01 und 03 ohni Zuesatz, 05 und 032 mit. 04 isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-005-030-01:R2", "MAT.5.30", "in die Hölle kommt", "in die Hölle geworfen wird", "i d Höll chunnt", "i d Höll gworfe wird", "gering",
   "Statt «kommt» steht wie in [[MAT.5.29]] «geworfen wird».", "Statt «chunnt» staat wie i [[MAT.5.29]] «gworfe wird».",
@@ -451,7 +451,7 @@ ALTS = [
   ["Die Zusätze entsprechen weitgehend [[LUK.6.27]]–[[LUK.6.28]]; Abschreiber können Matthäus an Lukas angeglichen haben.",
    "Umgekehrt wird vertreten, die Wendungen seien bei Matthäus wegen der mehrfach gleichen Endung ὑμᾶς beim Abschreiben übersprungen worden.",
    AUTO + " lesen 01 und 03 ohne Zusatz, 05 und 032 mit ihm. 04 ist an dieser Stelle nicht erhalten."],
-  ["D Zuesätz entspräched wiitgehend [[LUK.6.27]]–[[LUK.6.28]]; Abschriiber chönnted de Matthäus am Lukas aaglichen ha.",
+  ["D Zuesätz entspräched wiitgehend [[LUK.6.27]]–[[LUK.6.28]]; Abschriiber chönnted de Matthäus am Lukas aaglichen haa.",
    "Umgekeert wird vertrette, d Wändige seiged wäge de mehrfach gliiche Ändig ὑμᾶς bim Abschriibe übersprige worde.",
    AUTO_G + " läsed 01 und 03 ohni Zuesatz, 05 und 032 mit. 04 isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-005-044-02:R2", "MAT.5.44", "betet für die, die euch verfolgen", "betet für die, die euch beleidigen und verfolgen",
@@ -547,7 +547,7 @@ UNITS_GSW = {
  "TU-MAT-005-033-037": ("Vom Schwöre",
   "Zu de Alte isch gseit worde, si söled kei Meineid schwöre und em Herr iri Eid halte. De Jesus seit, me söll überhaupt nöd schwöre: nöd bim Himmel, em Thron vo Gott, nöd bi de Erde, em Schämel für sini Füess, nöd bi Jerusalem, de Stadt vom grosse Chönig, und nöd bim eigete Chopf, dänn me chan kei einzigs Haar wiiss oder schwarz mache. Ires Ja söll es Ja sii, ires Nei es Nei; was meh isch, isch vom Böse."),
  "TU-MAT-005-038-042": ("Vo de Vergältig",
-  "Em Satz «Aug um Aug und Zahn um Zahn» stellt de Jesus gägenüber: Me söll em Böse nöd widerstaa. Wär eim uf de rächt Bagge schlaat, däm söll me au de ander anehebe; wär vor Gricht s Hemd will näh, däm au de Mantel laa; wär eim zwingt, ei Meile mitzgaa, mit däm söll me zwei gaa. Wär bittet, däm söll me gää, und vo däm, wo öppis entlehne will, söll me sich nöd abcheere."),
+  "Em Satz «Aug um Aug und Zahn um Zahn» stellt de Jesus gägenüber: Me söll em Böse nöd widerstaa. Wär eim uf de rächt Bagge schlaat, däm söll me au de ander anehebe; wär vor Gricht s Hemd will näh, däm au de Mantel laa; wär eim zwingt, ei Meile mitzgaa, mit däm söll me zwei gaa. Wär bittet, däm söll me gää, und vo däm, wo öppis entlehne wott, söll me sich nöd abcheere."),
  "TU-MAT-005-043-048": ("Vo de Findesliebi",
   "Zum Wort «Du söllsch din Nächschte liebe und din Fiind hasse» seit de Jesus: Liebed öii Fiind und bätted für die, wo öi verfolged, damit ir Söhn vo öiem Vatter i de Himmel wärded; dänn er laat sini Sunne über Böse und Gueti ufgaa und laat s rägne über Grächti und Ungrächti. Wär nu die liebt, wo ihn liebed, und nu sini Brüeder grüesst, macht nüüt Bsunders; das mached au d Zöllner und d Heide. Ir söled also vollkomme sii, wie öie himmlisch Vatter vollkomme isch."),
 }
@@ -588,11 +588,11 @@ NOTES_GSW = [
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
   "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1, WREAD-CNTR-MAT-005-001-048) "
-  "oder uf em erfasste Wortlut vo de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
+  "oder uf em erfasste Wortluut vo de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
  ("Abgränzig: [[MAT.6.5-MAT.6.15]] staat i TRANS-MAT-006-005-015-GSW-ZH-WORKING; Wörter wie «Vatter i de Himmel», «himmlisch "
   "Vatter», «Lohn», «Heide», «vom Böse» und «d Lüüt» sind druf abgstimmt."),
  ("Grundentscheid für Matthäus (usfüerlich i de hochdütsche translation_notes): «s Himmelriich» (wörtli «s Riich vo de Himmel»), «s Riich vo Gott»; «Amen, "
-  "ich säg öi»; «Vatter i de Himmel», «himmlisch»; «Schriftglehrti», «Pharisäer»; μακάριος «sälig»; δικαιοσύνη «Grächtigkeit»; "
+  "ich säge öi»; «Vatter i de Himmel», «himmlisch»; «Schriftglehrti», «Pharisäer»; μακάριος «sälig»; δικαιοσύνη «Grächtigkeit»; "
   "σκανδαλίζω «z Fall bringe»; γέεννα «Höll»; μισθός «Lohn»; οὐ μή «sicher nöd»; ἄνθρωποι «d Lüüt»; ὄχλος «d Mängi», "
   "οἱ ὄχλοι «d Lüüt»; προσέρχομαι «härechoo»; δοξάζω «priise»."),
  ("Mundart: Näme mit Artikel; Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Riich vo de Himmel»). D Red staat "
@@ -676,7 +676,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erklärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-MAT-{c:03d}-001-{last:03d}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {

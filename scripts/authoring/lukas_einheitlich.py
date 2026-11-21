@@ -91,7 +91,7 @@ OCHLOI_DE = ("οἱ ὄχλοι ist in ganz Lukas «die Menschenmengen» (wie be
 MUNDART = {
     # Festlegungen vom 2026-10-26, die mit dem Regelwerk übereinstimmen
     "uuserwäält": "userwählt", "uuserwäälte": "userwählte", "uuserwählt": "userwählt", "leert": "lehrt",
-    "gleert": "glehrt", "leere": "lehre", "leer": "lehr", "det": "dört", "chnüü": "chnü", "gschee": "gscheh",
+    "gleert": "glehrt", "det": "dört", "chnüü": "chnü", "gschee": "gscheh",
     "muetterliib": "mueterliib", "witergange": "wiitergange", "förchte": "fürchte", "förchted": "fürchted",
     "förcht": "fürcht", "gförchtet": "gfürchtet", "ellei": "elei", "ghööre": "ghöre", "ghööred": "ghöred",
     "ghüraatet": "ghüratet", "hüraatet": "hüratet", "verhüraatet": "verhüratet", "glööst": "glöst", "gmeldet": "gmäldet",

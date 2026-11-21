@@ -99,12 +99,12 @@ DE = {
 
 GSW = {
  # ------------------------------------------------------------ Kapitel 6,1–4
- "MAT.6.1": "[Passed uf]{1}, dass [ir]{7} [öii]{5} [Grächtigkeit]{3,4} nöd{6} [vor]{8} [de Lüüt]{9,10} [üebed]{7}, [damit]{11,12} [si]{14} [öi gsehnd]{13}; [suscht]{15-18:idiom} [händ ir]{21} kei{20} [Lohn]{19} [bi]{22} [öiem]{25} [Vatter]{23,24} [i de Himmel]{26-29}. ~2(«aber»; überleitend, nöd eigens widergää)",
- "MAT.6.2": "Wänn{1} [du]{3} also{2} [Almose]{4} [gisch]{3}, [blas]{6} nöd{5} [d Posuune]{6} [vor]{7} [dir]{8} [här]{7}, wie{9} [s]{12} [d Hüüchler]{10,11} [i]{13} [de Synagoge]{14,15} und{16} [i]{17} [de Gasse]{18,19} [mached]{12}, damit{20} [d Lüüt]{22-24} [si rüemed]{21}. Amen{25}, [ich säg]{26} [öi]{27}: [Si händ]{28} [ire]{31} [Lohn]{29,30} [scho überchoo]{28}.",
+ "MAT.6.1": "[Passed uuf]{1}, dass [ir]{7} [öii]{5} [Grächtigkeit]{3,4} nöd{6} [vor]{8} [de Lüüt]{9,10} [üebed]{7}, [damit]{11,12} [si]{14} [öi gsehnd]{13}; [suscht]{15-18:idiom} [händ ir]{21} kei{20} [Lohn]{19} [bi]{22} [öiem]{25} [Vatter]{23,24} [i de Himmel]{26-29}. ~2(«aber»; überleitend, nöd eigens widergää)",
+ "MAT.6.2": "Wänn{1} [du]{3} also{2} [Almose]{4} [gisch]{3}, [blas]{6} nöd{5} [d Posuune]{6} [vor]{7} [dir]{8} [här]{7}, wie{9} [s]{12} [d Hüüchler]{10,11} [i]{13} [de Synagoge]{14,15} und{16} [i]{17} [de Gasse]{18,19} [mached]{12}, damit{20} [d Lüüt]{22-24} [si rüemed]{21}. Amen{25}, [ich säge]{26} [öi]{27}: [Si händ]{28} [ire]{31} [Lohn]{29,30} [scho überchoo]{28}.",
  "MAT.6.3": "Wänn{3} du{1} aber{2} [Almose]{4} [gisch]{3}, [söll]{6} [dini]{9} [linggi Hand]{7,8} nöd{5} [wüsse]{6}, [was]{10} [dini]{14} [rächti]{12,13} [macht]{11},",
  "MAT.6.4": "damit{1} [dis]{3} [Almose]{4,5} [im Verborgne]{6-8} [bliibt]{2}; und{9} [din]{12} [Vatter]{10,11}, [wo]{13} [is Verborgne]{15-17} [gseht]{14}, [wird s]{18} [dir]{19} [vergälte]{18}.",
  # ------------------------------------------------------------ Kapitel 6,16–34
- "MAT.6.16": "Wänn{1} [ir]{3} aber{2} [faschted]{3}, [mached]{5} kei{4} [suurs Gsicht]{9} wie{6} [d Hüüchler]{7,8}; [si mached]{10} nämli{11} [ires]{14} [Gsicht]{12,13} [unkänntlich]{10}, damit{15} [d Lüüt]{17,18} [gsehnd]{16}, dass si [faschted]{19}. Amen{20}, [ich säg]{21} [öi]{22}: [Si händ]{23} [ire]{26} [Lohn]{24,25} [scho überchoo]{23}.",
+ "MAT.6.16": "Wänn{1} [ir]{3} aber{2} [faschted]{3}, [mached]{5} kei{4} [suurs Gsicht]{9} wie{6} [d Hüüchler]{7,8}; [si mached]{10} nämli{11} [ires]{14} [Gsicht]{12,13} [unkänntlich]{10}, damit{15} [d Lüüt]{17,18} [gsehnd]{16}, dass si [faschted]{19}. Amen{20}, [ich säge]{21} [öi]{22}: [Si händ]{23} [ire]{26} [Lohn]{24,25} [scho überchoo]{23}.",
  "MAT.6.17": "Du{1} aber{2}, [wänn du faschtisch]{3}, [salb]{4} [din]{5} [Chopf]{6,7} und{8} [wäsch]{12} [dis]{11} [Gsicht]{9,10},",
  "MAT.6.18": "damit{1} nöd{2} [d Lüüt]{4,5} [gsehnd]{3}, dass du [faschtisch]{6}, sondern{7} [din]{10} [Vatter]{8,9}, [wo]{11} [im Verborgne]{12-14} isch; und{15} [din]{18} [Vatter]{16,17}, [wo]{19} [is Verborgne]{21-23} [gseht]{20}, [wird s]{24} [dir]{25} [vergälte]{24}.",
  "MAT.6.19": "[Sammled]{2} [öi]{3} kei{1} [Schätz]{4} [uf]{5} [de Erde]{6,7}, wo{8} [Schabe]{9} und{10} [Frass]{11} [alles kaputt mached]{12} und{13} wo{14} [Dieb]{15} [iibräched]{16} und{17} [stähled]{18}.",
@@ -113,11 +113,11 @@ GSW = {
  "MAT.6.22": "[D Lampe]{1,2} [vom Liib]{3,4} [isch]{5} [s Aug]{6,7}. Wänn{8} also{9} [dis]{13} [Aug]{11,12} [klar]{14} [isch]{10}, [isch]{20} [din]{18} [ganz]{15} [Liib]{16,17} [hell]{19}.",
  "MAT.6.23": "Wänn{1} aber{2} [dis]{5} [Aug]{3,4} [schlächt]{6} [isch]{7}, [isch]{13} [din]{11} [ganz]{8} [Liib]{9,10} [fiischter]{12}. Wänn{14} also{15} [s Liecht]{16,17} [i dir]{18-20} [Fiischteri]{21} [isch]{22}, [wie gross]{25} isch dänn [d Fiischteri]{23,24}!",
  "MAT.6.24": "Niemer{1} [cha]{2} [zwei]{3} [Herre]{4} [diene]{5}; dänn{7} entweder{6} [hasst er]{10} [de eint]{8,9} und{11} [liebt]{14} [de ander]{12,13}, oder{15} [er hanget]{17} [am eint]{16} [aa]{17} und{18} [verachtet]{21} [de ander]{19,20}. [Ir chönd]{23} nöd{22} [Gott]{24} [diene]{25} und{26} [em Mammon]{27}.",
- "MAT.6.25": "[Drum]{1,2} [säg ich]{3} [öi]{4}: [Mached öi]{6} kei{5} [Sorge]{6} [um]{7} [öies]{9} [Läbe]{8}, was{10} [ir ässed]{11}, [und au nöd]{12} [um]{13} [öie]{15} [Liib]{14}, was{16} [ir aalegged]{17}. [Isch]{22} nöd{18} [s Läbe]{19,20} [meh]{21} [als]{23} [s Ässe]{24} und{25} [de Liib]{26,27} meh [als d Chleider]{28,29}?",
+ "MAT.6.25": "[Drum]{1,2} [säge ich]{3} [öi]{4}: [Mached öi]{6} kei{5} [Sorge]{6} [um]{7} [öies]{9} [Läbe]{8}, was{10} [ir ässed]{11}, [und au nöd]{12} [um]{13} [öie]{15} [Liib]{14}, was{16} [ir aalegged]{17}. [Isch]{22} nöd{18} [s Läbe]{19,20} [meh]{21} [als]{23} [s Ässe]{24} und{25} [de Liib]{26,27} meh [als d Chleider]{28,29}?",
  "MAT.6.26": "[Lueged]{1} [d Vögel]{3,4} [am Himmel]{5,6} [aa]{2}: [Si säied]{9} nöd{8}, [si ernted]{11} nöd{10} und [sammled]{13} [au nüüt]{12} [i]{14} [Schüüre]{15} [ii]{13}, und{16} [öie]{19} [himmlisch]{20,21} [Vatter]{17,18} [git]{22} [ine]{23} [z ässe]{22}. [Sind]{27} [ir]{25} nöd{24} [vil meh]{26} [wärt]{27} [als si]{28}? ~7(«dass»; im Doppelpunkt ufgange)",
  "MAT.6.27": "Wär{1} aber{2} [vo]{3} [öi]{4} [cha]{6}, [wänn er sich Sorge macht]{5}, [sinere]{11} [Läbesziit]{9,10} [e einzigi]{13} [Elle]{12} [dezuetue]{7,8}?",
  "MAT.6.28": "Und{1} [wieso]{4} [mached ir öi Sorge]{5} [um]{2} [d Chleider]{3}? [Lueged]{6} [d Lilie]{7,8} [uf em Fäld]{9,10} [genau aa]{6}, wie{11} [si wachsed]{12}: [Si chrampfed]{14} nöd{13} und [spinned]{16} [au nöd]{15}.",
- "MAT.6.29": "[Ich säg]{1} [öi]{3} aber{2}: [Nöd emal]{5} [de Salomo]{6} [i]{7} [all]{8} [sinere]{11} [Pracht]{9,10} [isch aagleit gsii]{12} wie{13} [eini]{14} [vo dene]{15}. ~4(ὅτι leitet di direkt Red ii)",
+ "MAT.6.29": "[Ich säge]{1} [öi]{3} aber{2}: [Nöd emal]{5} [de Salomo]{6} [i]{7} [all]{8} [sinere]{11} [Pracht]{9,10} [isch aagleit gsii]{12} wie{13} [eini]{14} [vo dene]{15}. ~4(ὅτι leitet di direkt Red ii)",
  "MAT.6.30": "Wänn{1} aber{2} [Gott]{14,15} [s Gras]{3,4} [uf em Fäld]{5,6}, [wo]{8} hüt{7} [staat]{8} und{9} [wo me]{13} moorn{10} [in]{11} [Ofe]{12} [wirft]{13}, so{16} [aaleit]{17}, [tuet er s]{18} [dänn nöd]{18} [vil]{19} [meh]{20} [für öi]{21}, [ir Chliigläubige]{22}?",
  "MAT.6.31": "[Mached öi]{3} also{2} kei{1} [Sorge]{3} [und säged]{4}: «Was{5} [söled mir ässe]{6}?», oder{7}: «Was{8} [söled mir trinke]{9}?», oder{10}: «Was{11} [söled mir aalegge]{12}?»",
  "MAT.6.32": "[Das alles]{1,3} [sueched]{6} nämli{2} [d Heide]{4,5}; [öie]{11} [himmlisch]{12,13} [Vatter]{9,10} [weiss]{7} ja{8}, dass{14} [ir]{15} [das alles]{16,17} [bruuched]{15}.",
@@ -146,7 +146,7 @@ GSW = {
  "MAT.7.20": "[Also]{1,2} [a]{3} [ire]{6} [Frücht]{4,5} [wärded ir]{7} [si]{8} [erchänne]{7}.",
  "MAT.7.21": "[Nöd]{1} [jede]{2}, [wo]{3} [zu mir]{5} [seit]{4}: «Herr{6}, Herr{7}!», [chunnt]{8} [is]{9,10} [Himmelriich]{11-13} [ine]{8}, sondern{14} [wär]{15} [de Wille]{17,18} [vo mim]{21} [Vatter]{19,20} [i de Himmel]{22-25} [tuet]{16}.",
  "MAT.7.22": "[A]{4} [däm]{5} [Tag]{6,7} [säged]{2} vil{1} [zu mir]{3}: «Herr{8}, Herr{9}, [händ mir]{14} nöd{10} [i dim]{11,12} [Name]{13} [prophezeit]{14} und{15} [i dim]{16,17} [Name]{18} [Dämone]{19} [usgtribe]{20} und{21} [i dim]{22,23} [Name]{24} [vil]{26} [Machttate]{25} [taa]{27}?»",
- "MAT.7.23": "Und{1} dänn{2} [säg ich]{3} [ine]{4} [offe]{3}: «[Nie]{6} [han ich]{7} [öi]{8} [kännt]{7}. [Gönd wäg]{9} [vo]{10} [mir]{11}, [ir, wo]{12,13} [Gsetzlosigkeit]{14,15} [tüend]{12,13}!» ~5(ὅτι leitet di direkt Red ii)",
+ "MAT.7.23": "Und{1} dänn{2} [säge ich]{3} [ine]{4} [offe]{3}: «[Nie]{6} [han ich]{7} [öi]{8} [kännt]{7}. [Gönd wäg]{9} [vo]{10} [mir]{11}, [ir, wo]{12,13} [Gsetzlosigkeit]{14,15} [tüend]{12,13}!» ~5(ὅτι leitet di direkt Red ii)",
  "MAT.7.24": "[Jede]{1} also{2}, [wo]{3} [die]{8} [Wort]{6,7} [vo mir]{5} [ghört]{4} und{9} [si]{11} [tuet]{10}, [isch wien]{12} [en gschiide]{14} [Maa]{13}, [wo]{15} [sis]{17} [Huus]{18,19} [uf]{20} [de Fels]{21,22} [baut hät]{16}.",
  "MAT.7.25": "Und{1} [de Räge]{3,4} [isch abechoo]{2}, und{5} [s Hochwasser]{7,8} [isch choo]{6}, und{9} [d Wind]{11,12} [händ blase]{10} und{13} [sind]{14} [gäge]{15} [das]{17} [Huus]{16} [prallt]{14}, und{18} [es isch]{20} nöd{19} [iigstürzt]{20}; [es isch]{21} nämli{22} [uf]{23} [de Fels]{24,25} [baut gsii]{21}.",
  "MAT.7.26": "Und{1} [jede]{2}, [wo]{3} [die]{8} [Wort]{6,7} [vo mir]{5} [ghört]{4} und{9} [si]{12} nöd{10} [tuet]{11}, [isch wien]{13} [en dumme]{15} [Maa]{14}, [wo]{16} [sis]{18} [Huus]{19,20} [uf]{21} [de Sand]{22,23} [baut hät]{17}.",
@@ -314,7 +314,7 @@ DEC_GSW = [
  ("MAT.6.2", "Hüüchler", "traditional", "ὑποκριταὶ", "Schauspiler", None,
   "ὑποκριτής hät ursprünglich «Schauspiler» gheisse. «Hüüchler» wie i [[MAT.6.5]] und [[MRK.7.6]]."),
  ("MAT.6.2", "d Lüüt si rüemed", "adapted", "δοξασθῶσιν ὑπὸ τῶν ἀνθρώπων", "si vo de Lüüt verherrlicht wärded", None, "Aktiv statt Passiv, wil de Täter gnännt isch."),
- ("MAT.6.2", "Amen, ich säg öi", "traditional", "ἀμὴν λέγω ὑμῖν", None, None, "«Amen» (hebräisch «gwüss») bekräftiget, was chunnt; i ganz Matthäus gliich."),
+ ("MAT.6.2", "Amen, ich säge öi", "traditional", "ἀμὴν λέγω ὑμῖν", None, None, "«Amen» (hebräisch «gwüss») bekräftiget, was chunnt; i ganz Matthäus gliich."),
  ("MAT.6.2", "Si händ ire Lohn scho überchoo", "literal", "ἀπέχουσιν τὸν μισθὸν αὐτῶν", None, None, "ἀπέχω isch s Wort vo de Quittig: «vollständig überchoo». Wie i [[MAT.6.5]]."),
  ("MAT.6.4", "im Verborgne bliibt", "adapted", "ᾖ σου ἡ ἐλεημοσύνη ἐν τῷ κρυπτῷ", "im Verborgne isch", None, None),
  ("MAT.6.4", "vergälte", "literal", "ἀποδώσει", None, ["belohne"], "Zu de Läsarte «er sälber» und «öffentlich» lueg d Alternative."),
@@ -364,7 +364,7 @@ DEC_GSW = [
  ("MAT.7.21", "is Himmelriich", "traditional", "εἰς τὴν βασιλείαν τῶν οὐρανῶν", "is Riich vo de Himmel", ["i d Herrschaft vo de Himmel"],
   "Einheitlich «s Himmelriich» (docs/ZUERIDUEUETSCH.md). De Matthäus seit meischt «Riich vo de Himmel» («Himmel» staat für Gott); sachlich gliich wie «Riich vo Gott»."),
  ("MAT.7.22", "Machttate", "literal", "δυνάμεις", "Chräft", ["Wunder"], None),
- ("MAT.7.23", "säg ich ine offe", "interpretive", "ὁμολογήσω", "bekänne", None, None),
+ ("MAT.7.23", "säge ich ine offe", "interpretive", "ὁμολογήσω", "bekänne", None, None),
  ("MAT.7.23", "Gsetzlosigkeit", "literal", "τὴν ἀνομίαν", None, ["Unrächt"], "Handle gäge de Wille vo Gott; Gägestuck zu [[MAT.7.21]]."),
  ("MAT.7.24", "isch wien en gschiide Maa", "adapted", "ὁμοιωθήσεται ἀνδρὶ φρονίμῳ", "wird eme gschiide Maa gliich gmacht", ["wird eme gschiide Maa gliiche"],
   "Futur Passiv; i de Mundart eifacher «isch wie». Zur Läsart «dä vergliich ich» lueg d Alternative."),
@@ -391,7 +391,7 @@ ALTS = [
    AUTO + " lesen Sinaiticus (Erstschrift), Vaticanus und Bezae «Gerechtigkeit», Washingtonianus «Almosen». Eine Korrektur im Sinaiticus liest nach dem erfassten Wortlaut ein drittes Wort (δοσειν, wohl δόσιν, «Gabe»); die automatische Zuordnung führt sie als «liest anders»."],
   ["En Schriiber hät s allgemein Wort as nächscht Stichwort «Almose» ([[MAT.6.2]]) chöne aagliiche; spöter hät δικαιοσύνη sälber «Wohltätigkeit» chöne heisse.",
    "Umgekeert cha δικαιοσύνη als Leitwort vom Matthäus ([[MAT.5.20]]) iigsetzt worde sii, damit de Satz d Überschrift über alli drü Üebige wird.",
-   AUTO_G + " läsed de Sinaiticus (Erschtschrift), de Vaticanus und de Bezae «Grächtigkeit», de Washingtonianus «Almose». E Korrektur im Sinaiticus list nach em erfasste Wortlut es drittes Wort (δοσειν, wohl δόσιν, «Gab»)."]),
+   AUTO_G + " läsed de Sinaiticus (Erschtschrift), de Vaticanus und de Bezae «Grächtigkeit», de Washingtonianus «Almose». E Korrektur im Sinaiticus list nach em erfasste Wortluut es drittes Wort (δοσειν, wohl δόσιν, «Gab»)."]),
  ("VAR-SBLGNTAPP-MAT-006-004-01:R2", "MAT.6.4", "wird es dir vergelten", "wird er selbst es dir vergelten", "wird s dir vergälte", "wird er sälber s dir vergälte", "gering",
   "Der Zusatz betont, dass Gott selbst vergilt.", "De Zuesatz betont, dass Gott sälber vergiltet.",
   {"R1": [("κρυπτῷ", "im Verborgenen", "ohne Zusatz; SBLGNT, WH, Treg, NA28")], "R2": [("κρυπτῷ αὐτὸς", "im Verborgenen, er selbst", "RP")]},
@@ -418,7 +418,7 @@ ALTS = [
   {"R1": [("σου", "din", "SBLGNT, WH, Treg, NA28")], "R2": [("ὑμῶν", "öie", "RP")]},
   ["Die Einzahl nach der Mehrzahl von [[MAT.6.19-MAT.6.20]] ist auffällig; ein Schreiber konnte angleichen, auch an die Parallele [[LUK.12.34]], die die Mehrzahl hat.",
    AUTO + " lesen Sinaiticus und Vaticanus «dein», Washingtonianus «euer». Bezae ist an dieser Stelle nicht erhalten."],
-  ["D Einzahl nach de Mehrzahl vo [[MAT.6.19-MAT.6.20]] fallt uf; en Schriiber hät chöne aagliiche, au a d Parallele [[LUK.12.34]] mit de Mehrzahl.",
+  ["D Einzahl nach de Mehrzahl vo [[MAT.6.19-MAT.6.20]] fallt uuf; en Schriiber hät chöne aagliiche, au a d Parallele [[LUK.12.34]] mit de Mehrzahl.",
    AUTO_G + " läsed de Sinaiticus und de Vaticanus «din», de Washingtonianus «öie». De Bezae isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-006-021-02:R2", "MAT.6.21", "dort wird auch dein Herz sein", "dort wird auch euer Herz sein", "dört wird au dis Herz sii", "dört wird au öies Herz sii", "gering",
   "Wie beim ersten «dein» des Verses.", "Wie bim erschte «din» vom Vers.",
@@ -449,7 +449,7 @@ ALTS = [
    AUTO + " liest Sinaiticus (Erstschrift und Korrektur) «das Reich», Washingtonianus «das Reich Gottes». Vaticanus liest anders als beide: Nach dem erfassten Wortlaut steht bei ihm die Gerechtigkeit vor dem Reich. Bezae ist an dieser Stelle nicht erhalten."],
   ["«vo Gott» cha zur Verdüütlichig ergänzt worde sii.",
    "Umgekeert isch «Riich vo Gott» für de Matthäus ungwöhnlich; das cha für die Läsart als di schwierigeri rede.",
-   AUTO_G + " list de Sinaiticus (Erschtschrift und Korrektur) «s Riich», de Washingtonianus «s Riich vo Gott». De Vaticanus list andersch: Nach em erfasste Wortlut staat bi ihm d Grächtigkeit vor em Riich. De Bezae isch a dere Stell nöd erhalte."]),
+   AUTO_G + " list de Sinaiticus (Erschtschrift und Korrektur) «s Riich», de Washingtonianus «s Riich vo Gott». De Vaticanus list andersch: Nach em erfasste Wortluut staat bi ihm d Grächtigkeit vor em Riich. De Bezae isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-006-034-01:R3", "MAT.6.34", "wird für sich selbst sorgen", "wird für das Seine sorgen", "wird für sich sälber sorge", "wird für sini eigete Sache sorge", "gering",
   "Mit dem Artikel (τὰ ἑαυτῆς) heisst es «das Seine», die eigenen Angelegenheiten; der Sinn bleibt nahezu gleich. R1 und R2 sind zwei Schreibungen desselben Wortes.",
   "Mit em Artikel (τὰ ἑαυτῆς) heisst s «s Sine», di eigete Sache; de Sinn bliibt fasch gliich.",
@@ -480,7 +480,7 @@ ALTS = [
    AUTO + " liest Sinaiticus in der Erstschrift ὅτι, eine Korrektur τί; Vaticanus ὅτι δέ. Eine Korrektur im Vaticanus hat nach dem erfassten Wortlaut τι δε; die automatische Zuordnung rechnet sie zu ὅτι δέ, was unsicher ist. Washingtonianus und Ephraemi lesen τί."],
   ["τί als Usruef isch ungwöhnlich; en Schriiber hät s as ὅτι vo [[MAT.7.13]] chöne aagliiche.",
    "Umgekeert cha τί us ὅτι entstande sii: I Grossbuechstabe ohni Worttränig underscheided sich ΟΤΙ und ΤΙ nu dur en Buechstabe.",
-   AUTO_G + " list de Sinaiticus i de Erschtschrift ὅτι, e Korrektur τί; de Vaticanus ὅτι δέ. E Korrektur im Vaticanus hät nach em erfasste Wortlut τι δε; d automatisch Zueornig rächnet si zu ὅτι δέ, was unsicher isch. De Washingtonianus und de Ephraemi läsed τί."]),
+   AUTO_G + " list de Sinaiticus i de Erschtschrift ὅτι, e Korrektur τί; de Vaticanus ὅτι δέ. E Korrektur im Vaticanus hät nach em erfasste Wortluut τι δε; d automatisch Zueornig rächnet si zu ὅτι δέ, was unsicher isch. De Washingtonianus und de Ephraemi läsed τί."]),
  ("VAR-SBLGNTAPP-MAT-007-024-01:R2", "MAT.7.24", "wird einem klugen Mann gleichen", "den werde ich einem klugen Mann vergleichen", "isch wien en gschiide Maa", "dä vergliich ich mit eme gschiide Maa", "gering",
   "Mit ὁμοιώσω αὐτόν spricht Jesus in der Ich-Form, wie in [[MAT.7.23]]; der Sinn bleibt fast gleich.",
   "Mit ὁμοιώσω αὐτόν redt de Jesus i de Ich-Form, wie i [[MAT.7.23]]; de Sinn bliibt fasch gliich.",
@@ -533,23 +533,23 @@ UNITS = [
 ]
 UNITS_GSW = {
  "TU-MAT-006-001-034": ("Almose, Gebät und Faschte; Schätz und Sorge",
-  "De Jesus warnt devor, d Grächtigkeit vor de Lüüt z üebe, zum gseh z wärde: Almose, Gebät und Faschte söled im Verborgne gscheh, dänn wird de Vatter, wo is Verborgne gseht, s vergälte; zum Bätte git er s Vatterunser und seit, dass de Vatter nu dene vergit, wo sälber de Lüüt vergänd. Dänn fordered er uf, Schätz im Himmel statt uf de Erde z sammle, nännt s Aug d Lampe vom Liib und seit, dass niemer Gott und em Mammon cha diene. Si söled sich kei Sorge mache um Ässe und Chleider, dänn de himmlisch Vatter weiss, was si bruuched; si söled zerscht s Riich und sini Grächtigkeit sueche."),
+  "De Jesus warnt devor, d Grächtigkeit vor de Lüüt z üebe, zum gseh z wärde: Almose, Gebät und Faschte söled im Verborgne gscheh, dänn wird de Vatter, wo is Verborgne gseht, s vergälte; zum Bätte git er s Vatterunser und seit, dass de Vatter nu dene vergit, wo sälber de Lüüt vergänd. Dänn fordered er uuf, Schätz im Himmel statt uf de Erde z sammle, nännt s Aug d Lampe vom Liib und seit, dass niemer Gott und em Mammon cha diene. Si söled sich kei Sorge mache um Ässe und Chleider, dänn de himmlisch Vatter weiss, was si bruuched; si söled zerscht s Riich und sini Grächtigkeit sueche."),
  "TU-MAT-006-001-004": ("Vom Almosegää",
   "De Jesus warnt, d Grächtigkeit nöd vor de Lüüt z üebe, zum vo ine gseh z wärde; suscht git s kei Lohn bim Vatter i de Himmel. Wär Almose git, söll nöd d Posuune vor sich här blase, wie s d Hüüchler i de Synagoge und i de Gasse mached, zum vo de Lüüt grüemt z wärde; die händ ire Lohn scho überchoo. Di lingg Hand söll nöd wüsse, was di rächt macht; de Vatter, wo is Verborgne gseht, wird s vergälte."),
  "TU-MAT-006-016-018": ("Vom Faschte",
   "Wär faschtet, söll kei suurs Gsicht mache wie d Hüüchler, wo ires Gsicht unkänntlich mached, damit d Lüüt gsehnd, dass si faschted; die händ ire Lohn scho überchoo. Wär faschtet, söll de Chopf salbe und s Gsicht wäsche, damit nöd d Lüüt s gsehnd, sondern de Vatter im Verborgne; er wird s vergälte."),
  "TU-MAT-006-019-024": ("Schätz im Himmel",
-  "De Jesus fordered uf, kei Schätz uf de Erde z sammle, wo Schabe und Frass alles kaputt mached und Dieb stääled, sondern im Himmel; dänn wo de Schatz isch, dört wird au s Herz sii. S Aug isch d Lampe vom Liib: Isch s klar, wird de ganz Liib hell sii, isch s schlächt, fiischter. Niemer cha zwei Herre diene; me cha nöd Gott diene und em Mammon."),
+  "De Jesus fordered uuf, kei Schätz uf de Erde z sammle, wo Schabe und Frass alles kaputt mached und Dieb stääled, sondern im Himmel; dänn wo de Schatz isch, dört wird au s Herz sii. S Aug isch d Lampe vom Liib: Isch s klar, wird de ganz Liib hell sii, isch s schlächt, fiischter. Niemer cha zwei Herre diene; me cha nöd Gott diene und em Mammon."),
  "TU-MAT-006-025-034": ("Mached öi kei Sorge",
   "De Jesus seit, si söled sich kei Sorge mache um Ässe und Chleider. De himmlisch Vatter git de Vögel z ässe, und nöd emal de Salomo isch aagleit gsii wie e Lilie; wänn Gott scho s Gras eso aaleit, wie vil meh wird er si aalegge, di Chliigläubige. Mit Sorge mache cha niemer sinere Läbesziit öppis dezuetue. All das sueched d Heide; de Vatter aber weiss, dass si s bruuched. Si söled zerscht s Riich und sini Grächtigkeit sueche, dänn wird ine das alles dezue gää, und sich kei Sorge um de morgig Tag mache: Jedem Tag längt sini eiget Plag."),
  "TU-MAT-007-001-029": ("Richte, Bitte, di zwei Wäg und de Schluss vo de Bärgpredig",
-  "De Jesus seit: Richted nöd; wär de Splitter im Aug vo sim Brueder gseht, söll zerscht de Balke us em eigete Aug usezieh; s Heilig söll me nöd de Hünd gää. Er macht Muet zum Bitte, dänn de Vatter i de Himmel wird dene Guets gää, won en drum bitted, und fasst zäme: Was ir wänd, dass öi d Lüüt tüend, das tüend au ine; das isch s Gsetz und d Prophete. Er rüeft uf, dur s äng Tor ine z gaa, warnt vor falsche Prophete, wo me a ire Frücht erchännt, und seit, dass nöd jede, wo «Herr, Herr» seit, is Riich vo de Himmel chunnt, sondern wär de Wille vom Vatter tuet. Wär sini Wort ghört und tuet, isch wien en gschiide Maa, wo uf de Fels baut hät; wär si nöd tuet, wien en dumme, wo uf Sand baut hät. Wo de Jesus mit de Red fertig isch, sind d Lüüt überwältiget, dänn er lehrt mit Vollmacht."),
+  "De Jesus seit: Richted nöd; wär de Splitter im Aug vo sim Brueder gseht, söll zerscht de Balke us em eigete Aug usezieh; s Heilig söll me nöd de Hünd gää. Er macht Muet zum Bitte, dänn de Vatter i de Himmel wird dene Guets gää, won en drum bitted, und fasst zäme: Was ir wänd, dass öi d Lüüt tüend, das tüend au ine; das isch s Gsetz und d Prophete. Er rüeft uuf, dur s äng Tor ine z gaa, warnt vor falsche Prophete, wo me a ire Frücht erchännt, und seit, dass nöd jede, wo «Herr, Herr» seit, is Riich vo de Himmel chunnt, sondern wär de Wille vom Vatter tuet. Wär sini Wort ghört und tuet, isch wien en gschiide Maa, wo uf de Fels baut hät; wär si nöd tuet, wien en dumme, wo uf Sand baut hät. Wo de Jesus mit de Red fertig isch, sind d Lüüt überwältiget, dänn er lehrt mit Vollmacht."),
  "TU-MAT-007-001-006": ("Vom Richte",
   "De Jesus seit: Richted nöd, damit ir nöd grichtet wärded; mit em Mass, wo ir mässed, wird öi gmässe. Wär de Splitter im Aug vo sim Brueder gseht, söll zerscht de Balke us em eigete Aug usezieh. S Heilig söll me nöd de Hünd gää und d Perle nöd vor d Säu rüere."),
  "TU-MAT-007-007-012": ("Bitted, sueched, chlopfed aa",
   "De Jesus fordered uf z bitte, z sueche und aazchlopfe, dänn wär bittet, überchunnt. Wänn scho Mänsche, wo bös sind, irem Sohn kei Stei statt Brot gänd, sondern ire Chind gueti Gabe, wie vil meh wird de Vatter i de Himmel dene Guets gää, won en drum bitted. Was ir wänd, dass öi d Lüüt tüend, das söled ir ine tue; das isch s Gsetz und d Prophete."),
  "TU-MAT-007-013-014": ("S äng Tor",
-  "De Jesus rüeft uf, dur s äng Tor ine z gaa: Wiit isch s Tor und breit de Wäg is Verderbe, und vil gönd dört ine; äng isch s Tor und schmal de Wäg is Läbe, und wenig finded en."),
+  "De Jesus rüeft uuf, dur s äng Tor ine z gaa: Wiit isch s Tor und breit de Wäg is Verderbe, und vil gönd dört ine; äng isch s Tor und schmal de Wäg is Läbe, und wenig finded en."),
  "TU-MAT-007-015-023": ("A de Frücht erchänne",
   "De Jesus warnt vor falsche Prophete, wo i Schafchleider chömed und inne riissendi Wölf sind: A ire Frücht wird me si erchänne, wien en Baum a sine Frücht; jede Baum ohni gueti Frucht wird umghaue und is Füür gworfe. Nöd jede, wo «Herr, Herr» seit, chunnt is Riich vo de Himmel ine, sondern wär de Wille vom Vatter tuet. Vilne, wo sich a däm Tag uf Profezeie, Dämone-Ustriibe und Machttate i sim Name berüefed, wird er offe säge: «Nie han ich öi kännt», und si vo sich wegschicke."),
  "TU-MAT-007-024-027": ("S Huus uf em Fels",
@@ -589,12 +589,12 @@ NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
   "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf em erfasste Wortlut vo de "
+ ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf em erfasste Wortluut vo de "
   "CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
  ("Abgränzig: [[MAT.6.5-MAT.6.15]] staat i TRANS-MAT-006-005-015-GSW-ZH-WORKING (scripts/authoring/vaterunser.py) und wird da nöd aagrüert. "
   "Wörter sind druf abgstimmt: «Hüüchler», «Synagoge», «Si händ ire Lohn scho überchoo», «din Vatter, wo is Verborgne gseht, wird s dir "
   "vergälte», «i de Himmel», «himmlisch Vatter», «d Heide», «d Lüüt», «ir»."),
- ("Einheitlichi Wörter: «s Himmelriich», «Amen, ich säg öi», «Vatter i de Himmel», «lueg», «Schriftglehrti», «Dämon»; neu i däm Bereich: "
+ ("Einheitlichi Wörter: «s Himmelriich», «Amen, ich säge öi», «Vatter i de Himmel», «lueg», «Schriftglehrti», «Dämon»; neu i däm Bereich: "
   "δικαιοσύνη «Grächtigkeit», μισθός «Lohn», ἐλεημοσύνη «Almose», μεριμνάω «sich Sorge mache», ὀλιγόπιστοι «Chliigläubigi», ἔθνη «d Heide», "
   "μαμωνᾶς «Mammon», κρίνω «richte», ἀνομία «Gsetzlosigkeit», δυνάμεις «Machttate», ὄχλος «d Mängi», οἱ ὄχλοι «d Lüüt». ὑποκριταί heisst wie im Vaterunser-Stuck "
   "und bim Markus «Hüüchler»."),
@@ -689,7 +689,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erklärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-MAT-{span}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {

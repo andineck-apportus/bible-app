@@ -114,12 +114,12 @@ GSW = {
  "MAT.18.2": "Und{1} [er hät]{2} [es Chind]{3} [zu sich grüeft]{2}, [hät]{4} [s]{5} [i]{6} [iri]{8} [Mitti]{7} [gstellt]{4}",
  "MAT.18.3": "und{1} [hät gseit]{2}: [Amen]{3}, [ich säge]{4} [öi]{5}: [Wänn]{6} [ir öi]{8} [nöd]{7} [umwänded]{8} und{9} [wie]{11} [d Chind]{12,13} [wärded]{10}, [chömed ir]{16} [sicher nöd]{14,15} [is]{17,18} [Himmelriich]{19-21} [ine]{16}.",
  "MAT.18.4": "[Wär]{1} [sich]{4} [also]{2} [chlii macht]{3} [wie]{5} [das]{8} [Chind]{6,7} [da]{8}, [dä]{9} [isch]{10} [de Gröscht]{11,12} [im]{13,14} [Himmelriich]{15-17}.",
- "MAT.18.5": "Und{1} [wär]{2,3} [es]{5} [settigs]{7} [Chind]{6} [i]{8} [mim]{11} [Name]{9,10} [ufnimmt]{4}, [nimmt]{13} [mich]{12} [uf]{13}.",
+ "MAT.18.5": "Und{1} [wär]{2,3} [es]{5} [settigs]{7} [Chind]{6} [i]{8} [mim]{11} [Name]{9,10} [ufnimmt]{4}, [nimmt]{13} [mich]{12} [uuf]{13}.",
  "MAT.18.6": "[Wär]{1,3} [aber]{2} [eis]{5} [vo dene]{6,8} [Chliine]{7}, [wo]{9} [a]{11} [mich]{12} [glaubed]{10}, [z Fall bringt]{4}, [für dä]{14} [wär s besser]{13}, [wänn]{15} [me]{16} [ihm]{22} [en Mülistei]{17,18} [um]{19} [de Hals]{20,21} [hänke]{16} und{23} [en]{24} [im]{25,26} [offne Meer]{27-29} [versänke]{24} [würd]{16}.",
  "MAT.18.7": "[Weh]{1} [de Wält]{2,3} [wäge]{4} [de Fallstrick]{5,6}! [D Fallstrick]{10,11} [müend]{7} [nämli]{8} [choo]{9}; [aber]{12} [weh]{13} [em Mänsch]{14,15}, [wo]{17} [de Fallstrick]{18,19} [dur]{16} [en]{17} [chunnt]{20}!",
  "MAT.18.8": "[Wänn]{1} [aber]{2} [dini]{5} [Hand]{3,4} [oder]{6} [din]{9} [Fuess]{7,8} [dich]{11} [z Fall bringt]{10}, [hau]{12} [en]{13} [ab]{12} und{14} [rüer]{15} en [vo]{16} [dir]{17} [wäg]{15}! [Es isch besser]{18,20} [für dich]{19}, [verchrüpplet]{25} [oder]{26} [lahm]{27} [is]{22,23} [Läbe]{24} [ine z choo]{21}, [als]{28} [mit]{34} [zwei]{29} [Händ]{30} [oder]{31} [zwei]{32} [Füess]{33} [is]{36,37} [ewig]{39,40} [Füür]{38} [gworfe z wärde]{35}.",
  "MAT.18.9": "Und{1} [wänn]{2} [dis]{5} [Aug]{3,4} [dich]{7} [z Fall bringt]{6}, [riiss]{8} [s]{9} [use]{8} und{10} [rüer]{11} s [vo]{12} [dir]{13} [wäg]{11}! [Es isch besser]{14,16} [für dich]{15}, [mit eim Aug]{17} [is]{18,19} [Läbe]{20} [ine z choo]{21}, [als]{22} [mit]{25} [zwei]{23} [Auge]{24} [i]{27} [d Höll]{28,29} [vom Füür]{30,31} [gworfe z wärde]{26}.",
- "MAT.18.10": "[Passed uf]{1}, [dass ir]{3} [nöd]{2} [eis]{4} [vo dene]{5,7} [Chliine]{6} [verachted]{3}! [Ich säge]{8} [öi]{10} [nämli]{9}: [Iri]{14} [Ängel]{12,13} [i de Himmel]{15,16} [gsehnd]{19} [immer]{17,18} [s Gsicht]{20,21} [vo mim Vatter]{22-24} [i de Himmel]{25-27}. ~11(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
+ "MAT.18.10": "[Passed uuf]{1}, [dass ir]{3} [nöd]{2} [eis]{4} [vo dene]{5,7} [Chliine]{6} [verachted]{3}! [Ich säge]{8} [öi]{10} [nämli]{9}: [Iri]{14} [Ängel]{12,13} [i de Himmel]{15,16} [gsehnd]{19} [immer]{17,18} [s Gsicht]{20,21} [vo mim Vatter]{22-24} [i de Himmel]{25-27}. ~11(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.18.12": "[Was]{1} [meined]{3} [ir]{2}? [Wänn]{4} [en]{6} [Mänsch]{7} [hundert]{8} [Schaf]{9} [hät]{5} und{10} [eis]{12} [vo]{13} [ine]{14} [sich verlauft]{11}, [laat er]{16} [dänn]{15} [nöd]{15} [d]{17} [nüünenüünzg]{18,19} [uf]{20} [de Bärge]{21,22} [zrugg]{16} und{23} [gaat]{24} [das]{26} [go sueche]{25}, [wo sich verlaufe hät]{27}?",
  "MAT.18.13": "Und{1} [wänn]{2} [er]{4} [s]{5} [dänn]{3} [findet]{4} – [amen]{6}, [ich säge]{7} [öi]{8}: [Er fröit sich]{10} [über]{11} [das]{12} [meh]{13} [als]{14} [über]{15} [di]{16} [nüünenüünzg]{17,18}, [wo]{19} [sich]{21} [nöd]{20} [verlaufe händ]{21}. ~9(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
  "MAT.18.14": "[Eso]{1} [isch es]{3} [au]{3} [nöd]{2} [de Wille]{4} [vo]{5} [öiem]{8} [Vatter]{6,7} [i de Himmel]{9-11}, [dass]{12} [eis]{14} [vo dene]{15,17} [Chliine]{16} [verlore gaat]{13}.",
@@ -128,8 +128,8 @@ GSW = {
  "MAT.18.17": "[Wänn]{1} [er]{3} [aber]{2} [au]{3} uf [die]{4} [nöd]{3} [lost]{3}, [säg s]{5} [de Gmeind]{6,7}; [wänn]{8} [er]{13} [aber]{9} [au]{10} uf [d Gmeind]{11,12} [nöd]{13} [lost]{13}, [dänn söll er]{14} [für dich]{15} [sii]{14} [wien]{16} [en Heid]{17,18} und{19} [en Zöllner]{20,21}.",
  "MAT.18.18": "[Amen]{1}, [ich säge]{2} [öi]{3}: [Alles, wo]{4,5} [ir]{6} [uf]{7} [de Erde]{8,9} [binded]{6}, [wird]{10} [im]{12} [Himmel]{13} [bunde sii]{11}, und{14} [alles, wo]{15,16} [ir]{17} [uf]{18} [de Erde]{19,20} [lösed]{17}, [wird]{21} [im]{23} [Himmel]{24} [glöst sii]{22}.",
  "MAT.18.19": "[Wider]{1}, [amen]{2}, [ich säge]{3} [öi]{4}: [Wänn]{6} [zwei]{7} [vo]{9} [öi]{10} [uf]{11} [de Erde]{12,13} [sich einig sind]{8} [über]{14} [irgend e]{15} [Sach]{16}, [wo]{17,18} [si]{19} [drum bitted]{19}, dänn [überchömed si s]{20,21} [vo]{22} [mim Vatter]{23-25} [i de Himmel]{26-28}. ~5(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
- "MAT.18.20": "[Wo]{1} [nämli]{2} [zwei]{4} [oder]{5} [drü]{6} [i]{8} [mim]{9,10} [Name]{11} [binenand]{7} [sind]{3}, [dört]{12} [bin ich]{13} [mitten]{14,15} [under ine]{16}.",
- "MAT.18.21": "[Dänn]{1} [isch]{2} [de Petrus]{4,5} [zu ihm]{3} [härechoo]{2} und [hät gseit]{6}: «[Herr]{7}, [wie mängisch]{8} [darf]{9} [min]{14} [Brüeder]{12,13} [gäge]{10} [mich]{11} [sündige]{9}, und{15} [ich]{16} [vergib]{16} [em]{17}? [Bis]{18} [sibe Mal]{19}?»",
+ "MAT.18.20": "[Wo]{1} [nämli]{2} [zwei]{4} [oder]{5} [drü]{6} [i]{8} [mim]{9,10} [Name]{11} [binenand]{7} [sind]{3}, [dört]{12} [bi ich]{13} [mitten]{14,15} [under ine]{16}.",
+ "MAT.18.21": "[Dänn]{1} [isch]{2} [de Petrus]{4,5} [zu ihm]{3} [härechoo]{2} und [hät gseit]{6}: «[Herr]{7}, [wie mängisch]{8} [darf]{9} [min]{14} [Brüeder]{12,13} [gäge]{10} [mich]{11} [sündige]{9}, und{15} [ich]{16} [vergibe]{16} [em]{17}? [Bis]{18} [sibe Mal]{19}?»",
  "MAT.18.22": "[De Jesus]{3,4} [seit]{1} [zu ihm]{2}: «[Ich säge]{6} [dir]{7}: [nöd]{5} [bis]{8} [sibe Mal]{9}, [sondern]{10} [bis]{11} [sibenesibezg Mal]{12,13}.»",
  "MAT.18.23": "[Drum]{1,2} [isch]{3} [s Himmelriich]{4-7} [wien]{3} [en Chönig]{9}, [wo]{10} [mit]{14} [sine]{17} [Chnächt]{15,16} [hät wele]{11} [abrächne]{12,13}. ~8(ἀνθρώπῳ «eme Mänsch» vor βασιλεῖ «Chönig» isch semitischi Usdrucksart; i «en Chönig» enthalte)",
  "MAT.18.24": "[Won]{1} [er]{3} [aber]{2} [aagfange hät]{1} [abzrächne]{4}, [hät me]{5} [ihm]{6} [eine]{7} [bracht]{5}, [wo]{8} [ihm]{8} [zähtuusig]{9} [Talent]{10} [gschuldet hät]{8}.",
@@ -168,7 +168,7 @@ GSW = {
  "MAT.19.21": "[De Jesus]{3,4} [hät]{1} [zu ihm]{2} [gseit]{1}: «[Wänn]{5} [du]{6} [vollkomme]{7} [sii]{8} [wottsch]{6}, [dänn gang]{9}, [verchauf]{10}, [was]{12} [du]{11} [häsch]{13}, und{14} [gib s]{15} [de Arme]{16}, und{17} [du häsch]{18} [en Schatz]{19} [i]{20} [de Himmel]{21}; und{22} [chumm]{23}, [folg]{24} [mir]{25} [nache]{24}!»",
  "MAT.19.22": "[Won]{1} [de jung Maa]{3,4} [aber]{2} [das]{5,6} [ghört hät]{1}, [isch er]{7} [truurig]{8} [weggange]{7}; [er hät]{9,11} [nämli]{10} [vil]{13} [Bsitz]{12} [ghaa]{9,11}.",
  "MAT.19.23": "[De Jesus]{1,3} [aber]{2} [hät]{4} zu [sine]{7} [Jünger]{5,6} [gseit]{4}: «[Amen]{8}, [ich säge]{9} [öi]{10}: [En Riiche]{12} [chunnt]{14} [schwär]{13} [is]{15,16} [Himmelriich]{17-19} [ine]{14}. ~11(ὅτι leitet d Ussag ii; mit em Doppelpunkt widergää)",
- "MAT.19.24": "[Und]{2} [nomal]{1} [säg ich]{3} [öi]{4}: [Es isch]{6} [eifacher]{5}, dass [es Kamel]{7} [dur]{8} [es Nadelöhr]{9,10} [gaat]{11}, [als]{12} dass [en Riiche]{13} [is]{14,15} [Riich]{16} [vo Gott]{17,18} [ine chunnt]{11}.»",
+ "MAT.19.24": "[Und]{2} [nomal]{1} [säge ich]{3} [öi]{4}: [Es isch]{6} [eifacher]{5}, dass [es Kamel]{7} [dur]{8} [es Nadelöhr]{9,10} [gaat]{11}, [als]{12} dass [en Riiche]{13} [is]{14,15} [Riich]{16} [vo Gott]{17,18} [ine chunnt]{11}.»",
  "MAT.19.25": "[Wo]{1} [d Jünger]{3,4} das [aber]{2} [ghört händ]{1}, [sind si]{5} [ganz]{6} [usser sich gsii]{5} und [händ gseit]{7}: «[Wär]{8} [cha]{10} [dänn]{9} [grettet wärde]{11}?»",
  "MAT.19.26": "[De Jesus]{3,4} [aber]{2} [hät si aagluegt]{1} und [hät]{5} [zu ine]{6} [gseit]{5}: «[Für]{7} [d Mänsche]{8} [isch]{11} [das]{9} [unmöglich]{10}, [für]{12} [Gott]{14} [aber]{13} isch [alles]{15} [möglich]{16}.»",
  "MAT.19.27": "[Dänn]{1} [hät]{2} [de Petrus]{3,4} [gantwortet]{2} und [zu ihm]{6} [gseit]{5}: «[Lueg]{7}, [mir]{8} [händ]{9} [alles]{10} [verlaa]{9} und{11} [sind]{12} [dir]{13} [nachegange]{12}. [Was]{14} [überchömed mir]{16,17} [also]{15} defür?»",
@@ -356,10 +356,10 @@ DEC_DE = [
 DEC_GSW = [
  ('MAT.18.1', 'de Gröscht', 'interpretive', 'μείζων', 'de Grösser', None, 'D Steigerigsform staat oft für de Superlativ.'),
  ('MAT.18.1', 'im Himmelriich', 'literal', 'ἐν τῇ βασιλείᾳ τῶν οὐρανῶν', None, ['im Himmelriich'], 'Grundentscheid fürs ganz Matthäusevangelium: «s Himmelriich», mit de Mehrzahl vom Griechische. De Matthäus brucht d Wändig 32-mal, «Riich vo Gott» nu 4-mal; vili gsehnd drin e jüdischi Schüüchi, de Gottesname uszspräche.'),
- ('MAT.18.3', 'umwänded', 'literal', 'στραφῆτε', None, ['umchered', 'öi ändered'], '«Umchere» isch für μετανοέω reserviert; drum da «sich umwände».'),
+ ('MAT.18.3', 'umwänded', 'literal', 'στραφῆτε', None, ['umchered', 'öi ändered'], '«Umchehre» isch für μετανοέω reserviert; drum da «sich umwände».'),
  ('MAT.18.4', 'chlii macht', 'adapted', 'ταπεινώσει ἑαυτὸν', 'sich erniedrige wird', None, 'S Chind isch es Bild für e nidrigi Stellig; d Verbindig zu «dene Chliine» ([[MAT.18.6]]) bliibt sichtbar.'),
  ('MAT.18.6', 'z Fall bringt', 'interpretive', 'σκανδαλίσῃ', None, ['vom Glaube abbringt'], 'Einheitlich fürs Matthäusevangelium: σκανδαλίζω aktiv «z Fall bringe», passiv «Aastoss näh» oder «z Fall choo». σκάνδαλον isch s Stellhölzli vo nere Falle; drum σκάνδαλον «Fallstrick» ([[MAT.18.7]]).'),
- ('MAT.18.6', 'en Mülistei', 'interpretive', 'μύλος ὀνικὸς', 'en Esels-Mülistei', ['en grosse Mülistei'], 'De schwär Stei vo nere Müli, won en Esel dräit.'),
+ ('MAT.18.6', 'en Mülistei', 'interpretive', 'μύλος ὀνικὸς', 'en Esels-Mülistei', ['en grosse Mülistei'], 'De schwär Stei vo nere Müli, won en Esel dräht.'),
  ('MAT.18.8', 'rüer', 'adapted', 'βάλε', 'wirf', None, '«Rüere» isch s Mundartwort für «wärfe».'),
  ('MAT.18.8', 'hau en ab', 'literal', 'ἔκκοψον αὐτὸν', None, ['hau si ab'], 'αὐτόν isch männlich und Einzahl und bezieht sich uf de Fuess, wo zletscht gnännt isch.'),
  ('MAT.18.9', 'd Höll vom Füür', 'traditional', 'τὴν γέενναν τοῦ πυρός', None, None, 'γέεννα: s Hinnomtal bi Jerusalem, Bild für de Ort vom Gricht.'),
@@ -433,7 +433,7 @@ ALTS = [
    'Laut der automatischen Zuordnung liest 03 mit ἐκείνῳ, 05 ohne. 01 und 032 hat die Zuordnung keiner Lesart zugewiesen; nach den CNTR-Transkriptionen steht in 01 kein '
    'ἐκείνῳ, in 032 steht es an anderer Stelle (vor «wehe»).'],
   ['«Däm» cha a [[MAT.26.24]] aaglichen sii; oder s Wort isch usgfalle.',
-   'Nach de automatische Zueornig liest 03 mit ἐκείνῳ, 05 ohni; nach de CNTR-Transkriptione staat s i 01 nöd und i 032 a andere Stell.']),
+   'Nach de automatische Zueornig list 03 mit ἐκείνῳ, 05 ohni; nach de CNTR-Transkriptione staat s i 01 nöd und i 032 a andere Stell.']),
  ('VAR-SBLGNTAPP-MAT-018-008-01:R2',
   'MAT.18.8',
   'hau ihn ab',
@@ -504,7 +504,7 @@ ALTS = [
   'Wiederum, amen, ich sage euch',
   'Wiederum sage ich euch',
   'Wider, amen, ich säge öi',
-  'Wider säg ich öi',
+  'Wider säge ich öi',
   'gering',
   'Ohne das zweite «Amen» fehlt die feierliche Bekräftigung.',
   'Ohni s zweit «Amen» fehlt d feierlich Bekräftigig.',
@@ -512,7 +512,7 @@ ALTS = [
   {'R1': [('ἀμήν', 'amen', 'WH, Treg, RP, NA28')], 'R2': [('–', '(fehlt)', 'NIV')]},
   ['Das Wort kann kurz nach [[MAT.18.18]] ergänzt worden sein; ebenso kann es ausgefallen sein.',
    'Laut der automatischen Zuordnung lesen 01 und 05 ohne «Amen», 03 mit; 032 liest anders (nach der CNTR-Transkription «wiederum aber euch»).'],
-  ['S Wort cha churz nach [[MAT.18.18]] ergänzt worde sii; oder s isch usgfalle.', 'Nach de automatische Zueornig läsed 01 und 05 ohni «Amen», 03 mit; 032 liest anders.']),
+  ['S Wort cha churz nach [[MAT.18.18]] ergänzt worde sii; oder s isch usgfalle.', 'Nach de automatische Zueornig läsed 01 und 05 ohni «Amen», 03 mit; 032 list anders.']),
  ('VAR-SBLGNTAPP-MAT-018-026-01:R2',
   'MAT.18.26',
   '«Hab Geduld mit mir',
@@ -537,7 +537,7 @@ ALTS = [
   'Sin Mitchnächt isch drum vor sine Füess uf de Bode gfalle',
   'gering',
   'Der Zusatz malt die Szene aus.',
-  'De Zuesatz malt d Szene us.',
+  'De Zuesatz malt d Szene uus.',
   {'R1': [('αὐτοῦ', '(ohne Zusatz)', 'WH, Treg, NA28')], 'R2': [('αὐτοῦ εἰς τοὺς πόδας αὐτοῦ', 'ihm zu Füssen', 'RP')]},
   {'R1': [('αὐτοῦ', '(ohni Zuesatz)', 'WH, Treg, NA28')], 'R2': [('… εἰς τοὺς πόδας αὐτοῦ', 'vor sine Füess', 'RP')]},
   ['Der Zusatz kann die Szene ausmalen und an [[MAT.18.26]] angleichen; ebenso kann er ausgefallen sein.',
@@ -566,7 +566,7 @@ ALTS = [
   'dä, wo si gmacht hät,',
   'gering',
   'ποιήσας nimmt das Verb des Zitats auf («gemacht»).',
-  'ποιήσας nimmt s Verb vom Zitat uf.',
+  'ποιήσας nimmt s Verb vom Zitat uuf.',
   {'R1': [('κτίσας', 'der Schöpfer', 'WH, Treg, NA28')], 'R2': [('ποιήσας', 'der (sie) gemacht hat', 'RP')]},
   {'R1': [('κτίσας', 'de Schöpfer', 'WH, Treg, NA28')], 'R2': [('ποιήσας', 'dä, wo si gmacht hät', 'RP')]},
   ['ποιήσας kann an das folgende ἐποίησεν und an [[GEN.1.27]] angeglichen sein; κτίσας kann eine Verdeutlichung sein.',
@@ -693,7 +693,7 @@ ALTS = [
   'is Himmelriich',
   'gering',
   'Treg liest die bei Matthäus übliche Wendung «Reich der Himmel»; NA28 und RP unterscheiden sich vom SBLGNT nur in der Wortstellung.',
-  'Treg liest di gwöhnlich Wändig vom Matthäus «Himmelriich».',
+  'Treg list di gwöhnlich Wändig vom Matthäus «Himmelriich».',
   {'R1': [('εἰς τὴν βασιλείαν τοῦ θεοῦ', 'in das Reich Gottes', 'WH')],
    'R2': [('εἰσελθεῖν εἰς τὴν βασιλείαν τοῦ θεοῦ', 'in das Reich Gottes hineinkommen', 'NA28')],
    'R3': [('εἰς τὴν βασιλείαν τοῦ θεοῦ εἰσελθεῖν', 'in das Reich Gottes hineinkommen', 'RP')],
@@ -770,16 +770,16 @@ UNITS = [
 ]
 UNITS_GSW = {
  'TU-MAT-018-001-035': ('D Red vom Läbe i de Gmeind', 'D Jünger fröged, wär im Himmelriich de Gröscht seig. De Jesus stellt es Chind i iri Mitti: Wär sich nöd umwändet und nöd wie d Chind wird, chunnt nöd ine; wär sich chlii macht wie das Chind, isch de Gröscht. Er warnt devor, eine vo dene Chliine z Fall z bringe oder z verachte: Wien en Mänsch s eint Schaf suecht, wo sich verloffe hät, eso wott de Vatter i de Himmel nöd, dass eis vo ine verlore gaat. Wänn en Brüeder sündiget, söll me en zerscht elei zur Red stelle, dänn mit Züge, dänn vor de Gmeind; was d Jünger uf de Erde binded und lösed, wird im Himmel bunde und glöst sii, und wo zwei oder drü i sim Name versammlet sind, isch er mitten under ine. Uf d Frag vom Petrus, öb er bis sibe Mal söll vergää, antwortet de Jesus: bis sibenesibezg Mal, und verzellt vom Chnächt, wo sin Herr ihm e riisigi Schuld erlaat, wo aber sälber sim Mitchnächt e chliini nöd erlaat und drum de Folterchnächt usgliferet wird: Eso macht s au de himmlisch Vatter mit dene, wo nöd vo Herze vergänd. [[MAT.18.11]] fehlt im SBLGNT.'),
- 'TU-MAT-018-001-005': ('Wär isch de Gröscht?', 'D Jünger fröged de Jesus, wär im Himmelriich de Gröscht seig. Er rüeft es Chind zu sich, stellt s i iri Mitti und seit: Wänn si sich nöd umwänded und wie d Chind wärded, chömed si nöd is Himmelriich ine; wär sich chlii macht wie das Chind, isch det de Gröscht, und wär es settigs Chind i sim Name ufnimmt, nimmt ihn uf.'),
+ 'TU-MAT-018-001-005': ('Wär isch de Gröscht?', 'D Jünger fröged de Jesus, wär im Himmelriich de Gröscht seig. Er rüeft es Chind zu sich, stellt s i iri Mitti und seit: Wänn si sich nöd umwänded und wie d Chind wärded, chömed si nöd is Himmelriich ine; wär sich chlii macht wie das Chind, isch det de Gröscht, und wär es settigs Chind i sim Name ufnimmt, nimmt ihn uuf.'),
  'TU-MAT-018-006-009': ('Wehe däm, wo de Fallstrick dur ihn chunnt', 'Wär eine vo dene Chliine, wo a de Jesus glaubed, z Fall bringt, für dä wär s besser, mit eme Mülistei um de Hals im Meer versänkt z wärde. De Jesus rüeft s Wehe über d Wält wäge de Fallstrick, wo unvermeidlich chömed, und über de Mänsch, wo si dur ihn chömed. Wänn Hand, Fuess oder Aug z Fall bringed, söll me si abhaue oder useriisse: Es isch besser, verchrüpplet oder mit eim Aug is Läbe ine z choo, als mit beidne Händ, Füess oder Auge is ewig Füür, i d Höll vom Füür, gworfe z wärde.'),
  'TU-MAT-018-010-014': ('S Schaf, wo sich verloffe hät', 'De Jesus warnt, keis vo dene Chliine z verachte, dänn iri Ängel gsehnd immer s Gsicht vo sim Vatter i de Himmel. Er fröget: Laat en Mänsch, wo vo hundert Schaf eis sich verloffe hät, nöd d nüünenüünzg staa und suecht das eint? Wänn er s findt, fröit er sich über das meh als über di nüünenüünzg. Eso isch es nöd de Wile vom Vatter i de Himmel, dass eis vo dene Chliine verlore gaat. [[MAT.18.11]] fehlt im SBLGNT.'),
  'TU-MAT-018-015-020': ('Wänn din Brüeder sündiget', 'Wänn en Brüeder gäge öpper sündiget, söll dä en zerscht under vier Auge zur Red stelle; wänn er nöd lost, söll er eine oder zwei mitnäh, damit jedi Sach dur zwei oder drü Züge feschtgstellt wird; wänn er au uf die nöd lost, söll er s de Gmeind säge; wänn er au uf d Gmeind nöd lost, söll de Brüeder für ihn sii wie de Heid und de Zöllner. Was d Jünger uf de Erde binded und lösed, wird im Himmel bunde und glöst sii. Wänn zwei vo ine uf de Erde sich über e Sach einig wärded, wo si drum bitted, wird ine das vom Vatter gää; dänn wo zwei oder drü i sim Name versammlet sind, isch de Jesus mitten under ine.'),
- 'TU-MAT-018-021-035': ('Wie mängisch vergää? De Chnächt und sin Mitchnächt', 'De Petrus fröget, wie mängisch er sim Brüeder söll vergää, öb bis sibe Mal; de Jesus antwortet: bis sibenesibezg Mal. Dänn vergliicht er s Himmelriich mit eme Chönig, wo mit sine Chnächt abrächnet: Eim, wo zähtuusig Talent schuldet und sich vor ihm niderwirft und um Geduld bittet, erlaat er us Erbarme di ganz Schuld. Dä Chnächt aber packt und würgt en Mitchnächt, wo ihm hundert Denar schuldet, und rüert en trotz sim Flehe is Gfängnis. Wo d Mitchnächt das em Herr verzelled, nännt er en en böse Chnächt, wo hett müese Erbarme ha, wien er sälber mit ihm Erbarme ghaa heb, und liferet en de Folterchnächt us, bis er di ganz Schuld zalt heb. Eso, seit de Jesus, macht s au sin himmlisch Vatter mit ine, wänn si nöd jede sim Brüeder vo Herze vergänd.'),
- 'TU-MAT-019-001-030': ('Ehe, Chind, Riichtum und de Lohn vo de Nachfolg', 'Nach em Änd vo de Red gaat de Jesus vo Galiläa is Gebiet vo Judäa änet em Jordan; vil Lüüt folged ihm, und er heilt si. Pharisäer fröged en, öb en Maa sini Frau us jedem Grund dörf entlaa; er verwiist uf d Schöpfig: Was Gott zämegfüegt hät, söll de Mänsch nöd trenne; de Mose heb s Entlaa wäge irem härte Herz erlaubt. Wär sini Frau entlaat, usser wäge Unzucht, und en anderi hüratet, bricht d Ehe. Uf de Iiwand vo de Jünger redt er vo Eunuche wäge em Himmelriich. Er leit Chind d Händ uf, dänn settige ghört s Himmelriich. Eme junge Maa, wo fröget, was er Guets söll mache, damit er ewigs Läbe überchunnt, nännt er d Gebot und seit em, wänn er vollkomme sii well, söll er sin Bsitz verchaufe, s de Arme gää und ihm nachefolge; dä gaat truurig wäg. De Jesus seit, en Riiche chömm schwär is Himmelriich, bi Gott aber seig alles möglich. De Jünger, wo ihm nachegfolget sind, seit er aa, si wärded uf zwölf Thron sitze, und jedem, wo wäge sim Name Hüüser, Aaghörigi oder Äcker verlaa hät, hundertfach und ewigs Läbe; vil Erschti wärded Letschti sii.'),
+ 'TU-MAT-018-021-035': ('Wie mängisch vergää? De Chnächt und sin Mitchnächt', 'De Petrus fröget, wie mängisch er sim Brüeder söll vergää, öb bis sibe Mal; de Jesus antwortet: bis sibenesibezg Mal. Dänn vergliicht er s Himmelriich mit eme Chönig, wo mit sine Chnächt abrächnet: Eim, wo zähtuusig Talent schuldet und sich vor ihm niderwirft und um Geduld bittet, erlaat er us Erbarme di ganz Schuld. Dä Chnächt aber packt und würgt en Mitchnächt, wo ihm hundert Denar schuldet, und rüert en trotz sim Flehe is Gfängnis. Wo d Mitchnächt das em Herr verzelled, nännt er en en böse Chnächt, wo hett müese Erbarme haa, wien er sälber mit ihm Erbarme ghaa heb, und liferet en de Folterchnächt uus, bis er di ganz Schuld zalt heb. Eso, seit de Jesus, macht s au sin himmlisch Vatter mit ine, wänn si nöd jede sim Brüeder vo Herze vergänd.'),
+ 'TU-MAT-019-001-030': ('Ehe, Chind, Riichtum und de Lohn vo de Nachfolg', 'Nach em Änd vo de Red gaat de Jesus vo Galiläa is Gebiet vo Judäa änet em Jordan; vil Lüüt folged ihm, und er heilt si. Pharisäer fröged en, öb en Maa sini Frau us jedem Grund dörf entlaa; er verwiist uf d Schöpfig: Was Gott zämegfüegt hät, söll de Mänsch nöd trenne; de Mose heb s Entlaa wäge irem härte Herz erlaubt. Wär sini Frau entlaat, usser wäge Unzucht, und en anderi hüratet, bricht d Ehe. Uf de Iiwand vo de Jünger redt er vo Eunuche wäge em Himmelriich. Er leit Chind d Händ uuf, dänn settige ghört s Himmelriich. Eme junge Maa, wo fröget, was er Guets söll mache, damit er ewigs Läbe überchunnt, nännt er d Gebot und seit em, wänn er vollkomme sii well, söll er sin Bsitz verchaufe, s de Arme gää und ihm nachefolge; dä gaat truurig wäg. De Jesus seit, en Riiche chömm schwär is Himmelriich, bi Gott aber seig alles möglich. De Jünger, wo ihm nachegfolget sind, seit er aa, si wärded uf zwölf Thron sitze, und jedem, wo wäge sim Name Hüüser, Aaghörigi oder Äcker verlaa hät, hundertfach und ewigs Läbe; vil Erschti wärded Letschti sii.'),
  'TU-MAT-019-001-012': ('Ehe und Scheidig', 'De Jesus gaat vo Galiläa is Gebiet vo Judäa änet em Jordan; vil Lüüt folged ihm, und er heilt si det. Pharisäer fröged en, für en uf d Prob z stelle, öb en Maa sini Frau us jedem Grund dörf entlaa. De Jesus verwiist uf [[GEN.1.27]] und [[GEN.2.24]]: Di zwei sind ei Fleisch; was Gott zämegfüegt hät, söll de Mänsch nöd trenne. Uf iren Iiwand mit em Scheidigsbrief antwortet er, de Mose heb s wäge irem härte Herz erlaubt, vo Aafang aa seig s nöd eso gsii; wär sini Frau entlaat, usser wäge Unzucht, und en anderi hüratet, bricht d Ehe, und au wär eini hüratet, wo entlaa worde isch. D Jünger meined, dänn seig s nöd ratsam z hürate; de Jesus antwortet, nöd alli chönd das Wort fasse, und redt vo Eunuche vo Geburt aa, dur Mänsche und wäge em Himmelriich.'),
- 'TU-MAT-019-013-015': ('De Jesus und d Chind', 'Me bringt Chind zum Jesus, damit er ine d Händ uflegi und bäti; d Jünger fahred si aa. De Jesus seit, si söled d Chind zu ihm choo laa und si nöd hindere, dänn settige ghör s Himmelriich. Er leit ine d Händ uf und gaat wiiter.'),
+ 'TU-MAT-019-013-015': ('De Jesus und d Chind', 'Me bringt Chind zum Jesus, damit er ine d Händ uflegi und bäti; d Jünger fahred si aa. De Jesus seit, si söled d Chind zu ihm choo laa und si nöd hindere, dänn settige ghör s Himmelriich. Er leit ine d Händ uuf und gaat wiiter.'),
  'TU-MAT-019-016-022': ('De jung Maa mit vil Bsitz', 'Eine fröget de Jesus, was er Guets söll mache, damit er ewigs Läbe überchunnt. De Jesus fröget zrugg, wieso er en nach em Guete fröget: Eine isch de Guet; wär is Läbe ine choo well, söll d Gebot halte. Uf d Frag, weli, nännt er Gebot us de Zäh Gebot und s Gebot vo de Nächschteliebi. De jung Maa seit, er heb das alles ghalte, und fröget, was em no fehli. De Jesus seit: Wänn er vollkomme sii well, söll er sin Bsitz verchaufe, s de Arme gää und ihm nachefolge; dänn heb er en Schatz i de Himmel. De jung Maa gaat truurig devo, dänn er hät vil Bsitz.'),
- 'TU-MAT-019-023-030': ('Riichtum und de Lohn vo de Nachfolg', 'De Jesus seit sine Jünger, en Riiche chömm schwär is Himmelriich ine; ender gieng es Kamel dur es Nadelöhr als en Riiche is Riich vo Gott. D Jünger sind usser sich und fröged, wär dänn chönn grettet wärde; de Jesus antwortet, bi Mänsche seig das unmöglich, bi Gott aber seig alles möglich. De Petrus seit, si hebed alles verlaa und seiged ihm nachegfolget, und fröget, was si defür überchömed. De Jesus seit aa, i de Neuschöpfig, wänn de Mänschesohn uf em Thron vo sinere Herrlichkeit sitzt, wärded si uf zwölf Thron sitze und di zwölf Stämm vo Israel richte; jede, wo wäge sim Name Hüüser, Aaghörigi oder Äcker verlaa hät, wärd hundertfach überchoo und ewigs Läbe erbe. Vil Erschti wärded Letschti sii und Letschti Erschti.'),
+ 'TU-MAT-019-023-030': ('Riichtum und de Lohn vo de Nachfolg', 'De Jesus seit sine Jünger, en Riiche chömm schwär is Himmelriich ine; ender gieng es Kamel dur es Nadelöhr als en Riiche is Riich vo Gott. D Jünger sind usser sich und fröged, wär dänn chönn grettet wärde; de Jesus antwortet, bi Mänsche seig das unmöglich, bi Gott aber seig alles möglich. De Petrus seit, si hebed alles verlaa und seiged ihm nachegfolget, und fröget, was si defür überchömed. De Jesus seit aa, i de Nöischöpfig, wänn de Mänschesohn uf em Thron vo sinere Herrlichkeit sitzt, wärded si uf zwölf Thron sitze und di zwölf Stämm vo Israel richte; jede, wo wäge sim Name Hüüser, Aaghörigi oder Äcker verlaa hät, wärd hundertfach überchoo und ewigs Läbe erbe. Vil Erschti wärded Letschti sii und Letschti Erschti.'),
 }
 
 NOTES_DE = [
@@ -825,7 +825,7 @@ NOTES_GSW = [
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte. Wo si em Apparat widerspricht, gilt de Apparat.',
  'Einheitlichi Begriff fürs ganz Matthäusevangelium: «s Himmelriich», «s Riich vo Gott»; «de Mänschesohn»; «Amen, ich säge öi»; «de Vatter i de Himmel», «himmlisch»; «lueg»; «dänn»; «Gmeind». Au: σκανδαλίζω «z Fall bringe», σκάνδαλον «Fallstrick»; προσέρχομαι «härechoo»; προσκυνέω «sich niderwärfe»; οἱ ὄχλοι «d Lüüt»; ἀφίημι «vergää», bi Gäldschuld «erlaa»; ἀδελφός «Brüeder»; δοῦλος «Chnächt», σύνδουλος «Mitchnächt»; ἐν οὐρανοῖς «i de Himmel», ἐν οὐρανῷ «im Himmel»; γέεννα «Höll»; ἀπολύω «entlaa»; πορνεία «Unzucht»; στρέφομαι «sich umwände».',
  'Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich», «s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv).',
- '[[MAT.18.11]] staat nöd im SBLGNT und hät kei Text; de Wortlut staat als Alternative bi [[MAT.18.10]]. D Läsart vo RP i [[MAT.19.17]] staat als Alternative (de Iitrag vom Apparat isch nachtreit).',
+ '[[MAT.18.11]] staat nöd im SBLGNT und hät kei Text; de Wortluut staat als Alternative bi [[MAT.18.10]]. D Läsart vo RP i [[MAT.19.17]] staat als Alternative (de Iitrag vom Apparat isch nachtreit).',
  'Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.',
 ]
 
@@ -904,7 +904,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erklärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-MAT-{c:03d}-001-{last:03d}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {

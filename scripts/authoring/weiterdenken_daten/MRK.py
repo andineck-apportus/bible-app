@@ -33,7 +33,7 @@ _Q = [
     (2, BOOK, 2, "Warum verbietet Jesus so oft, von ihm zu erzählen?",
      None, "Wieso verbietet de Jesus so oft, vo ihm z verzelle?", None),
     (3, BOOK, 3, "Wie wirkt ein Evangelium, das in den ältesten Handschriften mit Furcht und Schweigen am leeren Grab endet?",
-     None, "Wie würkt es Evangelium, wo i de ältischte Handschrifte mit Angscht und Schwiige am lääre Grab ufhört?", None),
+     None, "Wie würkt es Evangelium, wo i de ältischte Handschrifte mit Angscht und Schwiige am leere Grab ufhört?", None),
 
     # ---------- Kapitel 1 ----------
     (4, _ch(1), 1, "Was ist der «Anfang des Evangeliums» – nur das erste Kapitel oder das ganze Buch?",
@@ -50,7 +50,7 @@ _Q = [
     (7, _tu("001-001-008"), 2, "Was heisst es, einem anderen den Weg zu bereiten?",
      None, "Was heisst s, eme andere de Wäg z bereite?", None),
     (8, _tu("001-001-008"), 3, "Wie klingt es, wenn jemand von sich sagt: Ich bin nicht wert, ihm die Sandalen zu lösen?",
-     None, "Wie tönt s, wänn öpper vo sich seit: Ich bin s nöd wärt, ihm d Sandale ufzmache?", None),
+     None, "Wie tönt s, wänn öpper vo sich seit: Ich bi s nöd wärt, ihm d Sandale ufzmache?", None),
     # 1,9–11
     (9, _tu("001-009-011"), 1, "Wer hört die Stimme aus den Himmeln?",
      "Markus erzählt, dass Jesus die Himmel aufreissen sieht, und die Stimme spricht ihn direkt an: «Du bist mein geliebter Sohn» ([[MRK.1.10-MRK.1.11]]).",
@@ -83,28 +83,28 @@ _Q = [
     (17, _tu("001-021-028"), 1, "Was ist der Unterschied zwischen einem, der mit Vollmacht lehrt, und den Schriftgelehrten?",
      "Die Zuhörer sind überwältigt, denn er lehrt «wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten» ([[MRK.1.22]]).",
      "Was isch de Underschid zwüsche eim, wo mit Vollmacht lehrt, und de Schriftglehrte?",
-     "D Zuehörer sind überwältiget, will er lehrt «wie eine, wo Vollmacht hät, und nöd wie d Schriftglehrte» ([[MRK.1.22]])."),
+     "D Zuehörer sind überwältiget, wil er lehrt «wie eine, wo Vollmacht hät, und nöd wie d Schriftglehrte» ([[MRK.1.22]])."),
     (18, _tu("001-021-028"), 2, "Warum weiss gerade der unreine Geist, wer Jesus ist?",
      None, "Wieso weiss grad de unreini Geischt, wär de Jesus isch?", None),
     # 1,29–34
     (19, _tu("001-029-034"), 1, "Wie mag es für die Schwiegermutter des Simon gewesen sein, aufzustehen und zu dienen?",
      "Jesus fasst ihre Hand und richtet sie auf, und sie dient ihnen ([[MRK.1.31]]).",
      "Wie isch es ächt für d Schwiegermueter vom Simon gsii, ufzstaa und z diene?",
-     "De Jesus nimmt iri Hand und stellt si uf, und si dient ine ([[MRK.1.31]])."),
+     "De Jesus nimmt iri Hand und stellt si uuf, und si dient ine ([[MRK.1.31]])."),
     (20, _tu("001-029-034"), 2, "Was sieht man, wenn die ganze Stadt vor einer Tür steht?",
      None, "Was gseht me, wänn di ganz Stadt vor ere Tür staat?", None),
     # 1,35–39
     (21, _tu("001-035-039"), 1, "Warum geht Jesus weg, gerade als alle ihn suchen?",
      "Simon und seine Begleiter finden ihn: «Alle suchen dich!» – er aber will in die nächsten Kleinstädte weiterziehen ([[MRK.1.37-MRK.1.38]]).",
      "Wieso gaat de Jesus wäg, grad wo alli ihn sueched?",
-     "De Simon und sini Begleiter finded ihn: «Alli sueched dich!» – er aber will i di nöchschte Städtli wiiterzie ([[MRK.1.37-MRK.1.38]])."),
+     "De Simon und sini Begleiter finded ihn: «Alli sueched dich!» – er aber wott i di nöchschte Städtli wiiterzieh ([[MRK.1.37-MRK.1.38]])."),
     (22, _tu("001-035-039"), 2, "Wo findest du einen einsamen Ort?",
      None, "Wo findsch du en einsame Ort?", None),
     # 1,40–45
     (23, _tu("001-040-045"), 1, "Was bedeutet es für einen Aussätzigen, berührt zu werden?",
      "Jesus streckt die Hand aus und berührt ihn, bevor er sagt: «Ich will; werde rein!» ([[MRK.1.41]]).",
      "Was bedüütet s für en Ussätzige, aagrüert z wärde?",
-     "De Jesus streckt d Hand us und rüert ihn aa, bevor er seit: «Ich wott; wird rein!» ([[MRK.1.41]])."),
+     "De Jesus streckt d Hand uus und rüert ihn aa, bevor er seit: «Ich wott; wird rein!» ([[MRK.1.41]])."),
     (24, _tu("001-040-045"), 2, "Hättest du an seiner Stelle geschwiegen?",
      "Der Geheilte soll niemandem etwas sagen, verkündet die Sache aber überall ([[MRK.1.44-MRK.1.45]]).",
      "Hättsch du a sinere Stell gschwige?",
@@ -121,14 +121,14 @@ _Q = [
      "Wäm sin Glaube gseht de Jesus?",
      "«Wo de Jesus ire Glaube gseh hät» – so heisst s, nachdem si s Dach abdeckt und d Matte abeglaa händ ([[MRK.2.4-MRK.2.5]])."),
     (27, _tu("002-001-012"), 2, "Was ist leichter – zu sagen «Deine Sünden sind vergeben» oder «Steh auf»?",
-     None, "Was isch liechter – z säge «Dini Sünde sind vergää» oder «Stand uf»?", None),
+     None, "Was isch liechter – z säge «Dini Sünde sind vergää» oder «Stand uuf»?", None),
     (28, _tu("002-001-012"), 3, "Wer hat dich schon einmal getragen, als du es selbst nicht konntest?",
      None, "Wär hät dich scho mal treit, wo du s sälber nöd chönnt häsch?", None),
     # 2,13–17
     (29, _tu("002-013-017"), 1, "Was mag Levi bewogen haben, von der Zollstelle aufzustehen?",
      "Jesus sagt nur «Folge mir!», und Levi steht auf und folgt ihm ([[MRK.2.14]]).",
      "Was hät ächt de Levi bewoge, vo de Zollstell ufzstaa?",
-     "De Jesus seit nu «Chumm mir nache!», und de Levi staat uf und gaat ihm nache ([[MRK.2.14]])."),
+     "De Jesus seit nu «Chumm mir nache!», und de Levi staat uuf und gaat ihm nache ([[MRK.2.14]])."),
     (30, _tu("002-013-017"), 2, "Mit wem setzt du dich an einen Tisch – und mit wem nicht?",
      None, "Mit wäm sitzisch du a en Tisch – und mit wäm nöd?", None),
     # 2,18–22
@@ -149,7 +149,7 @@ _Q = [
     # ---------- Kapitel 3 ----------
     (35, _ch(3), 1, "Wer steht in diesem Kapitel drinnen, wer draussen?",
      "Am Ende stehen Mutter und Brüder draussen, und die im Kreis um Jesus nennt er seine Familie ([[MRK.3.31-MRK.3.34]]).",
-     "Wär staat i dem Kapitel dinne, wär dusse?",
+     "Wär staat i däm Kapitel dinne, wär dusse?",
      "Am Schluss stönd d Mueter und d Brüeder dusse, und die im Kreis um de Jesus nännt er sini Familie ([[MRK.3.31-MRK.3.34]])."),
     # 3,1–6
     (36, _tu("003-001-006"), 1, "Warum schweigen sie auf die Frage, ob man am Sabbat Leben retten darf?",
@@ -164,12 +164,12 @@ _Q = [
      "Was sueched d Lüüt, wo us so vilne Gägende chömed?",
      "Si chömed us Galiläa, Judäa, Jerusalem, Idumäa, vo änet em Jordan und us de Gäged vo Tyros und Sidon ([[MRK.3.7-MRK.3.8]])."),
     (39, _tu("003-007-012"), 2, "Warum will Jesus nicht, dass die Geister ihn bekannt machen?",
-     None, "Wieso will de Jesus nöd, dass d Geischter ihn bekannt mached?", None),
+     None, "Wieso wott de Jesus nöd, dass d Geischter ihn bekannt mached?", None),
     # 3,13–19
     (40, _tu("003-013-019"), 1, "Was heisst es, zuerst «bei ihm» zu sein und dann ausgesandt zu werden?",
      "Jesus setzt zwölf ein, «damit sie bei ihm seien und damit er sie aussende» ([[MRK.3.14]]).",
      "Was heisst s, zerscht «bi ihm» z sii und dänn usgschickt z wärde?",
-     "De Jesus setzt zwölf ii, «damit si bi ihm sind und damit er si cha uusschicke» ([[MRK.3.14]])."),
+     "De Jesus setzt zwölf ii, «damit si bi ihm sind und damit er si cha usschicke» ([[MRK.3.14]])."),
     (41, _tu("003-013-019"), 2, "Warum steht Judas Iskariot von Anfang an in der Liste?",
      None, "Wieso staat de Judas Iskariot vo Aafang a i de Lischte?", None),
     # 3,20–21
@@ -207,7 +207,7 @@ _Q = [
      "Wieso säit de Sämaa au dört häre, wo chuum öppis wachse chan?",
      "Es paar Chörner fallt a de Wäg, anderi uf Felsbode, anderi under d Dörn ([[MRK.4.4-MRK.4.7]])."),
     (51, _tu("004-001-009"), 2, "Was heisst es, Ohren zu haben, um zu hören?",
-     None, "Was heisst s, Ohre z ha, zum z ghöre?", None),
+     None, "Was heisst s, Ohre z haa, zum z ghöre?", None),
     # 4,10–12
     (52, _tu("004-010-012"), 1, "Wer gehört zu denen «um ihn», wer zu «jenen draussen» – und kann sich das ändern?",
      "Den Zwölf und denen um Jesus ist das Geheimnis gegeben, «jenen draussen aber geschieht alles in Gleichnissen» ([[MRK.4.11]]).",
@@ -256,7 +256,7 @@ _Q = [
     # ---------- Kapitel 5 ----------
     (65, _ch(5), 1, "Was verbindet die drei Menschen, denen Jesus in diesem Kapitel begegnet?",
      "Ein Mann, der in den Grabstätten wohnt, eine Frau, die seit zwölf Jahren an Blutfluss leidet, und ein Mädchen, das gestorben ist ([[MRK.5.3]], [[MRK.5.25]], [[MRK.5.35]]).",
-     "Was verbindet di drü Mänsche, wo de Jesus i dem Kapitel begägnet?",
+     "Was verbindet di drü Mänsche, wo de Jesus i däm Kapitel begägnet?",
      "En Maa, wo i de Greber wohnt, e Frau, wo sit zwölf Jahr a Bluetfluss liidet, und es Meitli, wo gstorbe isch ([[MRK.5.3]], [[MRK.5.25]], [[MRK.5.35]])."),
     # 5,1–20
     (66, _tu("005-001-020"), 1, "Warum bitten die Leute Jesus, ihr Gebiet zu verlassen?",
@@ -304,15 +304,15 @@ _Q = [
     # 6,7–13
     (78, _tu("006-007-013"), 1, "Warum sollen sie fast nichts mitnehmen?",
      "Nur einen Stab, kein Brot, keinen Beutel, kein Kupfergeld im Gürtel ([[MRK.6.8]]).",
-     "Wieso söled si fascht nüüt mitnää?",
+     "Wieso söled si fascht nüüt mitnäh?",
      "Nu en Stäcke, kei Brot, kei Täsche, kei Chupfergäld im Gurt ([[MRK.6.8]])."),
     (79, _tu("006-007-013"), 2, "Warum zu zweit?",
      None, "Wieso zu zweit?", None),
     # 6,14–29
     (80, _tu("006-014-029"), 1, "Was hält Herodes davon ab, sein Wort zurückzunehmen?",
      "Der König wird sehr betrübt, doch «wegen der Eide und der Gäste» will er das Mädchen nicht abweisen ([[MRK.6.26]]).",
-     "Was hebt de Herodes devo ab, sis Wort zruggznää?",
-     "De Chönig wird sehr truurig, aber «wäge de Eid und de Gäscht» will er s Meitli nöd abwiise ([[MRK.6.26]])."),
+     "Was hebt de Herodes devo ab, sis Wort zruggznäh?",
+     "De Chönig wird sehr truurig, aber «wäge de Eid und de Gäscht» wott er s Meitli nöd abwiise ([[MRK.6.26]])."),
     (81, _tu("006-014-029"), 2, "Wie kann man jemanden gern hören und ihn trotzdem gefangen halten?",
      None, "Wie cha me öpper gern ghöre und ihn glich gfange bhalte?", None),
     # 6,30–44
@@ -327,7 +327,7 @@ _Q = [
     # 6,45–52
     (85, _tu("006-045-052"), 1, "Warum will Jesus an den Jüngern vorübergehen?",
      "Er kommt auf dem See zu ihnen «und er wollte an ihnen vorübergehen» ([[MRK.6.48]]).",
-     "Wieso will de Jesus a de Jünger verbiigaa?",
+     "Wieso wott de Jesus a de Jünger verbiigaa?",
      "Er chunnt uf em See zu ine «und er hät wele a ine verbiigaa» ([[MRK.6.48]])."),
     (86, _tu("006-045-052"), 2, "Was haben die Jünger bei den Broten nicht verstanden?",
      None, "Was händ d Jünger bi de Brot nöd verstande?", None),
@@ -366,7 +366,7 @@ _Q = [
      "Wieso nimmt de Jesus de Taub für sich elei uf d Siite?",
      "Er nimmt ihn wäg vo de Mängi, leit d Finger i sini Ohre, rüert sini Zunge aa und süüfzt ([[MRK.7.33-MRK.7.34]])."),
     (96, _tu("007-031-037"), 2, "Was löst das Wort «Effata», «Öffne dich!», bei dir aus?",
-     None, "Was löst s Wort «Effata», «Gang uf!», bi dir us?", None),
+     None, "Was löst s Wort «Effata», «Gang uuf!», bi dir uus?", None),
 
     # ---------- Kapitel 8 ----------
     (97, _ch(8), 1, "Was sehen die Jünger – und was noch nicht?",
@@ -381,7 +381,7 @@ _Q = [
      "Wieso verzellt de Markus nomal vo nere Spiisig?",
      "Wider isch e grossi Mängi ohni Ässe da, das Mal sind s sibe Brot und öppe viertuusig Lüüt ([[MRK.8.1]], [[MRK.8.5]], [[MRK.8.9]])."),
     (100, _tu("008-001-010"), 2, "Was heisst es, Mitleid mit einer Menge zu haben?",
-     None, "Was heisst s, Mitliid mit ere Mängi z ha?", None),
+     None, "Was heisst s, Mitliid mit ere Mängi z haa?", None),
     # 8,11–13
     (101, _tu("008-011-013"), 1, "Warum gibt Jesus kein Zeichen, obwohl er so viel getan hat?",
      "Er seufzt tief und sagt: «Diesem Geschlecht wird kein Zeichen gegeben werden!» ([[MRK.8.12]])",
@@ -435,8 +435,8 @@ _Q = [
     # 9,2–13
     (115, _tu("009-002-013"), 1, "Warum will Petrus Hütten bauen?",
      "Er weiss nicht, was er sagen soll, denn sie sind in grosser Furcht ([[MRK.9.5-MRK.9.6]]).",
-     "Wieso will de Petrus Hütte boue?",
-     "Er weiss nöd, was er söll säge, will si grossi Angscht händ ([[MRK.9.5-MRK.9.6]])."),
+     "Wieso wott de Petrus Hütte boue?",
+     "Er weiss nöd, was er söll säge, wil si grossi Angscht händ ([[MRK.9.5-MRK.9.6]])."),
     (116, _tu("009-002-013"), 2, "Was bleibt, als sie nur noch Jesus allein sehen?",
      None, "Was bliibt, wo si nu no de Jesus elei gsehnd?", None),
     # 9,14–29
@@ -445,7 +445,7 @@ _Q = [
      "Cha mer glaube und glichziitig um Hilf gäge de Unglaube bitte?",
      "De Vatter rüeft: «Ich glaube; hilf mim Unglaube!» ([[MRK.9.24]])"),
     (118, _tu("009-014-029"), 2, "Was hat den Jüngern gefehlt, dass sie nicht helfen konnten?",
-     None, "Was hät de Jünger gfäält, dass si nöd händ chöne hälfe?", None),
+     None, "Was hät de Jünger gfehlt, dass si nöd händ chöne hälfe?", None),
     # 9,30–32
     (119, _tu("009-030-032"), 1, "Warum fürchten sich die Jünger, nachzufragen?",
      "Sie verstehen das Wort vom Leiden nicht «und fürchteten sich, ihn zu fragen» ([[MRK.9.32]]).",
@@ -463,7 +463,7 @@ _Q = [
     # 9,38–41
     (123, _tu("009-038-041"), 1, "Warum will Johannes einen hindern, der Gutes tut?",
      "Der Grund: «weil er uns nicht nachfolgte» ([[MRK.9.38]]).",
-     "Wieso will de Johannes eine hindere, wo Guets tuet?",
+     "Wieso wott de Johannes eine hindere, wo Guets tuet?",
      "De Grund: «wil er öis nöd nachegfolget isch» ([[MRK.9.38]])."),
     (124, _tu("009-038-041"), 2, "Wo ziehst du Grenzen zwischen «uns» und den anderen?",
      None, "Wo ziehsch du Gränze zwüsche «öis» und de andere?", None),
@@ -473,12 +473,12 @@ _Q = [
      "Wie verstaasch du di harte Bilder vo Hand, Fuess und Aug?",
      "De Jesus seit: «Wänn dini Hand dich zu Fall bringt, hau si ab!» – und gliich vom Fuess und vom Aug ([[MRK.9.43-MRK.9.47]])."),
     (126, _tu("009-042-050"), 2, "Was heisst es, Salz in sich zu haben?",
-     None, "Was heisst s, Salz i sich z ha?", None),
+     None, "Was heisst s, Salz i sich z haa?", None),
 
     # ---------- Kapitel 10 ----------
     (127, _ch(10), 1, "Wer folgt Jesus am Ende dieses Kapitels auf dem Weg?",
      "Der Mann mit vielen Gütern geht traurig davon ([[MRK.10.22]]); der blinde Bartimäus folgt ihm nach auf dem Weg ([[MRK.10.52]]).",
-     "Wär gaat em Jesus am Schluss vo dem Kapitel uf em Wäg nache?",
+     "Wär gaat em Jesus am Schluss vo däm Kapitel uf em Wäg nache?",
      "De Maa mit vile Güeter gaat truurig dervo ([[MRK.10.22]]); de blind Bartimäus gaat ihm uf em Wäg nache ([[MRK.10.52]])."),
     (128, _ch(10), 2, "Was haben Kinder, Reichtum und Ehrenplätze miteinander zu tun?",
      None, "Was händ Chind, Riichtum und Ehreplätz mitenand z tue?", None),
@@ -499,7 +499,7 @@ _Q = [
     # 10,17–31
     (133, _tu("010-017-031"), 1, "Was hat Jesus an dem Mann geliebt?",
      "Jesus sah ihn an und gewann ihn lieb, bevor er sagte: «Eines fehlt dir» ([[MRK.10.21]]).",
-     "Was hät de Jesus a dem Maa gern ghaa?",
+     "Was hät de Jesus a däm Maa gern ghaa?",
      "De Jesus hät ihn aagluegt und hät ihn gern überchoo, bevor er ihm gseit hät, eis fehli ihm ([[MRK.10.21]])."),
     (134, _tu("010-017-031"), 2, "Was würdest du denken, wenn jemand zu dir sagte: «Eines fehlt dir»?",
      None, "Was würdsch du dänke, wänn öpper zu dir seit, eis fehli dir?", None),
@@ -545,7 +545,7 @@ _Q = [
      "Wieso suecht de Jesus Fiige, wänn nöd Fiigeziit isch?",
      "De Markus schriibt usdrücklich: «es isch nämli nöd d Ziit für Fiige gsii» ([[MRK.11.13]])."),
     (146, _tu("011-012-014"), 2, "Was verbindet den Feigenbaum mit dem, was danach im Tempel geschieht?",
-     None, "Was verbindet de Fiigebaum mit dem, wo nachher im Tempel passiert?", None),
+     None, "Was verbindet de Fiigebaum mit däm, wo nachher im Tempel passiert?", None),
     # 11,15–19
     (147, _tu("011-015-019"), 1, "Was stört Jesus im Tempel?",
      "Er zitiert: «Mein Haus soll ein Haus des Gebets heissen für alle Völker» ([[MRK.11.17]]).",
@@ -571,7 +571,7 @@ _Q = [
     # ---------- Kapitel 12 ----------
     (153, _ch(12), 1, "Wer stellt in diesem Kapitel wem Fragen – und welche Frage bleibt offen?",
      "Am Ende wagt niemand mehr, Jesus zu fragen, und er selbst stellt eine Frage, auf die im Text keine Antwort folgt ([[MRK.12.34-MRK.12.37]]).",
-     "Wär stellt i dem Kapitel wäm Frage – und weli Frag bliibt offe?",
+     "Wär stellt i däm Kapitel wäm Frage – und weli Frag bliibt offe?",
      "Am Schluss traut sich niemer meh, Jesus z fröge, und er sälber stellt e Frag, wo im Text kei Antwort druf folgt ([[MRK.12.34-MRK.12.37]])."),
     # 12,1–12
     (154, _tu("012-001-012"), 1, "Warum schickt der Besitzer nach so vielen Knechten noch seinen Sohn?",
@@ -579,7 +579,7 @@ _Q = [
      "Wieso schickt de Bsitzer nach so vilne Chnächt au no sin Sohn?",
      "Er seit sich: «Vor mim Sohn händ si dänn Respekt» ([[MRK.12.6]])."),
     (155, _tu("012-001-012"), 2, "Wer hört sich in diesem Gleichnis gemeint – damals und heute?",
-     None, "Wär füült sich i dem Gliichnis gmeint – dazmal und hüt?", None),
+     None, "Wär füült sich i däm Gliichnis gmeint – dazmal und hüt?", None),
     # 12,13–17
     (156, _tu("012-013-017"), 1, "Was gehört dem Kaiser, und was gehört Gott?",
      "Auf dem Denar sind Bild und Aufschrift des Kaisers ([[MRK.12.16-MRK.12.17]]).",
@@ -627,18 +627,18 @@ _Q = [
     (168, _ch(13), 1, "Wem gilt das «Wacht!» am Ende der Rede?",
      "Jesus spricht zu vier Jüngern und schliesst: «Was ich aber euch sage, das sage ich allen: Wacht!» ([[MRK.13.3]], [[MRK.13.37]])",
      "Wäm gilt s «Bliibed wach!» am Schluss vo de Red?",
-     "De Jesus redt zu vier Jünger und hört uf mit: «Was ich aber öi säg, das säg ich allne: Bliibed wach!» ([[MRK.13.3]], [[MRK.13.37]])"),
+     "De Jesus redt zu vier Jünger und hört uf mit: «Was ich aber öi säg, das säge ich allne: Bliibed wach!» ([[MRK.13.3]], [[MRK.13.37]])"),
     # 13,1–2
     (169, _tu("013-001-002"), 1, "Wie mag ein Jünger aus Galiläa diese Antwort gehört haben?",
      "Er staunt über die Steine und Bauten des Tempels; Jesus sagt: kein Stein bleibt auf dem anderen ([[MRK.13.1-MRK.13.2]]).",
      "Wie hät ächt en Jünger us Galiläa die Antwort ghört?",
-     "Er stuunt über d Stei und d Boute vom Tempel; De Jesus seit: kein Stei bliibt uf em andere ([[MRK.13.1-MRK.13.2]])."),
+     "Er stuunt über d Stei und d Boute vom Tempel; De Jesus seit: kei Stei bliibt uf em andere ([[MRK.13.1-MRK.13.2]])."),
     (170, _tu("013-001-002"), 2, "Was bleibt, wenn das Grosse und Feste fällt?",
      None, "Was bliibt, wänn s Gross und Fescht kaputt gaat?", None),
     # 13,3–13
     (171, _tu("013-003-013"), 1, "Warum antwortet Jesus auf die Frage «Wann?» mit «Seht zu, dass niemand euch irreführt»?",
      "Die vier Jünger fragen nach Zeitpunkt und Zeichen ([[MRK.13.4-MRK.13.5]]).",
-     "Wieso antwortet de Jesus uf d Frag «Wänn?» mit «Passed uf, dass öi niemer verfüert»?",
+     "Wieso antwortet de Jesus uf d Frag «Wänn?» mit «Passed uuf, dass öi niemer verfüert»?",
      "Di vier Jünger fröged nach em Ziitpunkt und em Zeiche ([[MRK.13.4-MRK.13.5]])."),
     (172, _tu("013-003-013"), 2, "Was mögen die ersten Leserinnen und Leser in diesen Sätzen über Verfolgung gehört haben?",
      None, "Was händ ächt di erschte Läserinne und Läser i dene Sätz über Verfolgig ghört?", None),
@@ -655,7 +655,7 @@ _Q = [
      "Isch das Bild ender bedrohlich oder tröschtlich?",
      "Sunne und Mond wärded finschter, und de Mänschesohn sammlet d Userwählte us de vier Wind ([[MRK.13.24]], [[MRK.13.27]])."),
     (176, _tu("013-024-027"), 2, "Woher kennen die Hörer damals die Bilder von Sonne, Mond und Sternen?",
-     None, "Vo wo händ d Zuehörer dazmal d Bilder vo Sunne, Mond und Stärne kännt?", None),
+     None, "Vo wo händ d Zuehörer dazmal d Bilder vo Sunne, Mond und Sterne kännt?", None),
     # 13,28–31
     (177, _tu("013-028-031"), 1, "Was hat der Feigenbaum hier mit dem Feigenbaum ohne Frucht zu tun?",
      "Hier lehrt der Feigenbaum, dass der Sommer nahe ist; vorher fand Jesus an einem Feigenbaum nur Blätter ([[MRK.13.28]], [[MRK.11.13]]).",
@@ -675,7 +675,7 @@ _Q = [
     (181, _ch(14), 1, "Wer bleibt bei Jesus in dieser Nacht – und wer nicht?",
      "Eine Frau salbt ihn, Judas liefert ihn aus, die Jünger schlafen und fliehen, Petrus verleugnet ihn ([[MRK.14.3]], [[MRK.14.10]], [[MRK.14.50]], [[MRK.14.72]]).",
      "Wär bliibt i dere Nacht bim Jesus – und wär nöd?",
-     "E Frau salbt ihn, de Judas liferet ihn us, d Jünger schlafed und flüchted, de Petrus verleugnet ihn ([[MRK.14.3]], [[MRK.14.10]], [[MRK.14.50]], [[MRK.14.72]])."),
+     "E Frau salbt ihn, de Judas liferet ihn uus, d Jünger schlafed und flüchted, de Petrus verleugnet ihn ([[MRK.14.3]], [[MRK.14.10]], [[MRK.14.50]], [[MRK.14.72]])."),
     (182, _ch(14), 2, "Was kann man von einem Menschen erwarten, der Angst hat?",
      None, "Was cha me vo eme Mänsch erwarte, wo Angscht hät?", None),
     # 14,1–11
@@ -686,12 +686,12 @@ _Q = [
     (184, _tu("014-001-011"), 2, "Ist das Salböl verschwendet?",
      None, "Isch s Salböl verschwändet?", None),
     (185, _tu("014-001-011"), 3, "Was mag Judas bewogen haben, zu den Hohepriestern zu gehen – wo der Text keinen Grund nennt?",
-     None, "Was hät ächt de Judas bewoge, zu de Hoheprieschter z gaa – wo de Text kein Grund nännt?", None),
+     None, "Was hät ächt de Judas bewoge, zu de Hoheprieschter z gaa – wo de Text kei Grund nännt?", None),
     # 14,12–21
     (186, _tu("014-012-021"), 1, "Warum fragt einer nach dem anderen: Doch nicht ich?",
      "Jesus sagt beim Mahl: «Einer von euch wird mich ausliefern, der mit mir isst» ([[MRK.14.18-MRK.14.19]]).",
      "Wieso fröget eine nach em andere: Doch nöd ich?",
-     "De Jesus seit bim Ässe: «Eine vo öi liferet mich us, eine, wo mit mir isst» ([[MRK.14.18-MRK.14.19]])."),
+     "De Jesus seit bim Ässe: «Eine vo öi liferet mich uus, eine, wo mit mir isst» ([[MRK.14.18-MRK.14.19]])."),
     (187, _tu("014-012-021"), 2, "Was bedeutet es, mit jemandem in dieselbe Schüssel zu tauchen?",
      None, "Was bedüütet s, mit öpperem i di gliich Schüssle z tunke?", None),
     # 14,22–25
@@ -735,29 +735,29 @@ _Q = [
     (199, _tu("014-066-072"), 1, "Warum erzählt Markus so ausführlich vom Versagen des Petrus?",
      "Die Verleugnung im Hof läuft parallel zum Verhör Jesu drinnen und endet damit, dass Petrus weint ([[MRK.14.54]], [[MRK.14.72]]).",
      "Wieso verzellt de Markus so usfüerlich vom Versäge vom Petrus?",
-     "D Verleugnig im Hof lauft parallel zum Verhör vom Jesus dinne und hört uf mit dem, dass de Petrus brüelet ([[MRK.14.54]], [[MRK.14.72]])."),
+     "D Verleugnig im Hof lauft parallel zum Verhör vom Jesus dinne und hört uf mit däm, dass de Petrus brüelet ([[MRK.14.54]], [[MRK.14.72]])."),
     (200, _tu("014-066-072"), 2, "Was geschieht in einem Menschen, der sich an ein Wort erinnert und weint?",
      None, "Was passiert in eme Mänsch, wo sich a es Wort erinneret und brüelet?", None),
 
     # ---------- Kapitel 15 ----------
     (201, _ch(15), 1, "Wer nennt Jesus in diesem Kapitel «König» – und wie ist es jeweils gemeint?",
      "Pilatus fragt, die Soldaten spotten, die Aufschrift lautet «Der König der Juden», die Hohepriester sagen «der König Israels» ([[MRK.15.2]], [[MRK.15.18]], [[MRK.15.26]], [[MRK.15.32]]).",
-     "Wär nännt de Jesus i dem Kapitel «Chönig» – und wie isch s jedesmal gmeint?",
+     "Wär nännt de Jesus i däm Kapitel «Chönig» – und wie isch s jedesmal gmeint?",
      "De Pilatus fröget, d Soldate spotted, uf de Ufschrift staat «De Chönig vo de Jude», d Hoheprieschter säged «de Chönig vo Israel» ([[MRK.15.2]], [[MRK.15.18]], [[MRK.15.26]], [[MRK.15.32]])."),
     (202, _ch(15), 2, "Wer alles wirkt an Jesu Tod mit – und wie unterscheidet der Text zwischen ihnen?",
      None, "Wär alles hät am Tod vom Jesus mitgwürkt – und wie underscheidet de Text zwüsche ine?", None),
     # 15,1–15
     (203, _tu("015-001-015"), 1, "Warum gibt Pilatus nach, obwohl er selbst fragt, was Jesus Böses getan habe?",
      "Pilatus will die Menge zufriedenstellen und lässt Barabbas frei ([[MRK.15.14-MRK.15.15]]).",
-     "Wieso git de Pilatus noo, obwohl er sälber fröget, was de Jesus Böses gmacht heb?",
-     "De Pilatus will d Mängi zfride stelle und laat de Barabbas frei ([[MRK.15.14-MRK.15.15]])."),
+     "Wieso git de Pilatus nah, obwohl er sälber fröget, was de Jesus Böses gmacht heb?",
+     "De Pilatus wott d Mängi zfride stelle und laat de Barabbas frei ([[MRK.15.14-MRK.15.15]])."),
     (204, _tu("015-001-015"), 2, "Warum schweigt Jesus auf die vielen Anklagen?",
      None, "Wieso schwiigt de Jesus uf di vile Aaklage?", None),
     # 15,16–20
     (205, _tu("015-016-020"), 1, "Was zeigt der Spott der Soldaten – und zeigt er vielleicht mehr, als sie meinen?",
      "Sie ziehen ihm einen Purpurmantel an, setzen ihm einen Dornenkranz auf und grüssen ihn: «Sei gegrüsst, König der Juden!» ([[MRK.15.17-MRK.15.18]])",
      "Was zeigt de Spott vo de Soldate – und zeigt er villicht meh, als si meined?",
-     "Si leged em en Purpurmantel aa, setzed em en Dornechranz uf und grüessed en: «Mir grüessed dich, Chönig vo de Jude!» ([[MRK.15.17-MRK.15.18]])"),
+     "Si leged em en Purpurmantel aa, setzed em en Dornechranz uuf und grüessed en: «Mir grüessed dich, Chönig vo de Jude!» ([[MRK.15.17-MRK.15.18]])"),
     (206, _tu("015-016-020"), 2, "Wie wirkt es, dass Markus diese Szene so knapp und ohne Kommentar erzählt?",
      None, "Wie würkt s, dass de Markus die Szene so churz und ohni Kommentar verzellt?", None),
     # 15,21–32
@@ -848,7 +848,7 @@ RECEPTIONS = [
                                  "Bestätigt: «der Mensch ist Matthäus, der Löwe Markus, das Kalb Lukas …, der Adler Johannes».")]),
                       "result": "partly"},
      "gsw": {"period_de": "2. und 4./5. Jahrhundert",
-             "text_de": "Di vier Wäse us [[EZK.1]] und [[REV.4]] wärded früe de vier Evangelie zuegordnet, aber nöd überall gliich: De Irenäus verbindet de Markus mit em Adler, will er mit em Propheteword aafangt; de Hieronymus verbindet de Markus mit em Löi. D Zueornig vom Hieronymus hät sich spöter wiitgehend dureggsetzt; drum staat näbem de Markus oft en Löi."}},
+             "text_de": "Di vier Wäse us [[EZK.1]] und [[REV.4]] wärded früe de vier Evangelie zuegordnet, aber nöd überall gliich: De Irenäus verbindet de Markus mit em Adler, wil er mit em Propheteword aafangt; de Hieronymus verbindet de Markus mit em Löi. D Zueornig vom Hieronymus hät sich spöter wiitgehend dureggsetzt; drum staat näbem de Markus oft en Löi."}},
     {"id": "RCPT-MRK-0003", "subject": BOOK, "tradition": "church_fathers", "period_de": "um 400",
      "text_de": "Augustinus hält Matthäus für das erste Evangelium und beschreibt Markus als dessen Begleiter und Kürzer («pedisequus et breviator»). Diese Sicht prägte lange, dass Markus wenig ausgelegt wurde.",
      "sources_de": ["Augustinus, Über die Übereinstimmung der Evangelisten (De consensu evangelistarum) 1,2,4"], "confidence": "high",
@@ -866,7 +866,7 @@ RECEPTIONS = [
                               "https://en.wikipedia.org/wiki/Marcan_priority (Übersichtsartikel, Nachschlagewerk)",
                               "Bestätigt: Lachmann 1835, Holtzmann 1863; seit dem späten 19. Jahrhundert Mehrheitsmeinung und Grundlage der Zwei-Quellen-Theorie; in den letzten Jahrzehnten weniger sicher, Alternativen werden erwogen. Nicht am Original von Lachmann bzw. Holtzmann nachgeschlagen.")]),
      "gsw": {"period_de": "sit em 19. Jahrhundert",
-             "text_de": "Sit em 19. Jahrhundert (under andere de Karl Lachmann 1835, de Heinrich Julius Holtzmann 1863) hebt d Mehrheit vo de Forschig de Markus für s eltischt Evangelium, wo de Matthäus und de Lukas als Quelle bruucht händ (Zwei-Quelle-Theorie). Anderi Modell wärded wiiter vertrete, und i de letschte Jahrzäänt wird d Frag wider offener diskutiert."}},
+             "text_de": "Sit em 19. Jahrhundert (under andere de Karl Lachmann 1835, de Heinrich Julius Holtzmann 1863) hebt d Mehrheit vo de Forschig de Markus für s eltischt Evangelium, wo de Matthäus und de Lukas als Quelle bruucht händ (Zwei-Quelle-Theorie). Anderi Modell wärded wiiter vertrete, und i de letschte Jahrzehnt wird d Frag wider offener diskutiert."}},
     {"id": "RCPT-MRK-0005", "subject": BOOK, "tradition": "liturgy", "period_de": "seit dem 20. Jahrhundert",
      "text_de": "In der dreijährigen Leseordnung für die Sonntage (Lesejahre A, B, C) ist Markus das Evangelium des Lesejahrs B. Weil Markus das kürzeste Evangelium ist, wird in diesem Jahr unter anderem die Brotrede aus [[JHN.6]] eingefügt.",
      "confidence": "high",
@@ -874,7 +874,7 @@ RECEPTIONS = [
                               "https://www.liturgybrisbane.net.au/learn/liturgy-lines/year-b-the-year-of-mark (Liturgiekommission Brisbane)",
                               "Bestätigt: Matthäus im Jahr A, Markus im Jahr B, Lukas im Jahr C; Johannes 6 wird eingefügt, unter anderem, weil Markus das kürzeste synoptische Evangelium ist.")]),
      "gsw": {"period_de": "sit em 20. Jahrhundert",
-             "text_de": "I de drüjährige Läseornig für d Sunntig (Läsejahr A, B, C) isch de Markus s Evangelium vom Läsejahr B. Will de Markus s chürzischt Evangelium isch, wird i dem Jahr under anderem d Brotred us [[JHN.6]] iigfüegt."}},
+             "text_de": "I de drüjährige Läseornig für d Sunntig (Läsejahr A, B, C) isch de Markus s Evangelium vom Läsejahr B. Will de Markus s chürzischt Evangelium isch, wird i däm Jahr under anderem d Brotred us [[JHN.6]] iigfüegt."}},
     # ---------- Abschnitte und Kapitel ----------
     {"id": "RCPT-MRK-0006", "subject": _tu("002-023-028"), "tradition": "jewish", "period_de": "2.–3. Jahrhundert (Midrasch)",
      "text_de": "Ein ähnlicher Gedanke steht in der jüdischen Auslegung von [[EXO.31.14]]: Rabbi Simeon ben Menasja sagt, der Sabbat sei «euch übergeben», nicht ihr dem Sabbat. Der Satz wird oft neben [[MRK.2.27]] gestellt; eine Abhängigkeit in die eine oder andere Richtung ist daraus nicht abzuleiten.",
@@ -893,7 +893,7 @@ RECEPTIONS = [
                                  "Bestätigt: R. Eliezer erlaubt, ein Gelübde «wegen der Ehre von Vater und Mutter» zu öffnen; die Weisen verbieten es, ausser wenn die Sache zwischen ihm und seinen Eltern liegt. Kein Bezug auf [[MRK.7]] auf der Seite.")]),
                       "result": "partly"},
      "gsw": {"period_de": "öppe 200 (Mischna)",
-             "text_de": "Au di rabbinisch Tradition kännt s Problem, dass es Glübd de Eltere Hilf chan entzie: Nach em Rabbi Eliezer dörf me so es Glübd mit Rücksicht uf d Ehr vo Vatter und Mueter löse; d Mehrheit vo de Glehrte isch zrugghaltender und laat s nu zue, wo s Glübd d Eltere sälber betrifft. D Mischna zeigt, dass d Frag hinder [[MRK.7.11-MRK.7.12]] au innerjüdisch verhandlet worde isch."}},
+             "text_de": "Au di rabbinisch Tradition kännt s Problem, dass es Glübd de Eltere Hilf chan entzieh: Nach em Rabbi Eliezer dörf me so es Glübd mit Rücksicht uf d Ehr vo Vatter und Mueter löse; d Mehrheit vo de Glehrte isch zrugghaltender und laat s nu zue, wo s Glübd d Eltere sälber betrifft. D Mischna zeigt, dass d Frag hinder [[MRK.7.11-MRK.7.12]] au innerjüdisch verhandlet worde isch."}},
     {"id": "RCPT-MRK-0008", "subject": _tu("010-017-031"), "tradition": "church_fathers", "period_de": "um 200",
      "text_de": "Clemens von Alexandria legt in einer eigenen Schrift «Welcher Reiche wird gerettet?» die Geschichte nach dem Wortlaut des Markusevangeliums aus. Er versteht den Auftrag, alles zu verkaufen, nicht als Gebot, den Besitz wegzugeben, sondern als Aufforderung, die Leidenschaften der Seele abzulegen; Reichtum sei ein Werkzeug, das gut oder schlecht gebraucht werden kann. Andere, etwa in der Mönchsbewegung, haben das Wort wörtlich genommen.",
      "sources_de": ["Clemens von Alexandria, Welcher Reiche wird gerettet? (Quis dives salvetur) 5; 11–14"], "confidence": "high",
@@ -903,7 +903,7 @@ RECEPTIONS = [
                                  "Bestätigt: «These things are written in the Gospel according to Mark» (5); Verzicht und Verkauf «is to be understood as spoken of the passions of the soul» (14); Reichtum als Werkzeug (14).")]),
                       "result": "partly"},
      "gsw": {"period_de": "öppe 200",
-             "text_de": "De Clemens vo Alexandria leit i nere eigene Schrift «Wele Riich wird grettet?» d Gschicht nach em Wortlaut vom Markusevangelium us. Er verstaat de Uftrag, alles z verchaufe, nöd als Gebot, de Bsitz wägzgää, sondern als Ufforderig, d Liideschafte vo de Seel abzlegge; Riichtum seig es Wärchzüüg, wo me guet oder schlächt cha bruuche. Anderi, öppe i de Mönchsbewegig, händ s Wort wörtlich gnoo."}},
+             "text_de": "De Clemens vo Alexandria leit i nere eigene Schrift «Wele Riich wird grettet?» d Gschicht nach em Wortlaut vom Markusevangelium uus. Er verstaat de Uftrag, alles z verchaufe, nöd als Gebot, de Bsitz wägzgää, sondern als Ufforderig, d Liideschafte vo de Seel abzlegge; Riichtum seig es Wärchzüüg, wo me guet oder schlächt cha bruuche. Anderi, öppe i de Mönchsbewegig, händ s Wort wörtlich gnoo."}},
     {"id": "RCPT-MRK-0009", "subject": _tu("004-035-041"), "tradition": "art", "period_de": "1633",
      "text_de": "Rembrandt malt «Der Sturm auf dem See Genezareth» nach der Erzählung bei Markus: das Boot schräg in den Wellen, die Jünger teils kämpfend, teils bei Jesus im Heck. Es ist sein einziges bekanntes Seestück. Das Bild wurde 1990 aus dem Isabella Stewart Gardner Museum in Boston gestohlen und ist bis heute verschwunden.",
      "sources_de": ["Rembrandt van Rijn, «Christus im Sturm auf dem See Genezareth», Öl auf Leinwand, 1633, Isabella Stewart Gardner Museum (gestohlen 1990)"], "confidence": "high",
@@ -940,7 +940,7 @@ RECEPTIONS = [
                               "https://en.wikipedia.org/wiki/Revised_Common_Lectionary (Übersichtsartikel)",
                               "Bestätigt: verwendet von vielen lutherischen, methodistischen, presbyterianischen, anglikanischen und weiteren evangelischen Kirchen, vor allem in Nordamerika, Grossbritannien und Australien.")]),
      "gsw": {"period_de": "bis hüt",
-             "text_de": "Im Revised Common Lectionary, de Läseornig vo vilne evangelische Chilche, wird am Palmsunntig vom Läsejahr B di ganz Passionsgschicht nach em Markus gläse ([[MRK.14.1-MRK.15.47]])."}},
+             "text_de": "Im Revised Common Lectionary, de Läseornig vo vilne evangelische Chile, wird am Palmsunntig vom Läsejahr B di ganz Passionsgschicht nach em Markus gläse ([[MRK.14.1-MRK.15.47]])."}},
     {"id": "RCPT-MRK-0013", "subject": _ch(15), "tradition": "music", "period_de": "1731",
      "text_de": "Johann Sebastian Bach führt am Karfreitag 1731 in Leipzig eine Markus-Passion auf (BWV 247), mit Dichtungen von Picander. Der Text ist erhalten, die Musik verloren; Rekonstruktionen greifen vor allem auf Bachs Trauer-Ode (BWV 198) zurück und müssen die Evangelien-Rezitative ergänzen.",
      "sources_de": ["J. S. Bach, Markus-Passion BWV 247 (1731), Libretto Picander"], "confidence": "high",
