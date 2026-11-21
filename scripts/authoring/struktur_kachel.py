@@ -19,15 +19,15 @@ BREITE = 440         # App zeigt gezeichnete und gemalte Kacheln bis 480 px brei
 RAND, PAD, LUECKE = 12, 9, 8
 # Frisches Farbschema (Rückmeldung Andi Neck 2026-11-21: Beige und Ränder wirkten alt und verwelkt): helle Fläche, weisse Karten
 # mit weichem Schatten statt Rand, klare Akzente Koralle (Seite a), Petrol (Seite b), Sonnengelb (betont).
-PAPER, INK, MUTED, RULE = "#F7F8F6", "#22292C", "#7A8489", "#DCE1E3"
-FARBE = {"a": ("#FFF0EA", "#D9583B"), "b": ("#E7F4F4", "#1F8790"), "n": ("#FFFFFF", "#5E7A3A"), "akzent": "#D9583B"}
+PAPER, INK, MUTED, RULE = "#F6F9FA", "#1E2629", "#76828A", "#DCE4E7"
+FARBE = {"a": ("#FFECE5", "#F0563A"), "b": ("#E2F6F5", "#0E9AA0"), "n": ("#FFFFFF", "#4E9A3E"), "akzent": "#F0563A"}
 SANS = "Inter, Helvetica, Arial, sans-serif"
 SERIF = SANS
 FS, FS_KLEIN, FS_REF, FS_TITEL = 14, 13, 10.5, 17
 ZW = 0.56            # mittlere Zeichenbreite (Anteil der Schriftgrösse), mit Reserve; die Layoutprüfung misst nach
 ZH = 1.25            # Zeilenhöhe
 BILD_H = 56          # Höhe der Bildzeile eines Glieds
-BETONT = "#FFE7A8"   # Fläche betonter Glieder (Höhepunkt, Pointe)
+BETONT = "#FFEF8A"   # Fläche betonter Glieder (Höhepunkt, Pointe)
 _V = {}              # Bilder der Kachel, die gerade gezeichnet wird: Schlüssel («1», «2», …, «m») → Liste
 
 
@@ -337,7 +337,7 @@ def _ringe(sx, el, y):
     if rest is not None and sx.get("mitte"):
         paare.append((rest, None))
     marken = "ABCDEF"
-    farben = ["#FFF0EA", "#E7F4F4", "#FFF6E4", "#EEF6EA"]
+    farben = ["#FFECE5", "#E2F6F5", "#FFF8D6", "#EAF7E6"]
     einzug = 12
     # Höhen der Bänder vorab
     def band(i, e, m):
