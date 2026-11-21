@@ -209,6 +209,8 @@ def schreibe(buch, d):
               "evidence": s["evidence"], "pruefung": s.get("pruefung", [])}
         if s["form"] == "struktur":
             sz["struktur"] = s["struktur"]
+        if s.get("ausnahmen"):
+            sz["ausnahmen"] = s["ausnahmen"]
         if not hat_brief:
             sz["band"] = s["band"]
         szenen[s["id"]] = sz
