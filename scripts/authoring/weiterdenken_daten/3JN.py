@@ -26,7 +26,7 @@ REFLECTIONS = [
      "question_de": "Was bedeutet es, die Tür für Fremde offen zu halten?",
      "note_de": "Gaius handelt treu an Geschwistern, «und noch dazu an Fremden» ([[3JN.1.5]]).",
      "gsw": {"question_de": "Was bedüütet s, d Tür für Frömdi offe z bhalte?",
-             "note_de": "De Gaius handlet treu a Gschwüschterte, «und das no für Frömdi» ([[3JN.1.5]])."}},
+             "note_de": "De Gaius handlet tröi a Gschwüschterte, «und das no für Frömdi» ([[3JN.1.5]])."}},
     # Kapitel
     {"id": "REFL-3JN-0003", "subject": "SUM-CH-3JN-001", "order": 1,
      "question_de": "Woran zeigt sich, ob jemand Erster sein will oder dienen will?",
@@ -43,12 +43,12 @@ REFLECTIONS = [
      "question_de": "Was wünschst du jemandem, wenn du ihm wünschst, dass es ihm «in allem gut geht»?",
      "note_de": "Der Älteste wünscht Gaius Gesundheit, «so wie es deiner Seele gut geht» ([[3JN.1.2]]).",
      "gsw": {"question_de": "Was wünschsch du öpperem, wänn d ihm wünschsch, dass es ihm «i allem guet gaat»?",
-             "note_de": "De Eltischt wünscht em Gaius Gsundheit, «so wie es dinere Seel guet gaat» ([[3JN.1.2]])."}},
+             "note_de": "De Eltischt wünscht em Gaius Gsundheit, «so wien es dinere Seel guet gaat» ([[3JN.1.2]])."}},
     # 5–8
     {"id": "REFL-3JN-0006", "subject": "TU-3JN-001-005-008", "order": 1,
      "question_de": "Wie wird man «Mitarbeiter für die Wahrheit», ohne selbst zu reisen oder zu predigen?",
      "note_de": "Wer solche aufnimmt, die «für den Namen» unterwegs sind, wird Mitarbeiter für die Wahrheit ([[3JN.1.7-3JN.1.8]]).",
-     "gsw": {"question_de": "Wie wird mer «Mitarbeiter für d Wahrheit», ohni sälber z reise oder z predige?",
+     "gsw": {"question_de": "Wie wird me «Mitarbeiter für d Wahrheit», ohni sälber z reise oder z predige?",
              "note_de": "Wär settigi ufnimmt, wo «für de Name» understwägs sind, wird Mitarbeiter für d Wahrheit ([[3JN.1.7-3JN.1.8]])."}},
     {"id": "REFL-3JN-0007", "subject": "TU-3JN-001-005-008", "order": 2,
      "question_de": "Was heisst es, jemanden so auszurüsten, «wie es Gottes würdig ist»?",
