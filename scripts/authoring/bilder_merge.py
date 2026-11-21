@@ -28,7 +28,10 @@ def git(*a, check=True):
 
 def main():
     b = sys.argv[1]
-    git("fetch", "-q", "origin", f"{b}:refs/remotes/origin/{b}")
+    # Branch des Laufs: von GitHub, sonst lokal (wenn GitHub den Push abgelehnt hat, z. B. weil der Lauf auf einem älteren Stand
+    # von main lief und der Branch dadurch Workflow-Dateien «ändern» würde)
+    if git("fetch", "-q", "origin", f"{b}:refs/remotes/origin/{b}", check=False).returncode != 0:
+        git("update-ref", f"refs/remotes/origin/{b}", b)
     git("merge", "-q", "--no-commit", "--no-ff", f"origin/{b}", check=False)
     base = json.loads(git("show", f"origin/{b}~1:{F}").stdout)
     theirs = json.loads(git("show", f"origin/{b}:{F}").stdout)

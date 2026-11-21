@@ -119,7 +119,9 @@ jobs:
           git diff --cached --quiet && exit 0
           git checkout -b "bilder-auto/$LAUF"
           git commit -qm "Bilder automatisch: Lauf $LAUF (${{ inputs.schritt }} ${{ inputs.szenen }})"
-          git push origin "bilder-auto/$LAUF"
+          # GitHub lehnt den neuen Branch ab, wenn main seit dem Start des Laufs Workflow-Dateien geändert hat (Läufe 64–73);
+          # dann bleibt er lokal, und die Übernahme nimmt ihn von dort (bilder_merge.py)
+          git push origin "bilder-auto/$LAUF" || echo "::warning::Branch bilder-auto/$LAUF nicht gepusht – Übernahme aus dem lokalen Stand"
           echo "branch=bilder-auto/$LAUF" >> "$GITHUB_OUTPUT"
 
       # Prozess PROC-FREIGABE 2.0 (Entscheid Andi Neck 2026-10-28): Lauf automatisch in main übernehmen, wenn Zusammenführen

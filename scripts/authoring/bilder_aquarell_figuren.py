@@ -379,5 +379,28 @@ def trocken(a):
     print("Validator:", "PASS" if v.returncode == 0 else "FEHLER")
 
 
+def nachholen(ordner, modell="gpt-image-2.5-flare"):
+    """Bestandene Bilder aus dem Bericht eines Laufs ablegen (Anhang «bericht-lauf-N» mit bericht.json und den Varianten), wenn
+    der Lauf gemalt und geprüft hat, die Daten aber nicht nach main kamen (z. B. abgelehnter Branch-Push). Abgelegt wird genau
+    die Variante, die der Lauf gewählt hat, mit ihrem Prüfergebnis; nichts wird neu gemalt oder neu bewertet."""
+    out = pathlib.Path(ordner)
+    bericht = json.loads((out / "bericht.json").read_text(encoding="utf-8"))
+    c, eintr, n = cfg(), eintraege(), 0
+    for fid, b in bericht.items():
+        var = b.get("gewaehlt")
+        v = next((x for x in b.get("varianten", []) if var and x["datei"] == f"{fid}__{var}.png"), None)
+        if not v or v["pruefung"]["ergebnis"] != "bestanden" or fid not in eintr:
+            continue
+        ablegen(fid, (out / v["datei"]).read_bytes(), v["pruefung"], eintr[fid],
+                {"modell": modell, "lauf": out.name, "variante": var, "runden": v["runde"]}, c)
+        n += 1
+    print(f"{out.name}: {n} bestandene Bilder abgelegt")
+    return n
+
+
 if __name__ == "__main__":
-    sys.exit("Aufruf über bilder_aquarell_lauf.py figuren (mit --trocken ohne API) bzw. bilder_aquarell_gen.py figuren")
+    if sys.argv[1:2] == ["nachholen"] and len(sys.argv) > 2:
+        sum(nachholen(o) for o in sys.argv[2:])
+    else:
+        sys.exit("Aufruf über bilder_aquarell_lauf.py figuren (mit --trocken ohne API) bzw. bilder_aquarell_gen.py figuren;\n"
+                 "nachholen: bilder_aquarell_figuren.py nachholen <Berichtordner> …")
