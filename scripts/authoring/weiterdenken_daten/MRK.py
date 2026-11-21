@@ -83,7 +83,7 @@ _Q = [
     (17, _tu("001-021-028"), 1, "Was ist der Unterschied zwischen einem, der mit Vollmacht lehrt, und den Schriftgelehrten?",
      "Die Zuhörer sind überwältigt, denn er lehrt «wie einer, der Vollmacht hat, und nicht wie die Schriftgelehrten» ([[MRK.1.22]]).",
      "Was isch de Unterschiid zwüsched eim, wo mit Vollmacht lehrt, und de Schriftgleerte?",
-     "D Zuehörer sind überwältiget, will er lehrt «wie eine, wo Vollmacht hät, und nöd wie d Schriftgleerte» ([[MRK.1.22]])."),
+     "D Zuehörer sind überwältiget, will er lehrt «wie eine, wo Vollmacht hät, und nöd wie d Schriftglehrte» ([[MRK.1.22]])."),
     (18, _tu("001-021-028"), 2, "Warum weiss gerade der unreine Geist, wer Jesus ist?",
      None, "Wieso weiss grad de unreini Geischt, wer Jesus isch?", None),
     # 1,29–34
@@ -155,7 +155,7 @@ _Q = [
     (36, _tu("003-001-006"), 1, "Warum schweigen sie auf die Frage, ob man am Sabbat Leben retten darf?",
      "Jesus fragt: «Ist es erlaubt, am Sabbat Gutes zu tun oder Böses zu tun, ein Leben zu retten oder zu töten?» Sie aber schwiegen ([[MRK.3.4]]).",
      "Wieso schwiiged si uf d Frag, öb mer am Sabbat Läbe rette dörf?",
-     "Jesus fröget: «Isch es erlaubt, am Sabbat Guets z tue oder Bös z tue, es Läbe z rette oder z töte?» Si aber händ gschwige ([[MRK.3.4]])."),
+     "Jesus fröget: «Isch es erlaubt, am Sabbat Guets z tue oder Böses z tue, es Läbe z rette oder z töte?» Si aber händ gschwige ([[MRK.3.4]])."),
     (37, _tu("003-001-006"), 2, "Wie ist es für den Mann, in die Mitte gestellt zu werden?",
      None, "Wie isch es für de Maa, i d Mitti gstellt z wärde?", None),
     # 3,7–12
@@ -169,7 +169,7 @@ _Q = [
     (40, _tu("003-013-019"), 1, "Was heisst es, zuerst «bei ihm» zu sein und dann ausgesandt zu werden?",
      "Jesus setzt zwölf ein, «damit sie bei ihm seien und damit er sie aussende» ([[MRK.3.14]]).",
      "Was heisst s, zerscht «bi ihm» z sii und dänn usgschickt z wärde?",
-     "Jesus setzt zwölf ii, «demit si bi ihm sind und demit er si cha ussände» ([[MRK.3.14]])."),
+     "Jesus setzt zwölf ii, «damit si bi ihm sind und damit er si cha uusschicke» ([[MRK.3.14]])."),
     (41, _tu("003-013-019"), 2, "Warum steht Judas Iskariot von Anfang an in der Liste?",
      None, "Wieso staat de Judas Iskariot vo Aafang a i de Lischte?", None),
     # 3,20–21
@@ -212,7 +212,7 @@ _Q = [
     (52, _tu("004-010-012"), 1, "Wer gehört zu denen «um ihn», wer zu «jenen draussen» – und kann sich das ändern?",
      "Den Zwölf und denen um Jesus ist das Geheimnis gegeben, «jenen draussen aber geschieht alles in Gleichnissen» ([[MRK.4.11]]).",
      "Wer ghört zu dene «um en ume», wer zu «dene dusse» – und chan sich das ändere?",
-     "De Zwölf und dene um Jesus isch s Gheimnis gää, «dene dusse aber passiert alles i Gliichnis» ([[MRK.4.11]])."),
+     "De Zwölf und dene um Jesus isch s Gheimnis gää, «dene dusse aber gschiet alles i Gliichnis» ([[MRK.4.11]])."),
     (53, _tu("004-010-012"), 2, "Wie hörst du ein Wort, das du nicht sofort verstehst?",
      None, "Wie ghörsch du es Wort, wo d nöd grad verstaasch?", None),
     # 4,13–20
@@ -228,7 +228,7 @@ _Q = [
      "Was ghört as Liecht?",
      "D Lampe chunnt nöd, zum under de Schäffel gstellt z wärde, sondern uf de Lüüchter ([[MRK.4.21]])."),
     (57, _tu("004-021-025"), 2, "Wie gerecht klingt der Satz «Wer hat, dem wird gegeben»?",
-     None, "Wie grächt tönt de Satz «Wär hät, dem wird ggää»?", None),
+     None, "Wie grächt tönt de Satz «Wär hät, däm wird gää»?", None),
     # 4,26–29
     (58, _tu("004-026-029"), 1, "Was kann der Mensch tun, und was geschieht von selbst?",
      "Der Same sprosst und wächst – «er selbst weiss nicht, wie» ([[MRK.4.27]]).",
@@ -318,7 +318,7 @@ _Q = [
     # 6,30–44
     (82, _tu("006-030-044"), 1, "Warum sagt Jesus zu den Jüngern: «Gebt ihr ihnen zu essen!»?",
      "Die Jünger wollen die Menge wegschicken; sie haben nur fünf Brote und zwei Fische ([[MRK.6.36-MRK.6.38]]).",
-     "Wieso seit Jesus zu de Jünger: «Gänd ihr ine z ässe!»?",
+     "Wieso seit Jesus zu de Jünger: «Gänd ir ine z ässe!»?",
      "D Jünger wänd d Mängi wägschicke; si händ nu füf Broot und zwee Fisch ([[MRK.6.36-MRK.6.38]])."),
     (83, _tu("006-030-044"), 2, "Was heisst es, wie Schafe ohne Hirten zu sein?",
      None, "Was heisst s, wie Schaf ohni Hirt z sii?", None),
@@ -357,7 +357,7 @@ _Q = [
     (93, _tu("007-024-030"), 1, "Was bewegt Jesus, nachdem die Frau ihm widersprochen hat?",
      "Auf ihr Wort von den Hündchen unter dem Tisch sagt er: «Um dieses Wortes willen – geh!» ([[MRK.7.28-MRK.7.29]])",
      "Was bewegt Jesus, nachdem d Frau ihm widersproche hät?",
-     "Uf ihres Wort vo de Hündli under em Tisch seit er: «Wäge dem Wort – gang!» ([[MRK.7.28-MRK.7.29]])"),
+     "Uf ihres Wort vo de Hündli under em Tisch seit er: «Wäge däm Wort – gang!» ([[MRK.7.28-MRK.7.29]])"),
     (94, _tu("007-024-030"), 2, "Wie wirkt es auf dich, dass Jesus zuerst ablehnt?",
      None, "Wie würkt s uf dich, dass Jesus zerscht ablehnt?", None),
     # 7,31–37
@@ -386,7 +386,7 @@ _Q = [
     (101, _tu("008-011-013"), 1, "Warum gibt Jesus kein Zeichen, obwohl er so viel getan hat?",
      "Er seufzt tief und sagt: «Diesem Geschlecht wird kein Zeichen gegeben werden!» ([[MRK.8.12]])",
      "Wieso git Jesus kei Zeiche, obwohl er so vil gmacht hät?",
-     "Er süüfzt tüüf und seit: «Dere Generation wird kei Zeiche ggää!» ([[MRK.8.12]])"),
+     "Er süüfzt tüüf und seit: «Dere Generation wird kei Zeiche gää!» ([[MRK.8.12]])"),
     (102, _tu("008-011-013"), 2, "Was für ein Zeichen würde dich überzeugen?",
      None, "Was für es Zeiche würd dich überzüüge?", None),
     # 8,14–21
@@ -407,7 +407,7 @@ _Q = [
     (107, _tu("008-027-030"), 1, "Wer, sagst du, ist Jesus?",
      "Jesus fragt zuerst, was die Leute sagen, dann: «Ihr aber, wer, sagt ihr, sei ich?» ([[MRK.8.29]])",
      "Wär, seisch du, isch Jesus?",
-     "Jesus fröget zerscht, was d Lüüt säged, dänn: «Ir aber, wär, säged ir, sig ich?» ([[MRK.8.29]])"),
+     "Jesus fröget zerscht, was d Lüüt säged, dänn: «Ir aber, wär, säged ir, seig ich?» ([[MRK.8.29]])"),
     (108, _tu("008-027-030"), 2, "Warum sollen sie es niemandem sagen?",
      None, "Wieso söled si s niemerem säge?", None),
     # 8,31–38
@@ -450,7 +450,7 @@ _Q = [
     (119, _tu("009-030-032"), 1, "Warum fürchten sich die Jünger, nachzufragen?",
      "Sie verstehen das Wort vom Leiden nicht «und fürchteten sich, ihn zu fragen» ([[MRK.9.32]]).",
      "Wieso händ d Jünger Angscht, nachzfröge?",
-     "Si verstönd s Wort vom Liide nöd «und händ Angscht gha, en z fröge» ([[MRK.9.32]])."),
+     "Si verstönd s Wort vom Liide nöd «und händ Angscht ghaa, en z fröge» ([[MRK.9.32]])."),
     (120, _tu("009-030-032"), 2, "Welche Frage stellst du lieber nicht?",
      None, "Weli Frag stellsch du lieber nöd?", None),
     # 9,33–37
@@ -464,9 +464,9 @@ _Q = [
     (123, _tu("009-038-041"), 1, "Warum will Johannes einen hindern, der Gutes tut?",
      "Der Grund: «weil er uns nicht nachfolgte» ([[MRK.9.38]]).",
      "Wieso will de Johannes eine hindere, wo Guets tuet?",
-     "De Grund: «wil er üs nöd nachegfolget isch» ([[MRK.9.38]])."),
+     "De Grund: «wil er öis nöd nachegfolget isch» ([[MRK.9.38]])."),
     (124, _tu("009-038-041"), 2, "Wo ziehst du Grenzen zwischen «uns» und den anderen?",
-     None, "Wo ziehsch du Gränze zwüsched «üs» und de andere?", None),
+     None, "Wo ziehsch du Gränze zwüsched «öis» und de andere?", None),
     # 9,42–50
     (125, _tu("009-042-050"), 1, "Wie verstehst du die harten Bilder von Hand, Fuss und Auge?",
      "Jesus sagt: «Wenn deine Hand dich zu Fall bringt, hau sie ab!» – und ebenso vom Fuss und vom Auge ([[MRK.9.43-MRK.9.47]]).",
@@ -518,7 +518,7 @@ _Q = [
      "Wüssed de Jakobus und de Johannes, um was si bitted?",
      "Jesus seit: «Ir wüssed nöd, was ir verlanged» – si antworted: «Mir chönd s» ([[MRK.10.38-MRK.10.39]])."),
     (139, _tu("010-035-045"), 2, "Wie sähe eine Gemeinschaft aus, in der gilt: «So aber ist es nicht unter euch»?",
-     None, "Wie würd e Gmeinschaft usgseh, wo gilt: «So aber isch es nöd under eu»?", None),
+     None, "Wie würd e Gmeinschaft usgseh, wo gilt: «So aber isch es nöd under öi»?", None),
     # 10,46–52
     (140, _tu("010-046-052"), 1, "Warum fragt Jesus einen Blinden, was er für ihn tun soll?",
      "Bartimäus hat laut um Erbarmen geschrien; Jesus lässt ihn rufen und fragt ihn trotzdem ([[MRK.10.48-MRK.10.51]]).",
