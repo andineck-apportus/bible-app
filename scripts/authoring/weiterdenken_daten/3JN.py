@@ -60,7 +60,7 @@ REFLECTIONS = [
      "question_de": "Was macht es mit einer Gemeinschaft, wenn einer bestimmt, wer dazugehört?",
      "note_de": "Diotrephes nimmt die Geschwister nicht auf, hindert andere und «stösst sie aus der Gemeinde hinaus» ([[3JN.1.10]]).",
      "gsw": {"question_de": "Was macht s mit ere Gmeinschaft, wänn eine bestimmt, wär dezueghört?",
-             "note_de": "De Diotrephes nimmt d Gschwüschterti nöd uf, hindert anderi und «rüert si us de Gmeind use» ([[3JN.1.10]])."}},
+             "note_de": "De Diotrephes nimmt d Gschwüschterti nöd uuf, hindert anderi und «rüert si us de Gmeind use» ([[3JN.1.10]])."}},
     {"id": "REFL-3JN-0009", "subject": "TU-3JN-001-009-010", "order": 2,
      "question_de": "Warum will der Älteste den Konflikt erst bei seinem Kommen ansprechen?",
      "note_de": "«Darum werde ich, wenn ich komme, seine Taten zur Sprache bringen» ([[3JN.1.10]]).",
@@ -75,14 +75,14 @@ REFLECTIONS = [
     {"id": "REFL-3JN-0011", "subject": "TU-3JN-001-011-012", "order": 2,
      "question_de": "Was ist ein gutes Zeugnis «von der Wahrheit selbst»?",
      "note_de": "Demetrius hat ein gutes Zeugnis von allen, «und von der Wahrheit selbst» ([[3JN.1.12]]).",
-     "gsw": {"question_de": "Was isch es guets Zügnis «d Wahrheit sälber»?",
-             "note_de": "De Demetrius hät es guets Zügnis vo allne, «und d Wahrheit sälber» ([[3JN.1.12]])."}},
+     "gsw": {"question_de": "Was isch es guets Züügnis «d Wahrheit sälber»?",
+             "note_de": "De Demetrius hät es guets Züügnis vo allne, «und d Wahrheit sälber» ([[3JN.1.12]])."}},
     # 13–14
     {"id": "REFL-3JN-0012", "subject": "TU-3JN-001-013-014", "order": 1,
      "question_de": "Wen würdest du gern «jeden mit Namen» grüssen?",
      "note_de": "Der Brief endet: «Grüsse die Freunde, jeden mit Namen» ([[3JN.1.14]]).",
      "gsw": {"question_de": "Wän würdsch du gern «jede mit Name» grüesse?",
-             "note_de": "De Brief hört uf: «Grüess d Fründe, jede mit Name» ([[3JN.1.14]])."}},
+             "note_de": "De Brief hört uuf: «Grüess d Fründe, jede mit Name» ([[3JN.1.14]])."}},
     {"id": "REFL-3JN-0013", "subject": "TU-3JN-001-013-014", "order": 2,
      "question_de": "Warum nennt der Älteste die Glaubenden hier «Freunde»?",
      "note_de": "Zweimal heisst es «die Freunde» ([[3JN.1.14]]); sonst spricht der Brief von «Geschwistern» ([[3JN.1.3]]; [[3JN.1.5]]).",
@@ -102,7 +102,7 @@ RECEPTIONS = [
      "sources_de": ["Adolf von Harnack, Über den dritten Johannesbrief (1897)", "Ernst Käsemann, Ketzer und Zeuge (1951)"],
      "confidence": "probable",
      "gsw": {"period_de": "1897; 1951",
-             "text_de": "De Adolf von Harnack hät im Striit mit em Diotrephes en Konflikt gseh zwüsche de reisende Missionar und ere Ortsgmeind, wo sich under eme einzelne Leiter feschtiget. De Ernst Käsemann hät d Sicht umdräit: Villicht seig de Eltischt sälber de Usgschlossni gsii. Beidi Düütige gönd über das use, was de Brief seit."}},
+             "text_de": "De Adolf von Harnack hät im Striit mit em Diotrephes en Konflikt gseh zwüsche de reisende Missionar und ere Ortsgmeind, wo sich under eme einzelne Leiter feschtiget. De Ernst Käsemann hät d Sicht umdräht: Villicht seig de Eltischt sälber de Usgschlossni gsii. Beidi Düütige gönd über das use, was de Brief seit."}},
 ]
 
 # Quellenprüfung (docs/QUELLENPRUEFUNG.md)

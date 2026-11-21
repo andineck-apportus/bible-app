@@ -66,7 +66,7 @@ NOTES = [
   [], ["Athanasius, 39. Osterfestbrief (367 n. Chr.)"],
   [T("grc", "κανών", "Richtschnur, Massstab"), T("lat", "septuaginta", "siebzig", "septuaginta")],
   "Wie us Schrifte en Kanon worde isch",
-  "Weli Schrifte zur Bible ghöred, isch über Jahrhunderti klärt worde; s griechische Wort Kanon heisst «Richtschnuer». D hebräisch Bible isch im Umfang öppe im 1. bis 2. Jahrhundert n. Chr. wiitgehend feschtgleit gsii. D griechisch Übersetzig, d Septuaginta, hät wiiteri Schrifte enthalte, wo di katholisch und di orthodox Chile als «deuterokanonisch» zelled und di evangelische meischtens als «Apokryphe» abgränzed. Fürs Nöi Teschtamänt nännt de Oschterfeschtbrief vom Athanasius vo Alexandria (367 n. Chr.) als erschti erhalteni Lischte gnau di 27 Schrifte, wo hüt üblich sind. Die App folgt vorläufig em evangelische Kanon mit 66 Büecher.",
+  "Weli Schrifte zur Bible ghöred, isch über Jahrhunderti klärt worde; s griechische Wort Kanon heisst «Richtschnuer». D hebräisch Bible isch im Umfang öppe im 1. bis 2. Jahrhundert n. Chr. wiitgehend feschtgleit gsii. D griechisch Übersetzig, d Septuaginta, hät wiiteri Schrifte enthalte, wo di katholisch und di orthodox Chile als «deuterokanonisch» zelled und di evangelische meischtens als «Apokryphe» abgränzed. Fürs Nöi Teschtamänt nännt de Oschterfäschtbrief vom Athanasius vo Alexandria (367 n. Chr.) als erschti erhalteni Lischte gnau di 27 Schrifte, wo hüt üblich sind. Die App folgt vorläufig em evangelische Kanon mit 66 Büecher.",
   "Wänn und wie de hebräisch Kanon abgschlosse worde isch, isch umstritte; di früener oft gnännt «Synode vo Jamnia» (um 90 n. Chr.) gilt hüt nüme als förmliche Bschluss. Einzelni Schrifte vom Nöie Teschtamänt (z. B. de Hebräerbrief, d Offebarig) sind no im 4. Jahrhundert nöd überall aagnoo gsii.",
   ["Richtschnuer, Massstab", "sibezg"]),
  ("BG-OT-0001", "testament", "OT", "CTX-HIST-ISRAEL-IRON-PERSIAN", "probable",
@@ -218,7 +218,7 @@ NOTES = [
   [T("grc", "ἀποκάλυψις", "Enthüllung, Offenbarung")],
   "Bilder gäge d Macht vo Rom",
   "D Offebarig ghört zur Gattig Apokalypse, griechisch «Enthüllig»: Si düütet d Gägewart i Visione und Bilder, wie scho s Buech Daniel. De Seher Johannes schriibt vo de Insle Patmos ([[REV.1.9]]) a sibe Gmeinde i de römische Provinz Asia ([[REV.1.11]]). Im Hintergrund stönd de Kaiserkult und de Druck, sich däm aazpasse. D Zahl 666 ([[REV.13.18]]) wird oft als Zahlewärt vom Name «Kaiser Nero» i hebräische Buechstabe düütet.",
-  "Meischtens wird d Offebarig i di spoot Regierigsziit vom Domitian (um 95 n. Chr.) datiert, gstützt uf de Irenäus; anderi dänked a d Ziit um 68/69 n. Chr. D Düütig vo de Zahl 666 uf de Nero isch verbreitet, aber nöd sicher; es paar Handschrifte läsed 616.",
+  "Meischtens wird d Offebarig i di spät Regierigsziit vom Domitian (um 95 n. Chr.) datiert, gstützt uf de Irenäus; anderi dänked a d Ziit um 68/69 n. Chr. D Düütig vo de Zahl 666 uf de Nero isch verbreitet, aber nöd sicher; es paar Handschrifte läsed 616.",
   ["Enthüllig, Offebarig"]),
 ]
 

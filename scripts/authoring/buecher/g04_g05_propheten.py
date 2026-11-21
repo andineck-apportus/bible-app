@@ -70,7 +70,7 @@ NOTES = [
      "gsw": {"topic": "Troscht für Verbannti und di Grosse Jesajarolle",
              "text": "Ab [[ISA.40.1]] änderet sich d Lag: D Schuld vo Jerusalem gilt als abtreit, d Verbannte "
                      "söled us Babel heichoo ([[ISA.48.20]]), und de Perserchönig Kyros, wo Babylon 539 v. Chr. "
-                     "iignoo hät, wird mit Name gnännt ([[ISA.44.28]]; [[ISA.45.1]]). Sit em spoote 18. "
+                     "iignoo hät, wird mit Name gnännt ([[ISA.44.28]]; [[ISA.45.1]]). Sit em späte 18. "
                      "Jahrhundert schriibed vili Forscher [[ISA.40.1-ISA.55.13]] eme unbekannte Prophet im Exil zue "
                      "(«Deuterojesaja»), sit em Bernhard Duhm (1892) [[ISA.56.1-ISA.66.24]] eme spötere z "
                      "Jerusalem («Tritojesaja»). Traditionelli Usleger gsend s ganz Buech als Wärch vom Jesaja, wo "
@@ -112,7 +112,7 @@ NOTES = [
                      "gwürkt ([[JER.1.1-JER.1.3]]). I die Ziit fallet de Zämebruch vo Assyrie, de Sieg vo "
                      "Babylon über Ägypte bi Karkemisch 605 v. Chr. ([[JER.46.2]]), di erscht Verschleppig 597 "
                      "v. Chr. und d Zerstörig vo de Stadt. Brief uf Tonscherbe us Lachisch stammed us de letschte "
-                     "Mönet vor em Fall; i eim heisst s, me passi uf d Füürzeiche vo Lachisch uf, will me Aseka nöd "
+                     "Mönet vor em Fall; i eim heisst s, me passi uf d Füürzeiche vo Lachisch uuf, will me Aseka nöd "
                      "gsäch – nach [[JER.34.7]] sind Lachisch und Aseka di letschte feschte Städt gsii. S Buech "
                      "verzellt sälber, wie de Jeremia sim Schriiber Baruch diktiert und d Rolle nach irer "
                      "Verbrännig erwiiteret nöi hät lah schriibe ([[JER.36.4]]; [[JER.36.32]]). Am Schluss "
@@ -143,7 +143,7 @@ NOTES = [
      "gsw": {"topic": "Zwei Fassige: de chürzer griechisch Jeremia",
              "text": "D griechisch Übersetzig (Septuaginta) vom Jeremiabuech isch öppe en Sibtel chürzer als de "
                      "hebräisch Täxt vo de mittelalterliche Handschrifte, wo di meischte Bibelübersetzige druf "
-                     "baued. Es fehlt zum Biispil [[JER.33.14-JER.33.26]], und d Sprüch gäge d Völker, im "
+                     "baued. Es fehlt zum Biispiil [[JER.33.14-JER.33.26]], und d Sprüch gäge d Völker, im "
                      "Hebräische [[JER.46.1-JER.51.64]], stönd dört nach [[JER.25.13]] und in ere andere "
                      "Reihefolg. Das isch nöd nu Freiheit vo de Übersetzer: Under de hebräische "
                      "Jeremia-Fragmänt us Qumran entspräched es paar de chürzere Form, anderi de längere. Beid "
@@ -366,7 +366,7 @@ NOTES = [
              "uncertain": "Traditionell wird de Joel wäge sim Platz im Buech vo de Zwölf früe datiert, oft is 9. "
                           "Jahrhundert v. Chr. Vili Forscher setzed s Buech i persischi Ziit (um 400 v. Chr.): Es "
                           "nännt kei Chönig, aber Prieschter und Ältischti, setzt en Tempel und d Zerstreuig vom "
-                          "Volk voruus ([[JOL.3.2]]) und erwähnt Grieche als Chäufer vo verchaufte Judäer "
+                          "Volk voruus ([[JOL.3.2]]) und erwähnt Grieche als Chäufer vo verkaufte Judäer "
                           "([[JOL.3.6]]). Wär bi de gmeinsame Sätz wär zitiert, isch offe. Öb d Höischrecke wörtlich "
                           "oder als Bild für es Heer gmeint sind, isch au umstritte.",
              "terms": ["Joel: «JHWH isch Gott»", "Tag vo JHWH"]}},
@@ -438,7 +438,7 @@ NOTES = [
                      "([[MAT.12.39-MAT.12.41]]). De Name Jona heisst «Tuube».",
              "uncertain": "Traditionell wird s Buech als Bricht über Ereigniss vom 8. Jahrhundert v. Chr. gläse; "
                           "defür wird oft uf d Wort vom Jesus verwise. Vili Forscher läsed s als Lehrverzellig us "
-                          "persischer oder hellenistischer Ziit, wäge spaate Sprachforme, em Titel «Chönig vo "
+                          "persischer oder hellenistischer Ziit, wäge späte Sprachforme, em Titel «Chönig vo "
                           "Ninive» ([[JON.3.6]]), de Grössi vo de Stadt ([[JON.3.3]]) und will assyrischi Quälle "
                           "kei Umkehr vo Ninive känned. Öb de Psalm [[JON.2.2-JON.2.9]] vo Aafang aa zum Buech "
                           "ghört hät, isch umstritte.",
@@ -469,7 +469,7 @@ NOTES = [
                      "Chr. ([[MIC.1.1]]). Sini Chlag über d Ort vo sinere Heimet, drunder Lachisch "
                      "([[MIC.1.10-MIC.1.16]]), passt zum Feldzug vom Sanherib 701 v. Chr., wo die Gäged verwüeschtet "
                      "hät. De Micha griift Landraub, bestächlichi Richter, Prieschter und Prophete "
-                     "aa ([[MIC.2.1-MIC.2.2]]; [[MIC.3.11]]) und kündet sogar d Zerstörig vo Jerusalem "
+                     "aa ([[MIC.2.1-MIC.2.2]]; [[MIC.3.11]]) und chündet sogar d Zerstörig vo Jerusalem "
                      "aa ([[MIC.3.12]]). Es Jahrhundert spöter wird das Wort zitiert, zum de Jeremia "
                      "verteidige ([[JER.26.18]]) – en sältene Fall, wo d Bible en Prophet mit Name und "
                      "Wortluut aafüert. Bekannt sind au [[MIC.5.2]] (Betlehem, vgl. [[MAT.2.6]]) und "
@@ -569,7 +569,7 @@ NOTES = [
      "gsw": {"topic": "De Zefanja: de Tag vom Zorn i de Ziit vom Joschija",
              "text": "D Überschrift füert de Stammbaum vom Zefanja über vier Generatione bis uf en Hiskija zrugg und "
                      "datiert en under em Chönig Joschija (640–609 v. Chr.; [[ZEP.1.1]]). Assyrie isch dänn im "
-                     "Nidergang gsii; [[ZEP.2.13-ZEP.2.15]] kündet de Undergang vo Ninive aa, wo 612 v. Chr. "
+                     "Nidergang gsii; [[ZEP.2.13-ZEP.2.15]] chündet de Undergang vo Ninive aa, wo 612 v. Chr. "
                      "iiträte isch. De Zefanja kritisiert Kult für de Baal, s Himmelsheer und de Milkom z Jerusalem "
                      "([[ZEP.1.4-ZEP.1.6]]), wo de Joschija nach [[2KI.23.4-2KI.23.14]] bi sinere Reform um 622 v. "
                      "Chr. hät lah wägmache. I de Mitti staat de «Tag vo JHWH» als Tag vom Gricht "
@@ -606,10 +606,10 @@ NOTES = [
              "text": "D Wort vom Haggai sind uf de Tag gnau datiert, vom sächschte bis zum nüünte Monet im zweite "
                      "Jahr vom Perserchönig Darius I., also 520 v. Chr. ([[HAG.1.1]]; [[HAG.2.10]]; [[HAG.2.20]]). "
                      "Fascht zwänzg Jahr nach de Erlaubnis zur Ruggkehr isch de Tempel no immer i Trümmer gläge, "
-                     "und d Heichehrte händ under Missernte glitte ([[HAG.1.2-HAG.1.11]]). De Haggai "
+                     "und d Heimkehrte händ under Missernte glitte ([[HAG.1.2-HAG.1.11]]). De Haggai "
                      "drängt de Statthalter Serubbabel us em Huus vom David und de Hoheprieschter Josua zum "
                      "Wideruufbau. De Darius hät grad Ufständ im ganze Riich nidergschlage ghaa, wo sini "
-                     "Inschrift vo Behistun devo bricht; de Haggai kündet aa, Gott wärd Himmel "
+                     "Inschrift vo Behistun devo bricht; de Haggai chündet aa, Gott wärd Himmel "
                      "und Erde erschüttere ([[HAG.2.6-HAG.2.7]]), und nännt de Serubbabel de "
                      "«Siegelring» vo Gott ([[HAG.2.21-HAG.2.23]]). Nach [[EZR.5.1]] hät er zäme mit em Sacharja "
                      "gwürkt; de Tempel isch 515 v. Chr. iigweit worde ([[EZR.6.15]]).",
@@ -649,7 +649,7 @@ NOTES = [
                      "füered d Evangelie de Chönig uf em Esel aa ([[ZEC.9.9]]; [[MAT.21.5]]) und de "
                      "Durchbohrt ([[ZEC.12.10]]; [[JHN.19.37]]).",
              "uncertain": "D historisch-kritisch Forschig schriibt [[ZEC.9.1-ZEC.14.21]] meischtens eim oder mehreri "
-                          "spötere Verfasser zue («Deuterosacharja»), oft i spootpersischer oder früehellenistischer "
+                          "spötere Verfasser zue («Deuterosacharja»), oft i spätpersischer oder früehellenistischer "
                           "Ziit; derfür wird under anderem d Erwähnig vo de Grieche ([[ZEC.9.13]]) aagfüert. "
                           "Traditionelli Usleger gsend s ganz Buech als Wärch vom Sacharja. Dass "
                           "[[MAT.27.9-MAT.27.10]] es Wort us [[ZEC.11.12-ZEC.11.13]] under em Name vom Jeremia "

@@ -45,7 +45,7 @@ FINDINGS = [
  ("FIND-OBA-0006", "TU-OBA-001-001-004", "argument_structure",
   "Edoms Selbstgespräch «Wer stürzt mich zu Boden?» ([[OBA.1.3]]) beantwortet Gott im nächsten Vers: «von dort stürze ich dich hinab» ([[OBA.1.4]]). Beide Male steht dasselbe hebräische Verb «hinabbringen».",
   ["OBA.1.3-OBA.1.4"], "high", "Beobachtung am Wortlaut (Verb ירד im Kausativstamm).",
-  "Edom fröget sich sälber «Wär stürzt mich uf de Bode?» ([[OBA.1.3]]), und Gott antwortet im nöchschte Värs: «vo dört stürz ich dich abe» ([[OBA.1.4]]). Beidi Mal staat s gliich hebräisch Verb «abebringe».",
+  "Edom fröget sich sälber «Wär stürzt mich uf de Bode?» ([[OBA.1.3]]), und Gott antwortet im nöchschte Värs: «vo dört stürze ich dich abe» ([[OBA.1.4]]). Beidi Mal staat s gliich hebräisch Verb «abebringe».",
   "Beobachtig am Wortluut (Verb ירד im Kausativstamm)."),
 ]
 
@@ -155,14 +155,14 @@ BACKGROUND = [
   "Wer mit «ihr» gemeint ist, ist umstritten.",
   ["JER.25.15-JER.25.29", "LAM.4.21"], [], [],
   "De Becher vom Gricht",
-  "«Trinke» isch bi de Prophete es Bild für s Gricht: Gott git de Völker en Becher, wo si müend lääre ([[JER.25.15-JER.25.29]]); au Edom wird en trinke ([[LAM.4.21]]). «Ir» i V. 16 cha Juda meine, wo de Becher scho trunke hät, oder Edom, wo uf em Zion gfiiret hät.",
+  "«Trinke» isch bi de Prophete es Bild für s Gricht: Gott git de Völker en Becher, wo si müend leere ([[JER.25.15-JER.25.29]]); au Edom wird en trinke ([[LAM.4.21]]). «Ir» i V. 16 cha Juda meine, wo de Becher scho trunke hät, oder Edom, wo uf em Zion gfiiret hät.",
   "Wär mit «ir» gmeint isch, isch umstritte.", []),
  ("BG-OBA-0005", "TU-OBA-001-019-021", "OBA.1.20", "CTX-OBA-AFTER-587", "possible", "Verbannte in der Ferne: Sarepta und Sefarad",
   "Sarepta war eine phönizische Stadt bei Sidon ([[1KI.17.9]]). Wo Sefarad lag, ist unbekannt; oft wird an Sardes in Westkleinasien gedacht, dessen Name in einer lydischen Inschrift ähnlich geschrieben wird. Seit der Spätantike (schon im aramäischen Targum) wurde «Sefarad» auf Spanien bezogen; daher heissen die spanisch-portugiesischen Juden «Sefarden».",
   "Die Gleichsetzung mit Sardes ist eine Vermutung.",
   ["1KI.17.9"], [], [("heb", "סְפָרַד", "Sefarad", "sefarad")],
   "Verbannti i de Färni: Sarepta und Sefarad",
-  "Sarepta isch e phönizischi Stadt bi Sidon gsii ([[1KI.17.9]]). Wo Sefarad gläge isch, weiss me nöd; oft dänkt me a Sardes im Weschte vo Chliiasie, wo sin Name i ere lydische Inschrift ähnlich gschribe wird. Sit de Spötantike (scho im aramäische Targum) hät me «Sefarad» uf Spanie bezoge; drum heissed di spanisch-portugiesische Jude «Sefarde».",
+  "Sarepta isch e phönizischi Stadt bi Sidon gsii ([[1KI.17.9]]). Wo Sefarad gläge isch, weiss me nöd; oft dänkt me a Sardes im Weschte vo Chliiasie, wo sin Name i ere lydische Inschrift ähnlich gschribe wird. Sit de Spätantike (scho im aramäische Targum) hät me «Sefarad» uf Spanie bezoge; drum heissed di spanisch-portugiesische Jude «Sefarde».",
   "D Gliichsetzig mit Sardes isch e Vermuetig.", ["Sefarad"]),
  ("BG-OBA-BOOK-0001", None, "OBA", "CTX-OBA-AFTER-587", "probable", "Obadja: Name, Zeit und Platz im Buch der Zwölf",
   "Der Name Obadja bedeutet «Diener JHWHs»; über den Propheten selbst ist nichts bekannt. Meist wird das Buch bald nach der Zerstörung Jerusalems 587/586 v. Chr. angesetzt. Im hebräischen Buch der Zwölf steht es nach Amos, dessen Schluss Edom nennt ([[AMO.9.12]]); in der griechischen Bibel ist die Reihenfolge der ersten sechs Bücher anders.",
@@ -181,7 +181,7 @@ BACKGROUND = [
 
 SUMMARIES = [
  ("SUM-CH-OBA-001", "Ein Wort gegen Edom: Das Volk, das sich in seinen Felsen sicher fühlte und am Tag des Untergangs Jerusalems gegen seinen Bruder Jakob stand, wird selbst gerichtet. Am Ende steht die Hoffnung auf Heimkehr und darauf, dass die Königsherrschaft JHWH gehört.",
-  "Es Wort gäge Edom: S Volk, wo sich i sine Felse sicher gfüült hät und am Tag vom Undergang vo Jerusalem gäge sin Brueder Jakob gstande isch, wird sälber grichtet. Am Änd staat d Hoffnig uf d Heichehr und druf, dass d Chönigsherrschaft em JHWH ghört."),
+  "Es Wort gäge Edom: S Volk, wo sich i sine Felse sicher gfüült hät und am Tag vom Undergang vo Jerusalem gäge sin Brueder Jakob gstande isch, wird sälber grichtet. Am Änd staat d Hoffnig uf d Heimkehr und druf, dass d Chönigsherrschaft em JHWH ghört."),
 ]
 
 

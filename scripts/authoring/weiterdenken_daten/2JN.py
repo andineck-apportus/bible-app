@@ -26,19 +26,19 @@ REFLECTIONS = [
      "question_de": "Wer ist die «auserwählte Herrin» – eine Frau oder eine Gemeinde?",
      "note_de": "Der Brief nennt keinen Namen ([[2JN.1.1]]); am Schluss grüssen «die Kinder deiner auserwählten Schwester» ([[2JN.1.13]]).",
      "gsw": {"question_de": "Wär isch di «userwählt Herrin» – e Frau oder e Gmeind?",
-             "note_de": "De Brief nännt kein Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere userwählte Schwöschter» ([[2JN.1.13]])."}},
+             "note_de": "De Brief nännt kei Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere userwählte Schwöschter» ([[2JN.1.13]])."}},
     # Kapitel
     {"id": "REFL-2JN-0003", "subject": "SUM-CH-2JN-001", "order": 1,
      "question_de": "Wo endet Gastfreundschaft?",
      "note_de": "Wer «diese Lehre nicht bringt», soll nicht ins Haus aufgenommen und nicht gegrüsst werden ([[2JN.1.10]]); der 3. Johannesbrief lobt dagegen die Aufnahme reisender Geschwister ([[3JN.1.5-3JN.1.8]]).",
-     "gsw": {"question_de": "Wo hört Gaschtfründschaft uf?",
+     "gsw": {"question_de": "Wo hört Gaschtfründschaft uuf?",
              "note_de": "Wär «die Lehr nöd bringt», söll me nöd is Huus ufnäh und nöd grüesse ([[2JN.1.10]]); de 3. Johannesbrief lobt dagäge, dass me reisendi Gschwüschterti ufnimmt ([[3JN.1.5-3JN.1.8]])."}},
     # 1–3
     {"id": "REFL-2JN-0004", "subject": "TU-2JN-001-001-003", "order": 1,
      "question_de": "Warum nennt sich der Schreiber nur «der Älteste»?",
      "note_de": "Er nennt keinen Namen ([[2JN.1.1]]); die Empfänger wussten offenbar, wer gemeint war.",
      "gsw": {"question_de": "Wieso nännt sich de Schriiber nu «De Ältischt»?",
-             "note_de": "Er nännt kein Name ([[2JN.1.1]]); d Empfänger händ offebar gwüsst, wär gmeint isch."}},
+             "note_de": "Er nännt kei Name ([[2JN.1.1]]); d Empfänger händ offebar gwüsst, wär gmeint isch."}},
     {"id": "REFL-2JN-0005", "subject": "TU-2JN-001-001-003", "order": 2,
      "question_de": "Was heisst es, jemanden «in Wahrheit» zu lieben?",
      "note_de": "«… die ich in Wahrheit liebe – und nicht ich allein» ([[2JN.1.1]]).",
@@ -91,13 +91,13 @@ RECEPTIONS = [
      "sources_de": ["Eusebius, Kirchengeschichte 3,25,3"],
      "confidence": "high",
      "gsw": {"period_de": "frües 4. Jahrhundert",
-             "text_de": "De Chilchehistoriker Eusebius zellt de 2. und 3. Johannesbrief zu de Schrifte, wo «bstritte, aber de meischte bekannt» sind; offe seig, öb si vom Evangelischt oder vo me andere Johannes stammed. Beidi Brief hät me speter allgemein i de Kanon ufgnoo."}},
+             "text_de": "De Chilehistoriker Eusebius zellt de 2. und 3. Johannesbrief zu de Schrifte, wo «bstritte, aber de meischte bekannt» sind; offe seig, öb si vom Evangelischt oder vo me andere Johannes stammed. Beidi Brief hät me speter allgemein i de Kanon ufgnoo."}},
     {"id": "RCPT-2JN-0003", "subject": "TU-2JN-001-001-003", "tradition": "church_fathers", "period_de": "um 200",
      "text_de": "Clemens von Alexandria meint in seinen erhaltenen Erläuterungen, der Brief sei an eine Frau in Babylon namens Electa geschrieben, und der Name bezeichne zugleich die Erwählung der Kirche. Ob eine einzelne Frau oder eine Gemeinde gemeint ist, wird bis heute verschieden gesehen.",
      "sources_de": ["Clemens von Alexandria, Adumbrationes (Erläuterungen) zum 2. Johannesbrief, lateinisch erhalten"],
      "confidence": "probable",
      "gsw": {"period_de": "um 200",
-             "text_de": "De Clemens vo Alexandria meint i sine erhaltene Erlüterige, de Brief seig a e Frau z Babylon gschribe, wo Electa heissi, und de Name bezeichni zgliich d Erwählig vo de Chilche. Öb e einzelni Frau oder e Gmeind gmeint isch, gseht me bis hüt verschide."}},
+             "text_de": "De Clemens vo Alexandria meint i sine erhaltene Erlüterige, de Brief seig a e Frau z Babylon gschribe, wo Electa heissi, und de Name bezeichni zgliich d Erwählig vo de Chile. Öb e einzelni Frau oder e Gmeind gmeint isch, gseht me bis hüt verschide."}},
 ]
 
 # Quellenprüfung (docs/QUELLENPRUEFUNG.md)

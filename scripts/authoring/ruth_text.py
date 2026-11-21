@@ -132,20 +132,20 @@ GSW = {
  "RUT.1.5": "Da{1} [sind]{2} [au]{3} [di beide]{4,5}, [de Machlon]{6} und{7} [de Kiljon]{8}, [gstorbe]{2}, und{9} [d Frau]{11,12} [isch zruggbliibe]{10}, [ohni]{13} [iri zwei Chind]{14,15,16} und{17} [ohni]{18} [ire Maa]{19,20}.",
  "RUT.1.6": "Da{1} [isch]{2} [si]{3} [mit]{4} [ire Schwigertöchtere]{5,6} [ufbroche]{2} und{7} [isch]{8} [us]{9} [em Gebiet]{10} [vo Moab]{11} [zruggchehrt]{8}; dänn{12} [si hät]{13} [im]{14} [Gebiet]{15} [vo Moab]{16} [ghört]{13}, [dass]{17} [JHWH]{19} [sich]{18} [um sis Volk]{21,22} [kümmeret hät]{18} [und]{23} [ine]{25,26} [Brot]{27} [gää hät]{24}. ~20(" + OBJ_G + ")",
  "RUT.1.7": "Und{1} [si isch]{2} [vom]{3,4} [Ort]{5} [furtgange]{2}, [wo]{6,8,9} [si gsii isch]{7}, und{10} [iri zwei Schwigertöchtere]{11,12,13} [mit ere]{14,15}; und{16} [si händ sich]{17} [uf de Wäg]{18,19} [gmacht]{17}, [zrugg]{20,21} [is]{22} [Land]{23} [Juda]{24}.",
- "RUT.1.8": "Da{1} [hät]{2} [d Noomi]{3} [zu]{4} [ire zwei Schwigertöchtere]{5,6,7} [gseit]{2}: «[Gönd]{8}, [chered um]{9}, [jedi]{10} [is]{11} [Huus]{12} [vo irere Mueter]{13,14}! [JHWH]{16} [söll]{15} [öi]{17,18} [Tröii]{19} [erwiise]{15}, [so wie]{20,21} [ir]{22} si [de Verstorbne]{23,24,25} und{26} [mir]{27,28} [erwise händ]{22}.",
+ "RUT.1.8": "Da{1} [hät]{2} [d Noomi]{3} [zu]{4} [ire zwei Schwigertöchtere]{5,6,7} [gseit]{2}: «[Gönd]{8}, [chehred um]{9}, [jedi]{10} [is]{11} [Huus]{12} [vo irere Mueter]{13,14}! [JHWH]{16} [söll]{15} [öi]{17,18} [Tröii]{19} [erwiise]{15}, [so wie]{20,21} [ir]{22} si [de Verstorbne]{23,24,25} und{26} [mir]{27,28} [erwise händ]{22}.",
  "RUT.1.9": "[JHWH]{2} [söll]{1} [öi]{3,4} [gää]{1}, [dass ir]{5} [Rue]{7} [finded]{6}, [jedi]{8} [im Huus]{9} [vo irem Maa]{10,11}!» Und{12} [si hät]{13} [si]{14,15} [küsst]{13}, und{16} [si händ]{17,18,19:idiom} [lut]{17,18,19:idiom} [briegget]{21}. ~20(" + VAV_G + ")",
  "RUT.1.10": "Und{1} [si händ]{2} [zu ire]{3,4} [gseit]{2}: «[Nei]{5}, [mir gönd]{8} [mit dir]{6,7} [zu]{9} [dim Volk]{10,11} [zrugg]{8}!»",
- "RUT.1.11": "Aber{1} [d Noomi]{3} [hät gseit]{2}: «[Chered um]{4}, [mini Töchtere]{5,6}! [Wieso]{7,8} [wänd ir]{9} [mit mir]{10,11} [choo]{9}? [Han ich]{14,15} [dänn no]{13} [Söhn]{16} [i]{17} [mim Buuch]{18,19}, [wo]{20} [öii]{22,23} [Manne]{24,25} [chönnted wärde]{21}? ~12(" + Q_G + ")",
- "RUT.1.12": "[Chered um]{1}, [mini Töchtere]{2,3}, [gönd]{4}! Dänn{5} [ich bi z alt]{6} [für]{7,8} [en Maa]{9,10}. [Wänn]{11} [ich au würd säge]{12}: ‹[Ich han]{13,14,15} [Hoffnig]{16}›, [ja, wänn]{17} [ich]{18} [hüt znacht]{19,20} [en Maa]{21,22} [hett]{18} und{23} [sogar]{24} [Söhn]{26} [überchäm]{25} –",
- "RUT.1.13": "[würded ir]{3} [drum]{2} [warte]{3}, [bis]{4,5} [si gross wäred]{6}? [Würded ir öi]{9} [drum]{8} [zruggbhalte]{9} [und kein]{10,11} [Maa]{13,14} [näh]{12}? [Nei]{15}, [mini Töchtere]{16,17}! Dänn{18} [es isch]{19} [für mich]{20,21} [vil]{22} [bitterer]{19} [als]{23} [für öi]{24}, dänn{25} [d Hand]{29} [vo JHWH]{30} [hät sich]{26} [gäge mich]{27,28} [gwändet]{26}.» ~1(" + Q_G + ") ~7(" + Q_G + ")",
+ "RUT.1.11": "Aber{1} [d Noomi]{3} [hät gseit]{2}: «[Chehred um]{4}, [mini Töchtere]{5,6}! [Wieso]{7,8} [wänd ir]{9} [mit mir]{10,11} [choo]{9}? [Han ich]{14,15} [dänn no]{13} [Söhn]{16} [i]{17} [mim Buuch]{18,19}, [wo]{20} [öii]{22,23} [Manne]{24,25} [chönnted wärde]{21}? ~12(" + Q_G + ")",
+ "RUT.1.12": "[Chehred um]{1}, [mini Töchtere]{2,3}, [gönd]{4}! Dänn{5} [ich bi z alt]{6} [für]{7,8} [en Maa]{9,10}. [Wänn]{11} [ich au würd säge]{12}: ‹[Ich han]{13,14,15} [Hoffnig]{16}›, [ja, wänn]{17} [ich]{18} [hüt znacht]{19,20} [en Maa]{21,22} [hett]{18} und{23} [sogar]{24} [Söhn]{26} [überchäm]{25} –",
+ "RUT.1.13": "[würded ir]{3} [drum]{2} [warte]{3}, [bis]{4,5} [si gross wäred]{6}? [Würded ir öi]{9} [drum]{8} [zruggbhalte]{9} [und kei]{10,11} [Maa]{13,14} [näh]{12}? [Nei]{15}, [mini Töchtere]{16,17}! Dänn{18} [es isch]{19} [für mich]{20,21} [vil]{22} [bitterer]{19} [als]{23} [für öi]{24}, dänn{25} [d Hand]{29} [vo JHWH]{30} [hät sich]{26} [gäge mich]{27,28} [gwändet]{26}.» ~1(" + Q_G + ") ~7(" + Q_G + ")",
  "RUT.1.14": "Da{1} [händ si]{2,3,4:idiom} [nomal]{7} [lut]{2,3,4:idiom} [briegget]{6}. Und{8} [d Orpa]{10} [hät]{9} [iri Schwigermueter]{11,12,13} [küsst]{9}, [aber]{14} [d Rut]{15} [hät sich]{16} [a]{17} [ire]{18} [feschtghebt]{16}. ~5(" + VAV_G + ")",
  "RUT.1.15": "Da{1} [hät si gseit]{2}: «[Lueg]{3}, [dini Schwägerin]{5,6} [isch]{4} [zu]{7} [irem Volk]{8,9} und{10} [zu]{11} [ire Götter]{12,13} [zrugggange]{4}. [Gang]{14} au [zrugg]{14}, [dinere Schwägerin]{16,17} [nache]{15}!»",
- "RUT.1.16": "Aber{1} [d Rut]{3} [hät gseit]{2}: «[Dräng]{5} [mich]{6,7} [nöd]{4}, [ich söll dich verlaa]{8,9,10} und [umchere]{11,12}, [wäg vo dir]{13,14,15}! Dänn{16} [wo]{17,18} [du anegaasch]{19}, [gang ich ane]{20}, und{21} [wo]{22,23} [du übernachtisch]{24}, [übernacht ich]{25}. [Dis Volk]{26,27} isch [mis Volk]{28,29}, und{30} [din Gott]{31,32} isch [min Gott]{33,34}.",
- "RUT.1.17": "[Wo]{1,2} [du stirbsch]{3}, [stirb ich]{4}, und{5} [dört]{6} [wott ich begrabe wärde]{7}. [So]{8} [söll]{9} [JHWH]{10} [mit mir]{11,12} [mache]{9}, und{13} [no meh]{14,15:idiom}: [nume]{16} [de Tod]{17,18} [trännt]{19} [mich]{20,21} und{22} [dich]{23,24}!»",
+ "RUT.1.16": "Aber{1} [d Rut]{3} [hät gseit]{2}: «[Dräng]{5} [mich]{6,7} [nöd]{4}, [ich söll dich verlaa]{8,9,10} und [umchehre]{11,12}, [wäg vo dir]{13,14,15}! Dänn{16} [wo]{17,18} [du anegaasch]{19}, [gaa ich ane]{20}, und{21} [wo]{22,23} [du übernachtisch]{24}, [übernachte ich]{25}. [Dis Volk]{26,27} isch [mis Volk]{28,29}, und{30} [din Gott]{31,32} isch [min Gott]{33,34}.",
+ "RUT.1.17": "[Wo]{1,2} [du stirbsch]{3}, [stirbe ich]{4}, und{5} [dört]{6} [wott ich begrabe wärde]{7}. [So]{8} [söll]{9} [JHWH]{10} [mit mir]{11,12} [mache]{9}, und{13} [no meh]{14,15:idiom}: [nume]{16} [de Tod]{17,18} [trännt]{19} [mich]{20,21} und{22} [dich]{23,24}!»",
  "RUT.1.18": "Wo{1} [si gseh hät]{2}, [dass]{3} [si]{5} [fescht entschlosse isch]{4}, [mit ere]{8,9} [z gaa]{6,7}, da{10} [hät si ufghört]{11}, [uf si iizrede]{12,13,14,15}.",
  "RUT.1.19": "So{1} [sind]{2} [di beide]{3,4} [gange]{2}, [bis]{5} [si]{7} [uf Betlehem]{8,9} [choo sind]{6}. [Wo]{12} [si]{14} [z Betlehem]{15,16} [aachoo sind]{13}, da{17} [isch]{18} [di ganz Stadt]{19,20,21} [wäge ine]{22,23} [in Ufregig choo]{18}, und{24} [d Fraue händ gseit]{25}: «[Isch das]{26,27} [d Noomi]{28}?» ~10(" + WAYHI_G + ") ~11(" + WAYHI_G + ")",
  "RUT.1.20": "Aber{1} [si hät]{2} [zu ine]{3,4} [gseit]{2}: «[Säged]{6} [mir]{7,8} [nöd]{5} [Noomi]{9}, [säged]{10} [mir]{11,12} [Mara]{13}! Dänn{14} [de Allmächtig]{16} [hät]{15} [mir]{17,18} [sehr]{19} [bitter mitgspilt]{15}.",
- "RUT.1.21": "[Voll]{2} [bin]{3} [ich]{1} [furtgange]{3}, und{4} [läär]{5} [hät]{6} [mich]{7} [JHWH]{8} [zruggbracht]{6}. [Wieso]{9,10} [säged]{11} [ir mir]{12,13} [Noomi]{14}, [wo doch]{15} [JHWH]{16} [gäge]{18} [mich]{19} [usgseit hät]{17} und{20} [de Allmächtig]{21} [mir]{23,24} [Böses aataa hät]{22}?»",
+ "RUT.1.21": "[Voll]{2} [bi]{3} [ich]{1} [furtgange]{3}, und{4} [leer]{5} [hät]{6} [mich]{7} [JHWH]{8} [zruggbracht]{6}. [Wieso]{9,10} [säged]{11} [ir mir]{12,13} [Noomi]{14}, [wo doch]{15} [JHWH]{16} [gäge]{18} [mich]{19} [usgseit hät]{17} und{20} [de Allmächtig]{21} [mir]{23,24} [Böses aataa hät]{22}?»",
  "RUT.1.22": "So{1} [isch]{2} [d Noomi]{3} [zruggchoo]{2}, und{4} [mit ere]{10,11} [d Rut]{5}, [d Moabiterin]{6,7}, [iri Schwigertochter]{8,9}, [wo]{12} [us]{14} [em Gebiet]{15} [vo Moab]{16} [zruggchoo isch]{13}. Und{17} [si]{18} [sind]{19} [z Betlehem]{20,21} [aachoo]{19}, [am]{22} [Aafang]{23} [vo de Gerschteernte]{24,25}.",
  # ------------------------------------------------------------ Kapitel 2
  "RUT.2.1": "Und{1} [d Noomi]{3} [hät]{2} [en Verwandte]{4} [vo]{5} [irem Maa]{6,7} [här]{5} [ghaa]{2}, [en Maa mit Vermöge]{8,9,10} [us]{11} [de Sippe]{12} [vom Elimelech]{13}; und{14} [er hät]{15,16} [Boas]{17} [gheisse]{15,16}.",
@@ -175,26 +175,26 @@ GSW = {
  "RUT.3.1": "Und{1} [d Noomi]{5}, [iri Schwigermueter]{6,7}, [hät]{2} [zu ire]{3,4} [gseit]{2}: «[Mini Tochter]{8,9}, [söll ich]{12} [dir]{13,14} [nöd]{10,11} [es Daheim]{15} [sueche]{12}, [wo]{16} [s dir]{18,19} [guet gaat]{17}?",
  "RUT.3.2": "[Also]{1,2}: [Isch]{3} [de Boas]{5} [nöd]{4} [öise Verwandte]{6,7}, [wo]{8} [du]{9} [bi]{10} [sine Arbeiterinne]{11,12} [gsii bisch]{9}? [Lueg]{13}, [er]{14} [worflet]{15} [hüt znacht]{20,21} [d Gerschte]{18,19} [uf de Tänn]{17}. ~16(" + OBJ_G + ")",
  "RUT.3.3": "[Wäsch dich]{2} und{3} [salb dich]{4} und{5} [zieh]{6} [dini Chleider]{7,8} [aa]{9,10}, und{11} [gang abe]{12} [uf d Tänn]{13,14}. [Zeig dich]{16} [em Maa]{17,18} [nöd]{15}, [bis er]{19,21} [fertig]{20} [gässe]{22,23} und{24} [trunke]{25,26} [hät]{20}. ~1(" + VAV_G + ")",
- "RUT.3.4": "Und{1} [wänn]{2,3} [er]{5} [sich häreleit]{4}, [dänn]{6} [merk dir]{7} [de Ort]{9,10}, [won]{11,13} [er sich häreleit]{12}, und{14} [gang ane]{15} und{16} [deck]{17} [sini Füess]{18,19} [uf]{17} und{20} [leg dich ane]{21}. Und{22} [er]{23} [seit]{24} [dir]{25,26} dänn, [was]{28} [du söllsch mache]{29,30}.» ~8(" + OBJ_G + ") ~27(" + OBJ_G + ")",
- "RUT.3.5": "Und{1} [si hät]{2} [zu ire]{3,4} [gseit]{2}: «[Alles]{5}, [wo]{6} [du]{7} [mir]{8,9} [seisch]{7}, [mach ich]{10}.»",
+ "RUT.3.4": "Und{1} [wänn]{2,3} [er]{5} [sich häreleit]{4}, [dänn]{6} [merk dir]{7} [de Ort]{9,10}, [won]{11,13} [er sich häreleit]{12}, und{14} [gang ane]{15} und{16} [deck]{17} [sini Füess]{18,19} [uuf]{17} und{20} [leg dich ane]{21}. Und{22} [er]{23} [seit]{24} [dir]{25,26} dänn, [was]{28} [du söllsch mache]{29,30}.» ~8(" + OBJ_G + ") ~27(" + OBJ_G + ")",
+ "RUT.3.5": "Und{1} [si hät]{2} [zu ire]{3,4} [gseit]{2}: «[Alles]{5}, [wo]{6} [du]{7} [mir]{8,9} [seisch]{7}, [mache ich]{10}.»",
  "RUT.3.6": "So{1} [isch si]{2} [uf d Tänn]{3,4} [abegange]{2} und{5} [hät]{6} [alles]{8} [gnau so]{7} [gmacht]{6}, [wie]{9} [s iri Schwigermueter]{12,13} [ire]{11} [gseit hät]{10}.",
  "RUT.3.7": "Und{1} [de Boas]{3} [hät gässe]{2} und{4} [trunke]{5}, und{6} [es isch]{7} [ihm]{9} [wohl gsii]{7} [ums Herz]{8}. Und{10} [er isch gange]{11}, [go abligge]{12,13} [am]{14} [Änd]{15} [vom Chornhuufe]{16,17}. [Da]{18} [isch si]{19} [liisli]{20,21} [choo]{19} und{22} [hät]{23} [sini Füess]{24,25} [ufdeckt]{23} und{26} [sich häregleit]{27}.",
- "RUT.3.8": "[Um]{3} [Mitternacht]{4,5,6} [isch]{8} [de Maa]{9,10} [ufgschreckt]{8} und{11} [hät sich umdräit]{12}, und{13} [da]{14} [isch]{16} [e Frau]{15} [zu sine Füess]{17,18} [gläge]{16}. ~1(" + WAYHI_G + ") ~2(" + WAYHI_G + ") ~7(" + VAV_G + ")",
+ "RUT.3.8": "[Um]{3} [Mitternacht]{4,5,6} [isch]{8} [de Maa]{9,10} [ufgschreckt]{8} und{11} [hät sich umdräht]{12}, und{13} [da]{14} [isch]{16} [e Frau]{15} [zu sine Füess]{17,18} [gläge]{16}. ~1(" + WAYHI_G + ") ~2(" + WAYHI_G + ") ~7(" + VAV_G + ")",
  "RUT.3.9": "Und{1} [er hät gseit]{2}: «[Wär]{3} [bisch du]{4}?» Und{5} [si hät gseit]{6}: «[Ich bi]{7} [d Rut]{8}, [dini Dieneri]{9,10}. [Spreit]{12} [drum]{11} [de Zipfel vo dim Gwand]{13,14} [über]{15} [dini Dieneri]{16,17} [uus]{12}, dänn{18} [du bisch]{20} [en Löser]{19}.»",
  "RUT.3.10": "Und{1} [er hät gseit]{2}: «[Gsägnet]{3} [seigsch du]{4} [vo]{5} [JHWH]{6}, [mini Tochter]{7,8}! [Du häsch]{9} [dini Tröii]{10,11} [jetzt]{12,13} [no schöner zeigt]{9} [als]{14} [am Aafang]{15,16}, [dass du]{17} [nöd]{18} [de junge Manne]{21,22} [nachegloffe bisch]{19,20}, [öb]{23} [arm]{24} [oder]{25,26} [riich]{27}.",
- "RUT.3.11": "[Und jetzt]{1,2}, [mini Tochter]{3,4}, [hab]{6} [kei]{5} [Angscht]{6}! [Alles]{7}, [wo]{8} [du seisch]{9}, [mach ich]{10} [für dich]{11,12}; dänn{13} [jede]{15} [im Tor]{16} [vo mim Volk]{17,18} [weiss]{14}, [dass]{19} [du]{22} [e tüchtigi Frau]{20,21} bisch.",
+ "RUT.3.11": "[Und jetzt]{1,2}, [mini Tochter]{3,4}, [hab]{6} [kei]{5} [Angscht]{6}! [Alles]{7}, [wo]{8} [du seisch]{9}, [mache ich]{10} [für dich]{11,12}; dänn{13} [jede]{15} [im Tor]{16} [vo mim Volk]{17,18} [weiss]{14}, [dass]{19} [du]{22} [e tüchtigi Frau]{20,21} bisch.",
  "RUT.3.12": "[Also]{1,2}, [es]{3} [stimmt]{4}, [dass]{5} [ich]{7} [en Löser]{6} [bi]{7}; [aber]{8} [es git]{10} [au]{9} [en Löser]{11}, [wo nöcher verwandt isch]{12} [als ich]{13,14}.",
- "RUT.3.13": "[Bliib]{1} [hüt znacht]{2,3} da; und{4} [dänn]{5} [am Morge]{6,7}: [wänn]{8} [er]{9} [dich]{10} [löse wott]{9}, [guet]{11}, [dänn söll er löse]{12}; und{13} [wänn]{14} [er]{16} [dich]{19} [nöd]{15} [wott]{16} [löse]{17,18}, [dänn]{20} [lös ich]{21} [dich]{22}, [ich sälber]{23} – [so wahr]{24} [JHWH]{25} [läbt]{24}! [Bliib ligge]{26} [bis]{27} [am Morge]{28,29}.»",
+ "RUT.3.13": "[Bliib]{1} [hüt znacht]{2,3} da; und{4} [dänn]{5} [am Morge]{6,7}: [wänn]{8} [er]{9} [dich]{10} [löse wott]{9}, [guet]{11}, [dänn söll er löse]{12}; und{13} [wänn]{14} [er]{16} [dich]{19} [nöd]{15} [wott]{16} [löse]{17,18}, [dänn]{20} [löse ich]{21} [dich]{22}, [ich sälber]{23} – [so wahr]{24} [JHWH]{25} [läbt]{24}! [Bliib ligge]{26} [bis]{27} [am Morge]{28,29}.»",
  "RUT.3.14": "So{1} [isch si]{2} [bis]{5} [am Morge]{6,7} [zu sine Füess]{3,4} [gläge]{2}. Und{8} [si isch ufgstande]{9}, [bevor]{10,11} [me]{13} [enand]{15,16} [hät chöne]{12} [erchänne]{12}. Und{17} [er hät gseit]{18}: «[Es dörf]{20} [nöd]{19} [uschoo]{20}, [dass]{21} [d Frau]{23,24} [uf d Tänn]{25,26} [choo isch]{22}.» ~14(" + OBJ_G + ")",
- "RUT.3.15": "Und{1} [er hät gseit]{2}: «[Gib]{3} mir [de Umhang]{4,5}, [wo]{6} [du aahäsch]{7,8}, und{9} [heb]{10} [en]{11,12} [uf]{10}!» Und{13} [si hät]{14} [en]{15,16} [ufghebt]{14}, und{17} [er hät]{18} [sächs Mass]{19} [Gerschte]{20} [driigmässe]{18} und{21} [ire]{23,24} [ufglade]{22}. Und{25} [er isch]{26} [i d Stadt]{27,28} [gange]{26}.",
+ "RUT.3.15": "Und{1} [er hät gseit]{2}: «[Gib]{3} mir [de Umhang]{4,5}, [wo]{6} [du aahäsch]{7,8}, und{9} [heb]{10} [en]{11,12} [uuf]{10}!» Und{13} [si hät]{14} [en]{15,16} [ufghebt]{14}, und{17} [er hät]{18} [sächs Mass]{19} [Gerschte]{20} [driigmässe]{18} und{21} [ire]{23,24} [ufglade]{22}. Und{25} [er isch]{26} [i d Stadt]{27,28} [gange]{26}.",
  "RUT.3.16": "Und{1} [si isch]{2} [zu]{3} [irere Schwigermueter]{4,5} [choo]{2}, und{6} [die hät gseit]{7}: «[Wie staat s um dich]{8,9:idiom}, [mini Tochter]{10,11}?» Und{12} [si hät]{13} [ire]{14,15} [alles]{17} [verzellt]{13}, [wo]{18} [de Maa]{22,23} [für si]{20,21} [gmacht hät]{19}. ~16(" + OBJ_G + ")",
- "RUT.3.17": "Und{1} [si hät gseit]{2}: «[Die]{6,7} [sächs Mass]{3} [Gerschte]{4,5} [hät er]{8} [mir]{9,10} [gää]{8}; dänn{11} [er hät]{12} [zu mir]{13,14} [gseit]{12}: ‹[Chumm]{16} [nöd]{15} [mit lääre Händ]{17} [zu]{18} [dinere Schwigermueter]{19,20}!›»",
+ "RUT.3.17": "Und{1} [si hät gseit]{2}: «[Die]{6,7} [sächs Mass]{3} [Gerschte]{4,5} [hät er]{8} [mir]{9,10} [gää]{8}; dänn{11} [er hät]{12} [zu mir]{13,14} [gseit]{12}: ‹[Chumm]{16} [nöd]{15} [mit leere Händ]{17} [zu]{18} [dinere Schwigermueter]{19,20}!›»",
  "RUT.3.18": "Da{1} [hät si gseit]{2}: «[Wart ab]{3}, [mini Tochter]{4,5}, [bis]{6,7} [du weisch]{8,9}, [wie]{10} [d Sach]{12} [usgaat]{11}; dänn{13} [de Maa]{16,17} [git]{15} [kei]{14} [Rue]{15}, [bis er]{18,19} [d Sach]{21,22} [hüt no]{23,24} [erledigt hät]{20}.»",
  # ------------------------------------------------------------ Kapitel 4
  "RUT.4.1": "[De Boas]{2} aber{1} [isch]{3} [zum Tor]{4,5} [ufegange]{3} und{6} [isch]{7} [dört]{8} [abgsässe]{7}. Und{9} [grad da]{10} [isch]{16} [de Löser]{11,12} [verbiichoo]{16}, [wo]{13} [de Boas]{15} [vo ihm]{13} [gredt hät]{14}. Und{17} [er hät gseit]{18}: «[Chumm]{19,20}, [sitz]{21,22} [da]{23} [ab]{21,22}, [du Soundso]{24,25:idiom}!» Und{26} [er isch choo]{27} und{28} [isch abgsässe]{29}.",
  "RUT.4.2": "Und{1} [er hät]{2} [zäh]{3} [Manne]{4} [vo]{5} [de Ältischte]{6} [vo de Stadt]{7,8} [gholt]{2} und{9} [gseit]{10}: «[Sitzed]{11} [da]{12} [ab]{11}!» Und{13} [si sind abgsässe]{14}.",
  "RUT.4.3": "Dänn{1} [hät er]{2} [zum Löser]{3,4} [gseit]{2}: «[S Fäldstück]{5,6,7}, [wo]{8} [öisem Brüeder]{10,11} [Elimelech]{12,13} [ghört hät]{9}, [verchauft]{14} [d Noomi]{15}, [wo]{16} [us]{18} [em Gebiet]{19} [vo Moab]{20} [zruggchoo isch]{17}.",
- "RUT.4.4": "Und{1} [ich]{2} [han dänkt]{3}, [ich sött dir s säge]{4,5,6:idiom}: [Chauf s]{9} [vor]{10} [dene, wo da sitzed]{11,12}, und{13} [vor]{14} [de Ältischte]{15} [vo mim Volk]{16,17}! [Wänn]{18} [du s wottsch löse]{19}, [dänn lös s]{20}! Und{21} [wänn]{22} [er]{24} [nöd]{23} [löse wott]{24}, [dänn säg s]{25,26} [mir]{27,28}, [damit ich]{29} [s weiss]{30}; dänn{31} [es git]{32} [usser]{33} [dir]{34} [keine]{32}, [wo löse chönnt]{35,36}, und{37} [ich]{38} [chume]{39} [nach dir]{40} [dra]{39}.» Und{41} [er hät gseit]{42}: «[Ich]{43} [lös s]{44}.» ~7(לֵאמֹר «zum säge» leitet d Red ii; mit em Doppelpunkt widergää) ~8(לֵאמֹר «zum säge» leitet d Red ii; mit em Doppelpunkt widergää)",
+ "RUT.4.4": "Und{1} [ich]{2} [han dänkt]{3}, [ich sött dir s säge]{4,5,6:idiom}: [Chauf s]{9} [vor]{10} [dene, wo da sitzed]{11,12}, und{13} [vor]{14} [de Ältischte]{15} [vo mim Volk]{16,17}! [Wänn]{18} [du s wottsch löse]{19}, [dänn lös s]{20}! Und{21} [wänn]{22} [er]{24} [nöd]{23} [löse wott]{24}, [dänn säg s]{25,26} [mir]{27,28}, [damit ich]{29} [s weiss]{30}; dänn{31} [es git]{32} [usser]{33} [dir]{34} [keine]{32}, [wo löse chönnt]{35,36}, und{37} [ich]{38} [chume]{39} [nach dir]{40} [dra]{39}.» Und{41} [er hät gseit]{42}: «[Ich]{43} [löse s]{44}.» ~7(לֵאמֹר «zum säge» leitet d Red ii; mit em Doppelpunkt widergää) ~8(לֵאמֹר «zum säge» leitet d Red ii; mit em Doppelpunkt widergää)",
  "RUT.4.5": "Da{1} [hät]{2} [de Boas]{3} [gseit]{2}: «[Am Tag]{4,5}, [wo du]{7} [s Fäld]{8,9} [vo de Noomi]{10,11,12} [chaufsch]{6}, [erwirbsch du]{22} [au]{13} [d Rut]{14,15,16}, [d Moabiterin]{17,18}, [d Frau]{19} [vom Verstorbne]{20,21}, [damit]{23} [de Name]{25} [vom Verstorbne]{26,27} [uf]{28} [sim Erbteil]{29,30} [erhalte bliibt]{24}.»",
  "RUT.4.6": "Da{1} [hät]{2} [de Löser]{3,4} [gseit]{2}: «[Ich cha]{6} [für mich]{9,10} [nöd]{5} [löse]{7,8}, [suscht]{11} [schadi ich]{12} [mim eigete Erbteil]{14,15}. [Lös]{16} [du]{19} [für dich]{17,18}, [was ich müesst löse]{21,22}, [dänn]{23} [ich cha]{25} [nöd]{24} [löse]{26,27}.» ~13(" + OBJ_G + ") ~20(" + OBJ_G + ")",
  "RUT.4.7": "Und{1} [so]{2} [isch es früener]{3,4} [in]{5} [Israel]{6} [gsii]{3,4} [bim]{7,8} [Löse]{9} und{10} [bim]{11,12} [Tuusche]{13}, [damit]{14} [jedi]{16} [Sach]{17} [gültig isch]{15}: [Eine]{19} [hät]{18} [sin Schue]{20,21} [abzoge]{18} und{22} [hät en]{23} [em andere]{24,25,26} [gää]{23}. Und{27} [das]{28} isch [d Bestätigig]{29,30} [in]{31} [Israel]{32} gsii.",
@@ -429,7 +429,7 @@ DEC_GSW = [
  ("RUT.1.15", "ire Götter", "interpretive", "אֱלֹהֶיהָ", None, ["irem Gott"],
   "אֱלֹהִים isch e Mehrzahlform und cha ein Gott oder mehreri Götter meine. Im Muul vo de Noomi über Moab liit «Götter» nöch; di gliich "
   "Form heisst i [[RUT.1.16]] «din Gott»."),
- ("RUT.1.16", "wo du anegaasch, gang ich ane", "literal", "תֵּלְכִי אֵלֵךְ", None, ["wo du hiegaasch, gang ich au hii"],
+ ("RUT.1.16", "wo du anegaasch, gaa ich ane", "literal", "תֵּלְכִי אֵלֵךְ", None, ["wo du hiegaasch, gaa ich au hii"],
   "D Verbforme chönd Gägewart, Zuekunft oder Absicht usdrucke. D Wort vo de Rut gälted irer Schwigermueter; si binded si a dere ire Wäg, "
   "ires Volk, ire Gott und ires Grab ([[RUT.1.17]]). Hüt list me si oft a Hochziite."),
  ("RUT.1.16", "übernachtisch", "literal", "תָּלִינִי", None, ["bliibsch"],
@@ -449,7 +449,7 @@ DEC_GSW = [
   "עָנָה בְּ heisst «gäge öpper ussäge». Mit andere Vokal gläse (עִנָּה) hiess es «hät mich demüetiget»; so verstönd s es paar alti "
   "Übersetzige (i de Date nöd erfasst)."),
  ("RUT.1.22", "zruggchoo isch", "literal", "הַשָּׁבָה", None, ["wo mitchoo isch"],
-  "Wörtlich «di Zruggkeerti». D Rut isch nie z Juda gsii; s Wort verbindet si mit em Heichoo vo de Noomi. Es paar beziehnd s uf d Noomi."),
+  "Wörtlich «di Zruggchehrti». D Rut isch nie z Juda gsii; s Wort verbindet si mit em Heichoo vo de Noomi. Es paar beziehnd s uf d Noomi."),
  ("RUT.1.9", "händ lut briegget", "adapted", "וַתִּשֶּׂאנָה קוֹלָן וַתִּבְכֶּינָה", "händ iri Stimm erhobe und briegget", None,
   "«D Stimm erhebe» heisst lut aafange; so au i [[RUT.1.14]]. Nöi übersetzt 2026-11-21 (Züridüütsch nach docs/ZUERIDUEUETSCH.md)."),
  ("RUT.1.17", "no meh", "adapted", "וְכֹה יֹסִיף", "und so söll er wiitermache", None,
@@ -475,10 +475,10 @@ DEC_GSW = [
   "Wortspiil: הִכִּיר «beachte, aaerchänne» tönt ähnlich wie נָכְרִיָּה «Frömdi»."),
  ("RUT.2.11", "vorher", "adapted", "תְּמוֹל שִׁלְשׁוֹם", "geschter und vorgeschter", None, "Feschti Wändig für «früener, bis jetzt»."),
  ("RUT.2.12", "Flügel", "literal", "כְּנָפָיו", None, ["Schutz"],
-  "Bild für de Schutz vo Gott wie de vo me Vogel über sine Junge. S gliich Wort כָּנָף nimmt d Rut i [[RUT.3.9]] uf, wo si de Boas bittet, "
+  "Bild für de Schutz vo Gott wie de vo me Vogel über sine Junge. S gliich Wort כָּנָף nimmt d Rut i [[RUT.3.9]] uuf, wo si de Boas bittet, "
   "de Zipfel vo sim Gwand über si z spreite."),
- ("RUT.2.13", "Möcht ich", "interpretive", "אֶמְצָא", "ich find", None,
-  "D Form cha öppis feschtstelle («ich find Gnad») oder en Wunsch usdrucke."),
+ ("RUT.2.13", "Möcht ich", "interpretive", "אֶמְצָא", "ich finde", None,
+  "D Form cha öppis feschtstelle («ich finde Gnad») oder en Wunsch usdrucke."),
  ("RUT.2.17", "Efa", "literal", "כְּאֵיפָה", None, None,
   "Es Hohlmass; hütigi Schätzige gönd usenand (oft zwüsche öppe 20 und 40 Liter). Für ein Tag Ähre läse isch das vil."),
  ("RUT.2.20", "sini Tröii", "interpretive", "חַסְדּוֹ", None, None,
@@ -492,20 +492,20 @@ DEC_GSW = [
  ("RUT.2.12", "du söllsch de voll Lohn überchoo", "adapted", "וּתְהִי מַשְׂכֻּרְתֵּךְ שְׁלֵמָה", "din Lohn söll voll sii", None,
   "Mundart-Satzbau statt em wörtliche «din Lohn söll voll sii»."),
  # Kapitel 3
- ("RUT.3.1", "es Daheim", "interpretive", "מָנוֹחַ", "en Ort vo Rue", None, "Nimmt de Wunsch vo de Noomi us [[RUT.1.9]] uf."),
+ ("RUT.3.1", "es Daheim", "interpretive", "מָנוֹחַ", "en Ort vo Rue", None, "Nimmt de Wunsch vo de Noomi us [[RUT.1.9]] uuf."),
  ("RUT.3.3", "gang abe", "literal", "וְיָרַדְתְּ", None, None,
-  "D Tokens folged em Qere (i MACULA als Qere markiert). S gschribni Ketiv gseht uus wie di 1. Person («und ich gaan abe»); vili erkläred s als "
+  "D Tokens folged em Qere (i MACULA als Qere markiert). S gschribni Ketiv gseht uus wie di 1. Person («und ich gaa abe»); vili erkläred s als "
   "alti Form vo de 2. Person wiiblich, mit de gliiche Bedüütig wie s Qere. Gliich i [[RUT.3.4]]. S Ketiv isch i de Date nöd enthalte."),
  ("RUT.3.4", "sini Füess", "interpretive", "מַרְגְּלֹתָיו", "d Stell bi sine Füess", ["leg dich zu sine Füess"],
   "מַרְגְּלוֹת isch es sälts Wort für d Gägend vo de Füess. «Füess» cha i de Bible au verhüllend für d Scham staa; öb d Szene e sexuelli "
   "Nebebedüütig hät, isch umstritte. D Erzälig laat das offe."),
  ("RUT.3.4", "leg dich ane", "literal", "וְשָׁכָבְתְּ", None, None,
   "Qere wie i [[RUT.3.3]] (i MACULA markiert); s Ketiv gseht uus wie di 1. Person (Erklärige lueg dört), und es isch i de Date nöd enthalte."),
- ("RUT.3.8", "hät sich umdräit", "interpretive", "וַיִּלָּפֵת", None, ["hät sich vüregeboge", "hät umetaschtet"],
+ ("RUT.3.8", "hät sich umdräht", "interpretive", "וַיִּלָּפֵת", None, ["hät sich vüregeboge", "hät umetaschtet"],
   "S Verb isch sälte; gmeint isch e Bewegig vo öpperem, wo verschrickt."),
  ("RUT.3.9", "de Zipfel vo dim Gwand", "interpretive", "כְנָפֶךָ", "din Flügel", ["din Mantel"],
   "כָּנָף heisst «Flügel» und «Gwandzipfel». De Gwandzipfel über e Frau spreite isch e Geschte vo de Hochziit ([[EZK.16.8]]). D Rut nimmt "
-  "s Wort us [[RUT.2.12]] uf: De Boas söll sälber de Schutz wärde, won er ire under de Flügel vo Gott gwünscht hät."),
+  "s Wort us [[RUT.2.12]] uuf: De Boas söll sälber de Schutz wärde, won er ire under de Flügel vo Gott gwünscht hät."),
  ("RUT.3.9", "Dieneri", "literal", "אֲמָתֶךָ", None, ["Magd"],
   "I [[RUT.2.13]] hät sich d Rut שִׁפְחָה «Magd» gnännt, da אָמָה. Es paar Usleger gsänd i אָמָה e Dieneri, wo als Frau in Frag chunnt."),
  ("RUT.3.9", "en Löser", "literal", "גֹאֵל", None, None, "D Rut verbindet d Bitt um d Hochziit mit em Löserächt; vgl. [[RUT.2.20]]."),
@@ -525,8 +525,8 @@ DEC_GSW = [
   "De masoretisch Text hät di männlich Form; es paar Handschrifte und alti Übersetzige läsed «si isch gange» (i de Date nöd erfasst)."),
  ("RUT.3.16", "Wie staat s um dich", "interpretive", "מִי אַתְּ", "Wär bisch du", ["Wie isch es gange"],
   "Di gliich Frag stellt de Boas i [[RUT.3.9]]. D Noomi fragt wohl, als was d Rut zruggchunnt."),
- ("RUT.3.17", "mit lääre Händ", "adapted", "רֵיקָם", "läär", None,
-  "S gliich Wort wie i de Klag vo de Noomi [[RUT.1.21]]: «läär hät mich JHWH zruggbracht»."),
+ ("RUT.3.17", "mit leere Händ", "adapted", "רֵיקָם", "leer", None,
+  "S gliich Wort wie i de Chlag vo de Noomi [[RUT.1.21]]: «leer hät mich JHWH zruggbracht»."),
  # Kapitel 4
  ("RUT.4.1", "du Soundso", "interpretive", "פְּלֹנִי אַלְמֹנִי", "Peloni Almoni", ["min Fründ"],
   "Feschti Wändig für e Person, wo nöd gnännt wird. De Boas wird de Maa bim Name grüeft ha; de Erzähler verschwiigt en – vilicht, wil "
@@ -534,16 +534,16 @@ DEC_GSW = [
  ("RUT.4.3", "verchauft", "interpretive", "מָכְרָה", None, ["hät verchauft", "wott verchaufe"],
   "D Vergangeheitsform chan en gfasste Entschluss usdrucke. Wie d Noomi zu däm Fäld choo isch und öb s scho verchauft isch, seit de Text nöd."),
  ("RUT.4.3", "öisem Brüeder", "literal", "לְאָחִינוּ", None, ["öisem Verwandte"], "«Brüeder» meint da en Verwandte."),
- ("RUT.4.4", "ich sött dir s säge", "adapted", "אֶגְלֶה אָזְנְךָ", "ich wott dis Ohr ufdecke", ["ich leg dir s offe"], "Wändig für «öpperem öppis mitteile»."),
+ ("RUT.4.4", "ich sött dir s säge", "adapted", "אֶגְלֶה אָזְנְךָ", "ich wott dis Ohr ufdecke", ["ich legge dir s offe"], "Wändig für «öpperem öppis mitteile»."),
  ("RUT.4.4", "wänn er nöd löse wott", "literal", "יִגְאַל", None, ["wänn du nöd löse wottsch"],
   "De masoretisch Text hät di 3. Person; vilicht wändet sich de Boas churz a d Ältischte. Vili Handschrifte und alti Übersetzige händ di "
   "2. Person (i de Date nöd erfasst)."),
- ("RUT.4.5", "erwirbsch du", "interpretive", "קָנִיתָה", "häsch du erworbe", ["erwirbsch du au d Rut", "erwirb ich (Ketiv)"],
-  "Schlüsselstell. D Tokens folged em Qere «du erwirbsch» (i MACULA als Qere markiert); s gschribni Ketiv list me als «ich erwirb» – "
+ ("RUT.4.5", "erwirbsch du", "interpretive", "קָנִיתָה", "häsch du erworbe", ["erwirbsch du au d Rut", "erwirbe ich (Ketiv)"],
+  "Schlüsselstell. D Tokens folged em Qere «du erwirbsch» (i MACULA als Qere markiert); s gschribni Ketiv list me als «ich erwirbe» – "
   "dänn chündet de Boas aa, er sälber wärd d Rut hürate. Oft änderet me zuedem «und vo de Rut» in «au d Rut» (vgl. [[RUT.4.10]]); das "
   "isch e Konjektur. D Verbindig vo Landchauf und Hochziit erinneret a d Schwageree ([[DEU.25.5]]), isch dört aber nöd so gregt. Übersetzt "
   "isch de überliferet Qere-Text; kei Läsart isch als richtig entschide."),
- ("RUT.4.6", "schadi ich mim eigete Erbteil", "interpretive", "אַשְׁחִית", "verdirb ich", None,
+ ("RUT.4.6", "schadi ich mim eigete Erbteil", "interpretive", "אַשְׁחִית", "verdirbe ich", None,
   "Vermuetlich, wil en Sohn mit de Rut als Erb vom Machlon gälte würd und s Fäld dänn nöd bim Löser bliib. De Text seit de Grund nöd."),
  ("RUT.4.7", "Schue", "literal", "נַעֲלוֹ", None, ["Sandale"],
   "De Erzähler erklärt en alte Bruuch. I [[DEU.25.9]] wird em Schwager, wo nöd wott, de Schue zur Schand abzoge; da bsieglet er e Übertragig."),
@@ -556,13 +556,13 @@ DEC_GSW = [
  ("RUT.4.14", "söll bekannt wärde", "interpretive", "יִקָּרֵא", "söll grüeft wärde", ["söll grüemt wärde"],
   "Unklar isch, öb de Name vom Löser (vom Chind) oder vo JHWH gmeint isch."),
  ("RUT.4.15", "s Läbe", "interpretive", "מֵשִׁיב נֶפֶשׁ", "eine, wo d Seel zruggbringt", None,
-  "«Zruggbringe» (שׁוּב) nimmt d Klag vo de Noomi uf: «läär hät mich JHWH zruggbracht» ([[RUT.1.21]])."),
+  "«Zruggbringe» (שׁוּב) nimmt d Chlag vo de Noomi uuf: «leer hät mich JHWH zruggbracht» ([[RUT.1.21]])."),
  ("RUT.4.16", "Pflegeri", "literal", "לְאֹמֶנֶת", None, ["Amme"], "Öb d Geschte e Adoption usdruckt, isch umstritte."),
  ("RUT.4.18", "Stammbaum", "adapted", "תּוֹלְדוֹת", "Zeugige", None,
   "D Formle kännt me us em Buech Genesis (z. B. [[GEN.5.1]]). D Lischte nännt zäh Generatione vom Perez bis zum David; de Boas staat a "
   "de sibete Stell."),
  ("RUT.4.18", "isch de Vatter", "adapted", "הוֹלִיד", "hät zeugt", None,
-  "Im Hebräische staat «er hät zeugt»; uf Züritüütsch seit me ehner «er isch de Vatter gsii». Gliich i de folgende Vers."),
+  "Im Hebräische staat «er hät zeugt»; uf Züritüütsch seit me eher «er isch de Vatter gsii». Gliich i de folgende Vers."),
  ("RUT.4.20", "Salma", "literal", "שַׂלְמָה", None, ["Salmon"],
   "I [[RUT.4.21]] heisst de gliich Maa שַׂלְמוֹן (Salmon); beidi Schriibige sind biibhalte."),
 ]
@@ -614,11 +614,11 @@ UNITS = [
   "Ein Stammbaum in zehn Gliedern verbindet Perez, den Sohn Judas und Tamars, über Boas und Obed mit David."),
 ]
 UNITS_GSW = {
- "TU-RUT-001-001-022": ("Läär zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söhn und chunnt zrugg. Iri moabitischi Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem bittet d Noomi d Fraue, ere nüme Noomi, sondern «Mara», di Bitter, z säge."),
+ "TU-RUT-001-001-022": ("Leer zrugg us Moab", "I nere Hungersnot zieht e Familie vo Betlehem uf Moab. D Noomi verliert Maa und Söhn und chunnt zrugg. Iri moabitischi Schwigertochter Rut laat sich nöd abwiise und gaat mit ere; z Betlehem bittet d Noomi d Fraue, ere nüme Noomi, sondern «Mara», di Bitter, z säge."),
  "TU-RUT-001-001-005": ("Hungersnot und Tod z Moab", "Wäg ere Hungersnot zieht de Elimelech mit de Noomi und de Söhn uf Moab. De Elimelech stirbt; d Söhn hürated Moabiterinne und sterbed öppe zäh Jahr spöter au. D Noomi bliibt ohni Maa und Chind zrugg."),
  "TU-RUT-001-006-018": ("Wo du anegaasch", "D Noomi wott iri Schwigertöchtere heischicke. D Orpa chehrt um, d Rut aber bindet sich mit eme Schwuer a d Noomi, ires Volk und ire Gott."),
- "TU-RUT-001-019-022": ("Säged mir Mara", "Z Betlehem chlagt d Noomi, JHWH heb si läär zruggbracht. Si chömed am Aafang vo de Gerschteernte aa."),
- "TU-RUT-002-001-023": ("Uf em Fäld vom Boas", "D Rut list Ähre uf und chunnt uf s Fäld vom Boas, eme Verwandte vom Elimelech. De Boas behandlet di Frömd uffallend grosszügig; d Noomi erchännt in im en Löser vo de Familie."),
+ "TU-RUT-001-019-022": ("Säged mir Mara", "Z Betlehem chlagt d Noomi, JHWH heb si leer zruggbracht. Si chömed am Aafang vo de Gerschteernte aa."),
+ "TU-RUT-002-001-023": ("Uf em Fäld vom Boas", "D Rut list Ähre uuf und chunnt uf s Fäld vom Boas, eme Verwandte vom Elimelech. De Boas behandlet di Frömd uffallend grosszügig; d Noomi erchännt in im en Löser vo de Familie."),
  "TU-RUT-002-001-003": ("D Rut gaat go Ähre läse", "De Erzähler stellt de Boas vor. D Rut fragt, öb si dörf Ähre ufläse, und chunnt «zuefällig» uf sis Fäldstück."),
  "TU-RUT-002-004-017": ("Under de Flügel vo JHWH", "De Boas fragt nach de Rut und git ire Schutz, Wasser und Brot. Er wünscht ere, dass JHWH, de Gott vo Israel, under däm sine Flügel si Schutz suecht, ire vergälti, was si a de Noomi gmacht hät. Am Abig hät si öppe es Efa Gerschte binenand."),
  "TU-RUT-002-018-023": ("Eine vo öise Löser", "D Noomi ghört de Name Boas, wünscht im de Säge vo JHWH und seit, er seig eine vo ire Löser. D Rut bliibt bis am Änd vo de Ernt bi de Arbeiterinne vom Boas."),
@@ -686,7 +686,7 @@ def run():
                 notes = [AUTH_GSW + " D Übersetzig isch nöd vo Fachlüüt prüeft.",
                          ("Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); "
                           "di früener Fassig staat im revision_log."),
-                         "Für s Buech Rut isch no kein freie textkritische Apparat erfasst: Qumran-Fragmänt, Septuaginta und anderi alti "
+                         "Für s Buech Rut isch no kei freie textkritische Apparat erfasst: Qumran-Fragmänt, Septuaginta und anderi alti "
                          "Übersetzige sind nöd i de Date. Wo Entscheidige alti Übersetzige erwähned, beruet das uf allgemeinem Wüsse und isch "
                          "nöd a Date prüeft."]
                 if qr:
