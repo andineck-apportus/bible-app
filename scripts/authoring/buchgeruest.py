@@ -185,8 +185,8 @@ def pruefe(d, buch):
         else:
             f.append(f"{sid}: form muss szene oder struktur sein")
     for fid, nf in (d.get("neue_figuren") or {}).items():
-        if fid in lexikon_ids():
-            f.append(f"neue_figuren: {fid} gibt es schon")
+        if fid in lexikon_ids():  # von einem anderen Buch schon angelegt: wird nicht überschrieben
+            print(f"  Hinweis {buch}: {fid} steht schon im Bildlexikon, Eintrag bleibt")
         if not re.fullmatch(r"FIG-[A-Z0-9-]+", fid):
             f.append(f"neue_figuren: Kennung {fid} ungültig")
         for k in ("de", "en", "gsw", "kind", "era", "identity_de", "traits_de", "legend_de", "legend_gsw"):
