@@ -346,8 +346,8 @@ def reihe_ok(speech, koepfe):
     return True
 
 
-def band(n, kw):
-    out = [f'<rect x="0" y="{H}" width="{W}" height="{BAND}" fill="{PAPER}"/>',
+def band(n, kw, flaeche=PAPER):
+    out = [f'<rect x="0" y="{H}" width="{W}" height="{BAND}" fill="{flaeche}"/>' if flaeche else "",
            f'<circle cx="24" cy="{H + BAND / 2}" r="12" fill="none" stroke="{INK}" stroke-width="1.4"/>',
            f'<text x="24" y="{H + BAND / 2 + 5}" text-anchor="middle" font-family="sans-serif" font-size="14" fill="{INK}" class="pn-n">{n}</text>']
     for lg in ("de", "gsw"):
@@ -373,10 +373,17 @@ def kachel_hoehe(sz_id, sz):
 
 
 def kachel(i, sz_id, sz, aus, kw, x, y):
+    """Eine Kachel: Bild (gemalt) bzw. Strukturbild (gezeichnet) und Band. Ohne Rahmen, mit abgerundeten Ecken und durchsichtigem
+    Rand (Rückmeldung Andi Neck 2026-11-21)."""
     a = aus[sz_id]
     hb = kachel_hoehe(sz_id, sz)
-    teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{hb + BAND}" viewBox="0 0 {W} {hb + BAND}">']
-    if sz.get("form") == "struktur":  # gezeichnet aus Daten (struktur_kachel.py), Form je Feld (Entscheid 2026-11-21)
+    struktur = sz.get("form") == "struktur"
+    clip = "kc-" + re.sub(r"[^A-Za-z0-9-]", "", sz_id)
+    flaeche = "#F3F8FA" if struktur else PAPER
+    teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{hb + BAND}" viewBox="0 0 {W} {hb + BAND}">',
+             f'<defs><clipPath id="{clip}"><rect width="{W}" height="{hb + BAND}" rx="22"/></clipPath></defs><g clip-path="url(#{clip})">',
+             f'<rect width="{W}" height="{hb + BAND}" fill="{flaeche}"/>']
+    if struktur:  # gezeichnet aus Daten (struktur_kachel.py), Form je Feld (Entscheid 2026-11-21)
         import struktur_kachel as SK
         import vignetten as VG   # Bilder des Bildlexikons je Glied, sofern geprüft (Hybrid, Rückmeldung 2026-11-21)
         inhalt, h = SK.zeichne(sz["struktur"], VG.gueltig(sz_id))
@@ -386,8 +393,9 @@ def kachel(i, sz_id, sz, aus, kw, x, y):
     for n, (sp, b) in enumerate(zip(sz["speech"], blasen_von(a))):
         if b:
             teile.append(blase(b, sp, n))
-    teile.append(f'<g transform="translate(0 {hb - H})">{band(i, kw)}</g>' if hb != H else band(i, kw))
-    teile.append(f'<rect x="1" y="1" width="{W - 2}" height="{hb + BAND - 2}" fill="none" stroke="#D8D0C0" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>')
+    bd = band(i, kw, None if struktur else PAPER)
+    teile.append(f'<g transform="translate(0 {hb - H})">{bd}</g>' if hb != H else bd)
+    teile.append("</g></svg>")
     return "".join(teile)
 
 
