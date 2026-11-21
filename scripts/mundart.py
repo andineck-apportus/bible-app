@@ -62,7 +62,7 @@ WORTLISTE = {
 
 # Ergänzungen aus der Neuübersetzung 2026-11-21 (Abschnitt 2 «Weitere Festlegungen» und Regeln 1.3, 1.6, 1.8, 1.13)
 _ERGAENZT = {
-    "1.3": "broot taag aabig raat tüür tüüre schlaaf schlaafe lüüg ee vee befeel befole loo oor zää zäät gwont seer "
+    "1.3": "broot taag aabig raat schlaaf schlaafe lüüg ee vee befeel befole loo oor zää zäät gwont seer "
            "nää schöön böös hööch nööch nooch ääre zäänte bewaare zale",
     "1.6": "härz härze ärnt ärnte gärn stärbe ewägg weg",
     "1.8": "könig könige knecht knächt",
@@ -72,7 +72,7 @@ _ERGAENZT = {
          "fischternis fischteri tämpelwiiig brüedere stedt diräkt tumm",
 }
 _ZIEL = {
-    "broot": "brot", "taag": "tag", "aabig": "abig", "raat": "rat", "tüür": "tür", "tüüre": "türe", "schlaaf": "schlaf",
+    "broot": "brot", "taag": "tag", "aabig": "abig", "raat": "rat", "schlaaf": "schlaf",
     "schlaafe": "schlafe", "lüüg": "lüg", "ee": "ehe", "vee": "veh", "befeel": "befehl", "befole": "befohle",
     "loo": "lohn", "oor": "ohr", "zää": "zäh", "zäät": "zäht", "gwont": "gwohnt", "seer": "sehr", "nää": "näh",
     "schöön": "schön", "böös": "bös", "hööch": "höch", "nööch": "nöch", "nooch": "nöch", "ääre": "ähre",
@@ -104,7 +104,7 @@ MUSTER = [
     (re.compile(r"\bdes\b"), "Genitiv «des»", "2 Genitiv", "vo + Dativ"),
     (re.compile(r"\b(?:[Ww]o|[Ww]ie|[Zz]ue|[Cc]ha) (?:er|es|em|en)\b"), "Gleit-n fehlt", "1.12", "won er, wien es, zuen em, chan er"),
     (re.compile(r"\b(?:[Ww]on|[Ww]ien) (?:ich|si|me|mer|ir)\b"), "Gleit-n zu viel", "1.12", "wo ich, wie si"),
-    (re.compile(r"\b(?!(?:Sprung|Ursprung|Absprung|Schwung|Zwung)\b)[A-ZÄÖÜ][a-zäöü]+ung(?:e|en)?\b"), "Endung -ung", "1.13", "-ig"),
+    (re.compile(r"\b(?!(?:Sprung|Ursprung|Absprung|Schwung|Zwung|[A-ZÄÖÜa-zäöü]*[Zz]unge)\b)[A-ZÄÖÜ][a-zäöü]+ung(?:e|en)?\b"), "Endung -ung", "1.13", "-ig"),
     (re.compile(r"\b(?:sinds|solls|isch's|hät's|gits)\b"), "Kleinwort angehängt", "1.11", "sind s, soll s"),
 ]
 
