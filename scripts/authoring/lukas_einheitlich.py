@@ -109,7 +109,7 @@ MUNDART = {
     # Neu nach docs/ZUERIDUEUETSCH.md (2026-11-21); früher in Lukas festgelegt, jetzt abgelöst
     "fäält": "fehlt", "ziet": "zieht", "zie": "zieh", "ziend": "ziehnd", "wonige": "wohnige", "befole": "befohle",
     "usggää": "usgää", "ggässe": "gässe", "wem": "wäm", "chönt": "chönnt", "chönted": "chönnted",
-    "iigschlaafe": "iigschlafe", "schlaaft": "schlaft", "gschlaafe": "gschlafe", "tüüre": "türe", "tüür": "tür",
+    "iigschlaafe": "iigschlafe", "schlaaft": "schlaft", "gschlaafe": "gschlafe",
     "broot": "brot", "schaubroot": "schaubrot", "zwee": "zwei", "aposchtel": "apostel", "sig": "seig", "jetz": "jetzt",
     "werum": "wieso", "übercho": "überchoo", "hüchler": "hüüchler", "ärnt": "ernte", "ärnte": "ernte",
     "fischter": "fiischter", "fischtere": "fiischtere", "fischternis": "fiischteri", "niemertem": "niemerem",
