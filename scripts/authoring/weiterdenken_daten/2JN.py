@@ -25,8 +25,8 @@ REFLECTIONS = [
     {"id": "REFL-2JN-0002", "subject": "SUM-BOOK-2JN", "order": 2,
      "question_de": "Wer ist die «auserwählte Herrin» – eine Frau oder eine Gemeinde?",
      "note_de": "Der Brief nennt keinen Namen ([[2JN.1.1]]); am Schluss grüssen «die Kinder deiner auserwählten Schwester» ([[2JN.1.13]]).",
-     "gsw": {"question_de": "Wär isch di «uuserwählt Herrin» – e Frau oder e Gmeind?",
-             "note_de": "De Brief nännt kein Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere uuserwählte Schwöschter» ([[2JN.1.13]])."}},
+     "gsw": {"question_de": "Wär isch di «userwählt Herrin» – e Frau oder e Gmeind?",
+             "note_de": "De Brief nännt kein Name ([[2JN.1.1]]); am Schluss grüessed «d Chind vo dinere userwählte Schwöschter» ([[2JN.1.13]])."}},
     # Kapitel
     {"id": "REFL-2JN-0003", "subject": "SUM-CH-2JN-001", "order": 1,
      "question_de": "Wo endet Gastfreundschaft?",
@@ -76,7 +76,7 @@ REFLECTIONS = [
      "question_de": "Warum ist die Freude erst vollkommen, wenn man sich sieht?",
      "note_de": "Er hofft zu kommen, «damit eure Freude vollkommen ist» ([[2JN.1.12]]).",
      "gsw": {"question_de": "Wieso isch d Fröid erscht volkomme, wänn mer sich gseht?",
-             "note_de": "Er hoffet z choo, «demit eui Fröid vollkomme isch» ([[2JN.1.12]])."}},
+             "note_de": "Er hoffet z choo, «damit öii Fröid vollkomme isch» ([[2JN.1.12]])."}},
 ]
 
 RECEPTIONS = [
