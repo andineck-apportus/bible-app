@@ -27,7 +27,7 @@ FS, FS_KLEIN, FS_REF, FS_TITEL = 14, 13, 10.5, 17
 ZW = 0.56            # mittlere Zeichenbreite (Anteil der Schriftgrösse), mit Reserve; die Layoutprüfung misst nach
 ZH = 1.25            # Zeilenhöhe
 BILD_H = 56          # Höhe der Bildzeile eines Glieds
-BETONT = "#FFEF8A"   # Fläche betonter Glieder (Höhepunkt, Pointe)
+BETONT = "#F6FA8C"   # Fläche betonter Glieder (Höhepunkt, Pointe)
 _V = {}              # Bilder der Kachel, die gerade gezeichnet wird: Schlüssel («1», «2», …, «m») → Liste
 
 
@@ -337,7 +337,7 @@ def _ringe(sx, el, y):
     if rest is not None and sx.get("mitte"):
         paare.append((rest, None))
     marken = "ABCDEF"
-    farben = ["#FFECE5", "#E2F6F5", "#FFF8D6", "#EAF7E6"]
+    farben = ["#FFECE5", "#E2F6F5", "#FAFCD2", "#EAF7E6"]
     einzug = 12
     # Höhen der Bänder vorab
     def band(i, e, m):
