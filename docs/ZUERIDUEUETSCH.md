@@ -125,8 +125,7 @@ Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
 **Weitere Festlegungen (Pilot Johannes 1–3):** `öi`, `öie`, `öii` (nicht «eu», «eui»); Fragewort und
 verallgemeinerndes `wär` (`wär glaubt, …`); `damit` (nicht «demit»); `drü`; `bracht`, `ghaa`; Dativ Plural ohne -e
 (`de Brüeder`, nicht «de Brüedere»); indirekte Rede `er seig`, `er heb`, `si hebed`; `wieso`. Das Gleit-n steht nach
-jedem Wort auf Vokal vor `er`, `es`, `em`, `en` (`won er`, `chan er`, `wien es`). Absicht darf statt `damit` auch mit
-`dass` stehen, wo das natürlicher klingt (Joh 3,16).
+jedem Wort auf Vokal vor `er`, `es`, `em`, `en` (`won er`, `chan er`, `wien es`).
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 
