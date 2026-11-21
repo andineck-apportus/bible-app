@@ -104,7 +104,22 @@ Eine eigene, nachvollziehbare Übersetzung aus dem Urtext: treu, verständlich, 
 
 Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutschen abgeleitet.
 
-### Fassung 1.0 – gültig ab 2026-10-13 (aktuell)
+### Fassung 2.0 – gültig ab 2026-11-21 (aktuell)
+
+*Änderung:* Züridüütsch nach verbindlichem Regelwerk (Gallmann, Zürichdeutsches Wörterbuch, für Formen und Wortschatz; SRF-Merkblatt für die Schreibung, im Zweifel nahe am Hochdeutschen); Rückmeldungen werden als allgemeine Regel gefasst und maschinell geprüft, nicht als Einzelkorrektur (Entscheid Herausgeber).
+
+1. **Aus dem Urtext übersetzen** (Bearbeitende Instanz): Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle. Züridüütsch nach dem Regelwerk: Schreibung, Formen, Wortwahl, Satzbau.
+2. **Schicht beschreiben** (Bearbeitende Instanz): Sprache, Zielgruppe, Schreibweise (Züridüütsch nach Regelwerk) und Ton festhalten; Entscheide wie bei der Übersetzung.
+3. **Regelwerk prüfen** (Werkzeug (feste Prüfung)): Das Werkzeug prüft Schreibung und Formen gegen die Wortliste und Muster des Regelwerks; Funde brechen die Prüfung ab. Prüft: keine abgelöste Form, keine Dieth-Sonderzeichen. Zurück zu «Aus dem Urtext übersetzen», wenn Fund.
+4. **Inhalt prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung. Prüft: treu zum Urtext. Zurück zu «Aus dem Urtext übersetzen», wenn Abweichung.
+5. **Sprache prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Wortwahl, Satzbau und Lesefluss gegen das Regelwerk. Ungeregelte Fälle werden als Regelvorschlag gemeldet, festgelegt und dann für alle Texte gleich angewendet. Prüft: Regelwerk eingehalten, idiomatisch, keine Einzelkorrektur ohne Regel. Zurück zu «Aus dem Urtext übersetzen», wenn Mangel.
+6. **Muttersprachlich prüfen** (Herausgeber): Eine Person mit dieser Muttersprache liest gegen; erst dann wird die Prüfung eingetragen.
+
+*Weiter, wenn:* Regelwerk eingehalten (Werkzeug), inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.
+*Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
+*Ausführlich:* docs/ZUERIDUEUETSCH.md
+
+### Fassung 1.0 – gültig ab 2026-10-13
 
 *Änderung:* Erste Fassung (Züridüütsch).
 

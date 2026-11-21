@@ -22,7 +22,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'dein Reich komme; dein Wille geschehe, wie im Himmel, so auch auf Erden.');
     await ev(()=>document.querySelector('[data-action=menu]').click());await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());
     assert(reqs.includes('l/gsw/MAT')&&reqs.includes('l/gsw/common'),'Mundart-Pakete nachgeladen');
-    assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'diis Riich söll choo, diin Wile söll gschee, wie im Himel, eso au uf de Ärde.');
+    assert.equal(await ev(()=>document.querySelector('[data-stream="v39-6-10"] .stream-copy').textContent),'dis Riich söll choo, din Wille söll gscheh, wie im Himmel, so au uf de Erde.');
     await ev(()=>document.querySelector('[data-more="v39-6-10"]').click());await ev(()=>document.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click());await wait();await openAll();
     const sheet=await ev(()=>document.querySelector('.sheet').innerText);
     assert(!sheet.includes('[[')&&sheet.includes('Vatterunser'),'Hintergrund in Mundart, Stellen als Anzeige');

@@ -19,8 +19,9 @@ from _lib import D, alignment_entries, load_tokens, localize, write  # noqa: E40
 
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; aus dem hebräischen Text (WLC) übersetzt. "
-            "Prüfung der Mundart durch eine muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
+AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
+            "hebräischen Text (WLC) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-JONAH"]
 OBJ = "Objektzeichen אֶת, im Deutschen nicht wiedergegeben"
 OBJ_G = "Objektzeiche אֶת, nöd übersetzbar"
@@ -86,73 +87,73 @@ DE = {
 
 GSW = {
  # ------------------------------------------------------------ Kapitel 1
- "JON.1.1": "Und{1} [es isch]{2} [s Wort]{3} [vo JHWH]{4} [zum]{5} [Jona]{6} [cho]{2}, [em Sohn]{7} [vom Amittai]{8}: ~9(" + LEMOR_G + ") ~10(" + LEMOR_G + ")",
- "JON.1.2": "«[Stand uf]{1}, [gang]{2} [uf]{3} [Ninive]{4}, [di]{5,7} [gross]{8} [Stadt]{6}, und{9} [rüef]{10} [gäge]{11} [si]{12} [us]{10}; [dänn]{13} [iri]{16} [Bosheit]{15} [isch]{14} [vor]{17} [mis]{19} [Aagsicht]{18} [ufegstige]{14}.»",
- "JON.1.3": "Da{1} [hät sich]{2} [de Jona]{3} [ufgmacht]{2}, [zum]{4} [uf]{7} [Tarschisch]{6} [z flüchte]{5}, [wäg vom Aagsicht]{8,9,10} [vo JHWH]{11}. Und{12} [er isch]{13} [uf Jafo]{14} [abegange]{13} und{15} [hät]{16} [es Schiff]{17} [gfunde]{16}, [wo]{18} [uf Tarschisch]{19} [gfaare isch]{18}; und{20} [er hät]{21} [s Faargäld]{22} [defür]{23} [zaalt]{21} und{24} [isch]{25} [drii]{26,27} [abegstige]{25}, [zum]{28} [mit]{30} [ine]{31} [uf]{33} [Tarschisch]{32} [z faare]{29}, [wäg vom Aagsicht]{34,35,36} [vo JHWH]{37}.",
- "JON.1.4": "Aber{1} [JHWH]{2} [hät]{3} [en grosse]{5} [Wind]{4} [uf]{6} [s]{7} [Meer]{8} [gschleuderet]{3}, und{9} [es hät]{10} [en grosse]{12} [Sturm]{11} [uf em]{13} [Meer]{14} [gää]{10}, und{15} [s]{16} [Schiff]{17} [isch nooch draa gsii]{18}, [z]{19} [verbräche]{20}.",
- "JON.1.5": "Da{1} [händ sich]{2} [d]{3} [Seelüüt]{4} [gfürchtet]{2}, und{5} [jede]{7} [hät]{6} [zu]{8} [sim]{10} [Gott]{9} [gschroue]{6}, und{11} [si händ]{12} [d]{14} [Ladig]{15}, [wo]{16} [im]{17} [Schiff]{18} gsii isch, [is]{19,20} [Meer]{21} [grüert]{12}, [zum]{22} es [für sich]{24,25,26} [liechter z mache]{23}. [De Jona]{28} aber{27} [isch]{29} [is]{30} [Innerscht]{31} [vom]{32} [Schiff]{33} [abegstige]{29} und{34} [hät sich anegleit]{35} und{36} [isch tüüf iigschlaafe]{37}. ~13(" + OBJ_G + ")",
- "JON.1.6": "Da{1} [isch]{2} [de Kapitään]{5,6,7} [zu]{3} [im]{4} [häre cho]{2} und{8} [hät]{9} [zu]{10} [im]{11} [gseit]{9}: «[Was]{12} [isch mit]{13} [dir]{14}, [dass d schlaafsch]{15}? [Stand uf]{16}, [rüef]{17} [zu]{18} [dim]{20} [Gott]{19}! [Vilicht]{21} [dänkt]{22} [de]{23} [Gott]{24} [a]{22} [öis]{25,26}, und{27} [mir gönd]{29} [nöd]{28} [zgrund]{29}.»",
- "JON.1.7": "Und{1} [si händ]{2}, [eine]{3} [zum]{4} [andere]{5,6}, [gseit]{2}: «[Chömed]{7}, und{8} [mir wänd]{9} [Lös]{10} [wärfe]{9}, [demit]{11} [mir erfaared]{12}, [wäge wäm]{13-16} [das]{17,19,20} [Unheil]{18} [über öis]{21,22} cho isch!» Und{23} [si händ]{24} [Lös]{25} [gworfe]{24}, und{26} [s]{28} [Los]{29} [isch]{27} [uf]{30} [de Jona]{31} [gfalle]{27}.",
- "JON.1.8": "Da{1} [händ si]{2} [zu]{3} [im]{4} [gseit]{2}: «[Säg]{5,6} [öis]{8,9} [doch]{7}, [wäge wäm]{10-13} [das]{14,16,17} [Unheil]{15} [über öis]{18,19} cho isch! [Was]{20} isch [dis]{22} [Gwärb]{21}, und{23} [vo wo]{24,25} [chunnsch]{26}? [Was]{27} isch [dis]{29} [Land]{28}, und{30} [us wellem]{31,32,33} [Volk]{34} [bisch du]{35}?»",
- "JON.1.9": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[En Hebräer]{5} [bin ich]{6}, und{7} [JHWH]{9}, [de Gott]{10} [vom]{11} [Himmel]{12}, [wo]{13} [s]{16} [Meer]{17} und{18} [s]{20} [troche Land]{21} [gmacht hät]{14}, [fürcht]{23} [ich]{22}.» ~8(" + OBJ_G + ") ~15(" + OBJ_G + ") ~19(" + OBJ_G + ")",
- "JON.1.10": "Da{1} [händ sich]{2} [d]{3} [Mane]{4} [mit ere grosse]{6} [Furcht]{5} [gfürchtet]{2} und{7} [händ]{8} [zu]{9} [im]{10} [gseit]{8}: «[Was]{11} [häsch du]{13} [da]{12} [gmacht]{13}!» [Dänn]{14} [d]{16} [Mane]{17} [händ gwüsst]{15}, [dass]{18} [er]{23} [vor em Aagsicht]{19,20,21} [vo JHWH]{22} [am Flüchte gsii isch]{24}; [dänn]{25} [er hät]{26} s [ine]{27,28} [verzellt]{26}.",
- "JON.1.11": "Und{1} [si händ]{2} [zu]{3} [im]{4} [gseit]{2}: «[Was]{5} [söled mir]{6} [mit]{7} [dir]{8} [mache]{6}, [demit]{9} [s]{11} [Meer]{12} [still wird]{10} [und vo öis ablaat]{13,14,15}?» [Dänn]{16} [s]{17} [Meer]{18} [isch immer]{19,20} [stürmischer worde]{21}.",
- "JON.1.12": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Lüpfed]{5} [mich]{6} [uf]{5} und{7} [rüered]{8} [mich]{9} [is]{10,11} [Meer]{12}, [dänn]{13} [wird]{14} [s]{15} [Meer]{16} [still]{14} [und laat vo eu ab]{17,18,19}. [Dänn]{20} [ich]{22} [weiss]{21}, [dass]{23} [wäge mir]{24-27} [dä]{32,33} [gross]{30,31} [Sturm]{28,29} [über eu]{34,35} cho isch.»",
- "JON.1.13": "Und{1} [d]{3} [Mane]{4} [händ gruederet]{2}, [zum]{5} [as]{7,8} [troche Land]{9} [zruggzcho]{6}, aber{10} [si händ]{12} s [nöd]{11} [chöne]{12}; [dänn]{13} [s]{14} [Meer]{15} [isch]{16,17} [gäge si]{19,20} [immer]{16,17} [stürmischer worde]{18}.",
- "JON.1.14": "Da{1} [händ si]{2} [zu]{3} [JHWH]{4} [grüeft]{2} und{5} [gseit]{6}: «[Ach]{7}, [JHWH]{8}, [lass öis]{11} [doch]{10} [nöd]{9} [zgrund gaa]{11} [wäge]{12} [em Läbe]{13} [vo dem]{14,16,17} [Maa]{15}, und{18} [leg]{20} [nöd]{19} [unschuldigs]{24} [Bluet]{23} [uf]{21} [öis]{22}! [Dänn]{25} [du]{27}, [JHWH]{26}, [häsch gmacht]{31}, [wie]{28,29} [s dir gfalle hät]{30}.»",
- "JON.1.15": "Und{1} [si händ]{2} [de Jona]{4} [ufglüpft]{2} und{5} [händ]{6} [en]{7} [is]{8,9} [Meer]{10} [grüert]{6}. Da{11} [hät]{12} [s]{13} [Meer]{14} [mit]{15} [sim]{17} [Tobe]{16} [ufghört]{12}. ~3(" + OBJ_G + ")",
- "JON.1.16": "Da{1} [händ]{2} [d]{3} [Mane]{4} [JHWH]{8} [mit ere grosse]{6} [Furcht]{5} [gfürchtet]{2}, und{9} [si händ]{10} [für]{12} [JHWH]{13} [es Schlachtopfer]{11} [dargebracht]{10} und{14} [Glübd]{16} [abgleit]{15}. ~7(" + OBJ_G + ")",
- "JON.1.17": "Und{1} [JHWH]{3} [hät]{2} [en grosse]{5} [Fisch]{4} [bstellt]{2}, [zum]{6} [de Jona]{9} [z verschlucke]{7}. Und{10} [de Jona]{12} [isch]{11} [im]{13} [Buuch]{14} [vom]{15} [Fisch]{16} [gsii]{11}, [drei]{17} [Täg]{18} und{19} [drei]{20} [Nächt]{21}. ~8(" + OBJ_G + ")",
+ "JON.1.1": "Und{1} [s Wort]{3} [vo JHWH]{4} [isch]{2} [zum]{5} [Jona]{6}, [em Sohn]{7} [vom Amittai]{8}, [choo]{2}: ~9(" + LEMOR_G + ") ~10(" + LEMOR_G + ")",
+ "JON.1.2": "«[Stand uuf]{1}, [gang]{2} [uf]{3} [Ninive]{4}, [di]{5,7} [gross]{8} [Stadt]{6}, und{9} [rüef]{10} [gäge]{11} [si]{12} [uus]{10}; [dänn]{13} [iri]{16} [Bosheit]{15} [isch]{14} [vor]{17} [mis]{19} [Aagsicht]{18} [ufegstige]{14}.»",
+ "JON.1.3": "Da{1} [hät sich]{2} [de Jona]{3} [ufgmacht]{2}, [go]{4} [uf]{7} [Tarschisch]{6} [flüchte]{5}, [wäg vom Aagsicht]{8,9,10} [vo JHWH]{11}. Und{12} [er isch]{13} [uf Jafo]{14} [abegange]{13} und{15} [hät]{16} [es Schiff]{17} [gfunde]{16}, [wo]{18} [uf Tarschisch]{19} [gfahre isch]{18}; und{20} [er hät]{21} [de Fahrpriis]{22} [defür]{23} [zahlt]{21} und{24} [isch]{25} [is Schiff]{26,27} [iigstige]{25}, [damit er]{28} [mit]{30} [ine]{31} [uf]{33} [Tarschisch]{32} [fahrt]{29}, [wäg vom Aagsicht]{34,35,36} [vo JHWH]{37}.",
+ "JON.1.4": "Aber{1} [JHWH]{2} [hät]{3} [en grosse]{5} [Wind]{4} [uf]{6} [s]{7} [Meer]{8} [gschlöideret]{3}, und{9} [es hät]{10} [en grosse]{12} [Sturm]{11} [uf em]{13} [Meer]{14} [gää]{10}, und{15} [s]{16} [Schiff]{17} [isch nöch draa gsii]{18}, [z]{19} [verbräche]{20}.",
+ "JON.1.5": "Da{1} [händ]{2} [d]{3} [Seelüüt]{4} [Angscht überchoo]{2}, und{5} [jede]{7} [hät]{6} [zu]{8} [sim]{10} [Gott]{9} [gschroue]{6}, und{11} [si händ]{12} [d]{14} [Ladig]{15}, [wo]{16} [im]{17} [Schiff]{18} gsii isch, [is]{19,20} [Meer]{21} [grüert]{12}, [damit]{22} es [für si]{24,25,26} [liechter wird]{23}. [De Jona]{28} aber{27} [isch]{29} [is]{30} [Innere]{31} [vom]{32} [Schiff]{33} [abegstige]{29} und{34} [hät sich anegleit]{35} und{36} [isch tüüf iigschlafe]{37}. ~13(" + OBJ_G + ")",
+ "JON.1.6": "Da{1} [isch]{2} [de Kapitän]{5,6,7} [zu]{3} [ihm]{4} [choo]{2} und{8} [hät]{9} [zu]{10} [ihm]{11} [gseit]{9}: «[Was isch]{12,13} [mit dir]{14}, [dass du schlafsch]{15}? [Stand uuf]{16}, [rüef]{17} [zu]{18} [dim]{20} [Gott]{19}! [Vilicht]{21} [dänkt]{22} [de]{23} [Gott]{24} [a]{22} [öis]{25,26}, und{27} [mir gönd]{29} [nöd]{28} [zgrund]{29}.»",
+ "JON.1.7": "Und{1} [si händ]{2} [zu]{4} [enand]{3,5,6} [gseit]{2}: «[Chömed]{7}, und{8} [mir wärfed]{9} [s Los]{10}, [damit]{11} [mir erfahred]{12}, [wäge wäm]{13-16} [das]{17,19,20} [Unheil]{18} [über öis]{21,22} choo isch!» Und{23} [si händ]{24} [s Los]{25} [gworfe]{24}, und{26} [s]{28} [Los]{29} [isch]{27} [uf]{30} [de Jona]{31} [gfalle]{27}.",
+ "JON.1.8": "Da{1} [händ si]{2} [zu]{3} [ihm]{4} [gseit]{2}: «[Säg]{5,6} [öis]{8,9} [doch]{7}, [wäge wäm]{10-13} [das]{14,16,17} [Unheil]{15} [über öis]{18,19} choo isch! [Was]{20} isch [din]{22} [Bruef]{21}, und{23} [vo wo]{24,25} [chunnsch]{26}? [Was]{27} isch [dis]{29} [Land]{28}, und{30} [us welem]{31,32,33} [Volk]{34} [bisch du]{35}?»",
+ "JON.1.9": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Ich bi]{6} [en Hebräer]{5}, und{7} [ich]{22} [fürchte]{23} [JHWH]{9}, [de Gott]{10} [vom]{11} [Himmel]{12}, [wo]{13} [s]{16} [Meer]{17} und{18} [s]{20} [troche Land]{21} [gmacht hät]{14}.» ~8(" + OBJ_G + ") ~15(" + OBJ_G + ") ~19(" + OBJ_G + ")",
+ "JON.1.10": "Da{1} [händ]{2} [d]{3} [Manne]{4} [grossi]{6} [Angscht]{5} [überchoo]{2} und{7} [händ]{8} [zu]{9} [ihm]{10} [gseit]{8}: «[Was]{11} [häsch du]{13} [da]{12} [gmacht]{13}!» [Dänn]{14} [d]{16} [Manne]{17} [händ gwüsst]{15}, [dass]{18} [er]{23} [vor]{19,20,21} [JHWH]{22} [am Flüchte isch]{24}; [dänn]{25} [er hät]{26} s [ine]{27,28} [verzellt]{26}.",
+ "JON.1.11": "Und{1} [si händ]{2} [zu]{3} [ihm]{4} [gseit]{2}: «[Was]{5} [söled mir]{6} [mit]{7} [dir]{8} [mache]{6}, [damit]{9} [s]{11} [Meer]{12} [still wird]{10} [und vo öis ablaat]{13,14,15}?» [Dänn]{16} [s]{17} [Meer]{18} [isch immer]{19,20} [stürmischer worde]{21}.",
+ "JON.1.12": "Und{1} [er hät]{2} [zu]{3} [ine]{4} [gseit]{2}: «[Nämed]{5} [mich]{6} und{7} [rüered]{8} [mich]{9} [is]{10,11} [Meer]{12}, [dänn]{13} [wird]{14} [s]{15} [Meer]{16} [still]{14} [und laat vo öi ab]{17,18,19}. [Dänn]{20} [ich]{22} [weiss]{21}, [dass]{23} [dä]{32,33} [gross]{30,31} [Sturm]{28,29} [wäge mir]{24-27} [über öi]{34,35} choo isch.»",
+ "JON.1.13": "Und{1} [d]{3} [Manne]{4} [händ gruederet]{2}, [damit si]{5} [as]{7,8} [troche Land]{9} [zrugg chömed]{6}, aber{10} [si händ]{12} s [nöd]{11} [gschafft]{12}; [dänn]{13} [s]{14} [Meer]{15} [isch]{16,17} [gäge si]{19,20} [immer]{16,17} [stürmischer worde]{18}.",
+ "JON.1.14": "Da{1} [händ si]{2} [zu]{3} [JHWH]{4} [grüeft]{2} und{5} [gseit]{6}: «[Ach]{7}, [JHWH]{8}, [lass öis]{11} [doch]{10} [nöd]{9} [zgrund gaa]{11} [wäge]{12} [em Läbe]{13} [vo däm]{14,16,17} [Maa]{15}, und{18} [lad]{20} [öis]{22} [kei]{19} [unschuldigs]{24} [Bluet]{23} [uuf]{21}! [Dänn]{25} [du]{27}, [JHWH]{26}, [häsch gmacht]{31}, [was]{28,29} [dir gfalle hät]{30}.»",
+ "JON.1.15": "Und{1} [si händ]{2} [de Jona]{4} [gnoo]{2} und{5} [händ]{6} [en]{7} [is]{8,9} [Meer]{10} [grüert]{6}. Da{11} [hät]{12} [s]{13} [Meer]{14} [ufghört]{12} [z tobe]{15,16,17}. ~3(" + OBJ_G + ")",
+ "JON.1.16": "Da{1} [händ]{2} [d]{3} [Manne]{4} [grossi]{6} [Ehrfurcht]{5} vor [JHWH]{8} [überchoo]{2}, und{9} [si händ]{10} [JHWH]{12,13} [es Schlachtopfer]{11} [bracht]{10} und{14} [Gelübd]{16} [abgleit]{15}. ~7(" + OBJ_G + ")",
+ "JON.1.17": "Und{1} [JHWH]{3} [hät]{2} [en grosse]{5} [Fisch]{4} [bstellt]{2}, [dass er]{6} [de Jona]{9} [verschluckt]{7}. Und{10} [de Jona]{12} [isch]{11} [drü]{17} [Täg]{18} und{19} [drü]{20} [Nächt]{21} [im]{13} [Buuch]{14} [vom]{15} [Fisch]{16} [gsii]{11}. ~8(" + OBJ_G + ")",
  # ------------------------------------------------------------ Kapitel 2 (hebräisch 2,2–11)
  "JON.2.1": "Und{1} [de Jona]{3} [hät]{2} [us]{8} [em Buuch]{9} [vom]{10} [Fisch]{11} [zu]{4} [JHWH]{5}, [sim]{7} [Gott]{6}, [bättet]{2}.",
- "JON.2.2": "Und{1} [er hät gseit]{2}: «[Ich han grüeft]{3} [us]{4} [minere]{6,7} [Not]{5} [zu]{8} [JHWH]{9}, und{10} [er hät]{11} [mir]{12} [gantwortet]{11}. [Us]{13} [em Schooss]{14} [vom Toterich]{15} [han ich um Hilf gschroue]{16} – [du häsch]{17} [mini]{19} [Stimm]{18} [ghört]{17}.",
- "JON.2.3": "Und{1} [du häsch]{2} [mich]{3} [i d Tüüfi]{4} [gworfe]{2}, [is]{5} [Herz]{6} [vo de Meer]{7}, und{8} [Strömig]{9} [hät]{10} [mich]{11} [umgää]{10}; [all]{12} [dini]{14} [Brächer]{13} und{15} [dini]{17} [Wälle]{16} [sind]{20} [über]{18} [mich]{19} [ewäg gange]{20}.",
- "JON.2.4": "Und{1} [ich]{2} [han tänkt]{3}: [Verstosse bin ich]{4} [us]{5,6} [dine]{8} [Auge]{7}. [Doch]{9} [wirde ich wider]{10} [ufluege]{11,12} [zu]{13} [dim]{16} [heilige]{15} [Tämpel]{14}.",
- "JON.2.5": "[Wasser]{3} [hät]{1} [mich]{2} [umfange]{1} [bis a]{4} [d Chäle]{5}, [d Urflut]{6} [hät]{7} [mich]{8} [umgää]{7}, [Schilf]{9} [isch]{10} [um]{11} [min]{13} [Chopf]{12} [gwicklet gsii]{10}.",
- "JON.2.6": "[Zu]{1} [de Wurzle]{2} [vo de Bärg]{3} [bin ich abegstige]{4}; [d]{5} [Erde]{6} – [iri]{8} [Riegel]{7} [händ sich hinder]{9} [mir]{10} [gschlosse]{9} [für]{11} [immer]{12}. Da{13} [häsch du]{14} [mis]{18} [Läbe]{17} [us]{15} [de Grueb]{16} [ufegholt]{14}, [JHWH]{19}, [min]{21} [Gott]{20}.",
- "JON.2.7": "[Wo]{1} [mini]{6} [Seel]{5} [i]{3} [mir]{4} [verschmachtet isch]{2}, [han ich a]{9} [JHWH]{8} [tänkt]{9}, und{10} [mis]{15} [Gebätt]{14} [isch]{11} [zu]{12} [dir]{13} [cho]{11}, [i]{16} [din]{19} [heilige]{18} [Tämpel]{17}. ~7(" + OBJ_G + ")",
- "JON.2.8": "[Die, wo sich a]{1} [nüütigi]{3} [Götze]{2} [hebed]{1}, [verlönd]{6} [iri]{5} [Tröii]{4}.",
- "JON.2.9": "[Ich]{2} aber{1} [wott]{6} [dir]{7,8} [mit]{3} [de Stimm]{4} [vom Dank]{5} [opfere]{6}; [was]{9} [ich versproche han]{10}, [wott ich iilöse]{11}. [D Rettig]{12,13} [ghört]{14} [JHWH]{15}.»",
- "JON.2.10": "Da{1} [hät]{2} [JHWH]{3} [zum]{4} [Fisch]{5} [gredt]{2}, und{6} [dä hät]{7} [de Jona]{9} [as]{10,11} [troche Land]{12} [usegchotzt]{7}. ~8(" + OBJ_G + ")",
+ "JON.2.2": "Und{1} [er hät gseit]{2}: «[Ich han]{3} [i]{4} [minere]{6,7} [Not]{5} [zu]{8} [JHWH]{9} [grüeft]{3}, und{10} [er hät]{11} [mir]{12} [gantwortet]{11}. [Us]{13} [em Buuch]{14} [vom Toteriich]{15} [han ich um Hilf gschroue]{16} – [du häsch]{17} [mini]{19} [Stimm]{18} [ghört]{17}.",
+ "JON.2.3": "Und{1} [du häsch]{2} [mich]{3} [i d Tüüfi]{4} [gworfe]{2}, [zmitzt is]{5} [Herz]{6} [vo de Meer]{7}, und{8} [d Strömig]{9} [hät]{10} [mich]{11} [umgää]{10}; [all]{12} [dini]{14} [Brächer]{13} und{15} [dini]{17} [Wälle]{16} [sind]{20} [über]{18} [mich]{19} [drübergange]{20}.",
+ "JON.2.4": "Und{1} [ich]{2} [han dänkt]{3}: [Ich bi verstosse]{4}, [wäg]{5,6} [vo dine]{8} [Auge]{7}. [Doch]{9} [luege]{11,12} [ich]{10} [wider]{10} [zu]{13} [dim]{16} [heilige]{15} [Tempel]{14}.",
+ "JON.2.5": "[S Wasser]{3} [hät]{1} [mich]{2} [umschlosse]{1} [bis an]{4} [Hals]{5}, [d Urflut]{6} [hät]{7} [mich]{8} [umgää]{7}, [Schilf]{9} [isch]{10} [um]{11} [min]{13} [Chopf]{12} [gwicklet gsii]{10}.",
+ "JON.2.6": "[Bis zu]{1} [de Wurzle]{2} [vo de Bärg]{3} [bi ich abechoo]{4}; [d]{5} [Erde]{6} – [iri]{8} [Riegel]{7} [händ sich hinder]{9} [mir]{10} [gschlosse]{9} [für]{11} [immer]{12}. Da{13} [häsch du]{14} [mis]{18} [Läbe]{17} [us]{15} [de Grueb]{16} [ufegholt]{14}, [JHWH]{19}, [min]{21} [Gott]{20}.",
+ "JON.2.7": "[Wo]{1} [mini]{6} [Seel]{5} [i]{3} [mir]{4} [schwach worde isch]{2}, [han ich a]{9} [JHWH]{8} [dänkt]{9}, und{10} [mis]{15} [Gebät]{14} [isch]{11} [zu]{12} [dir]{13} [choo]{11}, [i]{16} [din]{19} [heilige]{18} [Tempel]{17}. ~7(" + OBJ_G + ")",
+ "JON.2.8": "[Die, wo sich a]{1} [nüütigi]{3} [Götze]{2} [halted]{1}, [verlönd]{6} [iri]{5} [Tröii]{4}.",
+ "JON.2.9": "[Ich]{2} aber{1} [wott]{6} [dir]{7,8} [mit]{3} [lutem]{4} [Dank]{5} [opfere]{6}; [was]{9} [ich versproche han]{10}, [das erfülle ich]{11}. [D Rettig]{12,13} [ghört]{14} [JHWH]{15}.»",
+ "JON.2.10": "Da{1} [hät]{2} [JHWH]{3} [zum]{4} [Fisch]{5} [gredt]{2}, und{6} [dä hät]{7} [de Jona]{9} [as]{10,11} [troche Land]{12} [usgspuckt]{7}. ~8(" + OBJ_G + ")",
  # ------------------------------------------------------------ Kapitel 3
- "JON.3.1": "Und{1} [es isch]{2} [s Wort]{3} [vo JHWH]{4} [es zweits Mal]{7} [zum]{5} [Jona]{6} [cho]{2}: ~8(" + LEMOR_G + ") ~9(" + LEMOR_G + ")",
- "JON.3.2": "«[Stand uf]{1}, [gang]{2} [uf]{3} [Ninive]{4}, [di]{5,7} [gross]{8} [Stadt]{6}, und{9} [rüef]{10} [ire]{11,12} [d]{14} [Botschaft]{15} [zue]{10}, [wo]{16} [ich]{17} [dir]{19,20} [säge]{18}!» ~13(" + OBJ_G + ")",
- "JON.3.3": "Da{1} [hät sich]{2} [de Jona]{3} [ufgmacht]{2} und{4} [isch]{5} [uf]{6} [Ninive]{7} [gange]{5}, [nach]{8} [em Wort]{9} [vo JHWH]{10}. [Ninive]{12} aber{11} [isch]{13} [e Stadt]{14} [gsii]{13}, [gross]{15} [vor]{16} [Gott]{17}, [en Wäg]{18} [vo drei]{19} [Täg]{20}.",
- "JON.3.4": "Und{1} [de Jona]{3} [hät aagfange]{2}, [i]{6} [d Stadt]{7} [ine z gaa]{4,5}, [en Wäg]{8} [vo eim]{10} [Taag]{9}, und{11} [er hät usgrüeft]{12} und{13} [gseit]{14}: «[No]{15} [vierzg]{16} [Täg]{17}, und{18} [Ninive]{19} [wird umgstürzt]{20}!»",
+ "JON.3.1": "Und{1} [s Wort]{3} [vo JHWH]{4} [isch]{2} [es zweits Mal]{7} [zum]{5} [Jona]{6} [choo]{2}: ~8(" + LEMOR_G + ") ~9(" + LEMOR_G + ")",
+ "JON.3.2": "«[Stand uuf]{1}, [gang]{2} [uf]{3} [Ninive]{4}, [di]{5,7} [gross]{8} [Stadt]{6}, und{9} [rüef]{10} [ire]{11,12} [d]{14} [Botschaft]{15} [zue]{10}, [wo]{16} [ich]{17} [dir]{19,20} [säge]{18}!» ~13(" + OBJ_G + ")",
+ "JON.3.3": "Da{1} [hät sich]{2} [de Jona]{3} [ufgmacht]{2} und{4} [isch]{5} [uf]{6} [Ninive]{7} [gange]{5}, [wie s]{8} [JHWH]{10} [gseit hät]{9}. [Ninive]{12} aber{11} [isch]{13} [e Stadt]{14} [gsii]{13}, [gross]{15} [vor]{16} [Gott]{17}, [drü]{19} [Täg]{20} [z laufe]{18}.",
+ "JON.3.4": "Und{1} [de Jona]{3} [hät aagfange]{2}, [i]{6} [d Stadt]{7} [ine z gaa]{4,5}, [ei]{10} [Tag]{9} [lang]{8}, und{11} [er hät usgrüeft]{12} und{13} [gseit]{14}: «[No]{15} [vierzg]{16} [Täg]{17}, und{18} [Ninive]{19} [wird umgstürzt]{20}!»",
  "JON.3.5": "Da{1} [händ]{2} [d Lüüt]{3} [vo Ninive]{4} [a]{5} [Gott]{6} [glaubt]{2}, und{7} [si händ]{8} [es Faschte]{9} [usgrüeft]{8} und{10} [händ]{11} [Sacktuech]{12} [aagleit]{11}, [vom]{13} [Gröschte]{14,15} [bis zum]{16,17} [Chliinschte]{18,19}.",
- "JON.3.6": "Und{1} [d]{3} [Nachricht]{4} [isch]{2} [zum]{5} [König]{6} [vo Ninive]{7} [cho]{2}; und{8} [er isch]{9} [vo]{10} [sim]{12} [Troon]{11} [ufgstande]{9} und{13} [hät]{14} [sin]{16} [Mantel]{15} [vo sich]{17,18,19} [abzoge]{14} und{20} [hät sich]{21} [in Sacktuech]{22} [ghüllt]{21} und{23} [sich]{24} [i]{25} [d]{26} [Äsche]{27} [gsetzt]{24}.",
- "JON.3.7": "Und{1} [er hät la usrüefe]{2} und{3} [säge]{4} [z]{5} [Ninive]{6}: «[Uf Befeel]{7,8} [vom]{9} [König]{10} und{11} [vo sine]{13} [Grosse]{12}: [Mänsch]{16,17} und{18} [Vee]{19,20}, [Rind]{21,22} und{23} [Schaf]{24,25} [söled]{27} [nöd]{26} [s Gringscht]{28} [verchoschte]{27}; [si söled]{30} [nöd]{29} [weide]{30}, und{31} [Wasser]{32} [söled si]{34} [nöd]{33} [trinke]{34}. ~14(" + LEMOR_G + ") ~15(" + LEMOR_G + ")",
- "JON.3.8": "Und{1} [si söled sich]{2} [in Sacktuech]{3} [hülle]{2}, [Mänsch]{4,5} und{6} [Vee]{7,8}, und{9} [si söled]{10} [mit]{13} [aller Chraft]{14} [zu]{11} [Gott]{12} [rüefe]{10}, und{15} [si söled umchere]{16}, [jede]{17} [vo]{18} [sim]{20} [böse]{21,22} [Wäg]{19} und{23} [vo]{24} [de]{25} [Gwalt]{26}, [wo]{27} [a]{28} [ire]{30} [Händ]{29} isch.",
- "JON.3.9": "[Wär]{1} [weiss]{2}, öb [Gott]{6,7} [umcheert]{3} und{4} [es en reut]{5} und{8} [er sich abwändet]{9} [vo]{10} [de Gluet]{11} [vo sim]{13} [Zorn]{12}, und{14} [mir]{16} [nöd]{15} [zgrund gönd]{16}.»",
- "JON.3.10": "Und{1} [Gott]{3,4} [hät]{2} [ires]{7} [Tue]{6} [gseh]{2}, [dass]{8} [si umgcheert sind]{9} [vo]{10} [irem]{12} [böse]{13,14} [Wäg]{11}. Da{15} [hät s]{16} [Gott]{17,18} [greut]{16} [wäge em]{19,20} [Unheil]{21}, [wo]{22} [er aagchündt hät]{23}, [ine]{26,27} [aaztue]{24,25}, und{28} [er hät s]{30} [nöd]{29} [gmacht]{30}. ~5(" + OBJ_G + ")",
+ "JON.3.6": "Und{1} [d]{3} [Nachricht]{4} [isch]{2} [zum]{5} [Chönig]{6} [vo Ninive]{7} [choo]{2}; und{8} [er isch]{9} [vo]{10} [sim]{12} [Thron]{11} [ufgstande]{9} und{13} [hät]{14,17,18,19} [sin]{16} [Mantel]{15} [abgleit]{14,17,18,19} und{20} [hät sich]{21} [in Sacktuech]{22} [ghüllt]{21} und{23} [sich]{24} [i]{25} [d]{26} [Äsche]{27} [gsetzt]{24}.",
+ "JON.3.7": "Und{1} [er hät laa usrüefe]{2} und{3} [säge]{4} [z]{5} [Ninive]{6}: «[Uf Befehl]{7,8} [vom]{9} [Chönig]{10} und{11} [vo sine]{13} [Grosse]{12}: [Mänsch]{16,17} und{18} [Veh]{19,20}, [Rinder]{21,22} und{23} [Schaf]{24,25} [söled]{27} [nüüt]{26,28} [versueche]{27}; [si söled]{30} [nöd]{29} [weide]{30}, und{31} [Wasser]{32} [söled si]{34} [kei]{33} [trinke]{34}. ~14(" + LEMOR_G + ") ~15(" + LEMOR_G + ")",
+ "JON.3.8": "Und{1} [si söled sich]{2} [in Sacktuech]{3} [hülle]{2}, [Mänsch]{4,5} und{6} [Veh]{7,8}, und{9} [si söled]{10} [mit]{13} [aller Chraft]{14} [zu]{11} [Gott]{12} [rüefe]{10}, und{15} [si söled umchehre]{16}, [jede]{17} [vo]{18} [sim]{20} [böse]{21,22} [Wäg]{19} und{23} [vo]{24} [de]{25} [Gwalt]{26}, [wo]{27} [a]{28} [ire]{30} [Händ]{29} [chläbt]{27}.",
+ "JON.3.9": "[Wär]{1} [weiss]{2}, vilicht [chehrt]{3} [Gott]{6,7} [um]{3} und{4} [s röit en]{5}, und{8} [er laat ab]{9} [vo]{10} [sim]{13} [glüehende]{11} [Zorn]{12}, und{14} [mir]{16} [gönd]{16} [nöd]{15} [zgrund]{16}.»",
+ "JON.3.10": "Und{1} [Gott]{3,4} [hät gseh]{2}, [was si gmacht händ]{6,7}: [dass]{8} [si umgchehrt sind]{9} [vo]{10} [irem]{12} [böse]{13,14} [Wäg]{11}. Da{15} [hät s]{16} [Gott]{17,18} [gröit]{16} [wäge]{19,20} [em Unheil]{21}, [won]{22} [er gseit hät]{23}, [er well s]{24,25} [ine]{26,27} [aatue]{24,25}, und{28} [er hät s]{30} [nöd]{29} [gmacht]{30}. ~5(" + OBJ_G + ")",
  # ------------------------------------------------------------ Kapitel 4
- "JON.4.1": "Das aber{1} [isch]{2} [em Jona]{3,4} [bös]{2} [vorcho]{2}, [en grosse]{6} [Ärger]{5}, und{7} [er isch toub worde]{8-10:idiom}.",
- "JON.4.2": "Und{1} [er hät]{2} [zu]{3} [JHWH]{4} [bättet]{2} und{5} [gseit]{6}: «[Ach]{7}, [JHWH]{8}, isch [das]{11} [nöd]{10} [mis]{13} [Wort]{12} gsii, [solang]{14} [ich]{16} [i]{17} [mim]{19} [Land]{18} [gsii bin]{15}? [Drum]{20,21} [bin ich]{22} [zersch]{22} [uf]{26} [Tarschisch]{25} [gflüchtet]{23,24}; [dänn]{27} [ich han gwüsst]{28}, [dass]{29} [du]{30} [en gnädige]{32} und{33} [barmhärzige]{34} [Gott]{31} bisch, [langsam]{35} [zum Zorn]{36} und{37} [riich]{38} [a Tröii]{39}, und{40} [dich]{41} [s]{42,43} [Unheil]{44} [reut]{41}. ~9(" + Q_G + ")",
- "JON.4.3": "[Und jetzt]{1,2}, [JHWH]{3}, [nimm]{4} [doch]{5} [mis]{8} [Läbe]{7} [vo]{9} [mir]{10}; [dänn]{11} [besser]{12} isch [min]{14} [Tod]{13} [als]{15} [mis]{17} [Läbe]{16}.» ~6(" + OBJ_G + ")",
- "JON.4.4": "Und{1} [JHWH]{3} [hät gseit]{2}: «[Isch es rächt]{4,5}, dass [du]{7,8} [toub bisch]{6}?»",
- "JON.4.5": "Und{1} [de Jona]{3} [isch]{2} [us]{4} [de]{5} [Stadt]{6} [use gange]{2} und{7} [hät sich]{8} [östlich]{9,10} [vo de Stadt]{11,12} [anegsetzt]{8}. Und{13} [er hät]{14} [sich]{15,16} [dört]{17} [e Hütte]{18} [gmacht]{14}, und{19} [isch]{20} [drunder]{21,22} [im]{23} [Schatte]{24} [gsässe]{20}, [bis]{25,26} [er gseet]{27}, [was]{28} [i]{30} [de Stadt]{31} [passiert]{29}.",
- "JON.4.6": "Und{1} [JHWH]{3} [Gott]{4} [hät]{2} [en Rizinus]{5} [bstellt]{2}, und{6} [dä isch]{7} [über]{8,9,10} [de Jona]{11} [ufegwachse]{7}, [zum]{12} [Schatte]{14} [über]{15} [sim]{17} [Chopf]{16} [z sii]{13}, [zum]{18} [en]{20,21} [vo]{22} [sim]{24} [Unmuet]{23} [z rette]{19}. Und{25} [de Jona]{27} [hät sich]{26} [über]{28} [de]{29} [Rizinus]{30} [gfröit]{26}, [mit ere grosse]{32} [Fröid]{31}.",
- "JON.4.7": "Da{1} [hät]{2} [Gott]{3,4} [en Wurm]{5} [bstellt]{2}, [wo]{6} [d]{8} [Morgeröti]{9} [ufgange isch]{7} [am]{10} [nächschte Taag]{11}, und{12} [dä hät]{13} [de]{15} [Rizinus]{16} [gstoche]{13}, und{17} [er isch verdorret]{18}. ~14(" + OBJ_G + ")",
- "JON.4.8": "[Und es isch gscheh]{1,2}, [wo]{3} [d]{5} [Sunne]{6} [ufgange isch]{4}, da{7} [hät]{8} [Gott]{9} [en heisse]{12} [Oschtwind]{10,11} [bstellt]{8}, und{13} [d]{15} [Sunne]{16} [hät]{14} [uf]{17} [de Chopf]{18} [vom Jona]{19} [gstoche]{14}, und{20} [er isch ohnmächtig worde]{21}. Und{22} [er hät]{23} [sich]{25,26} [gwünscht]{23}, [z sterbe]{27,28}, und{29} [gseit]{30}: «[Besser]{31} isch [min]{33} [Tod]{32} [als]{34} [mis]{36} [Läbe]{35}.» ~24(" + OBJ_G + ")",
- "JON.4.9": "Da{1} [hät]{2} [Gott]{3} [zum]{4} [Jona]{5} [gseit]{2}: «[Isch es rächt]{6,7}, dass [du]{9,10} [toub bisch]{8} [wäge]{11} [em]{12} [Rizinus]{13}?» Und{14} [er hät gseit]{15}: «[Mit Rächt]{16} [bin ich]{18,19} [toub]{17}, [bis]{20} [in Tod]{21}!»",
- "JON.4.10": "Und{1} [JHWH]{3} [hät gseit]{2}: «[Du]{4} [häsch Mitleid]{5} [mit]{6} [em]{7} [Rizinus]{8}, [wo]{9} [du dich]{11} [nöd]{10} [drum]{12,13} [abgmüet häsch]{11} und{14} [wo]{17} [du]{16} [nöd]{15} [groozoge häsch]{16}, [wo]{18} [i ere Nacht]{19,20:idiom} [entstande isch]{21} und{22} [i ere Nacht]{23,24:idiom} [zgrund gange isch]{25}.",
- "JON.4.11": "Und{1} [ich]{2}, [sött ich]{4} [nöd]{3} [Mitleid ha]{4} [mit]{5} [Ninive]{6}, [de]{7,9} [grosse]{10} [Stadt]{8}, [wo]{11} [mee]{15} [als]{16} [hundertzwänzgtuusig]{17,18,19} [Mänsche]{20} [drin]{13,14} [sind]{12}, [wo]{21} [nöd]{22} [zwüsche]{24} [irer]{26} [Rächte]{25} [und]{27} [irer]{29} [Linke]{28} [chönd underscheide]{23}, und{30} dezue [vil]{32} [Vee]{31}?»",
+ "JON.4.1": "Das aber{1} [isch]{2} [em Jona]{3,4} [bös]{2} [vorchoo]{2}, [en grosse]{6} [Ärger]{5}, und{7} [er isch wüetend worde]{8-10:idiom}.",
+ "JON.4.2": "Und{1} [er hät]{2} [zu]{3} [JHWH]{4} [bättet]{2} und{5} [gseit]{6}: «[Ach]{7}, [JHWH]{8}, han ich [das]{11} [nöd]{10} [gseit]{12,13}, [wo]{14} [ich no]{16} [i]{17} [mim]{19} [Land]{18} [gsii bin]{15}? [Drum]{20,21} [bi ich]{22} [zerscht]{22} [uf]{26} [Tarschisch]{25} [gflüchtet]{23,24}; [dänn]{27} [ich han gwüsst]{28}, [dass]{29} [du]{30} [en gnädige]{32} und{33} [barmherzige]{34} [Gott]{31} bisch, [langsam]{35} [zum Zorn]{36} und{37} [riich]{38} [a Tröii]{39}, und{40} [dass dich]{41} [s]{42,43} [Unheil]{44} [röit]{41}. ~9(" + Q_G + ")",
+ "JON.4.3": "[Und jetzt]{1,2}, [JHWH]{3}, [nimm]{4} [doch]{5} [mis]{8} [Läbe]{7} [vo]{9} [mir]{10}; [dänn]{11} [min]{14} [Tod]{13} [isch]{12} [besser]{12} [als]{15} [mis]{17} [Läbe]{16}.» ~6(" + OBJ_G + ")",
+ "JON.4.4": "Und{1} [JHWH]{3} [hät gseit]{2}: «[Isch es rächt]{4,5}, dass [du]{7,8} [wüetend bisch]{6}?»",
+ "JON.4.5": "Und{1} [de Jona]{3} [isch]{2} [us]{4} [de]{5} [Stadt]{6} [usegange]{2} und{7} [hät sich]{8} [östlich]{9,10} [vo de Stadt]{11,12} [anegsetzt]{8}. Und{13} [er hät]{14} [sich]{15,16} [dört]{17} [e Hütte]{18} [baut]{14}, und{19} [isch]{20} [drunder]{21,22} [im]{23} [Schatte]{24} [gsässe]{20}, [bis]{25,26} [er gseht]{27}, [was]{28} [i]{30} [de Stadt]{31} [passiert]{29}.",
+ "JON.4.6": "Und{1} [JHWH]{3} [Gott]{4} [hät]{2} [en Rizinus]{5} [bstellt]{2}, und{6} [dä isch]{7} [über]{8,9,10} [de Jona]{11} [ufegwachse]{7}, [damit er]{12} [Schatte]{14} [über]{15} [sim]{17} [Chopf]{16} [git]{13} [und]{18} [en]{20,21} [vo]{22} [sim]{24} [Unmuet]{23} [befreit]{19}. Und{25} [de Jona]{27} [hät]{26} [a]{28} [däm]{29} [Rizinus]{30} [e grossi]{32} [Fröid]{31} [ghaa]{26}.",
+ "JON.4.7": "Da{1} [hät]{2} [Gott]{3,4} [en Wurm]{5} [bstellt]{2}, [wo]{6} [d]{8} [Morgeröti]{9} [ufgange isch]{7} [am]{10} [nächschte Tag]{11}, und{12} [dä hät]{13} [de]{15} [Rizinus]{16} [gstoche]{13}, und{17} [er isch verdorret]{18}. ~14(" + OBJ_G + ")",
+ "JON.4.8": "[Und]{1,2} [wo]{3} [d]{5} [Sunne]{6} [ufgange isch]{4}, da{7} [hät]{8} [Gott]{9} [en heisse]{12} [Oschtwind]{10,11} [bstellt]{8}, und{13} [d]{15} [Sunne]{16} [hät]{14} [em Jona]{19} [uf]{17} [de Chopf]{18} [brännt]{14}, und{20} [er isch ohnmächtig worde]{21}. Und{22} [er hät]{23} [sich]{25,26} [de Tod]{27,28} [gwünscht]{23} und{29} [gseit]{30}: «[Min]{33} [Tod]{32} [isch]{31} [besser]{31} [als]{34} [mis]{36} [Läbe]{35}.» ~24(" + OBJ_G + ")",
+ "JON.4.9": "Da{1} [hät]{2} [Gott]{3} [zum]{4} [Jona]{5} [gseit]{2}: «[Isch es rächt]{6,7}, dass [du]{9,10} [wüetend bisch]{8} [wäge]{11} [em]{12} [Rizinus]{13}?» Und{14} [er hät gseit]{15}: «[Mit Rächt]{16} [bi ich]{18,19} [wüetend]{17}, [bis]{20} [in Tod]{21}!»",
+ "JON.4.10": "Und{1} [JHWH]{3} [hät gseit]{2}: «[Du]{4} [häsch Mitleid]{5} [mit]{6} [em]{7} [Rizinus]{8}, [wo]{9} [du dich]{11} [nöd]{10} [drum]{12,13} [gmüet häsch]{11} und{14} [wo]{17} [du]{16} [nöd]{15} [grosszoge häsch]{16}, [wo]{18} [i ere Nacht]{19,20:idiom} [gwachse isch]{21} und{22} [i ere Nacht]{23,24:idiom} [zgrund gange isch]{25}.",
+ "JON.4.11": "Und{1} [ich]{2}, [sött ich]{4} [nöd]{3} [Mitleid haa]{4} [mit]{5} [Ninive]{6}, [de]{7,9} [grosse]{10} [Stadt]{8}, [wo]{11} [meh]{15} [als]{16} [hundertzwänzgtuusig]{17,18,19} [Mänsche]{20} [drin]{13,14} [sind]{12}, [wo]{21} [nöd]{22} [chönd underscheide]{23} [zwüsche]{24} [rächts]{25,26} [und]{27} [links]{28,29}, und{30} dezue [vil]{32} [Veh]{31}?»",
 }
 
 JHWH_DE = ("Der Gottesname wird im Judentum nicht ausgesprochen; gelesen wird «Adonai» (der Herr). Viele deutsche Bibeln schreiben "
            "«der HERR». Hier steht der Name in seinen vier Konsonanten, damit sichtbar bleibt, dass im Hebräischen ein Name steht.")
 JHWH_GSW = ("De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili düütschi Bible schriibed «der HERR». "
-            "Da staat de Name i sine vier Konsonante, demit me gseet, dass im Hebräische en Name staat.")
+            "Da staat de Name i sine vier Konsonante, damit me gseht, dass im Hebräische en Name staat.")
 RAA_DE = ("רָעָה ist ein Leitwort des Buches. Die Wurzel רעע «böse, schlecht sein» steht in Jona zehnmal (nach den Lemmata von MACULA: "
           "Nomen רָעָה 7×, Adjektiv רַע 2×, Verb רָעַע 1×; das gleich geschriebene רָעָה «weiden» in [[JON.3.7]] ist ein anderes Wort): "
           "die «Bosheit» Ninives ([[JON.1.2]]), das «Unheil» des Sturms ([[JON.1.7]], [[JON.1.8]]), der «böse» Weg der Niniviten "
           "([[JON.3.8]], [[JON.3.10]]), das «Unheil», das Gott angekündigt hat und das ihn reut ([[JON.3.10]], [[JON.4.2]]), Jonas "
           "«Missfallen» ([[JON.4.1]]) und sein «Unmut» ([[JON.4.6]]). Das Deutsche braucht verschiedene Wörter; im Hebräischen verknüpft "
           "das eine Wort die Erzählung.")
-RAA_GSW = ("רָעָה isch es Leitwort vom Buech. D Wurzle רעע «bös, schlächt sii» staat im Jona zäämal (nach de Lemmata vo MACULA: "
+RAA_GSW = ("רָעָה isch es Leitwort vom Buech. D Wurzle רעע «bös, schlächt sii» staat im Jona zähmal (nach de Lemmata vo MACULA: "
            "Nomen רָעָה 7×, Adjektiv רַע 2×, Verb רָעַע 1×; s gliich gschribne רָעָה «weide» i [[JON.3.7]] isch es anders Wort): "
            "d «Bosheit» vo Ninive ([[JON.1.2]]), s «Unheil» vom Sturm ([[JON.1.7]], [[JON.1.8]]), de «bös» Wäg vo de Niniviter "
-           "([[JON.3.8]], [[JON.3.10]]), s «Unheil», wo Gott aagchündt hät und wo en reut ([[JON.3.10]], [[JON.4.2]]), de «Ärger» vom "
+           "([[JON.3.8]], [[JON.3.10]]), s «Unheil», wo Gott aagchündet hät und won en röit ([[JON.3.10]], [[JON.4.2]]), de «Ärger» vom "
            "Jona ([[JON.4.1]]) und sin «Unmuet» ([[JON.4.6]]). Im Düütsche bruucht s verschideni Wörter; im Hebräische verbindet s eine "
            "Wort d Erzählig.")
 NIHAM_DE = ("נִחַם (Nifal) meint, dass jemand eine Absicht oder ein angekündigtes Urteil aus innerer Bewegung zurücknimmt. «Reuen» ist "
@@ -160,10 +161,10 @@ NIHAM_DE = ("נִחַם (Nifal) meint, dass jemand eine Absicht oder ein angekü
             "von seiner Bosheit um, so reut Gott das angedrohte Unheil. Wie sich das zu [[NUM.23.19]] und [[1SA.15.29]] («Gott ist nicht ein "
             "Mensch, dass ihn etwas reute») verhält, wird in der Auslegung verschieden beantwortet. Das Wort steht in Jona dreimal "
             "([[JON.3.9]], [[JON.3.10]], [[JON.4.2]]).")
-NIHAM_GSW = ("נִחַם (Nifal) meint, dass öpper e Absicht oder es aagchündts Urteil us innerer Bewegig zruggnimmt. «Reue» isch di "
+NIHAM_GSW = ("נִחַם (Nifal) meint, dass öpper e Absicht oder es aagchündets Urteil us innerer Bewegig zruggnimmt. «Röie» isch di "
              "traditionell Widergaab; si setzt bi Gott kei Schuld voruus. [[JER.18.8]] beschriibt grad dä Fall: Wänn es Volk vo sinere "
-             "Bosheit umcheert, dänn reut Gott s aadroote Unheil. Wie sich das zu [[NUM.23.19]] und [[1SA.15.29]] verhaltet, beantwortet "
-             "d Uslegig verschide. S Wort staat im Jona drüümal ([[JON.3.9]], [[JON.3.10]], [[JON.4.2]]).")
+             "Bosheit umchehrt, dänn röit Gott s aadroote Unheil. Wie sich das zu [[NUM.23.19]] und [[1SA.15.29]] verhaltet, beantwortet "
+             "d Uslegig verschide. S Wort staat im Jona drümal ([[JON.3.9]], [[JON.3.10]], [[JON.4.2]]).")
 
 # Übersetzungsentscheidungen: (Stelle, Zieltext, Art, hebräisch, wörtlicher, andere Möglichkeiten, Begründung)
 DEC_DE = [
@@ -384,7 +385,7 @@ DEC_GSW = [
  # Kapitel 1
  ("JON.1.1", "Jona", "literal", "יוֹנָה", None, None,
   "De Name heisst «Tube». En Prophet Jona, Sohn vom Amittai, us Gat-Hefer wird i [[2KI.14.25]] zur Ziit vom Jerobeam II. (8. Jh. v. Chr.) "
-  "erwäänt. Öb s Buech dä Prophet historisch meint oder e bekannti Gstalt in e Leererzählig stellt, isch umstritte."),
+  "erwähnt. Öb s Buech dä Prophet historisch meint oder e bekannti Gstalt in e Leererzählig stellt, isch umstritte."),
  ("JON.1.1", "vo JHWH", "interpretive", "יְהוָה", None, ["vom HERR", "vom Ewige", "vo Jahwe"], JHWH_GSW),
  ("JON.1.2", "gross", "literal", "הָעִיר הַגְּדוֹלָה", None, None,
   "«Di gross Stadt» isch e Leitformle vom Buech ([[JON.1.2]], [[JON.3.2]], [[JON.3.3]], [[JON.4.11]]). S Wort גָּדוֹל «gross» staat im Jona "
@@ -399,102 +400,102 @@ DEC_GSW = [
   "Tarschisch liit im wiite Weschte am Meer; oft dänkt me a Tartessos z Südspanie, sicher isch das nöd. De Jona flüchtet i di anderi "
   "Richtig als Ninive im Oschte."),
  ("JON.1.3", "abegange", "literal", "וַיֵּרֶד", None, None,
-  "«Abegaa» (יָרַד) ziet sich dur d Flucht: uf Jafo, is Schiff ([[JON.1.3]]), is Innerscht ([[JON.1.5]]) und im Gebätt bis zu de Wurzle vo "
+  "«Abegaa» (יָרַד) zieht sich dur d Flucht: uf Jafo, is Schiff ([[JON.1.3]]), is Innerscht ([[JON.1.5]]) und im Gebätt bis zu de Wurzle vo "
   "de Bärg ([[JON.2.6]])."),
- ("JON.1.4", "gschleuderet", "literal", "הֵטִיל", None, ["grüert"],
+ ("JON.1.4", "gschlöideret", "literal", "הֵטִיל", None, ["grüert"],
   "S gliich Verb staat für s Rüere vo de Ladig ([[JON.1.5]]) und vom Jona ([[JON.1.12]], [[JON.1.15]])."),
- ("JON.1.4", "isch nooch draa gsii", "interpretive", "חִשְּׁבָה", "s Schiff hät tänkt", None,
+ ("JON.1.4", "isch nöch draa gsii", "interpretive", "חִשְּׁבָה", "s Schiff hät tänkt", None,
   "Wörtlich «s Schiff hät tänkt, z verbräche»: S Schiff wird wie öppis beschribe, wo dänkt."),
  ("JON.1.5", "Gott", "interpretive", "אֱלֹהָיו", None, ["sine Götter"], "אֱלֹהִים cha «Gott» oder «Götter» heisse."),
- ("JON.1.5", "isch tüüf iigschlaafe", "literal", "וַיֵּרָדַם", None, None,
+ ("JON.1.5", "isch tüüf iigschlafe", "literal", "וַיֵּרָדַם", None, None,
   "רָדַם «tüüf iischlaafe» tönt wie יָרַד «abegaa»: De Jona sinkt immer tüüfer."),
- ("JON.1.6", "de Kapitään", "adapted", "רַב הַחֹבֵל", "de Oberscht vo de Seelüüt", None, "חֹבֵל isch de Seemaa."),
- ("JON.1.6", "Stand uf", "literal", "קוּם", None, None, "De Kapitään seit em Jona di gliiche Wort wie Gott i [[JON.1.2]]: «Stand uf … rüef»."),
+ ("JON.1.6", "de Kapitän", "adapted", "רַב הַחֹבֵל", "de Oberscht vo de Seelüüt", None, "חֹבֵל isch de Seemaa."),
+ ("JON.1.6", "Stand uuf", "literal", "קוּם", None, None, "De Kapitän seit em Jona di gliiche Wort wie Gott i [[JON.1.2]]: «Stand uuf … rüef»."),
  ("JON.1.6", "dänkt", "interpretive", "יִתְעַשֵּׁת", None, ["sich um öis kümmeret"],
   "Es seltes Verb; d Bedüütig wird us em Zämehang und us em Aramäische erschlosse."),
  ("JON.1.7", "Unheil", "interpretive", "הָרָעָה", "s Böse", None, "S gliich Wort wie «Bosheit» i [[JON.1.2]]."),
- ("JON.1.9", "En Hebräer", "literal", "עִבְרִי", None, ["En Chnächt vo JHWH"],
+ ("JON.1.9", "en Hebräer", "literal", "עִבְרִי", None, ["En Chnächt vo JHWH"],
   "So nänned sich Israelite vor allem gägenüber Frömde (z. B. [[GEN.39.14]], [[1SA.4.6]]). D Septuaginta liest «Chnächt vom Herr» (nach "
   "allgemeinem Wüsse, nöd a Date prüeft)."),
  ("JON.1.9", "fürcht", "interpretive", "יָרֵא", None, ["verehr"],
   "Gmeint isch Gottesfurcht. «Fürchte» bliibt staa, wil s Wort d Szene verbindet: D Seelüüt fürched sich ([[JON.1.5]]), fürched sich «mit ere "
   "grosse Furcht» ([[JON.1.10]]) und fürchted am Schluss JHWH ([[JON.1.16]])."),
- ("JON.1.10", "mit ere grosse", "literal", "יִרְאָה גְדוֹלָה", "si händ e grossi Furcht gfürchtet", None,
+ ("JON.1.10", "grossi Angscht", "adapted", "יִרְאָה גְדוֹלָה", "si händ e grossi Furcht gfürchtet", None,
   "S Hebräisch verstercht s Verb mit em verwandte Nomen; ebeso i [[JON.1.16]], [[JON.4.1]] und [[JON.4.6]]."),
  ("JON.1.13", "händ gruederet", "interpretive", "וַיַּחְתְּרוּ", "si händ grabe", None,
   "חָתַר heisst suscht «durebräche»; da s aagsträngte Ruedere gäge d Wälle."),
- ("JON.1.17", "bstellt", "interpretive", "וַיְמַן", None, ["parat gmacht", "la cho"],
+ ("JON.1.17", "bstellt", "interpretive", "וַיְמַן", None, ["parat gmacht", "la choo"],
   "מָנָה heisst «zueteile, bestimme». S Wort staat im Jona viermal (nach MACULA): bim Fisch und bim Rizinus, Wurm und Oschtwind ([[JON.4.6]], "
   "[[JON.4.7]], [[JON.4.8]]). Gott verfüegt über Tier, Pflanze und Wätter."),
  ("JON.1.17", "Fisch", "literal", "דָּג", None, ["Wal"],
   "De Text seit «en grosse Fisch» und nännt kei Art. D Septuaginta seit κῆτος «grosses Meertier» (nach allgemeinem Wüsse); drum staat i "
-  "[[MAT.12.40]] und i vilne Übersetzige «Wal». D «drei Täg und drei Nächt» nimmt [[MAT.12.40]] uf."),
+  "[[MAT.12.40]] und i vilne Übersetzige «Wal». D «drei Täg und drei Nächt» nimmt [[MAT.12.40]] uuf."),
  # Kapitel 2
  ("JON.2.1", "Fisch", "literal", "הַדָּגָה", None, None,
   "Da staat di wiiblich Form דָּגָה, i [[JON.1.17]] und [[JON.2.10]] דָּג. Meischtens gilt das als gliichbedüütendi Nebeform; e jüdischi "
   "Uslegigstradition, wo de Raschi ufnimmt, verzellt drus vo me zweite, wiibliche Fisch."),
- ("JON.2.2", "Ich han grüeft", "interpretive", "קָרָאתִי", None, ["Ich rüef"],
-  "S Gebätt ([[JON.2.2]]–[[JON.2.9]]) isch als Dankliid vo me Einzelne gstaltet: Es luegt uf Not, Hilferuef und Rettig zrugg und hört mit "
+ ("JON.2.2", "zu JHWH grüeft", "interpretive", "קָרָאתִי", None, ["Ich rüefe"],
+  "S Gebätt ([[JON.2.2]]–[[JON.2.9]]) isch als Danklied vo me Einzelne gstaltet: Es luegt uf Not, Hilferuef und Rettig zrugg und hört mit "
   "Opfer, Versproche und Bekänntnis uf ([[JON.2.9]]). Vili Wändige erinnered a Psalme (z. B. [[PSA.120.1]], [[PSA.18.6]], [[PSA.42.7]], "
   "[[PSA.69.1]]). Umstritte isch, öb s Liid vo Aafang aa zur Erzählig ghört hät und wie s zu de Lag vom Jona passt: Die einte läsed s "
   "Verschluckt-Wärde dur de Fisch scho als Rettig us em Vertränke; anderi gsänd e gwollti Spannig, wil de Jona danket, ohni sini Flucht z "
   "erwääne. Da wird kei Dütig feschtgleit."),
- ("JON.2.2", "vom Toterich", "interpretive", "שְׁאוֹל", "vo de Scheol", ["vo de Underwält"],
+ ("JON.2.2", "vom Toteriich", "interpretive", "שְׁאוֹל", "vo de Scheol", ["vo de Underwält"],
   "שְׁאוֹל isch im Alte Teschtamänt de Ort vo de Tote."),
  ("JON.2.3", "Strömig", "interpretive", "נָהָר", "en Strom", None,
   "נָהָר isch suscht de Fluss; im Meer isch wohl d Strömig gmeint. De zweit Teil vom Vers stimmt wörtlich mit [[PSA.42.7]] überii."),
  ("JON.2.4", "Doch", "interpretive", "אַךְ", None, ["Wie söll ich je wider …?"],
   "אַךְ heisst «doch, sicher». Es paar Usleger änderet en Buechstabe und läsed אֵיךְ «wie?»; dänn wär de Satz e Chlag. D Übersetzig "
-  "folgt em überlieferete Text."),
- ("JON.2.5", "d Chäle", "interpretive", "נֶפֶשׁ", None, ["s Läbe", "d Seel"],
+  "folgt em überliferete Text."),
+ ("JON.2.5", "Hals", "interpretive", "נֶפֶשׁ", None, ["s Läbe", "d Seel"],
   "נֶפֶשׁ isch zersch Chäle und Ate, dänn s Läbe. «Bis a d Chäle» beschriibt s Vertränke; vgl. [[PSA.69.1]]."),
  ("JON.2.5", "d Urflut", "literal", "תְּהוֹם", None, ["d Tüüfi"], "תְּהוֹם isch d Urflut wie i [[GEN.1.2]]."),
  ("JON.2.8", "Götze", "interpretive", "הַבְלֵי שָׁוְא", "Hüüch vo de Nüütigkeit", ["nüütigi Götter"],
   "הֶבֶל «Hauch» staat oft für Götze (z. B. [[DEU.32.21]]); di gliich Wändig i [[PSA.31.6]]."),
  ("JON.2.8", "Tröii", "interpretive", "חַסְדָּם", None, ["iri Gnad"],
-  "Wörtlich «iri Tröii» (חֶסֶד): Entweder gänd si d Tröii uf, wo si Gott schuldig sind, oder si verlönd dä, wo ine tröi isch."),
+  "Wörtlich «iri Tröii» (חֶסֶד): Entweder gänd si d Tröii uuf, wo si Gott schuldig sind, oder si verlönd dä, wo ine tröi isch."),
  ("JON.2.9", "ghört", "interpretive", "לַיהוָה", "isch vo JHWH", ["chunnt vo JHWH"], "En bekänntnishafte Schluss; vgl. [[PSA.3.8]]."),
- ("JON.2.10", "usegchotzt", "literal", "וַיָּקֵא", "erbroche", ["usgspeut"], "קִיא heisst «erbräche»; de Usdruck isch drastisch."),
+ ("JON.2.10", "usgspuckt", "adapted", "וַיָּקֵא", "erbroche", ["usegchotzt", "erbroche"], "קִיא heisst «erbräche»; de Usdruck isch drastisch."),
  # Kapitel 3
  ("JON.3.2", "ire", "interpretive", "אֵלֶיהָ", None, ["gäge si"],
   "Da staat אֵלֶיהָ «zu ire», i [[JON.1.2]] עָלֶיהָ «gäge si». Di beide Präpositione wärded aber oft gliichbedüütend bruucht."),
  ("JON.3.3", "vor", "interpretive", "לֵאלֹהִים", "gross für Gott", ["e riisegrossi Stadt", "gross i de Auge vo Gott"],
   "D Wändig cha e Steigerig sii («göttlich gross», also riisig; vgl. [[GEN.23.6]], [[GEN.30.8]]). Si cha aber au heisse, dass Ninive für "
   "Gott gross, also wichtig isch; dörthi lauft s Buech i [[JON.4.11]]. Beides isch möglich."),
- ("JON.3.3", "vo drei", "interpretive", "מַהֲלַךְ שְׁלֹשֶׁת יָמִים", None, None,
+ ("JON.3.3", "drü Täg", "interpretive", "מַהֲלַךְ שְׁלֹשֶׁת יָמִים", None, None,
   "Unklar isch, öb drei Täg de Durchmässer, de Umfang oder d Ziit für en Gang dur alli Teil meined. S historisch Ninive isch nach de "
   "Usgrabige vill chliiner gsii (allgemeis Wüsse, nöd a Date prüeft)."),
  ("JON.3.4", "vierzg", "literal", "אַרְבָּעִים", None, ["drei"],
-  "D Septuaginta liest «no drei Täg» (nach allgemeinem Wüsse, nöd a Date prüeft). D ganz Botschaft vom Jona sind im Hebräische füüf Wörter."),
- ("JON.3.4", "wird umgstürzt", "interpretive", "נֶהְפָּכֶת", None, ["wird zerstört", "wird umgcheert"],
-  "הָפַךְ isch s Wort für de Undergang vo Sodom ([[GEN.19.25]]). Es cha aber au «umchere, verwandle» heisse (z. B. [[EXO.7.17]]). So cha "
-  "me de Satz im Nachhinein doppelsinnig läse: Ninive wird «umgcheert» – nöd zerstört, sondern veränderet."),
+  "D Septuaginta liest «no drei Täg» (nach allgemeinem Wüsse, nöd a Date prüeft). D ganz Botschaft vom Jona sind im Hebräische föif Wörter."),
+ ("JON.3.4", "wird umgstürzt", "interpretive", "נֶהְפָּכֶת", None, ["wird zerstört", "wird umgchehrt"],
+  "הָפַךְ isch s Wort für de Undergang vo Sodom ([[GEN.19.25]]). Es cha aber au «umchehre, verwandle» heisse (z. B. [[EXO.7.17]]). So cha "
+  "me de Satz im Nachhinein doppelsinnig läse: Ninive wird «umgchehrt» – nöd zerstört, sondern veränderet."),
  ("JON.3.5", "glaubt", "literal", "וַיַּאֲמִינוּ", None, ["vertraut"], "Di gliich Wändig wie bim Abraham ([[GEN.15.6]])."),
  ("JON.3.5", "Sacktuech", "adapted", "שַׂקִּים", "Säck", ["Truurchleider"], "Grobe Stoff, als Zeiche vo Truur und Buess treit."),
- ("JON.3.7", "Uf Befeel", "literal", "מִטַּעַם", None, None,
+ ("JON.3.7", "Uf Befehl", "literal", "מִטַּעַם", None, None,
   "טַעַם (eigentlich «Gschmack, Urteil») isch da de amtlich Erlass. Im gliiche Vers staat s verwandt Verb טָעַם «verchoschte»."),
- ("JON.3.8", "si söled umchere", "literal", "וְיָשֻׁבוּ", None, None,
-  "שׁוּב «umchere» verbindet [[JON.3.8]]–[[JON.3.10]]: D Mänsche söled umchere, vilicht «cheert» Gott «um» ([[JON.3.9]]), und si chered um "
+ ("JON.3.8", "si söled umchehre", "literal", "וְיָשֻׁבוּ", None, None,
+  "שׁוּב «umchehre» verbindet [[JON.3.8]]–[[JON.3.10]]: D Mänsche söled umchehre, vilicht «chehrt» Gott «um» ([[JON.3.9]]), und si chehred um "
   "([[JON.3.10]])."),
- ("JON.3.8", "Gwalt", "literal", "הֶחָמָס", None, ["Unrächt"], "חָמָס isch roochi Gwalt; mit dem Wort wird au d Schuld vor de Sintflut gnännt ([[GEN.6.11]])."),
+ ("JON.3.8", "Gwalt", "literal", "הֶחָמָס", None, ["Unrächt"], "חָמָס isch roochi Gwalt; mit däm Wort wird au d Schuld vor de Sintflut gnännt ([[GEN.6.11]])."),
  ("JON.3.9", "Wär", "literal", "מִי יוֹדֵעַ", None, ["Vilicht"],
   "Fascht gliich staat s i [[JOL.2.14]]: Buess zwingt Gott nöd zum Erbarme, si hofft druf."),
- ("JON.3.9", "es en reut", "interpretive", "וְנִחַם", None, ["es tuet im leid", "er änderet sin Entschluss"], NIHAM_GSW),
- ("JON.3.10", "greut", "interpretive", "וַיִּנָּחֶם", None, ["leid taa"], "Lueg [[JON.3.9]]."),
+ ("JON.3.9", "s röit en", "interpretive", "וְנִחַם", None, ["es tuet im leid", "er änderet sin Entschluss"], NIHAM_GSW),
+ ("JON.3.10", "gröit", "interpretive", "וַיִּנָּחֶם", None, ["leid taa"], "Lueg [[JON.3.9]]."),
  ("JON.3.10", "Unheil", "interpretive", "הָרָעָה", "s Böse", None,
-  "S gliich Wort wie bim «böse» Wäg: Wil si vo irem Böse umchered, laat Gott vom Böse ab, wo n er aagchündt hät."),
+  "S gliich Wort wie bim «böse» Wäg: Wil si vo irem Böse umchehred, laat Gott vom Böse ab, won er aagchündet hät."),
  # Kapitel 4
  ("JON.4.1", "bös", "interpretive", "וַיֵּרַע רָעָה גְדוֹלָה", "es isch bös gsii für de Jona, es grosses Böses", None,
-  "S Wort רָעָה, vo dem Ninive umgcheert isch und wo Gott nöd gmacht hät, trifft jetzt de Jona: S Erbarme vo Gott isch für in es «grosses "
+  "S Wort רָעָה, vo däm Ninive umgchehrt isch und wo Gott nöd gmacht hät, trifft jetzt de Jona: S Erbarme vo Gott isch für in es «grosses "
   "Übel». Lueg [[JON.1.2]]."),
  ("JON.4.2", "en gnädige", "traditional", "חַנּוּן וְרַחוּם", None, None,
-  "De Jona zitiert s Gottesbekänntnis us [[EXO.34.6]] (dört umgcheert «barmhärzig und gnädig»). Genau di gliich Reie mit em Schluss «und es "
-  "reut en s Unheil» staat i [[JOL.2.13]]; vgl. [[PSA.86.15]], [[PSA.103.8]], [[NEH.9.17]]. Was Israel tröschtet, nännt de Jona als Grund "
+  "De Jona zitiert s Gottesbekänntnis us [[EXO.34.6]] (dört umgchehrt «barmherzig und gnädig»). Genau di gliich Reie mit em Schluss «und es "
+  "röit en s Unheil» staat i [[JOL.2.13]]; vgl. [[PSA.86.15]], [[PSA.103.8]], [[NEH.9.17]]. Was Israel tröschtet, nännt de Jona als Grund "
   "für sini Flucht."),
  ("JON.4.2", "langsam", "literal", "אֶרֶךְ אַפַּיִם", "lang a de Nase", ["gedultig"], "«Lang a de Nase (Ate)» heisst: De Zorn chunnt nöd schnäll."),
  ("JON.4.2", "a Tröii", "interpretive", "חֶסֶד", None, ["a Gnad", "a Güeti"], "Wie im Buech Rut staat für חֶסֶד «Tröii»; vgl. [[JON.2.8]]."),
- ("JON.4.4", "Isch es rächt", "interpretive", "הַהֵיטֵב", None, ["Bisch du seer toub?"],
-  "הֵיטֵב cha «guet, rächt» oder verstercht «seer» heisse. De Jona git da kei Antwort."),
+ ("JON.4.4", "Isch es rächt", "interpretive", "הַהֵיטֵב", None, ["Bisch du sehr wüetend?"],
+  "הֵיטֵב cha «guet, rächt» oder verstercht «sehr» heisse. De Jona git da kei Antwort."),
  ("JON.4.5", "anegsetzt", "interpretive", "וַיֵּשֶׁב", None, None,
   "Es paar halted 4,5 für e Ruggbländ (de Jona wär scho während de vierzg Täg usegange); anderi läsed s der Reie nach."),
  ("JON.4.6", "en Rizinus", "interpretive", "קִיקָיוֹן", None, ["en Chürbis", "en Efeu", "en Wunderbaum"],
@@ -505,17 +506,17 @@ DEC_GSW = [
  ("JON.4.8", "heisse", "interpretive", "חֲרִישִׁית", None, ["schwüele"], "S Wort isch suscht nöd belegt; d Bedüütig «heiss, sängig» isch erschlosse."),
  ("JON.4.10", "häsch Mitleid", "interpretive", "חַסְתָּ", None, ["es tuet dir leid um", "du schonsch"],
   "חוּס heisst «Mitleid ha, verschone»; s gliich Verb staat i de Gägefraag vo Gott [[JON.4.11]]."),
- ("JON.4.10", "i ere Nacht", "adapted", "בִּן לַיְלָה", "Sohn vo nere Nacht", None, "S Hebräisch drückt Herkunft und Alter mit «Sohn» us."),
+ ("JON.4.10", "i ere Nacht", "adapted", "בִּן לַיְלָה", "Sohn vo nere Nacht", None, "S Hebräisch drückt Herkunft und Alter mit «Sohn» uus."),
  ("JON.4.10", "zgrund gange isch", "literal", "אָבָד", None, None, "S gliich Verb wie «zgrund gaa» i [[JON.1.6]], [[JON.1.14]] und [[JON.3.9]]."),
- ("JON.4.11", "Mitleid ha", "interpretive", "אָחוּס", None, None,
-  "De Satz hät keis Fragewort; dass er e Fraag isch, ergit sich us em Zämehang. S Buech hört mit dere Fraag uf; e Antwort vom Jona wird nöd "
+ ("JON.4.11", "Mitleid haa", "interpretive", "אָחוּס", None, None,
+  "De Satz hät keis Fragewort; dass er e Fraag isch, ergit sich us em Zämehang. S Buech hört mit dere Fraag uuf; e Antwort vom Jona wird nöd "
   "verzellt."),
  ("JON.4.11", "hundertzwänzgtuusig", "adapted", "שְׁתֵּים עֶשְׂרֵה רִבּוֹ", "zwölf Zäätuusigi", None, "רִבּוֹ isch e Zäätuusig."),
  ("JON.4.11", "chönd underscheide", "interpretive", "לֹא יָדַע בֵּין", "nöd wüsse zwüsche", None,
-  "D Wändig cha chliini Chind meine, wo rächts und links no nöd underscheided; oder alli Iiwoner, wo Gottes Wiisig nöd känned und drum "
+  "D Wändig cha chliini Chind meine, wo rächts und links no nöd underscheided; oder alli Iiwoner, wo d Wiisig vo Gott nöd känned und drum "
   "Rächt und Unrächt nöd chönd underscheide. Beides wird vertrette."),
- ("JON.4.11", "Vee", "literal", "בְהֵמָה", None, None,
-  "S Buech hört mit «vill Vee» uf: S Mitleid vo Gott schliesst au d Tier ii (vgl. [[JON.3.7]], [[PSA.36.6]])."),
+ ("JON.4.11", "Veh", "literal", "בְהֵמָה", None, None,
+  "S Buech hört mit «vill Veh» uuf: S Mitleid vo Gott schliesst au d Tier ii (vgl. [[JON.3.7]], [[PSA.36.6]])."),
 ]
 
 UNITS = [
@@ -563,17 +564,17 @@ UNITS = [
 UNITS_GSW = {
  "TU-JON-001-001-017": ("D Flucht vor JHWH", "De Jona söll gäge Ninive predige, flüchtet aber Richtig Tarschisch. JHWH schickt en Sturm; di heidnische Seelüüt bätted, löösled, rüered de Jona uf sis eiget Wort hii is Meer und fürchted am Schluss JHWH. En grosse Fisch verschluckt de Jona."),
  "TU-JON-001-001-003": ("Uftrag und Flucht", "JHWH schickt de Jona uf Ninive, di gross Stadt. De Jona gaat abe uf Jafo und nimmt es Schiff i di anderi Richtig, wäg vom Aagsicht vo JHWH."),
- "TU-JON-001-004-016": ("Sturm uf em Meer", "Im Sturm schreied d Seelüüt zu irne Götter, und de Jona schlaaft. S Los fallt uf in; er bekännt sich zu JHWH und laat sich is Meer rüere. S Meer wird still, und d Seelüüt opfered JHWH."),
+ "TU-JON-001-004-016": ("Sturm uf em Meer", "Im Sturm schreied d Seelüüt zu ire Götter, und de Jona schlaft. S Los fallt uf in; er bekännt sich zu JHWH und laat sich is Meer rüere. S Meer wird still, und d Seelüüt opfered JHWH."),
  "TU-JON-001-017-017": ("De grosse Fisch", "JHWH bstellt en grosse Fisch, wo de Jona verschluckt; drei Täg und drei Nächt isch de Jona i sim Buuch. I de hebräische Zellig isch das de Vers 2,1."),
- "TU-JON-002-001-010": ("Gebätt us de Tüüfi", "Us em Buuch vom Fisch bättet de Jona es Dankliid: Er isch i de Tüüfi em Tod nooch gsii und hät erfaare, dass JHWH in ufegholt hät. Uf s Wort vo JHWH chotzt de Fisch de Jona as Land."),
- "TU-JON-002-001-009": ("S Dankliid vom Jona", "De Jona beschriibt i de Spraach vo de Psalme, wie JHWH in i d Tüüfi vom Meer gworfe, sis Rüefe ghört und in ufegholt hät; er wott opfere, sini Glübd erfüle und bekännt: D Rettig ghört JHWH."),
- "TU-JON-002-010-010": ("As Land gspeut", "JHWH redt zum Fisch, und dä chotzt de Jona uf s troche Land."),
- "TU-JON-003-001-010": ("Ninive cheert um", "Bim zweite Uftrag folget de Jona und chündet Ninive de Undergang i vierzg Täg aa. Vom König bis zum Vee tuet d Stadt Buess; Gott gseet, dass si umchered, s aagchündt Unheil reut en, und er macht s nöd."),
+ "TU-JON-002-001-010": ("Gebätt us de Tüüfi", "Us em Buuch vom Fisch bättet de Jona es Danklied: Er isch i de Tüüfi em Tod nöch gsii und hät erfahre, dass JHWH in ufegholt hät. Uf s Wort vo JHWH chotzt de Fisch de Jona as Land."),
+ "TU-JON-002-001-009": ("S Danklied vom Jona", "De Jona beschriibt i de Sprach vo de Psalme, wie JHWH in i d Tüüfi vom Meer gworfe, sis Rüefe ghört und in ufegholt hät; er wott opfere, sini Glübd erfüle und bekännt: D Rettig ghört JHWH."),
+ "TU-JON-002-010-010": ("As Land gspöit", "JHWH redt zum Fisch, und dä chotzt de Jona uf s troche Land."),
+ "TU-JON-003-001-010": ("Ninive chehrt um", "Bim zweite Uftrag folget de Jona und chündet Ninive de Undergang i vierzg Täg aa. Vom Chönig bis zum Veh tuet d Stadt Buess; Gott gseht, dass si umchehred, s aagchündet Unheil röit en, und er macht s nöd."),
  "TU-JON-003-001-004": ("D Botschaft a Ninive", "S Wort vo JHWH chunnt es zweits Mal zum Jona. Er gaat i di gross Stadt und rüeft: «No vierzg Täg, und Ninive wird umgstürzt.»"),
- "TU-JON-003-005-010": ("D Umchehr vo de Stadt", "D Niniviter glaubed Gott und faschted. De König befiehlt Buess für Mänsche und Tier, i de Hoffnig, dass Gott umcheert. Gott gseet ires Tue und macht s Unheil nöd."),
- "TU-JON-004-001-011": ("De Zorn vom Jona und s Mitleid vo Gott", "De Jona isch toub, wil Gott gnädig isch, und wünscht sich de Tod. Mit eme Rizinus, eme Wurm und eme heisse Oschtwind stellt Gott im e Frag: Sött er nöd Mitleid ha mit Ninive, de grosse Stadt? S Buech hört offe uf."),
- "TU-JON-004-001-004": ("Ich han gwüsst, dass du gnädig bisch", "De Jona chlagt, er heig gwüsst, dass Gott gnädig und barmhärzig isch; drum sig er gflüchtet. Er bittet um de Tod. JHWH fragt, öb sin Zorn rächt isch."),
- "TU-JON-004-005-011": ("De Rizinus und di gross Stadt", "De Jona wartet östlich vo de Stadt. Gott laat en Rizinus wachse und wider verdorre und schickt en heisse Oschtwind; de Jona wott sterbe. Gott hebt im vor: De Jona heig Mitleid mit ere Pflanze – sött Gott dänn nöd Mitleid ha mit Ninive, sine Mänsche und sim Vee?"),
+ "TU-JON-003-005-010": ("D Umkehr vo de Stadt", "D Niniviter glaubed Gott und faschted. De Chönig befiilt Buess für Mänsche und Tier, i de Hoffnig, dass Gott umchehrt. Gott gseht ires Tue und macht s Unheil nöd."),
+ "TU-JON-004-001-011": ("De Zorn vom Jona und s Mitleid vo Gott", "De Jona isch wüetend, wil Gott gnädig isch, und wünscht sich de Tod. Mit eme Rizinus, eme Wurm und eme heisse Oschtwind stellt Gott im e Frag: Sött er nöd Mitleid haa mit Ninive, de grosse Stadt? S Buech hört offe uuf."),
+ "TU-JON-004-001-004": ("Ich han gwüsst, dass du gnädig bisch", "De Jona chlagt, er heb gwüsst, dass Gott gnädig und barmherzig isch; drum seig er gflüchtet. Er bittet um de Tod. JHWH fragt, öb sin Zorn rächt isch."),
+ "TU-JON-004-005-011": ("De Rizinus und di gross Stadt", "De Jona wartet östlich vo de Stadt. Gott laat en Rizinus wachse und wider verdorre und schickt en heisse Oschtwind; de Jona wott sterbe. Gott hebt im vor: De Jona heb Mitleid mit ere Pflanze – sött Gott dänn nöd Mitleid haa mit Ninive, sine Mänsche und sim Veh?"),
 }
 
 CHAPTERS = ((1, 17), (2, 10), (3, 10), (4, 11))
@@ -594,15 +595,17 @@ def notes_for(c, lang):
                  "Wissen und ist nicht an Daten geprüft. Für Jona markiert MACULA keine Ketiv/Qere-Formen."]
     else:
         notes = [AUTH_GSW + " D Übersetzig isch nöd vo Fachlüüt prüeft.",
+                 ("Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); "
+                  "di früener Fassig staat im revision_log."),
                  "Verszellig: D Date folged de Navigationszellig (KJV). I de hebräische Zellig (WLC) faat s Kapitel 2 scho mit [[JON.1.17]] aa: "
                  "hebräisch 2,1–11 isch da 1,17–2,10. D Tokens träged dört di hebräisch Stell i «source_reference». Düütschi Bible wie Luther 1912 "
                  "und Elberfelder 1905 zelled wie s Hebräisch.",
                  "Us de Wüescht Juda sind Teil vom Jona i Zwölfprophete-Rolle erhalte (MurXII us em Wadi Murabbaat und 4QXIIa, 4QXIIf und 4QXIIg "
                  "us Qumran). Iri Transkription git s nu under ere nöd kommerzielle Lizänz; drum ghöred si nöd zum freie Datechärn. Nach eme "
                  "maschinelle Vergliich mit em WLC (Sekundärtranskription, nöd am Faksimile prüeft; vili Wörter sind vo de Herusgäber ergänzt) "
-                 "stimmed di erhaltene Wörter fascht alli überii oder sind nu anders gschribe; über alli vier Handschrifte zäme sind zää Wörter "
+                 "stimmed di erhaltene Wörter fascht alli überii oder sind nu anders gschribe; über alli vier Handschrifte zäme sind zäh Wörter "
                  "mit andere Konsonante markiert. D Übersetzig folgt em WLC.",
-                 "D Septuaginta und anderi alti Übersetzige sind nöd i de Date. Wo Entscheidige si erwääned, beruet das uf allgemeinem Wüsse und "
+                 "D Septuaginta und anderi alti Übersetzige sind nöd i de Date. Wo Entscheidige si erwähned, beruet das uf allgemeinem Wüsse und "
                  "isch nöd a Date prüeft. Für de Jona markiert MACULA kei Ketiv/Qere-Forme."]
     return notes
 
@@ -642,8 +645,8 @@ def run():
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
                 rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Dieth-Schreibung (Schwyzertütschi Dialäktschrift, 2. Aufl. 1986), lautnah: lange Vokale doppelt (Broot, Riich), ä für offenes e.",
-                            "register_de": "Nah am hebräischen Wortlaut, aber so, wie man es sagt: Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
+                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                            "register_de": "Nah am hebräischen Wortlaut, aber so, wie man es heute in Zürich sagt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-JON-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})
             rec.update({"method_de": ("Wörtlich orientierte Arbeitsübersetzung aus dem hebräischen Text (Westminster Leningrad Codex, Morpheme nach MACULA Hebrew): Satzbau und Bilder des Hebräischen möglichst sichtbar, verständliches Deutsch. Leitwörter (gross, hinabsteigen, Bosheit/Unheil, fürchten, bestimmen, zugrunde gehen, Mitleid haben) werden möglichst gleich wiedergegeben. Der Gottesname steht als JHWH. Schweizer Rechtschreibung. Eigene Formulierung; nicht aus einer veröffentlichten deutschen Bibel übernommen."

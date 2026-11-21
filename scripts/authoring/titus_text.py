@@ -17,8 +17,9 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 
 DATE = "2026-10-13"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; aus dem griechischen Text (SBLGNT) übersetzt. "
-            "Prüfung der Mundart durch eine muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
+AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
+            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-TITUS"]
 K = {"de": "Kontrolle", "gsw": "gsw"}
 
@@ -75,52 +76,52 @@ DE = {
 }
 
 GSW = {
- "TIT.1.1": "De Paulus{1}, Chnächt{2} vo Gott{3} und{5} Apostel{4} vo Jesus{6} Christus{7}, [für]{8} [de Glaube]{9} [vo de Uuserwählte]{10} vo Gott{11} und{12} für [d Erchänntnis]{13} [vo de Wahrheit]{14}, wo{15} [de Frömmigkeit]{17} [entspricht]{16},",
+ "TIT.1.1": "De Paulus{1}, Chnächt{2} vo Gott{3} und{5} Apostel{4} vo Jesus{6} Christus{7}, [für]{8} [de Glaube]{9} [vo de Userwählte]{10} vo Gott{11} und{12} für [d Erchänntnis]{13} [vo de Wahrheit]{14}, wo{15} [zur Frömmigkeit]{17} [passt]{16},",
  "TIT.1.2": "[i]{1} [de Hoffnig]{2} uf [ewigs]{4} Läbe{3}, [wo]{5} [de]{7} Gott{9}, [wo nöd lügt]{8}, [vor]{10} [ewige]{12} Ziite{11} [versproche hät]{6};",
- "TIT.1.3": "[Zu sinere Ziit]{3,4} aber{2} [hät er]{1} [sis]{7} [Wort]{5,6} [offebaret]{1} [i de Verchündigung]{8,9}, [wo]{10} [mir]{12} [aavertrout worde isch]{11}, [nach]{13} [em Uftrag]{14} vo Gott{18}, [öisem]{17} [Retter]{15,16}.",
+ "TIT.1.3": "[Zu sinere Ziit]{3,4} aber{2} [hät er]{1} [sis]{7} [Wort]{5,6} [offebaret]{1} [i de Verchündigig]{8,9}, [wo]{10} [mir]{12} [aavertraut worde isch]{11}, [nach]{13} [em Uftrag]{14} vo Gott{18}, [öisem]{17} [Retter]{15,16}.",
  "TIT.1.4": "Am Titus{1}, mim [ächte]{2} Chind{3} [im]{4} [gmeinsame]{5} Glaube{6}: Gnad{7} und{8} Fride{9} [vo]{10} Gott{11}, [em Vatter]{12}, und{13} [vo Christus Jesus]{14,15}, [öisem]{18} [Retter]{16,17}.",
- "TIT.1.5": "[Wäge dem]{1,2} [han ich]{3} dich{4} [z]{5} Kreta{6} [zrugglaa]{3}, [demit]{7} du [das]{8}, [wo no fäält]{9}, [in Ornig bringsch]{10} und{11} [i jeder]{13} Stadt{14} [Ältischte]{15} [iisetzisch]{12}, [wie]{16} ich{17} [dir]{18} [s ufträit han]{19}:",
- "TIT.1.6": "[wänn]{1} [öpper]{2} [untadelig]{4} [isch]{3}, [de Maa]{7} [vo nu eire Frau]{5,6}, [wo gläubigi]{10} Chind{8} [hät]{9}, [wo nöd]{11} [im Ruef]{12,13} [vo me liederliche Läbe]{14} stönd [oder]{15} [widerspänstig]{16} sind.",
- "TIT.1.7": "Dänn{2} [de]{3} Ufseher{4} [mues]{1} [als]{7} Verwalter{9} vo Gott{8} untadelig{5} sii{6}: nöd{10} [eigemächtig]{11}, nöd{12} [jähzornig]{13}, [kein]{14} [Süffel]{15}, [kein]{16} [Schläger]{17}, nöd{18} [uf schändliche Gwünn uus]{19},",
- "TIT.1.8": "sondern{1} [gaschtfründlich]{2}, [em Guete zueta]{3}, [bsunne]{4}, [grächt]{5}, [fromm]{6}, [beherrscht]{7};",
- "TIT.1.9": "eine, wo sich [as]{2} [zueverlässige]{6} Wort{7} [haltet]{1}, wo [de]{4} Lehr{5} [entspricht]{3}, [demit]{8} er [fähig]{9} [isch]{10}, [sowohl]{11} [mit]{13} [de]{14} [gsunde]{16,17} Lehr{15} [z ermaane]{12} [als au]{18} [die]{19}, [wo widerspräched]{20}, [zrächtzwiise]{21}.",
- "TIT.1.10": "Dänn{2} [es git]{1} [vili]{3} [Widerspänstigi]{5}, [Schwätzer]{6} und{7} [Verfüerer]{8}, [vor allem]{9} [die]{10} [us]{11} [de]{12} [Beschniidig]{13}. ~4(καί verbindet «vili» und «Widerspänstigi»; fäält i es paar Usgabe; nöd eigens widergää)",
- "TIT.1.11": "[Dene]{1} [mues]{2} me [s Muul stopfe]{3:idiom}, [dänn si]{4} [bringed]{7} [ganzi]{5} [Familie]{6} [durenand]{7}, [wil si lehred]{8}, [was]{9} [nöd]{10} [sii dörf]{11}, [wäge]{14} [schändlichem]{12} [Gwünn]{13}.",
- "TIT.1.12": "[Eine]{2} [vo]{3} [ine]{4}, [ire]{6} [eige]{5} [Prophet]{7}, [hät gseit]{1}: «Kreter{8} sind [immer]{9} [Lugner]{10}, [bösi]{11} [Tier]{12}, [fuuli]{14} [Büüch]{13}.»",
- "TIT.1.13": "[Das]{3} [Zügnis]{1,2} [isch]{4} [wahr]{5}. [Us]{6} [dem]{7} [Grund]{8} [wiis]{9} [si]{10} [schaarf]{11} [zrächt]{9}, [demit]{12} [si gsund]{13} [im]{14,15} [Glaube]{16} [sind]{13}",
- "TIT.1.14": "und [nöd]{1} [uf]{2} [jüdischi]{3} [Mythe]{4} [lose]{2} [und]{5} [uf Gebot]{6} [vo Mänsche]{7}, [wo sich]{8} [vo de]{9} [Wahrheit]{10} [abwänded]{8}.",
- "TIT.1.15": "[Alles]{1} isch [rein]{2} [für die]{3} [Reine]{4}; [für die]{5} [Befleckte]{7} [aber]{6} und{8} [Unglöubige]{9} isch [nüt]{10} [rein]{11}, [sondern]{12} [befleckt sind]{13} [sowohl]{15} [ire]{14} [Verstand]{16,17} [als au]{18} [ires Gwüsse]{19,20}.",
- "TIT.1.16": "Si [säged]{2}, si [kännted]{3} Gott{1}, [mit de]{4} [Wärch]{6} [aber]{5} [verleugned si en]{7}; [abschüülich]{8} [sind si]{9} und{10} [unghorsam]{11} und{12} [für]{13} [jedes]{14} [guete]{16} [Wärch]{15} [unbruuchbar]{17}.",
+ "TIT.1.5": "[Drum]{1,2} [han ich]{3} dich{4} [z]{5} Kreta{6} [zrugglaa]{3}, [damit]{7} du [das]{8}, [wo no fehlt]{9}, [in Ornig bringsch]{10} und{11} [i jeder]{13} Stadt{14} [Ältischte]{15} [iisetzisch]{12}, [wie]{16} ich{17} [dir]{18} [s aagordnet han]{19}:",
+ "TIT.1.6": "[wänn]{1} [öpper]{2} [untadelig]{4} [isch]{3}, [de Maa]{7} [vo nume einere Frau]{5,6}, [wo gläubigi]{10} Chind{8} [hät]{9}, [wo nöd]{11} [im Ruef]{12,13} [vomene liederliche Läbe]{14} stönd [oder]{15} [widerspänstig]{16} sind.",
+ "TIT.1.7": "Dänn{2} [de]{3} Ufseher{4} [mues]{1} [als]{7} Verwalter{9} vo Gott{8} untadelig{5} sii{6}: nöd{10} [eigemächtig]{11}, nöd{12} [jähzornig]{13}, [kei]{14} [Süffel]{15}, [kei]{16} [Schläger]{17}, nöd{18} [uf schändliche Gwünn uus]{19},",
+ "TIT.1.8": "sondern{1} [gaschtfründlich]{2}, [eine, wo s Gueti liebt]{3}, [bsunne]{4}, [grächt]{5}, [fromm]{6}, [beherrscht]{7};",
+ "TIT.1.9": "eine, wo sich [a s]{2} [zueverlässige]{6} Wort{7} [haltet]{1}, wo [de]{4} Lehr{5} [entspricht]{3}, [damit]{8} er [fähig]{9} [isch]{10}, [mit]{13} [de]{14} [gsunde]{16,17} Lehr{15} [z ermahne]{12} [und]{11,18} [die]{19}, [wo widerspräched]{20}, [zrächtzwiise]{21}.",
+ "TIT.1.10": "Dänn{2} [es git]{1} [vili]{3} [Widerspänstigi]{5}, [Schwätzer]{6} und{7} [Verfüerer]{8}, [vor allem]{9} [die]{10} [us]{11} [de]{12} [Beschniidig]{13}. ~4(καί verbindet «vili» und «Widerspänstigi»; fehlt i es paar Usgabe; nöd eigens widergää)",
+ "TIT.1.11": "[Dene]{1} [mues]{2} me [s Muul stopfe]{3:idiom}, [dänn si]{4} [bringed]{7} [ganzi]{5} [Familie]{6} [durenand]{7}, [wil si lehred]{8}, [was]{9} [me]{11} [nöd]{10} [dörf]{11}, [wäge]{14} [schändlichem]{12} [Gwünn]{13}.",
+ "TIT.1.12": "[Eine]{2} [vo]{3} [ine]{4}, [ire]{6} [eiget]{5} [Prophet]{7}, [hät gseit]{1}: «Kreter{8} sind [immer]{9} [Lugner]{10}, [bösi]{11} [Tier]{12}, [fuuli]{14} [Büüch]{13}.»",
+ "TIT.1.13": "[Das]{3} [Züügnis]{1,2} [isch]{4} [wahr]{5}. [Us]{6} [däm]{7} [Grund]{8} [wiis]{9} [si]{10} [scharf]{11} [zrächt]{9}, [damit]{12} [si gsund]{13} [im]{14,15} [Glaube]{16} [sind]{13}",
+ "TIT.1.14": "und [nöd]{1} [uf]{2} [jüdischi]{3} [Mythe]{4} [losed]{2} [und]{5} [uf Gebot]{6} [vo Mänsche]{7}, [wo sich]{8} [vo de]{9} [Wahrheit]{10} [abwänded]{8}.",
+ "TIT.1.15": "[Alles]{1} isch [rein]{2} [für die]{3} [Reine]{4}; [für die]{5} [Befleckte]{7} [aber]{6} und{8} [Ungläubige]{9} isch [nüüt]{10} [rein]{11}, [sondern]{12} [ire]{14} [Verstand]{16,17} [und]{15,18} [ires Gwüsse]{19,20} [sind befleckt]{13}.",
+ "TIT.1.16": "Si [säged]{2}, si [känned]{3} Gott{1}, [mit de]{4} [Wärch]{6} [aber]{5} [verleugned si en]{7}; [si sind]{9} [abschüülich]{8} und{10} [unghorsam]{11} und{12} [für]{13} [jedes]{14} [guete]{16} [Wärch]{15} [unbruuchbar]{17}.",
  "TIT.2.1": "[Du]{1} [aber]{2} [säg]{3}, [was]{4} [de]{6} [gsunde]{7} [Lehr]{8} [entspricht]{5}.",
- "TIT.2.2": "[Älteri Mane]{1} [söled]{3} [nüechter]{2} [sii]{3}, [würdig]{4}, [bsunne]{5}, [gsund]{6} [im]{7} [Glaube]{8}, [i de]{9} [Liebi]{10}, [i de]{11} [Uusduur]{12}.",
- "TIT.2.3": "[Älteri Fraue]{1} [gliich]{2}: [i]{3} [irem Verhalte]{4} [ehrwürdig]{5}, [nöd]{6} [verlüümderisch]{7}, [nöd]{8} [em viele]{10} [Wii]{9} [verfalle]{11}, [Lehrerinne vom Guete]{12},",
- "TIT.2.4": "[demit]{1} si [di]{3} [junge Fraue]{4} [aaleited]{2}, [iri Mane]{5} und [Chind]{7} [gern z haa]{6},",
- "TIT.2.5": "[bsunne]{1} z sii, [rein]{2}, [im Huus tätig]{3}, [güetig]{4}, [irne]{6} [eigete]{7} [Mane]{8} [underornet]{5}, [demit]{9} [s]{11} [Wort]{12} [vo Gott]{13,14} [nöd]{10} [in Verruef chunnt]{15}.",
- "TIT.2.6": "[Di]{1} [jüngere Mane]{2} [ermaan]{4} [gliich]{3}, [bsunne z sii]{5}",
+ "TIT.2.2": "[Älteri Manne]{1} [söled]{3} [nüechter]{2} [sii]{3}, [würdig]{4}, [bsunne]{5}, [gsund]{6} [im]{7} [Glaube]{8}, [i de]{9} [Liebi]{10}, [i de]{11} [Usduur]{12}.",
+ "TIT.2.3": "[Älteri Fraue]{1} [gliich]{2}: [i]{3} [irem Verhalte]{4} [ehrwürdig]{5}, [nöd]{6} [verlüümderisch]{7}, [nöd]{8} [em vile]{10} [Wii]{9} [verfalle]{11}, [Lehrerinne vom Guete]{12},",
+ "TIT.2.4": "[damit]{1} si [di]{3} [junge Fraue]{4} [aaleited]{2}, [iri Manne]{5} und [Chind]{7} [gern z haa]{6},",
+ "TIT.2.5": "[bsunne]{1} z sii, [rein]{2}, [im Huus tätig]{3}, [güetig]{4}, [ire]{6} [eigete]{7} [Manne]{8} [underordnet]{5}, [damit]{9} [s]{11} [Wort]{12} [vo Gott]{13,14} [nöd]{10} [in Verruef chunnt]{15}.",
+ "TIT.2.6": "[Di]{1} [jüngere Manne]{2} [ermahn]{4} [gliich]{3}, [bsunne z sii]{5}",
  "TIT.2.7": "[i]{1} [allem]{2}. [Zeig]{4} [dich sälber]{3} [als]{4} [Vorbild]{5} [für gueti]{6} [Wärch]{7}, [i]{8} [de]{9} [Lehr]{10} [Unverfälschtheit]{11}, [Würde]{12},",
- "TIT.2.8": "[gsundi]{2}, [unaafechtbari]{3} [Red]{1}, [demit]{4} [de]{5} [Gägner]{6,7} [sich schämt]{8}, [wil er]{10} [nüt]{9} [Schlächts]{14} [über]{12} [üs]{13} [z säge]{11} [hät]{10}.",
- "TIT.2.9": "[Sklave]{1} söled sich [irne]{2} [Herre]{3} [i]{5} [allem]{6} [underordne]{4}, [ine gfellig]{7} [sii]{8}, [nöd]{9} [widerspräche]{10},",
- "TIT.2.10": "[nüt]{1} [veruntreue]{2}, [sondern]{3} [volli]{4}, [gueti]{7} [Tröii]{5} [bewiise]{6}, [demit]{8} si [d]{9,11} [Lehr]{10} [vo Gott]{15}, [öisem]{14} [Retter]{12,13}, [i]{17} [allem]{18} [schmücked]{16}.",
- "TIT.2.11": "Dänn{2} [erschine isch]{1} [d]{3} [Gnad]{4} [vo Gott]{5,6}, [wo]{7} [allne]{8} [Mänsche]{9} [Rettig bringt]{7};",
- "TIT.2.12": "[si erziet]{1} [üs]{2}, [demit]{3} mir, [indem mir]{4} [de]{5} [Gottlosigkeit]{6} und{7} [de]{8} [wältliche]{9} [Glüscht]{10} [absäged]{4}, [bsunne]{11} und{12} [grächt]{13} und{14} [fromm]{15} [läbed]{16} [i]{17} [de]{18} [jetzige]{19} [Ziit]{20}",
- "TIT.2.13": "[und erwarted]{1} [di]{2} [sälige]{3} [Hoffnig]{4} und{5} [s Erschiine]{6} [vo de]{7} [Herrlichkeit]{8} [vo öisem]{14} [grosse]{9,10} [Gott]{11} und{12} [Retter]{13} [Jesus]{15} [Christus]{16},",
- "TIT.2.14": "[wo]{1} [sich sälber]{3} [für]{4} [üs]{5} [häregää hät]{2}, [zum]{6} [üs]{8} [loszchaufe]{7} [vo]{9} [allere]{10} [Gsetzlosigkeit]{11} und{12} [sich]{14} [es Volk]{15} [als Eigetum]{16} [z reinige]{13}, [iifrig]{17} [für gueti]{18} [Wärch]{19}.",
- "TIT.2.15": "[Das]{1} [säg]{2} und{3} [ermaan]{4} und{5} [wiis zrächt]{6} [mit]{7} [voller]{8} [Vollmacht]{9}. [Niemer]{10} [söll]{12} [dich]{11} [gringschätze]{12}.",
+ "TIT.2.8": "[gsundi]{2}, [unaafechtbari]{3} [Red]{1}, [damit]{4} [de]{5} [Gägner]{6,7} [sich schämt]{8}, [wil er]{10} [nüüt]{9} [Schlächts]{14} [über]{12} [öis]{13} [z säge]{11} [hät]{10}.",
+ "TIT.2.9": "[Sklave]{1} söled sich [ire]{2} [Herre]{3} [i]{5} [allem]{6} [underordne]{4}, [ine gfällig]{7} [sii]{8}, [nöd]{9} [widerspräche]{10},",
+ "TIT.2.10": "[nüüt]{1} [veruntreue]{2}, [sondern]{3} [volli]{4}, [gueti]{7} [Tröii]{5} [zeige]{6}, [damit]{8} si [d]{9,11} [Lehr]{10} [vo Gott]{15}, [öisem]{14} [Retter]{12,13}, [i]{17} [allem]{18} [schmücked]{16}.",
+ "TIT.2.11": "Dänn{2} [d]{3} [Gnad]{4} [vo Gott]{5,6} [isch erschine]{1}, [wo]{7} [allne]{8} [Mänsche]{9} [Rettig bringt]{7};",
+ "TIT.2.12": "[si erzieht]{1} [öis]{2}, [damit]{3} mir [de]{5} [Gottlosigkeit]{6} und{7} [de]{8} [wältliche]{9} [Glüscht]{10} [absäged]{4} und [bsunne]{11} und{12} [grächt]{13} und{14} [fromm]{15} [läbed]{16} [i]{17} [de]{18} [jetzige]{19} [Ziit]{20}",
+ "TIT.2.13": "[und warted]{1} [uf]{1} [di]{2} [sälig]{3} [Hoffnig]{4} und{5} [s Erschiine]{6} [vo de]{7} [Herrlichkeit]{8} [vo öisem]{14} [grosse]{9,10} [Gott]{11} und{12} [Retter]{13} [Jesus]{15} [Christus]{16},",
+ "TIT.2.14": "[wo]{1} [sich sälber]{3} [für]{4} [öis]{5} [häregää hät]{2}, [damit er]{6} [öis]{8} [loschauft]{7} [vo]{9} [aller]{10} [Gsetzlosigkeit]{11} und{12} [sich]{14} [es Volk]{15} [als Eigetum]{16} [reinigt]{13}, [wo iifrig isch]{17} [für gueti]{18} [Wärch]{19}.",
+ "TIT.2.15": "[Das]{1} [säg]{2} und{3} [ermahn]{4} und{5} [wiis zrächt]{6} [mit]{7} [ganzer]{8} [Vollmacht]{9}. [Niemer]{10} [söll]{12} [dich]{11} [verachte]{12}.",
  "TIT.3.1": "[Erinner]{1} [si]{2} dra, sich [de Regierende]{3} und [Behörde]{4} [underzordne]{5}, [ghorsam z sii]{6}, [für]{7} [jedes]{8} [guete]{10} [Wärch]{9} [parat]{11} [z sii]{12},",
- "TIT.3.2": "[niemer]{1} [z verlüümde]{2}, [nöd strittig]{3} [z sii]{4}, [fründlich]{5}, [volli]{6} [Sanftmuet]{8} [z zeige]{7} [gägenüber]{9} [allne]{10} [Mänsche]{11}.",
+ "TIT.3.2": "[niemer]{1} [z verlüümde]{2}, [nöd striitsüchtig]{3} [z sii]{4}, [fründlich]{5}, [volli]{6} [Sanftmuet]{8} [z zeige]{7} [gägenüber]{9} [allne]{10} [Mänsche]{11}.",
  "TIT.3.3": "Dänn{2} [au]{4} [mir]{5} [sind]{1} [früener]{3} [unverständig]{6}, [unghorsam]{7}, [verirrt]{8}, [Sklave]{9} [vo allerlei]{13} [Glüscht]{10} und{11} [Vergnüege]{12} [gsii]{1}; [mir händ]{18} [i]{14} [Bosheit]{15} und{16} [Niid]{17} [gläbt]{18}, [verhasst]{19}, und [händ]{20} [enand]{21} [ghasst]{20}.",
  "TIT.3.4": "[Wo]{1} [aber]{2} [d]{3} [Güeti]{4} und{5} [d]{6} [Mänschefründlichkeit]{7} [vo Gott]{12}, [öisem]{11} [Retter]{9,10}, [erschine isch]{8},",
- "TIT.3.5": "[nöd]{1} [wäge]{2} [Wärch]{3}, [wo]{4,7} [mir]{9} [i]{5} [Grächtigkeit]{6} [taa hettet]{8}, [sondern]{10} [nach]{11} [sim]{12,13} [Erbarme]{14} [hät er]{15} [üs]{16} [grettet]{15} [dur]{17} [s Bad]{18} [vo de Widergeburt]{19} und{20} [vo de Erneuerig]{21} [vom heilige Geischt]{22,23},",
- "TIT.3.6": "[wo]{1} er [über]{3} [üs]{4} [riichlich]{5} [usgosse hät]{2} [dur]{6} [Jesus]{7} [Christus]{8}, [öise]{11} [Retter]{9,10},",
- "TIT.3.7": "[demit]{1} mir, [grächt gmacht]{2} [dur]{3} [sini]{4} [Gnad]{5}, [Erbe]{6} [wärded]{7} [gemäss]{8} [de Hoffnig]{9} [uf ewigs]{11} [Läbe]{10}.",
- "TIT.3.8": "[Zueverlässig]{1} isch [s]{2} [Wort]{3}. Und{4} [ich wott]{7}, [dass du]{8} [i dene Sache]{5,6} [fescht uftrittsch]{9}, [demit]{10} [die]{15}, [wo zum Glaube a]{16} [Gott]{17} [cho sind]{16}, [druf achted]{11}, [sich]{14} [für gueti]{12} [Wärch]{13} [iizsetze]{14}. [Das]{18} [isch]{19} [guet]{20} und{21} [nützlich]{22} [für d]{23} [Mänsche]{24}.",
- "TIT.3.9": "[Törichti]{1} [Striitfrage]{3} [aber]{2} und{4} [Stammbäum]{5} und{6} [Zank]{7} und{8} [Striit]{9} [ums Gsetz]{10} [meid]{11}; [dänn]{13} [si sind]{12} [nutzlos]{14} und{15} [läär]{16}.",
- "TIT.3.10": "[En Mänsch]{2}, [wo Spaltige verursachet]{1}, [wiis]{8} [nach]{3} [ere erschte]{4} und{5} [zweite]{6} [Ermaanig]{7} [ab]{8},",
- "TIT.3.11": "[wil du weisch]{1}, [dass]{2} [so eine]{4,5} [verdrait isch]{3} und{6} [sündiget]{7}; [er hät sich sälber s Urteil gsproche]{8,9}.",
- "TIT.3.12": "[Wänn]{1} [ich]{2} [de Artemas]{3} [zu]{4} [dir]{5} [schicke]{2} [oder]{6} [de Tychikus]{7}, [mach vorwärts]{8}, [zu]{10} [mir]{11} [uf]{12} [Nikopolis]{13} [z cho]{9}; [dänn]{15} [ich ha beschlosse]{16}, [dört]{14} [de Winter z verbringe]{17}.",
- "TIT.3.13": "[De Zenas]{1}, [de]{2} [Rächtsglehrt]{3}, und{4} [de Apollos]{5} [rüscht]{7} [sorgfältig]{6} [für d Reis us]{7}, [demit]{8} [ine]{10} [nüt]{9} [fäält]{11}.",
- "TIT.3.14": "[Au]{3} [di Öise]{4,5} [aber]{2} [söled lerne]{1}, [sich]{8} [für gueti]{6} [Wärch]{7} [iizsetze]{8}, [für]{9} [di]{10} [dringende]{11} [Bedürfnis]{12}, [demit]{13} [si]{15} [nöd]{14} [ohni Frucht]{16} [sind]{15}.",
- "TIT.3.15": "[Es grüessed]{1} [dich]{2} [alli]{6}, [wo]{3} [bi]{4} [mir]{5} sind. [Grüess]{7} [die, wo]{8} [üs]{10} [im]{11} [Glaube]{12} [gern händ]{9}. [D]{13} [Gnad]{14} sig [mit]{15} [eu]{17} [allne]{16}.",
+ "TIT.3.5": "[nöd]{1} [wäge]{2} [Wärch]{3}, [wo]{4,7} [mir]{9} [i]{5} [Grächtigkeit]{6} [taa händ]{8}, [sondern]{10} [nach]{11} [sim]{12,13} [Erbarme]{14} [hät er]{15} [öis]{16} [grettet]{15} [dur]{17} [s Bad]{18} [vo de Widergeburt]{19} und{20} [vo de Ernöierig]{21} [dur de heilige Geischt]{22,23},",
+ "TIT.3.6": "[won]{1} er [über]{3} [öis]{4} [riichlich]{5} [usgosse hät]{2} [dur]{6} [Jesus]{7} [Christus]{8}, [öise]{11} [Retter]{9,10},",
+ "TIT.3.7": "[damit]{1} mir, [grächt gmacht]{2} [dur]{3} [sini]{4} [Gnad]{5}, [Erbe]{6} [wärded]{7} [nach]{8} [de Hoffnig]{9} [uf ewigs]{11} [Läbe]{10}.",
+ "TIT.3.8": "[Zueverlässig]{1} isch [s]{2} [Wort]{3}. Und{4} [ich wott]{7}, [dass du]{8} [uf dene Sache]{5,6} [bestaasch]{9}, [damit]{10} [die]{15}, [wo]{16} [a Gott]{17} [glaubed]{16}, [druf achted]{11}, [sich]{14} [für gueti]{12} [Wärch]{13} [iizsetze]{14}. [Das]{18} [isch]{19} [guet]{20} und{21} [nützlich]{22} [für d]{23} [Mänsche]{24}.",
+ "TIT.3.9": "[Törichti]{1} [Striitfrage]{3} [aber]{2} und{4} [Stammbäum]{5} und{6} [Zank]{7} und{8} [Striit]{9} [ums Gsetz]{10} [meid]{11}; [dänn]{13} [si sind]{12} [nutzlos]{14} und{15} [leer]{16}.",
+ "TIT.3.10": "[En Mänsch]{2}, [wo Spaltige macht]{1}, [wiis]{8} [nach]{3} [ere erschte]{4} und{5} [zweite]{6} [Mahnig]{7} [ab]{8},",
+ "TIT.3.11": "[wil du weisch]{1}, [dass]{2} [so eine]{4,5} [verdreht isch]{3} und{6} [sündigt]{7}; [er hät sich sälber s Urteil gsproche]{8,9}.",
+ "TIT.3.12": "[Wänn]{1} [ich]{2} [de Artemas]{3} [zu]{4} [dir]{5} [schicke]{2} [oder]{6} [de Tychikus]{7}, [gib dir Müe]{8}, [zu]{10} [mir]{11} [uf]{12} [Nikopolis]{13} [z choo]{9}; [dänn]{15} [ich han beschlosse]{16}, [dört]{14} [de Winter z verbringe]{17}.",
+ "TIT.3.13": "[De Zenas]{1}, [de]{2} [Rächtsglehrt]{3}, und{4} [de Apollos]{5} [rüscht]{7} [sorgfältig]{6} [für d Reis uus]{7}, [damit]{8} [ine]{10} [nüüt]{9} [fehlt]{11}.",
+ "TIT.3.14": "[Au]{3} [di Öise]{4,5} [aber]{2} [söled lerne]{1}, [sich]{8} [für gueti]{6} [Wärch]{7} [iizsetze]{8}, [für]{9} [di]{10} [dringende]{11} [Bedürfnis]{12}, [damit]{13} [si]{15} [nöd]{14} [ohni Frucht]{16} [sind]{15}.",
+ "TIT.3.15": "[Alli]{6}, [wo]{3} [bi]{4} [mir]{5} sind, [lönd]{1} [dich]{2} [grüesse]{1}. [Grüess]{7} [die, wo]{8} [öis]{10} [im]{11} [Glaube]{12} [gern händ]{9}. [D]{13} [Gnad]{14} seig [mit]{15} [öi]{17} [allne]{16}.",
 }
 
 # Übersetzungsentscheidungen: (Stelle, Zieltext, Art, griechisch, wörtlicher, andere Möglichkeiten, Begründung)
@@ -146,54 +147,54 @@ DEC_DE = [
  ("TIT.3.13", "Rechtsgelehrten", "interpretive", "νομικὸν", None, ["Juristen", "Gesetzeslehrer"], "Ob Zenas ein jüdischer Gesetzeskundiger oder ein römischer Jurist war, ist offen."),
 ]
 DEC_GSW = [
- ("TIT.1.1", "Chnächt", "traditional", "δοῦλος", "Sklav", ["Diener"], "δοῦλος heisst wörtlich «Sklav». Als Bezeichnig für sich sälber (wie «Chnächt vo Gott» bim Mose und de Prophete) meint s öpper, wo ganz Gott ghört; «Chnächt» folgt de vertroute Widergab."),
+ ("TIT.1.1", "Chnächt", "traditional", "δοῦλος", "Sklav", ["Diener"], "δοῦλος heisst wörtlich «Sklav». Als Bezeichnig für sich sälber (wie «Chnächt vo Gott» bim Mose und de Prophete) meint s öpper, wo ganz Gott ghört; «Chnächt» folgt de vertraute Widergab."),
  ("TIT.1.1", "Frömmigkeit", "literal", "εὐσέβειαν", None, ["Gottesfurcht", "gläbte Glaube"], "εὐσέβεια isch Ehrfurcht vor Gott, wo sich im Läbe zeigt; es Leitwort vo de Brief a Timotheus und Titus."),
- ("TIT.1.1", "für de Glaube", "interpretive", "κατὰ πίστιν", "gemäss em Glaube", ["wäge em Glaube"], "κατά cha de Massstab («gemäss») oder s Ziil («für, wäge») aagää; da isch de Dienscht am Glaube vo de Uuserwählte gmeint."),
+ ("TIT.1.1", "für de Glaube", "interpretive", "κατὰ πίστιν", "gemäss em Glaube", ["wäge em Glaube"], "κατά cha de Massstab («gemäss») oder s Ziil («für, wäge») aagää; da isch de Dienscht am Glaube vo de Userwählte gmeint."),
  ("TIT.1.3", "Zu sinere Ziit", "interpretive", "καιροῖς ἰδίοις", "zu eigete Ziite", ["zur rächte Ziit"], "Gmeint isch d Ziit, wo Gott feschtgleit hät."),
  ("TIT.1.5", "Ältischte", "literal", "πρεσβυτέρους", None, ["Presbyter"], "D Ältischte händ d Gmeinde gleitet. I [[TIT.1.7]] heisst de gliich Chreis offebar «Ufseher»."),
- ("TIT.1.6", "Maa vo nu eire Frau", "literal", "μιᾶς γυναικὸς ἀνήρ", None, ["einere Frau tröi", "nu eimal ghürate"], "D Bedüütig isch umstritte: Tröii i de Ee, kei zweiti Ee nach Scheidig oder Tod oder kei Vilee."),
+ ("TIT.1.6", "Maa vo nume einere Frau", "literal", "μιᾶς γυναικὸς ἀνήρ", None, ["einere Frau tröi", "nu eimal ghürate"], "D Bedüütig isch umstritte: Tröii i de Ehe, kei zweiti Ehe nach Scheidig oder Tod oder kei Vilehe."),
  ("TIT.1.6", "gläubigi", "interpretive", "πιστά", None, ["zueverlässigi", "tröii"], "πιστός heisst «gläubig» oder «zueverlässig». Öb d Chind sälber Christe söled sii oder öb ires Verhalte gmeint isch, bliibt offe."),
- ("TIT.1.7", "Ufseher", "literal", "ἐπίσκοπον", None, ["Bischof", "Gmeindleiter"], "Us ἐπίσκοπος isch s Wort «Bischof» worde. Es Bischofsamt im spööttere Sinn isch da no nöd voruusgsetzt."),
+ ("TIT.1.7", "Ufseher", "literal", "ἐπίσκοπον", None, ["Bischof", "Gmeindleiter"], "Us ἐπίσκοπος isch s Wort «Bischof» worde. Es Bischofsamt im spötere Sinn isch da no nöd vorusgsetzt."),
  ("TIT.1.11", "Familie", "interpretive", "οἴκους", "Hüüser", ["Huusgmeinschafte"], "Gmeint sind Hushaltige; i ine händ sich au d Gmeinde versammlet."),
- ("TIT.1.12", "Prophet", "literal", "προφήτης", None, ["Dichter", "Seher"], "Gmeint isch en Dichter us Kreta; di alt Überlieferig nännt de Epimenides."),
+ ("TIT.1.12", "Prophet", "literal", "προφήτης", None, ["Dichter", "Seher"], "Gmeint isch en Dichter us Kreta; di alt Überliferig nännt de Epimenides."),
  ("TIT.1.14", "jüdischi", "literal", "Ἰουδαϊκοῖς μύθοις", None, None, "Was die «jüdische Mythe» gnau gsii sind, weiss me nöd; wahrschiinli Spekulatione über Abstammig und Gsetz (vgl. [[TIT.3.9]])."),
- ("TIT.2.5", "underornet", "literal", "ὑποτασσομένας", None, ["sich iifüege"], "Teil vo ere Huustafle, wo di damalig Ornig vom Huus voruussetzt; begründet wird si mit em Ruef vo de Gmeind gäge usse."),
+ ("TIT.2.5", "underordnet", "literal", "ὑποτασσομένας", None, ["sich iifüege"], "Teil vo ere Huustafle, wo di damalig Ornig vom Huus vorussetzt; begründet wird si mit em Ruef vo de Gmeind gäge usse."),
  ("TIT.2.9", "Sklave", "literal", "Δούλους", None, ["Chnächt"], "δοῦλοι sind Unfreii, nöd Aagstellti; «Chnächt» würd das zuedecke."),
  ("TIT.2.10", "Tröii", "interpretive", "πίστιν", "Glaube", ["Zueverlässigkeit"], "πίστις heisst da im Zämehang mit «veruntreue» am ehnder Tröii und Zueverlässigkeit."),
  ("TIT.2.13", "vo öisem grosse Gott und Retter Jesus Christus", "interpretive", "μεγάλου θεοῦ καὶ σωτῆρος ἡμῶν Ἰησοῦ Χριστοῦ", None, ["vom grosse Gott und vo öisem Retter Jesus Christus"], "Ein Artikel für «Gott» und «Retter» redt defür, dass beidi Titel de Jesus Christus meined; anderi läsed zwei Persone. D Entscheidig isch theologisch wichtig und umstritte."),
  ("TIT.3.5", "s Bad", "literal", "λουτροῦ", None, ["d Wäschig"], "λουτρόν isch es Bad oder e Wäschig; vili Usleger bezieend «Bad vo de Widergeburt» uf d Toufi."),
- ("TIT.3.8", "für gueti", "interpretive", "καλῶν ἔργων προΐστασθαι", "guete Wärch vorzstaa", ["en ehrbare Bruef uusüebe"], "προΐστασθαι heisst «vorstaa, sich bemüe um»; es paar dänked a ehrbari Brüef."),
- ("TIT.3.10", "wo Spaltige verursachet", "interpretive", "αἱρετικὸν", None, ["Ketzer", "Sektierer"], "αἱρετικός meint da öpper, wo Parteie bildet. «Ketzer» treit di spööter Bedüütig vo Irrlehr ii."),
+ ("TIT.3.8", "für gueti", "interpretive", "καλῶν ἔργων προΐστασθαι", "guete Wärch vorzstaa", ["en ehrbare Bruef usüebe"], "προΐστασθαι heisst «vorstaa, sich bemüe um»; es paar dänked a ehrbari Brüef."),
+ ("TIT.3.10", "wo Spaltige macht", "interpretive", "αἱρετικὸν", None, ["Ketzer", "Sektierer"], "αἱρετικός meint da öpper, wo Parteie bildet. «Ketzer» treit di spöter Bedüütig vo Irrlehr ii."),
  ("TIT.3.13", "Rächtsglehrt", "interpretive", "νομικὸν", None, ["Jurischt", "Gsetzeslehrer"], "Öb de Zenas en jüdische Gsetzeskundige oder en römische Jurischt gsii isch, isch offe."),
 ]
 
 # Lesarten, die die Übersetzung verändern: (Lesart, Stelle, de von, de zu, gsw von, gsw zu, Wirkung, Hinweis de, Hinweis gsw,
 #  Wörter {Lesart: [(griechisch, de, Hinweis)]}, Wörter gsw, Entstehung de, Entstehung gsw)
 ALTS = [
- ("VAR-SBLGNTAPP-TIT-001-004-01:R2", "TIT.1.4", "Gnade und Friede", "Gnade, Barmherzigkeit und Friede", "Gnad und Fride", "Gnad, Barmhärzigkeit und Fride", "gering",
-  "Die dreigliedrige Formel steht so auch in [[1TI.1.2]] und [[2TI.1.2]].", "Di drüüteilig Formle staat so au i [[1TI.1.2]] und [[2TI.1.2]].",
+ ("VAR-SBLGNTAPP-TIT-001-004-01:R2", "TIT.1.4", "Gnade und Friede", "Gnade, Barmherzigkeit und Friede", "Gnad und Fride", "Gnad, Barmherzigkeit und Fride", "gering",
+  "Die dreigliedrige Formel steht so auch in [[1TI.1.2]] und [[2TI.1.2]].", "Di drüteilig Formle staat so au i [[1TI.1.2]] und [[2TI.1.2]].",
   {"R1": [("χάρις καὶ εἰρήνη", "Gnade und Friede", "zweigliedrig")], "R2": [("χάρις ἔλεος εἰρήνη", "Gnade, Barmherzigkeit, Friede", "dreigliedrig")]},
-  {"R1": [("χάρις καὶ εἰρήνη", "Gnad und Fride", "zweiteilig")], "R2": [("χάρις ἔλεος εἰρήνη", "Gnad, Barmhärzigkeit, Fride", "drüüteilig")]},
+  {"R1": [("χάρις καὶ εἰρήνη", "Gnad und Fride", "zweiteilig")], "R2": [("χάρις ἔλεος εἰρήνη", "Gnad, Barmherzigkeit, Fride", "drüteilig")]},
   ["Abschreiber kannten die dreigliedrige Formel aus den Briefen an Timotheus und konnten den Titusbrief daran angleichen.", "Laut der automatischen Zuordnung hat der Codex Alexandrinus (5. Jh.) die dreigliedrige Formel, Sinaiticus und Ephraemi die zweigliedrige."],
-  ["Abschriiber händ di drüüteilig Formle us de Brief a Timotheus kännt und händ de Titusbrief dra chöne aagliiche.", "Nach de automatische Zueornig hät de Codex Alexandrinus (5. Jh.) di drüüteilig Formle, de Sinaiticus und de Ephraemi di zweiteilig."]),
+  ["Abschriiber händ di drüteilig Formle us de Brief a Timotheus kännt und händ de Titusbrief dra chöne aagliiche.", "Nach de automatische Zueornig hät de Codex Alexandrinus (5. Jh.) di drüteilig Formle, de Sinaiticus und de Ephraemi di zweiteilig."]),
  ("VAR-SBLGNTAPP-TIT-001-004-02:R2", "TIT.1.4", "von Christus Jesus", "vom Herrn Jesus Christus", "vo Christus Jesus", "vom Herr Jesus Christus", "gering",
   "Gleicher Bezug auf Jesus, mit dem Titel «Herr».", "Di gliich Person, mit em Titel «Herr».",
   {"R1": [("Χριστοῦ Ἰησοῦ", "Christus Jesus", "ohne «Herr»")], "R2": [("κυρίου Ἰησοῦ χριστοῦ", "des Herrn Jesus Christus", "mit «Herr»")]},
   {"R1": [("Χριστοῦ Ἰησοῦ", "Christus Jesus", "ohni «Herr»")], "R2": [("κυρίου Ἰησοῦ χριστοῦ", "vom Herr Jesus Christus", "mit «Herr»")]},
   ["Die Wendung «Herr Jesus Christus» war in Gottesdienst und Briefen sehr geläufig und konnte beim Abschreiben die seltenere Form verdrängen."],
-  ["D Wändig «Herr Jesus Christus» isch im Gottesdienscht und i Brief seer gläufig gsii und hät bim Abschriibe di sälteneri Form chöne verdränge."]),
+  ["D Wändig «Herr Jesus Christus» isch im Gottesdienscht und i Brief sehr gläufig gsii und hät bim Abschriibe di sälteneri Form chöne verdränge."]),
  ("VAR-SBLGNTAPP-TIT-002-005-01:R2", "TIT.2.5", "häuslich tätig", "zu Hause bleibend", "im Huus tätig", "deheim bliibend", "gering",
   "Die Wörter unterscheiden sich um einen Buchstaben.", "D Wörter underscheided sich um ein Buechstabe.",
   {"R1": [("οἰκουργούς", "im Haus tätig", "seltenes Wort")], "R2": [("οἰκουρούς", "das Haus hütend", "geläufigeres Wort")]},
   {"R1": [("οἰκουργούς", "im Huus tätig", "sälts Wort")], "R2": [("οἰκουρούς", "s Huus hüetend", "gläufigers Wort")]},
   ["Das seltene οἰκουργός kann beim Abschreiben durch das bekanntere οἰκουρός ersetzt worden sein; umgekehrt kann ein Buchstabe dazugekommen sein."],
-  ["S sälte οἰκουργός cha bim Abschriibe dur s bekanntere οἰκουρός ersetzt worde sii; umgekeert cha en Buechstabe dezuecho sii."]),
+  ["S sälte οἰκουργός cha bim Abschriibe dur s bekanntere οἰκουρός ersetzt worde sii; umgekehrt chan en Buechstabe dezuechoo sii."]),
  ("VAR-SBLGNTAPP-TIT-002-007-02:R2", "TIT.2.7", "Würde", "Würde, Unvergänglichkeit", "Würde", "Würde, Unvergänglichkeit", "gering",
   "Zusatz eines weiteren Begriffs.", "Zuesatz vo me wiitere Begriff.",
   {"R1": [("σεμνότητα", "Würde", "ohne Zusatz")], "R2": [("σεμνότητα ἀφθαρσίαν", "Würde, Unvergänglichkeit", "mit Zusatz")]},
   {"R1": [("σεμνότητα", "Würde", "ohni Zuesatz")], "R2": [("σεμνότητα ἀφθαρσίαν", "Würde, Unvergänglichkeit", "mit Zuesatz")]},
   ["ἀφθαρσία klingt ähnlich wie ἀφθορία kurz davor und kann als Erklärung oder Doppelung in den Text gekommen sein.", "Laut der automatischen Zuordnung hat schon 𝔓32 (um 200) wie Sinaiticus, Alexandrinus und Ephraemi die Form ohne Zusatz."],
-  ["ἀφθαρσία tönt ähnlich wie ἀφθορία churz vorhär und cha als Erkläärig oder Doppelig in Text cho sii.", "Nach de automatische Zueornig hät scho 𝔓32 (um 200) wie de Sinaiticus, de Alexandrinus und de Ephraemi d Form ohni Zuesatz."]),
+  ["ἀφθαρσία tönt ähnlich wie ἀφθορία churz vorhär und cha als Erklärig oder Doppelig in Text choo sii.", "Nach de automatische Zueornig hät scho 𝔓32 (um 200) wie de Sinaiticus, de Alexandrinus und de Ephraemi d Form ohni Zuesatz."]),
  ("VAR-SBLGNTAPP-TIT-002-013-01:R2", "TIT.2.13", "Jesus Christus", "Christus Jesus", "Jesus Christus", "Christus Jesus", "gering",
   "Nur die Reihenfolge ändert sich.", "Nu d Reiefolg änderet.",
   {"R1": [("Ἰησοῦ Χριστοῦ", "Jesus Christus", "")], "R2": [("Χριστοῦ Ἰησοῦ", "Christus Jesus", "")]},
@@ -205,13 +206,13 @@ ALTS = [
   {"R1": [("ἐστιν καλὰ", "ist gut", "ohne Artikel")], "R2": [("ἐστιν τὰ καλὰ", "ist das Gute", "mit Artikel")]},
   {"R1": [("ἐστιν καλὰ", "isch guet", "ohni Artikel")], "R2": [("ἐστιν τὰ καλὰ", "isch s Guete", "mit Artikel")]},
   ["Der Artikel kann zur Verdeutlichung ergänzt worden sein; für den Sinn macht er wenig aus."],
-  ["De Artikel cha zur Verdüütlichig ergänzt worde sii; für de Sinn macht er wenig us."]),
+  ["De Artikel cha zur Verdüütlichig ergänzt worde sii; für de Sinn macht er wenig uus."]),
  ("VAR-SBLGNTAPP-TIT-003-015-01:R2", "TIT.3.15", "allen.", "allen. Amen.", "allne.", "allne. Amen.", "gering",
   "Liturgischer Schluss.", "Liturgische Schluss.",
   {"R1": [("ὑμῶν", "euch", "ohne Amen")], "R2": [("ὑμῶν ἀμήν", "euch. Amen", "mit Amen")]},
-  {"R1": [("ὑμῶν", "eu", "ohni Amen")], "R2": [("ὑμῶν ἀμήν", "eu. Amen", "mit Amen")]},
+  {"R1": [("ὑμῶν", "öi", "ohni Amen")], "R2": [("ὑμῶν ἀμήν", "öi. Amen", "mit Amen")]},
   ["Briefe wurden im Gottesdienst vorgelesen; ein «Amen» am Schluss lag nahe und wurde vielen Briefen später angefügt."],
-  ["Brief sind im Gottesdienscht vorgläse worde; es «Amen» am Schluss isch nooch glege und isch vilne Brief spööter aaghänkt worde."]),
+  ["Brief sind im Gottesdienscht vorgläse worde; es «Amen» am Schluss isch nöch glege und isch vilne Brief spöter aaghänkt worde."]),
 ]
 
 UNITS = [
@@ -241,17 +242,17 @@ UNITS = [
   "Paulus will Artemas oder Tychikus zu Titus schicken; dann soll Titus zu ihm nach Nikopolis kommen, wo er überwintern will. Zenas und Apollos soll er für die Reise ausrüsten; Grüsse schliessen den Brief ab."),
 ]
 UNITS_GSW = {
- "TU-TIT-001-001-016": ("Ornig für d Gmeinde uf Kreta", "De Paulus git em Titus de Uftrag, i de Stedt vo Kreta Ältischti iizsetze, wo sälber glaubwürdig läbed und a de gsunde Lehr feschthalted, und gäge Lehrer vorzgaa, wo Familie durenand bringed."),
- "TU-TIT-001-001-004": ("Gruess: Apostel für de Glaube", "En ungwöönlich usfüerliche Briefaafang a de Titus: De Paulus beschriibt sin Uftrag als Dienscht am Glaube, a de Erchänntnis vo de Wahrheit und a de Hoffnig uf ewigs Läbe."),
- "TU-TIT-001-005-009": ("Wär d Gmeind söll leite", "De Titus söll Ältischti iisetze. Si – im Text au «de Ufseher» gnännt – söled i de Ee und i de Familie und im Umgang mit Gäld, Wii und Macht untadelig läbe und a de verlässliche Lehr feschthalte."),
- "TU-TIT-001-010-016": ("Gäge lääri Schnurrerei", "Lehrer, wo us Gwünnsucht Familie durenand bringed, söll de Titus schaarf zrächtwiise. Es Wort vo irem eigete «Prophet» über d Kreter wird zitiert und bestätiget. Si behaupted, si kännted Gott, aber mit irne Wärch verleugned si en."),
- "TU-TIT-002-001-015": ("Gsundi Lehr im Alltag", "Was de gsunde Lehr entspricht, zeigt sich im Alltag vo Alte und Junge, Fraue, Mane und Sklave. Begründet wird s mit de Gnad vo Gott, wo erschine isch und zu me nöie Läbe erziet."),
- "TU-TIT-002-001-010": ("Was zu wem passt", "E Huustafle: Wiisige für älteri Mane und Fraue, jungi Fraue und Mane, für de Titus sälber und für Sklave. Meermals wird begründet, dass d Gmeind gäge usse kein Aastoss söll gää."),
- "TU-TIT-002-011-015": ("D Gnad vo Gott isch erschine", "D Gnad vo Gott isch für alli Mänsche erschine. Si erziet zu me bsunnene Läbe i de Gägewart, i de Erwartig vom Erschiine vo Jesus Christus, wo sich für üs häregää hät, zum sich es Volk z reinige."),
- "TU-TIT-003-001-015": ("Fründlich zu allne, wil Gott fründlich gsii isch", "D Gmeind söll sich i di öffentlich Ornig iifüege und allne Mänsche fründlich begägne, dänn si verdankt iri Rettig nöd eigete Wärch, sondern de Güeti vo Gott. Fruchtlosi Striitfrage söll de Titus meide. De Brief hört mit Reiseplän und Grüess uf."),
+ "TU-TIT-001-001-016": ("Ornig für d Gmeinde uf Kreta", "De Paulus git em Titus de Uftrag, i de Städt vo Kreta Ältischti iizsetze, wo sälber glaubwürdig läbed und a de gsunde Lehr feschthalted, und gäge Lehrer vorzgaa, wo Familie durenand bringed."),
+ "TU-TIT-001-001-004": ("Gruess: Apostel für de Glaube", "En ungwöhnlich usfüerliche Briefaafang a de Titus: De Paulus beschriibt sin Uftrag als Dienscht am Glaube, a de Erchänntnis vo de Wahrheit und a de Hoffnig uf ewigs Läbe."),
+ "TU-TIT-001-005-009": ("Wär d Gmeind söll leite", "De Titus söll Ältischti iisetze. Si – im Text au «de Ufseher» gnännt – söled i de Ehe und i de Familie und im Umgang mit Gäld, Wii und Macht untadelig läbe und a de verlässliche Lehr feschthalte."),
+ "TU-TIT-001-010-016": ("Gäge leeri Schnurrerei", "Lehrer, wo us Gwünnsucht Familie durenand bringed, söll de Titus schaarf zrächtwiise. Es Wort vo irem eigete «Prophet» über d Kreter wird zitiert und bestätiget. Si behaupted, si kännted Gott, aber mit ire Wärch verleugned si en."),
+ "TU-TIT-002-001-015": ("Gsundi Lehr im Alltag", "Was de gsunde Lehr entspricht, zeigt sich im Alltag vo Alte und Junge, Fraue, Manne und Sklave. Begründet wird s mit de Gnad vo Gott, wo erschine isch und zu me nöie Läbe erzieht."),
+ "TU-TIT-002-001-010": ("Was zu wem passt", "E Huustafle: Wiisige für älteri Manne und Fraue, jungi Fraue und Manne, für de Titus sälber und für Sklave. Meermals wird begründet, dass d Gmeind gäge usse kei Aastoss söll gää."),
+ "TU-TIT-002-011-015": ("D Gnad vo Gott isch erschine", "D Gnad vo Gott isch für alli Mänsche erschine. Si erzieht zu me bsunnene Läbe i de Gägewart, i de Erwartig vom Erschiine vo Jesus Christus, wo sich für öis häregää hät, zum sich es Volk z reinige."),
+ "TU-TIT-003-001-015": ("Fründlich zu allne, wil Gott fründlich gsii isch", "D Gmeind söll sich i di öffentlich Ornig iifüege und allne Mänsche fründlich begägne, dänn si verdankt iri Rettig nöd eigete Wärch, sondern de Güeti vo Gott. Fruchtlosi Striitfrage söll de Titus meide. De Brief hört mit Reiseplän und Grüess uuf."),
  "TU-TIT-003-001-007": ("D Güeti vo Gott isch erschine", "De Titus söll d Gmeind dra erinnere, dass si sich de Behörde understelled und allne Mänsche mit Sanftmuet begägned: Au d Gläubige sind emal verirrt gsii, und Gott hät si us Erbarme grettet."),
- "TU-TIT-003-008-011": ("Was nützt und was nöd", "Gueti Wärch nützed de Mänsche; Striit um Stammbäum und Gsetz isch läär. Wär Spaltige verursachet, söll nach zweimaliger Ermaanig gmide wärde."),
- "TU-TIT-003-012-015": ("Reiseplän und Grüess", "De Paulus wott de Artemas oder de Tychikus zum Titus schicke; dänn söll de Titus zu im uf Nikopolis cho, wo er wott überwintere. De Zenas und de Apollos söll er für d Reis uusrüschte; Grüess schlüüssed de Brief ab."),
+ "TU-TIT-003-008-011": ("Was nützt und was nöd", "Gueti Wärch nützed de Mänsche; Striit um Stammbäum und Gsetz isch leer. Wär Spaltige verursachet, söll nach zweimaliger Ermahnig gmide wärde."),
+ "TU-TIT-003-012-015": ("Reiseplän und Grüess", "De Paulus wott de Artemas oder de Tychikus zum Titus schicke; dänn söll de Titus zu im uf Nikopolis choo, won er wott überwintere. De Zenas und de Apollos söll er für d Reis usrüschte; Grüess schlüüssed de Brief ab."),
 }
 
 
@@ -308,8 +309,8 @@ def run():
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
                 rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Dieth-Schreibung (Schwyzertütschi Dialäktschrift, 2. Aufl. 1986), lautnah: lange Vokale doppelt (Broot, Riich), ä für offenes e.",
-                            "register_de": "Nah am griechischen Wortlaut, aber so, wie man es sagt: Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
+                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                            "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich sagt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-TIT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})
             rec.update({"method_de": ("Wörtlich orientierte Arbeitsübersetzung aus dem SBLGNT: Satzbau und Wortwahl des Griechischen möglichst sichtbar, verständliches Deutsch. Schweizer Rechtschreibung. Eigene Formulierung; nicht aus einer veröffentlichten deutschen Bibel übernommen."
@@ -322,7 +323,7 @@ def run():
                 rec["alternatives"] = alts
                 rec["alternatives_note_de"] = "Wiedergabe abweichender Lesarten, soweit sie die Übersetzung verändern. " + (AUTH if lang == "de" else AUTH_GSW)
                 rec["alternatives_origin_note"] = ("Mögliche Erklärungen, wie die Unterschiede entstanden sein könnten. Sie stehen nebeneinander; keine ist als richtig entschieden."
-                                                   if lang == "de" else "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
+                                                   if lang == "de" else "Möglichi Erklärige, wie d Underschiid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide.")
             n += write(D / "translations" / f"{tid}.json", rec)
             aid = f"ALIGN-TIT-{c:03d}-001-{last:03d}-{code}-001"
             n += write(D / "alignments" / f"{aid}.json", {
