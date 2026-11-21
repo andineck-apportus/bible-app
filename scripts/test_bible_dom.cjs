@@ -219,18 +219,18 @@ assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlink
 click('[data-close]');
 // Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
 click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
-assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Broot gib üs hüt.','Mundart im Lesetext');
+assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Brot gib öis hüt.','Mundart im Lesetext');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
 (click('[data-action=up]'),click('.sheet .pick-open'));assert(reader.textContent.includes('De Jesus git de Jünger s Gebät vor')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');assert(sheetHost.querySelector('.grid.nums .cur[data-pickat="v39-6-11"]'),'Auswahl unten markiert den zuletzt gelesenen Vers');click('.grid.nums .cur');click('.sheet .pick-open');
 click('[data-more="v39-6-12"]');assert(sheetHost.querySelector('[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Versblatt');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
-click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Broot')&&sheetHost.textContent.includes('für de nööchscht Taag'),'Mundart-Entscheidung im Versblatt');
+click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Brot')&&sheetHost.textContent.includes('für de nächscht Tag'),'Mundart-Entscheidung im Versblatt');
 sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
 // Inhalte in Mundart (data/localizations): Deutungen, Befunde, Hintergrund, Zusammenfassungen, Lesarten-Erklärungen
 if(sheetHost.querySelector('.sheet'))click('[data-close]');
 click('[data-more="v39-6-11"]');sheetHost.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click();
-assert(sheetHost.textContent.includes('Broot für de nööchscht Taag')&&sheetHost.textContent.includes('de folgendi Tag'),'Deutung und Wortbedeutung in Mundart');
+assert(sheetHost.textContent.includes('Brot für de nöchscht Tag')&&sheetHost.textContent.includes('de folgendi Tag'),'Deutung und Wortbedeutung in Mundart');
 assert(!sheetHost.textContent.includes('Brot für den kommenden Tag'),'keine hochdeutsche Deutung im Mundart-Blatt');click('[data-close]');
 click('[data-more="v39-6-11"]');sheetHost.querySelector('.vs-up [data-vertiefen="TU-MAT-006-009-013"]').click();
 assert(/\b(isch|händ|de|vo)\b/.test(sheetHost.querySelector('.bg-note .body').textContent),'Hintergrund in Mundart');click('[data-close]');
@@ -249,7 +249,7 @@ assert(sheetHost.textContent.includes('Alte Handschriften')&&sheetHost.textConte
 click('[data-close]');
 assert.equal(model.STUDY.layers.de.text['OBA.1.21'],'Und Retter werden hinaufziehen auf den Berg Zion, um das Gebirge Esau zu richten; und die Königsherrschaft wird JHWH gehören.');
 assert(model.STUDY.words.filter(w=>w.ref==='OBA.1.1').every(w=>w.wtr),'Umschrift je Wort');
-assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Es grüessed dich alli'),'Titus in Mundart');
+assert(model.STUDY.layers.gsw.text['TIT.3.15'].startsWith('Alli, wo bi mir sind, lönd dich grüesse'),'Titus in Mundart');
 assert(model.STUDY&&dom.window.document.querySelector('#bible-stream'));
 // Wörterbuch (UBS/STEPBible), Ketiv/Qere (TAHOT), Ausgaben je Wort (TAGNT); Urtext-Modus ist an
 const goto=q=>{click('[data-action=index]');const i=sheetHost.querySelector('input[type=search]');i.value=q;i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));(sheetHost.querySelector('.results [data-pick]').click(),click('.sheet .nav-open'));};
