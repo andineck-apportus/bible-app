@@ -168,6 +168,14 @@ Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
 - Wortschatz: `Chile` (nicht «Chilche»), `Volk`, `Ängel`, `Frömd`, `Chnü`, `chnüle`, `Stern`, `Fäscht` (Fest) /
   `fescht` (fest), `Zahn`/`Zäh` (Zähne), `zäh` (zehn), `Wortluut`, `ränned`, `Umkehr`.
 
+**Festlegungen Runde 4 (2026-11-21, Angleichung zwischen den Büchern):**
+- `vorus-` in Zusammensetzungen kurz wie jede Vorsilbe (`vorussetze`, `Vorussag`, `vorusgseit`); allein `voruus`.
+- Hochdeutsches `ie` in Lehn- und Fachwörtern bleibt (`Sieg`, `Siegel`, `Gier`, `Trieb`, `Papier`, `-iere`); gelehrte
+  `eu`-Wörter bleiben (`ungeheuer`, `beteuere`). Nach `bi` kein Gleit-n (`bi ich`).
+- Einheitlich: `Züügnis`, `züüge` (eu → üü, Regel 1.2), `elei`, `dört`, `fürchte`, `gfürchtet`, `verrisse`,
+  `umchehre`, `umgchehrt`, `chrähe`, `ernidrige`, `aagchündet`, `Stern`.
+- Werktitel und wörtliche fremdsprachige Zitate bleiben in ihrer Sprache und Schreibung.
+
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 
 ## 3 Wortwahl
