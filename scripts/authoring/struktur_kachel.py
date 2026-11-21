@@ -166,7 +166,13 @@ def _raster(sx, el, y0):
         o.append(box(x, y, w, h, "a" if e.get("betont") else "n", e.get("betont")))
         o.append(f'<circle cx="{x + 16}" cy="{y + 16}" r="11" fill="{PAPER}" stroke="{FARBE["n"][1]}"/>'
                  f'<text x="{x + 16}" y="{y + 20.5}" font-family="{SANS}" font-size="12.5" text-anchor="middle" fill="{INK}">{i + 1}</text>')
-        svg, _ = zweisprachig(x + w / 2, y + h / 2 + 4, e, max(10, int(w / 9.4)), fs=FS if cols < 4 else 15, anchor="middle")
+        fs0 = fs = FS if cols < 4 else 15
+        while fs > 12:   # lange Beschriftung: Schrift verkleinern, bis sie über Nummer und Stelle passt (Ex 11–12 ragte hinaus)
+            n_z = max(10, int(w / 9.4 * fs0 / fs))
+            if max(len(umbruch(e.get(lg) or e.get("de") or "", n_z)) for lg in ("de", "gsw")) * fs * 1.24 <= h - 30:
+                break
+            fs -= 1
+        svg, _ = zweisprachig(x + w / 2, y + h / 2 + 4, e, max(10, int(w / 9.4 * fs0 / fs)), fs=fs, anchor="middle")
         o.append(svg)
         if e.get("ref"):
             o.append(ref_text(x + w - 8, y + h - 7, e["ref"], "end"))
@@ -209,10 +215,10 @@ def _spiegel(sx, el, y0):
     a = [e for e in el if e.get("seite") == "a"]
     b = [e for e in el if e.get("seite") == "b"]
     oben, unten, xl, xr = y0 + 34, H - 64, 80, 520
-    o.append(f'<path d="M{xl} {oben} C 230 {oben + 10}, 370 {unten - 10}, {xr} {unten}" fill="none" stroke="{FARBE["b"][1]}" stroke-width="3.5"/>')
-    o.append(f'<path d="M{xl} {unten} C 230 {unten - 10}, 370 {oben + 10}, {xr} {oben}" fill="none" stroke="{FARBE["a"][1]}" stroke-width="3.5" stroke-dasharray="9 6"/>')
-    # Seite a: unten links → oben rechts; Seite b: oben links → unten rechts
-    for reihe, start, ende in ((a, (xl, unten), (xr, oben)), (b, (xl, oben), (xr, unten))):
+    # Seite a fällt (oben links → unten rechts, gestrichelt), Seite b steigt (unten links → oben rechts); so schreiben es alle Buchgerüste
+    o.append(f'<path d="M{xl} {oben} C 230 {oben + 10}, 370 {unten - 10}, {xr} {unten}" fill="none" stroke="{FARBE["a"][1]}" stroke-width="3.5" stroke-dasharray="9 6"/>')
+    o.append(f'<path d="M{xl} {unten} C 230 {unten - 10}, 370 {oben + 10}, {xr} {oben}" fill="none" stroke="{FARBE["b"][1]}" stroke-width="3.5"/>')
+    for reihe, start, ende in ((a, (xl, oben), (xr, unten)), (b, (xl, unten), (xr, oben))):
         paar = [reihe[0], reihe[-1]] if len(reihe) > 1 else reihe
         for e, (x, y) in zip(paar, [start, ende]):
             anchor = "start" if x < W / 2 else "end"

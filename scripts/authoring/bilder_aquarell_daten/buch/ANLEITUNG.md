@@ -22,7 +22,7 @@ zeigt es; vollständiges Beispiel: `buch/TIT.json`. Prüfen: `python3 scripts/au
   Typen: `spalten` (zwei Seiten, z. B. nicht … sondern, einst – jetzt, Gerechte – Gottlose; `gestrichen: true` für verneinte Glieder),
   `kette` (Folge mit Pfeilen: Ursache → Wirkung, Argument), `raster` (Reihe gleichartiger Glieder: Gebote, Plagen, Tugenden),
   `kurve` (Abstieg und Aufstieg, Klage → Lob, je Element `richtung` ab/auf, Wende als `mitte`), `spiegel` (Umkehrung hoch ↔ tief,
-  zwei Seiten a/b mit Anfang und Ende), `reihe` (nummerierte Stationen, Ablauf), `ebenen` (oben/unten: Himmel ↔ Erde, Bild ↔ Sache),
+  zwei Seiten mit Anfang und Ende: Seite a fällt von hoch nach tief, Seite b steigt von tief nach hoch), `reihe` (nummerierte Stationen, Ablauf), `ebenen` (oben/unten: Himmel ↔ Erde, Bild ↔ Sache),
   `ringe` (Rahmen und Mitte, Chiasmus nur mit Textbeleg; `mitte` Pflicht).
 - `form_grund_de`: ein Satz, warum.
 - Ziel über die ganze Bibel: gemalt, wo erzählt wird; nicht jede Station eines Briefs oder Propheten künstlich als Szene.
