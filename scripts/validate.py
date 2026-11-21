@@ -284,7 +284,7 @@ def main():
                 base_ = (ROOT / str(r.get("file", ""))).parent
                 for i_, sc_ in enumerate(r["scenes"]):
                     img_ = base_ / str(sc_.get("image", ""))
-                    if not img_.is_file():
+                    if sc_.get("form") != "struktur" and not img_.is_file():
                         errors.append(f"{rel}: Bild {sc_.get('image')} fehlt")
                     span_ = _vs(sc_.get("reference")) if sc_.get("reference") else None
                     for e_ in (r.get("evidence") or [[]] * len(r["scenes"]))[i_]:
@@ -306,7 +306,7 @@ def main():
                 if st_ == "fachlich-geprueft" and not (c_.get("fachlich") or {}).get("name"):
                     errors.append(f"{rel}: «fachlich-geprueft» ohne Namen der prüfenden Person")
                 if st_ in ("ki-geprueft", "fachlich-geprueft"):
-                    imgs_ = {sc_["scene"]: base_ / sc_["image"] for sc_ in r["scenes"]}
+                    imgs_ = {sc_["scene"]: (base_ / sc_["image"]) if sc_.get("image") else None for sc_ in r["scenes"]}
                     for f_ in c_.get("felder") or []:
                         p_img = imgs_.get(f_.get("scene"))
                         if f_.get("ergebnis") != "bestanden" or (f_.get("schluss") or {}).get("ergebnis") != "bestanden":

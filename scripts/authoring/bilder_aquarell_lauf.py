@@ -71,6 +71,7 @@ def schreibe_auswahl(aus):
 
 
 def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, bericht, streng=False, behalten=False):
+    sids = [s for s in sids if szenen[s][1].get("form") != "struktur"]
     """behalten (Neuprüfung unveränderter Bilder): findet die neue Ortung keinen Platz, bleibt die bisherige, vollständige
     Anordnung; die Ortung der Köpfe schwankt zwischen Läufen (Lauf 30, Joh 2 K3: Blase fiel weg)."""
     zweiter = []
@@ -122,7 +123,7 @@ def blasen_und_schluss(sids, aus, fig, szenen, momente, band, schluessel, out, b
 def pruefen(a, schluessel, out):
     plaene, fig, allg, szenen, momente, band = kontext()
     aus = BA.lade(DATEN / "auswahl.json")
-    sids = [s for s in (aus if a.szenen == "alle" else a.szenen.split(",")) if s in aus and s in szenen]
+    sids = [s for s in (aus if a.szenen == "alle" else a.szenen.split(",")) if s in aus and s in szenen and szenen[s][1].get("form") != "struktur"]
     bericht = {}
     for sid in sids:
         _, sz = szenen[sid]
@@ -151,7 +152,13 @@ def neu(a, schluessel, out):
     bericht, gewaehlt = {}, {}
     for sid in a.szenen.split(","):
         sid = sid.strip()
+        if not sid or sid not in szenen:
+            BP.melde(f"{sid}: unbekannte Szene")
+            continue
         name, sz = szenen[sid]
+        if sz.get("form") == "struktur":
+            print(f"{sid}: Strukturfeld, wird gezeichnet, nicht gemalt")
+            continue
         # Vorlagen (PROC-BILD-AQUARELL 2.4): Stilreferenz, Figurenblatt und die geprüften Einzelporträts der Figuren der Szene
         vorlagen, portr = G.vorlagen_szene(plaene[name], sz, fig[sid])
         hinweis, beste = a.hinweis, None

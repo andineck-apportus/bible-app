@@ -132,6 +132,10 @@ def male(prompt, vorlagen, schluessel, n, groesse="1536x1024"):
             letzter = f"HTTP {e.code} ({m}): {e.read().decode(errors='replace')[:500]}"
             if e.code in (400, 404) and "model" in letzter.lower():
                 continue
+            if e.code in (429, 500, 502, 503) and versuch < 4:  # Parallelläufe: Ratenlimit abwarten
+                import time
+                time.sleep(30 * (versuch + 1))
+                return male(prompt, vorlagen, schluessel, n, versuch + 1)
             raise RuntimeError(letzter) from None
     raise RuntimeError(f"Kein Bildmodell verfügbar. Zuletzt: {letzter}")
 

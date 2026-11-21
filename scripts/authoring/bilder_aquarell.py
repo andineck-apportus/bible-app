@@ -363,8 +363,12 @@ def blasen_von(a):
 
 def kachel(i, sz_id, sz, aus, kw, x, y):
     a = aus[sz_id]
-    teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{H + BAND}" viewBox="0 0 {W} {H + BAND}">',
-             f'<image href="{a["datei"]}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice"/>']
+    teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{H + BAND}" viewBox="0 0 {W} {H + BAND}">']
+    if sz.get("form") == "struktur":  # gezeichnet aus Daten (struktur_kachel.py), Form je Feld (Entscheid 2026-11-21)
+        import struktur_kachel as SK
+        teile.append(SK.zeichne(sz["struktur"]))
+    else:
+        teile.append(f'<image href="{a["datei"]}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice"/>')
     for n, (sp, b) in enumerate(zip(sz["speech"], blasen_von(a))):
         if b:
             teile.append(blase(b, sp, n))
@@ -385,6 +389,33 @@ def texte_von(plan_d):
 BAND_MAX = 54   # Zeichen; länger wird die Schrift im Band kleiner als 16 px und auf dem Handy zu klein (Lauf 12, Lk 15)
 
 
+STRUKTUR_PROZESS = "PROC-BILD-AQUARELL@2.4"
+
+
+def struktur_eintraege(alle, aus, fig, allg):
+    """auswahl-Einträge für Strukturfelder: keine Malerei, feste Prüfungen des Werkzeugs (struktur_kachel.pruefe)."""
+    import bilder_pruefung as BP
+    import struktur_kachel as SK
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    import buchgeruest as BG
+    out = dict(aus)
+    for name, pd in alle.items():
+        figp = fig_fuer(fig, pd)
+        for sid, sz in pd["szenen"].items():
+            if sz.get("form") != "struktur":
+                continue
+            buch = sz["reference"].split(".")[0]
+            regeln = SK.pruefe(sz["struktur"], lambda r: BG.stelle_ok(r, buch))
+            ok = all(e["ergebnis"] == "ok" for e in regeln if e["stufe"] == "pflicht")
+            pr = {"ergebnis": "bestanden" if ok else "durchgefallen", "punkte": sum(e["ergebnis"] == "ok" for e in regeln), "kern": None,
+                  "bild_sha": BP.sha(SK.zeichne(sz["struktur"]).encode()), "plan_sha": BP.plan_fingerabdruck(sz, figp, allg),
+                  "regeln_version": allg["version"], "datum": pd.get("stand"), "modell": "Werkzeug (struktur_kachel.py)",
+                  "regeln": [{**e, "ebene": "struktur"} for e in regeln], "prozess": STRUKTUR_PROZESS}
+            out[sid] = {"form": "struktur", "datei": None, "pruefung": pr,
+                        "schluss": {"ergebnis": pr["ergebnis"], "kern": None, "bild_sha": pr["bild_sha"], "regeln": [], "prozess": STRUKTUR_PROZESS}}
+    return out
+
+
 def pruefe_band(plan_d, texte):
     """Feste Prüfung: Stichwortband höchstens BAND_MAX Zeichen, sonst «band» im Szenenplan (Wortlaut aus dem Text des Felds)."""
     fehler = []
@@ -398,7 +429,7 @@ def pruefe_band(plan_d, texte):
                 t = kw.get(lg) or ""
                 if len(t) > BAND_MAX:
                     fehler.append(f"{sid}: Band «{t}» ({lg}) hat {len(t)} Zeichen, höchstens {BAND_MAX} – «band» im Szenenplan setzen")
-                if eigen and t and norm(t) not in norm(" ".join(texte[lg].get(r, "") for r in verse_von(p_.get("reference") or sz["reference"]))):
+                if eigen and t and texte.get(lg) and norm(t) not in norm(" ".join(texte[lg].get(r, "") for r in verse_von(p_.get("reference") or sz["reference"]))):
                     fehler.append(f"{sid}: Band «{t}» ({lg}) steht so nicht im Text {p_.get('reference') or sz['reference']}")
     return fehler
 
@@ -535,6 +566,7 @@ def main():
         stil["revision_log"] = alt.get("revision_log", [])
     stil["renderings"] = renderings(fig, alle, alt.get("renderings"))
     n += schreibe(alt_p, stil)
+    aus = struktur_eintraege(alle, aus, fig, lade(DATEN / "pruefregeln.json"))
     for name, plan_d in alle.items():
         plan = plan_d["szenen"]
         for b in plan_d["bilder"]:
@@ -561,12 +593,14 @@ def main():
                 fp.write_text(svg + "\n", encoding="utf-8")
                 n += 1
             depicts = sorted({x for s in felder for x in s["depicts"]} | {x for s in felder for sp in s["speech"] for x in (sp["from"], sp["to"])})
-            alt_de = f"{len(felder)} gemalte Bilder: " + " ".join(f"{i} {p_['action_de']}" for i, p_ in enumerate(brief["panels"], 1))
+            n_s = sum(f_.get("form") == "struktur" for f_ in felder)
+            art = f"{len(felder)} gemalte Bilder" if not n_s else f"{len(felder)} Bildfelder ({len(felder) - n_s} gemalt, {n_s} gezeichnet)"
+            alt_de = f"{art}: " + " ".join(f"{i} {p_['action_de']}" for i, p_ in enumerate(brief["panels"], 1))
             rec = {"id": b["id"], "type": "illustration", "status": "draft", "tags": plan_d.get("tags", ["TAG-JOHN"]), "style": "ILLSTYLE-AQUARELL", "brief": b["brief"],
                    "level": b["level"], "reference": b["reference"], "target": b["target"], "file": f"data/illustrations/aquarell/{b['id']}.svg",
                    "depicts": depicts, "alt_de": alt_de, "note_de": b.get("note_de"),
                    "scenes": [{"scene": s, "image": aus[s]["datei"], "model": aus[s].get("modell"), "run": aus[s].get("lauf"), "variant": aus[s].get("variante"),
-                               "reference": plan[s]["reference"],
+                               "reference": plan[s]["reference"], **({"form": "struktur"} if plan[s].get("form") == "struktur" else {}),
                                "speech": [{"from": sp["from"], "to": sp["to"], "ref": sp["ref"]} for sp in plan[s]["speech"]]} for s in b["felder"]],
                    "evidence": [plan[s]["evidence"] for s in b["felder"]],
                    "license": LIC, "authorship_de": AUTH, "knowledge": {"asserted_at": DATE, "supersedes": None}}

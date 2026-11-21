@@ -215,7 +215,7 @@ def schreibe(buch, d):
     plan = {"_hinweis": f"Buchgerüst {buch} (scripts/authoring/buchgeruest.py aus buch/{buch}.json). Form je Station: «szene» wird gemalt und "
                         "automatisch geprüft, «struktur» zeichnet das Werkzeug aus den Elementen. " + ("Vorläufig von oben; Band ist ein Titel in eigenen Worten."
                                                                                                          if not trans else "Band aus dem Bildauftrag (Wortlaut der Arbeitsübersetzung)."),
-            "basis": trans if hat_brief else [], "tags": [tag] if tag else [], "figurenblatt": None,
+            "basis": trans if hat_brief else [], "tags": [tag] if tag else [], "figurenblatt": None, "stand": d.get("stand") or HEUTE,
             "figuren": d.get("figuren", {}), "kenn_en": d.get("kenn_en", {}), "pruef": d.get("pruef", {}),
             "bilder": [{"id": f"ILL-AQU-{buch}", "brief": f"BRIEF-{buch}", "level": "book", "reference": buch, "target": f"SUM-BOOK-{buch}",
                         "felder": [s["id"] for s in st], "note_de": d["note_de"]}],

@@ -276,6 +276,10 @@ aq24 = [
     s("p5", "werkzeug", "Porträt wählen und ablegen", "Gewählt wird die bestandene Variante mit den meisten Punkten; abgelegt klein (384 × 576) mit Prüfvermerk im Stil-Datensatz (Datum, Ergebnis, Regeln, Grenzen, Fingerabdrücke von Bild und Auftrag). Ändern sich Beschreibung oder Regeln, gilt das Porträt als veraltet.",
       "Einzelporträt im Bildlexikon", zurueck=("p2", "keine Variante bestanden: neu malen mit Hinweis aus den verfehlten Regeln, höchstens drei Runden; danach bleibt der Eintrag offen")),
 ] + ersetze(aq23, "w3", s("w3", "modell", "Malen", "Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz, Figurenblatt und den geprüften Einzelporträts der vorkommenden Figuren (nur wenn die Figur im Szenenplan dieselbe Beschreibung hat wie im Porträt)."))
+aq24 = [aq23[0], s("w1b", "bearbeitung", "Form je Feld", "Aus dem Inhalt wird für jedes Feld die Form gewählt und begründet: gemalte Szene, wo der Text erzählt oder ein Geschehen schildert; sonst ein gezeichnetes Strukturbild (Spalten, Kette, Raster, Kurve, Spiegel, Reihe, Ebenen, Ringe).",
+                  "Form und Begründung im Szenenplan")] + aq23[1:2] + [
+    s("w2b", "werkzeug", "Strukturbild zeichnen", "Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln.",
+      prueft=["Beschriftungen passen", "alle Stellen gültig", "jede Beschriftung auch auf Züridüütsch"])] + aq23[2:]
 aq20 = ersetze(ersetze(ohne(aq21, "w6"), "w5", s("w5", "pruefung", "Regeln prüfen", "Dieselbe Instanz beantwortet jede Regel einzeln (allgemein, Figur, Feld), zählt verlangte Dinge und gibt Kopfpositionen an.", prueft=["alle Pflichtregeln erfüllt"])),
                "w7", s("w7", "werkzeug", "Variante wählen", "Brauchbar ist eine Variante, die alle Pflichtregeln erfüllt; gewählt wird die mit den meisten Punkten.", prueft=["Pflichtregeln"],
                        zurueck=("w3", "keine brauchbare Variante: neu malen mit Hinweis, höchstens drei Runden")))
@@ -302,7 +306,9 @@ P["PROC-BILD-AQUARELL"] = {"names": {"de": "Bilder im Aquarellstil", "en": "Wate
                 "Alle Pflichtregeln und die Schlussprüfung bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d"], docs=["docs/BILDSTIL.md"]),
         fassung("2.4", "2026-10-28", "Bildlexikon im Aquarellstil (Entscheid Herausgeber): je Lexikon-Eintrag ein gemaltes Einzelporträt bzw. eine Vignette, automatisch geprüft wie die Szenen (Blindbeschreibung, Regeln, Vergleich mit Beschreibung und Lexikon); geprüfte Porträts gehen beim Malen der Szenen als Vorlage mit.", aq24,
                 "Alle Pflichtregeln und die Schlussprüfung bestanden; Porträts: alle Pflichtregeln bestanden.",
-                regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d", "scripts/authoring/bilder_aquarell_daten/portraets.json@2026-10-28"], docs=["docs/BILDSTIL.md"])]}
+                regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d", "scripts/authoring/bilder_aquarell_daten/portraets.json@2026-10-28"], docs=["docs/BILDSTIL.md"]),
+        fassung("2.4", "2026-11-21", "Form je Feld (Entscheid Herausgeber nach der Analyse Visuelle Sprache): gemalt wird nur, was erzählt wird; Strukturbilder zeichnet das Werkzeug aus Daten. Buchgerüst aller 66 Bücher, vorläufig von oben, wo Abschnittsanalysen fehlen.", aq24,
+                "Gemalte Felder: alle Pflichtregeln und die Schlussprüfung bestanden; Strukturfelder: feste Prüfungen des Werkzeugs bestanden.", regeln=["scripts/authoring/bilder_aquarell_daten/pruefregeln.json@2026-10-28d"], docs=["docs/BILDSTIL.md", "docs/VISUELLE-SPRACHE.md"])]}
 
 # ------------------------------------------------------------------ Freigabe
 f20 = [
