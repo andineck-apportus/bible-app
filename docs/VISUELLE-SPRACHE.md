@@ -67,10 +67,10 @@ mit Form je Feld, Tit 1,7–8 und 3,3–7, Phil 2,6–11, Obadja mit Karte, Mt 1
 Stiftshütte, Karte Joh 2, Bildlexikon, Merkkarte Lk 15,24. Die Vignetten des Pilotlaufs sind ohne automatische Prüfung gemalt; zwei
 zeigten eine nicht verlangte Figur aus der Stilvorlage und wurden zugeschnitten.
 
-## Offen (Entscheid Andi Neck)
+## Entscheide (2026-11-21, Andi Neck)
 
-1. Zuordnung «Form je Inhalt» als Regel für den nächsten Bildprozess.
-2. Beginn mit Phase 1 (Gerüst über alle 66 Bücher).
-3. Bibliothek als Einstieg in der App.
-4. Modus ohne Personenbilder.
-5. Audio: Aufnahmen, synthetische Stimme oder später.
+1. «Form je Inhalt» gilt als Regel für den Bildprozess.
+2. Phase 1, das Gerüst über alle 66 Bücher, wird in grossen Schritten umgesetzt (Buchebene; vorläufig von oben, wo Abschnittsanalysen fehlen).
+3. Der Zoom-Zugang bleibt Hauptzugang; Bibliothek, Zeit und Ort werden als weitere Zugänge in Varianten geprüft.
+4. Kein besonderer Modus ohne Personenbilder; Text allein lesen bleibt möglich, Bilder sind zuschaltbar.
+5. Audio später.
