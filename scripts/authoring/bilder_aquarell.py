@@ -361,20 +361,33 @@ def blasen_von(a):
     return a.get("bubbles", []) if a.get("blasen") == "hand" else a.get("blasen_auto", a.get("bubbles", []))
 
 
+def kachel_hoehe(sz_id, sz):
+    """Höhe des Bildteils einer Kachel in Einheiten der Breite W: gemalt H; gezeichnet nach Inhalt (struktur_kachel, Rückmeldung
+    2026-11-21: Platz nutzen statt fester 600 × 400)."""
+    if sz.get("form") != "struktur":
+        return H
+    import struktur_kachel as SK
+    import vignetten as VG
+    _, h = SK.zeichne(sz["struktur"], VG.gueltig(sz_id))
+    return round(h * W / SK.BREITE, 1)
+
+
 def kachel(i, sz_id, sz, aus, kw, x, y):
     a = aus[sz_id]
-    teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{H + BAND}" viewBox="0 0 {W} {H + BAND}">']
+    hb = kachel_hoehe(sz_id, sz)
+    teile = [f'<svg class="ill-tile" data-span="1" data-scene="{sz_id}" x="{x}" y="{y}" width="{W}" height="{hb + BAND}" viewBox="0 0 {W} {hb + BAND}">']
     if sz.get("form") == "struktur":  # gezeichnet aus Daten (struktur_kachel.py), Form je Feld (Entscheid 2026-11-21)
         import struktur_kachel as SK
-        import vignetten as VG   # gemalte Vignetten je Glied, sofern geprüft (Hybrid, Rückmeldung 2026-11-21)
-        teile.append(SK.zeichne(sz["struktur"], VG.gueltig(sz_id)))
+        import vignetten as VG   # Bilder des Bildlexikons je Glied, sofern geprüft (Hybrid, Rückmeldung 2026-11-21)
+        inhalt, h = SK.zeichne(sz["struktur"], VG.gueltig(sz_id))
+        teile.append(f'<svg x="0" y="0" width="{W}" height="{hb}" viewBox="0 0 {SK.BREITE} {h:.1f}">{inhalt}</svg>')
     else:
         teile.append(f'<image href="{a["datei"]}" x="0" y="0" width="{W}" height="{H}" preserveAspectRatio="xMidYMid slice"/>')
     for n, (sp, b) in enumerate(zip(sz["speech"], blasen_von(a))):
         if b:
             teile.append(blase(b, sp, n))
-    teile.append(band(i, kw))
-    teile.append(f'<rect x="1" y="1" width="{W - 2}" height="{H + BAND - 2}" fill="none" stroke="#D8D0C0" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>')
+    teile.append(f'<g transform="translate(0 {hb - H})">{band(i, kw)}</g>' if hb != H else band(i, kw))
+    teile.append(f'<rect x="1" y="1" width="{W - 2}" height="{hb + BAND - 2}" fill="none" stroke="#D8D0C0" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>')
     return "".join(teile)
 
 
@@ -412,7 +425,7 @@ def struktur_eintraege(alle, aus, fig, allg):
             regeln = SK.pruefe(sz["struktur"], lambda r: BG.stelle_ok(r, buch))
             ok = all(e["ergebnis"] == "ok" for e in regeln if e["stufe"] == "pflicht")
             pr = {"ergebnis": "bestanden" if ok else "durchgefallen", "punkte": sum(e["ergebnis"] == "ok" for e in regeln), "kern": None,
-                  "bild_sha": BP.sha(SK.zeichne(sz["struktur"]).encode()), "plan_sha": BP.plan_fingerabdruck(sz, figp, allg),
+                  "bild_sha": BP.sha(SK.zeichne(sz["struktur"])[0].encode()), "plan_sha": BP.plan_fingerabdruck(sz, figp, allg),
                   "regeln_version": allg["version"], "datum": pd.get("stand"), "modell": "Werkzeug (struktur_kachel.py)",
                   "regeln": [{**e, "ebene": "struktur"} for e in regeln], "prozess": STRUKTUR_PROZESS}
             out[sid] = {"form": "struktur", "datei": None, "pruefung": pr,
@@ -585,12 +598,15 @@ def main():
             cols = 1 if len(b["felder"]) == 1 else 2
             rows = (len(b["felder"]) + cols - 1) // cols
             gap = 12
-            tw, th = cols * W + (cols - 1) * gap, rows * (H + BAND) + (rows - 1) * gap
+            hoehen = [kachel_hoehe(sid, plan[sid]) + BAND for sid in b["felder"]]
+            zeilen_h = [max(hoehen[r * cols:(r + 1) * cols]) for r in range(rows)]   # Zeile so hoch wie ihre höchste Kachel
+            tw, th = cols * W + (cols - 1) * gap, sum(zeilen_h) + (rows - 1) * gap
             tiles = []
             for i, (sid, p_) in enumerate(zip(b["felder"], brief["panels"]), 1):
                 r_, c_ = divmod(i - 1, cols)
                 x = c_ * (W + gap) + ((W + gap) // 2 if r_ == rows - 1 and len(b["felder"]) % cols and cols > 1 else 0)
-                tiles.append(kachel(i, sid, plan[sid], aus, b.get("band", {}).get(sid) or plan[sid].get("band") or p_.get("keywords") or {}, x, r_ * (H + BAND + gap)))
+                tiles.append(kachel(i, sid, plan[sid], aus, b.get("band", {}).get(sid) or plan[sid].get("band") or p_.get("keywords") or {}, x,
+                                    sum(zeilen_h[:r_]) + r_ * gap))
             svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {tw} {th}">' + "".join(tiles) + "</svg>"
             fp = OUT / f"{b['id']}.svg"
             if not fp.exists() or fp.read_text(encoding="utf-8").strip() != svg:

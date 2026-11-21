@@ -271,7 +271,7 @@ def schreibe(buch, d):
             continue
         rec = {"id": fid, "type": "figure", "status": "draft", "tags": [tag] if tag else [], "kind": nf["kind"],
                "names": {"de": nf["de"], "en": nf["en"]}, "identity_de": nf["identity_de"], "era": nf["era"],
-               "display_group": {"person": "people", "group": "people", "object": "thing", "place": "place"}.get(nf["kind"], "people"),
+               "display_group": {"person": "people", "group": "people", "object": "thing", "place": "place", "sign": "concept"}.get(nf["kind"], "people"),
                "traits": [{"trait_de": t, "basis": "design"} for t in nf["traits_de"]],
                "legend": {"de": nf["legend_de"], "gsw": nf["legend_gsw"]},
                "rules_de": ["Erkennbar an Farbe, Kleidung und Zeichen; Menschen des antiken Vorderen Orients, keine Karikatur"],

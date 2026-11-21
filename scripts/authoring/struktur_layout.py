@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "scripts/authoring"))
 import struktur_kachel as SK  # noqa: E402
 import vignetten as VG  # noqa: E402
 
-RAND_KACHEL, RAND_KASTEN = 10, 4   # Mindestabstand des Textes zum Kachelrand und zum Rand seines Kastens (Rückmeldung 2026-11-21)
+RAND_KACHEL, RAND_KASTEN = 6, 3   # Mindestabstand des Textes zum Kachelrand und zum Rand seines Kastens (Rückmeldung 2026-11-21)
 
 JS = """(lg) => {
   const r = [];
@@ -25,7 +25,7 @@ JS = """(lg) => {
   const box = e => { if (e.tagName === 'text') { const b = e.getBBox(); return {x: b.x, y: b.y, w: b.width, h: b.height}; }
     const b = e.getBoundingClientRect(); return {x: b.x, y: b.y, w: b.width, h: b.height}; };
   const T = t.map(e => ({b: box(e), s: e.textContent.trim().slice(0, 40)})).filter(o => o.b.w > 0);
-  const K = [...svg.querySelectorAll('rect')].map(box).filter(b => b.w < 590 && b.w > 0);
+  const K = [...svg.querySelectorAll('rect')].map(box).filter(b => b.w < +svg.getAttribute('width') - 2 && b.w > 0);
   const C = [...svg.querySelectorAll('circle')].map(box);
   // Bildfeld: verschachteltes svg nach seinen Attributen (getBoundingClientRect zählt den abgeschnittenen Rest des Bildes mit)
   const I = [...svg.querySelectorAll('image')].map(e => { const p = e.parentElement;
@@ -33,10 +33,10 @@ JS = """(lg) => {
     return box(e); });
   const ov = (a, b, m) => a.x + m < b.x + b.w && b.x + m < a.x + a.w && a.y + m < b.y + b.h && b.y + m < a.y + a.h;
   const inside = (a, b, p) => a.x >= b.x + p && a.y >= b.y + p && a.x + a.w <= b.x + b.w - p && a.y + a.h <= b.y + b.h - p;
-  const RK = %d, RB = %d;
+  const RK = %d, RB = %d; const W = +svg.getAttribute('width'), HH = +svg.getAttribute('height');
   for (let i = 0; i < T.length; i++) {
     const a = T[i].b;
-    if (a.x < RK || a.y < RK - 4 || a.x + a.w > 600 - RK || a.y + a.h > 400 - 2) r.push('zu nah am Kachelrand: ' + T[i].s);
+    if (a.x < RK || a.y < RK - 4 || a.x + a.w > W - RK || a.y + a.h > HH - 2) r.push('zu nah am Kachelrand: ' + T[i].s);
     for (let j = i + 1; j < T.length; j++) if (ov(a, T[j].b, 1)) r.push('überlappt: «' + T[i].s + '» / «' + T[j].s + '»');
     for (const k of K) if (ov(a, k, -RB) && !inside(a, k, RB) && !inside(k, a, 0) && !(inside(a, k, 0) && false)) {
       r.push((inside(a, k, 0) ? 'zu nah am Kastenrand: ' : 'über den Rand: ') + T[i].s); break; }
@@ -44,7 +44,7 @@ JS = """(lg) => {
     for (const k of I) if (ov(a, k, 2)) { r.push('auf einem Bild: ' + T[i].s); break; }
   }
   for (let i = 0; i < K.length; i++) {
-    if (K[i].x < 4 || K[i].y < 4 || K[i].x + K[i].w > 596 || K[i].y + K[i].h > 398) r.push('Kasten am Kachelrand');
+    if (K[i].x < 2 || K[i].y < 2 || K[i].x + K[i].w > W - 2 || K[i].y + K[i].h > HH - 2) r.push('Kasten am Kachelrand');
     for (let j = i + 1; j < K.length; j++)
       if (ov(K[i], K[j], 0) && !inside(K[i], K[j], 0) && !inside(K[j], K[i], 0)) r.push('Kästen überlappen (' + Math.round(K[i].x) + ',' + Math.round(K[i].y) + ' / ' + Math.round(K[j].x) + ',' + Math.round(K[j].y) + ')');
   }
@@ -74,7 +74,7 @@ def main():
     fehler = 0
     with sync_playwright() as pw:
         b = pw.chromium.launch()
-        pg = b.new_page(viewport={"width": 600, "height": 400})
+        pg = b.new_page(viewport={"width": 340, "height": 1400})
         pg.route("**/*", lambda r: r.abort() if r.request.url.startswith("http") else r.continue_())
         for sid, sx in plaene():
             if nur and sid not in nur:
@@ -82,7 +82,8 @@ def main():
             v = VG.gueltig(sid)
             if PLATZHALTER:
                 v = {k: PLATZHALTER for _s, k, _e in VG.auftraege({sid})}
-            svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">{SK.zeichne(sx, v)}</svg>'
+            inhalt, h = SK.zeichne(sx, v)
+            svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{SK.BREITE}" height="{h:.0f}" viewBox="0 0 {SK.BREITE} {h:.1f}">{inhalt}</svg>'
             pg.set_content(f"<html><body style='margin:0'>{svg}</body></html>")
             for lg in ("de", "gsw"):
                 for m in dict.fromkeys(pg.evaluate(JS, lg)):

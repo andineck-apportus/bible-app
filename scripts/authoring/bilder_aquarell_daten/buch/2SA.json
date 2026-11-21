@@ -10,7 +10,17 @@
     "FIG-GRUPPE-ISRAEL": "The people of Israel: men and women of different ages in light undyed robes with blue mantles; behind them more as loose outlines; no child in front.",
     "FIG-NATAN": "Nathan the prophet: a man of about fifty-five, short grey hair and grey beard, a plain dark-brown rough mantle over an undyed tunic, a wooden staff.",
     "FIG-ROLLE-BOTE": "The messenger: a young runner from Cush with dark brown skin and short black hair, in a short white running tunic, out of breath; dignified, never caricatured.",
-    "FIG-ORT-STADTTOR": "A city gate: a thick wall of stone and mud-brick with a dark gate passage and a small roofed chamber on top, reached by an outside stone stair."
+    "FIG-ORT-STADTTOR": "A city gate: a thick wall of stone and mud-brick with a dark gate passage and a small roofed chamber on top, reached by an outside stone stair.",
+    "FIG-ORT-ZEDERNHAUS": "A house of cedar: a fine royal house of pale dressed stone with beams and panelling of reddish-brown cedar wood, a broad doorway, drawn with a few lines.",
+    "FIG-OBJ-KRONE": "A golden crown set with a few coloured stones.",
+    "FIG-AMNON": "Amnon, eldest son of David: a young man of about twenty-two, clean-shaven, short dark hair, a fine purple-red robe with a gold-embroidered hem.",
+    "FIG-ZEICHEN-TOD": "A sign as a small watercolour vignette: a pale skull.",
+    "FIG-ABSALOM": "Absalom, son of David: a strikingly handsome young man of about twenty-eight with very long, thick, wavy dark hair falling to his shoulders, a short beard, a saffron-and-crimson robe.",
+    "FIG-ZEICHEN-FLIEHEN": "A sign as a small watercolour vignette: a person running away in side view, cloak flying behind, one arm swinging.",
+    "FIG-ZEICHEN-HUNGERSNOT": "A sign as a small watercolour vignette: a patch of dry, cracked brown ground with a single withered, empty ear of grain.",
+    "FIG-ZEICHEN-KRANK": "A sign as a small watercolour vignette: a person lying on a simple mat under a light blanket, eyes closed, a pale face, a few faint wavy lines of fever above.",
+    "FIG-OBJ-BRANDOPFERALTAR": "An altar of burnt offering: a single square altar of rough unhewn stones with a fire burning on top and a thin column of grey smoke; no animal shown on it.",
+    "FIG-OBJ-LEIER": "A small wooden lyre with golden-brown frame and a few strings."
   },
   "kenn_en": {
     "FIG-DAVID": "a man with reddish-brown hair in a deep wine-red tunic",
@@ -65,6 +75,61 @@
       ],
       "legend_de": "Grauer Bart, dunkelbrauner Mantel, Stab",
       "legend_gsw": "Graue Bart, dunkelbruune Mantel, Stab"
+    },
+    "FIG-ORT-ZEDERNHAUS": {
+      "de": "Zedernhaus (Davids Palast)",
+      "en": "House of cedar",
+      "gsw": "Zederhuus",
+      "kind": "place",
+      "era": "ot",
+      "identity_de": "Das Haus aus Zedernholz, in dem David wohnt, während die Lade unter Zeltdecken steht ([[2SA.7.2]], [[1CH.17.1]]).",
+      "traits_de": [
+        "Königshaus aus hellen Quadern mit Balken aus rötlichem Zedernholz"
+      ],
+      "legend_de": "Haus mit Zedernbalken",
+      "legend_gsw": "Huus mit Zederbalke"
+    },
+    "FIG-AMNON": {
+      "de": "Amnon",
+      "en": "Amnon",
+      "gsw": "Amnon",
+      "kind": "person",
+      "era": "ot",
+      "identity_de": "Ältester Sohn Davids, der von Absaloms Leuten getötet wird ([[2SA.3.2]], [[2SA.13.28-2SA.13.29]]).",
+      "traits_de": [
+        "Junger Mann um zweiundzwanzig, bartlos",
+        "Purpurrotes Gewand mit goldbesticktem Saum"
+      ],
+      "legend_de": "bartlos, purpurrotes Gewand",
+      "legend_gsw": "ohni Bart, purpurrots Gwand"
+    },
+    "FIG-ABSALOM": {
+      "de": "Absalom",
+      "en": "Absalom",
+      "gsw": "Absalom",
+      "kind": "person",
+      "era": "ot",
+      "identity_de": "Sohn Davids, berühmt für seine Schönheit und sein volles Haar, der sich in Hebron zum König ausrufen lässt ([[2SA.14.25-2SA.14.26]], [[2SA.15.10]]).",
+      "traits_de": [
+        "Auffallend schöner junger Mann mit sehr langem, dichtem, welligem dunklem Haar",
+        "Safran- und karminrotes Gewand"
+      ],
+      "legend_de": "langes dichtes Haar",
+      "legend_gsw": "langs dichts Haar"
+    },
+    "FIG-OBJ-BRANDOPFERALTAR": {
+      "de": "Brandopferaltar (einzeln)",
+      "en": "Altar of burnt offering (single)",
+      "gsw": "Brandopferaltar",
+      "kind": "object",
+      "era": "ot",
+      "identity_de": "Ein einzelner Altar aus Steinen, auf dem ein Feuer brennt, z. B. für das Brandopfer ([[LEV.1.7-LEV.1.9]]) oder Davids Altar auf der Tenne ([[2SA.24.25]]).",
+      "traits_de": [
+        "Viereckiger Altar aus unbehauenen Steinen",
+        "Feuer und dünne Rauchsäule, kein Tier sichtbar"
+      ],
+      "legend_de": "Steinaltar mit Feuer",
+      "legend_gsw": "Steialtar mit Füür"
     }
   },
   "stationen": [
@@ -184,38 +249,61 @@
             "de": "David wohnt im Zedernhaus",
             "gsw": "De David wohnt im Zedrehuus",
             "ref": "2SA.7.2",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-DAVID",
+              "FIG-ORT-ZEDERNHAUS"
+            ]
           },
           {
             "de": "die Lade wohnt unter Zeltdecken",
             "gsw": "d Lade wohnt under Zältdecke",
             "ref": "2SA.7.2",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-OBJ-LADE",
+              "FIG-ORT-ZELT"
+            ]
           },
           {
             "de": "Du willst mir ein Haus bauen?",
             "gsw": "Du wotsch mir es Huus baue?",
             "ref": "2SA.7.5",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-GOTT",
+              "FIG-NATAN"
+            ]
           },
           {
             "de": "JHWH macht dir ein Haus",
             "gsw": "JHWH macht dir es Huus",
             "ref": "2SA.7.11",
             "seite": "b",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-GOTT",
+              "FIG-ZEICHEN-STAMMBAUM"
+            ]
           },
           {
             "de": "dein Nachkomme baut mir ein Haus",
             "gsw": "din Nachkomme baut mir es Huus",
             "ref": "2SA.7.13",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-SALOMO",
+              "FIG-ORT-TEMPEL"
+            ]
           },
           {
             "de": "dein Haus und Königtum bleiben ewig",
             "gsw": "dis Huus und Chünigtum bliibed ewig",
             "ref": "2SA.7.16",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-OBJ-KRONE"
+            ]
           }
         ]
       },
@@ -349,27 +437,47 @@
             "de": "Ansage: Unheil aus deinem Haus",
             "gsw": "Aasag: Unheil us dim Huus",
             "ref": "2SA.12.10-2SA.12.11",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-NATAN",
+              "FIG-DAVID"
+            ]
           },
           {
             "de": "Amnon wird getötet",
             "gsw": "De Amnon wird umbracht",
-            "ref": "2SA.13.28-2SA.13.29"
+            "ref": "2SA.13.28-2SA.13.29",
+            "depicts": [
+              "FIG-AMNON",
+              "FIG-ZEICHEN-TOD"
+            ]
           },
           {
             "de": "Absalom macht sich zum König",
             "gsw": "De Absalom macht sich zum Chünig",
-            "ref": "2SA.15.10"
+            "ref": "2SA.15.10",
+            "depicts": [
+              "FIG-ABSALOM",
+              "FIG-OBJ-WIDDERHORN"
+            ]
           },
           {
             "de": "David flieht aus Jerusalem",
             "gsw": "De David flüchtet us Jerusalem",
-            "ref": "2SA.15.14"
+            "ref": "2SA.15.14",
+            "depicts": [
+              "FIG-DAVID",
+              "FIG-ZEICHEN-FLIEHEN"
+            ]
           },
           {
             "de": "Absalom bei den Nebenfrauen",
             "gsw": "De Absalom bi de Näbefraue",
-            "ref": "2SA.16.22"
+            "ref": "2SA.16.22",
+            "depicts": [
+              "FIG-ABSALOM",
+              "FIG-ORT-ZELT"
+            ]
           }
         ]
       },
@@ -502,28 +610,48 @@
         "mitte": {
           "de": "Davids Lied und letzte Worte",
           "gsw": "Am David sis Lied und letschti Wort",
-          "ref": "2SA.22.1-2SA.23.7"
+          "ref": "2SA.22.1-2SA.23.7",
+          "depicts": [
+            "FIG-DAVID",
+            "FIG-OBJ-LEIER"
+          ]
         },
         "elemente": [
           {
             "de": "Hungersnot, Sühne für Gibeon",
             "gsw": "Hungersnot, Süeni für Gibeon",
-            "ref": "2SA.21.1-2SA.21.14"
+            "ref": "2SA.21.1-2SA.21.14",
+            "depicts": [
+              "FIG-ZEICHEN-HUNGERSNOT"
+            ]
           },
           {
             "de": "Helden gegen die Philister",
             "gsw": "Helde gäge d Philischter",
-            "ref": "2SA.21.15-2SA.21.22"
+            "ref": "2SA.21.15-2SA.21.22",
+            "depicts": [
+              "FIG-GRUPPE-KRIEGER",
+              "FIG-GRUPPE-PHILISTER"
+            ]
           },
           {
             "de": "Liste der Helden Davids",
             "gsw": "Lischte vo de Helde vom David",
-            "ref": "2SA.23.8-2SA.23.39"
+            "ref": "2SA.23.8-2SA.23.39",
+            "depicts": [
+              "FIG-ZEICHEN-STAMMBAUM",
+              "FIG-GRUPPE-KRIEGER"
+            ]
           },
           {
             "de": "Zählung, Pest, Altar auf der Tenne",
             "gsw": "Zellig, Pescht, Altar uf de Tenne",
-            "ref": "2SA.24.1-2SA.24.25"
+            "ref": "2SA.24.1-2SA.24.25",
+            "depicts": [
+              "FIG-ZEICHEN-KRANK",
+              "FIG-ORT-TENNE",
+              "FIG-OBJ-BRANDOPFERALTAR"
+            ]
           }
         ]
       },

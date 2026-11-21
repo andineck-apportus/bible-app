@@ -8,7 +8,18 @@
     "FIG-SERUBBABEL": "Zerubbabel, governor of Judah: a man of about forty, neatly trimmed dark beard, short dark hair; a royal-blue mantle with a narrow gold-thread border over a cream tunic, no crown.",
     "FIG-JESCHUA": "Joshua (Jeshua) the high priest: a man of about fifty, grey beard; a plain white linen robe with a blue sash and a white linen turban; no breastplate jewels, dignified, not caricatured.",
     "FIG-GRUPPE-ARBEITER": "Returned exiles working as builders: two men of different ages in plain undyed and light brown work tunics with rope belts, sleeves rolled up, bare-headed or with a simple headband.",
-    "FIG-ORT-TEMPELRUINE": "The ruined temple site in Jerusalem around 520 BC: a wide stone platform with old squared foundation stones, broken courses of wall, scattered rubble and a few weeds; no standing building."
+    "FIG-ORT-TEMPELRUINE": "The ruined temple site in Jerusalem around 520 BC: a wide stone platform with old squared foundation stones, broken courses of wall, scattered rubble and a few weeds; no standing building.",
+    "FIG-OBJ-SIEGELRING": "A heavy gold signet ring with a dark oval seal stone, lying on its own.",
+    "FIG-ORT-HAEUSER": "Three simple cube-shaped houses with flat roofs, each with its own door, standing apart side by side, no wall around them.",
+    "FIG-ROLLE-SAEMANN": "A sower: a man in an ochre-brown work tunic with a headband, an open seed bag on a strap across his chest, scattering grain in a wide arc.",
+    "FIG-ZEICHEN-AUFBAUEN": "A sign as a small watercolour vignette: a few squared grey building stones stacked into a low, neat wall, with a soft green arrow pointing upwards beside it.",
+    "FIG-ZEICHEN-FRIEDE": "A sign as a small watercolour vignette: a small olive twig with grey-green leaves and two green olives.",
+    "FIG-ZEICHEN-HUNGERSNOT": "A sign as a small watercolour vignette: a patch of dry, cracked brown ground with a single withered, empty ear of grain.",
+    "FIG-ZEICHEN-MEHR": "A sign as a small watercolour vignette: a large soft green plus sign.",
+    "FIG-ZEICHEN-NEIN": "A sign as a small watercolour vignette: a bold red X.",
+    "FIG-ZEICHEN-STUNDE": "A sign as a small watercolour vignette: an hourglass with sand running down.",
+    "FIG-ZEICHEN-UNREIN": "A sign as a small watercolour vignette: a dirty brown stain with a few splashes.",
+    "FIG-ZEICHEN-VERLUST": "A sign as a small watercolour vignette: grey coins falling out of a hole in a cloth purse, a small arrow pointing down."
   },
   "kenn_en": {
     "FIG-HAGGAI": "an old white-bearded man in a deep olive-brown mantle",
@@ -17,40 +28,93 @@
   },
   "pruef": {
     "FIG-JESCHUA": [
-      {"id": "F-JESCHUA-NEUTRAL", "art": "nicht", "stufe": "pflicht", "de": "Hohepriester ohne Karikatur und ohne spätere religiöse Kennzeichen", "en": "Does the man in white linen wear tassels, prayer straps, a prayer shawl, a skullcap or have a caricatured face?"}
+      {
+        "id": "F-JESCHUA-NEUTRAL",
+        "art": "nicht",
+        "stufe": "pflicht",
+        "de": "Hohepriester ohne Karikatur und ohne spätere religiöse Kennzeichen",
+        "en": "Does the man in white linen wear tassels, prayer straps, a prayer shawl, a skullcap or have a caricatured face?"
+      }
     ],
     "FIG-SERUBBABEL": [
-      {"id": "F-SERUBBABEL-KEINE-KRONE", "art": "nicht", "stufe": "soll", "de": "Serubbabel als Statthalter ohne Krone", "en": "Is the man in the royal-blue mantle wearing a crown?"}
+      {
+        "id": "F-SERUBBABEL-KEINE-KRONE",
+        "art": "nicht",
+        "stufe": "soll",
+        "de": "Serubbabel als Statthalter ohne Krone",
+        "en": "Is the man in the royal-blue mantle wearing a crown?"
+      }
     ]
   },
   "neue_figuren": {
     "FIG-HAGGAI": {
-      "de": "Haggai", "en": "Haggai", "gsw": "Haggai", "kind": "person", "era": "ot",
+      "de": "Haggai",
+      "en": "Haggai",
+      "gsw": "Haggai",
+      "kind": "person",
+      "era": "ot",
       "identity_de": "Prophet, der im zweiten Jahr des Königs Darius zum Bau des Hauses JHWHs ruft ([[HAG.1.1]], [[EZR.5.1]]).",
-      "traits_de": ["Weisses Haar, weisser Bart", "Tiefolivbrauner Mantel über sandfarbenem Gewand"],
+      "traits_de": [
+        "Weisses Haar, weisser Bart",
+        "Tiefolivbrauner Mantel über sandfarbenem Gewand"
+      ],
       "legend_de": "Weisser Bart, olivbrauner Mantel",
       "legend_gsw": "Wiisse Bart, olivbruune Mantel"
     },
     "FIG-SERUBBABEL": {
-      "de": "Serubbabel", "en": "Zerubbabel", "gsw": "Serubbabel", "kind": "person", "era": "ot",
+      "de": "Serubbabel",
+      "en": "Zerubbabel",
+      "gsw": "Serubbabel",
+      "kind": "person",
+      "era": "ot",
       "identity_de": "Sohn Schealtiëls, Statthalter von Juda nach dem Exil ([[HAG.1.1]], [[HAG.2.23]]).",
-      "traits_de": ["Königsblauer Mantel mit schmaler Goldkante", "Keine Krone"],
+      "traits_de": [
+        "Königsblauer Mantel mit schmaler Goldkante",
+        "Keine Krone"
+      ],
       "legend_de": "Königsblauer Mantel mit Goldkante",
       "legend_gsw": "Königsblaue Mantel mit Goldchante"
     },
     "FIG-JESCHUA": {
-      "de": "Jeschua (Josua), der Hohepriester", "en": "Joshua (Jeshua), the high priest", "gsw": "Jeschua (Josua), de Hohepriester", "kind": "person", "era": "ot",
+      "de": "Jeschua (Josua), der Hohepriester",
+      "en": "Joshua (Jeshua), the high priest",
+      "gsw": "Jeschua (Josua), de Hohepriester",
+      "kind": "person",
+      "era": "ot",
       "identity_de": "Sohn Jozadaks, Hohepriester nach dem Exil ([[HAG.1.1]], [[ZEC.3.1]]).",
-      "traits_de": ["Weisses Leinengewand mit blauer Schärpe", "Weisser Kopfbund"],
+      "traits_de": [
+        "Weisses Leinengewand mit blauer Schärpe",
+        "Weisser Kopfbund"
+      ],
       "legend_de": "Weisses Leinengewand, weisser Kopfbund",
       "legend_gsw": "Wiisses Liinegwand, wiisse Chopfbund"
     },
     "FIG-ORT-TEMPELRUINE": {
-      "de": "Tempelplatz in Trümmern", "en": "Ruined temple site", "gsw": "Tämpelplatz i Trümmer", "kind": "place", "era": "ot",
+      "de": "Tempelplatz in Trümmern",
+      "en": "Ruined temple site",
+      "gsw": "Tämpelplatz i Trümmer",
+      "kind": "place",
+      "era": "ot",
       "identity_de": "Der Platz des zerstörten Tempels in Jerusalem, das Haus, das wüst liegt ([[HAG.1.4]], [[HAG.1.9]]).",
-      "traits_de": ["Alte Grundmauern aus behauenen Steinen", "Schutt, kein stehendes Gebäude"],
+      "traits_de": [
+        "Alte Grundmauern aus behauenen Steinen",
+        "Schutt, kein stehendes Gebäude"
+      ],
       "legend_de": "Grundmauern und Schutt",
       "legend_gsw": "Grundmuure und Schutt"
+    },
+    "FIG-OBJ-SIEGELRING": {
+      "de": "Siegelring",
+      "en": "Signet ring",
+      "gsw": "Sigelring",
+      "kind": "object",
+      "era": "ot",
+      "identity_de": "Ring mit Siegelstein, mit dem ein Herrscher beglaubigt; Bild für Serubbabel als Erwählten ([[HAG.2.23]]); nicht das Siegel am Grab (FIG-OBJ-SIEGEL).",
+      "traits_de": [
+        "Schwerer goldener Ring mit dunklem ovalem Siegelstein"
+      ],
+      "legend_de": "Goldener Ring mit dunklem Siegelstein",
+      "legend_gsw": "Guldige Ring mit dunklem Sigelstei"
     }
   },
   "stationen": [
@@ -58,111 +122,410 @@
       "id": "HAG-B1",
       "reference": "HAG.1.1-HAG.1.11",
       "action_de": "Am ersten Tag des sechsten Monats im zweiten Jahr des Darius fragt JHWH durch Haggai: Ist es Zeit, dass ihr in getäfelten Häusern wohnt, während dieses Haus wüst liegt? Ihr sät viel und bringt wenig ein; geht ins Gebirge, holt Holz und baut das Haus.",
-      "band": {"de": "Eure Häuser – und mein Haus", "gsw": "Eui Hüser – und mis Huus"},
+      "band": {
+        "de": "Eure Häuser – und mein Haus",
+        "gsw": "Eui Hüser – und mis Huus"
+      },
       "form": "struktur",
       "form_grund_de": "Der Text stellt die eigenen Häuser und das wüste Haus JHWHs gegenüber (Strukturkatalog: zwei Häuser); datierte Rede, keine Szene.",
       "struktur": {
         "typ": "spalten",
-        "titel": {"de": "Zwei Häuser", "gsw": "Zwei Hüser"},
+        "titel": {
+          "de": "Zwei Häuser",
+          "gsw": "Zwei Hüser"
+        },
         "kopf": {
-          "a": {"de": "eure Häuser", "gsw": "eui Hüser"},
-          "b": {"de": "das Haus JHWHs", "gsw": "s Huus vom JHWH"}
+          "a": {
+            "de": "eure Häuser",
+            "gsw": "eui Hüser"
+          },
+          "b": {
+            "de": "das Haus JHWHs",
+            "gsw": "s Huus vom JHWH"
+          }
         },
         "elemente": [
-          {"de": "ihr wohnt in getäfelten Häusern", "gsw": "ihr wohned i täfelete Hüser", "ref": "HAG.1.4", "seite": "a"},
-          {"de": "jeder läuft für sein eigenes Haus", "gsw": "jede springt für sis eige Huus", "ref": "HAG.1.9", "seite": "a"},
-          {"de": "viel gesät, wenig geerntet", "gsw": "vill gsäit, wenig gärntet", "ref": "HAG.1.6", "seite": "a"},
-          {"de": "Lohn in einen löchrigen Beutel", "gsw": "Lohn in e löchrige Seckel", "ref": "HAG.1.6", "seite": "a"},
-          {"de": "es heisst: noch ist nicht die Zeit", "gsw": "es heisst: s isch no nöd Ziit", "ref": "HAG.1.2", "seite": "b"},
-          {"de": "dieses Haus liegt wüst", "gsw": "das Huus liit wüescht", "ref": "HAG.1.4", "seite": "b"},
-          {"de": "holt Holz und baut das Haus", "gsw": "holed Holz und baued s Huus", "ref": "HAG.1.8", "seite": "b", "betont": true}
+          {
+            "de": "ihr wohnt in getäfelten Häusern",
+            "gsw": "ihr wohned i täfelete Hüser",
+            "ref": "HAG.1.4",
+            "seite": "a",
+            "depicts": [
+              "FIG-ORT-HAUS"
+            ]
+          },
+          {
+            "de": "jeder läuft für sein eigenes Haus",
+            "gsw": "jede springt für sis eige Huus",
+            "ref": "HAG.1.9",
+            "seite": "a",
+            "depicts": [
+              "FIG-ORT-HAEUSER"
+            ]
+          },
+          {
+            "de": "viel gesät, wenig geerntet",
+            "gsw": "vill gsäit, wenig gärntet",
+            "ref": "HAG.1.6",
+            "seite": "a",
+            "depicts": [
+              "FIG-ROLLE-SAEMANN",
+              "FIG-ZEICHEN-HUNGERSNOT"
+            ]
+          },
+          {
+            "de": "Lohn in einen löchrigen Beutel",
+            "gsw": "Lohn in e löchrige Seckel",
+            "ref": "HAG.1.6",
+            "seite": "a",
+            "depicts": [
+              "FIG-ZEICHEN-VERLUST"
+            ]
+          },
+          {
+            "de": "es heisst: noch ist nicht die Zeit",
+            "gsw": "es heisst: s isch no nöd Ziit",
+            "ref": "HAG.1.2",
+            "seite": "b",
+            "depicts": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-ZEICHEN-STUNDE"
+            ]
+          },
+          {
+            "de": "dieses Haus liegt wüst",
+            "gsw": "das Huus liit wüescht",
+            "ref": "HAG.1.4",
+            "seite": "b",
+            "depicts": [
+              "FIG-ORT-TEMPELRUINE"
+            ]
+          },
+          {
+            "de": "holt Holz und baut das Haus",
+            "gsw": "holed Holz und baued s Huus",
+            "ref": "HAG.1.8",
+            "seite": "b",
+            "betont": true,
+            "depicts": [
+              "FIG-GRUPPE-ARBEITER",
+              "FIG-ZEICHEN-AUFBAUEN"
+            ]
+          }
         ]
       },
       "evidence": [
-        {"s": "B", "ref": "HAG.1.1", "de": "Im zweiten Jahr des Königs Darius, im sechsten Monat, am ersten Tag des Monats."},
-        {"s": "B", "ref": "HAG.1.4", "de": "Ist es für euch Zeit, in euren getäfelten Häusern zu wohnen, während dieses Haus wüst liegt?"},
-        {"s": "B", "ref": "HAG.1.6", "de": "Ihr sät viel und bringt wenig ein; wer Lohn verdient, legt ihn in einen löchrigen Beutel."},
-        {"s": "B", "ref": "HAG.1.8", "de": "Geht hinauf ins Gebirge, bringt Holz und baut das Haus."}
+        {
+          "s": "B",
+          "ref": "HAG.1.1",
+          "de": "Im zweiten Jahr des Königs Darius, im sechsten Monat, am ersten Tag des Monats."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.1.4",
+          "de": "Ist es für euch Zeit, in euren getäfelten Häusern zu wohnen, während dieses Haus wüst liegt?"
+        },
+        {
+          "s": "B",
+          "ref": "HAG.1.6",
+          "de": "Ihr sät viel und bringt wenig ein; wer Lohn verdient, legt ihn in einen löchrigen Beutel."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.1.8",
+          "de": "Geht hinauf ins Gebirge, bringt Holz und baut das Haus."
+        }
       ]
     },
     {
       "id": "HAG-B2",
       "reference": "HAG.1.12-HAG.1.15",
       "action_de": "Serubbabel, der Hohepriester Jeschua und der ganze Rest des Volkes hören auf die Stimme JHWHs und die Worte Haggais; Haggai sagt: Ich bin mit euch, spricht JHWH; JHWH erweckt ihren Geist, und am vierundzwanzigsten Tag des sechsten Monats kommen sie und beginnen die Arbeit am Haus JHWHs.",
-      "band": {"de": "Sie beginnen am Haus JHWHs zu bauen", "gsw": "Si fanged am Huus vom JHWH a baue"},
+      "band": {
+        "de": "Sie beginnen am Haus JHWHs zu bauen",
+        "gsw": "Si fanged am Huus vom JHWH a baue"
+      },
       "form": "szene",
       "form_grund_de": "Der Text erzählt hier ein datiertes Geschehen (sie kommen und beginnen die Arbeit) mit benannten Personen an einem Ort.",
       "bild_en": "Jerusalem, Persian period, late summer 520 BC: the ruined temple site, a wide stone platform with old squared foundation stones, broken wall courses and scattered rubble, no standing building. On the LEFT Haggai, an old white-bearded man in a deep olive-brown mantle, stands on a block of stone, his right hand raised with open palm towards the builders, speaking encouragement. In the CENTRE Zerubbabel, a dark-bearded man in a royal-blue mantle with a narrow gold border, and Joshua the high priest, a grey-bearded man in white linen with a white turban, together with two builders in plain work tunics lift a long rough-hewn wooden beam and set it down onto the old foundation stones. On the RIGHT a few more beams lie stacked on the ground. Everyone looks willing and determined. Medium-wide shot, the upper third empty paper.",
-      "depicts": ["FIG-HAGGAI", "FIG-SERUBBABEL", "FIG-JESCHUA", "FIG-GRUPPE-ARBEITER", "FIG-ORT-TEMPELRUINE"],
+      "depicts": [
+        "FIG-HAGGAI",
+        "FIG-SERUBBABEL",
+        "FIG-JESCHUA",
+        "FIG-GRUPPE-ARBEITER",
+        "FIG-ORT-TEMPELRUINE"
+      ],
       "evidence": [
-        {"s": "B", "ref": "HAG.1.12", "de": "Serubbabel, Jeschua und der ganze Rest des Volkes hörten auf die Stimme JHWHs und auf die Worte Haggais."},
-        {"s": "B", "ref": "HAG.1.13", "de": "Haggai, der Bote JHWHs, sprach: Ich bin mit euch, spricht JHWH."},
-        {"s": "B", "ref": "HAG.1.14", "de": "JHWH erweckte den Geist Serubbabels, Jeschuas und des Volkes; sie kamen und taten die Arbeit am Haus JHWHs."},
-        {"s": "B", "ref": "HAG.1.8", "de": "Holz aus dem Gebirge für den Bau."},
-        {"s": "R", "de": "Dass Statthalter und Hohepriester selbst mit anpacken und ein Balken gesetzt wird, ist Ausgestaltung; der Text sagt nur, dass sie die Arbeit taten."},
-        {"s": "I", "de": "Die erhobene offene Hand Haggais steht für das Wort «Ich bin mit euch»."}
+        {
+          "s": "B",
+          "ref": "HAG.1.12",
+          "de": "Serubbabel, Jeschua und der ganze Rest des Volkes hörten auf die Stimme JHWHs und auf die Worte Haggais."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.1.13",
+          "de": "Haggai, der Bote JHWHs, sprach: Ich bin mit euch, spricht JHWH."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.1.14",
+          "de": "JHWH erweckte den Geist Serubbabels, Jeschuas und des Volkes; sie kamen und taten die Arbeit am Haus JHWHs."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.1.8",
+          "de": "Holz aus dem Gebirge für den Bau."
+        },
+        {
+          "s": "R",
+          "de": "Dass Statthalter und Hohepriester selbst mit anpacken und ein Balken gesetzt wird, ist Ausgestaltung; der Text sagt nur, dass sie die Arbeit taten."
+        },
+        {
+          "s": "I",
+          "de": "Die erhobene offene Hand Haggais steht für das Wort «Ich bin mit euch»."
+        }
       ],
       "pruefung": [
-        {"id": "B2-BALKEN", "art": "muss", "stufe": "pflicht", "s": "B", "ref": "HAG.1.14", "de": "Sie bauen: ein Balken wird auf alte Grundmauern gesetzt", "en": "Are several men lifting or laying a long wooden beam onto stone foundations?"},
-        {"id": "B2-HAGGAI", "art": "muss", "stufe": "pflicht", "s": "B", "ref": "HAG.1.13", "de": "Haggai spricht zu ihnen (alter Mann, erhobene offene Hand)", "en": "Is an old white-bearded man on the left raising an open hand towards the workers?"},
-        {"id": "B2-RUINE", "art": "nicht", "stufe": "pflicht", "s": "B", "ref": "HAG.1.4", "de": "Kein fertiger Tempel (das Haus liegt noch wüst)", "en": "Is there a finished, intact temple building or roofed hall in the picture?"},
-        {"id": "HAG-KEIN-GOTT", "art": "nicht", "stufe": "pflicht", "s": "I", "de": "Gott nicht gemalt, kein Lichteffekt", "en": "Is there any figure, face or hand in the sky, or any rays or glow of light?"}
+        {
+          "id": "B2-BALKEN",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "HAG.1.14",
+          "de": "Sie bauen: ein Balken wird auf alte Grundmauern gesetzt",
+          "en": "Are several men lifting or laying a long wooden beam onto stone foundations?"
+        },
+        {
+          "id": "B2-HAGGAI",
+          "art": "muss",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "HAG.1.13",
+          "de": "Haggai spricht zu ihnen (alter Mann, erhobene offene Hand)",
+          "en": "Is an old white-bearded man on the left raising an open hand towards the workers?"
+        },
+        {
+          "id": "B2-RUINE",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "B",
+          "ref": "HAG.1.4",
+          "de": "Kein fertiger Tempel (das Haus liegt noch wüst)",
+          "en": "Is there a finished, intact temple building or roofed hall in the picture?"
+        },
+        {
+          "id": "HAG-KEIN-GOTT",
+          "art": "nicht",
+          "stufe": "pflicht",
+          "s": "I",
+          "de": "Gott nicht gemalt, kein Lichteffekt",
+          "en": "Is there any figure, face or hand in the sky, or any rays or glow of light?"
+        }
       ]
     },
     {
       "id": "HAG-B3",
       "reference": "HAG.2.1-HAG.2.9",
       "action_de": "Am einundzwanzigsten Tag des siebten Monats fragt Haggai, wer das Haus in seiner früheren Herrlichkeit gesehen habe, jetzt sei es wie nichts; doch: Seid stark und arbeitet, ich bin mit euch, mein Geist bleibt unter euch; die künftige Herrlichkeit dieses Hauses wird grösser sein als die frühere, und an diesem Ort gebe ich Frieden.",
-      "band": {"de": "Grösser als die frühere Herrlichkeit", "gsw": "Grösser als di früecher Herrlichkeit"},
+      "band": {
+        "de": "Grösser als die frühere Herrlichkeit",
+        "gsw": "Grösser als di früecher Herrlichkeit"
+      },
       "form": "struktur",
       "form_grund_de": "Der Text stellt das frühere und das künftige Haus gegenüber (einst – jetzt – künftig); datierte Rede, keine Szene.",
       "struktur": {
         "typ": "spalten",
-        "titel": {"de": "Wie nichts – und doch grösser", "gsw": "Wie nüt – und glich grösser"},
+        "titel": {
+          "de": "Wie nichts – und doch grösser",
+          "gsw": "Wie nüt – und glich grösser"
+        },
         "kopf": {
-          "a": {"de": "jetzt in euren Augen", "gsw": "jetzt i euen Auge"},
-          "b": {"de": "JHWH sagt zu", "gsw": "de JHWH seit zue"}
+          "a": {
+            "de": "jetzt in euren Augen",
+            "gsw": "jetzt i euen Auge"
+          },
+          "b": {
+            "de": "JHWH sagt zu",
+            "gsw": "de JHWH seit zue"
+          }
         },
         "elemente": [
-          {"de": "wer sah die frühere Herrlichkeit?", "gsw": "wer hät di früecher Herrlichkeit gseh?", "ref": "HAG.2.3", "seite": "a"},
-          {"de": "jetzt ist es wie nichts", "gsw": "jetzt isch es wie nüt", "ref": "HAG.2.3", "seite": "a"},
-          {"de": "seid stark und arbeitet", "gsw": "sind starch und schaffed", "ref": "HAG.2.4", "seite": "b"},
-          {"de": "mein Geist bleibt unter euch", "gsw": "min Geischt blibt bi eu", "ref": "HAG.2.5", "seite": "b"},
-          {"de": "grösser als die frühere Herrlichkeit", "gsw": "grösser als di früecher Herrlichkeit", "ref": "HAG.2.9", "seite": "b", "betont": true},
-          {"de": "an diesem Ort gebe ich Frieden", "gsw": "a dem Ort gib ich Fride", "ref": "HAG.2.9", "seite": "b"}
+          {
+            "de": "wer sah die frühere Herrlichkeit?",
+            "gsw": "wer hät di früecher Herrlichkeit gseh?",
+            "ref": "HAG.2.3",
+            "seite": "a",
+            "depicts": [
+              "FIG-ROLLE-ALTER-MANN",
+              "FIG-ORT-TEMPEL"
+            ]
+          },
+          {
+            "de": "jetzt ist es wie nichts",
+            "gsw": "jetzt isch es wie nüt",
+            "ref": "HAG.2.3",
+            "seite": "a",
+            "depicts": [
+              "FIG-ORT-TEMPELRUINE"
+            ]
+          },
+          {
+            "de": "seid stark und arbeitet",
+            "gsw": "sind starch und schaffed",
+            "ref": "HAG.2.4",
+            "seite": "b",
+            "depicts": [
+              "FIG-SERUBBABEL",
+              "FIG-JESCHUA",
+              "FIG-GRUPPE-ARBEITER"
+            ]
+          },
+          {
+            "de": "mein Geist bleibt unter euch",
+            "gsw": "min Geischt blibt bi eu",
+            "ref": "HAG.2.5",
+            "seite": "b",
+            "depicts": [
+              "FIG-GOTT",
+              "FIG-GRUPPE-VOLK"
+            ]
+          },
+          {
+            "de": "grösser als die frühere Herrlichkeit",
+            "gsw": "grösser als di früecher Herrlichkeit",
+            "ref": "HAG.2.9",
+            "seite": "b",
+            "betont": true,
+            "depicts": [
+              "FIG-ORT-TEMPEL",
+              "FIG-ZEICHEN-MEHR"
+            ]
+          },
+          {
+            "de": "an diesem Ort gebe ich Frieden",
+            "gsw": "a dem Ort gib ich Fride",
+            "ref": "HAG.2.9",
+            "seite": "b",
+            "depicts": [
+              "FIG-ZEICHEN-FRIEDE"
+            ]
+          }
         ]
       },
       "evidence": [
-        {"s": "B", "ref": "HAG.2.1", "de": "Im siebten Monat, am einundzwanzigsten Tag des Monats."},
-        {"s": "B", "ref": "HAG.2.3", "de": "Wer hat dieses Haus in seiner früheren Herrlichkeit gesehen? Ist es nicht wie nichts in euren Augen?"},
-        {"s": "B", "ref": "HAG.2.4-HAG.2.5", "de": "Seid stark und arbeitet, denn ich bin mit euch; mein Geist bleibt in eurer Mitte."},
-        {"s": "B", "ref": "HAG.2.9", "de": "Die künftige Herrlichkeit dieses Hauses wird grösser sein als die frühere; an diesem Ort gebe ich Frieden."}
+        {
+          "s": "B",
+          "ref": "HAG.2.1",
+          "de": "Im siebten Monat, am einundzwanzigsten Tag des Monats."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.3",
+          "de": "Wer hat dieses Haus in seiner früheren Herrlichkeit gesehen? Ist es nicht wie nichts in euren Augen?"
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.4-HAG.2.5",
+          "de": "Seid stark und arbeitet, denn ich bin mit euch; mein Geist bleibt in eurer Mitte."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.9",
+          "de": "Die künftige Herrlichkeit dieses Hauses wird grösser sein als die frühere; an diesem Ort gebe ich Frieden."
+        }
       ]
     },
     {
       "id": "HAG-B4",
       "reference": "HAG.2.10-HAG.2.23",
       "action_de": "Am vierundzwanzigsten Tag des neunten Monats befragt Haggai die Priester: Heiliges macht durch Berührung nicht heilig (Nein), Unreines macht unrein (Ja); so ist dieses Volk; doch von diesem Tag an will JHWH segnen; an demselben Tag sagt er Serubbabel: Ich mache dich wie einen Siegelring, denn dich habe ich erwählt.",
-      "band": {"de": "Von heute an segne ich", "gsw": "Vo hüt aa segne ich"},
+      "band": {
+        "de": "Von heute an segne ich",
+        "gsw": "Vo hüt aa segne ich"
+      },
       "form": "struktur",
       "form_grund_de": "Rechtsfrage mit zwei Antworten und Folgerung, dann zwei Zusagen (Strukturkatalog: Anfrage an die Priester, Siegelring); die Richtung der Antworten bleibt erhalten.",
       "struktur": {
         "typ": "kette",
-        "titel": {"de": "Anfrage an die Priester", "gsw": "Aafrag a d Prieschter"},
+        "titel": {
+          "de": "Anfrage an die Priester",
+          "gsw": "Aafrag a d Prieschter"
+        },
         "elemente": [
-          {"de": "macht Heiliges heilig? Priester: Nein", "gsw": "macht Heiligs heilig? Prieschter: Nei", "ref": "HAG.2.12"},
-          {"de": "macht Unreines unrein? Priester: Ja", "gsw": "macht Unreins unrein? Prieschter: Ja", "ref": "HAG.2.13"},
-          {"de": "so ist dieses Volk vor mir", "gsw": "so isch das Volk vor mir", "ref": "HAG.2.14"},
-          {"de": "von diesem Tag an segne ich", "gsw": "vo dem Tag aa segne ich", "ref": "HAG.2.19", "betont": true},
-          {"de": "Serubbabel wie ein Siegelring", "gsw": "Serubbabel wie en Siegelring", "ref": "HAG.2.23"}
+          {
+            "de": "macht Heiliges heilig? Priester: Nein",
+            "gsw": "macht Heiligs heilig? Prieschter: Nei",
+            "ref": "HAG.2.12",
+            "depicts": [
+              "FIG-GRUPPE-PRIESTER",
+              "FIG-ZEICHEN-NEIN"
+            ]
+          },
+          {
+            "de": "macht Unreines unrein? Priester: Ja",
+            "gsw": "macht Unreins unrein? Prieschter: Ja",
+            "ref": "HAG.2.13",
+            "depicts": [
+              "FIG-GRUPPE-PRIESTER",
+              "FIG-ZEICHEN-UNREIN"
+            ]
+          },
+          {
+            "de": "so ist dieses Volk vor mir",
+            "gsw": "so isch das Volk vor mir",
+            "ref": "HAG.2.14",
+            "depicts": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-ZEICHEN-UNREIN"
+            ]
+          },
+          {
+            "de": "von diesem Tag an segne ich",
+            "gsw": "vo dem Tag aa segne ich",
+            "ref": "HAG.2.19",
+            "betont": true,
+            "depicts": [
+              "FIG-GOTT",
+              "FIG-OBJ-WEINSTOCK"
+            ]
+          },
+          {
+            "de": "Serubbabel wie ein Siegelring",
+            "gsw": "Serubbabel wie en Siegelring",
+            "ref": "HAG.2.23",
+            "depicts": [
+              "FIG-SERUBBABEL",
+              "FIG-OBJ-SIEGELRING"
+            ]
+          }
         ]
       },
       "evidence": [
-        {"s": "B", "ref": "HAG.2.12", "de": "Wird es heilig, wenn heiliges Fleisch im Gewandzipfel Brot berührt? Die Priester antworteten: Nein."},
-        {"s": "B", "ref": "HAG.2.13", "de": "Wird es unrein, wenn ein durch einen Toten Unreiner es berührt? Die Priester antworteten: Es wird unrein."},
-        {"s": "B", "ref": "HAG.2.14", "de": "So ist dieses Volk vor mir."},
-        {"s": "B", "ref": "HAG.2.19", "de": "Von diesem Tag an will ich segnen."},
-        {"s": "B", "ref": "HAG.2.23", "de": "Ich nehme dich, Serubbabel, und mache dich wie einen Siegelring, denn dich habe ich erwählt."}
+        {
+          "s": "B",
+          "ref": "HAG.2.12",
+          "de": "Wird es heilig, wenn heiliges Fleisch im Gewandzipfel Brot berührt? Die Priester antworteten: Nein."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.13",
+          "de": "Wird es unrein, wenn ein durch einen Toten Unreiner es berührt? Die Priester antworteten: Es wird unrein."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.14",
+          "de": "So ist dieses Volk vor mir."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.19",
+          "de": "Von diesem Tag an will ich segnen."
+        },
+        {
+          "s": "B",
+          "ref": "HAG.2.23",
+          "de": "Ich nehme dich, Serubbabel, und mache dich wie einen Siegelring, denn dich habe ich erwählt."
+        }
       ]
     }
   ]

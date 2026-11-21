@@ -7,7 +7,15 @@
     "FIG-PAULUS": "Paul: a man in his late fifties, balding, grey-flecked dark beard, lined thoughtful face; a plain cream tunic and a deep maroon-brown mantle (clearly darker and browner than terracotta).",
     "FIG-ONESIMUS": "Onesimus: a young man in his twenties, short dark hair, beardless, slim and upright; a plain undyed short tunic with a warm ochre travelling cloak over his shoulders and a walking staff; no chains, no collar, dignified.",
     "FIG-OBJ-BRIEF": "A letter: a small rolled sheet of papyrus tied with a cord and sealed.",
-    "FIG-OBJ-KETTE": "A light iron chain of a few thin links at the wrist; no shackles drawn in detail, no wounds."
+    "FIG-OBJ-KETTE": "A light iron chain of a few thin links at the wrist; no shackles drawn in detail, no wounds.",
+    "FIG-PHILEMON": "Philemon: a well-to-do householder of about fifty, short grey hair, short grey beard, a light cream robe with a dark olive-green mantle; open, friendly bearing.",
+    "FIG-ZEICHEN-GASTFREUNDSCHAFT": "A sign as a small watercolour vignette: a small hut and, beside it, two open welcoming hands.",
+    "FIG-ZEICHEN-GEWINN": "A sign as a small watercolour vignette: two stacks of gold coins, the right one higher, and a green arrow pointing upwards.",
+    "FIG-ZEICHEN-LIEBE": "A sign as a small watercolour vignette: a red heart.",
+    "FIG-ZEICHEN-MEHR": "A sign as a small watercolour vignette: a bold plus sign.",
+    "FIG-ZEICHEN-SCHULD": "A sign as a small watercolour vignette: a whole sheet with dark line strokes (no writing), a dark red seal and a coin.",
+    "FIG-ZEICHEN-VERLUST": "A sign as a small watercolour vignette: grey coins falling out of a purse, an arrow pointing down.",
+    "FIG-ZEICHEN-VOLLMACHT": "A sign as a small watercolour vignette: a scroll with a small golden crown in the lower right corner."
   },
   "kenn_en": {
     "FIG-PAULUS": "a balding older man with a grey-flecked beard in a dark maroon-brown mantle",
@@ -47,6 +55,20 @@
       ],
       "legend_de": "Onesimus, den Paulus zu Philemon zurückschickt",
       "legend_gsw": "De Onesimus, wo de Paulus zum Philemon zruggschickt"
+    },
+    "FIG-PHILEMON": {
+      "de": "Philemon",
+      "en": "Philemon",
+      "gsw": "Philemon",
+      "kind": "person",
+      "era": "nt",
+      "identity_de": "Gläubiger Hausherr, in dessen Haus sich eine Gemeinde trifft, Herr des Onesimus ([[PHM.1.1-PHM.1.2]], [[PHM.1.16]]).",
+      "traits_de": [
+        "Mann um fünfzig mit kurzem grauem Haar und Bart",
+        "Helles Gewand, dunkel-olivgrüner Mantel"
+      ],
+      "legend_de": "grauer Bart, olivgrüner Mantel",
+      "legend_gsw": "graue Bart, olivgrüene Mantel"
     }
   },
   "stationen": [
@@ -82,32 +104,52 @@
             "gsw": "befähle, was sich ghört",
             "ref": "PHM.1.8",
             "seite": "a",
-            "gestrichen": true
+            "gestrichen": true,
+            "depicts": [
+              "FIG-PAULUS",
+              "FIG-ZEICHEN-VOLLMACHT"
+            ]
           },
           {
             "de": "Onesimus: einst dir unnütz",
             "gsw": "Onesimus: früener dir unnütz",
             "ref": "PHM.1.11",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-ONESIMUS",
+              "FIG-ZEICHEN-VERLUST"
+            ]
           },
           {
             "de": "um der Liebe willen bitten",
             "gsw": "wäge de Liebi bitte",
             "ref": "PHM.1.9",
             "seite": "b",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-PAULUS",
+              "FIG-ZEICHEN-LIEBE"
+            ]
           },
           {
             "de": "als alter Mann, Gefangener Christi",
             "gsw": "als alte Maa, Gfangne vo Christus",
             "ref": "PHM.1.9",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-PAULUS",
+              "FIG-OBJ-KETTE"
+            ]
           },
           {
             "de": "jetzt dir und mir nützlich",
             "gsw": "jetz dir und mir nützlich",
             "ref": "PHM.1.11",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-ONESIMUS",
+              "FIG-ZEICHEN-GEWINN"
+            ]
           }
         ]
       },
@@ -227,28 +269,47 @@
           {
             "de": "nimm ihn auf wie mich",
             "gsw": "nimm en uf wie mich",
-            "ref": "PHM.1.17"
+            "ref": "PHM.1.17",
+            "depicts": [
+              "FIG-ONESIMUS",
+              "FIG-ZEICHEN-GASTFREUNDSCHAFT"
+            ]
           },
           {
             "de": "schuldet er dir etwas: rechne es mir an",
             "gsw": "isch er dir öppis schuldig: mir aarächne",
-            "ref": "PHM.1.18"
+            "ref": "PHM.1.18",
+            "depicts": [
+              "FIG-ZEICHEN-SCHULD"
+            ]
           },
           {
             "de": "ich, Paulus, bezahle es",
             "gsw": "ich, de Paulus, zahl s",
             "ref": "PHM.1.19",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-PAULUS",
+              "FIG-OBJ-MUENZEN"
+            ]
           },
           {
             "de": "du schuldest mir dich selbst",
             "gsw": "du bisch mir dich sälber schuldig",
-            "ref": "PHM.1.19"
+            "ref": "PHM.1.19",
+            "depicts": [
+              "FIG-PHILEMON",
+              "FIG-ZEICHEN-SCHULD"
+            ]
           },
           {
             "de": "du wirst mehr tun, als ich sage",
             "gsw": "du machsch meh, als ich säg",
-            "ref": "PHM.1.21"
+            "ref": "PHM.1.21",
+            "depicts": [
+              "FIG-PHILEMON",
+              "FIG-ZEICHEN-MEHR"
+            ]
           }
         ]
       },

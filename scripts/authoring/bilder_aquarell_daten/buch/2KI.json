@@ -17,7 +17,13 @@
     "FIG-ORT-JERUSALEM": "Jerusalem on its hill: a broken stone city wall with a wide gap, grey smoke rising from inside the city.",
     "FIG-JOJACHIN": "Jehoiachin: a thin man of about fifty-five, grey-streaked black hair and beard, many years of prison in his face; here in a new, clean plain white robe.",
     "FIG-EWIL-MERODACH": "Evil-merodach, king of Babylon: a man of about forty with a long, squared, curled black beard, a tall rounded white royal cap with a gold band, a long deep-blue robe.",
-    "FIG-OBJ-BROT": "Flat round loaves of bread on a low table."
+    "FIG-OBJ-BROT": "Flat round loaves of bread on a low table.",
+    "FIG-OBJ-GOETZEN": "Idols of other gods: several small figurines of clay, wood and bronze of different shapes standing in a row on a stone ledge.",
+    "FIG-ROLLE-PROPHET": "A prophet: a lean man of about fifty with a grey-streaked beard, a dark, rough brown mantle, a scroll in one hand and the other hand raised.",
+    "FIG-ZEICHEN-WARNEN": "A sign as a small watercolour vignette: a hand with the index finger raised.",
+    "FIG-ZEICHEN-HOEREN": "A sign as a small watercolour vignette: a single human ear, painted in warm skin tones.",
+    "FIG-ZEICHEN-NICHT": "A sign as a small watercolour vignette: a red circle with a diagonal bar, empty inside.",
+    "FIG-GRUPPE-ASSYRER": "Assyrian soldiers: men with long, square-cut curled black beards, pointed iron helmets, short belted tunics and spears; stern, not fighting."
   },
   "kenn_en": {
     "FIG-ELISA": "a bald man with a short dark beard",
@@ -144,6 +150,33 @@
       ],
       "legend_de": "Gelockter Bart, hohe weisse Mütze",
       "legend_gsw": "Glockete Bart, hochi wiissi Chappe"
+    },
+    "FIG-OBJ-GOETZEN": {
+      "de": "Götzen (andere Götter)",
+      "en": "Idols (other gods)",
+      "gsw": "Götze (anderi Götter)",
+      "kind": "object",
+      "era": "ot",
+      "identity_de": "Bilder fremder Götter, denen Israel dient statt JHWH ([[EXO.20.3]], [[JDG.2.11-JDG.2.13]], [[2KI.17.7-2KI.17.12]]).",
+      "traits_de": [
+        "Mehrere kleine Figuren aus Ton, Holz und Bronze in einer Reihe"
+      ],
+      "legend_de": "mehrere kleine Götterfiguren",
+      "legend_gsw": "mehreri chliini Götterfigure"
+    },
+    "FIG-GRUPPE-ASSYRER": {
+      "de": "Assyrer",
+      "en": "Assyrians",
+      "gsw": "Assyrer",
+      "kind": "group",
+      "era": "ot",
+      "identity_de": "Die Krieger des Königs von Assur, der Samaria einnimmt und Israel wegführt ([[2KI.17.5-2KI.17.6]], [[2KI.17.23]]).",
+      "traits_de": [
+        "Lange, gerade geschnittene gelockte schwarze Bärte",
+        "Spitze Eisenhelme, kurze Gewänder, Speere"
+      ],
+      "legend_de": "gelockte Bärte, spitze Helme",
+      "legend_gsw": "glockti Bärt, spitzi Helm"
     }
   },
   "stationen": [
@@ -332,28 +365,48 @@
           {
             "de": "sie dienten anderen Göttern",
             "gsw": "si händ andere Götter dient",
-            "ref": "2KI.17.7"
+            "ref": "2KI.17.7",
+            "depicts": [
+              "FIG-GRUPPE-ISRAEL",
+              "FIG-OBJ-GOETZEN"
+            ]
           },
           {
             "de": "Warnung durch alle Propheten",
             "gsw": "Warnig dur alli Prophete",
-            "ref": "2KI.17.13"
+            "ref": "2KI.17.13",
+            "depicts": [
+              "FIG-ROLLE-PROPHET",
+              "FIG-ZEICHEN-WARNEN"
+            ]
           },
           {
             "de": "sie hörten nicht",
             "gsw": "si händ nöd glost",
             "ref": "2KI.17.14",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-ZEICHEN-HOEREN",
+              "FIG-ZEICHEN-NICHT"
+            ]
           },
           {
             "de": "auch Juda hielt die Gebote nicht",
             "gsw": "au Juda hät d Gebot nöd ghalte",
-            "ref": "2KI.17.19"
+            "ref": "2KI.17.19",
+            "depicts": [
+              "FIG-GRUPPE-VOLK",
+              "FIG-OBJ-GOETZEN"
+            ]
           },
           {
             "de": "Israel nach Assur weggeführt",
             "gsw": "Israel uf Assur wäggfüert",
-            "ref": "2KI.17.23"
+            "ref": "2KI.17.23",
+            "depicts": [
+              "FIG-GRUPPE-VERBANNTE",
+              "FIG-GRUPPE-ASSYRER"
+            ]
           }
         ]
       },

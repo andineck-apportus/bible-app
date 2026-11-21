@@ -14,7 +14,11 @@
     "FIG-OBJ-LAMPE": "A small clay oil lamp on a low stand with a tiny flame, drawn simply, no glow.",
     "FIG-GRUPPE-ISRAEL": "The people of Israel: men and women of different ages in light undyed robes with blue mantles; behind them more as loose outlines; no child in front.",
     "FIG-OBJ-LANZE": "Saul's spear: a long wooden shaft with a plain iron point.",
-    "FIG-OBJ-SCHAF": "A few sheep with cream-white wool."
+    "FIG-OBJ-SCHAF": "A few sheep with cream-white wool.",
+    "FIG-OBJ-BOGEN-ZERBROCHEN": "A broken bow: a wooden war bow snapped in two, lying on the ground with its loose string.",
+    "FIG-ZEICHEN-STOLPERN": "A sign as a small watercolour vignette: a walking person tripping over a grey stone on the path, leaning forward.",
+    "FIG-ZEICHEN-KRAFT": "A sign as a small watercolour vignette: a strong bent arm with a few short golden strokes around it.",
+    "FIG-ZEICHEN-KIND": "A sign as a small watercolour vignette: the round face of a child."
   },
   "kenn_en": {
     "FIG-SAMUEL": "the white-bearded old man in a long dove-grey robe (as a boy: the slim boy in white linen)",
@@ -120,6 +124,19 @@
       ],
       "legend_de": "Gebogenes Horn mit goldenem Öl",
       "legend_gsw": "Boges Horn mit goldigem Öl"
+    },
+    "FIG-OBJ-BOGEN-ZERBROCHEN": {
+      "de": "Zerbrochener Bogen",
+      "en": "Broken bow",
+      "gsw": "Verbrochne Boge",
+      "kind": "object",
+      "era": "ot",
+      "identity_de": "Der Bogen der Helden, der zerbricht, im Lied der Hanna ([[1SA.2.4]]).",
+      "traits_de": [
+        "Hölzerner Kriegsbogen, in zwei Teile zerbrochen, lose Sehne"
+      ],
+      "legend_de": "zerbrochener Bogen",
+      "legend_gsw": "verbrochne Boge"
     }
   },
   "stationen": [
@@ -154,26 +171,41 @@
             "de": "der Bogen der Helden zerbricht",
             "gsw": "de Boge vo de Helde verbricht",
             "ref": "1SA.2.4",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-OBJ-BOGEN-ZERBROCHEN"
+            ]
           },
           {
             "de": "Satte verdingen sich ums Brot",
             "gsw": "Satti verdinged sich ums Brot",
             "ref": "1SA.2.5",
-            "seite": "a"
+            "seite": "a",
+            "depicts": [
+              "FIG-ROLLE-REICHER",
+              "FIG-OBJ-BROT"
+            ]
           },
           {
             "de": "Strauchelnde mit Kraft gegürtet",
             "gsw": "Stolperndi mit Chraft gürtet",
             "ref": "1SA.2.4",
-            "seite": "b"
+            "seite": "b",
+            "depicts": [
+              "FIG-ZEICHEN-STOLPERN",
+              "FIG-ZEICHEN-KRAFT"
+            ]
           },
           {
             "de": "die Unfruchtbare gebiert sieben",
             "gsw": "di Unfruchtbar überchunnt sibe",
             "ref": "1SA.2.5",
             "seite": "b",
-            "betont": true
+            "betont": true,
+            "depicts": [
+              "FIG-ROLLE-MUTTER",
+              "FIG-ZEICHEN-KIND"
+            ]
           }
         ]
       },
