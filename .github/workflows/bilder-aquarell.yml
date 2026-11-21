@@ -43,7 +43,8 @@ permissions:
 
 concurrency:
   # Läufe mit verschiedenen Szenen dürfen parallel laufen (Buchgerüst 2026-11-21); die Übernahme in main wiederholt bei Wettlauf
-  group: bildpilot-${{ inputs.schritt }}-${{ inputs.szenen }}
+  # (Gruppenname mit der Szenenliste war bei langen Listen zu lang: Lauf 58 startete nicht)
+  group: bildpilot-${{ github.run_id }}
   cancel-in-progress: false
 
 jobs:
