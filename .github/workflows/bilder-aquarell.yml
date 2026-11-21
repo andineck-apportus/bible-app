@@ -1,7 +1,7 @@
 # Bilder im Aquarellstil malen lassen (docs/BILDSTIL.md) mit dem Bildmodell von OpenAI.
 # Start von Hand: Actions → «bilder-aquarell» → Run workflow. Geheimnis: OPENAI_API_KEY.
 # Schritte «auto-neu» und «auto-pruefen» (scripts/authoring/bilder_aquarell_lauf.py): malen, automatisch prüfen, wählen,
-# ablegen, Blasen setzen, Schlussprüfung; geänderte Daten auf Branch «bilder-auto/<Lauf>», Bericht auf «bildpilot-ausgabe».
+# ablegen, Blasen setzen, Schlussprüfung; geänderte Daten auf Branch «bilder-auto/<Lauf>», Bericht als Anhang des Laufs (Actions-Artefakt, 30 Tage).
 # Schritt «auto-figuren» (bilder_aquarell_figuren.py): Einzelporträts für das Bildlexikon malen, prüfen, ablegen; «szenen» nennt
 # dann Lexikon-Einträge (z. B. FIG-JESUS,FIG-MARIA-MUTTER-JESU) oder «alle» (= alle ohne aktuelles, bestandenes Porträt).
 # Schritte «felder», «figurenblatt» und «figuren»: nur malen (Auswahl von Hand). Berührt main und das Deployment nicht.
@@ -142,32 +142,18 @@ jobs:
           [ "$ok" = 1 ] || { echo "::error::Übernahme in main fehlgeschlagen – Lauf liegt auf $BRANCH"; exit 1; }
           gh workflow run deploy.yml --ref main
 
-      - name: Auf Branch bildpilot-ausgabe sichern
+      # Bericht mit Probebildern als Anhang des Laufs (30 Tage), nicht mehr im Repo (Entscheid Andi Neck 2026-11-21: das Repo wuchs
+      # durch den Branch bildpilot-ausgabe auf über 1,5 GB)
+      - name: Bericht bereitstellen
         if: always()
-        env:
-          LAUF: ${{ github.run_number }}
         run: |
-          set -e
           if [ -d ausgabe/aquarell ] && [ ! -d "$RUNNER_TEMP/aquarell" ]; then mv ausgabe/aquarell "$RUNNER_TEMP/aquarell"; fi
-          [ -d "$RUNNER_TEMP/aquarell" ] || { echo "kein Bericht"; exit 0; }
-          git merge --abort 2>/dev/null || true
-          git reset -q --hard
-          git config user.name "github-actions[bot]"
-          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          # parallele Läufe schreiben auf denselben Branch: bei Konflikt neu holen und wiederholen (Lauf 49 ohne Bericht)
-          for versuch in 1 2 3 4 5 6 7 8; do
-            if git ls-remote --exit-code origin bildpilot-ausgabe >/dev/null; then
-              git fetch -q --depth 1 origin bildpilot-ausgabe
-              git checkout -qf -B bildpilot-ausgabe FETCH_HEAD
-            else
-              git checkout -q --orphan bildpilot-ausgabe
-              git rm -rfq . || true
-            fi
-            mkdir -p ausgabe/aquarell
-            cp -r "$RUNNER_TEMP/aquarell/." ausgabe/aquarell/
-            git add ausgabe
-            git commit -qm "Bilder Aquarell: Lauf $LAUF"
-            if git push -q origin bildpilot-ausgabe; then exit 0; fi
-            sleep $(( (RANDOM % 20) + 5 ))
-          done
-          exit 1
+          mkdir -p "$RUNNER_TEMP/aquarell"
+      - name: Bericht hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bericht-lauf-${{ github.run_number }}
+          path: ${{ runner.temp }}/aquarell
+          retention-days: 30
+          if-no-files-found: ignore
