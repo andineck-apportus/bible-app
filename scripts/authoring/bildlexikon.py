@@ -13,7 +13,7 @@ era (bei Personen und Rollen), traits (Pflicht-Erkennungsmerkmale mit basis text
 basis ehrlich: «text» nur, wenn der Bibeltext es sagt (mit Stelle); altkirchliche oder ikonographische Attribute
 «tradition»; eigene Festlegungen «design». Keine antijüdischen Bildtraditionen; Ämter und Gruppen neutral.
 
-Züridüütsch-Lokalisierung nur für identity_de. KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck;
+Züritüütsch-Lokalisierung nur für identity_de. KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck;
 keine fachliche Prüfung.
 
 Aufruf: python3 scripts/authoring/bildlexikon.py
@@ -29,7 +29,7 @@ from _lib import D, localize, write  # noqa: E402
 
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung."
-AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
+AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
 OUT = D / "illustrations" / "lexicon"
 KINDS = {"divine", "person", "role", "group", "object", "place", "action", "sign"}
 ERAS = {"patriarchs", "exodus", "judges", "kingdom", "exile", "second_temple", "nt", "any"}

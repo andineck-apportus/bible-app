@@ -118,7 +118,7 @@ def project(section_ids=None):
                                                       "license": t.get("source", {}).get("license")})
     # Übersetzungsschichten je Sprache (BCP-47-Grundtag): de, gsw, …; jede mit Text, Quelle, Entscheidungen,
     # Alternativen und Wortzuordnung. «de» ist die Kontroll- und Standardschicht.
-    LABELS = {"de": "Hochdeutsch", "gsw": "Züridüütsch"}
+    LABELS = {"de": "Hochdeutsch", "gsw": "Züritüütsch"}
     layers = {}
 
     def layer(lang, t=None):

@@ -688,12 +688,12 @@ def main():
         for u, rel in sorted(missing_src.items()):
             errors.append(f"{rel}: Herkunft {u} fehlt im Quellenkatalog (data/sources/, catalog.urls)")
 
-    # Züridüütsch nach docs/ZUERIDUEUETSCH.md (scripts/mundart.py): Bibeltext und Lokalisierungen; Bildbeschreibungen
+    # Züritüütsch nach docs/ZUERITUEUETSCH.md (scripts/mundart.py): Bibeltext und Lokalisierungen; Bildbeschreibungen
     # gezeichneter Bilder (ILL-…) nur als WARN, bis sie mit dem Bild neu entstehen.
     import mundart  # noqa: E402
     for buch_, art_, wo_, text_ in mundart.korpus():
         for gef_, regel_, neu_ in mundart.pruefe(text_):
-            msg_ = f"{wo_}: Mundart «{gef_}» → «{neu_}» (Regel {regel_}, docs/ZUERIDUEUETSCH.md)"
+            msg_ = f"{wo_}: Mundart «{gef_}» → «{neu_}» (Regel {regel_}, docs/ZUERITUEUETSCH.md)"
             (warnings if wo_.startswith("ILL-") else errors).append(msg_)
 
     for w in warnings:

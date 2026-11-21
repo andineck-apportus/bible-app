@@ -37,7 +37,7 @@ Was gut funktioniert: die festen Erkennungszeichen (Gott, Jesus, Geist) und der 
    - ein Stichwortband je Feld mit 1–4 Wörtern aus dem Wortlaut der gewählten Übersetzung, z. B. «Steh auf!»,
      «Selig die Armen», «Wer bist du?»;
    - in Sprechblasen ein Kernwort plus höchstens zwei Zeichen statt einer Zeichenkette.
-   Die Worte kommen aus der Übersetzungsschicht (Hochdeutsch, Züridüütsch, später weitere Sprachen); das Bild bleibt eines,
+   Die Worte kommen aus der Übersetzungsschicht (Hochdeutsch, Züritüütsch, später weitere Sprachen); das Bild bleibt eines,
    nur das Wortband wechselt mit der Sprache. Bilderbibeln und Comics verankern Bilder genau so.
 4. **Bildtyp nach Textart.** Die Textart bestimmt die Form:
 

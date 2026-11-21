@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 22–23 (Gleichnis vom Hochzeitsmahl, Streitgespräche, Rede gegen die Schriftgelehrten
-und Pharisäer, Klage über Jerusalem) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT,
+und Pharisäer, Klage über Jerusalem) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT,
 Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_22_23.py
@@ -28,7 +28,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((22, 46), (23, 39))
@@ -407,7 +407,7 @@ DEC_GSW = [
  ("MAT.22.1", "hät wider i Gliichnis zu ine gredt", "adapted", "ἀποκριθεὶς πάλιν εἶπεν ἐν παραβολαῖς αὐτοῖς", "hät gantwortet und wider i Gliichnis zu ine gredt", ["hät s Wort gnoo"],
   "Es Frag gaat nöd voruus; s Gliichnis gaat uf d Lag vo [[MAT.21.45]]–[[MAT.21.46]] ii. ἀποκριθείς isch drum nöd eigens als «gantwortet» widergää."),
  ("MAT.22.2", "Himmelriich", "traditional", "ἡ βασιλεία τῶν οὐρανῶν", "Himmelriich", ["s Riich vo Gott"],
-  "Gmeinsami Widergab fürs ganz Matthäusevangelium nach docs/ZUERIDUEUETSCH.md. De Matthäus seit meischtens «Himmelriich» (griechisch Plural), wo de Markus und de Lukas «Riich vo Gott» händ; «Himmel» gilt vilne als ehrfürchtigi Umschriibig für Gott."),
+  "Gmeinsami Widergab fürs ganz Matthäusevangelium nach docs/ZUERITUEUETSCH.md. De Matthäus seit meischtens «Himmelriich» (griechisch Plural), wo de Markus und de Lukas «Riich vo Gott» händ; «Himmel» gilt vilne als ehrfürchtigi Umschriibig für Gott."),
  ("MAT.22.2", "Mit em Himmelriich isch es wie mit eme Chönig", "adapted", "Ὡμοιώθη ἡ βασιλεία τῶν οὐρανῶν ἀνθρώπῳ βασιλεῖ", "S Himmelriich isch gliich worde wien en Mänsch, en Chönig", None,
   "ὡμοιώθη (Aorist Passiv) heisst «isch gliich worde»; so faat de Matthäus au [[MAT.13.24]] und [[MAT.18.23]] aa. Vergliche wird di ganz Gschicht, nöd nu de Chönig; d Mundart seit drum «isch es wie mit»."),
  ("MAT.22.3", "Chnächt", "literal", "δούλους", None, ["Sklave", "Diener"],
@@ -452,7 +452,7 @@ DEC_GSW = [
   "De Positiv staat für de Superlativ. Gliich i [[MAT.22.38]]."),
  ("MAT.22.37", "Verstand", "literal", "διανοίᾳ", None, ["Dänke"],
   "Zitat us [[DEU.6.5]]; dört staat statt «Verstand» «Chraft». De Markus nännt vier Glider ([[MRK.12.30]])."),
- ("MAT.22.39", "gliich wie das", "adapted", "ὁμοία αὐτῇ", "ihm gliich", ["gnau so wichtig"], "So seit me s im Züridüütsch."),
+ ("MAT.22.39", "gliich wie das", "adapted", "ὁμοία αὐτῇ", "ihm gliich", ["gnau so wichtig"], "So seit me s im Züritüütsch."),
  ("MAT.22.42", "de Christus", "traditional", "τοῦ χριστοῦ", None, ["de Gsalbt", "de Messias"],
   "Gmeinsami Widergab: Χριστός «Christus»; s Wort übersetzt hebräisch māšîaḥ «Gsalbte». Gliich i [[MAT.23.10]]."),
  ("MAT.22.43", "im Geischt", "interpretive", "ἐν πνεύματι", None, ["dur de Geischt"],
@@ -462,7 +462,7 @@ DEC_GSW = [
  ("MAT.23.2", "Uf de Stuel vom Mose händ sich", "interpretive", "Ἐπὶ τῆς Μωϋσέως καθέδρας ἐκάθισαν", None, ["Uf em Stuel vom Mose sitzed"],
   "De «Stuel vom Mose» staat für d Lehrautorität bi de Uslegig vo de Tora. Öb au en würkliche Sitz i de Synagoge gmeint isch, isch umstritte."),
  ("MAT.23.2", "d Schriftglehrte", "literal", "οἱ γραμματεῖς", None, ["d Gsetzeslehrer"],
-  "Gmeinsami Widergab: Schriftglehrti (mit Artikel «d Schriftglehrte»), nach docs/ZUERIDUEUETSCH.md."),
+  "Gmeinsami Widergab: Schriftglehrti (mit Artikel «d Schriftglehrte»), nach docs/ZUERITUEUETSCH.md."),
  ("MAT.23.3", "mached und halted", "literal", "ποιήσατε καὶ τηρεῖτε", None, None,
   "De Satz staat in Spannig zu [[MAT.16.12]] und [[MAT.15.1]]–[[MAT.15.20]]. Me düütet en verschide (soviel si us em Mose läsed; ironisch; elteri Überliferig); d Übersetzig git en wider, wien er staat."),
  ("MAT.23.3", "richted öi nöd nach däm, wo si tüend", "adapted", "κατὰ δὲ τὰ ἔργα αὐτῶν μὴ ποιεῖτε", "mached nöd nach ire Wärch", None, None),
@@ -490,7 +490,7 @@ DEC_GSW = [
   "πίστις isch im Matthäusevangelium susch «Glaube». Da staat s Wort näbe Rächt und Erbarme (vgl. [[MIC.6.8]]) und meint d Tröii, d Verlässlichkeit. Bewussti Usnahm; redaktionelle Entscheid."),
  ("MAT.23.23", "s Rächt", "interpretive", "τὴν κρίσιν", "s Gricht", ["d Grächtigkeit"],
   "κρίσις heisst «Gricht, Urteil, Rächt»; i [[MAT.23.33]] «Gricht»."),
- ("MAT.23.23", "s Erbarme", "literal", "τὸ ἔλεος", None, ["d Barmherzigkeit"], "Begriff nach docs/ZUERIDUEUETSCH.md."),
+ ("MAT.23.23", "s Erbarme", "literal", "τὸ ἔλεος", None, ["d Barmherzigkeit"], "Begriff nach docs/ZUERITUEUETSCH.md."),
  ("MAT.23.23", "Chümi", "adapted", "κύμινον", None, ["Chrüüzchümi"],
   "Gmeint isch de Chrüüzchümi."),
  ("MAT.23.24", "d Mugge ussiebed", "literal", "διϋλίζοντες τὸν κώνωπα", None, None,
@@ -738,7 +738,7 @@ NOTES_DE = [
 ]
 NOTES_GSW = [
  'KI-Entwurf ohni fachlichi Prüefig.',
- 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
+ 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1), nöd uf eigeter Prüefig vo de Handschrifte. Wo si em SBLGNT-Apparat widerspricht, gilt de Apparat.',
  'Gmeinsami Begriff fürs ganz Matthäusevangelium: «s Himmelriich», «öise/öie Vatter i de Himmel», «himmlisch», «Amen, ich säge öi», «lueg», «dänn», «Schriftglehrti» (mit Artikel «d Schriftglehrte»), «Pharisäer», «Sadduzäer», «Hüüchler», «Christus», ὄχλος «d Mängi» und οἱ ὄχλοι «d Lüüt», προσέρχομαι «härechoo», γεννήματα ἐχιδνῶν «Viperebruet», «s Hüüle und s Zändchnirsche» (mit «git s» ohni Artikel: «Dört git s Hüüle und Zändchnirsche»), δοῦλος «Chnächt». Nöi für Kapitel 22–23: οὐαί «wehe»; γέεννα «Höll»; γενεά «Generation»; διάκονος «Diener»; καθηγητής «Lehrmeischter»; πίστις i [[MAT.23.23]] usnahmswiis «Tröii».',
  'Mundart: Näme mit Artikel («de Jesus», «de David»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich»). D Red vom Jesus i Kapitel 23 staat wie di andere grosse Rede ohni üsseri Aafüerigszeiche; wörtlichi Red drin staat in «…».',
@@ -762,7 +762,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("VAR-SBLGNTAPP-MAT-02[23]-*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -812,8 +812,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

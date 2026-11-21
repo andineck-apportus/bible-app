@@ -2,6 +2,10 @@
 
 Änderungen am Bibel-Wissensfundus. Die Einträge v0.1–v0.5 sind aus den vorhandenen Paketen rekonstruiert; sie sind keine Behauptung über ursprüngliche Veröffentlichungsdaten. Alle fünf Pakete wurden am 8. Oktober 2026 nach GitHub übernommen. Der aktuelle Einstieg und die Bedienung stehen in [README.md](README.md), offene Arbeiten in [Status und Roadmap](docs/STATUS-UND-ROADMAP.md).
 
+## v0.149 — 2026-11-21 — «Züritüütsch» statt «Züridüütsch»
+
+- Die Mundart heisst überall «Züritüütsch» (App, Daten, Doku, Werkzeuge), wie bei Gallmann und in den Zürcher Bibelausgaben; `tüütsch` mit t als feste Regel. Regelwerk jetzt `docs/ZUERITUEUETSCH.md`; historische Werkzeuge `zueritueuetsch.py`, `zueritueuetsch_inhalte.py`. Frühere Fassungen im revision_log unverändert.
+
 ## v0.148 — 2026-11-21 — Züridüütsch neu: Regelwerk und Neuübersetzung aus dem Urtext
 
 - Verbindliches Regelwerk `docs/ZUERIDUEUETSCH.md`: Formen, Wortschatz und Grammatik nach Heinz Gallmann (Zürichdeutsches Wörterbuch, 3. Aufl.), Schreibung nach dem SRF-Merkblatt (Daniela Zimmermann): wie man heute schreibt, ohne Sonderzeichen, `ei` und Dehnungs-h wie im Hochdeutschen, im Zweifel nahe am Hochdeutschen (Entscheide Andi Neck). Ersetzt die Mehrheitsentscheide von `lukas_einheitlich.py`.

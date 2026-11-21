@@ -217,14 +217,14 @@ assert(!sheetHost.textContent.includes('[['),'Stellen-Marken als Anzeige, nicht 
 assert(sheetHost.querySelector('[data-ref-go="ISA.64.7"]'),'Stelle im Fliesstext verlinkt (Jes 63,16; 64,7)');
 assert(!sheetHost.textContent.includes('data-ref-go="SIR'),'Sirach nicht verlinkt');
 click('[data-close]');
-// Zweite Übersetzungsschicht: Züridüütsch aus dem Griechischen, umschaltbar
+// Zweite Übersetzungsschicht: Züritüütsch aus dem Griechischen, umschaltbar
 click('[data-action=menu]');assert(sheetHost.querySelector('[data-set="text"][data-value="gsw"]'),'Lesetext-Auswahl');click('[data-set="text"][data-value="gsw"]');click('[data-close]');
 assert.equal(reader.querySelector('[data-stream="v39-6-11"] .stream-copy').textContent,'Öises täglich Brot gib öis hüt.','Mundart im Lesetext');
 assert(reader.querySelector('[data-stream="v39-6-11"] .dec.traditional'),'Entscheidung «täglich» auch in der Mundart markiert');
 click('[data-action=index]');assert(sheetHost.textContent.includes('S Vatterunser')&&sheetHost.textContent.includes('Nöd zum Schiin'),'Navigator-Titel in Mundart');click('[data-close]');
 (click('[data-action=up]'),click('.sheet .pick-open'));assert(reader.textContent.includes('De Jesus git de Jünger s Gebät vor')&&reader.querySelector('[data-stream="TU-MAT-006-009-013"] h2').textContent==='S Vatterunser','Abschnittstitel und -zusammenfassung in Mundart');click('[data-action=down]');assert(sheetHost.querySelector('.grid.nums .cur[data-pickat="v39-6-11"]'),'Auswahl unten markiert den zuletzt gelesenen Vers');click('.grid.nums .cur');click('.sheet .pick-open');
 click('[data-more="v39-6-12"]');assert(sheetHost.querySelector('[data-alternative="VAR-SBLGNTAPP-MAT-006-012-01"]').textContent.includes('vergänd'),'Mundart-Lesart im Versblatt');click('[data-close]');
-click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züridüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
+click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Ältere Übersetzungen · Züritüütsch')&&sheetHost.textContent.includes('noch keine Vergleichsübersetzung')&&sheetHost.textContent.includes('Ältere Übersetzungen · Hochdeutsch')&&sheetHost.textContent.includes('Lutherbibel'),'Vergleichsübersetzungen nach Sprache des Zielkontexts');click('[data-close]');
 click('[data-more="v39-6-11"]');assert(sheetHost.textContent.includes('Öises täglich Brot')&&sheetHost.textContent.includes('für de nächscht Tag'),'Mundart-Entscheidung im Versblatt');
 sheetHost.querySelector('.sheet [data-source="VAR-SBLGNTAPP-MAT-006-013-01"]')||click('[data-close]');
 // Inhalte in Mundart (data/localizations): Deutungen, Befunde, Hintergrund, Zusammenfassungen, Lesarten-Erklärungen
@@ -304,6 +304,6 @@ click('[data-close]');
  const i=(click('[data-action=index]'),sheetHost.querySelector('input[type=search]'));i.value='Apg 4';i.dispatchEvent(new dom.window.Event('input',{bubbles:true}));sheetHost.querySelector('.results [data-pick^="c"]').click();
  assert(sheetHost.querySelectorAll('.nav-parts [data-nav^="s:"]').length>=7,'Abschnitte auch bei nicht ausgearbeiteten Kapiteln (Verse 1–5 …)');sheetHost.querySelector('.nav-block:last-of-type [data-nav^="v:"]').click();click('.sheet .nav-open');
  assert.equal(app.dataset.level,'6');assert(app.querySelector('[data-action=down]').hidden,'auf Versebene keine Auswahl darunter');}
-console.log(`PASS: Navigation (Suche nach Stelle und Abschnitt, Auswahl im Pfad), Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züridüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
+console.log(`PASS: Navigation (Suche nach Stelle und Abschnitt, Auswahl im Pfad), Pilotzugang, Studienblatt ohne Griechisch, Lesarten auf Wunsch (${M().alternatives.length}), Hintergrund damals (${model.BG.length}), Bis zur Quelle (${tested}), Urtext-Modus, Rückkehrposition, Suche, Kapitelgrenze, Vaterunser Mt/Lk, Übersetzungsentscheidungen und Vergleich, Wort-Blatt, Umschrift und Anhören, Verse fortlaufend, Navigator, Querverweise und Rücksprung, Lesetext Hochdeutsch/Züritüütsch mit Titeln, Obadja hebräisch Wort für Wort, Titus, Quellen und Rechte, Texte vom Toten Meer, Wörterbuch, Ketiv/Qere, Ausgaben je Wort.`);
 dom.window.close();
 gc();

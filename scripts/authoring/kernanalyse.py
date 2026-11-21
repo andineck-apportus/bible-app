@@ -8,7 +8,7 @@ Eine Einheit:
     {"suffix": "RUT-001-006-018", "level": "section|chapter|book", "target": "TU-…|SUM-CH-…|SUM-BOOK-…",
      "reference": "RUT.1.6-RUT.1.18" (bei book: "RUT"), "children": ["RUT-001-001-005", …] (chapter/book),
      "core_de": "…", "gist_de": "Kernaussage in einem Satz (optional; «Vertiefen › Verstehen»)", "purpose_de": "…" (book),
-     "gsw": {"gist_de": "Kernaussage auf Züridüütsch (Lokalisierung; Zitate wörtlich aus der Mundart-Schicht)"},
+     "gsw": {"gist_de": "Kernaussage auf Züritüütsch (Lokalisierung; Zitate wörtlich aus der Mundart-Schicht)"},
      "mode": "narrative|speech|parable|instruction|statement|letter|law|prophecy|apocalyptic|wisdom|psalm|prayer|list|genealogy",
      "voice": {"speaker": "FIG-…|narrator", "addressee": "FIG-…"} ,
      "moments": [{"reference": "RUT.1.16-RUT.1.17", "text_de": "…", "reason_de": "…", "recognition_de": "…",
@@ -358,7 +358,7 @@ def _revise(rec, old):
 
 
 def _write_loc(u, rec):
-    """Züridüütsch-Fassung der Kernaussage als Lokalisierung (mit revision_log bei Änderung)."""
+    """Züritüütsch-Fassung der Kernaussage als Lokalisierung (mit revision_log bei Änderung)."""
     g = (u.get("gsw") or {}).get("gist_de")
     if not g:
         return 0
@@ -367,7 +367,7 @@ def _write_loc(u, rec):
     date = u.get("gsw", {}).get("date", "2026-10-29")
     loc = {"id": lid, "type": "localization", "status": "draft", "tags": [], "localizes": rec["id"], **GSW,
            "fields": {"gist_de": g}, "source_fingerprint": {"gist_de": localizations.fingerprint(rec.get("gist_de"))},
-           "authorship_de": u.get("gsw", {}).get("authorship_de", f"KI-Entwurf (Claude) vom {date}; Kernaussage aus dem Hochdeutschen in Züridüütsch gefasst, Zitate aus der Mundart-Arbeitsübersetzung; Mundart noch nicht muttersprachlich geprüft."),
+           "authorship_de": u.get("gsw", {}).get("authorship_de", f"KI-Entwurf (Claude) vom {date}; Kernaussage aus dem Hochdeutschen in Züritüütsch gefasst, Zitate aus der Mundart-Arbeitsübersetzung; Mundart noch nicht muttersprachlich geprüft."),
            "review_de": "Noch keine muttersprachliche Prüfung dokumentiert.",
            "knowledge": {"asserted_at": date, "supersedes": None}}
     if path.exists():

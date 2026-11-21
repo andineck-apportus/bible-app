@@ -55,7 +55,7 @@ Die Frage bestimmt die Darstellungsform; Palette, Leichtigkeit, Figuren und Weis
 
 Eine Darstellung kann B-, R- und I-Anteile zugleich enthalten. Farbe allein genügt nicht. **Ergänzung:** In der App stehen B/R/I nicht als Buchstaben im Aquarell, sondern in der Legende zum Bild (Feld `evidence` im Bild-Datensatz), jeweils neben der betroffenen Aussage.
 
-- **Textbasis fixieren.** **Ergänzung:** Massgebend ist unsere eigene Übersetzung aus dem Urtext (Hochdeutsch und Züridüütsch, `data/translations/*-WORKING.json`). Andere Übersetzungen (z. B. Luther 2017) nur zur Kontrolle; geschützte Texte nie ins Bild oder in die Daten übernehmen ([LIZENZEN.md](../LIZENZEN.md)).
+- **Textbasis fixieren.** **Ergänzung:** Massgebend ist unsere eigene Übersetzung aus dem Urtext (Hochdeutsch und Züritüütsch, `data/translations/*-WORKING.json`). Andere Übersetzungen (z. B. Luther 2017) nur zur Kontrolle; geschützte Texte nie ins Bild oder in die Daten übernehmen ([LIZENZEN.md](../LIZENZEN.md)).
 - **Zitate unverändert übernehmen.** Wortlaut, Sprecher, Adressat und Reihenfolge prüfen; Kürzungen sichtbar markieren (…). Passt der Text nicht, mehr Raum oder weitere Felder vorsehen.
 - **Paraphrasen kenntlich machen.** Erzähl- und Stichworttexte sind Zusammenfassungen und stehen nie in einer Sprechblase. Strukturüberschriften sind keine Bibelzitate.
 - **Lücken nicht als Fakten füllen.** Nicht genannte Motive, Gefühle, Alterszahlen oder Abläufe als Ergänzung behandeln. Ein Wunder erlaubt keine frei erfundenen sichtbaren Effekte.
@@ -96,7 +96,7 @@ Aus [BILDSPRACHE.md](BILDSPRACHE.md), unverändert verbindlich auch im Aquarells
 ## 6 Ergänzung – Bilder in der App
 
 - **Einzelfelder statt ganzer Seiten.** Je Bildfeld des Bildauftrags ein eigenes Bild (Querformat 3 : 2). So stehen die Felder auf der Versebene neben ihren Versen, auf dem Handy untereinander bzw. zum Wischen, auf den oberen Ebenen als Reihe.
-- **Worte über dem Bild, nicht im Bild.** Das Modell malt Sprechblasen leer; die App setzt die Worte als Text darüber, in der gewählten Sprache (Hochdeutsch, Züridüütsch …). So bleibt ein Bild für alle Sprachen, die Worte sind korrigierbar, durchsuchbar und vorlesbar. Sprechblasen nur für wörtliche Rede aus unserem Lesetext; Erzähltext und Stichworte stehen im Band unter dem Bild.
+- **Worte über dem Bild, nicht im Bild.** Das Modell malt Sprechblasen leer; die App setzt die Worte als Text darüber, in der gewählten Sprache (Hochdeutsch, Züritüütsch …). So bleibt ein Bild für alle Sprachen, die Worte sind korrigierbar, durchsuchbar und vorlesbar. Sprechblasen nur für wörtliche Rede aus unserem Lesetext; Erzähltext und Stichworte stehen im Band unter dem Bild.
 - **Gleiche Szene, gleiches Bild:** Ein Feld, das auf Kapitel- und Abschnittsebene vorkommt, verwendet dasselbe Bild.
 - **Lesbarkeit:** Worte in der Ausgabegrösse auf dem Handy lesbar; lieber weniger Worte und ein Feld mehr.
 

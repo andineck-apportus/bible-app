@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäusevangelium Kapitel 1–7 – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen,
-Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Nicht hier geschrieben (bestehen schon und bleiben unverändert):
 - Studieninhalte zum Vaterunser [[MAT.6.5-MAT.6.15]] (FIND-LP-…, INT-LP-…, BG-LP-…, STUDY-LP-0001; scripts/authoring/
@@ -33,7 +33,7 @@ import _study  # noqa: E402
 DATE = "2026-10-18"
 _study.DATE = DATE
 _study.AUTH = f"KI-Entwurf (Claude) vom {DATE} auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-_study.AUTH_GSW = (f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züridüütsch gefasst; "
+_study.AUTH_GSW = (f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züritüütsch gefasst; "
                    "Mundart noch nicht muttersprachlich geprüft.")
 
 TAGS = ["TAG-MATTHEW"]

@@ -112,14 +112,14 @@ P["PROC-UEBERSETZUNG"] = {"names": {"de": "Übersetzung aus dem Urtext", "en": "
 
 m10 = [
     s("m1", "bearbeitung", "Aus dem Urtext übersetzen", "Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle.", "Lesetext der Schicht"),
-    s("m2", "bearbeitung", "Schicht beschreiben", "Sprache, Zielgruppe, Schreibweise (z. B. Züridüütsch nach Dieth) und Ton festhalten; Entscheide wie bei der Übersetzung."),
+    s("m2", "bearbeitung", "Schicht beschreiben", "Sprache, Zielgruppe, Schreibweise (z. B. Züritüütsch nach Dieth) und Ton festhalten; Entscheide wie bei der Übersetzung."),
     s("m3", "pruefung", "Inhalt prüfen", "Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung.", prueft=["treu zum Urtext"], zurueck=("m1", "Abweichung")),
     s("m4", "pruefung", "Sprache prüfen", "Eine weitere Instanz prüft Schreibweise, Wortwahl und Lesefluss der Mundart.", prueft=["festgelegte Schreibweise", "idiomatisch"], zurueck=("m1", "Mangel")),
     s("m5", "herausgabe", "Muttersprachlich prüfen", "Eine Person mit dieser Muttersprache liest gegen; erst dann wird die Prüfung eingetragen."),
 ]
 m20 = [
-    s("m1", "bearbeitung", "Aus dem Urtext übersetzen", "Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle. Züridüütsch nach dem Regelwerk: Schreibung, Formen, Wortwahl, Satzbau."),
-    s("m2", "bearbeitung", "Schicht beschreiben", "Sprache, Zielgruppe, Schreibweise (Züridüütsch nach Regelwerk) und Ton festhalten; Entscheide wie bei der Übersetzung."),
+    s("m1", "bearbeitung", "Aus dem Urtext übersetzen", "Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle. Züritüütsch nach dem Regelwerk: Schreibung, Formen, Wortwahl, Satzbau."),
+    s("m2", "bearbeitung", "Schicht beschreiben", "Sprache, Zielgruppe, Schreibweise (Züritüütsch nach Regelwerk) und Ton festhalten; Entscheide wie bei der Übersetzung."),
     s("m6", "werkzeug", "Regelwerk prüfen", "Das Werkzeug prüft Schreibung und Formen gegen die Wortliste und Muster des Regelwerks; Funde brechen die Prüfung ab.", prueft=["keine abgelöste Form", "keine Dieth-Sonderzeichen"], zurueck=("m1", "Fund")),
     s("m3", "pruefung", "Inhalt prüfen", "Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung.", prueft=["treu zum Urtext"], zurueck=("m1", "Abweichung")),
     s("m4", "pruefung", "Sprache prüfen", "Eine weitere Instanz prüft Wortwahl, Satzbau und Lesefluss gegen das Regelwerk. Ungeregelte Fälle werden als Regelvorschlag gemeldet, festgelegt und dann für alle Texte gleich angewendet.", prueft=["Regelwerk eingehalten", "idiomatisch", "keine Einzelkorrektur ohne Regel"], zurueck=("m1", "Mangel")),
@@ -127,10 +127,10 @@ m20 = [
 ]
 P["PROC-MUNDART"] = {"names": {"de": "Weitere Sprachen und Mundarten", "en": "Further languages and dialects"}, "group": "text",
     "purpose_de": "Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutschen abgeleitet.",
-    "versions": [fassung("1.0", "2026-10-13", "Erste Fassung (Züridüütsch).", m10, "Inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.", ENTWURF),
-                 fassung("2.0", "2026-11-21", "Züridüütsch nach verbindlichem Regelwerk (Gallmann, Zürichdeutsches Wörterbuch, für Formen und Wortschatz; SRF-Merkblatt für die Schreibung, im Zweifel nahe am Hochdeutschen); Rückmeldungen werden als allgemeine Regel gefasst und maschinell geprüft, nicht als Einzelkorrektur (Entscheid Herausgeber).",
+    "versions": [fassung("1.0", "2026-10-13", "Erste Fassung (Züritüütsch).", m10, "Inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.", ENTWURF),
+                 fassung("2.0", "2026-11-21", "Züritüütsch nach verbindlichem Regelwerk (Gallmann, Zürichdeutsches Wörterbuch, für Formen und Wortschatz; SRF-Merkblatt für die Schreibung, im Zweifel nahe am Hochdeutschen); Rückmeldungen werden als allgemeine Regel gefasst und maschinell geprüft, nicht als Einzelkorrektur (Entscheid Herausgeber).",
                          m20, "Regelwerk eingehalten (Werkzeug), inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.", ENTWURF,
-                         docs=["docs/ZUERIDUEUETSCH.md"])]}
+                         docs=["docs/ZUERITUEUETSCH.md"])]}
 
 # ------------------------------------------------------------------ Studie
 st11 = [
@@ -184,7 +184,7 @@ w10 = [
       "source_check", ["Quelle sagt, was der Eintrag behauptet", "Zeitraum und Tradition stimmen"], ("w2", "Angabe falsch oder nicht belegt")),
     s("w4", "pruefung", "Gegen den Text prüfen", "Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig?",
       prueft=["Frage offen und belegt", "keine versteckte Deutung", "Rezeption richtig zugeordnet"], zurueck=("w1", "Frage suggestiv, unbelegt oder schief")),
-    s("w5", "bearbeitung", "Mundart und weitere Sprachen", "Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet."),
+    s("w5", "bearbeitung", "Mundart und weitere Sprachen", "Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züritüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet."),
     s("w6", "werkzeug", "Validator", "ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?», Tradition und Gesichertheit gültig, Quellenprüfung vollständig, Stellenmarken und Prozessverweis lösen auf.",
       prueft=["Struktur gültig", "Verweise lösen auf"], zurueck=("w1", "Fehler im Datensatz")),
     s("w7", "herausgabe", "Auswahl", "Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption."),
@@ -193,7 +193,7 @@ _w2 = next(x for x in w10 if x["id"] == "w2")
 w11 = ersetze(ersetze(ersetze(ersetze(w10, "w2", {**_w2, "do_de": _w2["do_de"].replace("heutige Forschung)", "heutige Forschung, kirchliche Lehre wie Konzilien, Enzykliken, Bekenntnisschriften)")}),
     "w4", s("w4", "pruefung", "Gegen den Text prüfen", "Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig? Stehen Zitate wörtlich in der Arbeitsübersetzung (Hochdeutsch und Mundart)? Ergebnis, Datum und Grenzen der Prüfung als Prüfvermerk (check) am Eintrag; berichtigte Einträge mit revision_log.",
       prueft=["Frage offen und belegt", "keine versteckte Deutung", "Rezeption richtig zugeordnet", "Zitate wörtlich"], zurueck=("w1", "Frage suggestiv, unbelegt oder schief"))),
-    "w5", s("w5", "bearbeitung", "Mundart und weitere Sprachen", "Fragen, Rezeption und die Kernaussage (gist_de) der Kernanalyse als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); Zitate wörtlich aus der Übersetzungsschicht dieser Sprache; muttersprachliche Prüfung wird nicht behauptet.")),
+    "w5", s("w5", "bearbeitung", "Mundart und weitere Sprachen", "Fragen, Rezeption und die Kernaussage (gist_de) der Kernanalyse als Lokalisierung mit Fingerabdruck (Züritüütsch und weitere); Zitate wörtlich aus der Übersetzungsschicht dieser Sprache; muttersprachliche Prüfung wird nicht behauptet.")),
     "w6", s("w6", "werkzeug", "Validator", "ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?» (auch «…?» bzw. «?»»), Tradition und Gesichertheit gültig, Quellenprüfung und Prüfvermerk vollständig, Zitate in «…» wörtlich im Bibeltext der Stelle (Hochdeutsch gegen die hochdeutsche, Lokalisierung gegen die Arbeitsübersetzung ihrer Sprache; Unübersetztes nur als Hinweis), Stellenmarken und Prozessverweis lösen auf.",
       prueft=["Struktur gültig", "Zitate wörtlich", "Verweise lösen auf"], zurueck=("w1", "Fehler im Datensatz")))
 P["PROC-WEITERDENKEN"] = {"names": {"de": "Weiterdenken: Fragen und Rezeption", "en": "Thinking further: questions and reception"}, "group": "inhalt",
@@ -290,7 +290,7 @@ aq24 = [
 aq24 = [aq23[0], s("w1b", "bearbeitung", "Form je Feld", "Aus dem Inhalt wird für jedes Feld die Form gewählt und begründet: gemalte Szene, wo der Text erzählt oder ein Geschehen schildert; sonst ein gezeichnetes Strukturbild (Spalten, Kette, Raster, Kurve, Spiegel, Reihe, Ebenen, Ringe).",
                   "Form und Begründung im Szenenplan")] + aq23[1:2] + [
     s("w2b", "werkzeug", "Strukturbild zeichnen", "Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln.",
-      prueft=["Beschriftungen passen", "alle Stellen gültig", "jede Beschriftung auch auf Züridüütsch"])] + aq23[2:]
+      prueft=["Beschriftungen passen", "alle Stellen gültig", "jede Beschriftung auch auf Züritüütsch"])] + aq23[2:]
 aq25 = aq24[:aq24.index(next(x for x in aq24 if x["id"] == "w2b")) + 1] + [
     s("w2c", "werkzeug", "Bilder aus dem Bildlexikon", "Glieder eines Strukturbilds nennen Einträge des Bildlexikons (Person, Gruppe, Ort, Gegenstand, Zeichen). Gezeigt wird das gemalte und geprüfte Einzelbild des Eintrags (Schritte p1–p5), dasselbe wie im Bildlexikon; Gott als goldener Strahlenkranz mit dem Gottesnamen, gezeichnet, nie als Mensch. Fehlt das Bild noch, bleibt das Glied ohne Bild.")] + aq24[aq24.index(next(x for x in aq24 if x["id"] == "w2b")) + 1:]
 aq20 = ersetze(ersetze(ohne(aq21, "w6"), "w5", s("w5", "pruefung", "Regeln prüfen", "Dieselbe Instanz beantwortet jede Regel einzeln (allgemein, Figur, Feld), zählt verlangte Dinge und gibt Kopfpositionen an.", prueft=["alle Pflichtregeln erfüllt"])),

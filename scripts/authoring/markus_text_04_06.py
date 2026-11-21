@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Autorenwerkzeug: Markusevangelium Kapitel 4–6 – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus
+"""Autorenwerkzeug: Markusevangelium Kapitel 4–6 – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus
 dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/markus_text_04_06.py
@@ -21,7 +21,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MARK"]
 CHAPTERS = ((4, 41), (5, 43), (6, 56))
@@ -404,7 +404,7 @@ DEC_DE = [
 
 DEC_GSW = [
  ('MRK.6.8', 'Chupfergäld', 'adapted', 'χαλκόν', 'Chupfer', ['Gäld'], 'χαλκός isch Chupfer, da Chliigäld i Chupfermünze, wo me im Gurt treit hät; gliich wie [[MAT.10.9]] und [[MRK.12.41]]. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
- ("MRK.4.1", "See", "adapted", "θάλασσαν", "Meer", ["Meer"], "De Markus seit em See Gennesaret θάλασσα («Meer»). Uf Düütsch isch es en See; das gilt für Kapitel 4–6 dur."),
+ ("MRK.4.1", "See", "adapted", "θάλασσαν", "Meer", ["Meer"], "De Markus seit em See Gennesaret θάλασσα («Meer»). Uf Tüütsch isch es en See; das gilt für Kapitel 4–6 dur."),
  ("MRK.4.2", "Gliichnis", "traditional", "παραβολαῖς", "Vergliich", ["Bildwort", "Rätselwort"], "παραβολή isch en Vergliich, es Bildwort, au es rätselhafts Wort. «Gliichnis» wie i [[MRK.3.23]]."),
  ("MRK.4.3", "Lueged", "adapted", "ἰδοὺ", "Lueg!", ["Gsehnd"], "Es Wort, wo uf öppis ufmerksam macht; i de Mundart wie i [[MRK.3.34]] mit «lueg» widergää."),
  ("MRK.4.5", "grad", "literal", "εὐθὺς", None, ["sofort", "und dänn"], "εὐθύς isch es Lieblingswort vom Markus: Im SBLGNT-Markustext staat d Form εὐθύς 41-mal (per Skript us de Token zellt). Es wird wie i de Kapitel 1–3 und 7–10 dur «grad» widergää, damit me s Tempo vo de Erzellig merkt."),
@@ -648,8 +648,8 @@ NOTES_DE = ["KI-Entwurf ohne fachliche Prüfung.",
             ("Die Lesart «der Sohn des Zimmermanns» in [[MRK.6.3]] ist im importierten SBLGNT-Apparat nicht als Variante erfasst; "
              "der Hinweis auf 𝔓45 in den Übersetzungsentscheidungen stützt sich allein auf die CNTR-Transkription.")]
 NOTES_GSW = ["KI-Entwurf ohni fachlichi Prüefig.", ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum, s historisch Präsens vom Markus bliibt; «wo» als Relativwort; "
   "kei Genitiv («s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv); "
   "εὐθύς meischtens «grad»."),
@@ -674,7 +674,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; am 2026-11-21 nach docs/ZUERIDUEUETSCH.md überarbeitet; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; am 2026-11-21 nach docs/ZUERITUEUETSCH.md überarbeitet; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mrk").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -714,8 +714,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MRK.{c}.1-MRK.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Riich, Huus, Lüüt); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Riich, Huus, Lüüt); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt; im Zweifel nahe am Hochdeutschen: Mundart-Satzbau, Perfekt statt Präteritum (das historische Präsens des Markus bleibt), «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MRK-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

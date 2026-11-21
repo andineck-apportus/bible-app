@@ -40,7 +40,7 @@ FORMAT = """
                     "identity_de": "wer (mit [[…]]-Marke)", "traits_de": ["Merkmal 1", "Merkmal 2"], "legend_de": "kurz", "legend_gsw": "kurz"}},
   "stationen": [
     {"id": "GEN-B1", "reference": "GEN.1.1-GEN.2.3", "action_de": "was der Text hier sagt (1–2 Sätze)",
-     "band": {"de": "Titel, höchstens 46 Zeichen", "gsw": "Titel auf Züridüütsch"},
+     "band": {"de": "Titel, höchstens 46 Zeichen", "gsw": "Titel auf Züritüütsch"},
      "form": "szene", "form_grund_de": "warum diese Form",
      "bild_en": "Malauftrag Englisch …", "depicts": ["FIG-…"],
      "evidence": [{"s": "B", "ref": "GEN.1.3", "de": "…"}, {"s": "R", "de": "…"}, {"s": "I", "de": "…"}],

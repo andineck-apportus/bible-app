@@ -4,7 +4,7 @@
 Aufruf: python3 scripts/authoring/hintergrund_uebersicht.py
 
 Schreibt data/contexts/CTX-HIST-*.json, data/background/overview/BG-*.json (background_note mit `scope`) und
-die Züridüütsch-Lokalisierungen data/localizations/gsw-u-sd-chzh/BG-*.json. Bibelstellen als Marken [[…]].
+die Züritüütsch-Lokalisierungen data/localizations/gsw-u-sd-chzh/BG-*.json. Bibelstellen als Marken [[…]].
 Idempotent; bestehende Dateien werden nur bei inhaltlicher Änderung neu geschrieben (dann mit revision_log).
 KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt.
 """
@@ -20,7 +20,7 @@ D = ROOT / "data"
 DATE = "2026-10-13"
 LANG = "gsw-u-sd-chzh"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
+AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
 
 CONTEXTS = [
     {"id": "CTX-HIST-BIBLE-FORMATION", "period": {"from": -1000, "to": 400, "era": "BCE-CE", "approx": True},

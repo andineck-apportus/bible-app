@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Lukas 9, 10, 11,5–54 und 12 (Sendung der Zwölf, Messiasbekenntnis, Verklärung, Aufbruch nach Jerusalem,
 Aussendung der Zweiundsiebzig, barmherziger Samaritaner, Marta und Maria, Bitten und Beelzebul-Rede, Weherufe, Reden über
-Furcht, Besitz, Sorge und Wachsamkeit) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT,
+Furcht, Besitz, Sorge und Wachsamkeit) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT,
 Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/lukas_text_09_12.py
@@ -12,7 +12,7 @@ scripts/authoring/_lib.py); Text und Wortzuordnung entstehen daraus und stimmen 
 kommt die frühere Fassung ins revision_log. WORK-LUK besteht (scripts/authoring/vaterunser.py) und wird hier nur
 referenziert, nicht geschrieben.
 
-Abgrenzung: [[LUK.11.1-LUK.11.4]] ist bereits übersetzt (scripts/authoring/vaterunser.py und zueridueuetsch.py:
+Abgrenzung: [[LUK.11.1-LUK.11.4]] ist bereits übersetzt (scripts/authoring/vaterunser.py und zueritueuetsch.py:
 TRANS-LUK-011-001-004-DE-WORKING, TRANS-LUK-011-001-004-GSW-ZH-WORKING, Texteinheit TU-LUK-011-001-004). Dieses Werkzeug
 berührt jene Datensätze nicht; es schreibt für Kapitel 11 eine Übersetzung [[LUK.11.5-LUK.11.54]] und die Kapiteleinheit
 TU-LUK-011-001-054, deren Teile TU-LUK-011-001-004 einschliessen. Wortwahl abgestimmt auf 11,1–4 («Vater», «Reich»,
@@ -39,7 +39,7 @@ scripts/authoring/lukas_einheitlich.py, Zählung dort):
 - οἱ ὄχλοι «die Menschenmengen» / «d Lüüt»; ὄχλος «die Menge» / «d Mängi»; νομικός «Gesetzeslehrer» / «Gsetzeslehrer».
 - οὐαί «Weh»; ἀληθῶς «Wahrhaftig»; ἀποκριθεὶς ohne Frage «ergriff das Wort» / «hät s Wort gnoo»; εὐθέως «sofort» /
   «grad», παραχρῆμα «sofort» / «sofort»; πλήν Mundart «aber».
-- Mundart seit der Neuübersetzung vom 2026-11-21 nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); run() prüft sie mit
+- Mundart seit der Neuübersetzung vom 2026-11-21 nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); run() prüft sie mit
   pruefe_mundart (scripts/mundart.py und die Lukas-Liste in lukas_einheitlich.py).
 """
 import sys
@@ -53,7 +53,7 @@ from lukas_einheitlich import (EGEN_DE, EGEN_GSW, EGEN_SKIP_DE, EGEN_SKIP_GSW, I
 DATE = "2026-10-26"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-LUKE"]
 # (Kapitel, erster Vers, letzter Vers); 11,1–4 besteht schon (vaterunser.py)
@@ -1075,10 +1075,10 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Nöi übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf em erfasste Wortluut vo de CNTR-Transkriptione und uf maschineller "
   "Kollation (METHOD-AUTO-COLLATION-V1), nöd uf eigeter Prüefig vo de Handschrifte."),
- ("Abgränzig: [[LUK.11.1-LUK.11.4]] staat i TRANS-LUK-011-001-004-GSW-ZH-WORKING (scripts/authoring/zueridueuetsch.py) und wird da "
+ ("Abgränzig: [[LUK.11.1-LUK.11.4]] staat i TRANS-LUK-011-001-004-GSW-ZH-WORKING (scripts/authoring/zueritueuetsch.py) und wird da "
   "nöd aagrüert. Wörter sind druf abgstimmt: «Vatter», «Riich», «Tag für Tag», «Es isch gsii» (Καὶ ἐγένετο, am Aafang vo me Abschnitt), «lehre» (i [[LUK.11.1]] no i de ältere Schriibig), «de Heilig Geischt»."),
  ("Einheitlichi Wörter (wie bim Markus und Matthäus): «s Riich vo Gott», «de Mänschesohn», «Vollmacht», «Dämon», «unreine Geischt», "
   "«Schriftglehrti», «Gsetzeslehrer», «Generation» (γενεά), «Hüüchler», «Höll», «Totereich», «Wunder» (δυνάμεις), «Chnächt», «lueg»/«lueged» (ἰδού), «Häb kei Angscht» (μὴ φοβοῦ), "
@@ -1109,7 +1109,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-26; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-26; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-luk").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -1163,8 +1163,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": ref_rng,
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-LUK-{span}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen. Die KI-Gegenlesung vom 2026-10-26 betraf die abgelöste Fassung."})

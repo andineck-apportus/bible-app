@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Johannes 12–13 (Salbung, Einzug, die Stunde der Verherrlichung, Fusswaschung, Ansage der
-Auslieferung, neues Gebot) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT,
+Auslieferung, neues Gebot) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT,
 Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/johannes_text_12_13.py
@@ -31,7 +31,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-JOHN"]
 CHAPTERS = ((12, 50), (13, 38))
@@ -540,8 +540,8 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Nöi übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Näme mit Artikel («de Jesus», «de Petrus»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv; «öis», «öi»; "
   "Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv)."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
@@ -571,7 +571,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-jhn").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -611,8 +611,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"JHN.{c}.1-JHN.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-JHN-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

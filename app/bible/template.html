@@ -911,7 +911,7 @@ function withData(codes,fn){const p=needData(codes);if(!p){fn();return;}const ep
   if(!loadTimer)loadTimer=setTimeout(()=>{if(loadPending>0)showLoading();},200);
   p.then(()=>{if(ep!==loadEpoch)return;loadPending=Math.max(0,loadPending-1);if(!loadPending){hideLoading();loadRevert=null;}fn();});}
 // Vergleichsübersetzungen der Sprachen, die der Zielkontext der gewählten Schicht vorsieht, gruppiert und in dieser Reihenfolge
-const LANGLABEL={de:['Hochdeutsch','German'],gsw:['Züridüütsch','Zurich German'],en:['Englisch','English']};
+const LANGLABEL={de:['Hochdeutsch','German'],gsw:['Züritüütsch','Zurich German'],en:['Englisch','English']};
 const CMP=ref=>(LAYER().compare_languages||[S.text]).map(lg=>({lang:lg,items:(STUDY.compare[ref]||[]).filter(c=>c.lang===lg).sort((a,b)=>b.id.localeCompare(a.id))}));
 const cmpLabel=lg=>(LANGLABEL[lg]||[lg,lg])[lang==='de'?0:1];
 // Lokalisierte Felder (data/localizations) der gewählten Sprachschicht über das Original legen; fehlt eine Übersetzung, bleibt das Original

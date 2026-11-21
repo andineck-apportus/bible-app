@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 20–21 (Arbeiter im Weinberg, dritte Leidensankündigung, Bitte der Zebedäusmutter, zwei Blinde
 bei Jericho, Einzug in Jerusalem, Tempel, Feigenbaum, Vollmachtsfrage, zwei Söhne, Weinbauern) – Texteinheiten,
-Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und
+Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und
 vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_20_21.py
@@ -30,7 +30,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((20, 34), (21, 46))
@@ -349,10 +349,10 @@ DEC_GSW = [
  ('MAT.20.2', 'en Denar', 'literal', 'δηναρίου', None, None, 'Römischi Silbermünz; verbreitet als de üblich Taglohn vomene Arbeiter verstande. Damalige Münzname im Text, de Wärt i de Erkläärig (Entscheid Andi Neck 2026-10-26).'),
  ('MAT.20.2', 'im Tag', 'adapted', 'τὴν ἡμέραν', 'für de Tag', None, 'De Akkusativ vo de Ziit seit, für weli Ziit de Lohn gilt; d Mundart seit «im Tag».'),
  ("MAT.20.1", "mit em Himmelriich isch es wie mit eme Huusherr", "adapted", "Ὁμοία γάρ ἐστιν ἡ βασιλεία τῶν οὐρανῶν ἀνθρώπῳ οἰκοδεσπότῃ", "s Himmelriich isch gliich wien en Mänsch, en Huusherr", ["s Riich vo de Himmel"],
-  "So seit me s im Züridüütsch. «S Himmelriich» isch di einheitlich Widergab fürs ganz Matthäusevangelium (nach docs/ZUERIDUEUETSCH.md); «Mänsch, Huusherr» isch zu eim Wort zämegnoo, wie i [[MAT.21.33]]."),
+  "So seit me s im Züritüütsch. «S Himmelriich» isch di einheitlich Widergab fürs ganz Matthäusevangelium (nach docs/ZUERITUEUETSCH.md); «Mänsch, Huusherr» isch zu eim Wort zämegnoo, wie i [[MAT.21.33]]."),
  ("MAT.20.3", "ohni Arbet", "adapted", "ἀργούς", "untätig", ["wo nüüt z tue händ"],
   "ἀργός heisst «ohni Arbet, untätig»; da eher arbeitslos als fuul ([[MAT.20.7]])."),
- ("MAT.20.8", "Lohn", "literal", "μισθὸν", None, None, "Schriibig mit Dehnigs-h wie im Hochdüütsche (docs/ZUERIDUEUETSCH.md)."),
+ ("MAT.20.8", "Lohn", "literal", "μισθὸν", None, None, "Schriibig mit Dehnigs-h wie im Hochtüütsche (docs/ZUERITUEUETSCH.md)."),
  ("MAT.20.8", "fang bi de Letschte aa bis zu de Erschte", "adapted", "ἀρξάμενος ἀπὸ τῶν ἐσχάτων ἕως τῶν πρώτων", "aagfange bi de Letschte bis zu de Erschte", None,
   "S Partizip isch als eigete Befehl widergää, wil d Mundart kei Partizipialsätz bruucht."),
  ("MAT.20.11", "gmuulet", "adapted", "ἐγόγγυζον", "gmurret", ["gschumpfe", "sich beklagt"],
@@ -379,7 +379,7 @@ DEC_GSW = [
  ("MAT.20.22", "de Bächer", "literal", "τὸ ποτήριον", None, ["de Kelch"], "Bild für s zuegmässe Gschick, oft für Liide ([[ISA.51.17]], [[MAT.26.39]])."),
  ("MAT.20.23", "dene, wo s min Vatter für si parat gmacht hät", "adapted", "οἷς ἡτοίμασται ὑπὸ τοῦ πατρός μου", "dene, für die s vo mim Vatter parat gmacht isch", None,
   "S Passiv mit Täter («vo mim Vatter») isch i d Mundart als Aktiv widergää; de Vatter bliibt dä, wo handlet."),
- ("MAT.20.25", "si iri Macht la gspüre", "adapted", "κατεξουσιάζουσιν αὐτῶν", "üebed Gwalt über si uus", None, "So seit me s im Züridüütsch."),
+ ("MAT.20.25", "si iri Macht la gspüre", "adapted", "κατεξουσιάζουσιν αὐτῶν", "üebed Gwalt über si uus", None, "So seit me s im Züritüütsch."),
  ("MAT.20.26", "söll s nöd so sii", "interpretive", "οὐχ οὕτως ἔσται", "wird s nöd so sii", ["isch es nöd so"],
   "S Futur isch als Wiisig verstande, ebenso «dä söll sii». Zum Präsens ἐστίν lueg d Alternative."),
  ("MAT.20.27", "Sklav", "literal", "δοῦλος", None, ["Chnächt", "Diener"], "Im Spruch «Sklav» wie i [[MRK.10.44]]; im Gliichnis [[MAT.21.34]] «Chnächt»."),
@@ -396,7 +396,7 @@ DEC_GSW = [
   "De Plural vo «Mängi» isch ungwöhnlich; drum «d Lüüt» für οἱ ὄχλοι (ebenso [[MAT.21.11]], [[MAT.21.46]]), «d Mängi» für de Singular."),
  ("MAT.21.9", "Hosanna", "traditional", "Ὡσαννὰ", None, None, "Umschrift vom hebräische Ruef «hilf doch!» ([[PSA.118.25]]); zur Ziit vom Jesus au en Jubelruef."),
  ("MAT.21.10", "in Ufruer grate", "interpretive", "ἐσείσθη", "erschüttered worde", ["in Bewegig choo"], "σείω heisst «erschüttere, bebe»; da im übertreite Sinn."),
- ("MAT.21.16", "Muul", "literal", "στόματος", None, ["Mund"], "Im Züridüütsch s gwöhnlich Wort für de Mund."),
+ ("MAT.21.16", "Muul", "literal", "στόματος", None, ["Mund"], "Im Züritüütsch s gwöhnlich Wort für de Mund."),
  ("MAT.21.16", "Buschi", "adapted", "θηλαζόντων", "Chind, wo no gstillt wärded", ["Söiglinge"], "«Buschi» isch s Mundartwort für Söigling."),
  ("MAT.21.19", "in Ewigkeit nöd", "adapted", "εἰς τὸν αἰῶνα", "bis i d Ewigkeit", None, "D Verneinig isch am Schluss widerholt, wie me s i de Mundart betont."),
  ("MAT.21.21", "Glaube", "literal", "πίστιν", None, ["Vertroue"], "Widergab für de Bereich: πίστις «Glaube», πιστεύω «glaube»."),
@@ -638,7 +638,7 @@ NOTES_DE = [
 ]
 NOTES_GSW = [
  'KI-Entwurf ohni fachlichi Prüefig.',
- 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
+ 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte.',
  'Einheitlichi Begriff fürs ganz Matthäusevangelium: «s Himmelriich», «s Riich vo Gott», «de Mänschesohn», «Amen, ich säge öi», «lueg», «grad», «dänn», Hoheprieschter, Schriftglehrti, Ältischti; Erfüllungsformle «damit sich erfüllt, was (vom Herr) dur de Prophet … gseit worde isch».',
  'I däm Bereich festgleit: πίστις «Glaube»; δικαιοσύνη «Grächtigkeit»; μεταμέλομαι «groue» (nöd «umchehre»); οἱ ὄχλοι «d Lüüt», ὁ ὄχλος «d Mängi»; σπλαγχνίζομαι «Erbarme haa»; προσέρχομαι «härechoo»; προσκυνέω «sich niderwärfe»; ἐλέησον «häb Erbarme»; δοῦλος «Sklav» im Spruch, «Chnächt» im Gliichnis; μισθός «Lohn»; ἀμπελών «Wiibärg», γεωργοί «Wiibuure».',
@@ -662,7 +662,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -703,8 +703,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

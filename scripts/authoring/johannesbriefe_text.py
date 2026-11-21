@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Autorenwerkzeug: Johannesbriefe (1–3 Joh) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem
+"""Autorenwerkzeug: Johannesbriefe (1–3 Joh) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem
 SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/johannesbriefe_text.py
@@ -20,9 +20,9 @@ from _lib import D, alignment_entries, load_tokens, localize, write  # noqa: E40
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
-AUTH_GSW_L10N = "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
+AUTH_GSW_L10N = "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
 TAGS = ["TAG-JOHANNINE"]
 BOOKS = (
     ("1JN", "Erster Johannesbrief", ((1, 10), (2, 29), (3, 24), (4, 21), (5, 21))),
@@ -450,7 +450,7 @@ DEC_GSW = [
  ("3JN.1.9", "nimmt öis nöd aa", "interpretive", "ἐπιδέχεται", "nimmt öis nöd uuf", ["anerchännt öis nöd"], "ἐπιδέχεσθαι cha d Ufnahm vo Gäscht oder d Anerchännig vo ere Autorität meine; i [[3JN.1.10]] staat s für d Ufnahm vo de Gschwüschterti."),
  ("3JN.1.14", "Fründe", "literal", "φίλοι", None, None, "Ungwöhnlich statt «Brüeder»; villicht en Aaklang a [[JHN.15.14]]-[[JHN.15.15]]. De Gruess («Fride seig mit dir …») isch im SBLGNT en eigete Vers 15."),
  ("3JN.1.12", "gänd alli es guets Züügnis", "adapted", "μεμαρτύρηται ὑπὸ πάντων", "es isch vo allne es Züügnis usgstellt worde", None,
-  "Mundart zieht s Aktiv vor (docs/ZUERIDUEUETSCH.md); di Handelnde («alli») nännt de Text sälber."),
+  "Mundart zieht s Aktiv vor (docs/ZUERITUEUETSCH.md); di Handelnde («alli») nännt de Text sälber."),
  ("2JN.1.13", "lönd dich grüesse", "adapted", "Ἀσπάζεταί σε", "grüessed dich", None,
   "Gwöhnlichi Mundart-Wändig für Grüess, wo me usrichtet; gliich i [[3JN.1.14]] und [[PHP.4.21]]."),
 ]
@@ -771,7 +771,7 @@ NOTES_DE = ["KI-Entwurf ohne fachliche Prüfung.",
              "(METHOD-AUTO-COLLATION-V1) bzw. auf der CNTR-Transkription, nicht auf eigener Prüfung der Handschriften. "
              "Wo erfasster Wortlaut und automatische Zuordnung auseinandergehen, ist das in der Alternative vermerkt.")]
 NOTES_GSW = ["KI-Entwurf ohni fachlichi Prüefig.", ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Nöi übersetzt am "
-             "2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im "
+             "2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im "
              "revision_log."),
              ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
               "CNTR-Transkription, nöd uf eigeter Prüefig vo de Handschrifte. Wo erfasste Wortluut und automatischi Zueornig "
@@ -847,8 +847,8 @@ def run():
                 rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"{book}.{c}.1-{book}.{c}.{last}",
                        "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
                 if lang == "gsw":
-                    rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                                "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                    rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                                "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                                 "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich sagt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                                 "control_translation": f"TRANS-{book}-{c:03d}-001-{last:03d}-DE-WORKING",
                                 "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

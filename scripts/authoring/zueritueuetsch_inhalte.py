@@ -1,7 +1,7 @@
-"""Autorenwerkzeug: Züridüütsch-Fassung der Studieninhalte (Befunde, Deutungen, Grundsätze, Anwendungen,
+"""Autorenwerkzeug: Züritüütsch-Fassung der Studieninhalte (Befunde, Deutungen, Grundsätze, Anwendungen,
 Fragen, Hintergrund, Zusammenfassungen aller Ebenen, Wortbedeutungen und Erklärungen zu den Lesarten).
 
-Aufruf: python3 scripts/authoring/zueridueuetsch_inhalte.py
+Aufruf: python3 scripts/authoring/zueritueuetsch_inhalte.py
 
 Schreibt pro übersetztem Datensatz eine eigene Lokalisierung `data/localizations/gsw-u-sd-chzh/<ID>.json`
 (Typ `localization`, siehe docs/DATENMODELL.md): `localizes` verweist auf den Originaldatensatz, `fields` trägt
@@ -23,7 +23,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 D = ROOT / "data"
 LANG = "gsw-u-sd-chzh"
 DATE = "2026-10-13"
-AUTH = f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen und dem Urtext in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
+AUTH = f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen und dem Urtext in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
 
 I18N = {
  # ---------------------------------------------------------------- Befunde
@@ -332,7 +332,7 @@ def patch(path, fields):
            "fields": fields, "source_fingerprint": {k: fingerprint(rec.get(k)) for k in fields},
            "authorship_de": AUTH, "review_de": "Noch keine muttersprachliche Prüfung dokumentiert.",
            "knowledge": {"asserted_at": DATE, "supersedes": None},
-           "revision_log": (prev or {}).get("revision_log") or [{"date": DATE, "change_de": "Erstfassung Züridüütsch",
+           "revision_log": (prev or {}).get("revision_log") or [{"date": DATE, "change_de": "Erstfassung Züritüütsch",
                                                                   "reason_de": "Mundart-Schicht soll alle Inhalte umfassen"}]}
     if prev and (prev["fields"] != fields or prev["source_fingerprint"] != loc["source_fingerprint"]):
         loc["revision_log"] = prev["revision_log"] + [{"date": DATE, "change_de": "Fassung erneuert", "previous_fields": prev["fields"],
@@ -373,8 +373,8 @@ for p in (D / "translations").glob("TRANS-*-GSW-ZH-WORKING.json"):
             a["related_variants"] = ["VAR-MRK-003-029-001"]
     log = rec.setdefault("revision_log", [])
     if not any("Wortbedeutungen und Entstehung" in x.get("change_de", "") for x in log):
-        log.append({"date": DATE, "change_de": "Wortbedeutungen und Entstehung der Lesarten in Züridüütsch ergänzt (readings_de, origin_de); Übersetzungstext unverändert",
+        log.append({"date": DATE, "change_de": "Wortbedeutungen und Entstehung der Lesarten in Züritüütsch ergänzt (readings_de, origin_de); Übersetzungstext unverändert",
                     "reason_de": "Mundart-Schicht soll alle Inhalte umfassen"})
     rec["alternatives_origin_note_de"] = "Möglichi Erkläärige, wie d Underschid entstande sii chönnted. Si stönd näbenand; keini isch als richtig entschide. " + AUTH
     p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"); n += 1
-print(f"PASS: {n} Datensätze mit Züridüütsch-Inhalten ergänzt")
+print(f"PASS: {n} Datensätze mit Züritüütsch-Inhalten ergänzt")

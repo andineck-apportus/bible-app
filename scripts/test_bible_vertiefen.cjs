@@ -118,7 +118,7 @@ const srv=http.createServer((q,r)=>{const f=path.join(ROOT,decodeURIComponent(q.
     assert((await txt('#deep-panel-w .deep-row')).includes('Kirchliche Lehre'),'Tradition «Kirchliche Lehre»');
     const orig=await txt('.sheet .deep-origin');
     assert(orig.includes('von einer weiteren Instanz gegen den Text geprüft')&&orig.includes('Grenzen:')&&!/KI|Claude/.test(orig),'Prüfvermerk ohne KI-Hinweis');
-    // 10 Kernaussage im Lesetext Züridüütsch
+    // 10 Kernaussage im Lesetext Züritüütsch
     await click('.sheet .close');await ev(()=>document.querySelector('[data-action=menu]').click());await wait();await ev(()=>document.querySelector('[data-set="text"][data-value="gsw"]').click());await wait();await ev(()=>document.querySelector('[data-close]').click());await wait();
     await openDeep('TU-LUK-015-011-032');
     assert.equal(await txt('.sheet .deep-gist'),'De Vatter lauft em jüngere Sohn entgäge – und gaat au zum eltere use.','Kernaussage in Mundart');

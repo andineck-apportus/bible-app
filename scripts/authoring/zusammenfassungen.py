@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Zusammenfassungen aus der Kernanalyse (docs/VERDICHTUNG.md, Ablauf Schritt 3) – Hochdeutsch und Züridüütsch.
+"""Zusammenfassungen aus der Kernanalyse (docs/VERDICHTUNG.md, Ablauf Schritt 3) – Hochdeutsch und Züritüütsch.
 
 Eingabe: scripts/authoring/zusammenfassungen_daten/<BUCH>.json, eine Liste von
     {"core": "CORE-RUT-001-006-018", "ids": ["TU-RUT-001-006-018"], "de": "…", "gsw": "…"}

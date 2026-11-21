@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 1–2 (Stammbaum, Geburt, Sterndeuter, Flucht nach Ägypten, Rückkehr nach Nazaret) –
-Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen,
+Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen,
 Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_01_02.py
@@ -34,7 +34,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((1, 25), (2, 23))
@@ -311,7 +311,7 @@ DEC_GSW = [
  ("MAT.1.1", "Christus", "traditional", "χριστοῦ", "Gsalbte", ["Messias"],
   "Grundentscheid fürs ganz Evangelium: Χριστός «Christus», s griechisch Wort für «Gsalbte» (Messias). Mit Artikel isch es en Titel: «de Christus» ([[MAT.1.17]], [[MAT.2.4]])."),
  ("MAT.1.2", "de Vatter vom Isaak worde", "adapted", "ἐγέννησεν τὸν Ἰσαάκ", "hät de Isaak zeugt", ["hät de Isaak überchoo"],
-  "ἐγέννησεν «zeugte» staat im Stammbaum 39-mal. Im Züridüütsch seit me das nöd eso; drum «isch de Vatter vo … worde». S Verb chunnt so drümal i jedem Glid vor («isch … de Vatter … worde»). S reihend δέ isch nöd eigens widergää."),
+  "ἐγέννησεν «zeugte» staat im Stammbaum 39-mal. Im Züritüütsch seit me das nöd eso; drum «isch de Vatter vo … worde». S Verb chunnt so drümal i jedem Glid vor («isch … de Vatter … worde»). S reihend δέ isch nöd eigens widergää."),
  ("MAT.1.3", "vo de Tamar", "literal", "ἐκ τῆς Θαμάρ", None, ["mit de Tamar"],
   "ἐκ nännt d Mueter. De Stammbaum nännt vier Fraue: d Tamar, d Rahab, d Rut und d Frau vom Urija, und dänn d Maria. Wieso, wird verschiede erklärt: wil si (wohl) kei Israelitinne gsii sind, wil iri Verbindige ungwöhnlich gsii sind, oder als Vorbereitig uf di ungwöhnlich Geburt dur d Maria."),
  ("MAT.1.3", "Hezron", "traditional", "Ἑσρώμ", "Esrom", None,
@@ -340,11 +340,11 @@ DEC_GSW = [
  ("MAT.1.19", "sich heimlich vo ire z trenne", "adapted", "λάθρᾳ ἀπολῦσαι αὐτήν", "si heimlich z entlaa", ["sich vo ire scheide"],
   "ἀπολύω isch bim Matthäus s Wort für d Scheidig ([[MAT.5.31]]–[[MAT.5.32]], [[MAT.19.3]])."),
  ("MAT.1.20", "lueg", "traditional", "ἰδοὺ", "lueg emal", ["da", "uf eimal"],
-  "Grundentscheid fürs ganz Evangelium: ἰδού «lueg» (Hochdüütsch «siehe»); bim Matthäus 62-mal."),
+  "Grundentscheid fürs ganz Evangelium: ἰδού «lueg» (Hochtüütsch «siehe»); bim Matthäus 62-mal."),
  ("MAT.1.20", "empfange worde isch", "adapted", "γεννηθὲν", "zeugt worde isch", None,
   "Gliich Verb wie im Stammbaum, im Passiv; Gott als verschwige Täter, drum bliibt s Passiv."),
  ("MAT.1.21", "überchunnt", "adapted", "τέξεται", "gebärt", ["bringt uf d Wält"],
-  "Im Züridüütsch seit me «es Chind überchoo». Zuekunft im Präsens. Ebeso [[MAT.1.23]], [[MAT.1.25]]."),
+  "Im Züritüütsch seit me «es Chind überchoo». Zuekunft im Präsens. Ebeso [[MAT.1.23]], [[MAT.1.25]]."),
  ("MAT.1.21", "du söllsch ihm de Name Jesus gää", "adapted", "καλέσεις τὸ ὄνομα αὐτοῦ Ἰησοῦν", "du wirsch sin Name Jesus rüefe", None,
   "S Futur isch en Uftrag. Jesus isch di griechisch Form vom hebräische Name Jeschua, öppe «JHWH rettet»; de Nachsatz spilt druf aa."),
  ("MAT.1.21", "er isch es, wo", "adapted", "αὐτὸς", "er", None,
@@ -568,7 +568,7 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
   "CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte. I [[MAT.1.18]] und [[MAT.2.17]] widerspricht d "
   "automatisch Zueornig de Transkriptione; d Alternative säged das."),
@@ -580,9 +580,9 @@ NOTES_GSW = [
   "zruggzieh»; κατʼ ὄναρ «im Traum»; χρηματίζω «e Wiisig überchoo»; παιδίον «Chind»; δίκαιος «grächt»; σῴζω «rette»; "
   "τίκτω «(es Chind) überchoo»; μάγοι «Sterndüüter»; Ναζωραῖος «Nazoräer»."),
  ("Mundart: Näme mit Artikel («de Josef», «d Maria»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv "
-  "(«de Sohn vom David»). Im Stammbaum «isch de Vatter vo … worde» für ἐγέννησεν, wil «zeuge» im Züridüütsch "
+  "(«de Sohn vom David»). Im Stammbaum «isch de Vatter vo … worde» für ἐγέννησεν, wil «zeuge» im Züritüütsch "
   "ungwöhnlich isch."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv; «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de "
   "Urtext bruucht (göttlichs Passiv) oder kei Täter nännt; Aktiv mit «me», wo s natürlicher isch."),
 ]
@@ -603,7 +603,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -644,8 +644,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

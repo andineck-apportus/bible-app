@@ -1,11 +1,11 @@
 """Gemeinsamer Ablauf der Studien-Autorenwerkzeuge (titus_study.py, obadja_study.py): schreibt Kontext, Befunde,
 Deutungen, Grundsätze, Anwendungen, Fragen, Beziehungen, Hintergrund, Zusammenfassungen und die Studie, jeweils mit
-Züridüütsch-Lokalisierung. Fachwörter: (Sprache, Wort, Bedeutung) oder (Sprache, Wort, Bedeutung, Umschrift)."""
+Züritüütsch-Lokalisierung. Fachwörter: (Sprache, Wort, Bedeutung) oder (Sprache, Wort, Bedeutung, Umschrift)."""
 from _lib import D, localize, write
 
 DATE = "2026-10-13"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
+AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
 L = ("gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026")
 
 

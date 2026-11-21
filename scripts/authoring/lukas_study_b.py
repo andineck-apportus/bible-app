@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Lukasevangelium Kapitel 13–24 – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen,
-Beziehungen, Hintergrund zu Abschnitten und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Beziehungen, Hintergrund zu Abschnitten und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Nicht hier geschrieben:
 - Kapitel- und Buchzusammenfassungen (SUM-CH-LUK-…, Buchebene): Sie entstehen später aus den Kernanalysen
@@ -1374,7 +1374,7 @@ def run():
     _pruefe_fachwoerter()
     _study.DATE = "2026-10-26"
     _study.AUTH = "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-26; aus dem Hochdeutschen in Züridüütsch gefasst; "
+    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-26; aus dem Hochdeutschen in Züritüütsch gefasst; "
                        "Mundart noch nicht muttersprachlich geprüft.")
     # Bestehenden Kontext unverändert weitergeben: _lib.write erkennt Gleichheit und schreibt nichts.
     context = json.loads((D / "contexts" / f"{CTX_READERS}.json").read_text(encoding="utf-8"))

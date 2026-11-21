@@ -106,10 +106,10 @@ Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutsch
 
 ### Fassung 2.0 – gültig ab 2026-11-21 (aktuell)
 
-*Änderung:* Züridüütsch nach verbindlichem Regelwerk (Gallmann, Zürichdeutsches Wörterbuch, für Formen und Wortschatz; SRF-Merkblatt für die Schreibung, im Zweifel nahe am Hochdeutschen); Rückmeldungen werden als allgemeine Regel gefasst und maschinell geprüft, nicht als Einzelkorrektur (Entscheid Herausgeber).
+*Änderung:* Züritüütsch nach verbindlichem Regelwerk (Gallmann, Zürichdeutsches Wörterbuch, für Formen und Wortschatz; SRF-Merkblatt für die Schreibung, im Zweifel nahe am Hochdeutschen); Rückmeldungen werden als allgemeine Regel gefasst und maschinell geprüft, nicht als Einzelkorrektur (Entscheid Herausgeber).
 
-1. **Aus dem Urtext übersetzen** (Bearbeitende Instanz): Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle. Züridüütsch nach dem Regelwerk: Schreibung, Formen, Wortwahl, Satzbau.
-2. **Schicht beschreiben** (Bearbeitende Instanz): Sprache, Zielgruppe, Schreibweise (Züridüütsch nach Regelwerk) und Ton festhalten; Entscheide wie bei der Übersetzung.
+1. **Aus dem Urtext übersetzen** (Bearbeitende Instanz): Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle. Züritüütsch nach dem Regelwerk: Schreibung, Formen, Wortwahl, Satzbau.
+2. **Schicht beschreiben** (Bearbeitende Instanz): Sprache, Zielgruppe, Schreibweise (Züritüütsch nach Regelwerk) und Ton festhalten; Entscheide wie bei der Übersetzung.
 3. **Regelwerk prüfen** (Werkzeug (feste Prüfung)): Das Werkzeug prüft Schreibung und Formen gegen die Wortliste und Muster des Regelwerks; Funde brechen die Prüfung ab. Prüft: keine abgelöste Form, keine Dieth-Sonderzeichen. Zurück zu «Aus dem Urtext übersetzen», wenn Fund.
 4. **Inhalt prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung. Prüft: treu zum Urtext. Zurück zu «Aus dem Urtext übersetzen», wenn Abweichung.
 5. **Sprache prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Wortwahl, Satzbau und Lesefluss gegen das Regelwerk. Ungeregelte Fälle werden als Regelvorschlag gemeldet, festgelegt und dann für alle Texte gleich angewendet. Prüft: Regelwerk eingehalten, idiomatisch, keine Einzelkorrektur ohne Regel. Zurück zu «Aus dem Urtext übersetzen», wenn Mangel.
@@ -117,14 +117,14 @@ Jede Sprache und Mundart eigenständig aus dem Urtext, nicht aus dem Hochdeutsch
 
 *Weiter, wenn:* Regelwerk eingehalten (Werkzeug), inhaltlich und sprachlich geprüft; muttersprachliche Prüfung vorgesehen.
 *Stand:* Stand Entwurf: Eine fachliche Prüfung durch Personen ist vorgesehen und wird erst eingetragen, wenn sie stattgefunden hat.
-*Ausführlich:* docs/ZUERIDUEUETSCH.md
+*Ausführlich:* docs/ZUERITUEUETSCH.md
 
 ### Fassung 1.0 – gültig ab 2026-10-13
 
-*Änderung:* Erste Fassung (Züridüütsch).
+*Änderung:* Erste Fassung (Züritüütsch).
 
 1. **Aus dem Urtext übersetzen** (Bearbeitende Instanz): Jede Sprach- oder Mundartfassung entsteht als eigene Schicht direkt aus dem Urtext, mit Wortzuordnung; die hochdeutsche Fassung dient nur zur Kontrolle.
-2. **Schicht beschreiben** (Bearbeitende Instanz): Sprache, Zielgruppe, Schreibweise (z. B. Züridüütsch nach Dieth) und Ton festhalten; Entscheide wie bei der Übersetzung.
+2. **Schicht beschreiben** (Bearbeitende Instanz): Sprache, Zielgruppe, Schreibweise (z. B. Züritüütsch nach Dieth) und Ton festhalten; Entscheide wie bei der Übersetzung.
 3. **Inhalt prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz vergleicht mit dem Urtext und der Kontrollübersetzung. Prüft: treu zum Urtext. Zurück zu «Aus dem Urtext übersetzen», wenn Abweichung.
 4. **Sprache prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Schreibweise, Wortwahl und Lesefluss der Mundart. Prüft: festgelegte Schreibweise, idiomatisch. Zurück zu «Aus dem Urtext übersetzen», wenn Mangel.
 5. **Muttersprachlich prüfen** (Herausgeber): Eine Person mit dieser Muttersprache liest gegen; erst dann wird die Prüfung eingetragen.
@@ -225,7 +225,7 @@ Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der T
 2. **Wie man es gelesen hat** (Bearbeitende Instanz): Rezeption je Tradition (jüdische Auslegung, Kirchenväter, Liturgie, Kunst, Musik, Literatur, Reformation, heutige Forschung, kirchliche Lehre wie Konzilien, Enzykliken, Bekenntnisschriften) mit Zeitraum, in eigenen Worten. Stimmen nebeneinander, keine wird als richtig gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten) benennen. Quellen nur, wo sicher; sonst ohne Stellenangabe und als ungeprüft gekennzeichnet.
 3. **Quellen nachschlagen** (Weitere Instanz (prüft)): Eine weitere Instanz schlägt die genannten Quellen in frei zugänglichen Ausgaben nach (docs/QUELLENPRUEFUNG.md): bestätigt, berichtigt, teilweise oder nicht prüfbar. Bis dahin zeigt die App «noch nicht nachgeschlagen». Prüft: Quelle sagt, was der Eintrag behauptet, Zeitraum und Tradition stimmen. Zurück zu «Wie man es gelesen hat», wenn Angabe falsch oder nicht belegt.
 4. **Gegen den Text prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig? Stehen Zitate wörtlich in der Arbeitsübersetzung (Hochdeutsch und Mundart)? Ergebnis, Datum und Grenzen der Prüfung als Prüfvermerk (check) am Eintrag; berichtigte Einträge mit revision_log. Prüft: Frage offen und belegt, keine versteckte Deutung, Rezeption richtig zugeordnet, Zitate wörtlich. Zurück zu «Fragen formulieren», wenn Frage suggestiv, unbelegt oder schief.
-5. **Mundart und weitere Sprachen** (Bearbeitende Instanz): Fragen, Rezeption und die Kernaussage (gist_de) der Kernanalyse als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); Zitate wörtlich aus der Übersetzungsschicht dieser Sprache; muttersprachliche Prüfung wird nicht behauptet.
+5. **Mundart und weitere Sprachen** (Bearbeitende Instanz): Fragen, Rezeption und die Kernaussage (gist_de) der Kernanalyse als Lokalisierung mit Fingerabdruck (Züritüütsch und weitere); Zitate wörtlich aus der Übersetzungsschicht dieser Sprache; muttersprachliche Prüfung wird nicht behauptet.
 6. **Validator** (Werkzeug (feste Prüfung)): ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?» (auch «…?» bzw. «?»»), Tradition und Gesichertheit gültig, Quellenprüfung und Prüfvermerk vollständig, Zitate in «…» wörtlich im Bibeltext der Stelle (Hochdeutsch gegen die hochdeutsche, Lokalisierung gegen die Arbeitsübersetzung ihrer Sprache; Unübersetztes nur als Hinweis), Stellenmarken und Prozessverweis lösen auf. Prüft: Struktur gültig, Zitate wörtlich, Verweise lösen auf. Zurück zu «Fragen formulieren», wenn Fehler im Datensatz.
 7. **Auswahl** (Herausgeber): Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption.
 
@@ -241,7 +241,7 @@ Zum Weiterdenken anregen, ohne die Antwort vorwegzunehmen, und zeigen, wie der T
 2. **Wie man es gelesen hat** (Bearbeitende Instanz): Rezeption je Tradition (jüdische Auslegung, Kirchenväter, Liturgie, Kunst, Musik, Literatur, Reformation, heutige Forschung) mit Zeitraum, in eigenen Worten. Stimmen nebeneinander, keine wird als richtig gewertet; problematische Wirkungen (z. B. judenfeindliche Lesarten) benennen. Quellen nur, wo sicher; sonst ohne Stellenangabe und als ungeprüft gekennzeichnet.
 3. **Quellen nachschlagen** (Weitere Instanz (prüft)): Eine weitere Instanz schlägt die genannten Quellen in frei zugänglichen Ausgaben nach (docs/QUELLENPRUEFUNG.md): bestätigt, berichtigt, teilweise oder nicht prüfbar. Bis dahin zeigt die App «noch nicht nachgeschlagen». Prüft: Quelle sagt, was der Eintrag behauptet, Zeitraum und Tradition stimmen. Zurück zu «Wie man es gelesen hat», wenn Angabe falsch oder nicht belegt.
 4. **Gegen den Text prüfen** (Weitere Instanz (prüft)): Eine weitere Instanz prüft Fragen und Rezeption gegen den Text: Ist die Frage am Text belegt und wirklich offen? Wird keine Deutung als Tatsache ausgegeben? Ist der Hintergrundsatz richtig? Prüft: Frage offen und belegt, keine versteckte Deutung, Rezeption richtig zugeordnet. Zurück zu «Fragen formulieren», wenn Frage suggestiv, unbelegt oder schief.
-5. **Mundart und weitere Sprachen** (Bearbeitende Instanz): Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züridüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet.
+5. **Mundart und weitere Sprachen** (Bearbeitende Instanz): Fragen und Rezeption als Lokalisierung mit Fingerabdruck (Züritüütsch und weitere); muttersprachliche Prüfung wird nicht behauptet.
 6. **Validator** (Werkzeug (feste Prüfung)): ID, Bezug auf Texteinheit oder Zusammenfassung der Ebene, Frage endet mit «?», Tradition und Gesichertheit gültig, Quellenprüfung vollständig, Stellenmarken und Prozessverweis lösen auf. Prüft: Struktur gültig, Verweise lösen auf. Zurück zu «Fragen formulieren», wenn Fehler im Datensatz.
 7. **Auswahl** (Herausgeber): Der Herausgeber entscheidet über die Auswahl der Traditionen und über heikle Rezeption.
 
@@ -372,7 +372,7 @@ Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Rege
 1. **Szenenplan** (Bearbeitende Instanz): Je Bildfeld: Malauftrag (Personen links/rechts nach Reihenfolge der Reden, Gefühle über Körper und Geste), wörtliche Rede aus dem Lesetext, Belege B/R/I und Feldregeln (was der Text verlangt oder verbietet).
 2. **Form je Feld** (Bearbeitende Instanz): Aus dem Inhalt wird für jedes Feld die Form gewählt und begründet: gemalte Szene, wo der Text erzählt oder ein Geschehen schildert; sonst ein gezeichnetes Strukturbild (Spalten, Kette, Raster, Kurve, Spiegel, Reihe, Ebenen, Ringe).
 3. **Zitate und Band** (Werkzeug (feste Prüfung)): Jede Blase steht wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen. Prüft: Zitat wörtlich, Band lesbar. Zurück zu «Szenenplan», wenn Abweichung.
-4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züridüütsch.
+4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züritüütsch.
 5. **Bilder aus dem Bildlexikon** (Werkzeug (feste Prüfung)): Glieder eines Strukturbilds nennen Einträge des Bildlexikons (Person, Gruppe, Ort, Gegenstand, Zeichen). Gezeigt wird das gemalte und geprüfte Einzelbild des Eintrags (Schritte p1–p5), dasselbe wie im Bildlexikon; Gott als goldener Strahlenkranz mit dem Gottesnamen, gezeichnet, nie als Mensch. Fehlt das Bild noch, bleibt das Glied ohne Bild.
 6. **Malen** (Bildmodell): Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz und Figurenblatt.
 7. **Blind beschreiben** (Weitere Instanz (prüft)): Eine weitere Instanz sieht nur das Bild: Personen, Gegenstände, Handlung, vermutete Bibelstelle.
@@ -394,7 +394,7 @@ Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Rege
 1. **Szenenplan** (Bearbeitende Instanz): Je Bildfeld: Malauftrag (Personen links/rechts nach Reihenfolge der Reden, Gefühle über Körper und Geste), wörtliche Rede aus dem Lesetext, Belege B/R/I und Feldregeln (was der Text verlangt oder verbietet).
 2. **Form je Feld** (Bearbeitende Instanz): Aus dem Inhalt wird für jedes Feld die Form gewählt und begründet: gemalte Szene, wo der Text erzählt oder ein Geschehen schildert; sonst ein gezeichnetes Strukturbild (Spalten, Kette, Raster, Kurve, Spiegel, Reihe, Ebenen, Ringe).
 3. **Zitate und Band** (Werkzeug (feste Prüfung)): Jede Blase steht wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen. Prüft: Zitat wörtlich, Band lesbar. Zurück zu «Szenenplan», wenn Abweichung.
-4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züridüütsch.
+4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züritüütsch.
 5. **Malen** (Bildmodell): Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz und Figurenblatt.
 6. **Blind beschreiben** (Weitere Instanz (prüft)): Eine weitere Instanz sieht nur das Bild: Personen, Gegenstände, Handlung, vermutete Bibelstelle.
 7. **Regeln prüfen** (Weitere Instanz (prüft)): Dieselbe Instanz beantwortet jede Regel einzeln: allgemeine Regeln, Figurenregeln, Feldregeln; zählt verlangte Dinge. Verfehlte Pflichtregeln fragt eine zweite, genauere Instanz noch zweimal; die Mehrheit der drei Antworten gilt. Prüft: alle Pflichtregeln erfüllt.
@@ -415,7 +415,7 @@ Gemalte Szenen nach dem Styleguide «Visuelle Bibel», geprüft nach festen Rege
 1. **Szenenplan** (Bearbeitende Instanz): Je Bildfeld: Malauftrag (Personen links/rechts nach Reihenfolge der Reden, Gefühle über Körper und Geste), wörtliche Rede aus dem Lesetext, Belege B/R/I und Feldregeln (was der Text verlangt oder verbietet).
 2. **Form je Feld** (Bearbeitende Instanz): Aus dem Inhalt wird für jedes Feld die Form gewählt und begründet: gemalte Szene, wo der Text erzählt oder ein Geschehen schildert; sonst ein gezeichnetes Strukturbild (Spalten, Kette, Raster, Kurve, Spiegel, Reihe, Ebenen, Ringe).
 3. **Zitate und Band** (Werkzeug (feste Prüfung)): Jede Blase steht wörtlich im Vers (… für Kürzungen); Stichwortband höchstens 54 Zeichen. Prüft: Zitat wörtlich, Band lesbar. Zurück zu «Szenenplan», wenn Abweichung.
-4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züridüütsch.
+4. **Strukturbild zeichnen** (Werkzeug (feste Prüfung)): Strukturfelder zeichnet das Werkzeug aus den Elementen des Szenenplans, zweisprachig, im Format der gemalten Kacheln. Prüft: Beschriftungen passen, alle Stellen gültig, jede Beschriftung auch auf Züritüütsch.
 5. **Malen** (Bildmodell): Das Bildmodell malt zwei Varianten nach Malauftrag, Stilreferenz und Figurenblatt.
 6. **Blind beschreiben** (Weitere Instanz (prüft)): Eine weitere Instanz sieht nur das Bild: Personen, Gegenstände, Handlung, vermutete Bibelstelle.
 7. **Regeln prüfen** (Weitere Instanz (prüft)): Dieselbe Instanz beantwortet jede Regel einzeln: allgemeine Regeln, Figurenregeln, Feldregeln; zählt verlangte Dinge. Verfehlte Pflichtregeln fragt eine zweite, genauere Instanz noch zweimal; die Mehrheit der drei Antworten gilt. Prüft: alle Pflichtregeln erfüllt.

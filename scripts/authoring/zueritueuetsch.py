@@ -1,6 +1,6 @@
-"""Autorenwerkzeug: Züridüütsch-Fassung (Mundart) für die ausgearbeiteten Stellen, übersetzt aus dem Griechischen.
+"""Autorenwerkzeug: Züritüütsch-Fassung (Mundart) für die ausgearbeiteten Stellen, übersetzt aus dem Griechischen.
 
-Aufruf: python3 scripts/authoring/zueridueuetsch.py
+Aufruf: python3 scripts/authoring/zueritueuetsch.py
 
 Erzeugt die Übersetzungen TRANS-…-GSW-ZH-WORKING für Mt 6,5–15, Lk 11,1–4 und Mk 3,20–35 (eine Datei je
 Abschnitt), die Wortzuordnungen für Mt 6,9–13 und Lk 11,2–4 sowie den Zielkontext CTX-CH-ZH-GSW-2026.
@@ -41,11 +41,11 @@ def w(folder, rec):
 
 w("contexts", {"id": "CTX-CH-ZH-GSW-2026", "type": "context", "status": "draft", "tags": ["TAG-CULTURAL-TRANSFER"],
                "period": {"from": 2026}, "country": "CH", "region": "Zürich", "language_context": [LANG],
-               "audience": "Züridüütsch sprechende Leserinnen und Leser heute",
+               "audience": "Züritüütsch sprechende Leserinnen und Leser heute",
                "note_de": "Zielkontext der Mundart-Schicht: Zürichdeutsch als gesprochene Alltagssprache; Bibeltext in Mundart ist ungewohnt und wirkt direkter als Hochdeutsch."})
 
 COMMON = {
-    "type": "translation", "status": "draft", "language": LANG, "language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch",
+    "type": "translation", "status": "draft", "language": LANG, "language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch",
     "translation_kind": "literal_original_working", "target_context": "CTX-CH-ZH-GSW-2026",
     "orthography_de": "Dieth-Schreibung (Schwyzertütschi Dialäktschrift, 2. Aufl. 1986), lautnah: lange Vokale doppelt (Broot, Riich), ä für offenes e.",
     "register_de": "Nah am griechischen Wortlaut, aber so, wie man es sagt: Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
@@ -289,8 +289,8 @@ for tid, (title, summary) in TU_GSW.items():
     rec.setdefault("summary_by_language", {})[LANG] = summary
     rec["by_language_authorship_de"] = AUTH
     log = rec.setdefault("revision_log", [])
-    if not any(x.get("change_de", "").startswith("Züridüütsch") for x in log):
-        log.append({"date": DATE, "change_de": "Züridüütsch-Titel und -Zusammenfassung ergänzt (title_by_language, summary_by_language); hochdeutsche Felder unverändert", "reason_de": "Mundart-Schicht in der App"})
+    if not any(x.get("change_de", "").startswith("Züritüütsch") for x in log):
+        log.append({"date": DATE, "change_de": "Züritüütsch-Titel und -Zusammenfassung ergänzt (title_by_language, summary_by_language); hochdeutsche Felder unverändert", "reason_de": "Mundart-Schicht in der App"})
     p.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     written.append(tid + " (Titel/Zusammenfassung)")
-print(f"PASS: {len(written)} Datensätze geschrieben (Züridüütsch)")
+print(f"PASS: {len(written)} Datensätze geschrieben (Züritüütsch)")

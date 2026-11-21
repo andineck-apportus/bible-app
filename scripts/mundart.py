@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prüft Züridüütsch-Texte gegen die Regeln in docs/ZUERIDUEUETSCH.md.
+"""Prüft Züritüütsch-Texte gegen die Regeln in docs/ZUERITUEUETSCH.md.
 
 Maschinell prüfbar sind Sonderzeichen der Dieth-Schreibung (è, ò, ù, ì; Umschriften wie ā oder ô bleiben erlaubt), die Wortliste (abgelöste Form -> gültige Form) und einige Muster (hochdeutsches
 Präteritum, «um z», Apostroph, Genitiv). Wortwahl und Satzbau prüft eine getrennte Instanz gegen das Dokument.
@@ -19,7 +19,7 @@ from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Abgelöste Form -> gültige Form, je mit Regel (Abschnitt in docs/ZUERIDUEUETSCH.md). Kleinschreibung; Gross am
+# Abgelöste Form -> gültige Form, je mit Regel (Abschnitt in docs/ZUERITUEUETSCH.md). Kleinschreibung; Gross am
 # Satzanfang wird mitgeprüft.
 WORTLISTE = {
     # 1.3 Dehnungs-h wie im Hochdeutschen
@@ -82,14 +82,15 @@ _ZIEL_R3 = {"läär": "leer", "lääre": "leere", "lääri": "leeri", "lääres"
             "dörfid": "dörfed", "seigid": "seiged"}
 _ERGAENZT["Runde 4"] = ("zügnis zügnisse ellei det gförchtet förchte förcht förchted verriisse umchert umchere umchered "
                        "umgchert chräie erniedriget erniedrige aagchündt stärn stärne eues voruusgseit voruussag "
-                       "voruussetze voruusgsetzt chilelich chilchlich straaf")
+                       "voruussetze voruusgsetzt chilelich chilchlich straaf düütsch düütschi düütsche züridüütsch")
 _ZIEL_R4 = {"zügnis": "züügnis", "zügnisse": "züügnisse", "ellei": "elei", "det": "dört", "gförchtet": "gfürchtet",
             "förchte": "fürchte", "förcht": "fürcht", "förchted": "fürchted", "verriisse": "verrisse",
             "umchert": "umchehrt", "umchere": "umchehre", "umchered": "umchehred", "umgchert": "umgchehrt",
             "chräie": "chrähe", "erniedriget": "ernidriget", "erniedrige": "ernidrige", "aagchündt": "aagchündet",
             "stärn": "stern", "stärne": "sterne", "eues": "öies", "voruusgseit": "vorusgseit",
             "voruussag": "vorussag", "voruussetze": "vorussetze", "voruusgsetzt": "vorusgsetzt",
-            "chilelich": "chirchlich", "chilchlich": "chirchlich", "straaf": "straf"}
+            "chilelich": "chirchlich", "chilchlich": "chirchlich", "straaf": "straf",
+            "düütsch": "tüütsch", "düütschi": "tüütschi", "düütsche": "tüütsche", "züridüütsch": "züritüütsch"}
 _ZIEL = {
     "broot": "brot", "taag": "tag", "aabig": "abig", "raat": "rat", "schlaaf": "schlaf",
     "schlaafe": "schlafe", "lüüg": "lüg", "ee": "ehe", "vee": "veh", "befeel": "befehl", "befole": "befohle",
@@ -209,7 +210,7 @@ def _buch(name):
 
 
 def korpus():
-    """(Buch, Art, Stelle, Text) für alle Züridüütsch-Texte."""
+    """(Buch, Art, Stelle, Text) für alle Züritüütsch-Texte."""
     for f in sorted(glob.glob(os.path.join(ROOT, "data/translations/*GSW*.json"))):
         d = json.load(open(f, encoding="utf-8"))
         for ref, t in d.get("text_by_reference", {}).items():

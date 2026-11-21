@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Johannesevangelium Kapitel 15–21 – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen,
-Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Abgrenzung: Hintergrund zum ganzen Buch steht in BG-JHN-BOOK-0001/-0002 (Lieblingsjünger und Gemeinde, Kapitel 21 als
 möglicher Nachtrag, Wir-Form in [[JHN.21.24]], 𝔓52; Unterschiede zu den anderen Evangelien, Todestag vor dem Passa) und
@@ -256,7 +256,7 @@ INTERPRETATIONS = [
    "Rudolf Bultmann (Das Evangelium des Johannes, 1941) vermutete hinter den Paraklet-Worten eine ältere, eigenständige Gestalt, die der Evangelist mit dem Geist gleichsetzte; andere halten die Worte für von Anfang an auf den Geist bezogen."],
   [("grc", "παράκλητος", "Beistand; Fürsprecher; Tröster (wörtlich: der Herbeigerufene)"), ("grc", "ἐλέγχω", "überführen, aufdecken, zurechtweisen"), ("grc", "πνεῦμα τῆς ἀληθείας", "Geist der Wahrheit")],
   "De «Biistand» (παράκλητος) isch bim Johannes e Gstalt us de Sprach vom Gricht: Er staat de Jünger zur Siite, wänn d Wält gäge de Jesus und si verhandlet; er leit Züügnis über de Jesus ab ([[JHN.15.26]]) und «überfüert» d Wält ([[JHN.16.8-JHN.16.11]]). Glichziitig füert er d Gägewart vom Jesus wiiter, nachdem dä gange isch: Er lehrt und erinneret ([[JHN.14.26]]), leitet i di ganz Wahrheit und nimmt «vo däm, wo mir ghört» ([[JHN.16.13-JHN.16.14]]). Drum cha de Jesus säge, es seig guet für si, dass er gaat ([[JHN.16.7]]).",
-  "D Widergab «Biistand» isch e redaktionelli Entscheidig vo de Arbetsübersetzig; keis düütsche Wort deckt alli Siite ab. Was d Wält i [[JHN.16.8-JHN.16.11]] genau «überfüert» wird, isch offe (QUESTION-JHN-3002).",
+  "D Widergab «Biistand» isch e redaktionelli Entscheidig vo de Arbetsübersetzig; keis tüütsche Wort deckt alli Siite ab. Was d Wält i [[JHN.16.8-JHN.16.11]] genau «überfüert» wird, isch offe (QUESTION-JHN-3002).",
   ["De Luther hät «Tröster» übersetzt; defür spricht de Zämehang vo de Abschiidsrede, wo de Jesus d Jünger nöd als Waise wott zrugglaa ([[JHN.14.18]]) und iri Truur i Fröid wott wände ([[JHN.16.20-JHN.16.22]]). D Sprach vom Gricht wär dänn nu en Teil vom Bild.",
    "I [[1JN.2.1]] isch de Jesus sälber de παράκλητος, wo bim Vatter für d Sünder iistaat; drus wird «Fürsprächer» abgleitet. Bim Johannes 14–16 staat de Biistand aber de Jünger gägenüber de Wält bi, nöd vor Gott.",
    "De Rudolf Bultmann (Das Evangelium des Johannes, 1941) hät hinder de Paraklet-Wört e älteri, eigeständigi Gstalt vermuetet, wo de Evangelischt mit em Geischt gliichgsetzt heb; anderi halted d Wört für vo Aafang aa uf de Geischt bezoge."],
@@ -820,7 +820,7 @@ def run():
     _pruefe_fachwoerter()
     _study.DATE = "2026-10-14"
     _study.AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; "
+    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; "
                        "Mundart noch nicht muttersprachlich geprüft.")
     # Bestehenden Kontext unverändert weitergeben: _lib.write erkennt Gleichheit und schreibt nichts.
     context = json.loads((D / "contexts" / f"{CTX_READERS}.json").read_text(encoding="utf-8"))

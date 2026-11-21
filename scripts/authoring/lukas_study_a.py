@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Lukasevangelium Kapitel 1–12 – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen,
-Beziehungen, Hintergrund zu Abschnitten und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Beziehungen, Hintergrund zu Abschnitten und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Nicht hier geschrieben (bestehen schon und bleiben unverändert, werden höchstens verwiesen):
 - die Vaterunser-Datensätze zu [[LUK.11.1-LUK.11.4]] aus scripts/authoring/vaterunser.py (FIND-LP-…, INT-LP-…,
@@ -1036,7 +1036,7 @@ def run():
     _pruefe_mundart_und_ids()
     _study.DATE = DATUM
     _study.AUTH = f"KI-Entwurf (Claude) vom {DATUM} auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-    _study.AUTH_GSW = (f"KI-Entwurf (Claude) vom {DATUM}; aus dem Hochdeutschen in Züridüütsch gefasst; "
+    _study.AUTH_GSW = (f"KI-Entwurf (Claude) vom {DATUM}; aus dem Hochdeutschen in Züritüütsch gefasst; "
                        "Mundart noch nicht muttersprachlich geprüft.")
     # Bestehenden Kontext unverändert weitergeben: _lib.write erkennt Gleichheit und schreibt nichts.
     context = json.loads((D / "contexts" / f"{READERS}.json").read_text(encoding="utf-8"))

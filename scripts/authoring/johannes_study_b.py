@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Johannesevangelium Kapitel 8–14 – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen,
-Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Abgrenzung: Hintergrund zum ganzen Buch steht in BG-JHN-BOOK-0001/-0002 (Lieblingsjünger und Gemeinde; Verhältnis zu
 den anderen Evangelien) und wird hier nicht wiederholt. Nummernbereich dieser Datei: 2001–2999. Der Kontext
@@ -365,7 +365,7 @@ INTERPRETATIONS = [
    "Montanus beanspruchte im 2. Jahrhundert, der verheissene Paraklet rede durch ihn; die Mehrheit der Kirche lehnte das ab. Woran man das Wirken des Geistes erkennt, beantwortet [[JHN.14.26]] mit dem Bezug auf Jesu eigene Worte; was darüber hinausgeht, ist umstritten (vgl. [[JHN.16.12-JHN.16.13]])."],
   [("grc", "παράκλητος", "Beistand, Fürsprecher, Helfer"), ("grc", "ὀρφανός", "Waise"), ("grc", "πνεῦμα τῆς ἀληθείας", "Geist der Wahrheit")],
   "Mit em «andere Biistand» verheisst de Jesus de Jünger, dass si nach sim Wäggaa nöd verlaa sind («nöd als Waise», [[JHN.14.18]]): De Geischt vo de Wahrheit setzt furt, was de Jesus bi ine gsii isch, lehrt si und erinneret si a sini Wört ([[JHN.14.26]]). «En andere» setzt voruus, dass de Jesus sälber de erscht Biistand gsii isch (vgl. [[1JN.2.1]]).",
-  "παράκλητος hät kei gnaui düütschi Entsprächig; s Wort bezeichnet dä, wo me häregrüeft hät und wo eim biistaat, oft vor Gricht. «Biistand» isch e Wahl vo de Übersetzig (Alternative: Fürspräche, Hälfer, Tröschter).",
+  "παράκλητος hät kei gnaui tüütschi Entsprächig; s Wort bezeichnet dä, wo me häregrüeft hät und wo eim biistaat, oft vor Gricht. «Biistand» isch e Wahl vo de Übersetzig (Alternative: Fürspräche, Hälfer, Tröschter).",
   ["Em Luther sin «Tröster» betont di tröschtend Siite; si isch nöd d Grundbedüütig vom Wort, im Kapitel 14 aber naheliegend, wil de Jesus d Angscht vor em Abschiid aaspricht ([[JHN.14.1]]; [[JHN.14.27]]).",
    "I [[JHN.16.8-JHN.16.11]] hät de Biistand gägenüber de Wält e grichtlichi Rolle (überfüere); mängi haltet drum «Aawalt» oder «Fürspräche» für di besser Widergab.",
    "De Montanus hät im 2. Jahrhundert beaasprucht, de verheisse Paraklet red dur ihn; di Mehrheit vo de Chile hät das abglehnt. Wora me s Wirke vom Geischt erchännt, beantwortet [[JHN.14.26]] mit em Bezug uf d eigete Wort vom Jesus; was drüber use gaat, isch umstritte (vgl. [[JHN.16.12-JHN.16.13]])."],
@@ -654,7 +654,7 @@ def run():
     import _study
     _study.DATE = "2026-10-14"
     _study.AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; "
+    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; "
                        "Mundart noch nicht muttersprachlich geprüft.")
     # Bestehenden Kontext unverändert weitergeben: _lib.write erkennt Gleichheit und schreibt nichts.
     context = json.loads((D / "contexts" / f"{CTX_READERS}.json").read_text(encoding="utf-8"))

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Jona – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen, Beziehungen, Hintergrund
-(Abschnitte), Kapitel-Zusammenfassungen, Kontext und Studie; jeweils mit Züridüütsch-Lokalisierung.
+(Abschnitte), Kapitel-Zusammenfassungen, Kontext und Studie; jeweils mit Züritüütsch-Lokalisierung.
 Der Buchhintergrund BG-JON-BOOK-0001 besteht schon (scripts/authoring/hintergrund_buecher.py) und wird hier nicht geschrieben.
 Die Texteinheiten schreibt scripts/authoring/jona_text.py; dieses Werkzeug hängt an die kleinste vorhandene Einheit an.
 

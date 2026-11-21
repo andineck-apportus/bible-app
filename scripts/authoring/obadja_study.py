@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Obadja – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen, Beziehungen, Hintergrund
-(Abschnitte und Buch), Kapitel-Zusammenfassung, Kontext und Studie; jeweils mit Züridüütsch-Lokalisierung.
+(Abschnitte und Buch), Kapitel-Zusammenfassung, Kontext und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Aufruf: python3 scripts/authoring/obadja_study.py
 KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt.

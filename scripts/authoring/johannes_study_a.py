@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Johannesevangelium Kapitel 1–7 (einschliesslich [[JHN.7.53]]) – Befunde, Deutungen, Grundsätze,
 Anwendungen, offene Fragen, Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit
-Züridüütsch-Lokalisierung.
+Züritüütsch-Lokalisierung.
 
 Abgrenzung: Hintergrund zum ganzen Buch steht in BG-JHN-BOOK-0001 (Lieblingsjünger, Gemeinde, Datierung, 𝔓52) und
 BG-JHN-BOOK-0002 (Verhältnis zu den anderen Evangelien, drei Passafeste, Todestag) und wird hier nicht wiederholt.
@@ -608,7 +608,7 @@ def run():
     import _study
     _study.DATE = "2026-10-14"
     _study.AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; "
+    _study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; "
                        "Mundart noch nicht muttersprachlich geprüft.")
     # Bestehenden Kontext unverändert weitergeben: _lib.write erkennt Gleichheit und schreibt nichts.
     context = json.loads((D / "contexts" / f"{CTX_READERS}.json").read_text(encoding="utf-8"))

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Autorenwerkzeug: Obadja – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem hebräischen Text
+"""Autorenwerkzeug: Obadja – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem hebräischen Text
 (Westminster Leningrad Codex), Übersetzungsentscheidungen und vollständige Wortzuordnung je Morphem.
 
 Aufruf: python3 scripts/authoring/obadja_text.py
@@ -17,7 +17,7 @@ from _lib import D, alignment_entries, load_tokens, localize, write  # noqa: E40
 DATE = "2026-10-13"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "hebräischen Text (WLC) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "hebräischen Text (WLC) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-OBADIAH"]
 OBJ = "Objektzeichen אֶת, im Deutschen nicht wiedergegeben"
@@ -99,7 +99,7 @@ DEC_DE = [
 ]
 DEC_GSW = [
  ("OBA.1.1", "JHWH", "interpretive", "יְהוִה", None, ["de HERR", "de Ewig", "Jahwe"],
-  "De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili düütschi Bible schriibed «der HERR». Da staat de Name i sine vier Konsonante, damit me gseht, dass im Hebräische en Name staat."),
+  "De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili tüütschi Bible schriibed «der HERR». Da staat de Name i sine vier Konsonante, damit me gseht, dass im Hebräische en Name staat."),
  ("OBA.1.1", "D Schauig", "literal", "חֲזוֹן", None, ["D Vision"], "חָזוֹן isch das, was en Prophet «gseht»; als Buechüberschrift au i [[ISA.1.1]] und [[NAM.1.1]]."),
  ("OBA.1.1", "gäge Edom", "adapted", "עָלֶיהָ", "gäge si", None, "Wörtlich «gäge si»: Edom als Land isch im Hebräische wiiblich."),
  ("OBA.1.2", "ich han", "interpretive", "נְתַתִּיךָ", "ich han dich gää", ["mache ich dich", "wird ich dich mache"],
@@ -121,7 +121,7 @@ DEC_GSW = [
   "Wo Sefarad gläge isch, weiss me nöd; oft dänkt me a Sardes z Chliiasie. Sit de Spätantike (Targum) hät me de Name uf Spanie bezoge."),
  ("OBA.1.21", "Retter", "interpretive", "מוֹשִׁעִים", None, ["Grettete"], "D Septuaginta liest «Grettete»."),
  ("OBA.1.6", "händ si", "adapted", "נֶחְפְּשׂוּ", "isch … dursuecht worde", None,
-  "Im Hebräische Passiv (Nifal) ohni gnännte Täter; gmeint sind d Plünderer vo [[OBA.1.5]]. D Mundart zieht s Aktiv vor (docs/ZUERIDUEUETSCH.md)."),
+  "Im Hebräische Passiv (Nifal) ohni gnännte Täter; gmeint sind d Plünderer vo [[OBA.1.5]]. D Mundart zieht s Aktiv vor (docs/ZUERITUEUETSCH.md)."),
 ]
 
 UNITS = [
@@ -160,7 +160,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     ts_id, toks = load_tokens(D / "tokens" / "WLC-OBA-001.json")
     refs_c = [f"OBA.1.{v}" for v in range(1, 22)]
     for lang, markup, decs, code in (("de", DE, DEC_DE, "DE"), ("gsw", GSW, DEC_GSW, "GSW-ZH")):
@@ -178,8 +178,8 @@ def run():
         rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": "OBA.1.1-OBA.1.21",
                "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
         if lang == "gsw":
-            rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                        "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+            rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                        "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                         "register_de": "Nah am hebräischen Wortlaut, aber so, wie man es heute in Zürich sagt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                         "control_translation": "TRANS-OBA-001-001-021-DE-WORKING",
                         "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})
@@ -187,7 +187,7 @@ def run():
                                    if lang == "de" else "Direkt aus dem hebräischen Text (WLC) übersetzt, mit Wortzuordnung zu den Morphemen; die hochdeutsche Arbeitsübersetzung dient nur als Kontrolle. Nicht aus einer veröffentlichten Mundart-Bibel übernommen."),
                     "based_on_edition": "ED-WLC", "based_on_tokens": ts_id, "text_by_reference": texts,
                     "translation_notes": (["Textkritische Varianten (Qumran, Septuaginta, mittelalterliche Handschriften) sind für Obadja noch nicht als freie Daten erfasst; schwierige Stellen sind in den Entscheidungen vermerkt."]
-                                          if lang == "de" else ["Textkritischi Variante (Qumran, Septuaginta, mittelalterlichi Handschrifte) sind für de Obadja no nöd als freii Date erfasst; schwierigi Stelle sind i de Entscheidige vermerkt.", "Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."]),
+                                          if lang == "de" else ["Textkritischi Variante (Qumran, Septuaginta, mittelalterlichi Handschrifte) sind für de Obadja no nöd als freii Date erfasst; schwierigi Stelle sind i de Entscheidige vermerkt.", "Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."]),
                     "authorship_de": AUTH if lang == "de" else AUTH_GSW, "knowledge": {"asserted_at": DATE, "supersedes": None},
                     "decisions": dec,
                     "decisions_note_de": "Übersetzungsentscheidungen: wörtlich (literal), sprachlich angepasst (adapted), Deutungsentscheidung (interpretive) oder der vertrauten Wiedergabe folgend (traditional). " + (AUTH if lang == "de" else AUTH_GSW)})

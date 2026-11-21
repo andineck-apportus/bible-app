@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 8–9 (Heilungen, Nachfolge, Sturm, Gadarener, Gelähmter, Matthäus, Fastenfrage, Tochter des
-Vorstehers, Blinde, stummer Besessener, Ernte) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem
+Vorstehers, Blinde, stummer Besessener, Ernte) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem
 SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_08_09.py
@@ -30,7 +30,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((8, 34), (9, 38))
@@ -358,7 +358,7 @@ DEC_GSW = [
  ("MAT.8.10", "Glaube", "literal", "πίστιν", None, ["Vertroue"],
   "πίστις «Glaube», πιστεύω «glaube», dur s ganz Matthäusevangelium."),
  ("MAT.8.11", "Himmelriich", "traditional", "βασιλείᾳ τῶν οὐρανῶν", "Riich vo de Himmel", None,
-  "Gmeinsami Matthäus-Widergab «s Himmelriich» (docs/ZUERIDUEUETSCH.md); wörtli «s Riich vo de Himmel»."),
+  "Gmeinsami Matthäus-Widergab «s Himmelriich» (docs/ZUERITUEUETSCH.md); wörtli «s Riich vo de Himmel»."),
  ("MAT.8.11", "am Tisch ligge", "literal", "ἀνακλιθήσονται", None, ["am Tisch hocke"],
   "Bim Feschtmähli isch me uf Polschter am Tisch gläge; wie bim Markus «am Tisch gläge»."),
  ("MAT.8.12", "s Hüüle und s Zändchnirsche", "adapted", "ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων", "s Weine und s Chnirsche vo de Zäh", ["s Briegge und s Zändchnirsche"],
@@ -742,7 +742,7 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig. Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
   "CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
  ("Gmeinsami Matthäus-Wiedergabe: «s Himmelriich», «de Mänschesohn», «Amen, ich säge öi», «lueg» (ἰδού), «grad» "
@@ -754,7 +754,7 @@ NOTES_GSW = [
   "(«d Herde vo de Säu»); «damit» (wie i de gmeinsame Matthäus-Formle) statt «damit»; Schriibig «Himmel» wie im Unservatter."),
  ("Text: D Übersetzig folgt de SBLGNT-Token. Im SBLGNT fählt i Kapitel 8–9 kei Vers; [[MAT.9.34]] fählt nach de "
   "CNTR-Transkription i 05, de Apparat hät aber kei Variante."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv; «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de "
   "Urtext bruucht (göttlichs Passiv) oder kei Täter nännt; Aktiv mit «me», wo s natürlicher isch."),
 ]
@@ -775,7 +775,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -816,8 +816,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

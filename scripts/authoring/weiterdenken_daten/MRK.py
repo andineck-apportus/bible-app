@@ -3,7 +3,7 @@ sowie «Wie man es gelesen hat». KI-Entwürfe ohne fachliche Prüfung; Prozess 
 in frei zugänglichen Ausgaben nachgeschlagen (source_check, docs/QUELLENPRUEFUNG.md); keine fachliche Prüfung.
 
 Fragen: je Abschnitt zwei bis drei, je Kapitel eine bis zwei (Subjekt SUM-CH-…), zum Buch drei (SUM-BOOK-MRK). Die erste
-Frage je Einheit ist die Türfrage mit note_de (ein Satz mit Stellenmarke). Züridüütsch nach der Mundart-Schreibung in
+Frage je Einheit ist die Türfrage mit note_de (ein Satz mit Stellenmarke). Züritüütsch nach der Mundart-Schreibung in
 scripts/authoring/lukas_einheitlich.py; nicht muttersprachlich geprüft."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Autorenwerkzeug: Jona – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem hebräischen Text
+"""Autorenwerkzeug: Jona – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem hebräischen Text
 (Westminster Leningrad Codex), Übersetzungsentscheidungen und vollständige Wortzuordnung je Morphem.
 
 Aufruf: python3 scripts/authoring/jona_text.py
@@ -20,7 +20,7 @@ from _lib import D, alignment_entries, load_tokens, localize, write  # noqa: E40
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "hebräischen Text (WLC) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "hebräischen Text (WLC) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-JONAH"]
 OBJ = "Objektzeichen אֶת, im Deutschen nicht wiedergegeben"
@@ -28,7 +28,7 @@ OBJ_G = "Objektzeiche אֶת, nöd übersetzbar"
 Q = "Fragepartikel הֲ; im Deutschen durch die Satzstellung ausgedrückt"
 Q_G = "Fragewort הֲ; dur d Satzstellig usdruckt"
 LEMOR = "לֵאמֹר «um zu sagen» leitet die Rede ein; im Deutschen durch den Doppelpunkt wiedergegeben"
-LEMOR_G = "לֵאמֹר «zum säge» leitet d Red ii; im Düütsche dur de Doppelpunkt usdruckt"
+LEMOR_G = "לֵאמֹר «zum säge» leitet d Red ii; im Tüütsche dur de Doppelpunkt usdruckt"
 
 DE = {
  # ------------------------------------------------------------ Kapitel 1
@@ -142,7 +142,7 @@ GSW = {
 
 JHWH_DE = ("Der Gottesname wird im Judentum nicht ausgesprochen; gelesen wird «Adonai» (der Herr). Viele deutsche Bibeln schreiben "
            "«der HERR». Hier steht der Name in seinen vier Konsonanten, damit sichtbar bleibt, dass im Hebräischen ein Name steht.")
-JHWH_GSW = ("De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili düütschi Bible schriibed «der HERR». "
+JHWH_GSW = ("De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili tüütschi Bible schriibed «der HERR». "
             "Da staat de Name i sine vier Konsonante, damit me gseht, dass im Hebräische en Name staat.")
 RAA_DE = ("רָעָה ist ein Leitwort des Buches. Die Wurzel רעע «böse, schlecht sein» steht in Jona zehnmal (nach den Lemmata von MACULA: "
           "Nomen רָעָה 7×, Adjektiv רַע 2×, Verb רָעַע 1×; das gleich geschriebene רָעָה «weiden» in [[JON.3.7]] ist ein anderes Wort): "
@@ -154,7 +154,7 @@ RAA_GSW = ("רָעָה isch es Leitwort vom Buech. D Wurzle רעע «bös, schl�
            "Nomen רָעָה 7×, Adjektiv רַע 2×, Verb רָעַע 1×; s gliich gschribne רָעָה «weide» i [[JON.3.7]] isch es anders Wort): "
            "d «Bosheit» vo Ninive ([[JON.1.2]]), s «Unheil» vom Sturm ([[JON.1.7]], [[JON.1.8]]), de «bös» Wäg vo de Niniviter "
            "([[JON.3.8]], [[JON.3.10]]), s «Unheil», wo Gott aagchündet hät und won en röit ([[JON.3.10]], [[JON.4.2]]), de «Ärger» vom "
-           "Jona ([[JON.4.1]]) und sin «Unmuet» ([[JON.4.6]]). Im Düütsche bruucht s verschideni Wörter; im Hebräische verbindet s eine "
+           "Jona ([[JON.4.1]]) und sin «Unmuet» ([[JON.4.6]]). Im Tüütsche bruucht s verschideni Wörter; im Hebräische verbindet s eine "
            "Wort d Erzählig.")
 NIHAM_DE = ("נִחַם (Nifal) meint, dass jemand eine Absicht oder ein angekündigtes Urteil aus innerer Bewegung zurücknimmt. «Reuen» ist "
             "die traditionelle Wiedergabe; sie setzt bei Gott keine Schuld voraus. [[JER.18.8]] beschreibt genau diesen Fall: Kehrt ein Volk "
@@ -595,10 +595,10 @@ def notes_for(c, lang):
                  "Wissen und ist nicht an Daten geprüft. Für Jona markiert MACULA keine Ketiv/Qere-Formen."]
     else:
         notes = [AUTH_GSW + " D Übersetzig isch nöd vo Fachlüüt prüeft.",
-                 ("Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); "
+                 ("Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); "
                   "di früener Fassig staat im revision_log."),
                  "Verszellig: D Date folged de Navigationszellig (KJV). I de hebräische Zellig (WLC) faat s Kapitel 2 scho mit [[JON.1.17]] aa: "
-                 "hebräisch 2,1–11 isch da 1,17–2,10. D Tokens träged dört di hebräisch Stell i «source_reference». Düütschi Bible wie Luther 1912 "
+                 "hebräisch 2,1–11 isch da 1,17–2,10. D Tokens träged dört di hebräisch Stell i «source_reference». Tüütschi Bible wie Luther 1912 "
                  "und Elberfelder 1905 zelled wie s Hebräisch.",
                  "Us de Wüescht Juda sind Teil vom Jona i Zwölfprophete-Rolle erhalte (MurXII us em Wadi Murabbaat und 4QXIIa, 4QXIIf und 4QXIIg "
                  "us Qumran). Iri Transkription git s nu under ere nöd kommerzielle Lizänz; drum ghöred si nöd zum freie Datechärn. Nach eme "
@@ -624,7 +624,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     for c, last in CHAPTERS:
         ts_id, toks = load_tokens(D / "tokens" / f"WLC-JON-{c:03d}.json")
         refs_c = [f"JON.{c}.{v}" for v in range(1, last + 1)]
@@ -644,8 +644,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"JON.{c}.1-JON.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am hebräischen Wortlaut, aber so, wie man es heute in Zürich sagt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-JON-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

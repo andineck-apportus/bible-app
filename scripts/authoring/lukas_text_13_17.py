@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Lukas 13–17 (Ruf zur Umkehr, Sabbatheilungen, Gastmahl-Reden, Gleichnisse vom Verlorenen, vom
 Verwalter und vom reichen Mann, zehn Aussätzige, Kommen des Reiches) – Texteinheiten, Arbeitsübersetzungen
-(Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige
+(Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige
 Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/lukas_text_13_17.py
@@ -28,7 +28,7 @@ nicht muttersprachlich geprüft. Handschriftenangaben stammen aus der maschinell
 bzw. aus der CNTR-Transkription (Sekundärtranskription), nicht aus eigener Prüfung der Handschriften.
 
 Neuübersetzung der Mundart am 2026-11-21 (KI-Entwurf, Claude): Mundart-Schicht Vers für Vers neu aus dem SBLGNT nach
-docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt; Pilot Johannes 1–3). Die Mundart-Schreibung unten (Mehrheitsentscheide
+docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt; Pilot Johannes 1–3). Die Mundart-Schreibung unten (Mehrheitsentscheide
 vom 2026-10-26, z. B. «fäält», «zie», «ggässe») ist damit abgelöst; run() prüft mit scripts/mundart.py
 (lukas_einheitlich.pruefe_mundart). Hochdeutsch unverändert.
 
@@ -76,7 +76,7 @@ from lukas_einheitlich import (EGEN_DE, EGEN_GSW, EGEN_SKIP_DE, EGEN_SKIP_GSW, I
 DATE = "2026-10-26"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-26 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-LUKE"]
 CHAPTERS = ((13, 35), (14, 35), (15, 32), (16, 31), (17, 37))
@@ -880,8 +880,8 @@ NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("KI-Gegeläsig dur e getrennti KI-Instanz (Claude) am 2026-10-26: Vers für Vers gäge de SBLGNT, Wortzueornig i Stichprobe, Sprach, Zämefassige und Handschrifte-Aagabe; Korrekture im revision_log. Kei fachlichi und kei muettersprachlichi Prüefig."),
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Nöi übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Näme mit Artikel; Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv; «öis», «öi»; Künftigs meischtens im "
   "Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv)."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
@@ -916,7 +916,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-26; aus dem Hochdeutschen in Züridüütsch gefasst, am 2026-11-21 an docs/ZUERIDUEUETSCH.md und den neu übersetzten Text angepasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-26; aus dem Hochdeutschen in Züritüütsch gefasst, am 2026-11-21 an docs/ZUERITUEUETSCH.md und den neu übersetzten Text angepasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-luk").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -960,8 +960,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"LUK.{c}.1-LUK.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-LUK-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

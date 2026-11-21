@@ -86,7 +86,7 @@ Versblatt). «Vertiefen» ersetzt die früheren Knöpfe «Verstehen» und «Dama
 - **Blatt** mit Pfad oben (z. B. «Lukas 15 › 15,11–32»; jede Stufe öffnet das Blatt der Ebene darüber, der Reiter bleibt),
   Schliessen, Titel und zwei Reitern «Verstehen» | «Weiterdenken» (echte Reiter mit `role=tab`, Pfeiltasten, Fokus beim
   Öffnen auf dem Titel). Zeilen sind aufklappbar (`details`), mit einer Zeile Anriss; Touch-Ziele mindestens 44 px.
-- **Verstehen beim Abschnitt:** ein Satz Kernaussage (`gist_de` der Kernanalyse im gewählten Lesetext, z. B. Züridüütsch,
+- **Verstehen beim Abschnitt:** ein Satz Kernaussage (`gist_de` der Kernanalyse im gewählten Lesetext, z. B. Züritüütsch,
   sonst Hochdeutsch bzw. gekürzt aus `core_de`); «Was auffällt» mit bis zu drei kurzen nummerierten Punkten (die ersten Sätze
   der Befunde, gekürzt: Klammern, die nur Stellen enthalten, fallen weg, Stellen mitten im Satz bleiben als kurze Stelle,
   Kennungen wie «FIND-…» fallen weg; sonst die tragenden Momente), «Mehr dazu ›» klappt die vollen Befunde und die tragenden Momente auf; darunter die Zeilen «Umfeld

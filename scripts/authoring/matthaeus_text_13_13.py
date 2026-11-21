@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 13 (die Gleichnisrede und die Ablehnung in der Heimat) – Texteinheiten, Arbeitsübersetzungen
-(Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
+(Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_13_13.py
 
@@ -32,7 +32,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). "
             "Prüfung der Mundart durch eine muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((13, 58),)
@@ -341,17 +341,17 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
- ('MAT.13.1', 'See', 'adapted', 'θάλασσαν', 'Meer', ['Meer'], 'De Matthäus nännt de See Gennesaret wie de Markus θάλασσα («Meer»); uf Düütsch isch es en See. Gliich i [[MAT.13.47]].'),
- ('MAT.13.2', 'vil Lüüt', 'adapted', 'ὄχλοι πολλοί', 'vil Mängine', ['e grossi Mängi'], 'ὄχλος im Singular «Mängi», im Plural «Lüüt» (au [[MAT.13.34]], [[MAT.13.36]]), wil «Mängine» im Züridüütsch frömd tönt.'),
+ ('MAT.13.1', 'See', 'adapted', 'θάλασσαν', 'Meer', ['Meer'], 'De Matthäus nännt de See Gennesaret wie de Markus θάλασσα («Meer»); uf Tüütsch isch es en See. Gliich i [[MAT.13.47]].'),
+ ('MAT.13.2', 'vil Lüüt', 'adapted', 'ὄχλοι πολλοί', 'vil Mängine', ['e grossi Mängi'], 'ὄχλος im Singular «Mängi», im Plural «Lüüt» (au [[MAT.13.34]], [[MAT.13.36]]), wil «Mängine» im Züritüütsch frömd tönt.'),
  ('MAT.13.3', 'Gliichnis', 'traditional', 'παραβολαῖς', None, ['Bildrede', 'Vergliich'], 'παραβολή isch en Vergliich, es Bildwort, au es Rätselwort. Im ganze Kapitel «Gliichnis» wie bim Markus.'),
  ('MAT.13.3', 'Lueg', 'traditional', 'Ἰδοὺ', 'Lueg', ['Lueged'], 'ἰδού isch e feschti Form zum Ufmerksammache; im ganze Evangelium «lueg», au wänn mehreri aagredt sind.'),
  ('MAT.13.5', 'grad', 'literal', 'εὐθέως', None, ['sofort'], 'Einheitlich «grad» für εὐθέως und εὐθύς im Matthäusevangelium.'),
- ('MAT.13.9', 'söll lose', 'adapted', 'ἀκουέτω', 'dä söll ghöre', None, '«Lose» heisst im Züridüütsch «zuelose, ufpasse»; das trifft de Wäckruef. Gliich i [[MAT.13.43]]; s Hiiwiiswort «dä» bruucht d Mundart da nöd.'),
+ ('MAT.13.9', 'söll lose', 'adapted', 'ἀκουέτω', 'dä söll ghöre', None, '«Lose» heisst im Züritüütsch «zuelose, ufpasse»; das trifft de Wäckruef. Gliich i [[MAT.13.43]]; s Hiiwiiswort «dä» bruucht d Mundart da nöd.'),
  ('MAT.13.10', 'sind härechoo', 'literal', 'προσελθόντες', None, ['sind zu ihm choo'], 'προσέρχομαι isch es Lieblingswort vom Matthäus; gmeinsami Matthäus-Widergab «härechoo» (au [[MAT.13.27]], [[MAT.13.36]]).'),
  ('MAT.13.11', 'vom Himmelriich', 'traditional', 'τῆς βασιλείας τῶν οὐρανῶν', None, ['vom Himmelriich', 'vo de Herrschaft vo de Himmel'], 'De Matthäus seit fascht immer «Himmelriich», wo de Markus und de Lukas «Riich vo Gott» händ; nach verbreiteter Düütig umschriibt «Himmel» de Gottesname. Einheitlich im ganze Evangelium.'),
  ('MAT.13.11', 'd Gheimnis', 'interpretive', 'τὰ μυστήρια', None, ['d Myschterie'], 'μυστήριον isch nöd e Gheimlehr, sondern öppis Verborgnigs, wo Gott sälber offeleit. De Matthäus hät de Plural.'),
  ('MAT.13.13', 'wil', 'interpretive', 'ὅτι', None, ['dass'], 'De Matthäus schriibt ὅτι («wil»), wo [[MRK.4.12]] ἵνα («damit») hät: D Gliichnis sind da Folg vom Nöd-Verstaa, nöd de Zwäck. Öb de Matthäus d Härti vom Markus mildere wott, isch umstritte.'),
- ('MAT.13.13', 'mit offne Auge', 'adapted', 'βλέποντες', 'luegend', ['obwohl si lueged'], 'S Partizip «luegend» isch im Züridüütsch nöd gläufig; «mit offne Auge» und «mit offne Ohre» säged s glich (wie bim Markus).'),
+ ('MAT.13.13', 'mit offne Auge', 'adapted', 'βλέποντες', 'luegend', ['obwohl si lueged'], 'S Partizip «luegend» isch im Züritüütsch nöd gläufig; «mit offne Auge» und «mit offne Ohre» säged s glich (wie bim Markus).'),
  ('MAT.13.14', 'Ghöre wärded ir ghöre', 'literal', 'Ἀκοῇ ἀκούσετε', 'Mit em Ghör wärded ir ghöre', ['Mit de Ohre wärded ir ghöre'], 'D Septuaginta git e hebräischi Verdopplig wider; gmeint isch e Verstärkig. S Zitat isch [[ISA.6.9-ISA.6.10]].'),
  ('MAT.13.15', 'stumpf worde', 'adapted', 'ἐπαχύνθη', 'isch fett worde', ['isch abgstumpft', 'isch verhärtet'], 'Es Herz, wo vo Fett umgää isch, isch es Bild für Unempfänglichkeit.'),
  ('MAT.13.16', 'Sälig', 'traditional', 'μακάριοι', None, ['Glücklich', 'Wohl öi'], 'μακάριος priist öpper als vo Gott bschänkt glücklich. Vorschlag für s ganz Evangelium, au für d Säligpriisige ([[MAT.5.3]]–[[MAT.5.11]]).'),
@@ -362,30 +362,30 @@ DEC_GSW = [
  ('MAT.13.21', 'Not', 'adapted', 'θλίψεως', 'Bedrängnis', ['Trüebsal'], 'Wie bim Markus ([[MRK.4.17]]).'),
  ('MAT.13.22', 'd Sorg vo dere Wältziit', 'interpretive', 'ἡ μέριμνα τοῦ αἰῶνος τούτου', None, ['d Sorg vo dere Wält', 'd Alltagssorge'], 'αἰών isch di jetzig Wältziit im Gägesatz zur chömende; im ganze Kapitel «Wältziit». De SBLGNT hät da τούτου mit RP gäge WH, Treg und NA28 (lueg d Alternative).'),
  ('MAT.13.22', 'es bringt kei Frucht', 'interpretive', 'ἄκαρπος γίνεται', 'es wird unfruchtbar', ['er bringt kei Frucht'], 'S Subjekt cha s Wort oder de Hörer sii; d Mundart seit «kei Frucht bringe» statt «unfruchtbar wärde».'),
- ('MAT.13.24', 'isch wie', 'adapted', 'Ὡμοιώθη', 'isch gliich worde', ['glicht'], 'Aorist Passiv («isch gliich worde»), i [[MAT.13.31]], [[MAT.13.33]], [[MAT.13.44]], [[MAT.13.45]], [[MAT.13.47]] dagäge ὁμοία ἐστίν («isch gliich»), i [[MAT.13.52]] ὅμοιός ἐστιν. Im Züridüütsch seit mer eifach «isch wie». Vergliche wird nöd s Riich mit em Mänsch, sondern mit em ganze Vorgang.'),
+ ('MAT.13.24', 'isch wie', 'adapted', 'Ὡμοιώθη', 'isch gliich worde', ['glicht'], 'Aorist Passiv («isch gliich worde»), i [[MAT.13.31]], [[MAT.13.33]], [[MAT.13.44]], [[MAT.13.45]], [[MAT.13.47]] dagäge ὁμοία ἐστίν («isch gliich»), i [[MAT.13.52]] ὅμοιός ἐστιν. Im Züritüütsch seit mer eifach «isch wie». Vergliche wird nöd s Riich mit em Mänsch, sondern mit em ganze Vorgang.'),
  ('MAT.13.25', 'Uchruut', 'interpretive', 'ζιζάνια', 'Lolch', ['Taumellolch'], 'ζιζάνιον isch nach verbreiteter Aasicht de Taumellolch, es Gras, wo jung wie Weize usgseht und giftigi Chörner hät. «Uchruut» isch allgemeiner und vertrout.'),
  ('MAT.13.27', 'D Chnächt', 'traditional', 'οἱ δοῦλοι', None, ['d Sklave', 'd Diener'], 'δοῦλος isch de unfrei Diener; «Chnächt» wie bim Markus und Johannes.'),
  ('MAT.13.27', 'Huusherr', 'literal', 'οἰκοδεσπότου', None, ['Guetsherr'], None),
  ('MAT.13.28', 'en Fiind', 'adapted', 'Ἐχθρὸς ἄνθρωπος', 'en feindliche Mänsch', None, None),
- ('MAT.13.29', 'susch', 'adapted', 'μήποτε', 'damit nöd öppe', None, '«Damit nöd öppe» wär wörtlicher; «susch» seit s im Züridüütsch natürlicher.'),
+ ('MAT.13.29', 'susch', 'adapted', 'μήποτε', 'damit nöd öppe', None, '«Damit nöd öppe» wär wörtlicher; «susch» seit s im Züritüütsch natürlicher.'),
  ('MAT.13.30', 'säge ich', 'adapted', 'ἐρῶ', 'wird ich säge', None, 'Futur; i de Mundart mit em Präsens widergää.'),
  ('MAT.13.31', 'es Sänfchorn', 'literal', 'κόκκῳ σινάπεως', None, None, 'Sänf hät sehr chliini Same und wachst schnäll i d Höchi; «Baum» übertriibt.'),
  ('MAT.13.33', 'drü Mass', 'adapted', 'σάτα τρία', 'drü Sata', ['drü Sea'], 'σάτον isch es Hohlmass vo öppe 12 bis 13 Liter; drü Sata sind e riesigi Mängi Mehl (vgl. [[GEN.18.6]]).'),
  ('MAT.13.33', 'duregsüüret', 'literal', 'ἐζυμώθη', None, ['ufgange'], None),
  ('MAT.13.35', 'dur de Prophet', 'interpretive', 'διὰ τοῦ προφήτου', None, None, 'S Zitat chunnt us [[PSA.78.2]], eme Psalm vom Asaf, wo [[2CH.29.30]] en Seher nännt. Nach de CNTR-Transkription hät d Erschtschrift vo 01 «dur de Prophet Jesaja», vo ere Korrektur gstriche; de SBLGNT-Apparat füert d Stell nöd.'),
- ('MAT.13.35', 'Muul', 'literal', 'στόμα', None, ['Mund'], 'Im Züridüütsch isch «Muul» s gwöhnlich Wort, nöd grob.'),
+ ('MAT.13.35', 'Muul', 'literal', 'στόμα', None, ['Mund'], 'Im Züritüütsch isch «Muul» s gwöhnlich Wort, nöd grob.'),
  ('MAT.13.35', 'ich bringe füre', 'interpretive', 'ἐρεύξομαι', 'ich wott usesprudle', ['ich verchünde'], 'ἐρεύγομαι heisst eigentlich «usstosse, usesprudle»; s Futur isch i de Mundart im Präsens.'),
  ('MAT.13.37', 'de Mänschesohn', 'traditional', 'ὁ υἱὸς τοῦ ἀνθρώπου', None, None, 'Einheitlich im ganze Evangelium; Selbstbezeichnig vom Jesus mit Aaklang a [[DAN.7.13]].'),
  ('MAT.13.38', 'd Söhn vom Riich', 'literal', 'οἱ υἱοὶ τῆς βασιλείας', None, ['d Chind vom Riich', 'die, wo zum Riich ghöred'], 'Semitischi Usdrucksart: «Sohn vo» heisst «ghört zu».'),
  ('MAT.13.39', 'd Vollendig vo de Wältziit', 'literal', 'συντέλεια αἰῶνός', None, ['s Änd vo de Wält'], 'D Formel staat nu bim Matthäus ([[MAT.13.39]], [[MAT.13.40]], [[MAT.13.49]], [[MAT.24.3]], [[MAT.28.20]]); einheitlich «Vollendig vo de Wältziit».'),
  ('MAT.13.41', 'Fallstrick', 'interpretive', 'τὰ σκάνδαλα', None, ['was z Fall bringt'], 'Gmeinsami Matthäus-Widergab: σκάνδαλον «Fallstrick»; gmeint chönd Sache oder Mänsche sii, wo anderi z Fall bringed.'),
  ('MAT.13.41', 'd Gsetzlosigkeit', 'literal', 'τὴν ἀνομίαν', None, ['s Unrächt'], 'Einheitlich für ἀνομία ([[MAT.7.23]], [[MAT.23.28]], [[MAT.24.12]]); «d Gsetzlosigkeit tue» heisst: gäge s Gsetz vo Gott handle.'),
- ('MAT.13.42', 's Hüüle und s Zändchnirsche', 'literal', 'ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων', None, ['s Brüele und s Zändchnirsche'], 'Feschti Wändig bim Matthäus ([[MAT.8.12]], [[MAT.13.50]], [[MAT.22.13]], [[MAT.24.51]], [[MAT.25.30]]), gmeinsami Matthäus-Widergab; «hüüle» heisst im Züridüütsch «luut weine».'),
+ ('MAT.13.42', 's Hüüle und s Zändchnirsche', 'literal', 'ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων', None, ['s Brüele und s Zändchnirsche'], 'Feschti Wändig bim Matthäus ([[MAT.8.12]], [[MAT.13.50]], [[MAT.22.13]], [[MAT.24.51]], [[MAT.25.30]]), gmeinsami Matthäus-Widergab; «hüüle» heisst im Züritüütsch «luut weine».'),
  ('MAT.13.44', 'S Himmelriich isch wien en Schatz', 'interpretive', 'Ὁμοία ἐστὶν ἡ βασιλεία τῶν οὐρανῶν θησαυρῷ', None, None, 'Kei neui Redeiileitig: De Jesus redt im Huus wiiter zu de Jünger; d Übersetzig laat d Red vo [[MAT.13.37]] bis zur Frag i [[MAT.13.51]] laufe.'),
- ('MAT.13.45', 'en Chaufmaa', 'adapted', 'ἀνθρώπῳ ἐμπόρῳ', 'eme Mänsch, eme Chaufmaa', None, 'ἄνθρωπος vor ere Bruefsbezeichnig bruucht s im Düütsche nöd. Zur automatische Zueornig vo de Handschrifte lueg d hochdüütschi Entscheidig.'),
+ ('MAT.13.45', 'en Chaufmaa', 'adapted', 'ἀνθρώπῳ ἐμπόρῳ', 'eme Mänsch, eme Chaufmaa', None, 'ἄνθρωπος vor ere Bruefsbezeichnig bruucht s im Tüütsche nöd. Zur automatische Zueornig vo de Handschrifte lueg d hochtüütschi Entscheidig.'),
  ('MAT.13.47', 'Fisch vo jeder Art', 'adapted', 'ἐκ παντὸς γένους', 'us jeder Art', None, '«Fisch» isch ergänzt; γένος cha au «Volk» heisse.'),
  ('MAT.13.48', 'di schlächte', 'adapted', 'τὰ σαπρὰ', 'di fuule', ['di unbruuchbare'], 'Gmeint sind ungniessbari oder nach [[LEV.11.9]]–[[LEV.11.12]] unreini Fisch.'),
- ('MAT.13.52', 'Schriftglehrte', 'traditional', 'γραμματεὺς', None, None, 'Einheitlich nach docs/ZUERIDUEUETSCH.md: «Schriftglehrte», im Plural «Schriftglehrti».'),
+ ('MAT.13.52', 'Schriftglehrte', 'traditional', 'γραμματεὺς', None, None, 'Einheitlich nach docs/ZUERITUEUETSCH.md: «Schriftglehrte», im Plural «Schriftglehrti».'),
  ('MAT.13.53', 'Und es isch passiert', 'literal', 'καὶ ἐγένετο', None, None, 'Schlussformle nach de grosse Rede ([[MAT.7.28]], [[MAT.11.1]], [[MAT.19.1]], [[MAT.26.1]]).'),
  ('MAT.13.54', 'Heimet', 'literal', 'πατρίδα', None, ['Vatterstadt'], 'Gmeint isch de Heimatort; de Matthäus nännt Nazaret da nöd.'),
  ('MAT.13.54', 'Chrafttate', 'literal', 'δυνάμεις', None, ['Wunder'], 'δύναμις isch Chraft und d Tat, wo si sich drin zeigt; wie bim Markus.'),
@@ -721,10 +721,10 @@ NOTES_DE = [
 ]
 NOTES_GSW = [
  'KI-Entwurf ohni fachlichi Prüefig.',
- 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
+ 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1, WREAD-CNTR-MAT-013-001-058) oder uf de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte.',
- 'Einheitlichi Begriff fürs ganz Matthäusevangelium (usfüerlich i de hochdüütsche translation_notes): «s Himmelriich», «de Mänschesohn», «Amen, ich säge öi», «lueg», «grad», «dänn»; neu i Kapitel 13: παραβολή «Gliichnis»; συνίημι «verstaa»; σκανδαλίζω «z Fall bringe» / «z Fall choo», mit Bezug uf e Person «Aastoss näh a»; σκάνδαλον «Fallstrick»; μακάριος «sälig»; δίκαιος «grächt»; ὁ πονηρός «de Bös»; δοῦλος «Chnächt»; οἰκοδεσπότης «Huusherr»; αἰών «Wältziit», συντέλεια αἰῶνος «Vollendig vo de Wältziit»; ἀνομία «Gsetzlosigkeit»; «s Hüüle und s Zändchnirsche»; «Füürofe»; προσέρχομαι «härechoo»; ὄχλος «d Mängi», ὄχλοι «d Lüüt»; δύναμις «Chrafttat»; πατρίς «Heimet»; ὁ ἔχων ὦτα ἀκουέτω «Wär Ohre hät, dä söll lose!»; ὅμοιος/ὁμοιόω «isch wie».',
- 'Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich», «s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv).',
+ 'Einheitlichi Begriff fürs ganz Matthäusevangelium (usfüerlich i de hochtüütsche translation_notes): «s Himmelriich», «de Mänschesohn», «Amen, ich säge öi», «lueg», «grad», «dänn»; neu i Kapitel 13: παραβολή «Gliichnis»; συνίημι «verstaa»; σκανδαλίζω «z Fall bringe» / «z Fall choo», mit Bezug uf e Person «Aastoss näh a»; σκάνδαλον «Fallstrick»; μακάριος «sälig»; δίκαιος «grächt»; ὁ πονηρός «de Bös»; δοῦλος «Chnächt»; οἰκοδεσπότης «Huusherr»; αἰών «Wältziit», συντέλεια αἰῶνος «Vollendig vo de Wältziit»; ἀνομία «Gsetzlosigkeit»; «s Hüüle und s Zändchnirsche»; «Füürofe»; προσέρχομαι «härechoo»; ὄχλος «d Mängi», ὄχλοι «d Lüüt»; δύναμις «Chrafttat»; πατρίς «Heimet»; ὁ ἔχων ὦτα ἀκουέτω «Wär Ohre hät, dä söll lose!»; ὅμοιος/ὁμοιόω «isch wie».',
+ 'Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich», «s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv).',
  'Redegränze: D Redeteil vom Jesus stönd wie di andere grosse Rede ohni üsseri Aafüerigszeiche; wörtlichi Red drin staat i «…», drin ‹…› ([[MAT.13.30]]). D Red im Huus lauft ohni neui Iileitig vo [[MAT.13.37]] bis [[MAT.13.50]]; d Frag i [[MAT.13.51]] und [[MAT.13.52]] stönd als Wächselred i «…».',
  'Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bibel übernoo.',
 ]
@@ -745,7 +745,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -786,8 +786,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Markus 14–16 (Passion, Grab, Markusschlüsse) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch,
-Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
+Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/markus_text_14_16.py
 
@@ -29,7 +29,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MARK"]
 CHAPTERS = ((14, 72), (15, 47), (16, 20))
@@ -429,7 +429,7 @@ DEC_GSW = [
  ("MRK.15.2", "Du seisch es", "literal", "Σὺ λέγεις", None, None, None),
  ("MRK.15.34", "Eloi, Eloi, lema sabachthani", "literal", "Ἐλωῒ ἐλωῒ λεμὰ σαβαχθάνι", None, None, "Aramäisch: ʾelāhî ʾelāhî lǝmā šǝbaqtanî, de Aafang vo [[PSA.22.1]]. De Markus übersetzt sälber."),
  ("MRK.15.34", "für was", "literal", "εἰς τί", "wozue", ["wieso"], "εἰς τί fröget nach em Zwäck."),
- ("MRK.15.39", "Sohn vo Gott", "interpretive", "υἱὸς θεοῦ", None, ["de Sohn vo Gott", "en Sohn vo Gott"], "Ohni Artikel: «en Sohn vo Gott» und «de Sohn vo Gott» sind beidi möglich. Im Ganze nimmt de Satz [[MRK.1.1]] und [[MRK.1.11]] uuf. «Sohn vo Gott» ohni Artikel laat beides offe (s Hochdüütsch hät «Sohn vo Gott»; d Mundart hät kei Genitiv); redaktionelle Entscheid."),
+ ("MRK.15.39", "Sohn vo Gott", "interpretive", "υἱὸς θεοῦ", None, ["de Sohn vo Gott", "en Sohn vo Gott"], "Ohni Artikel: «en Sohn vo Gott» und «de Sohn vo Gott» sind beidi möglich. Im Ganze nimmt de Satz [[MRK.1.1]] und [[MRK.1.11]] uuf. «Sohn vo Gott» ohni Artikel laat beides offe (s Hochtüütsch hät «Sohn vo Gott»; d Mundart hät kei Genitiv); redaktionelle Entscheid."),
  ("MRK.15.40", "d Maria vo Magdala", "interpretive", "Μαρία ἡ Μαγδαληνὴ", "d Maria, d Magdalenerin", ["d Maria Magdalena"], None),
  ("MRK.16.2", "am erschte Tag", "literal", "μιᾷ", None, None, "σάββατα heisst au «Wuche»."),
  ("MRK.16.8", "si händ nämli Angscht ghaa", "literal", "ἐφοβοῦντο γάρ", None, None, "I de CNTR-Transkriptione vo de Handschrifte 01 und 03 hört s Evangelium mit däm Satz uuf. Öb de Markus so hät wele schlüüsse, öb en ursprüngliche Schluss verlore gange isch oder öb s Wärch nöd fertig worde isch, isch umstritte."),
@@ -662,8 +662,8 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Näme mit Artikel («de Jesus», «de Petrus»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Riich vo Gott»); "
   "«öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv)."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
@@ -690,7 +690,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mrk").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -728,8 +728,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MRK.{c}.1-MRK.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MRK-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

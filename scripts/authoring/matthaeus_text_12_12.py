@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 12 (Sabbatstreit, der erwählte Knecht, Beelzebul, das Zeichen des Jona, die Verwandten
-Jesu) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen,
+Jesu) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen,
 Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_12_12.py
@@ -37,7 +37,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). "
             "Prüfung der Mundart durch eine muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((12, 50),)
@@ -314,7 +314,7 @@ DEC_GSW = [
  ('MAT.12.25', 'gaat zgrund', 'adapted', 'ἐρημοῦται', 'wird verwüeschtet', None, None),
  ('MAT.12.28', 's Riich vo Gott', 'literal', 'ἡ βασιλεία τοῦ θεοῦ', None, None, 'Einheitlichi Widergab. Susch seit de Matthäus meischtens «s Himmelriich»; «s Riich vo Gott» nu da und i [[MAT.19.24]], [[MAT.21.31]], [[MAT.21.43]].'),
  ('MAT.12.31', 'Läschterig', 'literal', 'βλασφημία', None, ['Schmähig'], 'Verletzendi Red gäge Mänsche oder gäge Gott. «Gäge de Geischt»: De Genitiv nännt dä, wo d Läschterig gilt.'),
- ('MAT.12.32', 'de Heilig Geischt', 'literal', 'τοῦ πνεύματος τοῦ ἁγίου', None, None, 'Einheitlichi Widergab nach docs/ZUERIDUEUETSCH.md: «Heilig Geischt», mit em Artikel «de Heilig Geischt».'),
+ ('MAT.12.32', 'de Heilig Geischt', 'literal', 'τοῦ πνεύματος τοῦ ἁγίου', None, None, 'Einheitlichi Widergab nach docs/ZUERITUEUETSCH.md: «Heilig Geischt», mit em Artikel «de Heilig Geischt».'),
  ('MAT.12.32', 'Wältziit', 'interpretive', 'αἰῶνι', None, ['Ziitalter', 'Wält'], 'Jüdischi Underscheidig vo dere und de chomende Wältziit.'),
  ('MAT.12.33', 'fuul', 'interpretive', 'σαπρὸν', None, ['schlächt', 'verdorbe'], 'σαπρός heisst «fuul, verdorbe», übertreit «schlächt». «Mached» bliibt bim Wortluut; vili verstönd s als «nämed aa».'),
  ('MAT.12.34', 'Ir Viperebruet', 'literal', 'γεννήματα ἐχιδνῶν', None, ['Schlangebruet'], 'Gliich [[MAT.3.7]] und [[MAT.23.33]].'),
@@ -634,11 +634,11 @@ NOTES_DE = [
 ]
 NOTES_GSW = [
  'KI-Entwurf ohni fachlichi Prüefig. Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.',
- 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
+ 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte. Wo d Zueornig em Apparat widerspricht, gilt de Apparat.',
  'Einheitlichi Begriff für alli Matthäus-Teil: ἰδού «lueg»; τότε «dänn»; «de Mänschesohn»; «s Riich vo Gott» (da, susch meischtens «s Himmelriich»); «min Vatter i de Himmel»; Erfüllungsformle «damit erfüllt wird, was … gseit worden isch»; «Schriftglehrti», «Pharisäer»; «Dämon», «Bsässne»; «heilige Geischt»; μετανοέω «umchehre».',
  'Wiiteri Widergabe i Kapitel 12: γενεά «Generation» (wie bim Markus); ὄχλος «d Mängi», ὄχλοι «d Lüüt»; σημεῖον «Zeiche»; κρίσις «Gricht», im Jesajazitat «Rächt»; ἔθνη «Völker»; παῖς «Chnächt»; βλασφημία «Läschterig»; αἰών «Wältziit»; γεννήματα ἐχιδνῶν «Viperebruet»; σαπρός «fuul»; δικαιόω «grächt spräche».',
- 'Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich», «s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv).',
+ 'Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Himmelriich», «s Riich vo Gott»); «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv).',
  'Text: D Übersetzig folgt de SBLGNT-Token. I Kapitel 12 fehlt kei Vers; [[MAT.12.47]] staat im SBLGNT, WH laat en wäg (lueg Alternative).',
 ]
 
@@ -658,7 +658,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -699,8 +699,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

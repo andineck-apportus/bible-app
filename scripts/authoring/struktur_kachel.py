@@ -559,6 +559,6 @@ def pruefe(sx, stelle_ok=None):
         falsch = [e.get("ref") for e in el if e.get("ref") and not stelle_ok(e["ref"])]
         erg.append({"id": "K-STELLEN", "stufe": "pflicht", "de": "Alle Stellen gültig", "ergebnis": "fehler" if falsch else "ok", "grund": ", ".join(map(str, falsch))})
     gsw_fehlt = [e.get("de") for e in el if not e.get("gsw")]
-    erg.append({"id": "K-SPRACHEN", "stufe": "pflicht", "de": "Jede Beschriftung auch auf Züridüütsch",
+    erg.append({"id": "K-SPRACHEN", "stufe": "pflicht", "de": "Jede Beschriftung auch auf Züritüütsch",
                 "ergebnis": "fehler" if gsw_fehlt else "ok", "grund": "; ".join(map(str, gsw_fehlt))})
     return erg

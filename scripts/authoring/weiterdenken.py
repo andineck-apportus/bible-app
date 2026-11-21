@@ -2,7 +2,7 @@
 """Autorenwerkzeug: Inhalte für «Weiterdenken» (docs/WEITERDENKEN.md).
 
 Schreibt Fragen zum Weiterdenken (`reflection`, data/reflections/REFL-<BUCH>-nnnn.json) und Einträge «Wie man es gelesen hat»
-(`reception`, data/receptions/RCPT-<BUCH>-nnnn.json) samt Züridüütsch-Lokalisierungen (data/localizations/gsw-u-sd-chzh/).
+(`reception`, data/receptions/RCPT-<BUCH>-nnnn.json) samt Züritüütsch-Lokalisierungen (data/localizations/gsw-u-sd-chzh/).
 Eingabe: Datenmodule scripts/authoring/weiterdenken_daten/<BUCH>.py mit REFLECTIONS und RECEPTIONS.
 
 Geschrieben wird nur bei inhaltlicher Änderung; die vorige Fassung geänderter und gestrichener Felder kommt mit Datum und
@@ -118,7 +118,7 @@ def run(books):
                     fields = {k: v for k, v in x["gsw"].items() if k in TEXT[kind]}
                     loc = {"id": f"L10N-GSW-ZH-{x['id']}", "type": "localization", "status": "draft", "tags": [], "localizes": x["id"],
                            **GSW, "fields": fields, "source_fingerprint": {k: localizations.fingerprint(rec.get(k)) for k in fields},
-                           "authorship_de": f"KI-Entwurf (Claude) vom {x.get('date', date)}; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.",
+                           "authorship_de": f"KI-Entwurf (Claude) vom {x.get('date', date)}; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.",
                            "review_de": "Noch keine muttersprachliche Prüfung dokumentiert.",
                            "knowledge": {"asserted_at": x.get("date", date), "supersedes": None}}
                     n += _write(ROOT / "data/localizations/gsw-u-sd-chzh" / f"{loc['id']}.json", loc)

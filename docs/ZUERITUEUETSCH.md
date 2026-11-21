@@ -1,6 +1,6 @@
-# Züridüütsch: Schreibung, Formen, Wortwahl
+# Züritüütsch: Schreibung, Formen, Wortwahl
 
-Verbindliche Regeln für alle Züridüütsch-Texte der App: Bibeltext (Übersetzungsschicht `gsw-u-sd-chzh`), Titel,
+Verbindliche Regeln für alle Züritüütsch-Texte der App: Bibeltext (Übersetzungsschicht `gsw-u-sd-chzh`), Titel,
 Zusammenfassungen, Studieninhalte, Bildworte. Festgelegt am 2026-11-21 (KI-Entwurf, Claude, nach Entscheiden von
 Andi Neck). Nicht von Mundart-Fachleuten geprüft.
 
@@ -178,6 +178,9 @@ Eigenname ist (z. B. Buchtitel); im Bibeltext nicht.
 - `am` bleibt, wo es `a` + `em` ist (`Brief am Titus`, `am Jona handle`); reiner Dativ vor Namen `em`. Nomen auf -kehr mit
   k wie `Umkehr` (`Heimkehr`, `Rückkehr`); Adjektiv zu Chile `chirchlich`. Nachgestellte betonte Partikel lang (`vo dört
   uus`). Kein Gleit-n nach Verben ausser `cha` vor er/es/em/en.
+
+**Name (Andi, 2026-11-21):** `Züritüütsch`, `tüütsch`, `Hochtüütsch` mit t (Gallmann; so heissen auch die Zürcher
+Bibelausgaben von Weber und Boesch und Schobingers Grammatik). Fester Name, geht der Regel 1.9 vor.
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 

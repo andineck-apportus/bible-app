@@ -2,11 +2,11 @@
 
 Kein eigenes Werkzeug: Die Teile importieren von hier die gleichlautenden Entscheidungs- und Hinweistexte und prüfen ihre
 Mundart (pruefe_mundart). Festgelegt bei der Vereinheitlichung vom 2026-10-26 (KI-Entwurf, Claude), damit Lukas wie aus
-einem Guss liest. Seit der Neuübersetzung vom 2026-11-21 gilt für die Mundart das Regelwerk docs/ZUERIDUEUETSCH.md
+einem Guss liest. Seit der Neuübersetzung vom 2026-11-21 gilt für die Mundart das Regelwerk docs/ZUERITUEUETSCH.md
 (Gallmann, SRF-Merkblatt; geprüft mit scripts/mundart.py); die frühere Mehrheitsschreibung aus Markus und Johannes
 (z. B. «fäält», «Söön», «üs», «ggää», «demit») ist abgelöst.
 
-Wiederkehrende Wendungen (Hochdeutsch / Züridüütsch):
+Wiederkehrende Wendungen (Hochdeutsch / Züritüütsch):
 - ἐγένετο als Erzählformel: wiedergegeben, wo sie einen Abschnitt eröffnet (Erzähleinschnitt, wie [[LUK.11.1]]):
   καὶ ἐγένετο «Und es geschah» / «Und es isch gsii», ἐγένετο δέ «Es geschah aber» / «Es isch aber gsii». Innerhalb eines
   Abschnitts, wo sie nur den nächsten Erzählschritt anschliesst, nicht eigens wiedergegeben (~n mit EGEN_SKIP_*).
@@ -24,9 +24,9 @@ Wiederkehrende Wendungen (Hochdeutsch / Züridüütsch):
   γενεά «Geschlecht» / «Generation»; ἡ βασιλεία τοῦ θεοῦ «das Reich Gottes» / «s Riich vo Gott»; ὑποκριταί «Heuchler» /
   «Hüüchler»; Rede-Ebenen « » / ‹ › / „ “.
 
-Mundart-Schreibung: verbindlich ist docs/ZUERIDUEUETSCH.md; pruefe_mundart prüft mit scripts/mundart.py (pruefe: Sonderzeichen,
+Mundart-Schreibung: verbindlich ist docs/ZUERITUEUETSCH.md; pruefe_mundart prüft mit scripts/mundart.py (pruefe: Sonderzeichen,
 Wortliste, Präteritum, «um z», Apostroph, Genitiv) und zusätzlich mit der Lukas-Liste MUNDART (abgelöste Form -> gültige
-Form). MUNDART enthält Formen, die in Lukas vorkamen und nach docs/ZUERIDUEUETSCH.md nicht mehr gelten, aber (noch) nicht
+Form). MUNDART enthält Formen, die in Lukas vorkamen und nach docs/ZUERITUEUETSCH.md nicht mehr gelten, aber (noch) nicht
 in der allgemeinen Wortliste von scripts/mundart.py stehen; dazu die Festlegungen der Vereinheitlichung vom 2026-10-26,
 soweit sie mit dem Regelwerk übereinstimmen. Neu am 2026-11-21 (Begründung jeweils Regel im Regelwerk): Brot (1.3, nicht
 «Broot»), Ernte (Zweifel: nahe am Hochdeutschen), zwei auch vor männlichen Nomen (2 Zahlen, nicht «zwee»), Apostel (3),
@@ -34,11 +34,11 @@ seig (2 Konjunktiv, nicht «sig»), jetzt (3), wieso (Pilot), überchoo (1.2 wie
 Doppelvokal, wo das Hochdeutsche die Länge schon trägt), Tür/Türe (1.3), chönnt/chönnted (1.9 Doppelmitlaut nach
 Hochdeutsch), befohle, Wohnig (1.3 Dehnungs-h), usgää/gässe (1.10), wäm (2 Fragewort), Fiischteri (Pilot Johannes).
 
-Angleichung an docs/ZUERIDUEUETSCH.md (2026-11-21, zweiter Durchgang): Aus MUNDART gestrichen, was dem Regelwerk
+Angleichung an docs/ZUERITUEUETSCH.md (2026-11-21, zweiter Durchgang): Aus MUNDART gestrichen, was dem Regelwerk
 widerspricht: «sterbe» -> «stärbe» (Regel 1.6: «sterbe»), «cho» -> «choo» (Abschnitt 2 Infinitiv: «cho luege» bei
 Bewegung bleibt); «werdi» zeigt jetzt auf «wärd» (Abschnitt 2, indirekte Rede «er wärd»). MUNDART und pruefe_mundart
 behalten ihre Schnittstelle (kernanalyse.py nutzt sie für alle Bücher).
-Angleichung an die Festlegungen Runde 3 (docs/ZUERIDUEUETSCH.md, 2026-11-21): gestrichen «leer» -> «lehr» und «leere» ->
+Angleichung an die Festlegungen Runde 3 (docs/ZUERITUEUETSCH.md, 2026-11-21): gestrichen «leer» -> «lehr» und «leere» ->
 «lehre» («leer», «leere» heisst jetzt leer), «nöii» -> «nöi» («nöii» gilt); «säät» zeigt auf «säit», «sääed» auf «säied»
 (säie, gsäit), «spoot»/«spoote» auf «spät»/«späte», «siebezää» auf «sibezäh» (langes i nur als ii, kurzes als i).
 Ergänzt um die in Lukas abgelösten Formen der Runde 3: Dehnungs-h bei chehre/chräie (umchere -> umchehre, chräie ->
@@ -95,7 +95,7 @@ IDOU_GSW = ("ἰδού isch im ganze Lukas gliich widergää: i de Erzählig «l
 FURCHT_GSW = ("μὴ φοβοῦ / μὴ φοβεῖσθε isch im ganze Lukas «Häb kei Angscht» / «Händ kei Angscht»; so seit me s hüt.")
 OCHLOI_DE = ("οἱ ὄχλοι ist in ganz Lukas «die Menschenmengen» (wie bei Matthäus), ὄχλος «die Menge»; λαός ist «das Volk».")
 
-# Mundart: abgelöste Form -> gültige Form nach docs/ZUERIDUEUETSCH.md (klein geschrieben; Grossschreibung am Wortanfang
+# Mundart: abgelöste Form -> gültige Form nach docs/ZUERITUEUETSCH.md (klein geschrieben; Grossschreibung am Wortanfang
 # wird übernommen). Ergänzt die Wortliste in scripts/mundart.py um Formen, die in Lukas vorkamen.
 MUNDART = {
     # Festlegungen vom 2026-10-26, die mit dem Regelwerk übereinstimmen
@@ -115,7 +115,7 @@ MUNDART = {
     "oore": "ohre", "loon": "lohn", "söön": "söhn", "gläämt": "glähmt", "gläämte": "glähmte", "faar": "fahr",
     "faared": "fahred", "faart": "fahrt", "gfaare": "gfahre", "daa": "da", "here": "häre", "lide": "liide",
     "leged": "legged", "sölle": "söle", "nööch": "nöch", "nööchi": "nöchi", "feschtässe": "fäschtässe",
-    # Neu nach docs/ZUERIDUEUETSCH.md (2026-11-21); früher in Lukas festgelegt, jetzt abgelöst
+    # Neu nach docs/ZUERITUEUETSCH.md (2026-11-21); früher in Lukas festgelegt, jetzt abgelöst
     "fäält": "fehlt", "ziet": "zieht", "zie": "zieh", "ziend": "ziehnd", "wonige": "wohnige", "befole": "befohle",
     "usggää": "usgää", "ggässe": "gässe", "wem": "wäm", "chönt": "chönnt", "chönted": "chönnted",
     "iigschlaafe": "iigschlafe", "schlaaft": "schlaft", "gschlaafe": "gschlafe",
@@ -249,11 +249,11 @@ def _ohne_fehlalarm(t):
 
 def pruefe_mundart(texte, wo, streng=True):
     """Bricht ab, wenn ein Mundart-Text eine abgelöste Form der Lukas-Liste (MUNDART) oder – mit streng (Vorgabe) – einen
-    Fund von scripts/mundart.py (docs/ZUERIDUEUETSCH.md) enthält. Ausgenommen sind die Fehlalarme in FEHLALARM."""
+    Fund von scripts/mundart.py (docs/ZUERITUEUETSCH.md) enthält. Ausgenommen sind die Fehlalarme in FEHLALARM."""
     texte = list(_flach(list(texte)))
     alt = sorted({w for t in texte for w in _WORT.findall(t) if w.lower() in MUNDART})
     funde = sorted({f"{g} -> {neu} [{regel}]" for t in texte
                     for g, regel, neu in mundart.pruefe(_ohne_fehlalarm(t))}) if streng else []
     if alt or funde:
-        raise SystemExit(f"{wo}: Mundart nach docs/ZUERIDUEUETSCH.md: abgelöst {alt} {funde} "
+        raise SystemExit(f"{wo}: Mundart nach docs/ZUERITUEUETSCH.md: abgelöst {alt} {funde} "
                          "(scripts/mundart.py, scripts/authoring/lukas_einheitlich.py)")

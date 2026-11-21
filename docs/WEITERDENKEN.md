@@ -108,9 +108,9 @@ Eintrag je Tag und Grund; auch gestrichene Felder). Prozess: PROC-WEITERDENKEN (
 
 Entscheid Andi Neck 2026-10-26: «Geld ist ein Wertmittel (von dem her braucht es bildlich keine Unterscheidung); die damaligen Münznamen in den Text und die Umrechnung in die Erklärung.»
 
-- **Bibeltext:** die damaligen Namen, nie heutige oder Schweizer Geldwörter («Rappen», «Batzen», «Groschen», «Franken»). Einheitliche Schreibung, Hochdeutsch / Züridüütsch (Mehrzahl in Klammern):
+- **Bibeltext:** die damaligen Namen, nie heutige oder Schweizer Geldwörter («Rappen», «Batzen», «Groschen», «Franken»). Einheitliche Schreibung, Hochdeutsch / Züritüütsch (Mehrzahl in Klammern):
 
-  | Urtext | Hochdeutsch | Züridüütsch | Wert (für die Erklärung) |
+  | Urtext | Hochdeutsch | Züritüütsch | Wert (für die Erklärung) |
   |---|---|---|---|
   | δηνάριον | Denar (Denare) | Denar (Denar) | römische Silbermünze, üblicher Tageslohn eines Arbeiters ([[MAT.20.2]]) |
   | ἀσσάριον | As, der (Asse) | As, de (As) | Kupfermünze, 1/16 Denar |
@@ -144,7 +144,7 @@ Anwendungen der Bereich ihres Grundsatzes.
 
 ## In der App
 
-Die Kernaussage (`gist_de`) steht auch auf Züridüütsch (Lokalisierung, `scripts/authoring/kernanalyse.py`, Feld `gsw` im
+Die Kernaussage (`gist_de`) steht auch auf Züritüütsch (Lokalisierung, `scripts/authoring/kernanalyse.py`, Feld `gsw` im
 Datenmodul) und erscheint im gewählten Lesetext; die übrige Kernanalyse nur Hochdeutsch.
 
 Am Titel jeder Ebene öffnet «Vertiefen» ein Blatt mit den Reitern «Verstehen» und «Weiterdenken»

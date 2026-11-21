@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Philipperbrief – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen, Beziehungen,
-Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen, Kontext und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen, Kontext und Studie; jeweils mit Züritüütsch-Lokalisierung.
 Hintergrund zum ganzen Buch steht in BG-PHP-BOOK-0001/-0002 (scripts/authoring/hintergrund_buecher.py) und wird hier
 nicht geschrieben.
 

@@ -16,7 +16,7 @@ Umsetzung in v0.13:
 
 ## Lesetext in mehreren Sprachen (v0.27)
 
-Menü «Lesetext»: Hochdeutsch oder Züridüütsch. Beide sind aus dem Griechischen übersetzt; Lesarten, Entscheidungen und Wortzuordnung gehören zur jeweiligen Schicht. Die Mundart folgt der Dieth-Schreibung und ist ein ungeprüfter Entwurf.
+Menü «Lesetext»: Hochdeutsch oder Züritüütsch. Beide sind aus dem Griechischen übersetzt; Lesarten, Entscheidungen und Wortzuordnung gehören zur jeweiligen Schicht. Die Mundart folgt der Dieth-Schreibung und ist ein ungeprüfter Entwurf.
 
 ## Gestaltungsregeln (v0.24)
 

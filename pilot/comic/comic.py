@@ -2,14 +2,14 @@
 """Pilot «Comic-Seite je Abschnitt» (Stil 4: reduzierter Aquarell-Comic) mit dem Bildmodell von OpenAI.
 
 Je Abschnitt eine Comic-Seite aus:
-- dem Lesetext des Abschnitts (data/translations/…, Hochdeutsch bzw. Züridüütsch),
+- dem Lesetext des Abschnitts (data/translations/…, Hochdeutsch bzw. Züritüütsch),
 - dem Bildauftrag (Pflichtmomente in Reihenfolge),
 - dem Figurenblatt (figuren.json: Aussehen, Alter, Farben nach Bildlexikon).
 
 Varianten (--varianten):
   leer  Sprechblasen und Erzählkästen leer – die App setzt den Text darüber (ein Bild für alle Sprachen)
   de    Text auf Hochdeutsch im Bild
-  gsw   Text auf Züridüütsch im Bild
+  gsw   Text auf Züritüütsch im Bild
 
 Aufruf: OPENAI_API_KEY=… python3 pilot/comic/comic.py [--abschnitte 001-012,013-022] [--varianten leer,de] [--trocken]
 Modell: OPENAI_IMAGE_MODEL oder der erste verfügbare aus MODELLE.
@@ -33,7 +33,7 @@ TEXTE = {
     "de": DATA / "translations/TRANS-JHN-002-001-025-DE-WORKING.json",
     "gsw": DATA / "translations/TRANS-JHN-002-001-025-GSW-ZH-WORKING.json",
 }
-SPRACHNAME = {"de": "Standard German (Swiss spelling: ss instead of ß)", "gsw": "Zurich Swiss German dialect (Züridüütsch)"}
+SPRACHNAME = {"de": "Standard German (Swiss spelling: ss instead of ß)", "gsw": "Zurich Swiss German dialect (Züritüütsch)"}
 
 
 def melde(text):

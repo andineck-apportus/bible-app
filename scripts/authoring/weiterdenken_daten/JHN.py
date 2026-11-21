@@ -1136,7 +1136,7 @@ RECEPTIONS = [
      },
      "gsw": {
       "period_de": "1808",
-      "text_de": "Im «Faust» vom Goethe (erschte Teil, Szene «Studierzimmer») wott de Faust de Aafang vom Johannesevangelium «in mein geliebtes Deutsch» übertrage. Er verwirft «Wort», dänn «Sinn» und «Kraft» und schriibt am Schluss: «Im Anfang war die Tat!» D Szene hät s düütsch Nachedänke über de Satz «Im Aafang isch s Wort gsii» starch prägt."
+      "text_de": "Im «Faust» vom Goethe (erschte Teil, Szene «Studierzimmer») wott de Faust de Aafang vom Johannesevangelium «in mein geliebtes Deutsch» übertrage. Er verwirft «Wort», dänn «Sinn» und «Kraft» und schriibt am Schluss: «Im Anfang war die Tat!» D Szene hät s tüütsch Nachedänke über de Satz «Im Aafang isch s Wort gsii» starch prägt."
      }
     },
     {

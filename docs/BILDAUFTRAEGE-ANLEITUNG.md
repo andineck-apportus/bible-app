@@ -61,7 +61,7 @@ alle Übersetzungen; jedes Wort steht je Sprache im Auftrag, die App zeigt die g
 
 - **Ein Feld je tragendem Moment** der Kernanalyse (`data/core-analyses/CORE-…json`, `moments`); die Stichwörter nach deren
   `keywords`. Das hochdeutsche Stichwort muss so im Text des Felds stehen (der Validator warnt sonst; Satzzeichen und
-  Grossschreibung zählen nicht), das züridüütsche aus der Mundartfassung desselben Verses.
+  Grossschreibung zählen nicht), das züritüütsche aus der Mundartfassung desselben Verses.
 - **Bildtyp nach Textart** (`mode` der Kernanalyse): Erzählung als Szene; Rede, Lehre, Gleichnis mit dem Redner klein am Rand
   und dem Inhalt gross; Auftrag im Brief mit `letter: true` und Absender/Empfänger als Figuren (Paulus links, Titus rechts) –
   das Verlangte als Zeichen in der Sprechblase, nicht als geschehene Szene; Aufzählung als wenige Zeichen nebeneinander.

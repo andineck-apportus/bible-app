@@ -157,7 +157,7 @@ sagt; eine Deutung wird als Deutung gekennzeichnet.
   nur mit `BIBLE_CORE_CONFIRM=1`, nach einer Prüfung.
 
 - Zusammenfassungen aus der Kernanalyse: `scripts/authoring/zusammenfassungen_daten/<BUCH>.json` (Hochdeutsch und
-  Züridüütsch je Einheit), `python3 scripts/authoring/zusammenfassungen.py [BUCH …]` prüft Umfang und Momente und schreibt
+  Züritüütsch je Einheit), `python3 scripts/authoring/zusammenfassungen.py [BUCH …]` prüft Umfang und Momente und schreibt
   Datensatz, Mundart-Lokalisierung, revision_log und `core_basis` (Kernanalyse mit Fingerabdruck). Ältere
   Autorenwerkzeuge übernehmen diese Texte über `scripts/authoring/_lib.py`, damit ein erneuter Lauf sie nicht zurücksetzt.
 
@@ -168,7 +168,7 @@ Andi Neck sieht sich die Kernanalysen an, bevor Zusammenfassungen und Bilder neu
 
 Stand 2026-10-24 («Struktur zuerst»): Alle 58 Kernanalysen des Pilots haben eine Strukturanalyse (`structure`), von einer
 getrennten KI-Instanz auf Strukturtreue geprüft (Feld `review`). Daraus sind die Zusammenfassungen (Hochdeutsch und
-Züridüütsch; Listen aller Glieder, wo der Text so gebaut ist) und die Bilder neu entstanden: Erzählungen als Szenen, Reden,
+Züritüütsch; Listen aller Glieder, wo der Text so gebaut ist) und die Bilder neu entstanden: Erzählungen als Szenen, Reden,
 Lehre und Briefe als Strukturbilder (Raster, Spalten, Weiche, Pfeilkette, Waage, Zeitleiste, Stammbaum …). Beispiele: alle
 acht Seligpreisungen mit ihrer Verheissung, die sechs Gegensätze «Ihr habt gehört … Ich aber sage euch …», beide Zweige von
 Mt 6,14–15, der ganze Ältestenspiegel in Tit 1,6–9, alle zehn Namen des Stammbaums in Rut 4,18–22.

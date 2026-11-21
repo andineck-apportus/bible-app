@@ -48,7 +48,7 @@ Festgehalten am 2026-10-09, ergänzt am 2026-10-12. Abschnitt **«Vorgabe»** gi
 
 ---
 
-**Vorgabe (2026-10-13):** Aus den Urtexten und den geschaffenen Artefakten soll in beliebige Sprachen und kulturelle Hintergründe übersetzt werden können; als zweite Fassung neben Hochdeutsch entsteht Züridüütsch. Umsetzung: Übersetzungsschichten im Datenmodell ([DATENMODELL.md](DATENMODELL.md)).
+**Vorgabe (2026-10-13):** Aus den Urtexten und den geschaffenen Artefakten soll in beliebige Sprachen und kulturelle Hintergründe übersetzt werden können; als zweite Fassung neben Hochdeutsch entsteht Züritüütsch. Umsetzung: Übersetzungsschichten im Datenmodell ([DATENMODELL.md](DATENMODELL.md)).
 
 ---
 

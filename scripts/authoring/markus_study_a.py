@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Markusevangelium Kapitel 1–8 (ohne 3,20–35) – Befunde, Deutungen, Grundsätze, Anwendungen,
 offene Fragen, Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit
-Züridüütsch-Lokalisierung.
+Züritüütsch-Lokalisierung.
 
 Nicht hier geschrieben (bestehen schon und bleiben unverändert):
 - Studieninhalte zu Mk 3,20–35 (FIND-MRK-0001…0005, INT-MRK-0001…0003, BG-MRK-0001…0013, PRIN/APP/QUESTION-MRK-0001,
@@ -30,7 +30,7 @@ import _study  # noqa: E402
 
 _study.DATE = "2026-10-14"
 _study.AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-_study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; "
+_study.AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; "
                    "Mundart noch nicht muttersprachlich geprüft.")
 
 TAGS = ["TAG-MARK"]

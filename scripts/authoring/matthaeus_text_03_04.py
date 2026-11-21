@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 3–4 (Johannes der Täufer, Taufe Jesu, Versuchung, Beginn in Galiläa, erste Jünger) –
-Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen,
+Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen,
 Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_03_04.py
@@ -31,7 +31,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((3, 17), (4, 25))
@@ -292,7 +292,7 @@ DEC_GSW = [
  ("MAT.3.2", "Chehred um", "interpretive", "Μετανοεῖτε", "Dänked um", ["Tüend Buess"],
   "Wie [[MRK.1.15]]: μετανοέω isch es Umdänke; mitgmeint isch d Rückkehr zu Gott. «Buess» tönt nach Straf. Im ganze Matthäus «umchehre», «Umkehr». De Johannes ([[MAT.3.2]]) und de Jesus ([[MAT.4.17]]) säged wörtli s Gliich."),
  ("MAT.3.2", "s Himmelriich", "traditional", "ἡ βασιλεία τῶν οὐρανῶν", "s Riich vo de Himmel", ["d Herrschaft vo de Himmel", "s Riich vo Gott"],
-  "Einheitlich im Matthäus «s Himmelriich» (docs/ZUERIDUEUETSCH.md, biblischi Begriff). De Matthäus seit meischtens «Riich vo de Himmel» (32-mal, «Riich vo Gott» nu 4-mal), wahrschiinli nach jüdischem Bruuch, de Gottesname z umschriibe; gmeint isch s Gliich wie «s Riich vo Gott» bim Markus. βασιλεία meint zersch d Herrschaft vo Gott als Gscheh, nöd es Gebiet."),
+  "Einheitlich im Matthäus «s Himmelriich» (docs/ZUERITUEUETSCH.md, biblischi Begriff). De Matthäus seit meischtens «Riich vo de Himmel» (32-mal, «Riich vo Gott» nu 4-mal), wahrschiinli nach jüdischem Bruuch, de Gottesname z umschriibe; gmeint isch s Gliich wie «s Riich vo Gott» bim Markus. βασιλεία meint zersch d Herrschaft vo Gott als Gscheh, nöd es Gebiet."),
  ("MAT.3.2", "isch nöch choo", "literal", "ἤγγικεν", None, ["isch da"],
   "Öb s Riich scho aagfange hät oder grad bevorstaat, isch umstritte; «nöch choo» laat beides offe."),
  ("MAT.3.3", "gseit worde isch", "literal", "ῥηθεὶς", None, None,
@@ -321,9 +321,9 @@ DEC_GSW = [
  ("MAT.3.15", "laat er en mache", "adapted", "ἀφίησιν αὐτόν", "laat er en", ["laat er s zue"],
   "S gliich Verb wie «Lass es zue» am Aafang vom Vers."),
  ("MAT.3.16", "grad", "literal", "εὐθὺς", None, ["sofort"],
-  "Einheitlich im Matthäus: εὐθύς und εὐθέως «grad» (Hochdüütsch «sogleich»)."),
+  "Einheitlich im Matthäus: εὐθύς und εὐθέως «grad» (Hochtüütsch «sogleich»)."),
  ("MAT.3.16", "lueg", "literal", "ἰδοὺ", None, None,
-  "Einheitlich im Matthäus: ἰδού «lueg» (Hochdüütsch «siehe»)."),
+  "Einheitlich im Matthäus: ἰδού «lueg» (Hochtüütsch «siehe»)."),
  ("MAT.3.16", "d Himmel sind ufgange", "literal", "ἠνεῴχθησαν οἱ οὐρανοί", None, None,
   "Plural wie im Griechische; rüeiger als s «Ufriisse» bim Markus ([[MRK.1.10]]). Zur Läsart «sind ihm ufgange» lueg d Alternative."),
  ("MAT.3.17", "Dä isch min liebe Sohn", "literal", "Οὗτός ἐστιν ὁ υἱός μου ὁ ἀγαπητός", None, ["Das isch min Sohn, wo ich gern han"],
@@ -493,7 +493,7 @@ ALTS = [
    "Nach de automatische Zueornig läsed all erfasste Handschrifte (01, 03, 04, 05, 032) ohni de Name. Nach em erfasste Wortluut hät 032 aber ὁ Ἰησοῦς; d Zueornig isch da also unsicher."]),
  ("VAR-SBLGNTAPP-MAT-004-023-01:R2", "MAT.4.23", "Und er zog", "Und Jesus zog", "Und er isch", "Und de Jesus isch", "gering",
   "Der Name verdeutlicht, wer handelt. Die Lesart von RP (ὅλην τὴν Γαλιλαίαν ὁ Ἰησοῦς, «Jesus zog durch ganz Galiläa») ergibt im Deutschen denselben Wortlaut.",
-  "De Name macht klar, wär handlet. D Läsart vo RP git im Düütsche de gliich Wortluut.",
+  "De Name macht klar, wär handlet. D Läsart vo RP git im Tüütsche de gliich Wortluut.",
   {"R1": [("ἐν ὅλῃ τῇ Γαλιλαίᾳ", "in ganz Galiläa", "WH, NA28")], "R2": [("ὁ Ἰησοῦς ἐν ὅλῃ τῇ Γαλιλαίᾳ", "Jesus … in ganz Galiläa", "Treg")],
    "R3": [("ὅλην τὴν Γαλιλαίαν ὁ Ἰησοῦς", "Jesus … durch ganz Galiläa", "RP")]},
   {"R1": [("ἐν ὅλῃ τῇ Γαλιλαίᾳ", "in ganz Galiläa", "WH, NA28")], "R2": [("ὁ Ἰησοῦς ἐν ὅλῃ τῇ Γαλιλαίᾳ", "de Jesus … in ganz Galiläa", "Treg")],
@@ -600,7 +600,7 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) und em dört erfasste "
   "Wortluut vo de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
  ("Einheitlichi Begriff im Matthäus: «s Riich vo de Himmel», «s Riich vo Gott», «de Mänschesohn», «Amen, ich säge öi», «Vatter i "
@@ -612,7 +612,7 @@ NOTES_GSW = [
   "ὄχλος «d Mängi», ὄχλοι «d Lüüt»; θάλασσα «See» (im Zitat «Meer»); «Viperebruet»; «s Evangelium vom Riich»; δαιμονιζόμενοι «Bsässni»; «Mondsüchtigi»."),
  ("Mundart: Näme mit Artikel («de Jesus», «de Johannes»); Perfekt statt Präteritum, nu s erzellend Präsens bliibt; «wo» als "
   "Relativwort; kei Genitiv («s Riich vo de Himmel»)."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv; «öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de "
   "Urtext bruucht (göttlichs Passiv) oder kei Täter nännt; Aktiv mit «me», wo s natürlicher isch."),
 ]
@@ -633,7 +633,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -674,8 +674,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

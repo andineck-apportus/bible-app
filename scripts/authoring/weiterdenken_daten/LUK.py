@@ -6,7 +6,7 @@ liess, ist als ungeprüft gekennzeichnet. Die erste Frage je Einheit ist die Tü
 
 Prüfung 2026-10-29 durch eine weitere Instanz (KI, getrennt vom Entwurf; PROC-WEITERDENKEN@1.0 Schritte 3 und 4): alle Fragen und
 Hintergrundsätze gegen die hochdeutsche Arbeitsübersetzung, Zitate per Skript gegen die Arbeitsübersetzungen (Hochdeutsch und
-Züridüütsch), Mundart nach lukas_einheitlich.pruefe_mundart, Rezeption: Stichprobe der Quellen erneut nachgeschlagen
+Züritüütsch), Mundart nach lukas_einheitlich.pruefe_mundart, Rezeption: Stichprobe der Quellen erneut nachgeschlagen
 (source_check mit CHECK_DATE). Nicht gegen den griechischen Text geprüft; keine fachliche und keine muttersprachliche Prüfung."""
 DATE = "2026-10-28"
 PROCESS = "PROC-WEITERDENKEN@1.0"

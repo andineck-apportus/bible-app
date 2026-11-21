@@ -216,7 +216,7 @@ NOTES = [
                   "wie si gründet worde sind ([[ACT.13.14-ACT.14.23]]); dänn cha de Brief früe sii, nach es paar sogar vor "
                   "em Apostelkonzil ([[ACT.15.1-ACT.15.29]]) um 48/49 n. Chr. D Frag hangt äng damit zäme, weli Bsuech z "
                   "Jerusalem [[GAL.2.1-GAL.2.10]] beschriibt.",
-          "uncertain": "Beidi These händ gwichtigi Vertreter; im düütschsprachige Ruum isch d Nordgalatie-These lang "
+          "uncertain": "Beidi These händ gwichtigi Vertreter; im tüütschsprachige Ruum isch d Nordgalatie-These lang "
                        "vorherrschend gsii, im änglischsprachige isch d Südgalatie-These verbreitet. Öb [[GAL.2.1-GAL.2.10]] "
                        "em Apostelkonzil oder em Bsuech us [[ACT.11.27-ACT.11.30]] entspricht, isch umstritte. Die App "
                        "entscheidet d Frag nöd.",

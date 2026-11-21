@@ -8,7 +8,7 @@
 2. Schreiben:
      python3 scripts/authoring/bilder_aquarell.py
    schreibt Stil ILLSTYLE-AQUARELL und je Bild (Abschnitt, Kapitel) Datensatz und SVG: je Bildfeld eine Kachel mit dem
-   Bild, darüber die Sprechblasen als Text je Sprache (Hochdeutsch, Züridüütsch) und darunter das Stichwortband aus dem
+   Bild, darüber die Sprechblasen als Text je Sprache (Hochdeutsch, Züritüütsch) und darunter das Stichwortband aus dem
    Bildauftrag. Prüft, dass jede Blase wörtlich (bis auf … für Kürzungen) im Lesetext des genannten Verses steht.
 
 Blasen: das Werkzeug setzt sie selbst (blasen_auto) nach den Kopfpositionen aus der automatischen Prüfung
@@ -545,7 +545,7 @@ def pruef_check(b, aus, alt_check, aktuell_sha=None):
          "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen "
                       "(allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
          "felder": felder, "open_de": offen,
-         "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züridüütsch). "
+         "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). "
                       "Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."}
     if alt_check and "felder" not in alt_check:
         c["frueher"] = alt_check

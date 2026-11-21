@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Johannes 20–21 (leeres Grab, Erscheinungen des Auferstandenen, Nachtragskapitel) – Texteinheiten,
-Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und
+Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT, Übersetzungsentscheidungen, Lesarten-Alternativen und
 vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/johannes_text_20_21.py
@@ -26,7 +26,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-JOHN"]
 CHAPTERS = ((20, 31), (21, 25))
@@ -240,7 +240,7 @@ DEC_GSW = [
  ("JHN.20.1", "erschte Tag vo de Wuche", "literal", "μιᾷ σαββάτων", "erschte vo de Sabbät", None, "σάββατα heisst au «Wuche»."),
  ("JHN.20.2", "gern ghaa hät", "literal", "ἐφίλει", None, ["gliebt hät"], "Im ganze Evangelium: ἀγαπάω «liebe», φιλέω «gern haa». Lueg d Entscheidig zu [[JHN.21.15]]."),
  ("JHN.20.5", "Liinebinde", "interpretive", "ὀθόνια", None, ["Liinetüecher"], None),
- ("JHN.20.6", "er gseht", "literal", "θεωρεῖ", None, ["er luegt aa"], "βλέπω und θεωρέω sind i de Mundart beidi «gseh»; s Hochdüütsch underscheidet «sieht» und «schaut»."),
+ ("JHN.20.6", "er gseht", "literal", "θεωρεῖ", None, ["er luegt aa"], "βλέπω und θεωρέω sind i de Mundart beidi «gseh»; s Hochtüütsch underscheidet «sieht» und «schaut»."),
  ("JHN.20.10", "hei", "adapted", "πρὸς αὑτοὺς", "zu sich", None, None),
  ("JHN.20.17", "Heb mich nöd fescht", "interpretive", "Μή μου ἅπτου", "Rüer mich nöd aa", None, "ἅπτομαι heisst «aalänge, sich fescht hebe». S Verbot mit Imperativ Präsens meint oft: «hör uuf, mich fescht z hebe». De Thomas söll de Jesus spöter aalänge ([[JHN.20.27]]). Redaktionelle Entscheid."),
  ("JHN.20.17", "Brüeder", "interpretive", "ἀδελφούς", None, ["Gschwüschterti"], "Gmeint sind d Jünger ([[JHN.20.18]])."),
@@ -453,8 +453,8 @@ NOTES_DE = [
 NOTES_GSW = [
  "KI-Entwurf ohni fachlichi Prüefig.",
  ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Nöi übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Näme mit Artikel («de Jesus», «de Petrus»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv; «öis», «öi»; "
   "Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv)."),
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) oder uf de "
@@ -481,7 +481,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-jhn").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -521,8 +521,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"JHN.{c}.1-JHN.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-JHN-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

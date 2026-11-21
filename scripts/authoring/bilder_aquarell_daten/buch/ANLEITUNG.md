@@ -50,7 +50,7 @@ Vorbilder: `buch/TIT.json`, `szenen-jon.json`, `szenen-luk-015.json`; Regeln in 
 
 ## Struktur (form struktur)
 
-- Beschriftungen in eigenen kurzen Worten (höchstens 40 Zeichen), Hochdeutsch `de` und Züridüütsch `gsw`; je Element möglichst eine
+- Beschriftungen in eigenen kurzen Worten (höchstens 40 Zeichen), Hochdeutsch `de` und Züritüütsch `gsw`; je Element möglichst eine
   Stelle `ref`. Keine wörtlichen Zitate erfinden. Zahl der Glieder nicht glätten; wo der Text mehr Glieder hat als Platz ist, die
   tragenden wählen und im `note_de` oder `form_grund_de` sagen.
 - `titel` optional (höchstens 40 Zeichen). `kopf.a`/`kopf.b` bei spalten, spiegel, ebenen.
@@ -65,6 +65,6 @@ Vorbilder: `buch/TIT.json`, `szenen-jon.json`, `szenen-luk-015.json`; Regeln in 
 
 - `band.de`/`band.gsw`: Titel der Station in eigenen Worten, höchstens 46 Zeichen, ohne Anführungszeichen (es gibt für die meisten
   Bücher noch keine Arbeitsübersetzung; darum keine Zitate).
-- Schweizer Schreibung (ss, kein ß). Züridüütsch wie in den vorhandenen Dateien (z. B. «isch», «händ», «Gnad», «Wärch», «Chind», «Gsetz»).
+- Schweizer Schreibung (ss, kein ß). Züritüütsch wie in den vorhandenen Dateien (z. B. «isch», «händ», «Gnad», «Wärch», «Chind», «Gsetz»).
 - `note_de`: Hinweis für die Legende: was gezeigt, was weggelassen, was gedeutet ist; Bibelstellen als `[[GEN.1.1]]`.
 - Deutungen und Forschungsvorschläge (Chiasmen, Datierungen, Verfasser) als solche kennzeichnen, nie als Text ausgeben.

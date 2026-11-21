@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Autorenwerkzeug: Rut – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem hebräischen Text
+"""Autorenwerkzeug: Rut – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem hebräischen Text
 (Westminster Leningrad Codex), Übersetzungsentscheidungen und vollständige Wortzuordnung je Morphem.
 
 Aufruf: python3 scripts/authoring/ruth_text.py
@@ -19,7 +19,7 @@ from _lib import D, alignment_entries, load_tokens, localize, write  # noqa: E40
 DATE = "2026-10-13"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "hebräischen Text (WLC) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "hebräischen Text (WLC) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-RUTH"]
 OBJ = "Objektzeichen אֶת, im Deutschen nicht wiedergegeben"
@@ -217,7 +217,7 @@ GSW = {
 
 JHWH_DE = ("Der Gottesname wird im Judentum nicht ausgesprochen; gelesen wird «Adonai» (der Herr). Viele deutsche Bibeln schreiben "
            "«der HERR». Hier steht der Name in seinen vier Konsonanten, damit sichtbar bleibt, dass im Hebräischen ein Name steht.")
-JHWH_GSW = ("De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili düütschi Bible schriibed «der HERR». "
+JHWH_GSW = ("De Gottesname wird im Judetum nöd usgsproche; gläse wird «Adonai» (de Herr). Vili tüütschi Bible schriibed «der HERR». "
             "Da staat de Name i sine vier Konsonante, damit me gseht, dass im Hebräische en Name staat.")
 
 # Übersetzungsentscheidungen: (Stelle, Zieltext, Art, hebräisch, wörtlicher, andere Möglichkeiten, Begründung)
@@ -442,7 +442,7 @@ DEC_GSW = [
   "כִּי cha i Schwüer öppis beteuere oder e Bedingig iileite. Je nach Läsart trännt nu de Tod die zwei oder nöd emal er."),
  ("RUT.1.20", "Mara", "literal", "מָרָא", None, None,
   "Noomi (נָעֳמִי) heisst öppe «mini Liebliichi», Mara «di Bitter». Mara isch da ungwöhnlich mit א statt mit ה gschribe. D Schriibig «Noomi» "
-  "folgt verbreitete düütsche Bible (änglisch Naomi)."),
+  "folgt verbreitete tüütsche Bible (änglisch Naomi)."),
  ("RUT.1.20", "de Allmächtig", "traditional", "שַׁדַּי", "Schaddai", None,
   "Herkunft und Bedüütig vo שַׁדַּי sind unsicher; «de Allmächtig» isch di vertraut Widergab."),
  ("RUT.1.21", "usgseit", "interpretive", "עָנָה", None, ["mich demüetiget"],
@@ -451,7 +451,7 @@ DEC_GSW = [
  ("RUT.1.22", "zruggchoo isch", "literal", "הַשָּׁבָה", None, ["wo mitchoo isch"],
   "Wörtlich «di Zruggchehrti». D Rut isch nie z Juda gsii; s Wort verbindet si mit em Heichoo vo de Noomi. Es paar beziehnd s uf d Noomi."),
  ("RUT.1.9", "händ lut briegget", "adapted", "וַתִּשֶּׂאנָה קוֹלָן וַתִּבְכֶּינָה", "händ iri Stimm erhobe und briegget", None,
-  "«D Stimm erhebe» heisst lut aafange; so au i [[RUT.1.14]]. Nöi übersetzt 2026-11-21 (Züridüütsch nach docs/ZUERIDUEUETSCH.md)."),
+  "«D Stimm erhebe» heisst lut aafange; so au i [[RUT.1.14]]. Nöi übersetzt 2026-11-21 (Züritüütsch nach docs/ZUERITUEUETSCH.md)."),
  ("RUT.1.17", "no meh", "adapted", "וְכֹה יֹסִיף", "und so söll er wiitermache", None,
   "Teil vo de Schwuerformle; «no meh» seit, dass d Straf no grösser sii söll."),
  # Kapitel 2
@@ -655,7 +655,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     for c, last in ((1, 22), (2, 23), (3, 18), (4, 22)):
         ts_id, toks = load_tokens(D / "tokens" / f"WLC-RUT-{c:03d}.json")
         refs_c = [f"RUT.{c}.{v}" for v in range(1, last + 1)]
@@ -684,7 +684,7 @@ def run():
                                  "folgt diesen Formen; die geschriebenen Ketiv-Formen sind in den Daten nicht enthalten.")
             else:
                 notes = [AUTH_GSW + " D Übersetzig isch nöd vo Fachlüüt prüeft.",
-                         ("Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); "
+                         ("Nöi übersetzt am 2026-11-21 us em Hebräische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); "
                           "di früener Fassig staat im revision_log."),
                          "Für s Buech Rut isch no kei freie textkritische Apparat erfasst: Qumran-Fragmänt, Septuaginta und anderi alti "
                          "Übersetzige sind nöd i de Date. Wo Entscheidige alti Übersetzige erwähned, beruet das uf allgemeinem Wüsse und isch "
@@ -695,8 +695,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"RUT.{c}.1-RUT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am hebräischen Wortlaut, aber so, wie man es heute in Zürich sagt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Personennamen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv; im Zweifel nahe am Hochdeutschen. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-RUT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

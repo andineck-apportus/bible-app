@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: 1.–3. Johannesbrief – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen, Beziehungen,
 Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen, Kontext und je eine Studie pro Brief (STUDY-1JN-0001,
-STUDY-2JN-0001, STUDY-3JN-0001); jeweils mit Züridüütsch-Lokalisierung. Hintergrund zum ganzen Buch steht in
+STUDY-2JN-0001, STUDY-3JN-0001); jeweils mit Züritüütsch-Lokalisierung. Hintergrund zum ganzen Buch steht in
 BG-1JN-BOOK-0001, BG-2JN-BOOK-0001 und BG-3JN-BOOK-0001 (scripts/authoring/hintergrund_buecher.py) und wird hier nicht
 geschrieben.
 

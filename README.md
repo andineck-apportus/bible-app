@@ -76,7 +76,7 @@ python3 scripts/collate_witnesses.py "Mk 3,20–35"
 python3 scripts/collate_witnesses.py "Mt 6,5–15"; python3 scripts/collate_witnesses.py "Lk 11,1–4"
 # Studieninhalte Vaterunser (Ersterstellung, KI-Entwurf)
 python3 scripts/authoring/vaterunser.py
-python3 scripts/authoring/zueridueuetsch.py   # Züridüütsch-Schicht (Ersterstellung)
+python3 scripts/authoring/zueritueuetsch.py   # Züritüütsch-Schicht (Ersterstellung)
 # Titus und Obadja (v0.33): gleiche Importer, Hebräisch über MACULA Hebrew (WLC)
 python3 scripts/import_sblgnt_book.py TIT --tag TAG-TITUS --sblgnt SBLGNT --sblgnt-commit c4d241a9c1c479a55b989ba35a4976c1d0b8052c \
   --macula macula-greek --macula-commit 8423afe47b9e8f24b7772e808af45c7159a6fe7e

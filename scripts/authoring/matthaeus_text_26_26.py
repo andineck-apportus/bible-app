@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 26 (Salbung in Betanien, letztes Mahl, Getsemani, Gefangennahme, Verhör vor dem Hohen Rat,
-Verleugnung des Petrus) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT,
+Verleugnung des Petrus) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT,
 Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_26_26.py
@@ -31,7 +31,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((26, 75),)
@@ -380,7 +380,7 @@ DEC_GSW = [
   "Gmeinsami Widergab fürs Matthäusevangelium: προσέρχομαι «härechoo»; gliich i [[MAT.26.17]], [[MAT.26.49]], [[MAT.26.50]], [[MAT.26.60]], [[MAT.26.69]] und [[MAT.26.73]]."),
  ("MAT.26.9", "Me hett", "adapted", "ἐδύνατο πραθῆναι", "Das hett chöne verchauft wärde", None,
   "S Passiv isch i de Mundart mit «me» widergää."),
- ("MAT.26.10", "plaged ir", "adapted", "κόπους παρέχετε", "mached ir Müe", None, "So seit me s im Züridüütsch."),
+ ("MAT.26.10", "plaged ir", "adapted", "κόπους παρέχετε", "mached ir Müe", None, "So seit me s im Züritüütsch."),
  ("MAT.26.10", "öppis Schöns", "adapted", "ἔργον καλὸν", "es schöns Wärch", ["öppis Guets"], "καλός heisst «schön, guet»."),
  ("MAT.26.13", "dört verzellt me", "adapted", "λαληθήσεται", "wird verzellt", None, "S Passiv isch mit «me» widergää."),
  ("MAT.26.13", "Amen, ich säge öi", "literal", "ἀμὴν λέγω ὑμῖν", None, ["Würkli, ich säge öi"],
@@ -390,7 +390,7 @@ DEC_GSW = [
  ("MAT.26.18", "zum Soundso", "literal", "πρὸς τὸν δεῖνα", None, ["zu eme gwüsse Maa"], "De Name wird nöd gnännt."),
  ("MAT.26.18", "fiire ich s Passa", "adapted", "ποιῶ τὸ πάσχα", "mache ich s Passa", None, None),
  ("MAT.26.21", "liferet mich uus", "adapted", "παραδώσει με", "wird mich uslifere", None, "Künftigs im Präsens, wie s d Mundart seit; ebenso [[MAT.26.23]], [[MAT.26.29]], [[MAT.26.31]], [[MAT.26.34]], [[MAT.26.35]], [[MAT.26.64]]."),
- ("MAT.26.22", "eine nach em andere", "adapted", "εἷς ἕκαστος", "jede einzelne", None, "So seit me s im Züridüütsch."),
+ ("MAT.26.22", "eine nach em andere", "adapted", "εἷς ἕκαστος", "jede einzelne", None, "So seit me s im Züritüütsch."),
  ("MAT.26.24", "gaat zwar sin Wäg", "adapted", "μὲν ὑπάγει", "gaat zwar häre", None, "ὑπάγω «furtgaa, häregaa»; gmeint isch de Wäg i de Tod."),
  ("MAT.26.24", "wo de Mänschesohn usliferet", "adapted", "διʼ οὗ ὁ υἱὸς τοῦ ἀνθρώπου παραδίδοται", "dur dä de Mänschesohn usgliferet wird", None, "S Passiv isch als Aktiv widergää."),
  ("MAT.26.25", "Du häsch es gseit", "interpretive", "Σὺ εἶπας", None, ["Du seisch es"],
@@ -405,7 +405,7 @@ DEC_GSW = [
  ("MAT.26.31", "Aastoss", "interpretive", "σκανδαλισθήσεσθε", None, ["z Fall choo", "abfalle"],
   "Gmeinsami Widergab fürs ganz Matthäusevangelium: aktiv «z Fall bringe», passiv gägenüber ere Person (da «a mir») «Aastoss näh», susch «z Fall choo». Gliich i [[MAT.26.33]]. S Zitat isch [[ZEC.13.7]]."),
  ("MAT.26.34", "en Güggel", "adapted", "ἀλέκτορα", "en Hahn", None, "Wie bim Markus."),
- ("MAT.26.38", "zum Sterbe truurig", "adapted", "Περίλυπός ἕως θανάτου", "ganz fescht truurig bis zum Tod", None, "So seit me s im Züridüütsch."),
+ ("MAT.26.38", "zum Sterbe truurig", "adapted", "Περίλυπός ἕως θανάτου", "ganz fescht truurig bis zum Tod", None, "So seit me s im Züritüütsch."),
  ("MAT.26.39", "dänn söll dä Bächer a mir verbiigaa", "literal", "παρελθάτω ἀπʼ ἐμοῦ τὸ ποτήριον τοῦτο", None, None,
   "De Bächer isch es Bild für s Gschick, wo eim zuegmässe isch (vgl. [[MAT.20.22]])."),
  ("MAT.26.42", "söll din Wille gscheh", "literal", "γενηθήτω τὸ θέλημά σου", None, None,
@@ -420,7 +420,7 @@ DEC_GSW = [
  ("MAT.26.55", "go mich feschtnäh", "adapted", "συλλαβεῖν με", "zum mich feschtnäh", None, "Nach eme Verb vo de Bewegig staat «go» mit Infinitiv."),
  ("MAT.26.56", "Aber das alles isch gscheh", "interpretive", "τοῦτο δὲ ὅλον γέγονεν", None, None,
   "Öb de Satz no zur Red vom Jesus ghört oder de Erzäler das aamerkt, seit de Text nöd (gliichi Wort wie i [[MAT.1.22]]). Redaktionelle Entscheid."),
- ("MAT.26.56", "im Stich glaa", "adapted", "ἀφέντες", "verlaa", None, "So seit me s im Züridüütsch."),
+ ("MAT.26.56", "im Stich glaa", "adapted", "ἀφέντες", "verlaa", None, "So seit me s im Züritüütsch."),
  ("MAT.26.57", "d Schriftglehrte", "traditional", "οἱ γραμματεῖς", None, None, "Einheitlich fürs ganz Matthäusevangelium: «Schriftglehrti», mit Artikel «d Schriftglehrte»; gliich «Ältischti», «d Ältischte»."),
  ("MAT.26.59", "Hoch Rat", "traditional", "συνέδριον", None, ["Synedrium"], "S jüdisch Ratsgremium z Jerusalem."),
  ("MAT.26.63", "de Christus", "traditional", "ὁ χριστὸς", None, ["de Gsalbt", "de Messias"], None),
@@ -682,7 +682,7 @@ NOTES_DE = [
 ]
 NOTES_GSW = [
  'KI-Entwurf ohni fachlichi Prüefig. Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.',
- 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
+ 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1), nöd uf eigeter Prüefig vo de Handschrifte.',
  'Begriff (wie im ganze Matthäusevangelium): s Himmelriich; de Mänschesohn; Amen, ich säge öi / dir; Hoheprieschter, Ältischti, Schriftglehrti (mit Artikel «d Ältischte», «d Schriftglehrte»); lueg (ἰδού); grad (εὐθέως); dänn (τότε); σκανδαλίζομαι gägenüber ere Person «Aastoss näh» (susch «z Fall choo»); προσέρχομαι «härechoo»; ὄχλος «d Mängi», οἱ ὄχλοι «d Lüüt». Im Kapitel 26 neu: παραδίδωμι «uslifere», ποτήριον «Bächer», ἀπαρνέομαι «verleugne», ἀρνέομαι «abstriite», συνέδριον «Hoch Rat», ἀλέκτωρ «Güggel», Καϊάφας «Kajafas».',
  'Mundart: Näme mit Artikel («de Jesus», «de Petrus»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («de Tempel vo Gott»). [[MAT.26.42]] «söll din Wille gscheh» mit de Wort vom Vaterunser ([[MAT.6.10]]).',
@@ -704,7 +704,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-18; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -745,8 +745,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

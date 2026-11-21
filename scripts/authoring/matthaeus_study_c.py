@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäusevangelium Kapitel 15–21 – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen,
-Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Beziehungen, Hintergrund zu Abschnitten, Kapitel-Zusammenfassungen und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Nummernraum dieses Werkzeugs: FIND/INT/PRIN/APP/QUESTION/REL/BG-MAT-3001…3999, STUDY-MAT-0004,
 Zusammenfassungen SUM-CH-MAT-015 bis SUM-CH-MAT-021.
@@ -34,7 +34,7 @@ import _study  # noqa: E402
 DATE = "2026-10-18"
 _study.DATE = DATE
 _study.AUTH = f"KI-Entwurf (Claude) vom {DATE} auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-_study.AUTH_GSW = (f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züridüütsch gefasst; "
+_study.AUTH_GSW = (f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züritüütsch gefasst; "
                    "Mundart noch nicht muttersprachlich geprüft.")
 
 TAGS = ["TAG-MATTHEW"]

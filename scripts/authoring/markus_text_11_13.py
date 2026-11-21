@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Autorenwerkzeug: Markus 11–13 – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT,
+"""Autorenwerkzeug: Markus 11–13 – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT,
 Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/markus_text_11_13.py
@@ -20,7 +20,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-14"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-14 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MARK"]
 CHAPTERS = ((11, 33), (12, 44), (13, 37))
@@ -344,7 +344,7 @@ DEC_GSW = [
  ("MRK.12.10", "zum Eckstei", "interpretive", "κεφαλὴν γωνίας", "zum Chopf vo de Egge", ["zum Schlussstei"], "Zitat us [[PSA.118.22-PSA.118.23]]. Gmeint isch en Stei a ere bsundere Stell: en Eckstei im Fundament oder en Schlussstei obe; beides wird vertrete."),
  ("MRK.12.14", "Stüür", "interpretive", "κῆνσον", "Census", ["Chopfstüür"], "Lehnwort us em Latiinische (census): di direkt Stüür a Rom, z Judäa sit de Iigliederig als Provinz (6 n. Chr.) iizoge und umstritte."),
  ("MRK.12.17", "gänd em Kaiser", "interpretive", "ἀπόδοτε Καίσαρι", "gänd em Kaiser zrugg", ["zahled em Kaiser"], "ἀποδίδωμι heisst «zruggää, gää, was me schuldig isch»; i de Frag isch δοῦναι «gää» gstande ([[MRK.12.14]]). Öb de Satz zwei Bereich näbenand stellt oder de Kaiser under Gott stellt, isch umstritte."),
- ("MRK.12.29", "Los, Israel: De Herr, öise Gott, de Herr isch eine", "literal", "Ἄκουε Ἰσραήλ κύριος ὁ θεὸς ἡμῶν κύριος εἷς ἐστιν", None, ["De Herr isch öise Gott, de Herr elei", "De Herr, öise Gott, isch de einzig Herr"], "S «Schma Israel» ([[DEU.6.4-DEU.6.5]]) nach de griechische Fassig. κύριος staat dört für de Gottesname JHWH. Me cha de Satz als Ussag über d Einzigkeit vo Gott, über sini Einheit oder als Bekänntnis läse, dass Israel nu a ihn bunde isch; d Widergab bliibt bim Wortluut. «Los» isch s züridüütsch Wort für «hör zue»."),
+ ("MRK.12.29", "Los, Israel: De Herr, öise Gott, de Herr isch eine", "literal", "Ἄκουε Ἰσραήλ κύριος ὁ θεὸς ἡμῶν κύριος εἷς ἐστιν", None, ["De Herr isch öise Gott, de Herr elei", "De Herr, öise Gott, isch de einzig Herr"], "S «Schma Israel» ([[DEU.6.4-DEU.6.5]]) nach de griechische Fassig. κύριος staat dört für de Gottesname JHWH. Me cha de Satz als Ussag über d Einzigkeit vo Gott, über sini Einheit oder als Bekänntnis läse, dass Israel nu a ihn bunde isch; d Widergab bliibt bim Wortluut. «Los» isch s züritüütsch Wort für «hör zue»."),
  ("MRK.12.30", "Dänke", "interpretive", "διανοίας", None, ["Verstand", "Gmüet"], "[[DEU.6.5]] nännt im Hebräische drü Glider (Herz, Seel, Chraft); de Markus hät vier, mit διάνοια «Dänke, Verstand»."),
  ("MRK.12.35", "Christus", "literal", "χριστὸς", None, ["Messias", "Gsalbte"], "χριστός heisst «Gsalbte», griechisch für hebräisch Maschiach. Da en Titel, nöd de Name vom Jesus."),
  ("MRK.12.36", "De Herr hät zu mim Herr gseit", "literal", "Εἶπεν κύριος τῷ κυρίῳ μου", None, None, "Zitat us [[PSA.110.1]]. Im Hebräische redt JHWH zu «mim Herr»; im Griechische staat zweimal κύριος."),
@@ -354,7 +354,7 @@ DEC_GSW = [
  ("MRK.13.14", "de Gröiel vo de Verwüeschtig", "traditional", "τὸ βδέλυγμα τῆς ἐρημώσεως", "de Abscheu vo de Verödig", ["s verwüeschtend Schüüsal"], "Usdruck us em Danielbuech ([[DAN.9.27]], [[DAN.11.31]], [[DAN.12.11]]); dört für de heidnisch Altar im Tempel under em Antiochus IV. (vgl. [[1MA.1.54]]). De Markus setzt s Partizip ἑστηκότα männlich, obwohl βδέλυγμα sächlich isch; villicht isch e Person gmeint, drum «won er nöd darf». Wo d Stell druf zielt (Entweihig vom Tempel im Jüdische Chrieg 66–70, de Plan vom Caligula, um 40 n. Chr. e Statue im Tempel ufzstelle, e Gstalt vo de Ändziit), isch umstritte."),
  ("MRK.13.26", "de Mänschesohn", "traditional", "τὸν υἱὸν τοῦ ἀνθρώπου", "de Sohn vom Mänsch", None, "Aaspilig uf [[DAN.7.13]]: eine «wien en Mänschesohn» chunnt mit de Wolche vom Himmel. Bim Markus nännt sich de Jesus sälber so."),
  ("MRK.13.29", "dass s nöch vor de Tür isch", "interpretive", "ὅτι ἐγγύς ἐστιν ἐπὶ θύραις", "dass nöch isch a de Türe", ["dass er nöch vor de Tür isch"], "S Subjekt fehlt: Gmeint cha «er» sii (de Mänschesohn, [[MRK.13.26]]) oder «es» (s Änd, das, wo aagchündet isch)."),
- ("MRK.13.30", "Die Generation", "interpretive", "ἡ γενεὰ αὕτη", None, ["Die Art vo Mänsche", "Das Volk"], "γενεά meint meischt d Mänsche vo ere Ziit, e Generation (vgl. [[MRK.8.12]], [[MRK.8.38]], [[MRK.9.19]]). Dänn bezieht sich «das alles» entweder uf das, wo bis zur Zerstörig vom Tempel (70 n. Chr.) passiert isch, oder es stellt sich d Frag, wieso d Widerchunft usbliibe isch. Anderi verstönd γενεά wiiter (d Mänschheit, s jüdisch Volk). «Gschlächt» seit me i de Mundart chuum; drum «Generation». D hochdüütschi Fassig hät «Geschlecht»."),
+ ("MRK.13.30", "Die Generation", "interpretive", "ἡ γενεὰ αὕτη", None, ["Die Art vo Mänsche", "Das Volk"], "γενεά meint meischt d Mänsche vo ere Ziit, e Generation (vgl. [[MRK.8.12]], [[MRK.8.38]], [[MRK.9.19]]). Dänn bezieht sich «das alles» entweder uf das, wo bis zur Zerstörig vom Tempel (70 n. Chr.) passiert isch, oder es stellt sich d Frag, wieso d Widerchunft usbliibe isch. Anderi verstönd γενεά wiiter (d Mänschheit, s jüdisch Volk). «Gschlächt» seit me i de Mundart chuum; drum «Generation». D hochtüütschi Fassig hät «Geschlecht»."),
  ("MRK.13.32", "au nöd de Sohn, nu de Vatter", "literal", "οὐδὲ ὁ υἱός εἰ μὴ ὁ πατήρ", None, None, "Di einzig Stell bim Markus, wo sich de Jesus eifach «de Sohn» nännt. Dass de Sohn Tag und Stund nöd kännt, hät di spötere Debatte über d Person vo Christus beschäftiget; de Markus seit s ohni Abschwächig."),
  ("MRK.13.35", "wänn de Güggel chräht", "adapted", "ἀλεκτοροφωνίας", "Haneschrei", None, "Di vier Nachtwache nach römischer Zellig. De Haneschrei wiist uf [[MRK.14.72]] voruus."),
  ("MRK.11.32", "für en Prophet ghalte", "adapted", "εἶχον τὸν Ἰωάννην ὄντως ὅτι προφήτης ἦν", "händ de Johannes ghaa, dass er würkli en Prophet gsii isch", None, "ἔχω mit ὅτι heisst da «halte für»; d Mundart seit das mit «für … halte»."),
@@ -580,8 +580,8 @@ NOTES_DE = ["KI-Entwurf ohne fachliche Prüfung.",
             "Die grosse Rede Jesu reicht von [[MRK.13.5]] bis [[MRK.13.37]]; die Anführungszeichen markieren das.",
             "Eigene Formulierung; nicht aus einer veröffentlichten deutschen Bibel übernommen."]
 NOTES_GSW = ["KI-Entwurf ohni fachlichi Prüefig.", ("D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach "
-  "de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
- ("Mundart nach docs/ZUERIDUEUETSCH.md: Schriibig nöch am Hochdüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochdüütsche); "
+  "de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log."),
+ ("Mundart nach docs/ZUERITUEUETSCH.md: Schriibig nöch am Hochtüütsche (nu ä, ö, ü; ei und Dehnigs-h wie im Hochtüütsche); "
   "Näme mit Artikel («de Jesus», «de Petrus»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Riich vo Gott»); "
   "«öis», «öi»; Künftigs meischtens im Präsens; Passiv nu, wo s de Urtext bruucht (göttlichs Passiv)."),
              ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1, "
@@ -608,7 +608,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      "KI-Entwurf (Claude) vom 2026-10-14; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mrk").glob("VAR-SBLGNTAPP-MRK-01[123]-*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -647,8 +647,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MRK.{c}.1-MRK.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MRK-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

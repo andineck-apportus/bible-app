@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Matthäus 24–25 (Rede über das Ende: Bedrängnis, Kommen des Menschensohns, Gleichnisse vom
-Warten, Gericht über die Völker) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züridüütsch) aus dem SBLGNT,
+Warten, Gericht über die Völker) – Texteinheiten, Arbeitsübersetzungen (Hochdeutsch, Züritüütsch) aus dem SBLGNT,
 Übersetzungsentscheidungen, Lesarten-Alternativen und vollständige Wortzuordnung.
 
 Aufruf: python3 scripts/authoring/matthaeus_text_24_25.py
@@ -30,7 +30,7 @@ from _lib import D, alignment_entries, load_tokens, write  # noqa: E402
 DATE = "2026-10-18"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
 AUTH_GSW = ("KI-Entwurf (Claude) vom 2026-10-18 auf Wunsch von Andi Neck; am 2026-11-21 neu übersetzt (KI-Entwurf, Claude) aus dem "
-            "griechischen Text (SBLGNT) nach docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
+            "griechischen Text (SBLGNT) nach docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt). Prüfung der Mundart durch eine "
             "muttersprachliche Person (vorgesehen: Andi Neck) noch nicht erfolgt.")
 TAGS = ["TAG-MATTHEW"]
 CHAPTERS = ((24, 51), (25, 46))
@@ -441,14 +441,14 @@ DEC_GSW = [
  ("MAT.24.2", "bliibt", "adapted", "ἀφεθῇ", "wird glaa", None,
   "S Passiv «glaa wärde» tönt i de Mundart steif; «bliibt» seit s gliich und folgt de Markus-Übersetzig ([[MRK.13.2]])."),
  ("MAT.24.3", "Aachunft", "interpretive", "παρουσίας", "Aawäsehait, Aachunft", ["s Choo", "d Widerchunft"],
-  "παρουσία heisst «Aachunft, Aawäsehait» (z. B. bim Bsuech vomene Herrscher). Im Hochdüütsche «Kommen»; i de Mundart tönt «d Aachunft» natürlicher als «s Choo». «Widerchunft» treit e spöteri Düütig ii. Einheitlich i [[MAT.24.3]], [[MAT.24.27]], [[MAT.24.37]], [[MAT.24.39]]; dört mit «so isch es mit de Aachunft» statt em Futur «so wird d Aachunft sii»."),
+  "παρουσία heisst «Aachunft, Aawäsehait» (z. B. bim Bsuech vomene Herrscher). Im Hochtüütsche «Kommen»; i de Mundart tönt «d Aachunft» natürlicher als «s Choo». «Widerchunft» treit e spöteri Düütig ii. Einheitlich i [[MAT.24.3]], [[MAT.24.27]], [[MAT.24.37]], [[MAT.24.39]]; dört mit «so isch es mit de Aachunft» statt em Futur «so wird d Aachunft sii»."),
  ("MAT.24.3", "vo de Vollendig vo de Wältziit", "literal", "συντελείας τοῦ αἰῶνος", None, ["vom Änd vo de Wält"],
   "αἰών isch e Ziitspanne, es Ziitalter, nöd de Ruum vo de Wält. D Wändig staat nu bim Matthäus ([[MAT.13.39]], [[MAT.13.49]], [[MAT.28.20]]) und wird einheitlich so widergää."),
  ("MAT.24.4", "i d Irri füert", "adapted", "πλανήσῃ", "irrefüert", ["verfüert"],
   "πλανάω «i d Irri füere», durchgehend (wie bim Markus)."),
  ("MAT.24.5", "chömed", "adapted", "ἐλεύσονται", "wärded choo", None,
   "Künftigs im Präsens mit Ziitaagab, wie s d Mundart seit; ebenso i de Red [[MAT.24.7]]–[[MAT.24.11]], [[MAT.24.24]], [[MAT.24.30]]–[[MAT.24.31]], [[MAT.24.40]]–[[MAT.24.41]]. «Wärde» bliibt, wo de Text s Künftig betont ([[MAT.24.6]]) oder bim göttliche Passiv."),
- ("MAT.24.7", "da und dört", "adapted", "κατὰ τόπους", "a verschidene Orte", None, "So seit me s im Züridüütsch."),
+ ("MAT.24.7", "da und dört", "adapted", "κατὰ τόπους", "a verschidene Orte", None, "So seit me s im Züritüütsch."),
  ("MAT.24.9", "dass ir plaget wärded", "adapted", "εἰς θλῖψιν", "i d Bedrängnis", None,
   "«Plaage» seit, was θλῖψις meint; i [[MAT.24.21]] und [[MAT.24.29]] staat s Substantiv «Bedrängnis»."),
  ("MAT.24.10", "z Fall", "interpretive", "σκανδαλισθήσονται", None, ["Aastoss näh", "abfalle"],
@@ -470,7 +470,7 @@ DEC_GSW = [
  ("MAT.24.31", "Posuune", "traditional", "σάλπιγγος", None, ["Trumpete"],
   "σάλπιγξ isch es Blasinstrumänt; «Posuune» isch di gwohnt Widergab."),
  ("MAT.24.34", "Generation", "interpretive", "ἡ γενεὰ", None, ["Gschlächt", "Volk"],
-  "γενεά heisst «Gschlächt, Generation, d Lüüt vo ere Ziit»; i de Mundart «Generation» wie bim Markus ([[MRK.13.30]]). Was gmeint isch, isch umstritte (lueg d hochdüütschi Entscheidig)."),
+  "γενεά heisst «Gschlächt, Generation, d Lüüt vo ere Ziit»; i de Mundart «Generation» wie bim Markus ([[MRK.13.30]]). Was gmeint isch, isch umstritte (lueg d hochtüütschi Entscheidig)."),
  ("MAT.24.38", "ghürate", "literal", "γαμοῦντες", None, None,
   "γαμέω «hürate», γαμίζω «verhürate» (d Töchtere dur d Vätter)."),
  ("MAT.24.40", "wird mitgnoo", "interpretive", "παραλαμβάνεται", None, ["wird aagnoo", "wird wäggnoo"],
@@ -479,7 +479,7 @@ DEC_GSW = [
   "γρηγορέω «wach sii»; i de Mundart «wach bliibe», wie bim Markus ([[MRK.13.35]])."),
  ("MAT.24.43", "dass me i sis Huus iibricht", "adapted", "διορυχθῆναι τὴν οἰκίαν αὐτοῦ", "dass sis Huus ufbroche wird", None, "S Passiv isch als Aktiv mit «me» widergää."),
  ("MAT.24.45", "Chnächt", "interpretive", "δοῦλος", "Sklav", ["Sklav", "Diener"],
-  "δοῦλος isch rächtlich en Sklav; «Chnächt» folgt de Markus-Übersetzig und de biblische Tradition (lueg di hochdüütschi Entscheidig)."),
+  "δοῦλος isch rächtlich en Sklav; «Chnächt» folgt de Markus-Übersetzig und de biblische Tradition (lueg di hochtüütschi Entscheidig)."),
  ("MAT.24.45", "gschiid", "literal", "φρόνιμος", None, ["klug", "verständig"],
   "φρόνιμος «klug»; i de Mundart «gschiid», ebeso bi de gschiide Jungfraue ([[MAT.25.2]])."),
  ("MAT.24.46", "Sälig", "traditional", "μακάριος", None, ["Glücklich", "Wohl däm"],
@@ -491,7 +491,7 @@ DEC_GSW = [
  ("MAT.24.51", "Hüüle und Zändchnirsche", "literal", "ὁ κλαυθμὸς καὶ ὁ βρυγμὸς τῶν ὀδόντων", None, ["Briegge und Zändchnirsche"],
   "Gmeinsami Widergab fürs Matthäusevangelium. Feschti Wändig bim Matthäus ([[MAT.8.12]], [[MAT.13.42]], [[MAT.22.13]], [[MAT.25.30]]); «hüüle» heisst i de Mundart «weine». Statt «wird … sii» staat «git s»."),
  ("MAT.25.1", "Jungfraue", "traditional", "παρθένοις", None, ["jungi Fraue", "Brautjungfere", "Jungfraue"],
-  "παρθένος isch e jungi, unghürateti Frau. «Jumpfer» isch hüt altmodisch; nach docs/ZUERIDUEUETSCH.md im Zwiifel nöch am Hochdüütsche «Jungfraue». Im Gliichnis begleited si de Hochziitszug."),
+  "παρθένος isch e jungi, unghürateti Frau. «Jumpfer» isch hüt altmodisch; nach docs/ZUERITUEUETSCH.md im Zwiifel nöch am Hochtüütsche «Jungfraue». Im Gliichnis begleited si de Hochziitszug."),
  ("MAT.25.1", "isch es mit em Himmelriich wie", "adapted", "ὁμοιωθήσεται ἡ βασιλεία τῶν οὐρανῶν", "wird s Himmelriich gliich sii wie", ["wird s gaa wie"],
   "S Futur bezieht s Gliichnis uf d Ziit vo de Aachunft («Dänn»); d Mundart seit Künftigs im Präsens."),
  ("MAT.25.2", "dumm", "adapted", "μωραὶ", "tööricht", ["unvernünftig"],
@@ -505,7 +505,7 @@ DEC_GSW = [
  ("MAT.25.15", "Grad", "interpretive", "εὐθέως", None, ["und isch grad verreist"],
   "De SBLGNT setzt de Punkt vor εὐθέως und zieht s Wort zum nächschte Satz; anderi Usgabe zum Vorige («und isch grad verreist»). D Übersetzig folgt em SBLGNT."),
  ("MAT.25.16", "gschäftet", "adapted", "ἠργάσατο", "gschaffet", None, "ἐργάζομαι mit Gäld: Gschäft mache."),
- ("MAT.25.21", "Im Chliine", "adapted", "ἐπὶ ὀλίγα", "Über wenig", None, "So seit me s im Züridüütsch; ebenso [[MAT.25.23]]."),
+ ("MAT.25.21", "Im Chliine", "adapted", "ἐπὶ ὀλίγα", "Über wenig", None, "So seit me s im Züritüütsch; ebenso [[MAT.25.23]]."),
  ("MAT.25.21", "setze ich", "adapted", "καταστήσω", "wird ich setze", None,
   "D Mundart seit Zuekünftigs gern im Präsens; «setze ich» staat für s griechisch Futur."),
  ("MAT.25.24", "gsäit", "literal", "ἔσπειρας", None, None, "«Gsäit» (vo «säie», säen), nöd z verwächsle mit «gseit»."),
@@ -775,7 +775,7 @@ NOTES_DE = [
 ]
 NOTES_GSW = [
  'KI-Entwurf ohni fachlichi Prüefig. Eigeti Formulierig; nöd us ere veröffentlichte Mundart-Bible übernoo.',
- 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERIDUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
+ 'D Mundart isch no nöd vo ere muettersprachliche Person prüeft. Neu übersetzt am 2026-11-21 us em Griechische nach de Regle i docs/ZUERITUEUETSCH.md (Gallmann, SRF-Merkblatt); di früener Fassig staat im revision_log.',
  'D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) uf Grundlag vo de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte.',
  'Begriff (einheitlich fürs Matthäusevangelium): s Himmelriich; de Mänschesohn; «Amen, ich säge öi»; lueg; grad; dänn; de Christus; Hüüchler. Neu i däm Bereich: παρουσία «d Aachunft»; συντέλεια τοῦ αἰῶνος «d Vollendig vo de Wältziit»; σκανδαλίζω aktiv «z Fall bringe», passiv «Aastoss näh» bzw. «z Fall choo»; προσέρχομαι «härechoo»; μακάριος «sälig»; δοῦλος «Chnächt»; ἐκλεκτοί «d Userwählte»; πλανάω «i d Irri füere»; φρόνιμος «gschiid», μωρός «dumm»; γρηγορέω «wach bliibe»; παρθένοι «Jungfraue»; τάλαντον «Talänt»; γενεά «Generation»; «s Hüüle und s Zändchnirsche».',
  'Mundart: Näme mit Artikel («de Jesus», «de Noah»); Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Zeiche vom Mänschesohn»); Zuekünftigs oft im Präsens («er stellt», «setze ich dich»). D Red vom Jesus lauft vo [[MAT.24.4]] bis [[MAT.25.46]] und staat ohni üsseri Aafüerigszeiche; wörtlichi Red drin staat in «…».',
@@ -797,7 +797,7 @@ def run():
         n += write(D / "text-units" / f"{uid}.json", rec)
         gt, gs = UNITS_GSW[uid]
         n += localize(uid, rec, {"title": gt, "summary_de": gs}, "gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026",
-                      f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
+                      f"KI-Entwurf (Claude) vom {DATE}; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft.", DATE)
     variants = {}
     for p in (D / "variants" / "sblgntapp-mat").glob("*.json"):
         v = json.loads(p.read_text(encoding="utf-8"))
@@ -837,8 +837,8 @@ def run():
             rec = {"id": tid, "type": "translation", "status": "draft", "tags": TAGS, "reference": f"MAT.{c}.1-MAT.{c}.{last}",
                    "language": "de-CH" if lang == "de" else "gsw-u-sd-chzh", "translation_kind": "literal_original_working"}
             if lang == "gsw":
-                rec.update({"language_label_de": "Züridüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
-                            "orthography_de": "Nach docs/ZUERIDUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
+                rec.update({"language_label_de": "Züritüütsch", "language_name_de": "Zürichdeutsch", "target_context": "CTX-CH-ZH-GSW-2026",
+                            "orthography_de": "Nach docs/ZUERITUEUETSCH.md (Stand 2026-11-21): Schreibung nahe am Hochdeutschen nach dem SRF-Merkblatt (nur ä, ö, ü als Sonderzeichen; ei und Dehnungs-h wie im Hochdeutschen; lange Vokale doppelt, wo das Hochdeutsche keine Hilfe gibt: Liecht, Riich, Huus); Wortformen nach Gallmann, Zürichdeutsches Wörterbuch.",
                             "register_de": "Nah am griechischen Wortlaut, aber so, wie man es heute in Zürich erzählt: Mundart-Satzbau, Perfekt statt Präteritum, «wo» als Relativpartikel, kein Genitiv, Namen mit Artikel, Mundartwörter statt Hochdeutsch mit Mundart-Endung, Zukunft meist im Präsens, Aktiv statt Passiv ausser beim göttlichen Passiv. Jede Abweichung vom Wörtlichen ist in decisions markiert.",
                             "control_translation": f"TRANS-MAT-{c:03d}-001-{last:03d}-DE-WORKING",
                             "review_de": "Mundart noch nicht geprüft. Vorgesehen: Prüfung durch Andi Neck (Muttersprachler), mit Datum einzutragen."})

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Autorenwerkzeug: Titusbrief – Befunde, Deutungen, Grundsätze, Anwendungen, offene Fragen, Beziehungen,
-Hintergrund (Abschnitte und Buch), Kapitel-Zusammenfassungen, Kontext und Studie; jeweils mit Züridüütsch-Lokalisierung.
+Hintergrund (Abschnitte und Buch), Kapitel-Zusammenfassungen, Kontext und Studie; jeweils mit Züritüütsch-Lokalisierung.
 
 Aufruf: python3 scripts/authoring/titus_study.py
 KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt.
@@ -13,7 +13,7 @@ from _lib import D, localize, write  # noqa: E402
 
 DATE = "2026-10-13"
 AUTH = "KI-Entwurf (Claude) vom 2026-10-13 auf Wunsch von Andi Neck; keine fachliche Prüfung erfolgt."
-AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züridüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
+AUTH_GSW = "KI-Entwurf (Claude) vom 2026-10-13; aus dem Hochdeutschen in Züritüütsch gefasst; Mundart noch nicht muttersprachlich geprüft."
 TAGS = ["TAG-TITUS"]
 KN = {"asserted_at": DATE, "supersedes": None}
 L = ("gsw-u-sd-chzh", "GSW-ZH", "CTX-CH-ZH-GSW-2026")

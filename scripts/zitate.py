@@ -3,7 +3,7 @@
 
 Ein Zitat steht in «…» (innere Anführung ‹…›); Auslassungen mit «…». Es muss wörtlich in der Übersetzungsschicht der
 Sprache stehen, in der der Erklärtext geschrieben ist: Hochdeutsch (Originalfeld `_de`) gegen die hochdeutsche
-Arbeitsübersetzung, eine Lokalisierung gegen die Arbeitsübersetzung ihrer Sprache (z. B. Züridüütsch gegen die
+Arbeitsübersetzung, eine Lokalisierung gegen die Arbeitsübersetzung ihrer Sprache (z. B. Züritüütsch gegen die
 Mundart-Schicht). Gesucht wird in den Versen der Stelle: Stellenmarken [[…]] im Text und die Stelle des Bezugs
 (Texteinheit, Kapitel, Buch). Gross-/Kleinschreibung und Satzzeichen zählen nicht, Wörter und Wortformen schon.
 
