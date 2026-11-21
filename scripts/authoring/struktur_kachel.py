@@ -141,8 +141,9 @@ def _kette(sx, el, y0):
     h = min(60, (H - y0 - 14 - gap * (n - 1)) / n)
     for i, e in enumerate(el):
         y = y0 + i * (h + gap)
-        o.append(box(90, y, 420, h, "a" if e.get("betont") else "n", e.get("betont")))
-        svg, _ = zweisprachig(W / 2, y + h / 2 - (4 if h > 46 else 0), e, 40, anchor="middle", weight=600 if e.get("betont") else 400)
+        o.append(box(90, y, 420, h, "a" if e.get("betont") else "n", e.get("betont"), e.get("gestrichen")))
+        svg, _ = zweisprachig(W / 2, y + h / 2 - (4 if h > 46 else 0), e, 40, anchor="middle", weight=600 if e.get("betont") else 400,
+                              fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
         o.append(svg)
         if e.get("ref"):
             o.append(ref_text(500, y + h - 7, e["ref"], "end"))
