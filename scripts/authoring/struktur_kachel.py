@@ -15,17 +15,19 @@ Feste Prüfungen (pruefe): Beschriftungen kurz genug, Stellen gültig, beide Spr
 import html
 import math
 
-BREITE = 340
-RAND, PAD, LUECKE = 8, 6, 6
-PAPER, INK, MUTED, RULE = "#FBF8F1", "#3E413B", "#7A7C73", "#DDD5C6"
-FARBE = {"a": ("#EFE3D4", "#BD8067"), "b": ("#E3EAEC", "#6F8F9B"), "n": ("#ECEEE6", "#8A9378"), "akzent": "#A4532A"}
+BREITE = 440         # App zeigt gezeichnete und gemalte Kacheln bis 480 px breit (Rückmeldung 2026-11-21: 340 war zu klein)
+RAND, PAD, LUECKE = 12, 9, 8
+# Frisches Farbschema (Rückmeldung Andi Neck 2026-11-21: Beige und Ränder wirkten alt und verwelkt): helle Fläche, weisse Karten
+# mit weichem Schatten statt Rand, klare Akzente Koralle (Seite a), Petrol (Seite b), Sonnengelb (betont).
+PAPER, INK, MUTED, RULE = "#F7F8F6", "#22292C", "#7A8489", "#DCE1E3"
+FARBE = {"a": ("#FFF0EA", "#D9583B"), "b": ("#E7F4F4", "#1F8790"), "n": ("#FFFFFF", "#5E7A3A"), "akzent": "#D9583B"}
 SANS = "Inter, Helvetica, Arial, sans-serif"
-SERIF = "Georgia, 'Times New Roman', serif"
-FS, FS_KLEIN, FS_REF, FS_TITEL = 12.5, 11.5, 9.5, 15
+SERIF = SANS
+FS, FS_KLEIN, FS_REF, FS_TITEL = 14, 13, 10.5, 17
 ZW = 0.56            # mittlere Zeichenbreite (Anteil der Schriftgrösse), mit Reserve; die Layoutprüfung misst nach
 ZH = 1.25            # Zeilenhöhe
-BILD_H = 40          # Höhe der Bildzeile eines Glieds
-BETONT = "#EDD3B4"   # Fläche betonter Glieder (Höhepunkt, Pointe)
+BILD_H = 56          # Höhe der Bildzeile eines Glieds
+BETONT = "#FFE7A8"   # Fläche betonter Glieder (Höhepunkt, Pointe)
 _V = {}              # Bilder der Kachel, die gerade gezeichnet wird: Schlüssel («1», «2», …, «m») → Liste
 
 
@@ -56,22 +58,22 @@ def ref_text(x, y_unten, ref, anchor="end"):
             f'{esc(stelle(ref))}</text>') if ref else ""
 
 
-def box(x, y, w, h, seite="n", betont=False, gestrichen=False, rx=6):
-    fill, rand = FARBE.get(seite, FARBE["n"])
+def box(x, y, w, h, seite="n", betont=False, gestrichen=False, rx=10):
+    fill, _ = FARBE.get(seite, FARBE["n"])
     if gestrichen:
-        fill = "#EEEAE3"
+        fill = "#EEF0F0"
     if betont:   # wärmere Fläche statt Rahmen in Akzentfarbe (wirkte wie «ausgewählt», Rückmeldung 2026-11-21)
         fill = BETONT
-    return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{rx}" fill="{fill}" stroke="{rand}" stroke-width=".9" stroke-opacity=".55"/>'
+    return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{rx}" fill="{fill}" filter="url(#sk-schatten)"/>'
 
 
 def pfeil(x1, y1, x2, y2, farbe=MUTED):
-    return f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{farbe}" stroke-width="1.4" marker-end="url(#sk-pf)"/>'
+    return f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{farbe}" stroke-width="1.8" stroke-linecap="round" marker-end="url(#sk-pf)"/>'
 
 
 def marke_svg(x, y, m):
-    return (f'<circle cx="{x + 7:.1f}" cy="{y + 7:.1f}" r="7" fill="{PAPER}" stroke="{FARBE["n"][1]}" stroke-width=".9"/>'
-            f'<text x="{x + 7:.1f}" y="{y + 10.3:.1f}" font-family="{SANS}" font-size="9" text-anchor="middle" fill="{INK}">{esc(m)}</text>')
+    return (f'<circle cx="{x + 9:.1f}" cy="{y + 9:.1f}" r="9" fill="{INK}" fill-opacity=".86"/>'
+            f'<text x="{x + 9:.1f}" y="{y + 13:.1f}" font-family="{SANS}" font-size="11" font-weight="600" text-anchor="middle" fill="#FFFFFF">{esc(m)}</text>')
 
 
 class Glied:
@@ -81,7 +83,7 @@ class Glied:
         self.e, self.k, self.b, self.marke, self.seite, self.fs, self.anchor = e, k, breite, marke, seite, fs, anchor
         self.bild = bool(k is not None and _V.get(str(k)))
         self.bild_h = bild_h if self.bild else 0
-        self.links = 18 if marke is not None else 0
+        self.links = 24 if marke is not None else 0
         self.iw = breite - 2 * PAD - self.links
         laengstes = max((len(w) for lg in ("de", "gsw") for w in (e.get(lg) or "").split()), default=1)
         while laengstes * fs * ZW > self.iw and fs > 9.5:   # langes Wort (z. B. «Versöhnungstag») in schmaler Zelle: Schrift kleiner
@@ -89,11 +91,11 @@ class Glied:
         self.fs = fs
         _, z = zeilen(e, self.iw, fs)
         self.th = z * fs * ZH
-        self.ref_h = 11 if e.get("ref") else 0
+        self.ref_h = 13 if e.get("ref") else 0
         oben = max(self.bild_h + (4 if self.bild else 0), 0)
         self.h = PAD + oben + self.th + self.ref_h + PAD
         if marke is not None:
-            self.h = max(self.h, 2 * PAD + 14)
+            self.h = max(self.h, 2 * PAD + 18)
 
     def svg(self, x, y, h=None):
         h = h or self.h
@@ -120,7 +122,7 @@ def titel(sx, y):
     t = sx.get("titel")
     if not t:
         return "", y
-    s, h = text(BREITE / 2, y, t, BREITE - 2 * RAND, FS_TITEL, serif=True, fill="#4A3B2E")
+    s, h = text(BREITE / 2, y, t, BREITE - 2 * RAND, FS_TITEL, fill=INK, weight=650)
     return s, y + h + LUECKE
 
 
@@ -137,7 +139,7 @@ def zeichne(sx, vignetten=None):
     el = sx.get("elemente") or []
     inhalt, y = globals()[f"_{sx['typ']}"](sx, el, y)
     hoehe = y + RAND
-    return (DEFS + f'<rect width="{BREITE}" height="{hoehe:.1f}" fill="{PAPER}"/><rect width="{BREITE}" height="{hoehe:.1f}" fill="url(#sk-wash)"/>'
+    return (DEFS + f'<rect width="{BREITE}" height="{hoehe:.1f}" fill="{PAPER}"/>'
             + teile + inhalt), hoehe
 
 
@@ -235,7 +237,7 @@ def _kurve(sx, el, y):
     o = []
     ab = [e for e in el if e.get("richtung") == "ab"]
     auf = [e for e in el if e.get("richtung") == "auf"]
-    stufe = 14
+    stufe = 18
     voll = BREITE - 2 * RAND
     folge = [(e, i, "ab") for i, e in enumerate(ab)] + ([(sx["mitte"], len(ab), "mitte")] if sx.get("mitte") else []) \
         + [(e, len(auf) - 1 - i, "auf") for i, e in enumerate(auf)]
@@ -335,8 +337,8 @@ def _ringe(sx, el, y):
     if rest is not None and sx.get("mitte"):
         paare.append((rest, None))
     marken = "ABCDEF"
-    farben = ["#F3EADF", "#EEF1EA", "#F6EEE3", "#EDF0EE"]
-    einzug = 9
+    farben = ["#FFF0EA", "#E7F4F4", "#FFF6E4", "#EEF6EA"]
+    einzug = 12
     # Höhen der Bänder vorab
     def band(i, e, m):
         if not e:
@@ -357,12 +359,12 @@ def _ringe(sx, el, y):
     for i, ((ho, go), (hu, gu)) in enumerate(zip(oben, unten)):
         x, w = RAND + i * einzug, BREITE - 2 * (RAND + i * einzug)
         o.append(f'<rect x="{x}" y="{y_top:.1f}" width="{w}" height="{y_bot - y_top:.1f}" rx="{10 - i}" fill="{farben[i % 4]}" '
-                 f'stroke="{FARBE["a"][1] if i % 2 == 0 else FARBE["b"][1]}" stroke-opacity=".45" stroke-width=".9"/>')
+                 f'filter="url(#sk-schatten)"/>')
         for g, yy, hh in ((go, y_top, ho), (gu, y_bot - hu, hu)):
             if not g:
                 continue
             o.append(marke_svg(x + PAD - 2, yy + PAD - 2, g.marke))
-            s, _ = text(x + PAD + 20, yy + PAD, g.e, w - 2 * PAD - 20, FS, anchor="start", weight=600 if g.e.get("betont") else 400)
+            s, _ = text(x + PAD + 26, yy + PAD, g.e, w - 2 * PAD - 26, FS, anchor="start", weight=600 if g.e.get("betont") else 400)
             o.append(s + ref_text(x + w - PAD, yy + hh - PAD + 2, g.e.get("ref")))
         y_top += ho
         y_bot -= hu
@@ -377,7 +379,7 @@ def _lager(sx, el, y):
     o = []
     seiten = {e.get("seite"): e for e in el}
     nr = {e.get("seite"): k for k, e in enumerate(el, 1)}
-    sw = 92
+    sw = 122
     cw = BREITE - 2 * RAND - 2 * sw - 2 * LUECKE
     cx = RAND + sw + LUECKE
     mitte = []
@@ -449,7 +451,8 @@ def umbruch(s, n):
 
 
 DEFS = ('<defs><marker id="sk-pf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">'
-        '<path d="M0 0L10 5L0 10z" fill="#7A7C73"/></marker>'
+        '<path d="M0 0L10 5L0 10z" fill="#7A8489"/></marker>'
+        '<filter id="sk-schatten" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="1" stdDeviation="1.6" flood-color="#22292C" flood-opacity=".13"/></filter>'
         '<radialGradient id="sk-wash" cx="30%" cy="25%" r="80%"><stop offset="0" stop-color="#EFE6D6" stop-opacity=".9"/>'
         '<stop offset="1" stop-color="#FBF8F1" stop-opacity="0"/></radialGradient>'
         '<radialGradient id="sk-glorie" r="50%"><stop offset=".3" stop-color="#E9B954" stop-opacity=".95"/><stop offset="1" stop-color="#E9B954" stop-opacity="0"/></radialGradient>'
