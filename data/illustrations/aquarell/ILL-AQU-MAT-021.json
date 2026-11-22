@@ -29,8 +29,8 @@
       "scene": "MAT-021-M1",
       "image": "img/MAT-021-M1.webp",
       "model": "gpt-image-2.5-flare",
-      "run": "20261122-081313-auto-neu",
-      "variant": "r1v2",
+      "run": "20261122-135033-auto-neu",
+      "variant": "r2v1",
       "reference": "MAT.21.1-MAT.21.11",
       "speech": []
     },
@@ -38,7 +38,7 @@
       "scene": "MAT-021-M2",
       "image": "img/MAT-021-M2.webp",
       "model": "gpt-image-2.5-flare",
-      "run": "20261122-081313-auto-neu",
+      "run": "20261122-135033-auto-neu",
       "variant": "r1v1",
       "reference": "MAT.21.12-MAT.21.22",
       "speech": []
@@ -131,17 +131,17 @@
     "supersedes": null
   },
   "check": {
-    "stufe": "entwurf",
+    "stufe": "ki-geprueft",
     "process": "PROC-BILD-AQUARELL@2.4",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
         "scene": "MAT-021-M1",
-        "ergebnis": "durchgefallen",
+        "ergebnis": "bestanden",
         "punkte": 5,
         "kern": 2,
-        "bild_sha": "a032c2e51db3e884",
-        "plan_sha": "584ed77bea481ed1",
+        "bild_sha": "f18ec7b85898bc52",
+        "plan_sha": "d0cfbfe9f6ca4d41",
         "regeln_version": "2026-10-28d",
         "datum": "2026-11-22",
         "modell": "gpt-6.1-terra + gpt-5.5",
@@ -169,7 +169,7 @@
           {
             "id": "G-MODERN",
             "stufe": "pflicht",
-            "ergebnis": "fehler"
+            "ergebnis": "ok"
           },
           {
             "id": "G-KOERPER",
@@ -217,24 +217,21 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [
-          "Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: A man on the right wears a head covering with dark stripes.)"
-        ],
-        "veraltet": true,
+        "offen_de": [],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 2,
-          "bild_sha": "7b36db0bee9aa13d",
+          "bild_sha": "0f9ad0310d821fea",
           "offen_de": []
         }
       },
       {
         "scene": "MAT-021-M2",
-        "ergebnis": "durchgefallen",
+        "ergebnis": "bestanden",
         "punkte": 4,
         "kern": 1,
-        "bild_sha": "9d1d5940c8dc881d",
-        "plan_sha": "ea78d4b4de816a5c",
+        "bild_sha": "bf8c154ce56205b5",
+        "plan_sha": "6b6db8efd08e3fa8",
         "regeln_version": "2026-10-28d",
         "datum": "2026-11-22",
         "modell": "gpt-6.1-terra + gpt-5.5",
@@ -262,7 +259,7 @@
           {
             "id": "G-MODERN",
             "stufe": "pflicht",
-            "ergebnis": "fehler"
+            "ergebnis": "ok"
           },
           {
             "id": "G-KOERPER",
@@ -310,16 +307,13 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [
-          "Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: The man on the right wears a head covering with dark stripes.)"
-        ],
-        "veraltet": true,
+        "offen_de": [],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 1,
-          "bild_sha": "9332bf5196c924af",
+          "bild_sha": "8a82d448e124d4e6",
           "offen_de": [
-            "Moment nicht ganz getroffen: Das Verdorren des Feigenbaums auf Jesu Wort am nächsten Morgen fehlt."
+            "Moment nicht ganz getroffen: Der am nächsten Morgen auf Jesu Wort verdorrte Feigenbaum fehlt."
           ]
         }
       },
@@ -499,11 +493,7 @@
       }
     ],
     "open_de": [
-      "MAT-021-M1: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "MAT-021-M1: Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: A man on the right wears a head covering with dark stripes.)",
-      "MAT-021-M2: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "MAT-021-M2: Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: The man on the right wears a head covering with dark stripes.)",
-      "MAT-021-M2 (Kachel): Moment nicht ganz getroffen: Das Verdorren des Feigenbaums auf Jesu Wort am nächsten Morgen fehlt.",
+      "MAT-021-M2 (Kachel): Moment nicht ganz getroffen: Der am nächsten Morgen auf Jesu Wort verdorrte Feigenbaum fehlt.",
       "MAT-021-M3 (Kachel): Moment nicht ganz getroffen: Jesu Gegenfrage zur Taufe des Johannes und das Gleichnis von den zwei Söhnen samt Aussage über Zöllner und Prostituierte fehlen.",
       "MAT-021-M4 (Kachel): Moment nicht ganz getroffen: Die Tötung des Sohnes wird nicht gezeigt; auch das Wort vom verworfenen Stein als Eckstein fehlt."
     ],
