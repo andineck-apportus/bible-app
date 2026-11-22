@@ -100,6 +100,11 @@ def pruefe(d, buch):
         for i, x in enumerate(fe, 1):
             if len(x.get("bild_en") or "") < 150:
                 f.append(f"Kapitel {k} Feld {i}: bild_en fehlt oder zu kurz")
+            if i <= len(b["panels"]):   # Stichwortband höchstens 54 Zeichen (bilder_aquarell.BAND_MAX), sonst «band» mit Wortlaut aus dem Text
+                kw = x.get("band") or b["panels"][i - 1].get("keywords") or {}
+                for lg in ("de", "gsw"):
+                    if len(kw.get(lg) or "") > 54:
+                        f.append(f"Kapitel {k} Feld {i}: Band ({lg}) länger als 54 Zeichen – «band» setzen")
             if not x.get("kern_en", "").endswith("?") or not x.get("kern_de"):
                 f.append(f"Kapitel {k} Feld {i}: kern_en (Ja-Frage) und kern_de nötig")
             for fid in x.get("depicts") or []:
@@ -132,6 +137,7 @@ def schreibe(buch, d):
                 "depicts": x.get("depicts", []),
                 "bild_en": x["bild_en"].rstrip() + f" COLOUR OF THIS CHAPTER: the whole picture is dominated by {pal}; keep the rest of the palette quiet.",
                 "speech": [],
+                **({"band": x["band"]} if x.get("band") else {}),   # Band gekürzt, wenn das Stichwort des Bildauftrags zu lang ist
                 "evidence": [{"s": "B", "ref": pa["reference"], "de": pa["action_de"]},
                              {"s": "R", "de": "Kleidung, Landschaft, Gegenstände: plausible Ausgestaltung nach Epoche und Ort."},
                              {"s": "I", "de": "Gesichtsausdruck, Haltung und Grundfarbe des Kapitels: gestaltet, vom Text nicht genannt."}],

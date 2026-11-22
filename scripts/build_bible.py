@@ -395,7 +395,7 @@ def _kapitelleiste():
                 im.save(buf, "WEBP", quality=72, method=6)
                 h = hashlib.sha1(buf.getvalue()).hexdigest()[:16]
                 FIGS[h] = buf.getvalue()
-                felder.append({"img": f"fig/{h}.webp", "band": pa.get("keywords") or {}})
+                felder.append({"img": f"fig/{h}.webp", "band": plan["szenen"][sid].get("band") or pa.get("keywords") or {}})
             if felder:
                 out.setdefault(code, []).append({"c": int(c), "farbe": (b.get("merkbild") or {}).get("farbe"), "felder": felder})
     return out
