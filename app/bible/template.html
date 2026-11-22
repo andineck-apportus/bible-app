@@ -1824,8 +1824,9 @@ function menuSheet(){
   renderResults();
 }
 // Bildlexikon je Stil: alle Lexikon-Einträge, die der Stil zeichnet, nach Art geordnet
-function figIndexSheet(styleKey){const t=T(),L=lang==='de',keys=Object.keys(ILL.styles||{}).sort((a,b)=>(a==='symbol'?0:1)-(b==='symbol'?0:1));
-  const k=styleKey||(ILL.styles[S.ill]?S.ill:keys[0]),st=ILL.styles[k];if(!st)return;
+function figIndexSheet(styleKey){const t=T(),L=lang==='de',keys=Object.keys(ILL.styles||{}).sort((a,b)=>(a==='aquarell'?0:1)-(b==='aquarell'?0:1));
+  // Vorgabe: der gültige Stil (Aquarell); die früheren Stile zeigten neue Legenden unter alten Zeichen (Rückmeldung Andi Neck 2026-11-22)
+  const k=styleKey||(ILL.styles.aquarell?'aquarell':ILL.styles[S.ill]?S.ill:keys[0]),st=ILL.styles[k];if(!st)return;
   const ORDER=['divine','people','thing','place','action','concept'],lex=ILL.lexicon||{},grp=l=>l.group||l.kind;
   const figs=Object.keys(st.renderings||{}).filter(id=>lex[id]).map(id=>({id,lx:lex[id],r:st.renderings[id]}));
   // Gemalter Stil (Aquarell, docs/BILDSTIL.md Abschnitt 4): Einzelporträt statt Zeichen, «kommt vor in», ohne Bild ein ruhiger Platzhalter

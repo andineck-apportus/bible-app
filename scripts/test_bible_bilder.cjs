@@ -22,6 +22,8 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(await p.evaluate(()=>[...document.querySelectorAll('.sheet .legend-img .lw-de')].some(t=>/Sie haben keinen/.test(t.textContent))),'Worte der Mutter Jesu als Text');
     assert(!await p.$('[data-settings]'),'Legende öffnet nicht das Menü');
     await p.click('.sheet [data-close]');await p.waitForTimeout(300);await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=menu]');await p.click('[data-figindex]');await p.waitForTimeout(300);
+    assert.equal(await p.getAttribute('.sheet [data-figindex-style=aquarell]','aria-pressed'),'true','Bildlexikon öffnet im gültigen Stil (Aquarell)');
+    await p.click('.sheet [data-figindex-style=anime]');await p.waitForTimeout(400);
     const nAni=await p.$$eval('.sheet .legend-fig',x=>x.length);assert(nAni>300,'Bildlexikon Anime ('+nAni+')');
     assert(await p.$('.sheet .legend-fig use[href^="#an-"]'),'Anime-Darstellungen im Bildlexikon');
     // Bildlexikon im Aquarellstil (Entscheid Andi Neck 2026-10-28): Einzelporträt (img mit alt) oder Platzhalter «noch nicht gemalt»,
