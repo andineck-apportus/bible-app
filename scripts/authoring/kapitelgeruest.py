@@ -8,7 +8,7 @@ die sich von den Nachbarkapiteln deutlich unterscheidet; die App nimmt dieselbe 
 Quelle: scripts/authoring/bilder_aquarell_daten/kapitel/<BUCH>.json (Format FORMAT unten). Daraus entsteht der Szenenplan
 scripts/authoring/bilder_aquarell_daten/szenen-kap-<buch>.json. Belege und Pflichtregeln werden aus dem Bildauftrag abgeleitet:
 B-Beleg = Handlung des Feldes mit Stelle; Pflichtregel = «kern_en» (was sichtbar sein muss). Gott wird nicht gemalt
-(docs/BILDSTIL.md); Personen ohne Wiederkehr malt das Bild als gewöhnliche Menschen, ihr Name steht als Namensschild
+(docs/BILDSTIL.md); handelt im Feld Gott, beschreibt «moment_de» die sichtbare Folge, an der die Prüfung das Bild misst; Personen ohne Wiederkehr malt das Bild als gewöhnliche Menschen, ihr Name steht als Namensschild
 (personen.py), ihre Malbeschreibung steht in «figuren».
 
     python3 scripts/authoring/kapitelgeruest.py pruefen [BUCH …]
@@ -137,7 +137,9 @@ def schreibe(buch, d):
                 "depicts": x.get("depicts", []),
                 "bild_en": x["bild_en"].rstrip() + f" COLOUR OF THIS CHAPTER: the whole picture is dominated by {pal}; keep the rest of the palette quiet.",
                 "speech": [],
-                **({"band": x["band"]} if x.get("band") else {}),   # Band gekürzt, wenn das Stichwort des Bildauftrags zu lang ist
+                **({"band": x["band"]} if x.get("band") else {}),
+                # Handelt im Feld Gott (wird nicht gemalt), beschreibt «moment_de» die sichtbare Folge; daran misst die Prüfung das Bild
+                **({"moment_de": x["moment_de"]} if x.get("moment_de") else {}),   # Band gekürzt, wenn das Stichwort des Bildauftrags zu lang ist
                 "evidence": [{"s": "B", "ref": pa["reference"], "de": pa["action_de"]},
                              {"s": "R", "de": "Kleidung, Landschaft, Gegenstände: plausible Ausgestaltung nach Epoche und Ort."},
                              {"s": "I", "de": "Gesichtsausdruck, Haltung und Grundfarbe des Kapitels: gestaltet, vom Text nicht genannt."}],
