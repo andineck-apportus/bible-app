@@ -710,6 +710,20 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .spinner{flex:none;width:18px;height:18px;border-radius:50%;border:2px solid var(--rule);border-top-color:var(--ink);animation:ld-spin .8s linear infinite}
 @keyframes ld-spin{to{transform:rotate(360deg)}}@keyframes ld-in{from{opacity:0}}
 @media (prefers-reduced-motion:reduce){#bible-stream .bar,#bible-stream .logo-wrap .logo{transition:none}#bible-stream .spinner{animation-duration:2.4s}}
+/* Kapitelleiste und Übung «Kapitel und Bild» (Merkbilder, 2026-11-22) */
+.kap-leiste{margin:18px 0 4px}
+.kap-leiste h3{font:600 .95rem/1.3 Inter,system-ui,sans-serif;margin:0 0 8px;color:var(--sk-text,#1E2629)}
+.kap-row{display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;overscroll-behavior-x:contain}
+.kap-item{flex:0 0 132px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:stretch;gap:4px;padding:0 0 8px;border:0;border-radius:14px;background:var(--sk-karte,#fff);box-shadow:0 1px 4px rgba(0,0,0,.12);border-top:6px solid var(--kap);cursor:pointer;text-align:left;color:var(--sk-text,#1E2629);overflow:hidden;position:relative}
+.kap-item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.kap-nr{position:absolute;top:8px;left:8px;min-width:24px;height:24px;border-radius:12px;background:var(--kap);color:#fff;font:700 .8rem/24px Inter,system-ui,sans-serif;text-align:center;padding:0 6px;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.kap-band{font:500 .78rem/1.25 Inter,system-ui,sans-serif;padding:0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.kap-ueben{margin-top:2px}
+.kap-strip{display:flex;gap:3px;border-left:6px solid var(--kap);border-radius:8px;overflow:hidden;background:var(--sk-karte,#fff)}
+.kap-strip img{flex:1 1 0;min-width:0;aspect-ratio:3/2;object-fit:cover;display:block}
+.learn-opts.kap-opts{display:grid;gap:10px}
+.kap-opt{display:flex;flex-direction:column;gap:4px;border:2px solid transparent;border-radius:12px;padding:4px;background:none;cursor:pointer;color:inherit}
+.kap-opt.ok{border-color:#58994A}.kap-opt.bad{border-color:#E76444}
 </style></head><body>
 <div id="bible-stream"><div class="app"></div></div>
 <script>
@@ -733,9 +747,11 @@ const INLINE=/*__INLINE__*/null;
 const I18N={};const loadedBundles=new Set(),pendingBundles=new Map();let dataError=false;
 STUDY.de=STUDY.layers.de.text;STUDY.de_source=STUDY.layers.de.source;STUDY.alternatives=STUDY.layers.de.alternatives;STUDY.decisions=STUDY.layers.de.decisions;STUDY.tok_de=STUDY.layers.de.align;
 const DSS={};let NC_INFO=null;const CORE=[];
-let ZUG=null;  // weitere Zugänge der Ebene Bibel (Übersichtspaket, Schlüssel «zug»; scripts/authoring/zugaenge.py)
+let ZUG=null,KAP=null;  // KAP: Merkbilder je Kapitel (Schlüssel «kap», Kapitelleiste und Übung «Kapitel und Bild»)
+  // weitere Zugänge der Ebene Bibel (Übersichtspaket, Schlüssel «zug»; scripts/authoring/zugaenge.py)
 function mergeBundle(d){
   if(d.zug)ZUG=d.zug;
+  if(d.kap)KAP=d.kap;
   if(d.dss){for(const [r,arr] of Object.entries(d.dss))(DSS[r]=DSS[r]||[]).push(...arr);NC_INFO=d.nc||NC_INFO;}
   if(d.lang){const L=STUDY.layers[d.lang];const y=d.layer||{};if(L){Object.assign(L.text,y.text||{});Object.assign(L.source,y.source||{});Object.assign(L.decisions,y.decisions||{});L.alternatives.push(...(y.alternatives||[]));Object.assign(L.align,y.align||{});}
     for(const [r,arr] of Object.entries(d.compare||{}))(STUDY.compare[r]=STUDY.compare[r]||[]).push(...arr);
@@ -1380,8 +1396,14 @@ function entry(id){
   const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}${deep?`<div class="actions actions-side">${deep}</div>`:''}</div>${illFigure(il,nw)}</div>`:copy;
   const zs=n.level===0&&ZUG?zgSwitch():'';
   if(zs&&S.zugang!=='zoom'&&ZG_VIEWS.includes(S.zugang))return `<article class="stream-entry has-zg" data-stream="${id}"><h2>${esc(heading)}${readBtn(id)}</h2><div class="entry-tools">${tl}</div>${zs}${zgView(S.zugang)}</article>`;
-  return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}<span class="view-tools">${nw?nwBtn():''}${tg}</span></div>`:tl}${zs}${body}<div class="actions${il?' actions-under':''}">${deep}</div></article>`;
+  return `<article class="stream-entry${il?' has-ill':''}" data-stream="${id}">${eyebrow(n)?`<p class="eyebrow">${esc(eyebrow(n))}</p>`:''}<h2>${esc(heading)}${readBtn(id)}</h2>${tg?`<div class="entry-tools">${tl}<span class="view-tools">${nw?nwBtn():''}${tg}</span></div>`:tl}${zs}${body}${n.level===3&&KAP?kapLeiste(n):''}<div class="actions${il?' actions-under':''}">${deep}</div></article>`;
 }
+// Kapitelleiste (Entscheid Andi Neck 2026-11-22, Merkbilder): die Kapitel eines Buchs als Stationen nebeneinander, je Kapitel
+// ein Vorschaubild, die Nummer in der Farbe des Kapitels und das Stichwort; Antippen öffnet das Kapitel.
+const kapOf=code=>(KAP&&KAP[code])||[];
+const kapBand=f=>(f.band&&(f.band[lang==='gsw'||S.text==='gsw'?'gsw':'de']||f.band.de))||'';
+function kapLeiste(n){const code=DATA[n.b].code,ks=kapOf(code),L=lang==='de';if(!ks.length)return '';
+  return `<section class="kap-leiste" aria-label="${L?'Kapitel als Merkbilder':'Chapters as memory pictures'}"><h3>${L?'Kapitel als Merkbilder':'Chapters as memory pictures'}</h3><div class="kap-row">${ks.map(k=>`<button type="button" class="kap-item" data-go="c${n.b}-${k.c}" style="--kap:${k.farbe||'var(--sk-linie)'}"><img src="${k.felder[0].img}" alt="" loading="lazy"><span class="kap-nr">${k.c}</span><span class="kap-band">${esc(kapBand(k.felder[0]))}</span></button>`).join('')}</div>${MERK().length||ks.length?`<button type="button" class="link soft kap-ueben" data-learn="kapstart:${code}">${icon('learn')}<span>${L?'Kapitel und Bild üben':'Practise chapters and pictures'}</span></button>`:''}</section>`;}
 // Ein Knopf «Vertiefen» am Titel jeder Ebene; der Punkt sagt nur «hier oder darunter gibt es etwas» (keine Zahlen)
 function tools(id){const n=nodes.get(id),L=lang==='de',has=n&&deepHas(n);return `<span class="part-tools"><button type="button" class="tool deep-btn" data-vertiefen="${id}" aria-label="${L?'Vertiefen':'Deepen'}${has?(L?' (es gibt etwas)':' (content available)'):''}">${icon('deep')}<span>${L?'Vertiefen':'Deepen'}</span>${has?'<i class="deep-dot" aria-hidden="true"></i>':''}</button></span>`;}
 function verseEntry(n){
@@ -1421,6 +1443,7 @@ const METHODS=[
  ['cloze','Lückentext stufenweise','Erst fehlen wenige Wörter, dann immer mehr, bis der ganze Vers aus dem Gedächtnis kommt. Lücke antippen zeigt das Wort.','Fading cloze','First a few words are missing, then more, until the whole verse comes from memory. Tap a gap to show the word.'],
  ['order','Wörter ordnen','Die Wörter des Verses in die richtige Reihenfolge tippen.','Word order','Tap the words of the verse in the right order.'],
  ['pics','Bildkarten ohne Worte','Ein Abschnittsbild nur mit Zeichen: erzähle, was geschieht, tippe Felder an, um die Worte zu sehen, dann aufdecken (Titel und Zusammenfassung) und bewerten. Wiederholung nach dem Leitner-System.','Picture cards without words','A section picture with signs only: tell what happens, tap fields to see the words, then reveal title and summary and rate yourself. Repeats by the Leitner system.'],
+ ['kap','Kapitel und Bild','Merkbilder der Kapitel: zum Bild das Kapitel wählen oder zum Kapitel das Bild. Richtig gewählt kommt es später wieder (Leitner), falsch gewählt bald.','Chapters and pictures','Chapter memory pictures: pick the chapter for the picture or the picture for the chapter. Right answers return later (Leitner), wrong ones soon.'],
  ['quiz','Wo steht das?','Zum Vers die richtige Stelle wählen – oder zum Bild. Übt die Verbindung von Wortlaut, Bild und Stelle.','Where is it?','Pick the right reference for the verse or the picture. Links wording, picture and reference.']];
 const shuffle=(a,seed)=>{a=[...a];let x=seed||1;for(let i=a.length-1;i>0;i--){x=(x*9301+49297)%233280;const j=Math.floor(x/233280*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
 const hashStr=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))%100003;return h;};
@@ -1452,7 +1475,15 @@ function picStart(sc){withData(picCodes(sc),()=>{let refs=picNodes(sc).filter(x=
   if(!refs.length){openSheet('learn',head(lang==='de'?'Lernen':'Learn')+`<p class="note">${lang==='de'?'In diesem Umfang gibt es noch keine Abschnittsbilder.':'No section pictures in this scope yet.'}</p><button type="button" class="learn-main" data-learn="menu">${lang==='de'?'Zur Auswahl':'Back to choice'}</button>`);return;}
   const d=refs.filter(isDue);refs=shuffle(d.length?d:refs,Date.now()%997+1);
   LN={pickScope:sc,method:'pics',refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};learnRender();});}
-function learnStart(method){const sc=(LN&&LN.pickScope)||'all';if(method==='pics'){picStart(sc==='due'?'all':sc);return;}let refs=scopeRefs(sc);if(!refs.length)return;
+// Übung «Kapitel und Bild»: Lernstand je Kapitel unter «kap:<BUCH>.<Kapitel>»
+function kapStart(sc){const codes=sc.startsWith('bk:')||sc.startsWith('ch:')?[sc.slice(3).split('.')[0]]:Object.keys(KAP||{});
+  let refs=[];for(const c of codes)for(const k of kapOf(c))refs.push('kap:'+c+'.'+k.c);
+  if(refs.length<2){openSheet('learn',head(lang==='de'?'Lernen':'Learn')+`<p class="note">${lang==='de'?'In diesem Umfang gibt es noch zu wenige Kapitel mit Merkbild.':'Too few chapters with memory pictures in this scope yet.'}</p><button type="button" class="learn-main" data-learn="menu">${lang==='de'?'Zur Auswahl':'Back to choice'}</button>`);return;}
+  const d=refs.filter(isDue);refs=shuffle(d.length?d:refs,Date.now()%997+1);
+  LN={pickScope:sc,method:'kap',refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};learnRender();}
+const kapItem=r=>{const [c,n]=r.slice(4).split('.');return Object.assign({code:c},kapOf(c).find(k=>k.c===+n)||{});};
+const kapStrip=k=>`<span class="kap-strip" style="--kap:${k.farbe||'var(--sk-linie)'}">${(k.felder||[]).map(f=>`<img src="${f.img}" alt="">`).join('')}</span>`;
+function learnStart(method){const sc=(LN&&LN.pickScope)||'all';if(method==='pics'){picStart(sc==='due'?'all':sc);return;}if(method==='kap'){kapStart(sc);return;}let refs=scopeRefs(sc);if(!refs.length)return;
   if(method==='cards'){const d=refs.filter(isDue);refs=(d.length?d:refs);}
   refs=shuffle(refs,Date.now()%997+1);LN={pickScope:sc,method,refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};
   withData([...new Set(refs.map(merkCode))],learnRender);}
@@ -1476,6 +1507,12 @@ function learnRender(){const L_=lang==='de',m=LN.method,r=LN.refs[LN.i],tx=vtext
     const done=LN.placed.length===ws.length;
     body=img+`<p class="merk-ref learn-ref">${esc(refDe(r))}</p><p class="merk-text order-line">${LN.placed.map(i=>esc(ws[i])).join(' ')}${done?'':' …'}</p>
     ${done?`<p class="note">${L_?'Richtig geordnet':'Correct order'}${LN.wrong?` · ${LN.wrong} ${L_?'Fehlgriffe':'misses'}`:''}</p>${say}`:`<div class="chips order-pool">${LN.pool.filter(i=>!LN.placed.includes(i)).map(i=>`<button type="button" class="chip" data-learn="pick-word:${i}">${esc(core(ws[i])||ws[i])}</button>`).join('')}</div>`}`;}
+  else if(m==='kap'){const k=kapItem(r),bk=zgBook(k.code);
+    if(!LN.opts){const pool=LN.refs.filter(x=>x!==r&&x.startsWith('kap:'+k.code+'.'));LN.opts=shuffle([r,...shuffle(pool.length>=3?pool:LN.refs.filter(x=>x!==r),hashStr(r)).slice(0,3)],LN.i+5);LN.pick=null;LN.asImg=LN.i%2===0;}
+    const lab=o=>{const x=kapItem(o);return `${zgBook(x.code)} ${x.c}`;};
+    body=LN.asImg?kapStrip(k)+`<p class="note">${L_?'Welches Kapitel ist das?':'Which chapter is this?'}</p><div class="learn-opts">${LN.opts.map(o=>`<button type="button" class="row${LN.pick?(o===r?' ok':o===LN.pick?' bad':''):''}" data-learn="kapans:${o}" ${LN.pick?'disabled':''}><span>${esc(lab(o))}</span>${LN.pick&&o===r?icon('check'):''}</button>`).join('')}</div>`
+      :`<p class="merk-text">${esc(bk)} ${k.c}</p><p class="note">${L_?'Welches Merkbild gehört zu diesem Kapitel?':'Which memory picture belongs to this chapter?'}</p><div class="learn-opts kap-opts">${LN.opts.map(o=>`<button type="button" class="kap-opt${LN.pick?(o===r?' ok':o===LN.pick?' bad':''):''}" data-learn="kapans:${o}" ${LN.pick?'disabled':''} aria-label="${esc(lab(o))}">${kapStrip(kapItem(o))}${LN.pick?`<small>${esc(lab(o))}</small>`:''}</button>`).join('')}</div>`;
+    if(LN.pick)body+=`<p class="note">${(k.felder||[]).map(f=>esc(kapBand(f))).join(' · ')}</p>`;}
   else if(m==='quiz'){if(!LN.opts){const pool=MERK().filter(x=>x!==r);LN.opts=shuffle([r,...shuffle(pool,hashStr(r)).slice(0,3)],LN.i+7);LN.pick=null;LN.asImg=(LN.i%2===1)&&!!it;}
     body=(LN.asImg?img:`<p class="merk-text">«${esc(tx)}»</p>`)+`<p class="note">${L_?'Wo steht das?':'Where is this?'}</p><div class="learn-opts">${LN.opts.map(o=>`<button type="button" class="row${LN.pick?(o===r?' ok':o===LN.pick?' bad':''):''}" data-learn="answer:${o}" ${LN.pick?'disabled':''}><span>${esc(refDe(o))}</span>${LN.pick&&o===r?icon('check'):''}</button>`).join('')}</div>${LN.pick&&LN.asImg?`<p class="merk-text">«${esc(tx)}»</p>`:''}`;}
   const last=LN.i>=LN.refs.length-1,canNext=m!=='cards'&&m!=='pics';
@@ -1495,6 +1532,9 @@ function learnAct(a){const [k,...rest]=a.split(':'),v=rest.join(':');
   if(k==='pick'){LN={pickScope:v};learnSheet();return;}
   if(k==='scope'){const [b,c]=v.split('.');LN={pickScope:'ch:'+b+'.'+c};learnSheet();return;}
   if(k==='start'){learnStart(v);return;}
+  if(k==='kapstart'){LN={pickScope:'bk:'+v};kapStart('bk:'+v);return;}
+  if(k==='kapans'&&LN&&LN.method==='kap'&&!LN.pick){const r=LN.refs[LN.i],o=LS[r]||{box:0};LN.pick=v;
+    o.box=v===r?Math.max(2,Math.min(6,o.box+1)):0;o.due=Date.now()+BOX_DAYS[o.box]*864e5;o.seen=(o.seen||0)+1;LS[r]=o;lsSave();learnRender();return;}
   if(k==='reset'){LS={};lsSave();learnSheet();return;}
   if(!LN||!LN.refs)return;
   if(k==='reveal'){LN.step=1;learnRender();return;}

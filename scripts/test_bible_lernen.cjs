@@ -19,7 +19,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     assert(!await p.$('.reader .merk')&&!await p.$('[data-merk]'),'Einstellung «Aus»');
     // Lernen
     await p.evaluate(()=>document.querySelector('.app').classList.remove('immersed'));await p.waitForTimeout(250);await p.click('[data-action=menu]');await p.click('[data-learn=menu]');await p.waitForTimeout(300);
-    assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),6,'sechs Lernmethoden');
+    assert.equal(await p.$$eval('.sheet [data-learn^="start:"]',x=>x.length),7,'sieben Lernmethoden (mit «Kapitel und Bild»)');
     await p.click('[data-learn="start:cards"]');await p.waitForTimeout(600);
     assert(await p.$('.sheet .learn-img svg'),'Karteikarte mit Bild');await p.click('[data-learn=reveal]');await p.click('[data-learn="rate:good"]');
     const st=await p.evaluate(()=>JSON.parse(localStorage.getItem('bible:learn')||'{}'));assert(Object.values(st).some(x=>x.box===2&&x.due>Date.now()+2*864e5),'Leitner: «Gewusst» → Kasten 2, nächste Wiederholung in 3 Tagen');

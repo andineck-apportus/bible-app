@@ -368,6 +368,40 @@ for rid, r in ill_recs.items():
 sys.path.insert(0, str(ROOT / "scripts/authoring"))
 import zugaenge  # noqa: E402
 bundle("b/_overview")["zug"] = zugaenge.daten()
+
+
+def _kapitelleiste():
+    """Merkbilder je Kapitel (Entscheid Andi Neck 2026-11-22): je Buch die Kapitel mit gemaltem Merkbild, Farbe des Kapitels,
+    Stichwort je Feld und kleine Vorschaubilder (fig/, einmal je Bild) für Kapitelleiste und Übung «Kapitel und Bild»."""
+    import io
+    from PIL import Image
+    out = {}
+    for pp in sorted((ROOT / "scripts/authoring/bilder_aquarell_daten").glob("szenen-kap-*.json")):
+        plan = json.loads(pp.read_text(encoding="utf-8"))
+        for b in plan["bilder"]:
+            if b["id"] not in ill_recs:          # Kapitelbild noch nicht vollständig gemalt
+                continue
+            code, c = b["reference"].split(".")
+            brief = json.loads((ROOT / f"data/illustrations/briefs/{b['brief']}.json").read_text(encoding="utf-8"))
+            felder = []
+            for sid, pa in zip(b["felder"], brief["panels"]):
+                f = ROOT / f"data/illustrations/aquarell/img/{sid}.webp"
+                if not f.is_file():
+                    felder = []
+                    break
+                im = Image.open(f).convert("RGB")
+                im.thumbnail((300, 300))
+                buf = io.BytesIO()
+                im.save(buf, "WEBP", quality=72, method=6)
+                h = hashlib.sha1(buf.getvalue()).hexdigest()[:16]
+                FIGS[h] = buf.getvalue()
+                felder.append({"img": f"fig/{h}.webp", "band": pa.get("keywords") or {}})
+            if felder:
+                out.setdefault(code, []).append({"c": int(c), "farbe": (b.get("merkbild") or {}).get("farbe"), "felder": felder})
+    return out
+
+
+bundle("b/_overview")["kap"] = _kapitelleiste()
 # Merkverse (Bilder der Ebene «verse»): Liste im Kern, damit Menü und Lernmodus sie kennen, bevor ein Buch geladen ist
 _bo = {code: i for i, (code, _, _) in enumerate(refs.BOOKS)}
 ill_core["merk"] = sorted({r["reference"] for r in ill_recs.values() if r["type"] == "illustration" and r["level"] == "verse"},
