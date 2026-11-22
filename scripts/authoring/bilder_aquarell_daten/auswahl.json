@@ -82682,5 +82682,348 @@
       "datum": "2026-11-22",
       "prozess": "PROC-BILD-AQUARELL@2.4"
     }
+  },
+  "MAT-020-M4": {
+    "datei": "img/MAT-020-M4.webp",
+    "lauf": "20261122-194821-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 3,
+      "kern": 1,
+      "kern_fehlt_de": "Der zweite Sitzende wird nicht als Blinder erkannt; der Ruf und die anschließende Nachfolge sind nicht erkennbar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and objects do not touch a hard picture edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern items are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical abnormalities are visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No individual clearly appears twice."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear caricatures or ethnic stereotypes are visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible adults have natural-looking proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The picture is a light watercolour with ample white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly white or very pale."
+        },
+        {
+          "id": "G-ROT",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Nur Jesus trägt Terrakottarot",
+          "ergebnis": "unklar",
+          "antwort": "unclear",
+          "grund": "A background figure wears a pale reddish garment, but its exact colour is indistinct."
+        },
+        {
+          "id": "F-JESUS-GESICHT",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The man's facial features are visible in profile."
+        },
+        {
+          "id": "M4-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Jesus berührt die Augen der Blinden am Weg",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The man in red touches the seated man's eye area, with another seated person beside them."
+        }
+      ],
+      "koepfe": {
+        "FIG-JESUS": {
+          "kopf": [
+            437,
+            184,
+            539,
+            307
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "A standing man reaches out and touches a seated bearded man's eye as the seated man raises his face. Another seated person watches, while faint figures stand in the background.",
+        "story_guess": "Possibly Jesus healing a blind man, at the moment he touches the man's eye. The image does not establish which particular healing account is intended.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly coloured watercolor-style illustration with detailed foreground figures and loosely suggested background scenery."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Faint gray figure at far left",
+          "head": [
+            51,
+            501,
+            74,
+            543
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Background man in a reddish robe",
+          "head": [
+            94,
+            446,
+            120,
+            499
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Faint gray figure behind the seated woman",
+          "head": [
+            136,
+            491,
+            155,
+            534
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Background figure in gray",
+          "head": [
+            151,
+            449,
+            178,
+            495
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Seated woman in blue with a pale head covering",
+          "head": [
+            147,
+            442,
+            258,
+            581
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Faint background figure behind the woman",
+          "head": [
+            262,
+            514,
+            285,
+            555
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Background figure in tan",
+          "head": [
+            281,
+            480,
+            305,
+            528
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Background figure in blue-gray",
+          "head": [
+            306,
+            520,
+            326,
+            557
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "Faint background figure in tan",
+          "head": [
+            325,
+            539,
+            344,
+            575
+          ]
+        },
+        {
+          "nr": 10,
+          "who": "Man in a cream tunic and red mantle",
+          "head": [
+            437,
+            184,
+            539,
+            307
+          ]
+        },
+        {
+          "nr": 11,
+          "who": "Small faint figure in the distance",
+          "head": [
+            492,
+            577,
+            511,
+            614
+          ]
+        },
+        {
+          "nr": 12,
+          "who": "Small distant figure in gray",
+          "head": [
+            511,
+            587,
+            532,
+            627
+          ]
+        },
+        {
+          "nr": 13,
+          "who": "Seated bearded man with a pale head covering",
+          "head": [
+            592,
+            444,
+            684,
+            574
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "ae95dfedae3267db",
+      "datum": "2026-11-22",
+      "plan_sha": "ca10ada9857ea083",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Das Rufen und das anschließende Nachfolgen werden nicht beschrieben; Jesus berührt nur einen der beiden.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "The standing man touches the seated bearded man's face near his eyes. Another seated man watches, while faint figures stand in the background.",
+        "story_guess": "Probably Jesus healing the two blind men near Jericho, at the moment he touches their eyes, as in Matthew 20:29–34. The picture shows him touching one man's face while the other sits beside them.",
+        "text_in_picture": [
+          {
+            "text": "4",
+            "location": "bottom left, inside a circle"
+          },
+          {
+            "text": "Herr, hab Erbarmen mit uns, Sohn Davids!",
+            "location": "caption along the bottom"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "5ad137f7218624b7",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
   }
 }
