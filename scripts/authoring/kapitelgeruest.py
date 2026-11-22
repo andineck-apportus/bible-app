@@ -6,7 +6,8 @@ jedes Feld als Szene. Damit sich die Kapitel im Gedächtnis nicht vermischen, ha
 die sich von den Nachbarkapiteln deutlich unterscheidet; die App nimmt dieselbe Farbe für die Kapitelleiste.
 
 Quelle: scripts/authoring/bilder_aquarell_daten/kapitel/<BUCH>.json (Format FORMAT unten). Daraus entsteht der Szenenplan
-scripts/authoring/bilder_aquarell_daten/szenen-kap-<buch>.json. Belege und Pflichtregeln werden aus dem Bildauftrag abgeleitet:
+scripts/authoring/bilder_aquarell_daten/szenen-kap-<buch>.json. Pflichtfragen fragen nur nach Sichtbarem (wer, was, wo, Haltung), nie nach Material oder Stoff (Sacktuch, Leinen): eine lockere
+Aquarellskizze zeigt das nicht eindeutig (Jona 3,10, Lauf 90). Belege und Pflichtregeln werden aus dem Bildauftrag abgeleitet:
 B-Beleg = Handlung des Feldes mit Stelle; Pflichtregel = «kern_en» (was sichtbar sein muss). Gott wird nicht gemalt
 (docs/BILDSTIL.md); handelt im Feld Gott, beschreibt «moment_de» die sichtbare Folge, an der die Prüfung das Bild misst; Personen ohne Wiederkehr malt das Bild als gewöhnliche Menschen, ihr Name steht als Namensschild
 (personen.py), ihre Malbeschreibung steht in «figuren».
