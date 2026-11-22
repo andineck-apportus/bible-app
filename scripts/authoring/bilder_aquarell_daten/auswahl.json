@@ -50894,15 +50894,15 @@
   },
   "MAT-004-M1": {
     "datei": "img/MAT-004-M1.webp",
-    "lauf": "20261122-081309-auto-neu",
-    "variante": "r1v2",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
     "modell": "gpt-image-2.5-flare",
     "uebernommen": "2026-11-22",
     "pruefung": {
-      "ergebnis": "unklar",
+      "ergebnis": "bestanden",
       "punkte": 5,
       "kern": 2,
-      "kern_fehlt_de": "",
+      "kern_fehlt_de": "Der genaue Wortlaut ist im Bild nicht erkennbar.",
       "regeln": [
         {
           "id": "G-RAND",
@@ -50911,7 +50911,7 @@
           "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "The figures and landscape fade into the paper before reaching the edges."
+          "grund": "The figures and landscape fade out without being sliced by the picture edge."
         },
         {
           "id": "G-SCHRIFT",
@@ -50929,7 +50929,7 @@
           "de": "Kein Heiligenschein",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "Neither head has a visible halo."
+          "grund": "Neither figure has a halo or ring around the head."
         },
         {
           "id": "G-EFFEKT",
@@ -50938,7 +50938,7 @@
           "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No glowing light, rays, sparkles, or shining objects are visible.",
+          "grund": "No glowing light, sparkles, rays, or shining objects are visible.",
           "stimmen": [
             "fehler",
             "ok",
@@ -50952,16 +50952,7 @@
           "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clearly modern objects or clothing are visible."
-        },
-        {
-          "id": "G-KOERPER",
-          "ebene": "allgemein",
-          "stufe": "pflicht",
-          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
-          "ergebnis": "ok",
-          "antwort": "no",
-          "grund": "No definite extra or missing limbs or malformed faces are visible."
+          "grund": "No clearly modern objects or clothing details are visible."
         },
         {
           "id": "G-DOPPELT",
@@ -50970,7 +50961,7 @@
           "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No individual visibly appears twice."
+          "grund": "No individual is visibly repeated."
         },
         {
           "id": "G-KARIKATUR",
@@ -50979,7 +50970,7 @@
           "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
           "ergebnis": "ok",
           "antwort": "no",
-          "grund": "No clear caricature or ethnic stereotype is visible."
+          "grund": "Neither figure is clearly caricatured or an ethnic stereotype."
         },
         {
           "id": "G-PROPORTION",
@@ -50988,7 +50979,7 @@
           "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The visible man has natural adult proportions."
+          "grund": "The visible man's proportions are natural."
         },
         {
           "id": "G-REDUKTION",
@@ -50997,7 +50988,7 @@
           "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "It is a light watercolour with extensive untouched paper and a simple background."
+          "grund": "It is a light watercolour with abundant white paper and a simple background."
         },
         {
           "id": "G-OBEN",
@@ -51006,7 +50997,7 @@
           "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The upper quarter is mostly empty pale paper."
+          "grund": "The upper quarter is mostly pale, empty paper."
         },
         {
           "id": "G-ROT",
@@ -51015,7 +51006,7 @@
           "de": "Nur Jesus trägt Terrakottarot",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "Only the man visibly wears terracotta-red clothing."
+          "grund": "Only the man wears a terracotta-red garment."
         },
         {
           "id": "F-JESUS-GESICHT",
@@ -51024,75 +51015,72 @@
           "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "His facial features are visible."
+          "grund": "His eyes, nose and mouth are visible."
         },
         {
           "id": "M1-KERN",
           "ebene": "feld",
           "stufe": "pflicht",
           "de": "Jesus weist den Teufel ab",
-          "ergebnis": "unklar",
-          "antwort": "unclear",
-          "grund": "The man faces away from a pointing shadow above settlements, but the height of the mountain and the exact target of the gesture are unclear.",
-          "stimmen": [
-            "unklar",
-            "unklar",
-            "ok"
-          ]
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A man on a height raises a hand toward a pointing shadow, with a settlement below."
         }
       ],
       "koepfe": {
         "FIG-JESUS": {
           "kopf": [
-            293,
-            210,
-            355,
-            306
+            339,
+            211,
+            398,
+            303
           ],
           "sicher": "gitter"
         }
       },
       "blind": {
-        "action": "A shadowy figure extends an arm toward a man standing on a hill. The man faces away from it and raises an open hand toward the landscape.",
-        "story_guess": "Possibly the temptation of Jesus in the wilderness, at the moment when the devil shows him the kingdoms of the world and Jesus rejects the temptation.",
+        "action": "A shadowy figure leans toward a man and points to the right. The man looks back at it and holds up an open hand.",
+        "story_guess": "Possibly the temptation of Jesus in the wilderness, specifically the moment when the devil shows him the kingdoms from a high place and Jesus rejects the temptation. The exact moment is not certain from the image alone.",
         "cut_off": "",
         "text_in_picture": "",
-        "style": "A soft watercolor-style illustration with loose textures and moderately detailed figures and landscape."
+        "style": "A softly colored watercolor-style illustration with loose, lightly detailed figures and landscape."
       },
       "personen": [
         {
           "nr": 1,
-          "who": "Dark shadowy humanoid figure",
+          "who": "Shadowy humanoid figure",
           "head": [
-            165,
-            221,
-            219,
-            315
+            194,
+            251,
+            246,
+            330
           ]
         },
         {
           "nr": 2,
-          "who": "Dark-haired, bearded man in a cream tunic and red mantle",
+          "who": "Bearded man in a cream tunic and red mantle",
           "head": [
-            293,
-            210,
-            355,
-            306
+            339,
+            211,
+            398,
+            303
           ]
         }
       ],
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "e4b03a54557cd94b",
+      "bild_sha": "b385f9a0d6b0e765",
       "datum": "2026-11-22",
-      "plan_sha": "9e13ec42f49a60bf",
+      "plan_sha": "3e668ba4b4188454",
       "regeln_version": "2026-10-28d",
-      "prozess": "PROC-BILD-AQUARELL@2.4"
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
     },
     "schluss": {
       "ergebnis": "bestanden",
       "punkte": 1,
       "kern": 1,
-      "kern_fehlt_de": "Dass Jesus Satan ausdrücklich wegschickt und alleinige Anbetung und Dienst für Gott fordert, ist nicht erkennbar.",
+      "kern_fehlt_de": "Jesu ausdrückliche Abweisung Satans und sein Verweis auf die alleinige Anbetung Gottes sind nicht eindeutig erkennbar.",
       "regeln": [
         {
           "id": "S-GESICHT",
@@ -51110,25 +51098,25 @@
           "de": "Alle Worte vollständig und lesbar",
           "ergebnis": "ok",
           "antwort": "yes",
-          "grund": "The visible caption is complete and readable."
+          "grund": "The caption is fully visible and readable."
         }
       ],
       "blind": {
-        "action": "The man stands on a hill with one palm raised outward, looking to the right. A dark, smoky figure behind him reaches toward him.",
-        "story_guess": "Possibly the temptation of Jesus in the wilderness, with the shadow representing the devil and Jesus resisting him. The elevated view of settlements may suggest the temptation involving the kingdoms of the world, but the precise moment is not certain from the picture alone.",
+        "action": "The shadowy figure points while the man turns toward it and raises an open hand. They stand on a rocky hill overlooking a distant settlement.",
+        "story_guess": "Probably the temptation of Jesus by the devil in the wilderness, with Jesus responding to a temptation. The picture does not clearly establish which specific temptation is shown.",
         "text_in_picture": [
           {
             "text": "1",
-            "location": "bottom left, inside a circle"
+            "speech_bubble_owner": null
           },
           {
             "text": "Es steht geschrieben",
-            "location": "caption at the bottom"
+            "speech_bubble_owner": null
           }
         ]
       },
       "modell": "gpt-6.1-terra + gpt-5.5",
-      "bild_sha": "fbebd35e29cd2dc4",
+      "bild_sha": "93416f5fbe531e1e",
       "datum": "2026-11-22",
       "prozess": "PROC-BILD-AQUARELL@2.4"
     }
@@ -80197,6 +80185,2181 @@
       },
       "modell": "gpt-6.1-terra + gpt-5.5",
       "bild_sha": "302afb9416b46c35",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-001-M2": {
+    "datei": "img/MAT-001-M2.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 3,
+      "kern": 1,
+      "kern_fehlt_de": "Josef, der Engel und die Traumbotschaft über Maria und den Namen Jesus werden nicht erkannt; stattdessen wird eine Heilung vermutet.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person or important object is cut off by the picture edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern or anachronistic objects are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly extra or missing limbs or malformed faces are visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No individual clearly appears twice."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures are not visibly caricatured or stereotyped."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have natural-looking proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a light watercolour with extensive pale paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly pale, empty paper."
+        },
+        {
+          "id": "M2-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Eine Gestalt in Weiss erscheint dem schlafenden Josef",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A white-robed figure leans toward a reclining man with closed eyes."
+        }
+      ],
+      "koepfe": {
+        "FIG-MARIA-MUTTER-JESU": {
+          "kopf": [
+            802,
+            367,
+            870,
+            481
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "A man lies with his eyes closed while a white-robed man leans toward him and gestures. A woman stands in the doorway watching quietly.",
+        "story_guess": "Possibly Jesus approaching a sick or paralyzed man before healing him, but the image does not establish a specific Bible story or moment.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with loose edges and moderately detailed figures."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Bearded man reclining in brown and ochre clothing",
+          "head": [
+            129,
+            627,
+            242,
+            746
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Bearded man in a white robe",
+          "head": [
+            300,
+            309,
+            391,
+            454
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Older woman in a blue-grey veil and robe",
+          "head": [
+            802,
+            367,
+            870,
+            481
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "86f0670eedd12510",
+      "datum": "2026-11-22",
+      "plan_sha": "5c8d927045a68d4b",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Die Botschaft des Engels bleibt unsichtbar: Josef soll Maria aufnehmen und das Kind Jesus nennen; es wird sein Volk von seinen Sünden retten.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "A man sleeps on a mat while a white-robed figure leans over him and gestures. A woman stands quietly in the doorway.",
+        "story_guess": "Possibly Joseph's dream in Matthew 1, when an angel appears to him as he sleeps, with Mary shown nearby. The specific message of the dream is not visible.",
+        "text_in_picture": [
+          {
+            "text": "2",
+            "location": "Bottom left",
+            "speech_bubble_owner": null
+          },
+          {
+            "text": "Gott mit uns",
+            "location": "Bottom center",
+            "speech_bubble_owner": null
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "bf69b4640f68ab8d",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-006-M2": {
+    "datei": "img/MAT-006-M2.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 4,
+      "kern": 1,
+      "kern_fehlt_de": "Jesus und die Jünger beim Gebet sind erkennbar; die Lehre des Vaterunsers und die anschließende Aussage über Vergebung sind nicht eindeutig sichtbar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person or important object is cut off by a hard edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical defect is visible; some limbs are obscured."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No two figures are clearly the same individual."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No caricature or ethnic stereotype is apparent."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The figures have natural adult proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The light watercolor has abundant white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "G-ROT",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Nur Jesus trägt Terrakottarot",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Only the central man wears a terracotta-red mantle."
+        },
+        {
+          "id": "F-JESUS-GESICHT",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "His upturned face and features are visible."
+        },
+        {
+          "id": "M2-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Jesus betet mit den Jüngern",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The central man and surrounding men sit together with hands open in a recognizable prayer pose."
+        }
+      ],
+      "koepfe": {
+        "FIG-JESUS": {
+          "kopf": [
+            598,
+            306,
+            688,
+            464
+          ],
+          "sicher": "gitter"
+        },
+        "FIG-GRUPPE-JUENGER": {
+          "kopf": [
+            748,
+            453,
+            850,
+            609
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "Five men sit together with their hands open and their heads mostly bowed. The central man looks upward with both hands raised, as if praying.",
+        "story_guess": "Possibly Jesus praying with his disciples, but no particular Bible story or exact moment is identifiable from the visible details.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly detailed watercolor-style illustration with muted colors and loosely rendered scenery."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Bearded man in an ochre robe at left",
+          "head": [
+            120,
+            407,
+            219,
+            560
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Bearded man in a brown robe behind him",
+          "head": [
+            245,
+            363,
+            328,
+            497
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Dark-haired man in an ochre robe in the foreground",
+          "head": [
+            379,
+            444,
+            480,
+            589
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Bearded man in a cream tunic and terracotta-red mantle",
+          "head": [
+            598,
+            306,
+            688,
+            464
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Bearded man in a brown robe at right",
+          "head": [
+            748,
+            453,
+            850,
+            609
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "76501dd379fc6041",
+      "datum": "2026-11-22",
+      "plan_sha": "4bee8a80e3778406",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 2,
+      "kern": 2,
+      "kern_fehlt_de": "Die Hinweise zum Plappern und zur Vergebung sind nicht erkennbar.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "Five men sit together outdoors with their hands held open, apparently praying. The central man looks upward while the others bow their heads.",
+        "story_guess": "This likely depicts Jesus teaching his followers the Lord's Prayer, at its opening words, 'Our Father in heaven.'",
+        "text_in_picture": [
+          {
+            "text": "Unser Vater in den Himmeln",
+            "location": "Caption at the bottom",
+            "speech_bubble_owner": null
+          },
+          {
+            "text": "2",
+            "location": "Circled number at the bottom left",
+            "speech_bubble_owner": null
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "6a8d2071b1a75e81",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-012-M1": {
+    "datei": "img/MAT-012-M1.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 4,
+      "kern": 1,
+      "kern_fehlt_de": "Die Heilung der verdorrten Hand bleibt unklar; der Sabbatstreit und der Tötungsplan der Pharisäer sind nicht erkennbar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and scenery fade into the paper rather than being cut off by an edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly abnormal or extra body parts are visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No individual is clearly shown twice."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear caricature or ethnic stereotype is visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible adults have natural-looking proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The scene is a light watercolour with extensive white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty, pale paper."
+        },
+        {
+          "id": "G-ROT",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Nur Jesus trägt Terrakottarot",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Only the central man visibly wears terracotta-red."
+        },
+        {
+          "id": "F-JESUS-GESICHT",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "His facial features are visible in profile."
+        },
+        {
+          "id": "M1-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Heilung am Sabbat",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A man extends his hand toward the central figure while two stern-looking religious men watch."
+        }
+      ],
+      "koepfe": {
+        "FIG-JESUS": {
+          "kopf": [
+            431,
+            242,
+            549,
+            403
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "The central man and the man on the right face one another, each extending an open hand. Two men at left watch, while faint figures stand in the background.",
+        "story_guess": "Possibly Jesus healing a man with a withered hand while religious leaders watch, but the hand does not show a clear injury and the exact story or moment cannot be established from the picture alone.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly rendered watercolor-style illustration with detailed foreground figures and loosely suggested background figures."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Faint background figure on the far left",
+          "head": [
+            42,
+            365,
+            76,
+            442
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Bearded man in a white head covering and blue robe",
+          "head": [
+            80,
+            288,
+            208,
+            460
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Bearded man in a white head covering behind him",
+          "head": [
+            216,
+            300,
+            313,
+            463
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Faint background figure behind the two men",
+          "head": [
+            350,
+            399,
+            383,
+            470
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Dark-haired, bearded man in a cream tunic and red mantle",
+          "head": [
+            431,
+            242,
+            549,
+            403
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Faint background figure behind the central man",
+          "head": [
+            576,
+            470,
+            603,
+            530
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Faint background figure near the center-right",
+          "head": [
+            620,
+            480,
+            653,
+            545
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Faint background figure farther right",
+          "head": [
+            673,
+            458,
+            706,
+            525
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "Small faint background figure",
+          "head": [
+            721,
+            518,
+            744,
+            564
+          ]
+        },
+        {
+          "nr": 10,
+          "who": "Bearded man in a gray tunic",
+          "head": [
+            751,
+            329,
+            850,
+            478
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "176a8e696fd52682",
+      "datum": "2026-11-22",
+      "plan_sha": "346b888a1d3d1326",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Die Heilung wird nur vermutet; die Tötungsabsicht der Pharisäer und ihre Beratung darüber fehlen.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is complete and readable; no speech bubbles are visible."
+        }
+      ],
+      "blind": {
+        "action": "The man in white and red extends an open hand towards the grey-robed man, who holds out his own hand. Two stern-looking men watch from the left, with faint figures behind them.",
+        "story_guess": "Possibly Jesus healing a man with a withered hand on the Sabbath, at the moment the man holds out his hand while others watch. The caption means 'Lord of the Sabbath'; the precise story and moment cannot be established from the picture alone.",
+        "text_in_picture": [
+          {
+            "text": "1",
+            "location": "Circled at the bottom left"
+          },
+          {
+            "text": "Herr über den Sabbat",
+            "location": "Caption at the bottom"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "458763dfba981c65",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-012-M2": {
+    "datei": "img/MAT-012-M2.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 4,
+      "kern": 1,
+      "kern_fehlt_de": "Die Heilung des blinden und stummen Besessenen sowie der Vorwurf der Pharisäer und Jesu Antwort sind nicht erkennbar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person or important object is visibly sliced by a hard picture edge; the figures fade into the white background.",
+          "stimmen": [
+            "fehler",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No text or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effect is visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical anomaly is visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No individual is clearly repeated."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear caricature or ethnic stereotype is visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have natural-looking proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a light watercolour with extensive white space and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "G-ROT",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Nur Jesus trägt Terrakottarot",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Only the central man wears terracotta-red."
+        },
+        {
+          "id": "F-JESUS-GESICHT",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "His facial features are visible in profile."
+        },
+        {
+          "id": "M2-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Jesus heilt, Pharisäer tuscheln",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A central man in white and red is touching/gesturing to another man who presents his hands, while religious-looking men on the right appear to whisper together nearby.",
+          "stimmen": [
+            "unklar",
+            "ok",
+            "ok"
+          ]
+        }
+      ],
+      "koepfe": {
+        "FIG-JESUS": {
+          "kopf": [
+            268,
+            270,
+            385,
+            444
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "The red-draped man touches another man's shoulder as they face one another and gesture. Three men at the right stand close together, one with a hand raised near his mouth.",
+        "story_guess": "The red-draped figure may represent Jesus speaking with a man while others confer, but the picture does not clearly identify a particular Bible story or moment.",
+        "cut_off": "The rightmost man's robe is cut off by the right edge.",
+        "text_in_picture": "",
+        "style": "A softly colored, watercolor-like illustration with detailed foreground figures and loosely rendered background figures and scenery."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Faint background person at far left",
+          "head": [
+            40,
+            550,
+            75,
+            615
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Faint background person in gray",
+          "head": [
+            90,
+            568,
+            119,
+            625
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Faint background person behind Jesus",
+          "head": [
+            160,
+            558,
+            190,
+            618
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Dark-haired, bearded man in cream and red",
+          "head": [
+            268,
+            270,
+            385,
+            444
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Bearded man in a white tunic",
+          "head": [
+            507,
+            337,
+            613,
+            495
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Small faint background person",
+          "head": [
+            667,
+            550,
+            684,
+            585
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Bearded man in gray with white head covering",
+          "head": [
+            749,
+            382,
+            824,
+            516
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Bearded man with a dark headband",
+          "head": [
+            830,
+            413,
+            890,
+            530
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "Bearded man at far right with white head covering",
+          "head": [
+            905,
+            414,
+            980,
+            542
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "8bdd582a6e71418b",
+      "datum": "2026-11-22",
+      "plan_sha": "e64dcdaad76bbf65",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Die Heilung des blinden und stummen Besessenen sowie der Beelzebul-Vorwurf und Jesu Antwort sind nicht eindeutig erkennbar.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "The man in red touches the shoulder of the man in white as they face each other and gesture. To their right, one of three men holds a hand near his mouth as if whispering to the others.",
+        "story_guess": "Possibly Jesus discussing casting out demons by the Spirit of God, as in Matthew 12:22–28. The picture does not show enough to identify the story or exact moment confidently.",
+        "text_in_picture": [
+          {
+            "text": "2",
+            "where": "Inside a circle at the bottom left"
+          },
+          {
+            "text": "durch den Geist Gottes",
+            "where": "At the bottom of the picture"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "4d71cb5ceca359fd",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-014-M1": {
+    "datei": "img/MAT-014-M1.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 3,
+      "kern": 1,
+      "kern_fehlt_de": "Die Forderung nach Johannes’ Kopf und Herodes’ Anordnung zur Enthauptung sind nicht erkennbar; die Mutter flüstert dem König statt der Tochter zu.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and objects fade into the paper rather than being cut off by the border."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear extra or misplaced limbs or malformed faces are visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No individual is clearly repeated."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear caricature or ethnic stereotype is visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible adults have generally natural proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The light watercolour scene has substantial white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty pale paper."
+        },
+        {
+          "id": "M1-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Das Mädchen vor dem König beim Fest",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A young female figure stands before a seated, crowned man, with food and vessels nearby."
+        }
+      ],
+      "koepfe": {},
+      "blind": {
+        "action": "A young woman appears to dance with a tambourine before a reclining man, while another woman leans close to his ear. A server carries a covered dish, and faint figures stand in the background.",
+        "story_guess": "Possibly the daughter of Herodias dancing before Herod at his birthday feast. The woman whispering to the seated man may suggest Herodias, though the image alone does not establish the identities or the precise biblical moment.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with loose outlines and more detail in the foreground figures than in the background."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Background figure at far left",
+          "head": [
+            27,
+            554,
+            58,
+            619
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Background figure in pale clothing",
+          "head": [
+            64,
+            578,
+            95,
+            637
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Background figure in blue",
+          "head": [
+            94,
+            457,
+            125,
+            520
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Background figure in light clothing",
+          "head": [
+            133,
+            458,
+            163,
+            520
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Dancer holding a tambourine",
+          "head": [
+            175,
+            329,
+            304,
+            491
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Faint background figure behind the dancer",
+          "head": [
+            347,
+            620,
+            367,
+            656
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Faint background figure behind the dancer's arm",
+          "head": [
+            369,
+            598,
+            387,
+            634
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Servant carrying a covered dish",
+          "head": [
+            454,
+            328,
+            513,
+            423
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "Seated bearded man in purple",
+          "head": [
+            668,
+            392,
+            763,
+            543
+          ]
+        },
+        {
+          "nr": 10,
+          "who": "Veiled woman speaking to the seated man",
+          "head": [
+            764,
+            330,
+            891,
+            480
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "de4f950019c493af",
+      "datum": "2026-11-22",
+      "plan_sha": "01a0bc378da9d6d0",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Die Forderung nach Johannes’ Kopf und seine Enthauptung fehlen; Herodias flüstert dem König statt ihrer Tochter zu.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption lettering is readable and not cut off or overlapping."
+        }
+      ],
+      "blind": {
+        "action": "A young woman dances with a tambourine while a seated man watches her. Another woman leans close to him as if whispering, while an attendant carries a covered dish.",
+        "story_guess": "Likely the story of Herod, Herodias, her daughter and John the Baptist. It appears to show the daughter's dance at Herod's feast, with Herodias whispering to Herod; the caption refers to John's beheading, but the beheading itself is not shown.",
+        "text_in_picture": [
+          {
+            "text": "1",
+            "location": "Circled at the bottom left",
+            "speech_bubble_owner": null
+          },
+          {
+            "text": "liess Johannes im Gefängnis enthaupten",
+            "location": "Caption along the bottom",
+            "speech_bubble_owner": null
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "003a4df99d3b8b25",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-018-M4": {
+    "datei": "img/MAT-018-M4.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 3,
+      "kern": 1,
+      "kern_fehlt_de": "Dass der Mitknecht wegen der kleinen Schuld ins Gefängnis geworfen wird, ist nicht erkennbar.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person or important object is visibly sliced by the picture edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No letters, words, numbers or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or glowing ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical anomalies are visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No two figures clearly have the same face, hair and clothing."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear caricature or ethnic stereotype is visible."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have natural-looking proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a light watercolour with extensive white space and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly pale or empty."
+        },
+        {
+          "id": "M4-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Der unbarmherzige Knecht",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A crowned king sits with torn papers before a kneeling supplicant, and a similar scene of one man attacking another is visible in the background, matching the main action.",
+          "stimmen": [
+            "fehler",
+            "ok",
+            "ok"
+          ]
+        }
+      ],
+      "koepfe": {},
+      "blind": {
+        "action": "A crowned man tears a document while a kneeling man pleads before him. At right, a bearded man grabs another man by his upper clothing or neck as the other recoils.",
+        "story_guess": "Possibly the parable of the unforgiving servant: the king cancels the servant's debt, while the same servant later seizes a fellow servant who owes him money. The picture appears to combine those two moments.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with loose, moderately detailed figures and a lightly suggested background."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Seated crowned king",
+          "head": [
+            171,
+            260,
+            251,
+            396
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Kneeling man in white",
+          "head": [
+            419,
+            419,
+            497,
+            528
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Faint background person in gray",
+          "head": [
+            605,
+            612,
+            623,
+            644
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Small background person",
+          "head": [
+            633,
+            597,
+            647,
+            629
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Background person in gray",
+          "head": [
+            652,
+            575,
+            669,
+            608
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Brown-clad man grabbing another",
+          "head": [
+            732,
+            418,
+            796,
+            511
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Man in gray being grabbed",
+          "head": [
+            833,
+            446,
+            889,
+            530
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Faint background person in gray",
+          "head": [
+            902,
+            578,
+            918,
+            611
+          ]
+        },
+        {
+          "nr": 9,
+          "who": "Faint background person in tan",
+          "head": [
+            935,
+            572,
+            951,
+            606
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "5f0286eee22f832f",
+      "datum": "2026-11-22",
+      "plan_sha": "1a616c67a57c64f5",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Der Schuldenerlass und das Packen des Mitknechts sind erkennbar, aber dessen Gefängnisstrafe wird nicht gezeigt oder erwähnt.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "A crowned man holds torn papers while a kneeling man pleads before him. At the same time, another man grips a man by the neck or collar as the latter recoils.",
+        "story_guess": "Likely the parable of the unforgiving servant in Matthew 18: the king cancels a servant's debt, while the servant later seizes a fellow servant who owes him money. The illustration appears to show both moments together.",
+        "text_in_picture": [
+          {
+            "text": "4",
+            "location": "Circled at the bottom left"
+          },
+          {
+            "text": "wenn ihr nicht von Herzen vergebt",
+            "location": "Caption along the bottom"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "a8122d8e6c587c92",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-019-M1": {
+    "datei": "img/MAT-019-M1.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 4,
+      "kern": 1,
+      "kern_fehlt_de": "Die Fangfrage der Pharisäer und Jesu Aussage über die von Gott gestiftete, untrennbare Verbindung fehlen.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures fade into the background rather than being visibly sliced by the edge."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or ring is visible around any head."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clear anatomical abnormality is visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No individual clearly appears twice."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No person is visibly drawn as a caricature or stereotype."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The adults have broadly natural proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "It is a light watercolour with ample white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly pale, empty paper."
+        },
+        {
+          "id": "G-ROT",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Nur Jesus trägt Terrakottarot",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "Only the central man visibly wears terracotta-red."
+        },
+        {
+          "id": "F-JESUS-GESICHT",
+          "ebene": "figur",
+          "stufe": "pflicht",
+          "de": "Gesicht Jesu sichtbar wie bei allen Menschen (von vorn, schräg oder im Profil; nicht abgewandt, verdeckt oder leer)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "His facial features are visible in profile."
+        },
+        {
+          "id": "M1-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Jesus antwortet, ein Paar steht neben ihm",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A man gestures while facing a couple, with religiously dressed men listening nearby."
+        }
+      ],
+      "koepfe": {
+        "FIG-JESUS": {
+          "kopf": [
+            390,
+            233,
+            466,
+            345
+          ],
+          "sicher": "gitter"
+        }
+      },
+      "blind": {
+        "action": "The central man extends an open hand toward the man and woman standing together at right. Two men at left watch him, while faint figures stand behind them.",
+        "story_guess": "Possibly Jesus teaching the Pharisees about marriage and divorce, while gesturing toward a husband and wife. The exact story and moment cannot be identified confidently from the picture alone.",
+        "cut_off": "A faint background figure at the far left is partly cut off by the picture edge.",
+        "text_in_picture": "",
+        "style": "A softly colored, lightly detailed watercolor-style illustration with delicate outlines and a mostly blank background."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Faint background person at far left",
+          "head": [
+            25,
+            337,
+            51,
+            388
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Bearded man in blue with a headband",
+          "head": [
+            65,
+            275,
+            128,
+            385
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Bearded man in blue with hand at chin",
+          "head": [
+            165,
+            232,
+            240,
+            348
+          ]
+        },
+        {
+          "nr": 4,
+          "who": "Faint background person behind the men",
+          "head": [
+            267,
+            382,
+            291,
+            431
+          ]
+        },
+        {
+          "nr": 5,
+          "who": "Faint background person in gray",
+          "head": [
+            301,
+            393,
+            332,
+            445
+          ]
+        },
+        {
+          "nr": 6,
+          "who": "Bearded man in a cream tunic and red mantle",
+          "head": [
+            390,
+            233,
+            466,
+            345
+          ]
+        },
+        {
+          "nr": 7,
+          "who": "Bearded man in a white tunic",
+          "head": [
+            705,
+            242,
+            762,
+            345
+          ]
+        },
+        {
+          "nr": 8,
+          "who": "Dark-haired woman wearing a veil",
+          "head": [
+            784,
+            272,
+            856,
+            479
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "7f6c81a776bf2874",
+      "datum": "2026-11-22",
+      "plan_sha": "15f7f5a56931d103",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Die Pharisäer und ihre Prüfungsfrage zur Entlassung der Frau aus beliebigem Grund werden nicht ausdrücklich erkannt; auch die Aussage über die Schöpfung und das eine Fleisch fehlt.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The caption is fully visible and readable."
+        }
+      ],
+      "blind": {
+        "action": "The central robed man gestures toward the couple as two men on the left watch him. The couple stand side by side, while several faint figures appear in the background.",
+        "story_guess": "The caption and figures suggest Jesus teaching about marriage and divorce: the moment when he says that what God has joined together should not be separated, as in Matthew 19:6 or Mark 10:9.",
+        "text_in_picture": [
+          {
+            "text": "1",
+            "location": "Circled at the bottom left"
+          },
+          {
+            "text": "Was nun Gott zusammengefügt hat",
+            "location": "Caption along the bottom"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "a3593f1d6e5a9ac9",
+      "datum": "2026-11-22",
+      "prozess": "PROC-BILD-AQUARELL@2.4"
+    }
+  },
+  "MAT-028-M1": {
+    "datei": "img/MAT-028-M1.webp",
+    "lauf": "20261122-144716-auto-neu",
+    "variante": "r1v1",
+    "modell": "gpt-image-2.5-flare",
+    "uebernommen": "2026-11-22",
+    "pruefung": {
+      "ergebnis": "bestanden",
+      "punkte": 3,
+      "kern": 1,
+      "kern_fehlt_de": "Der Mann wird nicht als Engel erkannt; seine Botschaft von der Auferstehung und der Auftrag, die Jünger nach Galiläa zu weisen, fehlen.",
+      "regeln": [
+        {
+          "id": "G-RAND",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand und nichts Wichtiges ist vom Bildrand hart angeschnitten (Ausblenden ins Papier ist erlaubt)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The figures and important objects do not touch the picture edges."
+        },
+        {
+          "id": "G-SCHRIFT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine gemalte Schrift, keine gemalten Sprechblasen",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No writing or speech bubbles are visible."
+        },
+        {
+          "id": "G-NIMBUS",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Kein Heiligenschein",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No halo or ring is visible."
+        },
+        {
+          "id": "G-EFFEKT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Licht- oder Zaubereffekte, die der Text nicht nennt",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No supernatural visual effects are visible."
+        },
+        {
+          "id": "G-MODERN",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Nichts Modernes (Kleidung, Muster, Gegenstände)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly modern objects or clothing details are visible."
+        },
+        {
+          "id": "G-KOERPER",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Keine Fehlbildungen (Hände, Arme, Gesichter)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No clearly extra, missing, or malformed body parts are visible."
+        },
+        {
+          "id": "G-DOPPELT",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand erscheint doppelt (gleich gekleidete Mitglieder einer Gruppe zählen nicht)",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "The three figures appear distinct."
+        },
+        {
+          "id": "G-KARIKATUR",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Niemand karikiert oder als Volksgruppe stereotyp gezeichnet",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No figure is visibly caricatured or grotesque."
+        },
+        {
+          "id": "G-PROPORTION",
+          "ebene": "allgemein",
+          "stufe": "pflicht",
+          "de": "Natürliche erwachsene Proportionen (kein Kindchenschema, kein Anime)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The figures have broadly natural adult proportions."
+        },
+        {
+          "id": "G-REDUKTION",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Leichtes Aquarell mit viel freiem Papier, Hintergrund leer oder sehr schlicht (wie die Stilvorlage)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The light watercolour has extensive white paper and a simple background."
+        },
+        {
+          "id": "G-OBEN",
+          "ebene": "allgemein",
+          "stufe": "soll",
+          "de": "Oberes Viertel weitgehend leer (Platz für Sprechblasen)",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The upper quarter is mostly empty, pale paper."
+        },
+        {
+          "id": "M1-KERN",
+          "ebene": "feld",
+          "stufe": "pflicht",
+          "de": "Engel am offenen Grab vor zwei Frauen",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "A white-clad figure sits beside an open tomb facing two women."
+        }
+      ],
+      "koepfe": {},
+      "blind": {
+        "action": "Two women approach a seated man outside a rock-cut tomb. The man gestures toward them, while one woman holds a small vessel and looks surprised.",
+        "story_guess": "Possibly the risen Jesus appearing to the women near the empty tomb, as in Matthew 28:9–10. The exact moment is uncertain: the picture shows him seated and speaking to them beside the tomb.",
+        "cut_off": "",
+        "text_in_picture": "",
+        "style": "A softly colored watercolor-style illustration with light outlines and moderate detail."
+      },
+      "personen": [
+        {
+          "nr": 1,
+          "who": "Woman in blue with a white veil",
+          "head": [
+            226,
+            294,
+            300,
+            405
+          ]
+        },
+        {
+          "nr": 2,
+          "who": "Woman in purple holding a jar",
+          "head": [
+            343,
+            395,
+            419,
+            500
+          ]
+        },
+        {
+          "nr": 3,
+          "who": "Seated bearded man in white",
+          "head": [
+            595,
+            341,
+            662,
+            444
+          ]
+        }
+      ],
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "71dd0c09469c0ecc",
+      "datum": "2026-11-22",
+      "plan_sha": "1998c880ba91cf34",
+      "regeln_version": "2026-10-28d",
+      "prozess": "PROC-BILD-AQUARELL@2.4",
+      "modell_bild": "gpt-image-2.5-flare",
+      "bild_sha_quelle": "png vor Verkleinerung geprüft"
+    },
+    "schluss": {
+      "ergebnis": "bestanden",
+      "punkte": 1,
+      "kern": 1,
+      "kern_fehlt_de": "Der Mann wird nicht eindeutig als Engel erkannt; der Auftrag, den Jüngern von Galiläa zu berichten, fehlt.",
+      "regeln": [
+        {
+          "id": "S-GESICHT",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Keine Blase über Gesicht, Geste oder Haupthandlung",
+          "ergebnis": "ok",
+          "antwort": "no",
+          "grund": "No speech bubbles are visible."
+        },
+        {
+          "id": "S-LESBAR",
+          "ebene": "kachel",
+          "stufe": "pflicht",
+          "de": "Alle Worte vollständig und lesbar",
+          "ergebnis": "ok",
+          "antwort": "yes",
+          "grund": "The visible caption is complete and readable."
+        }
+      ],
+      "blind": {
+        "action": "Two women approach a seated man outside an open tomb. The man gestures towards them as the woman in purple holds a vessel and looks at him in apparent surprise.",
+        "story_guess": "Probably the women discovering Jesus' empty tomb and being told that he has been raised. The seated man's identity is not visually certain.",
+        "text_in_picture": [
+          {
+            "text": "denn er ist auferweckt worden",
+            "location": "caption at the bottom"
+          },
+          {
+            "text": "1",
+            "location": "circled number at the bottom left"
+          }
+        ]
+      },
+      "modell": "gpt-6.1-terra + gpt-5.5",
+      "bild_sha": "6934694aec2d9417",
       "datum": "2026-11-22",
       "prozess": "PROC-BILD-AQUARELL@2.4"
     }
