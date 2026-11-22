@@ -6,7 +6,7 @@ jedes Feld als Szene. Damit sich die Kapitel im Gedächtnis nicht vermischen, ha
 die sich von den Nachbarkapiteln deutlich unterscheidet; die App nimmt dieselbe Farbe für die Kapitelleiste.
 
 Quelle: scripts/authoring/bilder_aquarell_daten/kapitel/<BUCH>.json (Format FORMAT unten). Daraus entsteht der Szenenplan
-scripts/authoring/bilder_aquarell_daten/szenen-kap-<buch>.json. Pflichtfragen fragen nur nach Sichtbarem (wer, was, wo, Haltung), nie nach Material oder Stoff (Sacktuch, Leinen): eine lockere
+scripts/authoring/bilder_aquarell_daten/szenen-kap-<buch>.json. Pflichtfragen fragen nur nach Sichtbarem (Fassung 2: Hauptpersonen und Haupthandlung erkennbar genügt) (wer, was, wo, Haltung), nie nach Material oder Stoff (Sacktuch, Leinen): eine lockere
 Aquarellskizze zeigt das nicht eindeutig (Jona 3,10, Lauf 90). Belege und Pflichtregeln werden aus dem Bildauftrag abgeleitet:
 B-Beleg = Handlung des Feldes mit Stelle; Pflichtregel = «kern_en» (was sichtbar sein muss). Gott wird nicht gemalt
 (docs/BILDSTIL.md); handelt im Feld Gott, beschreibt «moment_de» die sichtbare Folge, an der die Prüfung das Bild misst; Personen ohne Wiederkehr malt das Bild als gewöhnliche Menschen, ihr Name steht als Namensschild
@@ -54,6 +54,13 @@ PALETTEN = {
     "braun": ("earthy umber brown and stone grey", "#8A6A4A"),
     "rosa": ("soft dawn pink and peach", "#E39A8E"),
 }
+
+
+# Fassung 2 der Felder (2026-11-22, nach Läufen 86–95: 45 % der Felder fielen an zu strengen Pflichtfragen und gestreiften Kopftüchern
+# durch). Felder, die nach Fassung 1 schon bestanden haben, tragen «fassung»: 1 und bleiben gültig.
+ZUSATZ_KERN = (" Answer yes if the main persons or objects and the main action are recognisable, even if feelings, motives, "
+               "materials or small details are not clearly visible.")
+ZUSATZ_BILD = " All head cloths and garments plain, without stripes or patterns."
 
 
 def lade(p):
@@ -136,7 +143,8 @@ def schreibe(buch, d):
                 "brief": b["id"], "panel": i, "reference": pa["reference"], "form": "szene",
                 "form_grund_de": "Merkbild des Kapitels: erzählter Moment, gemalt (docs/ENTSCHEIDUNGEN.md «Merkbilder»).",
                 "depicts": x.get("depicts", []),
-                "bild_en": x["bild_en"].rstrip() + f" COLOUR OF THIS CHAPTER: the whole picture is dominated by {pal}; keep the rest of the palette quiet.",
+                "bild_en": x["bild_en"].rstrip() + f" COLOUR OF THIS CHAPTER: the whole picture is dominated by {pal}; keep the rest of the palette quiet."
+                           + (ZUSATZ_BILD if x.get("fassung", 2) >= 2 else ""),
                 "speech": [],
                 **({"band": x["band"]} if x.get("band") else {}),
                 # Handelt im Feld Gott (wird nicht gemalt), beschreibt «moment_de» die sichtbare Folge; daran misst die Prüfung das Bild
@@ -144,8 +152,10 @@ def schreibe(buch, d):
                 "evidence": [{"s": "B", "ref": pa["reference"], "de": pa["action_de"]},
                              {"s": "R", "de": "Kleidung, Landschaft, Gegenstände: plausible Ausgestaltung nach Epoche und Ort."},
                              {"s": "I", "de": "Gesichtsausdruck, Haltung und Grundfarbe des Kapitels: gestaltet, vom Text nicht genannt."}],
-                "pruefung": [{"id": f"M{i}-KERN", "art": "muss", "stufe": "pflicht", "s": "B", "ref": pa["reference"], "de": x["kern_de"], "en": x["kern_en"]}]
+                "pruefung": [{"id": f"M{i}-KERN", "art": "muss", "stufe": "pflicht", "s": "B", "ref": pa["reference"], "de": x["kern_de"],
+                              "en": x["kern_en"] + (ZUSATZ_KERN if x.get("fassung", 2) >= 2 else "")}]
                             + (x.get("pruefung") or []),
+                **({"ausnahmen": x["ausnahmen"]} if x.get("ausnahmen") else {}),
             }
         bilder.append({"id": f"ILL-AQU-{buch}-{n:03d}", "brief": b["id"], "level": "chapter", "reference": f"{buch}.{n}",
                        "target": b.get("target") or f"SUM-CH-{buch}-{n:03d}", "felder": ids, "note_de": kap["note_de"],
