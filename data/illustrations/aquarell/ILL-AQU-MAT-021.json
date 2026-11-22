@@ -132,27 +132,377 @@
   },
   "check": {
     "stufe": "entwurf",
-    "process": "PROC-BILD-AQUARELL@1.0",
+    "process": "PROC-BILD-AQUARELL@2.4",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
         "scene": "MAT-021-M1",
-        "ergebnis": "ungeprueft"
+        "ergebnis": "durchgefallen",
+        "punkte": 5,
+        "kern": 2,
+        "bild_sha": "a032c2e51db3e884",
+        "plan_sha": "584ed77bea481ed1",
+        "regeln_version": "2026-10-28d",
+        "datum": "2026-11-22",
+        "modell": "gpt-6.1-terra + gpt-5.5",
+        "regeln": [
+          {
+            "id": "G-RAND",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-SCHRIFT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-NIMBUS",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-EFFEKT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-MODERN",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "G-KOERPER",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-DOPPELT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-KARIKATUR",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-PROPORTION",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-REDUKTION",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-OBEN",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-ROT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "F-JESUS-GESICHT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "M1-KERN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: A man on the right wears a head covering with dark stripes.)"
+        ],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": 2,
+          "bild_sha": "7b36db0bee9aa13d",
+          "offen_de": []
+        }
       },
       {
         "scene": "MAT-021-M2",
-        "ergebnis": "ungeprueft"
+        "ergebnis": "durchgefallen",
+        "punkte": 4,
+        "kern": 1,
+        "bild_sha": "9d1d5940c8dc881d",
+        "plan_sha": "ea78d4b4de816a5c",
+        "regeln_version": "2026-10-28d",
+        "datum": "2026-11-22",
+        "modell": "gpt-6.1-terra + gpt-5.5",
+        "regeln": [
+          {
+            "id": "G-RAND",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-SCHRIFT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-NIMBUS",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-EFFEKT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-MODERN",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "G-KOERPER",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-DOPPELT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-KARIKATUR",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-PROPORTION",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-REDUKTION",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-OBEN",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-ROT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "F-JESUS-GESICHT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "M2-KERN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: The man on the right wears a head covering with dark stripes.)"
+        ],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": 1,
+          "bild_sha": "9332bf5196c924af",
+          "offen_de": [
+            "Moment nicht ganz getroffen: Das Verdorren des Feigenbaums auf Jesu Wort am nächsten Morgen fehlt."
+          ]
+        }
       },
       {
         "scene": "MAT-021-M3",
-        "ergebnis": "ungeprueft"
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": 1,
+        "bild_sha": "206bbeffb87ae170",
+        "plan_sha": "c32f8ba4f10f09a0",
+        "regeln_version": "2026-10-28d",
+        "datum": "2026-11-22",
+        "modell": "gpt-6.1-terra + gpt-5.5",
+        "regeln": [
+          {
+            "id": "G-RAND",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-SCHRIFT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-NIMBUS",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-EFFEKT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-MODERN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-KOERPER",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-DOPPELT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-KARIKATUR",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-PROPORTION",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-REDUKTION",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-OBEN",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-ROT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "F-JESUS-GESICHT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "M3-KERN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": 1,
+          "bild_sha": "ad692ca606c55e52",
+          "offen_de": [
+            "Moment nicht ganz getroffen: Jesu Gegenfrage zur Taufe des Johannes und das Gleichnis von den zwei Söhnen samt Aussage über Zöllner und Prostituierte fehlen."
+          ]
+        }
       },
       {
         "scene": "MAT-021-M4",
-        "ergebnis": "ungeprueft"
+        "ergebnis": "bestanden",
+        "punkte": 3,
+        "kern": 1,
+        "bild_sha": "faa217ccb177579f",
+        "plan_sha": "f8679ca11e651747",
+        "regeln_version": "2026-10-28d",
+        "datum": "2026-11-22",
+        "modell": "gpt-6.1-terra + gpt-5.5",
+        "regeln": [
+          {
+            "id": "G-RAND",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-SCHRIFT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-NIMBUS",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-EFFEKT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-MODERN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-KOERPER",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-DOPPELT",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-KARIKATUR",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-PROPORTION",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-REDUKTION",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "G-OBEN",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "M4-KERN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": 1,
+          "bild_sha": "9b8093a857748b09",
+          "offen_de": [
+            "Moment nicht ganz getroffen: Die Tötung des Sohnes wird nicht gezeigt; auch das Wort vom verworfenen Stein als Eckstein fehlt."
+          ]
+        }
       }
     ],
-    "open_de": [],
+    "open_de": [
+      "MAT-021-M1: Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: A man on the right wears a head covering with dark stripes.)",
+      "MAT-021-M2: Nichts Modernes (Kleidung, Muster, Gegenstände) (fehler: The man on the right wears a head covering with dark stripes.)",
+      "MAT-021-M2 (Kachel): Moment nicht ganz getroffen: Das Verdorren des Feigenbaums auf Jesu Wort am nächsten Morgen fehlt.",
+      "MAT-021-M3 (Kachel): Moment nicht ganz getroffen: Jesu Gegenfrage zur Taufe des Johannes und das Gleichnis von den zwei Söhnen samt Aussage über Zöllner und Prostituierte fehlen.",
+      "MAT-021-M4 (Kachel): Moment nicht ganz getroffen: Die Tötung des Sohnes wird nicht gezeigt; auch das Wort vom verworfenen Stein als Eckstein fehlt."
+    ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
   }
 }
