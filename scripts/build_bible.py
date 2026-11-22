@@ -16,6 +16,7 @@ Erzeugte Datei nicht von Hand ändern.
 """
 import base64
 import gzip
+import hashlib
 import json
 import pathlib
 import re
@@ -311,6 +312,9 @@ def _check_text(c):
     return f"In Prüfung (Stand {datum}): {offen} offene Punkte."
 
 
+FIGS = {}
+
+
 def _ill_svg(fp):
     """SVG eines Bildes; gemalte Bilder (<image href="img/…">) als data:-Adresse einbetten, damit Einzeldatei und Pakete sie tragen."""
     svg = fp.read_text(encoding="utf-8").strip()
@@ -320,7 +324,12 @@ def _ill_svg(fp):
         daten = f.read_bytes()
         if m.group(1).startswith("figuren/"):   # Bilder des Bildlexikons in Strukturbildern: freigestellt, kräftigere Farben
             import vignetten as _vg
-            daten, typ = _vg.freistellen(str(f.relative_to(ROOT))), "image/webp"
+            daten = _vg.freistellen(str(f.relative_to(ROOT)))
+            # einmal je Bild als eigene Datei (fig/<Prüfsumme>.webp), nicht in jedem Strukturbild neu: das Paket der Buchebene
+            # wuchs sonst auf 62 MB und überschritt die Grenze von Cloudflare Pages (25 MiB je Datei); die Einzeldatei bettet sie ein
+            h = hashlib.sha1(daten).hexdigest()[:16]
+            FIGS[h] = daten
+            return f'href="fig/{h}.webp"'
         return f'href="data:{typ};base64,{base64.b64encode(daten).decode()}"'
     return re.sub(r'href="((?:img|figuren)/[^"]+)"', _emb, svg)   # figuren/: Bilder des Bildlexikons in Strukturbildern
 
@@ -579,18 +588,27 @@ def page(inline):
     return t
 
 
+def _fig_einbetten(s):
+    """fig/<Prüfsumme>.webp durch data:-Adressen ersetzen (Einzeldatei und Textfassung ohne Binärdateien)."""
+    return re.sub(r'fig/([0-9a-f]{16})\.webp', lambda m: "data:image/webp;base64," + base64.b64encode(FIGS[m.group(1)]).decode(), s)
+
+
 # Einzeldatei (offline, Tests): alle Pakete eingebettet
-(ROOT / "app/bible/index.html").write_text(page(bundles), encoding="utf-8")
+(ROOT / "app/bible/index.html").write_text(_fig_einbetten(page(bundles)), encoding="utf-8")
 # Aufgeteilte Fassungen zum Veröffentlichen (deterministisches gzip):
 #   build/bible/        Pakete als .json.gz (übliche Webserver)
 #   build/bible-txt/    Pakete als gzip in Base64 (.gz.txt) für Hosts, die keine Binärdateien ausliefern
 import hashlib  # noqa: E402
 sizes, packed = {}, {}
+packed_txt = {}
 for name, d in bundles.items():
-    raw = json.dumps(d, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    js = json.dumps(d, ensure_ascii=False, separators=(",", ":"))
+    raw = js.encode("utf-8")
     gz = gzip.compress(raw, compresslevel=9, mtime=0)
     packed[name] = gz
     sizes[name] = (len(raw), len(gz))
+    eing = _fig_einbetten(js)
+    packed_txt[name] = gz if eing == js else gzip.compress(eing.encode("utf-8"), compresslevel=9, mtime=0)
 # Version je Paket (Prüfsumme): die App lädt «<paket><ext>?v=<version>», damit Pakete lange im Cache bleiben dürfen
 # und eine neue Fassung trotzdem sofort ankommt (siehe _headers).
 versions = {name: hashlib.sha256(gz).hexdigest()[:12] for name, gz in sorted(packed.items())}
@@ -610,6 +628,8 @@ HEADERS = """# Cloudflare Pages: Cache und Sicherheit (erzeugt von scripts/build
   Cache-Control: public, max-age=31536000, immutable
 /n/*
   Cache-Control: public, max-age=31536000, immutable
+/fig/*
+  Cache-Control: public, max-age=31536000, immutable
 """
 for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
     out = ROOT / "build" / folder
@@ -620,7 +640,11 @@ for folder, ext in (("bible", ".json.gz"), ("bible-txt", ".gz.txt")):
     else:
         manifest.pop("v", None)
     (out / "index.html").write_text(page(None), encoding="utf-8")
-    for name, gz in packed.items():
+    if folder == "bible":
+        (out / "fig").mkdir(exist_ok=True)
+        for h, daten in FIGS.items():
+            (out / "fig" / f"{h}.webp").write_bytes(daten)
+    for name, gz in (packed if folder == "bible" else packed_txt).items():
         f = out / f"{name}{ext}"
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_bytes(gz if ext.endswith(".gz") else base64.b64encode(gz) + b"\n")
