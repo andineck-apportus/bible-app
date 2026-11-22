@@ -141,10 +141,18 @@ def schreibe(buch, d):
         bilder.append({"id": f"ILL-AQU-{buch}-{n:03d}", "brief": b["id"], "level": "chapter", "reference": f"{buch}.{n}",
                        "target": b.get("target") or f"SUM-CH-{buch}-{n:03d}", "felder": ids, "note_de": kap["note_de"],
                        "merkbild": {"palette": kap["palette"], "farbe": hexf}})
+    # Malbeschreibungen: eigene (Quelle), sonst die des Bildlexikons im Stil (dieselbe wie beim Einzelporträt), damit Figuren gleich aussehen
+    st = lade(ROOT / "data/illustrations/styles/ILLSTYLE-AQUARELL.json").get("renderings") or {}
+    allg = lade(DATEN / "figuren.json")["figuren"]
+    figuren = dict(d.get("figuren") or {})
+    for sz in szenen.values():
+        for fid in sz["depicts"]:
+            if fid not in figuren and fid not in allg and (st.get(fid) or {}).get("description_en"):
+                figuren[fid] = st[fid]["description_en"]
     plan = {"_hinweis": f"Kapitelgerüst {buch} (scripts/authoring/kapitelgeruest.py aus kapitel/{buch}.json): ein Merkbild je Kapitel, "
                         "Felder nach dem Bildauftrag, eigene Grundfarbe je Kapitel.",
             "basis": trans, "tags": [tag] if tag else [], "figurenblatt": None,
-            "figuren": d.get("figuren", {}), "kenn_en": d.get("kenn_en", {}), "pruef": d.get("pruef", {}),
+            "figuren": figuren, "kenn_en": d.get("kenn_en", {}), "pruef": d.get("pruef", {}),
             "bilder": bilder, "szenen": szenen}
     (DATEN / f"szenen-kap-{code}.json").write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return list(szenen)
