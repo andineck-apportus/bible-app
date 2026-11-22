@@ -107,6 +107,7 @@ if __name__ == "__main__":
 
 
 _frei = {}
+FREI_FASSUNG = "1"   # erhöhen, wenn sich das Verfahren ändert (macht den Zwischenspeicher ungültig)
 
 
 def freistellen(pfad):
@@ -115,6 +116,14 @@ def freistellen(pfad):
     zusammenhängt (Flutfüllung mit Toleranz); weiss Gemaltes innerhalb der Umrisse (Lamm, Kleid) bleibt deckend. Weiche Kante aus dem
     Farbabstand zum Papier; dazu etwas kräftigere Farben (Sättigung, Kontrast). Wird beim Bau der App erzeugt, nicht gespeichert."""
     if pfad in _frei:
+        return _frei[pfad]
+    # Zwischenspeicher auf der Platte (nicht im Repo; im Bau-Workflow über actions/cache): Freistellen dauert rund 2,5 s je Bild,
+    # bei über 600 Bildern sprengte das die Bauzeit (Bau am 2026-11-21 nach 30 Minuten abgebrochen)
+    import hashlib
+    roh = (ROOT / pfad).read_bytes()
+    ablage = ROOT / ".cache/freistellen" / (hashlib.sha1(roh + FREI_FASSUNG.encode()).hexdigest() + ".webp")
+    if ablage.is_file():
+        _frei[pfad] = ablage.read_bytes()
         return _frei[pfad]
     import io
     from PIL import Image, ImageChops, ImageEnhance, ImageFilter, ImageDraw
@@ -139,4 +148,6 @@ def freistellen(pfad):
     b = io.BytesIO()
     farbig.save(b, "WEBP", quality=82, method=6)   # WebP mit Transparenz (PNG wäre rund achtmal grösser)
     _frei[pfad] = b.getvalue()
+    ablage.parent.mkdir(parents=True, exist_ok=True)
+    ablage.write_bytes(_frei[pfad])
     return _frei[pfad]

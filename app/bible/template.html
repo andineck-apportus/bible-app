@@ -1251,8 +1251,11 @@ const illStyles=(key,cur)=>{if(cur==='aquarell')return '';const ks=Object.keys(I
 // mit mehreren Kacheln nebeneinander entsprechend breiter; auf breiten Bildschirmen steht es dann unter dem Text statt daneben.
 const illVbW=svg=>{const m=/viewBox="0 0 ([\d.]+) /.exec(svg||'');return m?+m[1]:380;};
 // Kacheln (class="ill-tile") einzeln zeigen: auf dem Handy untereinander in voller Breite, sonst bis zwei nebeneinander
-const TILE_RE=/<svg class="ill-tile[^"]*"[\s\S]*?<\/svg>/g;
-const illTiles=svg=>{const t=String(svg||'').match(TILE_RE);if(!t)return null;return t.map(x=>x.replace(/ x="[^"]*" y="[^"]*" width="[^"]*" height="[^"]*"/,''));};
+// Kacheln mit Verschachtelung zählen: Strukturbilder enthalten eigene <svg> (Bildanordnung); ein einfacher Ausdruck bis zum ersten
+// </svg> schnitt sie nach dem ersten Bild ab (Rückmeldung Andi Neck 2026-11-22: Strukturbilder auf Buchebene «kaputt»)
+const tileSplit=svg=>{const out=[],re=/<svg\b|<\/svg>/g;let i,m;while((i=svg.indexOf('<svg class="ill-tile',i===undefined?0:i))>=0){re.lastIndex=i+4;let d=1;
+  while(d&&(m=re.exec(svg)))d+=m[0]==='</svg>'?-1:1;if(d)break;out.push(svg.slice(i,re.lastIndex));i=re.lastIndex;}return out.length?out:null;};
+const illTiles=svg=>{const t=tileSplit(String(svg||''));if(!t)return null;return t.map(x=>x.replace(/ x="[^"]*" y="[^"]*" width="[^"]*" height="[^"]*"/,''));};
 const illSvg=svg=>{const t=illTiles(svg);return t?`<div class="ill-tiles">${t.join('')}</div>`:svg;};
 const illNarrow=svg=>illTiles(svg)?'':` tiles" style="max-width:${Math.round(illVbW(svg)*1.8)}px`;
 const illWide=il=>{const t=illTiles(il&&il.svg);return t?(t.filter(x=>!x.includes('ill-narrow')).length>1||t.some(x=>x.includes('data-span="2"'))):illVbW(il&&il.svg)>=300;};

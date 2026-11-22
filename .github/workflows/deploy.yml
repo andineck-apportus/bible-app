@@ -24,7 +24,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -41,6 +41,12 @@ jobs:
           python3 scripts/test_validate.py
           python3 scripts/test_versification.py
           python3 scripts/test_import.py
+      - name: Zwischenspeicher freigestellte Lexikon-Bilder
+        uses: actions/cache@v4
+        with:
+          path: .cache/freistellen
+          key: freistellen-${{ hashFiles('data/illustrations/aquarell/figuren/**') }}
+          restore-keys: freistellen-
       - name: App bauen
         run: |
           pip install -q pillow   # Freistellen der Lexikon-Bilder in Strukturbildern (vignetten.freistellen)
