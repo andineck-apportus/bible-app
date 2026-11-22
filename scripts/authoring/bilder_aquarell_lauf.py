@@ -147,8 +147,13 @@ def pruefen(a, schluessel, out):
     return bericht
 
 
+MAX_SZENEN = 20   # je Lauf: 35 Szenen brauchten über 3 Stunden und stiessen an die Zeitgrenze (Lauf 87, 2026-11-22)
+
+
 def neu(a, schluessel, out):
     import bilder_aquarell_gen as G
+    if len([s for s in a.szenen.split(",") if s.strip()]) > MAX_SZENEN:
+        sys.exit(f"Zu viele Szenen für einen Lauf (höchstens {MAX_SZENEN}, Zeitgrenze 3 Stunden): auf mehrere Läufe verteilen")
     plaene, fig, allg, szenen, momente, band = kontext()
     bericht, gewaehlt = {}, {}
     for sid in a.szenen.split(","):
@@ -202,6 +207,10 @@ def neu(a, schluessel, out):
         if beste and (beste[0][0] == 2 or a.auch_unklar and beste[0][0] == 1):
             gewaehlt[sid] = beste
             e["gewaehlt"] = beste[1]
+            # Zwischenstand nach jeder Szene (Regel 2026-11-22): bricht der Lauf ab (Zeitgrenze, Fehler am Schluss), liegen die
+            # gewählten Varianten samt Prüfung im Bericht und lassen sich mit «bilder_aquarell_lauf.py nachholen <Ordner>» übernehmen
+            (out / "zwischenstand.json").write_text(json.dumps({s: {"variante": g[1], "pruefung": g[2], "modell": g[3]} for s, g in gewaehlt.items()},
+                                                               ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         else:
             e["gewaehlt"] = None
             BP.melde(f"{sid}: keine Variante hat alle Pflichtregeln erfüllt – nicht übernommen")
@@ -333,7 +342,25 @@ def bericht_html(out, bericht, titel):
     (out / "bericht.json").write_text(json.dumps(bericht, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def nachholen(ordner):
+    """Gewählte Szenen eines abgebrochenen Laufs aus «zwischenstand.json» im Bericht übernehmen (mit ihrer Prüfung)."""
+    out = pathlib.Path(ordner)
+    zw = json.loads((out / "zwischenstand.json").read_text(encoding="utf-8"))
+    (out / "lauf.json").write_text(json.dumps({"lauf": out.name, "bilder": [{"szene": s, "modell": v["modell"]} for s, v in zw.items()]},
+                                              ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    BA.uebernehmen(out, [f"{s}={v['variante']}" for s, v in zw.items()], {(s, v["variante"]): v["pruefung"] for s, v in zw.items()})
+    aus = BA.lade(DATEN / "auswahl.json")
+    for s in zw:
+        aus[s]["pruefung"]["bild_sha"] = BP.sha((BA.OUT / aus[s]["datei"]).read_bytes())
+        aus[s]["pruefung"]["bild_sha_quelle"] = "png vor Verkleinerung geprüft"
+    schreibe_auswahl(aus)
+    print(f"{len(zw)} Szenen nachgeholt; Schlussprüfung mit «auto-pruefen» für: " + ",".join(zw))
+
+
 def main():
+    if sys.argv[1:2] == ["nachholen"]:
+        nachholen(sys.argv[2])
+        return
     ap = argparse.ArgumentParser()
     ap.add_argument("schritt", choices=["neu", "pruefen", "kalibrieren", "stilprobe", "figuren"])
     ap.add_argument("--szenen", default="alle")

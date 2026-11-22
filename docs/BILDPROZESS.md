@@ -271,3 +271,12 @@ Gegenständen, 11 Paare überlappender Schilder; nachher 0. Grenzen: Die Prüfun
 Figur gehört, zeigt nur die Sichtprüfung (im Blindtest Runde 16 standen in zwei Bildern zwei Schilder zwischen zwei Figuren; danach
 kam die Lage auf der Brust dazu).
 
+## Malläufe absichern (2026-11-22)
+
+Nach den Läufen 61–73 und 86–88, die gemalt und geprüft hatten, deren Ergebnis aber verloren ging:
+
+1. **Vorprüfung vor dem Malen:** Der Lauf prüft zuerst alle Szenenpläne (Kapitelgerüst, Zitate, Stichwortbänder). Fehlt etwas, bricht er nach Sekunden ab, nicht nach Stunden.
+2. **Zwischenstand nach jeder Szene:** Gewählte Variante und Prüfung stehen sofort in `zwischenstand.json` im Bericht des Laufs. Bricht ein Lauf ab, übernimmt `bilder_aquarell_lauf.py nachholen <Berichtordner>` diese Szenen samt Prüfung (Porträts: `bilder_aquarell_figuren.py nachholen`).
+3. **Grösse begrenzt:** höchstens 20 Szenen je Lauf (Zeitgrenze 3 Stunden), höchstens drei Läufe gleichzeitig (Anfragegrenze des Bildanbieters).
+4. **Übernahme auch ohne eigenen Branch:** Lehnt GitHub den Branch des Laufs ab, übernimmt `bilder_merge.py` ihn aus dem lokalen Stand.
+

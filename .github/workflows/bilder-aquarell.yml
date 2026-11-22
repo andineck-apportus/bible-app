@@ -84,6 +84,13 @@ jobs:
           HINWEIS: ${{ inputs.hinweis }}
         run: python3 scripts/authoring/bilder_aquarell_gen.py "$SCHRITT" --szenen "$SZENEN" --varianten "$VARIANTEN" --hinweis "$HINWEIS"
 
+      # Vorprüfung (Regel 2026-11-22): Szenenpläne, Zitate und Stichwortbänder prüfen, bevor gemalt wird; sonst fiel ein Lauf erst
+      # nach Stunden am Schluss durch (Läufe 86 und 88)
+      - name: Vorprüfung der Szenenpläne
+        if: startsWith(inputs.schritt, 'auto-')
+        run: |
+          python3 scripts/authoring/kapitelgeruest.py pruefen
+          python3 scripts/authoring/bilder_aquarell.py > /dev/null
       - name: Malen, prüfen, ablegen (automatisch)
         if: startsWith(inputs.schritt, 'auto-')
         env:
