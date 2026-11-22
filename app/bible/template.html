@@ -1828,7 +1828,7 @@ function figIndexSheet(styleKey){const t=T(),L=lang==='de',keys=Object.keys(ILL.
   // Vorgabe: der gültige Stil (Aquarell); die früheren Stile zeigten neue Legenden unter alten Zeichen (Rückmeldung Andi Neck 2026-11-22)
   const k=styleKey||(ILL.styles.aquarell?'aquarell':ILL.styles[S.ill]?S.ill:keys[0]),st=ILL.styles[k];if(!st)return;
   const ORDER=['divine','people','thing','place','action','concept'],lex=ILL.lexicon||{},grp=l=>l.group||l.kind;
-  const figs=Object.keys(st.renderings||{}).filter(id=>lex[id]).map(id=>({id,lx:lex[id],r:st.renderings[id]}));
+  const figs=Object.keys(st.renderings||{}).filter(id=>lex[id]&&!lex[id].nameOnly).map(id=>({id,lx:lex[id],r:st.renderings[id]}));  // Personen ohne Wiederkehr: nur Namensschild, nicht im Bildlexikon (Entscheid Andi Neck 2026-11-22)
   // Gemalter Stil (Aquarell, docs/BILDSTIL.md Abschnitt 4): Einzelporträt statt Zeichen, «kommt vor in», ohne Bild ein ruhiger Platzhalter
   const painted=figs.length&&figs.every(f=>!f.r.symbol),tx=L?{none:'noch nicht gemalt',occ:'Kommt vor in',pic:'Bild'}:{none:'not painted yet',occ:'Appears in',pic:'Picture'};
   if(painted&&figs.some(f=>f.r.img)&&(MANIFEST.books||[]).includes('_figuren')&&!loadedBundles.has('b/_figuren')){const w=loadBundle('b/_figuren');if(w)w.then(()=>{if(sheet==='figindex')figIndexSheet(k);});}

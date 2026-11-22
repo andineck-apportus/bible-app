@@ -258,10 +258,13 @@ for p in sorted((ROOT / "data/illustrations").rglob("*.json")):
     r = json.loads(p.read_text(encoding="utf-8"))
     if r.get("status") != "deprecated":
         ill_recs[r["id"]] = r
+sys.path.insert(0, str(ROOT / "scripts/authoring"))
+import personen as _personen  # noqa: E402
 ill_core = {"styles": {}, "items": {}, "lexicon": {}}
 for rid, r in ill_recs.items():
     if r["type"] == "figure":
-        ill_core["lexicon"][rid] = {"kind": r["kind"], "group": r.get("display_group", r["kind"]), "name": r["names"], "traits": [t["trait_de"] for t in r.get("traits", [])], **({"legend": r["legend"]} if r.get("legend") else {})}
+        ill_core["lexicon"][rid] = {"kind": r["kind"], "group": r.get("display_group", r["kind"]), "name": r["names"], "traits": [t["trait_de"] for t in r.get("traits", [])], **({"legend": r["legend"]} if r.get("legend") else {}),
+                                    **({"nameOnly": 1} if _personen.nur_namensschild(rid) else {})}   # nur Namensschild (personen.py)
     elif r["type"] == "illustration_style":
         ill_core["styles"][r["key"]] = {"id": rid, "label": r["labels"], "description": r.get("description_de"),
                                         "renderings": r.get("renderings", {}), "library": (ROOT / r["library"]).read_text(encoding="utf-8") if r.get("library") else ""}

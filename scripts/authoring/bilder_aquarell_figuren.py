@@ -198,7 +198,8 @@ def wahl(eintr, szenen, alle_ohne_bild=True, erzwingen=False):
             return list(eintr)
         rend = stil().get("renderings", {})
         c = cfg()
-        return [f for f in eintr if not gueltig(rend.get(f), eintr[f], c)]
+        import personen as P   # Personen ohne Wiederkehr bekommen kein eigenes Porträt (Entscheid Andi Neck 2026-11-22)
+        return [f for f in eintr if not gueltig(rend.get(f), eintr[f], c) and not P.nur_namensschild(f)]
     ids = [s.strip() for s in szenen.split(",") if s.strip()]
     fehlt = [i for i in ids if i not in eintr]
     if fehlt:

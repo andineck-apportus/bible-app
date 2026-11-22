@@ -16,6 +16,9 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import personen as P  # noqa: E402
+
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 DATEN = ROOT / "scripts/authoring/bilder_aquarell_daten"
 STIL = ROOT / "data/illustrations/styles/ILLSTYLE-AQUARELL.json"
@@ -38,10 +41,11 @@ def auftraege(nur=None):
             if sz.get("form") != "struktur" or (nur and sid not in nur):
                 continue
             sx = sz["struktur"]
+            # Personen, die nicht wiederkehren, zeigt das Strukturbild nicht als Bild: ihr Name steht im Text (personen.py)
             for k, e in enumerate(sx.get("elemente") or [], 1):
-                for fid in (e.get("depicts") or [])[:3]:
+                for fid in [f for f in (e.get("depicts") or []) if not P.nur_namensschild(f)][:3]:
                     yield sid, str(k), fid
-            for fid in ((sx.get("mitte") or {}).get("depicts") or [])[:3]:
+            for fid in [f for f in ((sx.get("mitte") or {}).get("depicts") or []) if not P.nur_namensschild(f)][:3]:
                 yield sid, "m", fid
 
 

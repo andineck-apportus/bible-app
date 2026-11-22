@@ -34,8 +34,10 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
         none:c.filter(x=>/noch nicht gemalt/.test(x.querySelector('.fig-none')?.textContent||'')).length,sym:document.querySelectorAll('.sheet .legend-fig use').length,
         name:c.every(x=>x.querySelector('b')?.textContent.trim()),sub:c.every(x=>x.querySelector('.sub')?.textContent.trim()),occ:document.querySelectorAll('.sheet .fig-occ [data-ref-go]').length};});
     {const fs=require('node:fs'),R=path.join(__dirname,'..'),st=JSON.parse(fs.readFileSync(path.join(R,'data/illustrations/styles/ILLSTYLE-AQUARELL.json'),'utf8')).renderings;
-      aq.want=Object.keys(st).filter(i=>fs.existsSync(path.join(R,'data/illustrations/lexicon',i+'.json'))).length;
-      aq.mitBild=Object.values(st).filter(r=>r.image&&fs.existsSync(path.join(R,r.image))&&(!(r.check||{}).trocken||process.env.BIBLE_TROCKEN_BILDER)).length;}
+      const nurName=new Set(JSON.parse(require('node:child_process').execSync('python3 -c "import sys,json;sys.path.insert(0,\'scripts/authoring\');import personen;print(json.dumps(sorted(personen.daten()[\'nur_name\'])))"',{cwd:R}).toString()));   // nur Namensschild (personen.py)
+      assert(nurName.size>20&&!nurName.has('FIG-PETRUS')&&!nurName.has('FIG-JESUS'),'Personen ohne Wiederkehr nur mit Namensschild ('+nurName.size+')');
+      aq.want=Object.keys(st).filter(i=>!nurName.has(i)&&fs.existsSync(path.join(R,'data/illustrations/lexicon',i+'.json'))).length;
+      aq.mitBild=Object.entries(st).filter(([i,r])=>!nurName.has(i)&&r.image&&fs.existsSync(path.join(R,r.image))&&(!(r.check||{}).trocken||process.env.BIBLE_TROCKEN_BILDER)).length;}
     assert(aq.n>=40&&aq.n===aq.want,'Bildlexikon Aquarell: alle Einträge ('+aq.n+'/'+aq.want+')');
     assert.equal(aq.sym,0,'im Aquarellstil keine SVG-Zeichen');
     assert.equal(aq.img+aq.none,aq.n,'je Eintrag Bild oder Platzhalter');assert.equal(aq.img,aq.mitBild,'Bilder für alle gemalten Einträge ('+aq.img+')');assert.equal(aq.alt,aq.img,'Bilder mit Bilddaten und alt-Text');
