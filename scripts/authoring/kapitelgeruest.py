@@ -165,6 +165,26 @@ def schreibe(buch, d):
         bilder.append({"id": f"ILL-AQU-{buch}-{n:03d}", "brief": b["id"], "level": "chapter", "reference": f"{buch}.{n}",
                        "target": b.get("target") or f"SUM-CH-{buch}-{n:03d}", "felder": ids, "note_de": kap["note_de"],
                        "merkbild": {"palette": kap["palette"], "farbe": hexf}})
+    # Merkverse (Bildauftrag BRIEF-<BUCH>-<KKK>-<VVV>, Ebene «verse», ein Feld): gleiche Felder wie oben, Farbe ihres Kapitels
+    for ref, mv in sorted((d.get("merkverse") or {}).items()):
+        _, c, v = ref.split(".")
+        bp = BRIEFS / f"BRIEF-{buch}-{int(c):03d}-{int(v):03d}.json"
+        b = lade(bp)
+        pal, hexf = PALETTEN[mv.get("palette") or d["kapitel"][c]["palette"]]
+        x, pa = mv["feld"], b["panels"][0]
+        sid = f"{buch}-{int(c):03d}-V{int(v):03d}"
+        szenen[sid] = {
+            "brief": b["id"], "panel": 1, "reference": pa.get("reference") or ref, "form": "szene",
+            "form_grund_de": "Merkvers: ein Bild zum Vers, gemalt (docs/ENTSCHEIDUNGEN.md «Merkbilder»).",
+            "depicts": x.get("depicts", []),
+            "bild_en": x["bild_en"].rstrip() + FARBE_STARK.format(pal=pal) + ZUSATZ_BILD, "speech": [],
+            "evidence": [{"s": "B", "ref": ref, "de": pa["action_de"]},
+                         {"s": "I", "de": "Das Bild zeigt das Bildwort des Verses; Haltung und Farbe gestaltet, vom Text nicht genannt."}],
+            "pruefung": [{"id": "V-KERN", "art": "muss", "stufe": "pflicht", "s": "B", "ref": ref, "de": x["kern_de"], "en": x["kern_en"] + ZUSATZ_KERN}],
+            **({"ausnahmen": x["ausnahmen"]} if x.get("ausnahmen") else {}),
+        }
+        bilder.append({"id": f"ILL-AQU-{buch}-{int(c):03d}-{int(v):03d}", "brief": b["id"], "level": "verse", "reference": ref,
+                       "target": b.get("target"), "felder": [sid], "note_de": mv["note_de"], "merkbild": {"palette": mv.get("palette") or d["kapitel"][c]["palette"], "farbe": hexf}})
     # Malbeschreibungen: eigene (Quelle), sonst die des Bildlexikons im Stil (dieselbe wie beim Einzelporträt), damit Figuren gleich aussehen
     st = lade(ROOT / "data/illustrations/styles/ILLSTYLE-AQUARELL.json").get("renderings") or {}
     allg = lade(DATEN / "figuren.json")["figuren"]
