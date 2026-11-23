@@ -61,6 +61,10 @@ PALETTEN = {
 ZUSATZ_KERN = (" Answer yes if the main persons or objects and the main action are recognisable, even if feelings, motives, "
                "materials or small details are not clearly visible.")
 ZUSATZ_BILD = " All head cloths and garments plain, without stripes or patterns."
+# Fassung 3 (Entscheid Andi Neck 2026-11-23): Kapitelfarbe im Bild selbst deutlich, auch als kleines Vorschaubild; Jona und Matthäus
+# bleiben in Fassung 1/2 (nicht neu gemalt)
+FARBE_STARK = (" COLOUR OF THIS CHAPTER (important for memorising): wash the background, sky and ground clearly in {pal}, so that the "
+               "chapter colour is obvious at a glance, even as a small thumbnail; figures keep their own clothing colours.")
 
 
 def lade(p):
@@ -143,8 +147,9 @@ def schreibe(buch, d):
                 "brief": b["id"], "panel": i, "reference": pa["reference"], "form": "szene",
                 "form_grund_de": "Merkbild des Kapitels: erzählter Moment, gemalt (docs/ENTSCHEIDUNGEN.md «Merkbilder»).",
                 "depicts": x.get("depicts", []),
-                "bild_en": x["bild_en"].rstrip() + f" COLOUR OF THIS CHAPTER: the whole picture is dominated by {pal}; keep the rest of the palette quiet."
-                           + (ZUSATZ_BILD if x.get("fassung", 2) >= 2 else ""),
+                "bild_en": x["bild_en"].rstrip() + (f" COLOUR OF THIS CHAPTER: the whole picture is dominated by {pal}; keep the rest of the palette quiet."
+                                                    if x.get("fassung", 3) <= 2 else FARBE_STARK.format(pal=pal))
+                           + (ZUSATZ_BILD if x.get("fassung", 3) >= 2 else ""),
                 "speech": [],
                 **({"band": x["band"]} if x.get("band") else {}),
                 # Handelt im Feld Gott (wird nicht gemalt), beschreibt «moment_de» die sichtbare Folge; daran misst die Prüfung das Bild
@@ -153,7 +158,7 @@ def schreibe(buch, d):
                              {"s": "R", "de": "Kleidung, Landschaft, Gegenstände: plausible Ausgestaltung nach Epoche und Ort."},
                              {"s": "I", "de": "Gesichtsausdruck, Haltung und Grundfarbe des Kapitels: gestaltet, vom Text nicht genannt."}],
                 "pruefung": [{"id": f"M{i}-KERN", "art": "muss", "stufe": "pflicht", "s": "B", "ref": pa["reference"], "de": x["kern_de"],
-                              "en": x["kern_en"] + (ZUSATZ_KERN if x.get("fassung", 2) >= 2 else "")}]
+                              "en": x["kern_en"] + (ZUSATZ_KERN if x.get("fassung", 3) >= 2 else "")}]
                             + (x.get("pruefung") or []),
                 **({"ausnahmen": x["ausnahmen"]} if x.get("ausnahmen") else {}),
             }
