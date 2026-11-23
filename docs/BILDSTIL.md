@@ -193,3 +193,5 @@ kaum sichtbar, im Dunkeln gelb-schwarz). Allgemeine Regeln für jedes Bild und Z
 - **Menschen in Zeichen sind gewöhnliche Menschen:** kurzes Haar oder schlichtes Kopftuch, erdfarbene Kleider; nie weisses Gewand mit rotem Mantel und langem Haar, sonst wird die Figur als Jesus gelesen («grüssen» als «Jesus segnet»).
 - **Prüfung:** Jedes gemalte Zeichen besteht den Blindtest (zwei getrennte Instanzen benennen es ohne Namen) oder, mit seinem Wort daneben wie im Strukturbild, das Urteil «passt». Sonst wird es neu gestaltet und neu gemalt. Bleibt ein Zeichen nach drei Entwürfen «schwach», liegt aber nahe am Begriff, bleibt es so (Entscheid Andi Neck 2026-11-22, Beispiel «ablehnen»: Nein mit erhobener Hand).
 
+- **Merkbilder verständlich** (2026-11-23, Blindtest der 117 Merkbilder von Jona und Matthäus: 104 erkannt, 13 schwach; Werkzeug `scripts/authoring/kapitel_bedeutung.py`): Ein Feld zeigt das Unverwechselbare der Szene gross im Vordergrund (Gleichnis- oder Bildwort, Gegenstand, Geste), nicht die allgemeine Lage «Jesus spricht zu einer Gruppe». Redeteile werden mit ihrem Bildwort gemalt (Sämann, Abendrot, Kreuzbalken, Becher aussen rein und innen schmutzig).
+
