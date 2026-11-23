@@ -37,8 +37,8 @@
       "scene": "MAT-012-M2",
       "image": "img/MAT-012-M2.webp",
       "model": "gpt-image-2.5-flare",
-      "run": "20261122-144716-auto-neu",
-      "variant": "r1v1",
+      "run": "20261123-070224-auto-neu",
+      "variant": "r2v1",
       "reference": "MAT.12.15-MAT.12.32",
       "speech": []
     },
@@ -130,7 +130,7 @@
     "supersedes": null
   },
   "check": {
-    "stufe": "entwurf",
+    "stufe": "ki-geprueft",
     "process": "PROC-BILD-AQUARELL@2.4",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
@@ -224,12 +224,12 @@
       {
         "scene": "MAT-012-M2",
         "ergebnis": "bestanden",
-        "punkte": 4,
+        "punkte": 3,
         "kern": 1,
-        "bild_sha": "8bdd582a6e71418b",
-        "plan_sha": "e64dcdaad76bbf65",
+        "bild_sha": "8bd8f479f358243e",
+        "plan_sha": "d6772146d0c80cf1",
         "regeln_version": "2026-10-28d",
-        "datum": "2026-11-22",
+        "datum": "2026-11-23",
         "modell": "gpt-6.1-terra + gpt-5.5",
         "regeln": [
           {
@@ -285,7 +285,7 @@
           {
             "id": "G-ROT",
             "stufe": "soll",
-            "ergebnis": "ok"
+            "ergebnis": "fehler"
           },
           {
             "id": "F-JESUS-GESICHT",
@@ -298,14 +298,15 @@
             "ergebnis": "ok"
           }
         ],
-        "offen_de": [],
-        "veraltet": true,
+        "offen_de": [
+          "Nur Jesus trägt Terrakottarot (fehler: A distant figure also wears a muted reddish garment.)"
+        ],
         "schluss": {
           "ergebnis": "bestanden",
           "kern": 1,
-          "bild_sha": "4d71cb5ceca359fd",
+          "bild_sha": "9bc40b836f6d570d",
           "offen_de": [
-            "Moment nicht ganz getroffen: Die Heilung des blinden und stummen Besessenen sowie der Beelzebul-Vorwurf und Jesu Antwort sind nicht eindeutig erkennbar."
+            "Moment nicht ganz getroffen: Blindheit und Stummheit sowie der konkrete Vorwurf der Pharisäer und Jesu Hinweis auf Gottes Geist und Reich fehlen."
           ]
         }
       },
@@ -499,8 +500,8 @@
     ],
     "open_de": [
       "MAT-012-M1 (Kachel): Moment nicht ganz getroffen: Die Heilung wird nur vermutet; die Tötungsabsicht der Pharisäer und ihre Beratung darüber fehlen.",
-      "MAT-012-M2: Prüfung veraltet (Regeln oder Szenenplan geändert)",
-      "MAT-012-M2 (Kachel): Moment nicht ganz getroffen: Die Heilung des blinden und stummen Besessenen sowie der Beelzebul-Vorwurf und Jesu Antwort sind nicht eindeutig erkennbar.",
+      "MAT-012-M2: Nur Jesus trägt Terrakottarot (fehler: A distant figure also wears a muted reddish garment.)",
+      "MAT-012-M2 (Kachel): Moment nicht ganz getroffen: Blindheit und Stummheit sowie der konkrete Vorwurf der Pharisäer und Jesu Hinweis auf Gottes Geist und Reich fehlen.",
       "MAT-012-M3 (Kachel): Moment nicht ganz getroffen: Die Forderung nach einem Zeichen und Jesu Hinweis auf das Zeichen des Jona sowie darauf, dass hier mehr als Jona ist, fehlen."
     ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
