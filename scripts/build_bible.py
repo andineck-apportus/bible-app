@@ -379,7 +379,7 @@ def _kapitelleiste():
     for pp in sorted((ROOT / "scripts/authoring/bilder_aquarell_daten").glob("szenen-kap-*.json")):
         plan = json.loads(pp.read_text(encoding="utf-8"))
         for b in plan["bilder"]:
-            if b["id"] not in ill_recs:          # Kapitelbild noch nicht vollständig gemalt
+            if b["id"] not in ill_recs or b["level"] != "chapter":   # nur fertige Kapitelbilder (Merkverse stehen bei ihrem Vers)
                 continue
             code, c = b["reference"].split(".")
             brief = json.loads((ROOT / f"data/illustrations/briefs/{b['brief']}.json").read_text(encoding="utf-8"))
