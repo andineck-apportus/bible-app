@@ -187,7 +187,8 @@ Bibelausgaben von Weber und Boesch und Schobingers Grammatik). Fester Name, geht
 ### Gott, Jesus und der Heilige Geist (Entscheid Andi Neck 2026-11-24)
 
 - **Gott und Jesus ohne Artikel**, wie man in der Schweiz von ihnen spricht: «Jesus hät gseit», «Gott hät d Wält gmacht», «vo Jesus», «zu Gott», «bi Jesus» (nicht «de Jesus», «em Jesus», «vom Jesus»). Die übrigen Personennamen behalten den Artikel (de Petrus, d Maria).
-- **De Heilig Geischt** mit Artikel.
+- **Heilig Geischt wie im Urtext** (Entscheid Andi Neck 2026-11-24: «wenn es einigermassen leserlich ist, wie im urtext»): Hat das Griechische den Artikel (τὸ πνεῦμα τὸ ἅγιον), heisst es «de Heilig Geischt» («gäge de Heilig Geischt», «im Heilige Geischt», «vom Heilige Geischt»). Ohne Artikel (πνεῦμα ἅγιον) steht er auch in der Mundart ohne Artikel: «mit Heiligem Geischt taufe», «mit Heiligem Geischt erfüllt», «voll Heiligem Geischt», «vo Heiligem Geischt», «Nämed Heilige Geischt!». Als Subjekt bleibt der Artikel, weil der Satz sonst nicht leserlich ist («De Heilig Geischt chunnt über dich», [[LUK.1.35]]; [[LUK.2.25]]). «Heilig/Heilige» immer gross.
+- **Zitate gehen mit** (Entscheid Andi Neck 2026-11-24): Wird ein Vers umformuliert, werden wörtliche Zitate daraus in den Lokalisierungen (Weiterdenken, Kernaussagen, Zusammenfassungen, Bildaufträge, Studien) mitgeändert, in der Quelle des Autorenwerkzeugs, damit ein erneuter Lauf sie nicht zurücksetzt.
 
 ### Satzbau: zusammenhängend erzählen (Entscheid Andi Neck 2026-11-24)
 

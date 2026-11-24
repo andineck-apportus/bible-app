@@ -138,7 +138,7 @@ GSW = {
  "MRK.1.5": "Und{1} [s ganz]{5,6} [Land]{8} [Judäa]{7} und{9} [alli]{12} [Lüüt vo Jerusalem]{10,11} [sind]{2} [zu]{3} [ihm]{4} [usegange]{2}, und{13} [si händ sich]{14} [vo]{15} [ihm]{16} [im]{17,18} [Jordan]{19} [la taufe]{14} [und händ]{21} debii [iri]{24} [Sünde]{22,23} [bekännt]{21}. ~20(ποταμῷ «Fluss»; i de Mundart seit me eifach «im Jordan»)",
  "MRK.1.6": "Und{1} [de Johannes]{3,4} [hät]{2,5} [Chleider us Kamelhaar]{6,7} [aaghaa]{2,5} und{8} [en Gurt]{9} [us Läder]{10} [um]{11} [d Hüfte]{12,13}, und{15} [er hät]{16} [Höischrecke]{17} und{18} [wilde]{20} [Hung]{19} [gässe]{16}. ~14(αὐτοῦ «sini»; mit em Artikel «d Hüfte» widergää)",
  "MRK.1.7": "Und{1} [er hät verchündet]{2}: «[Nach]{8} [mir]{9} [chunnt]{4} [dä]{5}, [wo stärcher isch]{6} [als ich]{7}. [Ich bi]{12} [nöd]{11} [wärt]{13}, [mich z bücke]{14} und [ihm]{10} [d Rieme]{16,17} [vo de]{20} [Sandale]{18,19} [ufzmache]{15}. ~3(λέγων «sägend» leitet d direkt Red ii)",
- "MRK.1.8": "[Ich]{1} [han]{2} [öi]{3} [mit Wasser]{4} [tauft]{2}, [er]{5} [aber]{6} [wird]{7} [öi]{8} [mit]{9} [heiligem]{11} [Geischt]{10} [taufe]{7}.»",
+ "MRK.1.8": "[Ich]{1} [han]{2} [öi]{3} [mit Wasser]{4} [tauft]{2}, [er]{5} [aber]{6} [wird]{7} [öi]{8} [mit]{9} [Heiligem]{11} [Geischt]{10} [taufe]{7}.»",
  "MRK.1.9": "Und{1} [i]{3} [dene]{4} [Täg]{5,6} [isch]{7} [Jesus]{8} [vo]{9} [Nazaret]{10} [z Galiläa]{11,12} [choo]{7} und{13} [hät sich]{14} [vom Johannes]{18,19} [im]{15,16} [Jordan]{17} [la taufe]{14}. ~2(ἐγένετο «es isch gscheh» leitet d Erzählig ii; nöd eigens widergää)",
  "MRK.1.10": "Und{1} [grad]{2} [won er]{3} [us]{4} [em Wasser]{5,6} [ufechoo isch]{3}, [hät er gseh]{7}, wie [d Himmel]{9,10} [ufriissed]{8} und{11} [de Geischt]{12,13} [wie]{14} [e Tuube]{15} [uf]{17} [ihn]{18} [abechunnt]{16}.",
  "MRK.1.11": "Und{1} [e Stimm]{2} [isch]{3} [us]{4} [em Himmel]{5,6} [choo]{3}: «[Du]{7} [bisch]{8} [min]{11} [liebe]{12,13} [Sohn]{9,10}; [a dir]{14,15} [han ich Fröid]{16}.»",
@@ -328,7 +328,7 @@ DEC_GSW = [
  ("MRK.1.2", "Bote", "literal", "ἄγγελόν", None, ["Ängel"], "ἄγγελος heisst «Bote»; da isch de Johannes gmeint, i [[MRK.1.13]] sind s Ängel."),
  ("MRK.1.3", "vom Herr", "literal", "κυρίου", None, ["vo JHWH"], "I [[ISA.40.3]] staat im hebräische Text de Gottesname, i de griechische Bible κύριος. De Markus bezieht de «Wäg vom Herr» uf Jesus."),
  ("MRK.1.4", "Umkehr", "interpretive", "μετανοίας", "Umdänke", ["Buess"], "μετάνοια isch wörtlich es Umdänke; mitgmeint isch d Rückkehr zu Gott. «Buess» tönt nach Straf. Gliich i [[MRK.1.15]]."),
- ("MRK.1.8", "mit heiligem Geischt", "literal", "ἐν πνεύματι ἁγίῳ", None, ["mit em Heilige Geischt"], "Ohni Artikel, im Gägesatz zu «mit Wasser». I [[MRK.3.29]] mit Artikel."),
+ ("MRK.1.8", "mit Heiligem Geischt", "literal", "ἐν πνεύματι ἁγίῳ", None, ["mit em Heilige Geischt"], "Ohni Artikel wie im Griechische, im Gägesatz zu «mit Wasser». I [[MRK.3.29]] mit Artikel «de Heilig Geischt». πνεῦμα ἅγιον: mit Artikel im Griechische «de Heilig Geischt», ohni Artikel wie im Urtext «Heilige Geischt» (z. B. «mit Heiligem Geischt», «voll Heiligem Geischt»); als Subjekt bliibt de Artikel, damit de Satz läsbar bliibt (Entscheid Andi Neck 2026-11-24)."),
  ("MRK.1.10", "ufriisse", "literal", "σχιζομένους", None, ["sich uftue"], "σχίζω heisst spalte, verrisse; es gwaltsams Bild. S gliich Verb staat i [[MRK.15.38]] für de Vorhang im Tempel. Villicht Aaklang a [[ISA.64.1]]."),
  ("MRK.1.11", "a dir han ich Fröid", "interpretive", "ἐν σοὶ εὐδόκησα", "a dir han ich Gfalle gfunde", ["a dir han ich Wohlgfalle"], "D Stimm us em Himmel nimmt wahrschiinli [[PSA.2.7]] und [[ISA.42.1]] uuf."),
  ("MRK.1.12", "tribt", "literal", "ἐκβάλλει", None, ["füert"], "S gliich Verb wie bim Dämone-Ustriibe ([[MRK.1.34]])."),
@@ -527,7 +527,7 @@ UNITS = [
 ]
 UNITS_GSW = {
  "TU-MRK-001-001-045": ("De Aafang vom Evangelium", "De Johannes de Täufer chündet en Stärchere aa. Jesus wird tauft, vom Geischt i d Wüeschti tribe und verchündet z Galiläa, dass s Riich vo Gott nöch isch. Er rüeft di erschte Jünger, lehrt mit Vollmacht, tribt Dämone uus, heilt Chranki und macht en Ussätzige rein; sin Ruef verbreitet sich eso, dass er nüme offe in e Stadt cha."),
- "TU-MRK-001-001-008": ("De Johannes de Täufer", "Nach de Überschrift fangt s Buech mit eme Schriftwort und em Uftrete vom Johannes i de Wüeschti aa. Er verchündet e Taufi vo de Umkehr zur Vergäbig vo de Sünde und chündet en Stärchere aa, wo mit heilige Geischt wird taufe."),
+ "TU-MRK-001-001-008": ("De Johannes de Täufer", "Nach de Überschrift fangt s Buech mit eme Schriftwort und em Uftrete vom Johannes i de Wüeschti aa. Er verchündet e Taufi vo de Umkehr zur Vergäbig vo de Sünde und chündet en Stärchere aa, wo mit Heiligem Geischt wird taufe."),
  "TU-MRK-001-009-011": ("D Taufi vo Jesus", "Jesus chunnt vo Nazaret und laat sich vom Johannes taufe. Er gseht d Himmel ufriisse und de Geischt abechoo; e Stimm nännt en de lieb Sohn."),
  "TU-MRK-001-012-013": ("I de Wüeschti", "De Geischt tribt Jesus i d Wüeschti; dört wird er vierzg Täg vom Satan versuecht, isch bi de wilde Tier, und Ängel dieneds em."),
  "TU-MRK-001-014-015": ("S Riich vo Gott isch nöch", "Nachdem de Johannes usgliferet worde isch, verchündet Jesus z Galiläa: D Ziit isch erfüllt, s Riich vo Gott isch nöch choo; chehred um und glaubed as Evangelium."),

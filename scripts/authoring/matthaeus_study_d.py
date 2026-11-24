@@ -760,7 +760,7 @@ BACKGROUND = [
   ["Didache 7,1", "Eusebius, Kirchengeschichte 3,5,2"],
   [("grc", "εἰς τὸ ὄνομα", "auf den Namen; in die Zugehörigkeit zu"), ("grc", "βαπτίζω", "taufen, eintauchen")],
   "Taufi uf de driifach Name",
-  "D Taufformle «uf de Name vom Vatter und vom Sohn und vom heilige Geischt» ([[MAT.28.19]]) staat wortgliich i de Didache, ere früechrischtliche Gmeindsornig, wo mer oft is spat 1. oder früe 2. Jahrhundert datiert. D Aposchtelgschicht redt dergäge vo ere Taufi «uf de Name vo Jesus Christus» oder «vom Herr Jesus» ([[ACT.2.38]]; [[ACT.8.16]]; [[ACT.10.48]]; [[ACT.19.5]]). «Uf de Name» (εἰς τὸ ὄνομα) bedüütet: i d Zuegehörigkeit zu däm, wo sin Name gnännt wird. Alli bekannte Handschrifte vom Matthäus händ di driiglidrig Formle.",
+  "D Taufformle «uf de Name vom Vatter und vom Sohn und vom Heilige Geischt» ([[MAT.28.19]]) staat wortgliich i de Didache, ere früechrischtliche Gmeindsornig, wo mer oft is spat 1. oder früe 2. Jahrhundert datiert. D Aposchtelgschicht redt dergäge vo ere Taufi «uf de Name vo Jesus Christus» oder «vom Herr Jesus» ([[ACT.2.38]]; [[ACT.8.16]]; [[ACT.10.48]]; [[ACT.19.5]]). «Uf de Name» (εἰς τὸ ὄνομα) bedüütet: i d Zuegehörigkeit zu däm, wo sin Name gnännt wird. Alli bekannte Handschrifte vom Matthäus händ di driiglidrig Formle.",
   "De Eusebius zitiert de Värs mehrmal i chürzerer Form («mached alli Völker zu Jünger i mim Name», öppe Chilegschicht 3,5,2); öb er en andere Text kännt oder frei zitiert hät, isch umstritte. Wie sich di beide Taufformle gschichtlich zunenand verhalted, isch offe.",
   ["uf de Name; i d Zuegehörigkeit zu", "taufe, iituuche"]),
  ("BG-MAT-4026", U(28, 11, 15), "MAT.28.11-MAT.28.15", READERS, "probable", "Der Vorwurf des Leichendiebstahls",
