@@ -29,7 +29,7 @@ server.listen(0,async()=>{const url=`http://localhost:${server.address().port}/i
     await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=home]')?.click());await wait();
     await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-pickat="nt"]').click());await ev(()=>document.querySelector('.sheet .pick-open').click());await wait();await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-pickat="g5"]').click());await ev(()=>document.querySelector('.sheet .pick-open').click());await wait();
     await ev(()=>document.querySelector('[data-vertiefen="g5"]').click());await wait();await openAll();
-    assert((await ev(()=>document.querySelector('.sheet').innerText)).includes('Vier Verzellige vom Jesus'),'Hintergrund der Buchgruppe in Mundart');
+    assert((await ev(()=>document.querySelector('.sheet').innerText)).includes('Vier Verzellige vo Jesus'),'Hintergrund der Buchgruppe in Mundart');
     await ev(()=>document.querySelector('[data-close]').click());await ev(()=>document.querySelector('[data-action=down]').click());await ev(()=>document.querySelector('.sheet [data-pickat="b39"]').click());await ev(()=>document.querySelector('.sheet .pick-open').click());await wait();
     await ev(()=>document.querySelector('[data-vertiefen="b39"]').click());await wait();await openAll();
     const gen=await ev(()=>document.querySelector('.sheet').innerText);
