@@ -135,7 +135,7 @@ GSW = {
  "MAT.7.9": "Oder{1} [wär]{2,3,6} [vo]{4} [öi]{5} [git]{15} [sim]{11} [Sohn]{16} [öppe]{13} [en Stei]{14}, [wänn]{8} [er]{9,10} [en]{7} [um Brot]{12} [bittet]{8}?",
  "MAT.7.10": "Oder{1} [git er]{7} [em]{8} [öppe]{5} [e Schlange]{6}, [wänn er en]{4} au{2} [um en Fisch]{3} [bittet]{4}?",
  "MAT.7.11": "Wänn{1} also{2} ir{3}, [wo]{5} [bös]{4} [sind]{5}, [öine]{12} [Chind]{10,11} [gueti]{8} [Gabe]{7} [chönd]{6} [gää]{9}, [wie vil]{13} [meh]{14} [git]{22} [öie]{17} [Vatter]{15,16} [i de Himmel]{18-21} [dene]{24} [Guets]{23}, won [en]{26} [drum bitted]{25}!",
- "MAT.7.12": "[Alles]{1} also{2}, [wo]{3,4} [ir wänd]{5}, dass{6} [öi]{8} [d Lüüt]{9,10} [tüend]{7}, so{11} [tüend]{14} au{12} ir{13} [ine]{15}; dänn{17} das{16} [isch]{18} [s Gsetz]{19,20} und{21} [d Prophete]{22,23}.",
+ "MAT.7.12": "[Tüend]{14} also{2} au{12} ir{13} [de Lüüt]{15} [alles]{1}, [wo]{3,4} [ir wänd]{5}, dass{6} [si]{9,10} [öi]{8} [tüend]{7}; dänn{17} das{16} [isch]{18} [s Gsetz]{19,20} und{21} [d Prophete]{22,23}. ~11(οὕτως «so» nimmt s vorangstellt «alles» uf; bim umgstellte Satz nöd eigens widergää)",
  "MAT.7.13": "[Gönd]{1} [dur]{2} [s äng]{3,4} [Tor]{5} [ine]{1}! Dänn{6} [wiit]{7} isch [s Tor]{8,9} und{10} [breit]{11} [de Wäg]{12,13}, [wo]{14} [is]{16,17} [Verderbe]{18} [füert]{15}, und{19} vil{20} [sind s]{21}, [wo]{22} [dört]{24,25} [inegönd]{23}.",
  "MAT.7.14": "Dänn{1} [äng]{2} isch [s Tor]{3,4} und{5} [schmal]{6} [de Wäg]{7,8}, [wo]{9} [is]{11,12} [Läbe]{13} [füert]{10}, und{14} wenig{15} [sind s]{16}, [won]{17} [en]{19} [finded]{18}.",
  "MAT.7.15": "[Hüeted öi]{1} [vor]{2} [de falsche Prophete]{3,4}, [wo]{5} [i]{9} [Schafchleider]{10,11} [zu]{7} [öi]{8} [chömed]{6}; [inne]{12} aber{13} [sind s]{14} [riissendi]{16} [Wölf]{15}.",
@@ -302,6 +302,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ("MAT.7.12", "Tüend also au ir de Lüüt alles, wo ir wänd, dass si öi tüend", "adapted", "Πάντα οὖν ὅσα ἐὰν θέλητε ἵνα ποιῶσιν ὑμῖν οἱ ἄνθρωποι, οὕτως καὶ ὑμεῖς ποιεῖτε αὐτοῖς", "Alles also, wo ir wänd, dass öi d Lüüt tüend, so tüend au ir ine", None, "Satzbau zämehängend verzellt (Entscheid Andi Neck 2026-11-24): D Uufforderig staat vorne; s οὕτως «so», wo s vorangstellt «alles» wider ufnimmt, fallt drum weg."),
  ("MAT.6.1", "Grächtigkeit", "interpretive", "δικαιοσύνην", None, ["Frömmigkeit"],
   "δικαιοσύνη isch bim Matthäus es Leitwort ([[MAT.5.6]], [[MAT.5.20]], [[MAT.6.33]]): s Tue, won em Wille vo Gott entspricht. Da staat s als Überschrift über Almose, Bätte und Faschte. Zur Läsart «Almose» lueg d Alternative."),
  ("MAT.6.1", "üebed", "adapted", "ποιεῖν", "tüend", None, "«Grächtigkeit tue» isch ungwöhnlich."),

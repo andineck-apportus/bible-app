@@ -150,7 +150,7 @@ GSW = {
  "JHN.4.6": "[Dört]{3} [isch]{1} [aber]{2} [em Jakob]{5,6} [sini Quälle]{4} [gsii]{1}. [Jesus]{7,9} [isch]{14} [also]{8} [müed]{10} [vom]{11,12} [Wäg]{13} [eifach so]{15} [bi]{16} [de Quälle]{17,18} [abgsässe]{14}. [Es isch]{20} [öppe]{21} [di sächst]{22} [Stund]{19} [gsii]{20}.",
  "JHN.4.7": "[Da chunnt]{1} [e Frau]{2} [us]{3} [Samarie]{4,5} [go]{6} [Wasser]{7} [schöpfe]{6}. [Jesus]{10,11} [seit]{8} [zu ire]{9}: «[Gib]{12} [mer]{13} [z trinke]{14}!»",
  "JHN.4.8": "[Sini]{4} [Jünger]{1,3} [sind]{5} [nämli]{2} [i]{6} [d Stadt]{7,8} [gange]{5}, [go]{9} [Ässe]{10} [poschte]{11}.",
- "JHN.4.9": "[Di]{4} [samaritanisch]{6,7} [Frau]{5} [seit]{1} [dänn]{2} [zu ihm]{3}: «[Wie]{8} [chasch]{15} [du]{9}, [won]{11} [en Jud]{10} [bisch]{11}, [mich]{12,13} [um öppis z trinke]{14} [bitte]{15}, [wo ich doch]{18} [e samaritanischi]{17} [Frau]{16} [bin]{18}?» [D Jude]{22} [händ]{21} [nämli]{20} [nüüt]{19} [mit de Samaritaner]{23} [z tue]{21}.",
+ "JHN.4.9": "[Di]{4} [samaritanisch]{6,7} [Frau]{5} [seit]{1} [dänn]{2} [zu ihm]{3}: «[Wie]{8} [chasch]{15} [du]{9} [als]{11} [Jud]{10} [mich]{12,13} [um öppis z trinke]{14} [bitte]{15}, [wo ich doch]{18} [e samaritanischi]{17} [Frau]{16} [bin]{18}?» [D Jude]{22} [händ]{21} [nämli]{20} [nüüt]{19} [mit de Samaritaner]{23} [z tue]{21}.",
  "JHN.4.10": "[Jesus]{2} [hät]{1} [ire]{5} [gantwortet]{1} und{3} [gseit]{4}: «[Wänn]{6} [du]{7} [d Gab]{8,9} [vo Gott]{10,11} [känntisch]{7} und{12} [wüsstisch, wär]{13} [es isch]{14}, [wo]{15} [zu dir]{17} [seit]{16}: ‹[Gib]{18} [mer]{19} [z trinke]{20}!›, [dänn hettsch]{22} [du]{21} [ihn]{24} [drum bätte]{23}, und{25} [er hett]{27} [dir]{28} [läbigs]{30} [Wasser]{29} [gää]{26}.»",
  "JHN.4.11": "[D Frau]{3,4} [seit]{1} [zu ihm]{2}: «[Herr]{5}, [du häsch]{8} [kei]{6} [Chessel]{7}, und{9} [de Brunne]{10,11} [isch]{12} [tüüf]{13}. [Vo wo]{14} [häsch]{16} [dänn]{15} [s läbig]{19,20} [Wasser]{17,18}?",
  "JHN.4.12": "[Bisch]{4} [du]{2} [öppe]{1} [grösser]{3} [als]{5} [öise]{7} [Vatter]{6} [Jakob]{8}, [wo]{9} [öis]{11} [de Brunne]{12,13} [gää hät]{10}? Und{14} [er sälber]{15} [hät]{18} [drus]{16,17} [trunke]{18}, und{19} [sini]{22} [Söhn]{20,21} und{23} [sis]{26} [Veh]{24,25}.»",
@@ -305,7 +305,7 @@ DEC_DE = [
 ]
 DEC_GSW = [
  ("JHN.4.6", "Quälle", "literal", "πηγὴ", None, ["Brunne"], "De Erzähler seit πηγή «Quälle», d Frau φρέαρ «Brunne» ([[JHN.4.11]]); beidi Wort sind usenandghalte."),
- ("JHN.4.9", "en Jud", "literal", "Ἰουδαῖος", None, None, "Ἰουδαῖος wörtlich «Jud». " + "Grundentscheid für Johannes (begründet in scripts/authoring/johannes_text_01_03.py)."),
+ ("JHN.4.9", "als Jud", "literal", "Ἰουδαῖος ὢν", "won en Jud bisch", None, "Ἰουδαῖος wörtlich «Jud»; s Partizip ὤν («wo … bisch») isch mit «als» widergää, damit de Satz zämehängend fliesst (Satzbau, Entscheid Andi Neck 2026-11-24). " + "Grundentscheid für Johannes (begründet in scripts/authoring/johannes_text_01_03.py)."),
  ("JHN.4.9", "nüüt", "interpretive", "συγχρῶνται", None, ["kei Gschirr mitenand bruuche"], "συγχράομαι heisst «mitenand bruuche» oder «Umgang haa»."),
  ("JHN.4.10", "läbigs", "literal", "ὕδωρ ζῶν", None, ["fliessends"], "«Läbigs Wasser» heisst im Alltag fliessends Quällwasser; Jesus meint Wasser, wo Läbe git ([[JHN.4.14]]). De Doppelsinn isch bhalte."),
  ("JHN.4.26", "Ich bi s", "interpretive", "Ἐγώ εἰμι", None, ["Ich bi, wo mit dir redt"], "ἐγώ εἰμι isch bim Johannes überall «Ich bi …»; als Antwort «Ich bi s». Da isch es d Antwort uf d Frag nach em Messias; mänggi ghöred au en Aaklang a Gott, wo sich vorstellt ([[ISA.52.6]]). Das isch e Düütig."),

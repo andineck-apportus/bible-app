@@ -125,8 +125,8 @@ GSW = {
  "JHN.20.27": "[Dänn]{1} [seit er]{2} [zum Thomas]{3,4}: «[Häb]{5} [din]{8} [Finger]{6,7} [da ane]{9} und{10} [lueg]{11} [mini]{14} [Händ]{12,13} [aa]{11}, und{15} [streck]{16} [dini]{19} [Hand]{17,18} [uus]{16} und{20} [legg si]{21} [i]{22} [mini]{25} [Siite]{23,24}, und{26} [bis]{28} [nöd]{27} [ungläubig]{29}, [sondern]{30} [gläubig]{31}!»",
  "JHN.20.28": "[De Thomas]{2} [hät gantwortet]{1} und{3} [zu ihm]{5} [gseit]{4}: «[Min]{8} [Herr]{6,7} und{9} [min]{12} [Gott]{10,11}!»",
  "JHN.20.29": "[Jesus]{3,4} [seit]{1} [zu ihm]{2}: «[Wil]{5} [du]{6} [mich]{7} [gseh häsch]{6}, [häsch glaubt]{8}? [Selig]{9} sind [die]{10}, wo [nöd]{11} [gseh]{12} und{13} [doch glaubt händ]{14}!»",
- "JHN.20.30": "[No]{4} [vil]{1} [anderi]{5} [Zeiche]{6} [hät]{7} [Jesus]{8,9} [zwar]{2} [vor]{10} [de Jünger]{11,12} [gmacht]{7}, [wo]{13} [nöd]{14} [i]{17} [däm]{20} [Buech]{18,19} [ufgschribe]{16} [sind]{15}. ~3(οὖν «also» nach μέν; nöd eigens widergää)",
- "JHN.20.31": "[Die]{1} [aber]{2} [sind ufgschribe]{3}, [damit]{4} [ir glaubed]{5}, [dass]{6} [Jesus]{7} [de Christus]{9,10} [isch]{8}, [de Sohn]{11,12} [vo Gott]{13,14}, und{15} [damit]{16} [ir]{19}, [wänn ir glaubed]{17}, [Läbe]{18} [händ]{19} [in]{20} [sim]{23} [Name]{21,22}.",
+ "JHN.20.30": "[Jesus]{8,9} [hät]{7} [zwar]{2} [no]{4} [vil]{1} [anderi]{5} [Zeiche]{6} [vor]{10} [de Jünger]{11,12} [gmacht]{7}, [wo]{13} [nöd]{14} [i]{17} [däm]{20} [Buech]{18,19} [ufgschribe]{16} [sind]{15}. ~3(οὖν «also» nach μέν; nöd eigens widergää)",
+ "JHN.20.31": "[Die]{1} [sind]{3} [aber]{2} [ufgschribe]{3}, [damit]{4} [ir glaubed]{5}, [dass]{6} [Jesus]{7} [de Christus]{9,10} [isch]{8}, [de Sohn]{11,12} [vo Gott]{13,14}, und{15} [damit]{16} [ir]{19} [im Glaube]{17} [Läbe]{18} [händ]{19} [in]{20} [sim]{23} [Name]{21,22}.",
  # ------------------------------------------------------------ Kapitel 21
  "JHN.21.1": "[Nachane]{1,2} [hät]{3} [sich]{4} [Jesus]{6,7} [de Jünger]{8,9} [am]{10,11} [See]{12} [vo Tiberias]{13,14} [nomal]{5} [offebaret]{3}. [Er hät sich]{15} [aber]{16} [eso]{17} [offebaret]{15}:",
  "JHN.21.2": "[Es sind]{1} [binenand]{2} [gsii]{1}: [de Simon]{3} [Petrus]{4} und{5} [de Thomas]{6}, [wo]{7} [me]{8} [«Zwilling»]{9} [seit]{8}, und{10} [de Natanaël]{11} [vo]{12,13} [Kana]{14} [in]{15} [Galiläa]{16} und{17} [d Söhn]{18} [vom Zebedäus]{19,20} und{21} [zwei]{27} [anderi]{22} [vo]{23} [sine]{26} [Jünger]{24,25}.",
@@ -237,6 +237,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ("JHN.20.31", "im Glaube", "adapted", "πιστεύοντες", "wänn ir glaubed", ["als Gläubigi"], "Partizip «glaubend»; zämehängend verzellt statt ime Iischub (Satzbau, Entscheid Andi Neck 2026-11-24)."),
  ("JHN.20.1", "erschte Tag vo de Wuche", "literal", "μιᾷ σαββάτων", "erschte vo de Sabbät", None, "σάββατα heisst au «Wuche»."),
  ("JHN.20.2", "gern ghaa hät", "literal", "ἐφίλει", None, ["gliebt hät"], "Im ganze Evangelium: ἀγαπάω «liebe», φιλέω «gern haa». Lueg d Entscheidig zu [[JHN.21.15]]."),
  ("JHN.20.5", "Liinebinde", "interpretive", "ὀθόνια", None, ["Liinetüecher"], None),

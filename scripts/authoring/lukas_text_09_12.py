@@ -301,7 +301,7 @@ GSW = {
  "LUK.9.17": "Und{1} [si händ gässe]{2} und{3} [sind]{4} [alli]{5} [satt worde]{4}; und{6} [si händ]{7} [zämegläse]{7}, [was]{8} [ine]{10} [übrigbliibe isch]{9}: [zwölf]{13} [Chörb]{12} [voll Brocke]{11}.",
  "LUK.9.18": "Und{1} [es isch gsii]{2}, [won]{3,4} [er]{6} [für sich elei]{8,9} [am Bätte gsii isch]{5,7}: [D Jünger]{12,13} [sind]{10} [bi ihm]{11} [gsii]{10}, und{14} [er hät]{15} [si]{16} [gfröget]{15}: «Was [säged]{22} [d Lüüt]{20,21}, [wär]{18} [ich]{19} [bin]{23}?» ~17(λέγων leitet d Red ii)",
  "LUK.9.19": "[Si]{1} [händ]{3,4} [aber]{2} [gantwortet]{3,4}: «[De Johannes de Täufer]{5-7}; [anderi]{8} [aber]{9} säged: [de Elija]{10}; [und]{12} [wider anderi]{11}: [Eine]{15} [vo de alte]{16,17} [Prophete]{14} [seig ufgstande]{18}.» ~13(ὅτι leitet s Gseit ii)",
- "LUK.9.20": "[Da]{2} [hät er]{1} [zu ine]{3} [gseit]{1}: «[Und ir]{4,5}: [Wär]{6}, [säged ir]{8}, [seig]{9} [ich]{7}?» [De Petrus]{10} [hät]{12,13} [aber]{11} [gantwortet]{12,13}: «[De Christus]{14,15} [vo Gott]{16,17}.»",
+ "LUK.9.20": "[Da]{2} [hät er]{1} [zu ine]{3} [gseit]{1}: «[Und]{5} was [säged ir]{4,8}, [wär]{6} [ich]{7} [bin]{9}?» [De Petrus]{10} [hät]{12,13} [aber]{11} [gantwortet]{12,13}: «[De Christus]{14,15} [vo Gott]{16,17}.»",
  "LUK.9.21": "[Er]{1} [hät]{5} [ine]{4} [aber]{2} [streng]{3} [verbote]{5}, [das]{8} [öpperem]{6} [z säge]{7},",
  "LUK.9.22": "[und hät gseit]{1}: «[De Mänschesohn]{4-7} [mues]{3} [vil]{8} [liide]{9}, und{10} [d Ältischte]{12-14} und{15} [d Hoheprieschter]{16} und{17} [d Schriftglehrte]{18} [verwärfed en]{11}, und{19} [er wird umbracht]{20} und{21} [am dritte]{22,23} [Tag]{24} [uferweckt]{25}.» ~2(ὅτι leitet di direkt Red ii)",
  "LUK.9.23": "[Er hät]{1} [aber]{2} [zu]{3} [allne]{4} [gseit]{1}: «[Wänn]{5} [öpper]{6} [mit]{8} [mir]{9} [gaa]{10} [wott]{7}, [dä söll]{11} [sich sälber]{12} [verleugne]{11} und{13} [söll]{14} [sis]{15,17} [Chrüüz]{16} [Tag für Tag]{18,19} [uf sich näh]{14} und{20} [söll]{21} [mir]{22} [nachegaa]{21}.",
@@ -653,6 +653,7 @@ DEC_DE = [
 ]
 
 DEC_GSW = [
+ ("LUK.9.20", "Und was säged ir, wär ich bin", "adapted", "Ὑμεῖς δὲ τίνα με λέγετε εἶναι", "Und ir: Wär säged ir, seig ich", None, "Satzbau zämehängend verzellt (Entscheid Andi Neck 2026-11-24, siis Biispil); wie [[MAT.16.15]]. S betont ὑμεῖς «ir» (im Gägesatz zu de Lüüt i [[LUK.9.18-LUK.9.19]]) staat im «Und … ir»; d Betonig träit d Stimm."),
  ('LUK.10.35', 'Denar', 'literal', 'δηνάρια', None, None, 'En Denar (Mehrzahl «Denar») isch e römischi Silbermünz und de üblich Taglohn vomene Arbeiter gsii ([[MAT.20.2]]); zwei Denar sind zwei Taglöhn. Damalige Münzname im Text, de Wärt i de Erklärig (Entscheid Andi Neck 2026-10-26).'),
  ('LUK.9.3', 'Silber', 'literal', 'ἀργύριον', None, ['Gäld'], 'ἀργύριον heisst «Silber» und staat für Gäld i Silbermünze. ἀργύριον einheitlich: Einzahl «Silber», Mehrzahl ἀργύρια «Silberstück» ([[MAT.26.15]]). Damalige Münzname im Text, de Wärt i de Erklärig (Entscheid Andi Neck 2026-10-26).'),
  ("LUK.9.1", "Vollmacht", "literal", "ἐξουσίαν", None, None, "ἐξουσία isch d Befuegnis, wo eim gää wird; δύναμις «Chraft» isch s Vermöge."),

@@ -118,7 +118,7 @@ REFLECTIONS = [
      "question_de": "Wer wirkt hier – die Philipper oder Gott?",
      "note_de": "«Wirkt eure Rettung aus … denn Gott ist es, der in euch wirkt» ([[PHP.2.12-PHP.2.13]]).",
      "gsw": {"question_de": "Wär würkt da – d Philipper oder Gott?",
-             "note_de": "«Mit Furcht und Zittere schaffed a öiere Rettig. Dänn Gott isch es, wo i öi würkt» ([[PHP.2.12-PHP.2.13]])."}},
+             "note_de": "«Schaffed mit Furcht und Zittere a öiere Rettig … Dänn Gott isch es, wo i öi würkt» ([[PHP.2.12-PHP.2.13]])."}},
     {"id": "REFL-PHP-0020", "subject": "TU-PHP-002-012-018", "order": 2,
      "question_de": "Warum ist ausgerechnet Murren so wichtig?",
      "note_de": "«Tut alles ohne Murren und Widerrede» ([[PHP.2.14]]) – erst dann folgt das Bild von den Lichtern in der Welt ([[PHP.2.15]]).",

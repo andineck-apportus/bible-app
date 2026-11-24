@@ -120,7 +120,7 @@ REFLECTIONS = [
      "question_de": "Warum zwei Ermahnungen, bevor man jemanden abweist?",
      "note_de": "«Einen Menschen, der Spaltungen verursacht, weise nach einer ersten und zweiten Ermahnung ab» ([[TIT.3.10]]).",
      "gsw": {"question_de": "Wieso zwei Ermahnige, bevor me öpper abwiist?",
-             "note_de": "«En Mänsch, wo Spaltige macht, wiis nach ere erschte und zweite Mahnig ab» ([[TIT.3.10]])."}},
+             "note_de": "«Wänn en Mänsch Spaltige macht, dänn wiis en nach ere erschte und zweite Mahnig ab» ([[TIT.3.10]])."}},
     # 3,12–15
     {"id": "REFL-TIT-0020", "subject": "TU-TIT-003-012-015", "order": 1,
      "question_de": "Was erzählen die vielen Namen am Schluss über die frühen Gemeinden?",

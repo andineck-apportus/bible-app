@@ -438,7 +438,7 @@ GSW = {
  "LUK.21.30": "[Wänn]{1} si [scho]{3} [ustriibed]{2}, [gsehnd ir s]{4} [und merked]{7} [vo sälber]{5,6}, [dass]{8} [de Summer]{11,12} [scho]{9} [nöch]{10} [isch]{13}.",
  "LUK.21.31": "[So]{1} [au]{2} [ir]{3}: [Wänn]{4} ir [das]{6} [gsehnd]{5} [passiere]{7}, [merked]{8}, [dass]{9} [s Riich]{12,13} [vo Gott]{14,15} [nöch]{10} [isch]{11}.",
  "LUK.21.32": "[Amen]{1}, [ich säge]{2} [öi]{3}: [Die]{10} [Generation]{8,9} [vergaat]{7} [nöd]{5,6}, [bis]{11,12} [alles]{13} [passiert]{14}. ~4(" + RIGHT_G + ")",
- "LUK.21.33": "[De Himmel]{1,2} und{3} [d Erde]{4,5} [vergönd]{6}, [mini]{10} [Wort]{7,9} [aber]{8} [vergönd]{13} [nöd]{11,12}.",
+ "LUK.21.33": "[De Himmel]{1,2} und{3} [d Erde]{4,5} [vergönd]{6}, [aber]{8} [mini]{10} [Wort]{7,9} [vergönd]{13} [nöd]{11,12}.",
  "LUK.21.34": "[Lueged]{1} [aber]{2} [uf öi sälber]{3}, [dass]{4} [öii]{6} [Herz]{7,8} [nöd]{4} [beschwärt wärded]{5} [dur]{9} [Rusch]{10} und{11} [Suff]{12} und{13} [Sorge]{14} [vom Alltag]{15} und{16} [säbe]{23} [Tag]{21,22} nöd [plötzlich]{20} [über]{18} [öi]{19} [chunnt]{17}",
  "LUK.21.35": "[wie]{1} [e Falle]{2}. [Dänn]{4} [er chunnt]{3} [über]{5} [alli]{6}, [wo]{7} [uf]{9} [de ganze]{11} [Erde]{10,12,13} [wohned]{8}.",
  "LUK.21.36": "[Bliibed]{1} [aber]{2} [jederziit]{3-5} [wach]{1} [und bätted]{6}, [damit]{7} [ir d Chraft händ]{8}, [däm allem]{10,11} [z entchoo]{9}, [wo]{12} [söll]{13} [passiere]{14}, und{15} [vor]{17} [em Mänschesohn]{18-21} [z bestaa]{16}.»",

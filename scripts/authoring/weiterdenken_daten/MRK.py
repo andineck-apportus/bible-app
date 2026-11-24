@@ -348,7 +348,7 @@ _Q = [
     (90, _tu("007-001-023"), 1, "Was macht einen Menschen unrein – nach Jesus und nach seinen Gesprächspartnern?",
      "Jesus sagt: «Was aus dem Menschen herauskommt, das ist es, was den Menschen unrein macht» ([[MRK.7.15]]).",
      "Was macht en Mänsch unrein – nach Jesus und nach sine Gsprächspartner?",
-     "Jesus seit: «was us em Mänsch usechunnt, das isch es, wo de Mänsch unrein macht» ([[MRK.7.15]])."),
+     "Jesus seit: «was us em Mänsch usechunnt, das macht de Mänsch unrein» ([[MRK.7.15]])."),
     (91, _tu("007-001-023"), 2, "Wann wird eine Überlieferung hilfreich, wann hinderlich?",
      None, "Wänn isch e Überliferig e Hilf, wänn es Hindernis?", None),
     (92, _tu("007-001-023"), 3, "Wie mögen jüdische und nichtjüdische Hörer den Satz «So erklärte er alle Speisen für rein» verstanden haben?",
@@ -357,7 +357,7 @@ _Q = [
     (93, _tu("007-024-030"), 1, "Was bewegt Jesus, nachdem die Frau ihm widersprochen hat?",
      "Auf ihr Wort von den Hündchen unter dem Tisch sagt er: «Um dieses Wortes willen – geh!» ([[MRK.7.28-MRK.7.29]])",
      "Was bewegt Jesus, nachdem d Frau ihm widersproche hät?",
-     "Uf ires Wort vo de Hündli under em Tisch seit er: «Wäge däm Wort – gang!» ([[MRK.7.28-MRK.7.29]])"),
+     "Uf ires Wort vo de Hündli under em Tisch seit er: «Wil du das gseit häsch, gang!» ([[MRK.7.28-MRK.7.29]])"),
     (94, _tu("007-024-030"), 2, "Wie wirkt es auf dich, dass Jesus zuerst ablehnt?",
      None, "Wie würkt s uf dich, dass Jesus zerscht ablehnt?", None),
     # 7,31–37
@@ -407,7 +407,7 @@ _Q = [
     (107, _tu("008-027-030"), 1, "Wer, sagst du, ist Jesus?",
      "Jesus fragt zuerst, was die Leute sagen, dann: «Ihr aber, wer, sagt ihr, sei ich?» ([[MRK.8.29]])",
      "Wär, seisch du, isch Jesus?",
-     "Jesus fröget zerscht, was d Lüüt säged, dänn: «Ir aber, wär, säged ir, seig ich?» ([[MRK.8.29]])"),
+     "Jesus fröget zerscht, was d Lüüt säged, dänn: «Und was säged ir, wär ich bi?» ([[MRK.8.29]])"),
     (108, _tu("008-027-030"), 2, "Warum sollen sie es niemandem sagen?",
      None, "Wieso söled si s niemerem säge?", None),
     # 8,31–38
@@ -518,7 +518,7 @@ _Q = [
      "Wüssed de Jakobus und de Johannes, um was si bitted?",
      "Jesus seit: «Ir wüssed nöd, was ir verlanged» – si antworted: «Mir chönd s» ([[MRK.10.38-MRK.10.39]])."),
     (139, _tu("010-035-045"), 2, "Wie sähe eine Gemeinschaft aus, in der gilt: «So aber ist es nicht unter euch»?",
-     None, "Wie würd e Gmeinschaft usgseh, wo gilt: «So aber isch es nöd under öi»?", None),
+     None, "Wie würd e Gmeinschaft usgseh, wo gilt: «Bi öi isch es aber nöd so»?", None),
     # 10,46–52
     (140, _tu("010-046-052"), 1, "Warum fragt Jesus einen Blinden, was er für ihn tun soll?",
      "Bartimäus hat laut um Erbarmen geschrien; Jesus lässt ihn rufen und fragt ihn trotzdem ([[MRK.10.48-MRK.10.51]]).",
@@ -557,7 +557,7 @@ _Q = [
     (149, _tu("011-020-025"), 1, "Was hat Vergeben mit Beten zu tun?",
      "Jesus sagt: «Wenn ihr dasteht und betet, dann vergebt, wenn ihr etwas gegen jemanden habt» ([[MRK.11.25]]).",
      "Was hät Vergää mit Bätte z tue?",
-     "Jesus seit: «Wänn ir dastönd und bättet, dänn vergänd, wänn ir öppis gäge öpper händ» ([[MRK.11.25]])."),
+     "Jesus seit: «wänn ir dastönd und bättet und wänn ir öppis gäge öpper händ, dänn vergänd em» ([[MRK.11.25]])."),
     (150, _tu("011-020-025"), 2, "Welcher Berg müsste sich für dich bewegen?",
      None, "Weli Bärg müessti sich für dich bewege?", None),
     # 11,27–33
@@ -591,7 +591,7 @@ _Q = [
     (158, _tu("012-018-027"), 1, "Was heisst es, dass Gott ein Gott von Lebenden ist?",
      "Jesus beruft sich auf das Wort am Dornbusch: «Ich bin der Gott Abrahams und der Gott Isaaks und der Gott Jakobs» ([[MRK.12.26-MRK.12.27]]).",
      "Was heisst s, dass Gott en Gott vo Läbige isch?",
-     "Jesus beruefft sich uf s Wort bim Dornbusch: «Ich bi Gott vom Abraham und Gott vom Isaak und Gott vom Jakob» ([[MRK.12.26-MRK.12.27]])."),
+     "Jesus beruefft sich uf s Wort bim Dornbusch: «Ich bi em Abraham sin Gott und em Isaak sin Gott und em Jakob sin Gott» ([[MRK.12.26-MRK.12.27]])."),
     (159, _tu("012-018-027"), 2, "Wie stellst du dir das Leben nach dem Tod vor – oder lieber gar nicht?",
      None, "Wie stellsch du dir s Läbe nach em Tod vor – oder lieber gar nöd?", None),
     # 12,28–34
@@ -627,7 +627,7 @@ _Q = [
     (168, _ch(13), 1, "Wem gilt das «Wacht!» am Ende der Rede?",
      "Jesus spricht zu vier Jüngern und schliesst: «Was ich aber euch sage, das sage ich allen: Wacht!» ([[MRK.13.3]], [[MRK.13.37]])",
      "Wäm gilt s «Bliibed wach!» am Schluss vo de Red?",
-     "Jesus redt zu vier Jünger und hört uf mit: «Was ich aber öi säg, das säge ich allne: Bliibed wach!» ([[MRK.13.3]], [[MRK.13.37]])"),
+     "Jesus redt zu vier Jünger und hört uf mit: «Was ich aber öi säge, das säge ich allne: Bliibed wach!» ([[MRK.13.3]], [[MRK.13.37]])"),
     # 13,1–2
     (169, _tu("013-001-002"), 1, "Wie mag ein Jünger aus Galiläa diese Antwort gehört haben?",
      "Er staunt über die Steine und Bauten des Tempels; Jesus sagt: kein Stein bleibt auf dem anderen ([[MRK.13.1-MRK.13.2]]).",
@@ -667,7 +667,7 @@ _Q = [
     (179, _tu("013-032-037"), 1, "Warum weiss nicht einmal der Sohn Tag und Stunde?",
      "«Von jenem Tag aber oder der Stunde weiss niemand, auch nicht die Engel im Himmel, auch nicht der Sohn, nur der Vater» ([[MRK.13.32]]).",
      "Wieso weiss nöd emal de Sohn Tag und Stund?",
-     "«Vo däm Tag aber oder vo dere Stund weiss niemer öppis, au nöd d Ängel im Himmel, au nöd de Sohn, nu de Vatter» ([[MRK.13.32]])."),
+     "«Aber vo däm Tag oder vo dere Stund weiss niemer öppis, nöd emal d Ängel im Himmel und au nöd de Sohn, nu de Vatter» ([[MRK.13.32]])."),
     (180, _tu("013-032-037"), 2, "Was heisst Wachsein, wenn man nicht weiss, wann der Herr kommt?",
      None, "Was heisst Wachsii, wänn me nöd weiss, wänn de Herr chunnt?", None),
 
@@ -764,7 +764,7 @@ _Q = [
     (207, _tu("015-021-032"), 1, "Wer ist Simon von Kyrene, und warum nennt Markus seine Söhne?",
      "Markus nennt ihn «Simon von Kyrene, der vom Feld kam, den Vater von Alexander und Rufus» ([[MRK.15.21]]).",
      "Wär isch de Simon vo Kyrene, und wieso nännt de Markus sini Söhn?",
-     "De Markus nännt ihn «de Simon vo Kyrene, wo vom Fäld chunnt, de Vatter vom Alexander und vom Rufus» ([[MRK.15.21]])."),
+     "De Markus nännt ihn «de Simon vo Kyrene» und seit: «Er isch de Vatter vom Alexander und vom Rufus gsii» ([[MRK.15.21]])."),
     (208, _tu("015-021-032"), 2, "Ist am Spott «Andere hat er gerettet, sich selbst kann er nicht retten» etwas Wahres?",
      None, "Isch am Spott «Anderi hät er grettet, sich sälber chan er nöd rette» öppis Wahrs?", None),
     # 15,33–41

@@ -245,7 +245,7 @@ GSW = {
  "JHN.7.3": "[Da]{2} [händ]{1} [sini]{5,7} [Brüeder]{6} [zu]{3} [ihm]{4} [gseit]{1}: «[Gang]{8} [vo da]{9} [wäg]{8} und{10} [gang]{11} [uf]{12} [Judäa]{13,14}, [damit]{15} [au]{16} [dini]{17,19} [Jünger]{18} [dini]{21} [Wärch]{22,23} [gsehnd]{20}, [wo]{24} [du machsch]{25}.",
  "JHN.7.4": "[Niemer]{1} [macht]{6} [nämli]{2} [öppis]{3} [im Gheime]{4,5} und{7} [wott]{8} [glich sälber]{9} [i de Öffentlichkeit]{10,11} [staa]{12}. [Wänn]{13} [du]{15} [die Sache]{14} [machsch]{15}, [zeig]{16} [dich]{17} [de Wält]{18,19}!»",
  "JHN.7.5": "[Dänn]{2} [au]{1} [sini]{3,5} [Brüeder]{4} [händ]{6} [nöd]{1} [a]{7} [ihn]{8} [glaubt]{6}.",
- "JHN.7.6": "[Da]{2} [seit]{1} [Jesus]{4,5} [zu ine]{3}: «[Mini]{8,9} [Ziit]{6,7} [isch]{11} [no nöd]{10} [da]{11}; [öii]{15,16} [Ziit]{12,14} [aber]{13} [isch]{18} [immer]{17} [parat]{19}.",
+ "JHN.7.6": "[Da]{2} [seit]{1} [Jesus]{4,5} [zu ine]{3}: «[Mini]{8,9} [Ziit]{6,7} [isch]{11} [no nöd]{10} [da]{11}; [aber]{13} [öii]{15,16} [Ziit]{12,14} [isch]{18} [immer]{17} [parat]{19}.",
  "JHN.7.7": "[D Wält]{3,4} [cha]{2} [öi]{6} [nöd]{1} [hasse]{5}; [aber]{8} [mich]{7} [hasst si]{9}, [wil]{10} [ich]{11} [über]{13} [si]{14} [bezüüge]{12}, [dass]{15} [iri]{18} [Wärch]{16,17} [bös]{19} [sind]{20}.",
  "JHN.7.8": "[Gönd]{2} [ir]{1} [ufe]{2} [as]{3,4} [Fäscht]{5}! [Ich]{6} [gaa]{8} [nöd]{7} [ufe]{8} [a]{9} [das]{12} [Fäscht]{10,11}, [wil]{13} [mini]{14,15} [Ziit]{16} [no nöd]{17} [erfüllt isch]{18}.»",
  "JHN.7.9": "[Das]{1} [hät er]{3} [aber]{2} [gseit]{3} und [isch]{5} [sälber]{4} [in]{6} [Galiläa]{7,8} [bliibe]{5}.",
