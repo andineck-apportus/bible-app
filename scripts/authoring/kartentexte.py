@@ -104,7 +104,7 @@ Regeln für jede Karte:
 - Zürichdeutsch wie in den gegebenen Handlungen: Gott und Jesus ohne Artikel («Jesus heilt», «vo Gott»), andere Namen mit
   Artikel («de Petrus», «d Maria»), «de Heilig Geischt», einfache Wortstellung, Schweizer Schreibung (ss, kein ß).
   Nimm für «gsw» die Wörter und Formen aus der gegebenen zürichdeutschen Handlung der Karte; erfinde keine eigenen
-  Formen. Fehlt sie, übertrage «de» schlicht. Prüfregeln (Fehler → richtig): {regeln}.
+  Formen. Fehlt sie, übertrage «de» schlicht. Dativ vor männlichen Namen «em» («Gott git em Mose», «Jesus seit em Petrus»). Prüfregeln (Fehler → richtig): {regeln}.
 
 Antworte nur mit JSON: {{"BRIEF-ID": [{{"bilder": [...], "de": "…", "gsw": "…"}}, … je Karte in Reihenfolge], …}}
 
@@ -128,9 +128,43 @@ def frage(prompt):
         return {}
 
 
+_MANN = None
+# Verben mit Dativ der Person: «Gott git em Mose», «Jesus seit em Petrus» (docs/ZUERITUEUETSCH.md: Dativ vor Personennamen em)
+DATIV_VERBEN = r"(?:git|gänd|seit|säged|zeigt|antwortet|hilft|dankt|befiehlt|verheisst|verzellt|erschiint)"
+
+
+def maennliche_namen():
+    """Namen aus dem Bildlexikon (Personen, Rollen), die im Bibeltext mit «em» und nie mit «d» stehen: männliche Einzahl."""
+    global _MANN
+    if _MANN is None:
+        em, d = set(), set()
+        for p in ROOT.glob("data/translations/*GSW*.json"):
+            t = p.read_text(encoding="utf-8")
+            em.update(re.findall(r"\bem ([A-ZÄÖÜ][a-zäöü]+)\b", t))
+            d.update(re.findall(r"\b[Dd] ([A-ZÄÖÜ][a-zäöü]+)\b", t))   # weiblich oder Mehrzahl («d Jünger»): «de» ist dort Dativ
+        em -= d
+        namen = set()
+        for p in LEX.glob("FIG-*.json"):
+            lx = lade(p)
+            if lx.get("kind") in ("person", "role"):
+                namen.update(re.findall(r"[A-ZÄÖÜ][a-zäöü]+", (lx.get("names") or {}).get("de", "")))
+        _MANN = sorted((namen & em) - {"Jesus", "Gott"})
+    return _MANN
+
+
+def dativ_fehler(text):
+    """Nur wenn das Subjekt vor dem Verb steht («Gott git de Mose …»); bei Umstellung ist «de X» oft Subjekt
+    («Drüümal seit de Pilatus»)."""
+    namen = "|".join(maennliche_namen())
+    rx = re.compile(rf"(?:^|[:;] )(?:Gott|Jesus|[DS]e? [A-ZÄÖÜ][a-zäöü]+|{namen}) ({DATIV_VERBEN} de (?:{namen}))\b")
+    return [m.group(1) for m in rx.finditer(text)]
+
+
 def befunde(karte, kand):
     import mundart
     f = []
+    for x in dativ_fehler(karte.get("gsw", "")):
+        f.append(f"Mundart: Dativ vor Personennamen em («{x}» → «… em …»)")
     if not karte.get("bilder"):
         f.append("ohne Bild")
     if len(karte.get("bilder", [])) > MAX_BILDER:
