@@ -478,9 +478,25 @@ def stelle(ref):
     return f"{pa[1]},{pa[2]}–{pz[2]}" if pz[1] == pa[1] else f"{pa[1]},{pa[2]} – {pz[1]},{pz[2]}"
 
 
+# Kein Zeilenende nach Artikel oder einbuchstabigem Wort («d / Lüüt», «findet d / Jünger»; Prüfung 2026-11-24)
+KLEBEN = {"d", "s", "e", "de", "en", "em", "es", "eme", "ere", "der", "die", "das", "dem", "den", "des", "ein", "eine", "einen", "einem"}
+
+
+def worte(s):
+    """Wörter für den Umbruch; Artikel und einbuchstabige Wörter bleiben am folgenden Wort."""
+    out, haengt = [], False
+    for w in str(s).split():
+        if haengt and out:
+            out[-1] += " " + w
+        else:
+            out.append(w)
+        haengt = w.lower() in KLEBEN or (len(w) == 1 and w.isalpha())
+    return out
+
+
 def umbruch(s, n):
     zeilen, z = [], ""
-    for w in str(s).split():
+    for w in worte(s):
         if len(z) + len(w) + (1 if z else 0) > n and z:
             zeilen.append(z)
             z = w

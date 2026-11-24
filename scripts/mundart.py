@@ -133,6 +133,8 @@ MUSTER = [
                 r"(?<!\bsin )(?<!\bmin )(?<!\bdin )(?<!\böise )\bGott vom? (?!ganzem\b|sich\b|Böse\b|Chliinere\b|Geischt\b)"), "Gott vo … ohne Artikel", "2 Artikel", "de Gott vo …"),
     # nicht umschreiben mit «em Abraham sin Gott» (Entscheid Andi Neck 2026-11-24)
     (re.compile(r"\bem [A-ZÄÖÜ][a-zäöü]+ sin Gott\b"), "em … sin Gott", "2 Artikel", "de Gott vom …"),
+    # vergää (vergeben: er vergit) ≠ vergaa (vergehen: es vergaat) – Sünde und Schuld werden vergää (Prüfung 2026-11-24)
+    (re.compile(r"\bverg(?:aa?(?:t|nd|sch)?|ää(?:t|nd|sch))\b(?=[^.;:!?]{0,40}\b(?:Sünd|Schuld))|\b(?:Sünd|Schuld)[a-zäöü]*\b[^.;:!?]{0,20}\bverg(?:aa?t?|äät)\b"), "vergaa statt vergää", "2 Wortwahl", "er vergit, vergää"),
     (re.compile(r"[èòùì]"), "Sonderzeichen", "1.1", "nur ä, ö, ü"),
     (re.compile(r"\bum z\b", re.I), "um z", "2 Infinitiv", "zum / damit"),
     (re.compile(r"[A-Za-zäöü]['’][A-Za-zäöü]|(?<![A-Za-zäöü])['’]s\b|\b[sdz]['’]"), "Apostroph", "1.11", "ohne Apostroph"),

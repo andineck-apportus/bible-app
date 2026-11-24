@@ -104,11 +104,17 @@ Regeln für jede Karte:
 - Zürichdeutsch wie in den gegebenen Handlungen: Gott und Jesus ohne Artikel («Jesus heilt», «vo Gott»), andere Namen mit
   Artikel («de Petrus», «d Maria»), «de Heilig Geischt», einfache Wortstellung, Schweizer Schreibung (ss, kein ß).
   Nimm für «gsw» die Wörter und Formen aus der gegebenen zürichdeutschen Handlung der Karte; erfinde keine eigenen
-  Formen. Fehlt sie, übertrage «de» schlicht.
+  Formen. Fehlt sie, übertrage «de» schlicht. Prüfregeln (Fehler → richtig): {regeln}.
 
 Antworte nur mit JSON: {{"BRIEF-ID": [{{"bilder": [...], "de": "…", "gsw": "…"}}, … je Karte in Reihenfolge], …}}
 
 {daten}"""
+
+
+def regeln():
+    """Die Prüfregeln von scripts/mundart.py mit der richtigen Form, damit der Auftrag sie von Anfang an kennt."""
+    import mundart
+    return "; ".join(f"{m[1]} → {m[3]}" for m in mundart.MUSTER if len(m) > 3)
 
 
 def frage(prompt):
@@ -152,7 +158,9 @@ def mundart_funde(mundart, text):
     return out
 
 
-def daten_fuer(briefs):
+def daten_fuer(briefs, alt=None):
+    """Kartendaten für den Auftrag; bei einer verworfenen früheren Fassung steht der Grund dabei."""
+    alt = alt or {}
     teile = []
     for b in briefs:
         akt = gsw_aktionen(b)
@@ -161,7 +169,9 @@ def daten_fuer(briefs):
             kand = kandidaten(b, i)
             karten.append(f"  Karte {i + 1} ({pa.get('reference', '')}): Handlung: {pa.get('action_de', '')}"
                           + (f" | Zürichdeutsch: {akt[i]}" if i < len(akt) else "")
-                          + "\n    Kandidaten: " + "; ".join(f"{f} = {lexikon()[f][0]}" for f in kand))
+                          + "\n    Kandidaten: " + "; ".join(f"{f} = {lexikon()[f][0]}" for f in kand)
+                          + "".join(f"\n    Verworfen: «{k['gsw']}» / «{k['de']}» – {', '.join(k['befunde'])}"
+                                    for k in (alt.get(b["id"]) or [])[i:i + 1] if k.get("befunde")))
         teile.append(f"{b['id']} ({b.get('reference', '')}):\n" + "\n".join(karten))
     return "\n\n".join(teile)
 
@@ -190,7 +200,7 @@ def erzeugen(nur=None):
     pakete = [briefs[i:i + 8] for i in range(0, len(briefs), 8)]
     ABLAGE.parent.mkdir(exist_ok=True)
     with ThreadPoolExecutor(10) as ex:
-        laeufe = {ex.submit(frage, AUFTRAG.format(daten=daten_fuer(pk))): pk for pk in pakete}
+        laeufe = {ex.submit(frage, AUFTRAG.format(daten=daten_fuer(pk, ab), regeln=regeln())): pk for pk in pakete}
         for n, fu in enumerate(as_completed(laeufe), 1):
             pk, a = laeufe[fu], fu.result()
             if not a:
@@ -213,6 +223,8 @@ def uebernehmen(pk, a, ab):
             kand = kandidaten(b, i)
             k = {"bilder": [x for x in k.get("bilder", []) if x in kand][:MAX_BILDER], "de": (k.get("de") or "").strip().rstrip("."),
                  "gsw": (k.get("gsw") or "").strip().rstrip(".")}
+            import mundart
+            k["gsw"] = mundart.ersetze(k["gsw"])   # eindeutige Mundartregeln (Gleit-n, Wortliste) wie im Bibeltext
             if not k["bilder"] and kand:
                 k["bilder"] = kand[:1]
             k["befunde"] = befunde(k, kand)

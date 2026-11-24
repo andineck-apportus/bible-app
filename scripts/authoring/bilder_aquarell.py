@@ -80,7 +80,8 @@ def zeilen(text, breite, fs):
     """Umbruch nach geschätzter Zeichenbreite, ausgeglichen (keine einzelnen Wörter allein auf der letzten Zeile)."""
     def gierig(maxz):
         out, cur = [], ""
-        for w in text.split():
+        import struktur_kachel as SK
+        for w in SK.worte(text):
             if cur and len(cur) + 1 + len(w) > maxz:
                 out.append(cur)
                 cur = w
