@@ -54,7 +54,7 @@ REFLECTIONS = [
      "question_de": "Warum betont der Gruss, dass Gott «nicht lügt»?",
      "note_de": "Die Hoffnung auf ewiges Leben hat «der Gott, der nicht lügt», verheissen ([[TIT.1.2]]); wenig später fällt das Wort von den lügenden Kretern ([[TIT.1.12]]).",
      "gsw": {"question_de": "Wieso betont de Gruess, dass Gott «nöd lügt»?",
-             "note_de": "D Hoffnig uf ewigs Läbe hät «de Gott, wo nöd lügt», verheisse ([[TIT.1.2]]); weni speter fallt s Wort vo de Kreter, wo lüged ([[TIT.1.12]])."}},
+             "note_de": "D Hoffnig uf ewigs Läbe hät «Gott, wo nöd lügt», verheisse ([[TIT.1.2]]); weni speter fallt s Wort vo de Kreter, wo lüged ([[TIT.1.12]])."}},
     # 1,5–9
     {"id": "REFL-TIT-0008", "subject": "TU-TIT-001-005-009", "order": 1,
      "question_de": "Welche dieser Eigenschaften würdest du von Menschen in Verantwortung erwarten – und welche fehlen dir?",

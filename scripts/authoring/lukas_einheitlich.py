@@ -20,7 +20,7 @@ Wiederkehrende Wendungen (Hochdeutsch / Züritüütsch):
 - οὐαί «Weh» / «Weh»; ἀληθῶς «Wahrhaftig»; εὐθέως «sofort» / «grad», παραχρῆμα «sofort» / «sofort»; πλήν Mundart «aber»
   oder «lieber» (Hochdeutsch je nach Satz «doch», «vielmehr»).
 - Einheitlich: ἀμὴν λέγω ὑμῖν «Amen, ich sage euch» / «Amen, ich säge öi»; ὁ υἱὸς τοῦ ἀνθρώπου «der Menschensohn» /
-  «de Mänschesohn»; ἐπιστάτα «Meister» / «Meischter»; διδάσκαλε «Lehrer»; κύριε «Herr»; μακάριος «selig» / «sälig»;
+  «de Mänschesohn»; ἐπιστάτα «Meister» / «Meischter»; διδάσκαλε «Lehrer»; κύριε «Herr»; μακάριος «selig» / «selig»;
   γενεά «Geschlecht» / «Generation»; ἡ βασιλεία τοῦ θεοῦ «das Reich Gottes» / «s Riich vo Gott»; ὑποκριταί «Heuchler» /
   «Hüüchler»; Rede-Ebenen « » / ‹ › / „ “.
 

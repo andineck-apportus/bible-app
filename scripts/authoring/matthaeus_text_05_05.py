@@ -91,15 +91,15 @@ DE = {
 GSW = {
  "MAT.5.1": "[Won er]{1} [aber]{2} [d Lüüt]{3,4} [gseh hät]{1}, [isch er]{5} [uf]{6} [de Bärg]{7,8} [ufegstige]{5}; und{9} [won]{10} [er]{11} [abgsässe isch]{10}, [sind]{12} [sini]{16} [Jünger]{14,15} [zu ihm]{13} [härechoo]{12}.",
  "MAT.5.2": "Und{1} [er hät aagfange z rede]{2-5:idiom}, [hät]{6} [si]{7} [glehrt]{6} und [gseit]{8}:",
- "MAT.5.3": "[Sälig]{1} sind [di]{2} [Arme]{3} [im]{4} [Geischt]{5}, [dänn]{6} [ine]{7} [ghört]{8} [s Himmelriich]{9-12}.",
- "MAT.5.4": "[Sälig]{1} sind [die]{2}, [wo truured]{3}, [dänn]{4} [si]{5} [wärded tröschtet]{6}.",
- "MAT.5.5": "[Sälig]{1} sind [di]{2} [Sanftmüetige]{3}, [dänn]{4} [si]{5} [wärded]{6} [d Erde]{7,8} [erbe]{6}.",
- "MAT.5.6": "[Sälig]{1} sind [die, wo]{2} [nach de Grächtigkeit]{6,7} [hungered]{3} und{4} [dürschted]{5}, [dänn]{8} [si]{9} [wärded satt]{10}.",
- "MAT.5.7": "[Sälig]{1} sind [di]{2} [Barmherzige]{3}, [dänn]{4} [si]{5} [wärded Erbarme finde]{6}.",
- "MAT.5.8": "[Sälig]{1} sind [die, won]{2} [es reins]{3} [Herz]{4,5} händ, [dänn]{6} [si]{7} [wärded]{10} [Gott]{8,9} [gseh]{10}.",
- "MAT.5.9": "[Sälig]{1} sind [die, wo]{2} [Fride stifted]{3}, [dänn]{4} [si]{5} [wärded]{8} [Söhn]{6} [vo Gott]{7} [gnännt]{8}.",
- "MAT.5.10": "[Sälig]{1} sind [die, wo]{2} [wäge]{4} [de Grächtigkeit]{5} [verfolgt worde sind]{3}, [dänn]{6} [ine]{7} [ghört]{8} [s Himmelriich]{9-12}.",
- "MAT.5.11": "[Sälig]{1} [sind ir]{2}, [wänn]{3} [si]{4} [öi]{5} [beschimpfed]{4} und{6} [verfolged]{7} und{8} [wäge mir]{15,16} [alles]{10} [Böse]{11} [über]{12} [öi]{13} [säged]{9} [und debii lüged]{14}.",
+ "MAT.5.3": "[Selig]{1} sind [di]{2} [Arme]{3} [im]{4} [Geischt]{5}, [dänn]{6} [ine]{7} [ghört]{8} [s Himmelriich]{9-12}.",
+ "MAT.5.4": "[Selig]{1} sind [die]{2}, [wo truured]{3}, [dänn]{4} [si]{5} [wärded tröschtet]{6}.",
+ "MAT.5.5": "[Selig]{1} sind [di]{2} [Sanftmüetige]{3}, [dänn]{4} [si]{5} [wärded]{6} [d Erde]{7,8} [erbe]{6}.",
+ "MAT.5.6": "[Selig]{1} sind [die, wo]{2} [nach de Grächtigkeit]{6,7} [hungered]{3} und{4} [dürschted]{5}, [dänn]{8} [si]{9} [wärded satt]{10}.",
+ "MAT.5.7": "[Selig]{1} sind [di]{2} [Barmherzige]{3}, [dänn]{4} [si]{5} [wärded Erbarme finde]{6}.",
+ "MAT.5.8": "[Selig]{1} sind [die, won]{2} [es reins]{3} [Herz]{4,5} händ, [dänn]{6} [si]{7} [wärded]{10} [Gott]{8,9} [gseh]{10}.",
+ "MAT.5.9": "[Selig]{1} sind [die, wo]{2} [Fride stifted]{3}, [dänn]{4} [si]{5} [wärded]{8} [Söhn]{6} [vo Gott]{7} [gnännt]{8}.",
+ "MAT.5.10": "[Selig]{1} sind [die, wo]{2} [wäge]{4} [de Grächtigkeit]{5} [verfolgt worde sind]{3}, [dänn]{6} [ine]{7} [ghört]{8} [s Himmelriich]{9-12}.",
+ "MAT.5.11": "[Selig]{1} [sind ir]{2}, [wänn]{3} [si]{4} [öi]{5} [beschimpfed]{4} und{6} [verfolged]{7} und{8} [wäge mir]{15,16} [alles]{10} [Böse]{11} [über]{12} [öi]{13} [säged]{9} [und debii lüged]{14}.",
  "MAT.5.12": "[Fröied öi]{1} und{2} [jubled]{3}, [dänn]{4} [öie]{7} [Lohn]{5,6} isch [gross]{8} [i]{9} [de Himmel]{10,11}; [so]{12} [händ si]{14} [nämli]{13} [d Prophete]{15,16} [verfolgt]{14}, [wo]{17} [vor]{18} [öi]{19} gsii sind.",
  "MAT.5.13": "[Ir]{1} [sind]{2} [s Salz]{3,4} [vo de Erde]{5,6}. [Wänn]{7} [aber]{8} [s Salz]{9,10} [fad wird]{11}, [mit was]{12,13} [söll me s wider salzig mache]{14}? [Es isch]{17} [für]{15} [nüüt]{16} [meh]{18} [guet]{17}, [als dass me s]{19,20} [usegheit]{21,22} und [d Lüüt]{24-26} [druf umetrampled]{23}.",
  "MAT.5.14": "[Ir]{1} [sind]{2} [s Liecht]{3,4} [vo de Wält]{5,6}. [E Stadt]{9}, [wo]{13} [uf]{11} [eme Bärg]{12} [liit]{13}, [cha]{8} [nöd]{7} [versteckt bliibe]{10}.",
@@ -310,8 +310,8 @@ DEC_DE = [
 DEC_GSW = [
  ("MAT.5.1", "d Lüüt", "adapted", "τοὺς ὄχλους", "d Mängine", ["d Mängi"], "Einheitlich im Matthäus: ὄχλος «d Mängi», οἱ ὄχλοι «d Lüüt»."),
  ("MAT.5.1", "abgsässe", "literal", "καθίσαντος", None, None, "En jüdische Lehrer hät im Sitze glehrt."),
- ("MAT.5.3", "Sälig", "traditional", "Μακάριοι", None, ["Glücklich", "Wohl dene"],
-  "Grundentscheid für Matthäus: μακάριος immer «sälig» (wie bi de Johannes-Übersetzig). D Säligpriisig wünscht Glück und spricht s zue; si isch kei Uftrag. «sind» isch ergänzt."),
+ ("MAT.5.3", "Selig", "traditional", "Μακάριοι", None, ["Glücklich", "Wohl dene"],
+  "Grundentscheid für Matthäus: μακάριος immer «selig» (wie bi de Johannes-Übersetzig). D Seligpriisig wünscht Glück und spricht s zue; si isch kei Uftrag. «sind» isch ergänzt."),
  ("MAT.5.3", "di Arme im Geischt", "interpretive", "οἱ πτωχοὶ τῷ πνεύματι", None, ["die, wo vor Gott arm sind", "di Arme"],
   "Gmeint sind Mänsche, wo sich vor Gott arm und bedürftig wüssed, oder di Arme und Plaagete, wo uf Gott hoffed ([[ISA.61.1]]); [[LUK.6.20]] seit nu «di Arme»."),
  ("MAT.5.3", "s Himmelriich", "traditional", "ἡ βασιλεία τῶν οὐρανῶν", "s Riich vo de Himmel", ["s Riich vo Gott"],
@@ -331,7 +331,7 @@ DEC_GSW = [
  ("MAT.5.16", "öie Vatter i de Himmel", "literal", "τὸν πατέρα ὑμῶν τὸν ἐν τοῖς οὐρανοῖς", None, None,
   "Grundentscheid für Matthäus: «Vatter i de Himmel», ὁ οὐράνιος «himmlisch» ([[MAT.5.48]]), wie im Vaterunser ([[MAT.6.9]], [[MAT.6.14]])."),
  ("MAT.5.17", "zum Erfülle", "interpretive", "πληρῶσαι", None, ["zum Vollände", "zum ganz Verwürkliche"],
-  "Öb de Jesus s Gsetz mit sim Tue erfüllt, es i sinere Lehr zu sim eigetliche Sinn füert oder öb sich Gsetz und Prophete in ihm erfülled, isch umstritte."),
+  "Öb Jesus s Gsetz mit sim Tue erfüllt, es i sinere Lehr zu sim eigetliche Sinn füert oder öb sich Gsetz und Prophete in ihm erfülled, isch umstritte."),
  ("MAT.5.18", "Häggli", "interpretive", "κεραία", "Hörnli", ["Strichli", "Tüpfli"], "En chliine Strich, wo hebräischi Buechstabe vonenand underscheidet. S Jota isch de chliinscht griechisch Buechstabe."),
  ("MAT.5.18", "sicher nöd", "literal", "οὐ μὴ", "nöd nöd", None, "Doppleti Verneinig als Verstärchig; wie [[MRK.10.15]]."),
  ("MAT.5.20", "die vo de Schriftglehrte und Pharisäer", "literal", "τῶν γραμματέων καὶ Φαρισαίων", None, None,
@@ -532,24 +532,24 @@ UNITS = [
   "Zum Wort «Du sollst deinen Nächsten lieben und deinen Feind hassen» sagt Jesus: Liebt eure Feinde und betet für die, die euch verfolgen, damit ihr Söhne eures Vaters in den Himmeln werdet; denn er lässt seine Sonne über Böse und Gute aufgehen und regnen über Gerechte und Ungerechte. Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes; das tun auch die Zöllner und die Heiden. Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist.", None),
 ]
 UNITS_GSW = {
- "TU-MAT-005-001-048": ("D Bärgpredig faat aa: Säligpriisige, Salz und Liecht, s Gsetz und «Ich aber säg öi»",
-  "Wo de Jesus d Lüüt gseht, staat er uf de Bärg ufe, sitzt ab und lehrt sini Jünger. Er priist di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach Grächtigkeit hungered, di Barmherzige, die mit eme reine Herz, die, wo Fride stifted, und di Verfolgte sälig, au sini Zuehörer, wänn me si wäge ihm schlächt macht. Er nännt si s Salz vo de Erde und s Liecht vo de Wält. Er seig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle; iri Grächtigkeit müess wiit über die vo de Schriftglehrte und Pharisäer usegaa. Sächs Mal stellt er däm, was gseit worde isch, sis «Ich aber säg öi» gägenüber: zum Töte, zum Ebruch, zur Scheidig, zum Schwöre, zur Vergältig und zur Liebi zum Nächschte und zum Fiind. Er schlüüsst: Liebed öii Fiind; ir söled vollkomme sii, wie öie himmlisch Vatter vollkomme isch. D Red gaat im Kapitel 6 und 7 wiiter."),
- "TU-MAT-005-001-012": ("D Säligpriisige",
-  "Wo de Jesus d Lüüt gseht, staat er uf de Bärg ufe und sitzt ab; sini Jünger chömed zu ihm häre, und er lehrt si. Er nännt sälig di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach de Grächtigkeit hungered und dürschted, di Barmherzige, die, won es reins Herz händ, die, wo Fride stifted, und die, wo wäge de Grächtigkeit verfolgt worde sind. De Arme im Geischt und de Verfolgte ghöri s Riich vo de Himmel; di andere wärded tröschtet, wärded d Erde erbe, satt wärde, Barmherzigkeit erfahre, Gott gseh und Söhn vo Gott gnännt. Sälig nännt er au sini Zuehörer, wänn me si wäge ihm beschimpft, verfolgt und Lüge über si verzellt: Si söled sich fröie, dänn ire Lohn i de Himmel isch gross; so hät me scho d Prophete vor ine verfolgt."),
+ "TU-MAT-005-001-048": ("D Bärgpredig faat aa: Seligpriisige, Salz und Liecht, s Gsetz und «Ich aber säg öi»",
+  "Wo Jesus d Lüüt gseht, staat er uf de Bärg ufe, sitzt ab und lehrt sini Jünger. Er priist di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach Grächtigkeit hungered, di Barmherzige, die mit eme reine Herz, die, wo Fride stifted, und di Verfolgte selig, au sini Zuehörer, wänn me si wäge ihm schlächt macht. Er nännt si s Salz vo de Erde und s Liecht vo de Wält. Er seig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle; iri Grächtigkeit müess wiit über die vo de Schriftglehrte und Pharisäer usegaa. Sächs Mal stellt er däm, was gseit worde isch, sis «Ich aber säg öi» gägenüber: zum Töte, zum Ebruch, zur Scheidig, zum Schwöre, zur Vergältig und zur Liebi zum Nächschte und zum Fiind. Er schlüüsst: Liebed öii Fiind; ir söled vollkomme sii, wie öie himmlisch Vatter vollkomme isch. D Red gaat im Kapitel 6 und 7 wiiter."),
+ "TU-MAT-005-001-012": ("D Seligpriisige",
+  "Wo Jesus d Lüüt gseht, staat er uf de Bärg ufe und sitzt ab; sini Jünger chömed zu ihm häre, und er lehrt si. Er nännt selig di Arme im Geischt, die, wo truured, di Sanftmüetige, die, wo nach de Grächtigkeit hungered und dürschted, di Barmherzige, die, won es reins Herz händ, die, wo Fride stifted, und die, wo wäge de Grächtigkeit verfolgt worde sind. De Arme im Geischt und de Verfolgte ghöri s Riich vo de Himmel; di andere wärded tröschtet, wärded d Erde erbe, satt wärde, Barmherzigkeit erfahre, Gott gseh und Söhn vo Gott gnännt. Selig nännt er au sini Zuehörer, wänn me si wäge ihm beschimpft, verfolgt und Lüge über si verzellt: Si söled sich fröie, dänn ire Lohn i de Himmel isch gross; so hät me scho d Prophete vor ine verfolgt."),
  "TU-MAT-005-013-016": ("S Salz vo de Erde und s Liecht vo de Wält",
-  "De Jesus seit sine Zuehörer: Ir sind s Salz vo de Erde; Salz, wo fad worde isch, isch für nüüt meh guet, als dass me s usewirft und vertrampet. Ir sind s Liecht vo de Wält; e Stadt uf eme Bärg cha nöd versteckt bliibe, und e Lampe stellt me nöd under de Schäffel, sondern uf de Lüüchter. Eso söll ires Liecht vor de Lüüt lüüchte, damit die iri guete Wärch gsehnd und ire Vatter i de Himmel priised."),
+  "Jesus seit sine Zuehörer: Ir sind s Salz vo de Erde; Salz, wo fad worde isch, isch für nüüt meh guet, als dass me s usewirft und vertrampet. Ir sind s Liecht vo de Wält; e Stadt uf eme Bärg cha nöd versteckt bliibe, und e Lampe stellt me nöd under de Schäffel, sondern uf de Lüüchter. Eso söll ires Liecht vor de Lüüt lüüchte, damit die iri guete Wärch gsehnd und ire Vatter i de Himmel priised."),
  "TU-MAT-005-017-020": ("S Gsetz und d Prophete erfülle",
-  "De Jesus seit, er seig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle. Bis de Himmel und d Erde vergönd, vergöng vom Gsetz nöd es einzigs Jota oder es einzigs Häggli, bis alles gscheh isch. Wär eis vo de chliinschte Gebot uflöst und eso lehrt, wärd de Chliinscht im Riich vo de Himmel gnännt, wär si tuet und lehrt, gross. Wänn d Grächtigkeit vo sine Zuehörer nöd wiit über die vo de Schriftglehrte und Pharisäer usegaat, chömed si sicher nöd is Riich vo de Himmel ine."),
+  "Jesus seit, er seig nöd choo, zum s Gsetz oder d Prophete ufhebe, sondern zum erfülle. Bis de Himmel und d Erde vergönd, vergöng vom Gsetz nöd es einzigs Jota oder es einzigs Häggli, bis alles gscheh isch. Wär eis vo de chliinschte Gebot uflöst und eso lehrt, wärd de Chliinscht im Riich vo de Himmel gnännt, wär si tuet und lehrt, gross. Wänn d Grächtigkeit vo sine Zuehörer nöd wiit über die vo de Schriftglehrte und Pharisäer usegaat, chömed si sicher nöd is Riich vo de Himmel ine."),
  "TU-MAT-005-021-026": ("Vom Töte und vom Zorn",
-  "Zum Gebot «Du söllsch nöd töte» seit de Jesus: Scho wär uf sin Brueder wüetig isch, isch em Gricht verfalle; wär zu ihm «Raka» seit, em Hoche Rat, wär «Du Tubel» seit, em Füür vo de Höll. Wär sis Gschänk zum Altar bringt und sich dört erinneret, dass sin Brueder öppis gäge ihn hät, söll s Gschänk la staa, sich zerscht mit em Brueder versöhne und s dänn darbringe. Mit em Gägner söll me sich underwägs schnäll einige, damit er eim nöd em Richter übergit und me is Gfängnis gworfe wird, wo me erscht wider usechunnt, wänn me de letscht Quadrans zahlt hät."),
+  "Zum Gebot «Du söllsch nöd töte» seit Jesus: Scho wär uf sin Brueder wüetig isch, isch em Gricht verfalle; wär zu ihm «Raka» seit, em Hoche Rat, wär «Du Tubel» seit, em Füür vo de Höll. Wär sis Gschänk zum Altar bringt und sich dört erinneret, dass sin Brueder öppis gäge ihn hät, söll s Gschänk la staa, sich zerscht mit em Brueder versöhne und s dänn darbringe. Mit em Gägner söll me sich underwägs schnäll einige, damit er eim nöd em Richter übergit und me is Gfängnis gworfe wird, wo me erscht wider usechunnt, wänn me de letscht Quadrans zahlt hät."),
  "TU-MAT-005-027-032": ("Vom Ebruch und vo de Scheidig",
-  "Zum Gebot «Du söllsch nöd d Ehe breche» seit de Jesus: Wär e Frau aaluegt, zum si begehre, hät i sim Herz scho mit ire d Ehe broche. Wänn s rächt Aug oder di rächt Hand eim z Fall bringt, söll me s Aug usriisse und d Hand abhaue; s isch besser, es Glid z verlüüre, als dass de ganz Liib i d Höll chunnt. Zur Wiisig, wär sini Frau entlaat, söll ire en Scheidigsbrief gää, seit er: Wär sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ehe broche wird, und wär e Entlasseni hüratet, bricht d Ehe."),
+  "Zum Gebot «Du söllsch nöd d Ehe breche» seit Jesus: Wär e Frau aaluegt, zum si begehre, hät i sim Herz scho mit ire d Ehe broche. Wänn s rächt Aug oder di rächt Hand eim z Fall bringt, söll me s Aug usriisse und d Hand abhaue; s isch besser, es Glid z verlüüre, als dass de ganz Liib i d Höll chunnt. Zur Wiisig, wär sini Frau entlaat, söll ire en Scheidigsbrief gää, seit er: Wär sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ehe broche wird, und wär e Entlasseni hüratet, bricht d Ehe."),
  "TU-MAT-005-033-037": ("Vom Schwöre",
-  "Zu de Alte isch gseit worde, si söled kei Meineid schwöre und em Herr iri Eid halte. De Jesus seit, me söll überhaupt nöd schwöre: nöd bim Himmel, em Thron vo Gott, nöd bi de Erde, em Schämel für sini Füess, nöd bi Jerusalem, de Stadt vom grosse Chönig, und nöd bim eigete Chopf, dänn me chan kei einzigs Haar wiiss oder schwarz mache. Ires Ja söll es Ja sii, ires Nei es Nei; was meh isch, isch vom Böse."),
+  "Zu de Alte isch gseit worde, si söled kei Meineid schwöre und em Herr iri Eid halte. Jesus seit, me söll überhaupt nöd schwöre: nöd bim Himmel, em Thron vo Gott, nöd bi de Erde, em Schämel für sini Füess, nöd bi Jerusalem, de Stadt vom grosse Chönig, und nöd bim eigete Chopf, dänn me chan kei einzigs Haar wiiss oder schwarz mache. Ires Ja söll es Ja sii, ires Nei es Nei; was meh isch, isch vom Böse."),
  "TU-MAT-005-038-042": ("Vo de Vergältig",
-  "Em Satz «Aug um Aug und Zahn um Zahn» stellt de Jesus gägenüber: Me söll em Böse nöd widerstaa. Wär eim uf de rächt Bagge schlaat, däm söll me au de ander anehebe; wär vor Gricht s Hemd will näh, däm au de Mantel laa; wär eim zwingt, ei Meile mitzgaa, mit däm söll me zwei gaa. Wär bittet, däm söll me gää, und vo däm, wo öppis entlehne wott, söll me sich nöd abcheere."),
+  "Em Satz «Aug um Aug und Zahn um Zahn» stellt Jesus gägenüber: Me söll em Böse nöd widerstaa. Wär eim uf de rächt Bagge schlaat, däm söll me au de ander anehebe; wär vor Gricht s Hemd will näh, däm au de Mantel laa; wär eim zwingt, ei Meile mitzgaa, mit däm söll me zwei gaa. Wär bittet, däm söll me gää, und vo däm, wo öppis entlehne wott, söll me sich nöd abcheere."),
  "TU-MAT-005-043-048": ("Vo de Findesliebi",
-  "Zum Wort «Du söllsch din Nächschte liebe und din Fiind hasse» seit de Jesus: Liebed öii Fiind und bätted für die, wo öi verfolged, damit ir Söhn vo öiem Vatter i de Himmel wärded; dänn er laat sini Sunne über Böse und Gueti ufgaa und laat s rägne über Grächti und Ungrächti. Wär nu die liebt, wo ihn liebed, und nu sini Brüeder grüesst, macht nüüt Bsunders; das mached au d Zöllner und d Heide. Ir söled also vollkomme sii, wie öie himmlisch Vatter vollkomme isch."),
+  "Zum Wort «Du söllsch din Nächschte liebe und din Fiind hasse» seit Jesus: Liebed öii Fiind und bätted für die, wo öi verfolged, damit ir Söhn vo öiem Vatter i de Himmel wärded; dänn er laat sini Sunne über Böse und Gueti ufgaa und laat s rägne über Grächti und Ungrächti. Wär nu die liebt, wo ihn liebed, und nu sini Brüeder grüesst, macht nüüt Bsunders; das mached au d Zöllner und d Heide. Ir söled also vollkomme sii, wie öie himmlisch Vatter vollkomme isch."),
 }
 
 NOTES_DE = [
@@ -592,7 +592,7 @@ NOTES_GSW = [
  ("Abgränzig: [[MAT.6.5-MAT.6.15]] staat i TRANS-MAT-006-005-015-GSW-ZH-WORKING; Wörter wie «Vatter i de Himmel», «himmlisch "
   "Vatter», «Lohn», «Heide», «vom Böse» und «d Lüüt» sind druf abgstimmt."),
  ("Grundentscheid für Matthäus (usfüerlich i de hochdütsche translation_notes): «s Himmelriich» (wörtli «s Riich vo de Himmel»), «s Riich vo Gott»; «Amen, "
-  "ich säge öi»; «Vatter i de Himmel», «himmlisch»; «Schriftglehrti», «Pharisäer»; μακάριος «sälig»; δικαιοσύνη «Grächtigkeit»; "
+  "ich säge öi»; «Vatter i de Himmel», «himmlisch»; «Schriftglehrti», «Pharisäer»; μακάριος «selig»; δικαιοσύνη «Grächtigkeit»; "
   "σκανδαλίζω «z Fall bringe»; γέεννα «Höll»; μισθός «Lohn»; οὐ μή «sicher nöd»; ἄνθρωποι «d Lüüt»; ὄχλος «d Mängi», "
   "οἱ ὄχλοι «d Lüüt»; προσέρχομαι «härechoo»; δοξάζω «priise»."),
  ("Mundart: Näme mit Artikel; Perfekt statt Präteritum; «wo» als Relativwort; kei Genitiv («s Riich vo de Himmel»). D Red staat "

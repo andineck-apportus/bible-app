@@ -184,6 +184,17 @@ Bibelausgaben von Weber und Boesch und Schobingers Grammatik). Fester Name, geht
 
 **Verneinung:** `nöd` (betont `nööd`), doppelte Verneinung ist Mundart und erlaubt (`er hät nie nüüt gseit`).
 
+### Gott, Jesus und der Heilige Geist (Entscheid Andi Neck 2026-11-24)
+
+- **Gott und Jesus ohne Artikel**, wie man in der Schweiz von ihnen spricht: «Jesus hät gseit», «Gott hät d Wält gmacht», «vo Jesus», «zu Gott», «bi Jesus» (nicht «de Jesus», «em Jesus», «vom Jesus»). Die übrigen Personennamen behalten den Artikel (de Petrus, d Maria).
+- **De Heilig Geischt** mit Artikel.
+
+### Satzbau: zusammenhängend erzählen (Entscheid Andi Neck 2026-11-24)
+
+Eine zu genaue Übernahme der Satzstellung ist in Mundart schwer verständlich. Sätze werden so umgeformt, dass sie zusammenhängend und mit wenigen Kommas fliessen, wie man es erzählen würde; die Bedeutung bleibt (Treue zum Urtext in `decisions`).
+Beispiel: «Ir aber, wär, säged ir, seig ich?» → «Was säged ir, wer ich bin?»
+Prüfung: Sätze mit vorangestelltem, durch Kommas abgetrenntem Satzglied oder mehr als drei Kommas werden gemeldet (`scripts/mundart.py`, Regel «Satzbau») und von einer weiteren Instanz umformuliert.
+
 ## 3 Wortwahl
 
 - Mundartwörter vor hochdeutschen Wörtern mit Mundart-Endung: `luege` (schauen), `lose` (zuhören), `ghöre` (hören),
@@ -194,7 +205,7 @@ Bibelausgaben von Weber und Boesch und Schobingers Grammatik). Fester Name, geht
   die Mundart einen Zwielaut hat (`Liecht`, `guet`).
 - Biblische Begriffe einheitlich: `Riich vo Gott` / `Himmelriich`, `Mänschesohn`, `Heilig Geischt`, `Herr`, `Sünd`,
   `Gnad`, `Erbarme`, `Gsetz`, `Prophet`, `Tempel`, `Synagoge`, `Jünger`, `Apostel`, `Hoheprieschter`, `Schriftglehrti`,
-  `Pharisäer`, `Zöllner`, `Sabbat`, `Passa`, `selig` → `sälig`, `Amen`.
+  `Pharisäer`, `Zöllner`, `Sabbat`, `Passa`, `selig` → `selig`, `Amen`.
 - **Namen** in der hochdeutschen Form (`Jesus`, `Christus`, `Johannes`, `Mose`), mit Mundart-Artikel (`de Jesus`, `d
   Maria`, `em Petrus`).
 - Zeitgemäss, nicht altertümlich: Gallmanns ältere oder archaische Formen (z. B. `Fäischter`, `Waret`, Dativ Plural

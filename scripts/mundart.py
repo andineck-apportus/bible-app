@@ -120,6 +120,10 @@ NICHT_AUTOMATISCH = {"ihr", "war", "waren", "hatte", "hatten", "kam", "kamen", "
                      "sprach", "wurde", "wurden", "weg", "find", "ee", "ali", "zale", "sig", "heg", "seg", "gha", "loo", "dem"}
 
 MUSTER = [
+    # Entscheid Andi Neck 2026-11-24: «selig» wie gesprochen; Gott und Jesus ohne Artikel (de Heilig Geischt mit Artikel)
+    (re.compile(r"\b[Ss]älig"), "sälig", "3 selig", "selig"),
+    # «zum Gott d Ehr z gää» (Zweck: zum … z) bleibt; «em» ist oft Fürwort («seit em Jesus» = sagt ihm Jesus)
+    (re.compile(r"\b(?:[Dd]e|[Vv]om|[Bb]im) (?:Jesus|Gott)\b|\b[Zz]um (?:Jesus|Gott)\b(?![^.,;:!?»]{0,40}\bz [a-zäöü])"), "Artikel vor Gott/Jesus", "2 Artikel", "Jesus, Gott; vo/zu/bi Jesus"),
     (re.compile(r"[èòùì]"), "Sonderzeichen", "1.1", "nur ä, ö, ü"),
     (re.compile(r"\bum z\b", re.I), "um z", "2 Infinitiv", "zum / damit"),
     (re.compile(r"[A-Za-zäöü]['’][A-Za-zäöü]|(?<![A-Za-zäöü])['’]s\b|\b[sdz]['’]"), "Apostroph", "1.11", "ohne Apostroph"),

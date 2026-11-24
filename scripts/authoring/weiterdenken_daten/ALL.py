@@ -159,7 +159,7 @@ RECEPTIONS = [
      "sources_de": ["Jesus Sirach 49,10", "Babylonischer Talmud, Bava Batra 14b"],
      "confidence": "high",
      "gsw": {"period_de": "um 180 v. Chr.; Talmud",
-             "text_de": "Scho de Jesus Sirach redt vo «de zwölf Prophete» als Gruppe. I de jüdische Überliferig gälted si als es einzigs Buech («di Zwölf»), wo uf ei Rolle gschribe worde isch."}},
+             "text_de": "Scho Jesus Sirach redt vo «de zwölf Prophete» als Gruppe. I de jüdische Überliferig gälted si als es einzigs Buech («di Zwölf»), wo uf ei Rolle gschribe worde isch."}},
     {"id": "RCPT-ALL-0011", "subject": "SUM-GROUP-06", "tradition": "church_fathers", "period_de": "2. Jahrhundert",
      "text_de": "Tatian verband die vier Evangelien zu einer einzigen fortlaufenden Erzählung (Diatessaron), die in den syrischsprachigen Kirchen bis ins 5. Jahrhundert der gebräuchliche Evangelientext war. Irenäus von Lyon dagegen begründete, warum es genau vier Evangelien sein müssen, und verglich sie mit den vier Lebewesen vor Gottes Thron ([[REV.4.7]]); daraus entstanden die Sinnbilder der Evangelisten (Mensch, Löwe, Stier, Adler), die später anders zugeordnet wurden, als Irenäus es tat.",
      "sources_de": ["Irenäus, Gegen die Häresien 3,11,8", "Tatian, Diatessaron"],

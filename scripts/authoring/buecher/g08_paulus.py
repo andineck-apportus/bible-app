@@ -58,7 +58,7 @@ NOTES = [
   "gsw": {"topic": "Jude und Nichtjude z Rom nach em Erlass vom Claudius",
           "text": "De römisch Schriftsteller Sueton bricht, de Kaiser Claudius heb Jude us Rom vertribe, wil si «uf "
                   "Aastifte vom Chrestus» immer wider Unrueh gstiftet heged. Vili Forscher gsend drin en Striit i de "
-                  "Synagoge über de Jesus als Christus. D Apostelgschicht erwähnt de Aquila und d Priszilla, wo wäge däm "
+                  "Synagoge über Jesus als Christus. D Apostelgschicht erwähnt de Aquila und d Priszilla, wo wäge däm "
                   "Erlass uf Korinth choo sind ([[ACT.18.2]]); im Römerbrief grüesst de Paulus di beide wider z Rom "
                   "([[ROM.16.3]]). Nach em Tod vom Claudius (54 n. Chr.) händ Jude wahrschiinli wider chöne zrugg choo. Es paar läsed de Brief "
                   "vor däm Hintergrund: E Gmeind, wo underdesse stärcher nichtjüdisch prägt gsii isch, und jüdischi "

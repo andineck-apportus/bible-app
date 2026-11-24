@@ -242,7 +242,7 @@ GSW = {
  # ------------------------------------------------------------ 1. Johannes, Kapitel 4
  "1JN.4.1": "[Ir Liebe]{1}, [glaubed]{5} [nöd]{2} [jedem]{3} [Geischt]{4}, [sondern]{6} [prüefed]{7} [d Geischter]{8,9}, [öb]{10} [si]{14} [us]{11} [Gott]{12,13} [sind]{14}; [dänn]{15} [vil]{16} [falschi Prophete]{17} [sind]{18} [i]{19} [d Wält]{20,21} [usezoge]{18}.",
  "1JN.4.2": "[Dra]{1,2} [erchänned ir]{3} [de Geischt]{4,5} [vo Gott]{6,7}: [Jede]{8} [Geischt]{9}, [wo]{10} [bekännt]{11}, [dass]{16} Jesus{12} Christus{13} [im]{14} [Fleisch]{15} [choo isch]{16}, [isch]{20} [us]{17} [Gott]{18,19},",
- "1JN.4.3": "und{1} [jede]{2} [Geischt]{3}, [wo]{4} [de Jesus]{7,8} [nöd]{5} [bekännt]{6}, [isch]{13} [nöd]{12} [us]{9} [Gott]{10,11}. Und{14} [das]{15} [isch]{16} [de Geischt]{17} [vom Antichrischt]{18,19}, [wo]{20} [ir]{21} [vo ihm]{20} [ghört händ]{21}, [dass]{22} [er chunnt]{23}; und{24} [jetzt]{25} [isch er]{29} [scho]{30} [i]{26} [de Wält]{27,28}.",
+ "1JN.4.3": "und{1} [jede]{2} [Geischt]{3}, [wo]{4} [Jesus]{7,8} [nöd]{5} [bekännt]{6}, [isch]{13} [nöd]{12} [us]{9} [Gott]{10,11}. Und{14} [das]{15} [isch]{16} [de Geischt]{17} [vom Antichrischt]{18,19}, [wo]{20} [ir]{21} [vo ihm]{20} [ghört händ]{21}, [dass]{22} [er chunnt]{23}; und{24} [jetzt]{25} [isch er]{29} [scho]{30} [i]{26} [de Wält]{27,28}.",
  "1JN.4.4": "[Ir]{1} [sind]{5} [us]{2} [Gott]{3,4}, [Chind]{6}, und{7} [ir händ]{8} [si]{9} [besiegt]{8}; [dänn]{10} [dä]{13} [in]{14} [öi]{15} [isch]{12} [grösser]{11} [als]{16} [dä]{17} [i]{18} [de Wält]{19,20}.",
  "1JN.4.5": "[Si]{1} [sind]{5} [us]{2} [de Wält]{3,4}; [drum]{6,7} [reded si]{11} [us]{8} [de Wält]{9,10}, und{12} [d Wält]{13,14} [lost]{16} [uf si]{15}.",
  "1JN.4.6": "[Mir]{1} [sind]{5} [us]{2} [Gott]{3,4}. [Wär]{6} [Gott]{8,9} [kännt]{7}, [lost]{10} [uf öis]{11}; [wär]{12} [nöd]{13} [us]{15} [Gott]{16,17} [isch]{14}, [lost]{19} [nöd]{18} [uf öis]{20}. [Dra]{21,22} [erchänned mir]{23} [de Geischt]{24,25} [vo de Wahrheit]{26,27} und{28} [de Geischt]{29,30} [vom Irrtum]{31,32}.",
@@ -540,7 +540,7 @@ ALTS = [
    AUTO + " lesen Sinaiticus, Alexandrinus und Vaticanus ohne Objekt, Ephraemi mit."],
   ["S Objekt cha nach [[1JN.3.10]] und [[1JN.3.15]] ergänzt worde sii.",
    AUTO_G + " läsed de Sinaiticus, de Alexandrinus und de Vaticanus ohni Objekt, de Ephraemi mit."]),
- ("VAR-SBLGNTAPP-1JN-004-003-02:R2", "1JN.4.3", "der Jesus nicht bekennt", "der Jesus Christus, im Fleisch gekommen, nicht bekennt", "wo de Jesus nöd bekännt", "wo de Jesus Christus, im Fleisch choo, nöd bekännt", "mittel",
+ ("VAR-SBLGNTAPP-1JN-004-003-02:R2", "1JN.4.3", "der Jesus nicht bekennt", "der Jesus Christus, im Fleisch gekommen, nicht bekennt", "wo Jesus nöd bekännt", "wo Jesus Christus, im Fleisch choo, nöd bekännt", "mittel",
   "Mit dem Zusatz wiederholt der Vers ausdrücklich das Bekenntnis von [[1JN.4.2]].", "Mit em Zuesatz widerholt de Vers usdrücklich s Bekänntnis vo [[1JN.4.2]].",
   {"R1": [("Ἰησοῦν", "Jesus", "kurz")], "R2": [("Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθότα", "Jesus Christus, im Fleisch gekommen", "mit Zusatz")]},
   {"R1": [("Ἰησοῦν", "Jesus", "churz")], "R2": [("Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθότα", "Jesus Christus, im Fleisch choo", "mit Zuesatz")]},
@@ -778,7 +778,7 @@ NOTES_GSW = ["KI-Entwurf ohni fachlichi Prüefig.", ("D Mundart isch no nöd vo 
               "usenand gönd, isch das i de Alternative vermerkt.")]
 NOTES_EXTRA = {
  ("1JN", 4, "de"): ["Die in der Forschung diskutierte Lesart «der Jesus auflöst» (λύει) in [[1JN.4.3]] ist im importierten Apparat nicht erfasst und deshalb nicht als Alternative geführt."],
- ("1JN", 4, "gsw"): ["Di Läsart «wo de Jesus uflöst» (λύει) i [[1JN.4.3]], wo i de Forschig diskutiert wird, isch im importierte Apparat nöd erfasst und drum nöd als Alternative gfüert."],
+ ("1JN", 4, "gsw"): ["Di Läsart «wo Jesus uflöst» (λύει) i [[1JN.4.3]], wo i de Forschig diskutiert wird, isch im importierte Apparat nöd erfasst und drum nöd als Alternative gfüert."],
  ("1JN", 5, "de"): ["Zum sogenannten Comma Johanneum in [[1JN.5.7]]-[[1JN.5.8]] siehe die Übersetzungsentscheidung zu [[1JN.5.7]]; der importierte Apparat führt dort keine Variante."],
  ("1JN", 5, "gsw"): ["Zum sogenannte Comma Johanneum i [[1JN.5.7]]-[[1JN.5.8]] lueg d Übersetzigsentscheidig zu [[1JN.5.7]]; de importiert Apparat füert dört kei Variante."],
  ("3JN", 1, "de"): ["Verszählung nach KJV: [[3JN.1.14]] umfasst auch den Gruss, den das SBLGNT als eigenen Vers 15 zählt (Tokens 11–21 tragen die ursprüngliche Stellenangabe in source_reference)."],
