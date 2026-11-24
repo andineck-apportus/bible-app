@@ -604,7 +604,7 @@ def main():
             if fehlt:
                 print(f"übersprungen {b['id']}: Bild fehlt für {fehlt}")
                 continue
-            if len(brief["panels"]) != len(b["felder"]):
+            if len(brief["panels"]) != len(b["felder"]) and not b.get("gesamt"):   # «gesamt»: ein Strukturbild für alle Felder (strukturgeruest.py)
                 sys.exit(f"{b['id']}: {len(b['felder'])} Felder, Bildauftrag hat {len(brief['panels'])}")
             cols = 1 if len(b["felder"]) == 1 else 2
             rows = (len(b["felder"]) + cols - 1) // cols
@@ -628,7 +628,7 @@ def main():
             art = f"{len(felder)} gemalte Bilder" if not n_s else f"{len(felder)} Bildfelder ({len(felder) - n_s} gemalt, {n_s} gezeichnet)"
             alt_de = f"{art}: " + " ".join(f"{i} {p_['action_de']}" for i, p_ in enumerate(brief["panels"], 1))
             rec = {"id": b["id"], "type": "illustration", "status": "draft", "tags": plan_d.get("tags", ["TAG-JOHN"]), "style": "ILLSTYLE-AQUARELL", "brief": b["brief"],
-                   "level": b["level"], "reference": b["reference"], "target": b["target"], "file": f"data/illustrations/aquarell/{b['id']}.svg",
+                   "level": b["level"], **({"reference": b["reference"]} if b.get("reference") else {}), "target": b["target"], "file": f"data/illustrations/aquarell/{b['id']}.svg",
                    "depicts": depicts, "alt_de": alt_de, "note_de": b.get("note_de"),
                    "scenes": [{"scene": s, "image": aus[s]["datei"], "model": aus[s].get("modell"), "run": aus[s].get("lauf"), "variant": aus[s].get("variante"),
                                "reference": plan[s]["reference"], **({"form": "struktur"} if plan[s].get("form") == "struktur" else {}),

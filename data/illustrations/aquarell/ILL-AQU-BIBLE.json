@@ -1,0 +1,111 @@
+{
+  "id": "ILL-AQU-BIBLE",
+  "type": "illustration",
+  "status": "draft",
+  "tags": [],
+  "style": "ILLSTYLE-AQUARELL",
+  "brief": "BRIEF-BIBLE",
+  "level": "bible",
+  "target": "SUM-BIBLE",
+  "file": "data/illustrations/aquarell/ILL-AQU-BIBLE.svg",
+  "depicts": [],
+  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Gott und Israel: Am Berg gibt Gott die Weisung; Mose bringt die Tafeln zum Volk. 2 Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung). 3 Hoffnung auf eine erneuerte Schöpfung: die Stadt im Licht, in der Gott bei den Menschen wohnt. 4 Viele Stimmen: Erzählungen und Weisheit, Gebete und Lieder, prophetische Rede, Briefe.",
+  "note_de": "Dass diese Geschichte zusammengehört, ist christliche Lesart, wie die Zusammenfassung selbst sagt. Das Gottessymbol (Strahlenkranz mit dem Gottesnamen) zeigt Gott, ohne ihn abzubilden.",
+  "scenes": [
+    {
+      "scene": "S-BIBLE",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "",
+      "form": "struktur",
+      "speech": []
+    }
+  ],
+  "evidence": [
+    [
+      {
+        "s": "B",
+        "ref": "EXO.19-EXO.34",
+        "de": "Gott und Israel: Am Berg gibt Gott die Weisung; Mose bringt die Tafeln zum Volk."
+      },
+      {
+        "s": "B",
+        "ref": "MRK.15-MRK.16",
+        "de": "Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung)."
+      },
+      {
+        "s": "B",
+        "ref": "REV.21.1-REV.21.4",
+        "de": "Hoffnung auf eine erneuerte Schöpfung: die Stadt im Licht, in der Gott bei den Menschen wohnt."
+      },
+      {
+        "s": "B",
+        "ref": "2TI.3.16",
+        "de": "Viele Stimmen: Erzählungen und Weisheit, Gebete und Lieder, prophetische Rede, Briefe."
+      }
+    ]
+  ],
+  "license": "CC0 1.0 (KI-generiert mit dem Bildmodell von OpenAI; keine Urheberrechte beansprucht)",
+  "authorship_de": "KI-Bild: gemalt mit dem Bildmodell von OpenAI nach Szenenplan, Figurenblatt und Stilreferenz (docs/BILDSTIL.md); Auswahl, Blasen und Datensatz KI-Entwurf (Claude) vom 2026-11-24 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "knowledge": {
+    "asserted_at": "2026-11-24",
+    "supersedes": null
+  },
+  "check": {
+    "stufe": "entwurf",
+    "process": "PROC-BILD-AQUARELL@2.5",
+    "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
+    "felder": [
+      {
+        "scene": "S-BIBLE",
+        "ergebnis": "durchgefallen",
+        "punkte": 2,
+        "kern": null,
+        "bild_sha": "0d86cc58f457c5d3",
+        "plan_sha": "f258a64b3a2689c3",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung); Jesus: sis Läbe, sin Tod am Chrüüz und s leere Grab (Uferstehig))",
+          "Alle Stellen gültig (fehler: EXO.19-EXO.34, MRK.15-MRK.16, REV.21.1-REV.21.4, 2TI.3.16)"
+        ],
+        "schluss": {
+          "ergebnis": "durchgefallen",
+          "kern": null,
+          "bild_sha": "0d86cc58f457c5d3",
+          "offen_de": []
+        }
+      }
+    ],
+    "open_de": [
+      "S-BIBLE: Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: Jesus: sein Leben, sein Tod am Kreuz und das leere Grab (Auferstehung); Jesus: sis Läbe, sin Tod am Chrüüz und s leere Grab (Uferstehig))",
+      "S-BIBLE: Alle Stellen gültig (fehler: EXO.19-EXO.34, MRK.15-MRK.16, REV.21.1-REV.21.4, 2TI.3.16)"
+    ],
+    "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
+  }
+}

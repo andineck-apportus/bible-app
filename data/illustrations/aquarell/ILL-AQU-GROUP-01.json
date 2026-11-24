@@ -1,0 +1,106 @@
+{
+  "id": "ILL-AQU-GROUP-01",
+  "type": "illustration",
+  "status": "draft",
+  "tags": [],
+  "style": "ILLSTYLE-AQUARELL",
+  "brief": "BRIEF-GROUP-01",
+  "level": "group",
+  "target": "SUM-GROUP-01",
+  "file": "data/illustrations/aquarell/ILL-AQU-GROUP-01.svg",
+  "depicts": [],
+  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Schöpfung: Gott spricht, und es wird Licht; Himmel und Erde, Pflanzen, Sonne, Mond und Sterne entstehen. 2 Verheissung: Gott verheisst Abraham Nachkommen, so zahlreich wie die Sterne, und ein Land. 3 Nach dem Weg durch das Meer gibt Gott am Berg die Weisung; Mose bringt die Tafeln zum Volk.",
+  "note_de": "Abraham steht für die Erzeltern, denen Gott Nachkommen und Land verheisst ([[GEN.12.1-GEN.12.3]], [[GEN.15.5]]). Dass die Tora vor dem Einzug ins Land endet, zeigt das Bild nicht.",
+  "scenes": [
+    {
+      "scene": "S-GROUP-01",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "",
+      "form": "struktur",
+      "speech": []
+    }
+  ],
+  "evidence": [
+    [
+      {
+        "s": "B",
+        "ref": "GEN.1",
+        "de": "Schöpfung: Gott spricht, und es wird Licht; Himmel und Erde, Pflanzen, Sonne, Mond und Sterne entstehen."
+      },
+      {
+        "s": "B",
+        "ref": "GEN.15.5",
+        "de": "Verheissung: Gott verheisst Abraham Nachkommen, so zahlreich wie die Sterne, und ein Land."
+      },
+      {
+        "s": "B",
+        "ref": "EXO.19-EXO.34",
+        "de": "Nach dem Weg durch das Meer gibt Gott am Berg die Weisung; Mose bringt die Tafeln zum Volk."
+      }
+    ]
+  ],
+  "license": "CC0 1.0 (KI-generiert mit dem Bildmodell von OpenAI; keine Urheberrechte beansprucht)",
+  "authorship_de": "KI-Bild: gemalt mit dem Bildmodell von OpenAI nach Szenenplan, Figurenblatt und Stilreferenz (docs/BILDSTIL.md); Auswahl, Blasen und Datensatz KI-Entwurf (Claude) vom 2026-11-24 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "knowledge": {
+    "asserted_at": "2026-11-24",
+    "supersedes": null
+  },
+  "check": {
+    "stufe": "entwurf",
+    "process": "PROC-BILD-AQUARELL@2.5",
+    "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
+    "felder": [
+      {
+        "scene": "S-GROUP-01",
+        "ergebnis": "durchgefallen",
+        "punkte": 2,
+        "kern": null,
+        "bild_sha": "fadc4fcbdc0d1434",
+        "plan_sha": "8856d44ddbe3e0ea",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: Nach dem Weg durch das Meer gibt Gott am Berg die Weisung; Mose …; Nach em Wäg dur s Meer git Gott am Bärg d Wiisig; de Mose bringt d …)",
+          "Alle Stellen gültig (fehler: GEN.1, GEN.15.5, EXO.19-EXO.34)"
+        ],
+        "schluss": {
+          "ergebnis": "durchgefallen",
+          "kern": null,
+          "bild_sha": "fadc4fcbdc0d1434",
+          "offen_de": []
+        }
+      }
+    ],
+    "open_de": [
+      "S-GROUP-01: Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: Nach dem Weg durch das Meer gibt Gott am Berg die Weisung; Mose …; Nach em Wäg dur s Meer git Gott am Bärg d Wiisig; de Mose bringt d …)",
+      "S-GROUP-01: Alle Stellen gültig (fehler: GEN.1, GEN.15.5, EXO.19-EXO.34)"
+    ],
+    "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
+  }
+}

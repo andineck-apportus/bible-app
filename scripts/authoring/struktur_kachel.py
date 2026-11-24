@@ -166,8 +166,9 @@ def rollen(svg):
 
 def zeichne(sx, vignetten=None):
     """SVG-Inhalt (ohne äusseres svg) und Höhe einer Strukturkachel in BREITE-Einheiten."""
-    global _V
+    global _V, _MIT_BUCH
     _V = dict(vignetten or {})
+    _MIT_BUCH = bool(sx.get("mit_buch"))   # Stellen mit Buchname (Bibel, Testament, Buchgruppe: Felder aus mehreren Büchern)
     teile, y = titel(sx, RAND)
     el = sx.get("elemente") or []
     inhalt, y = globals()[f"_{sx['typ']}"](sx, el, y)
@@ -460,6 +461,11 @@ def stelle(ref):
     """GEN.1.3 → 1,3; GEN.1.3-GEN.1.9 → 1,3–9; GEN.1.3-GEN.2.4 → 1,3 – 2,4; GEN.12 → Kap. 12."""
     if not ref:
         return ""
+    if globals().get("_MIT_BUCH"):
+        import sys as _s
+        _s.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parents[1]))
+        import refs as _refs
+        return _refs.display_de(ref)
     a, _, z = ref.partition("-")
     pa = a.split(".")
     if len(pa) == 2:

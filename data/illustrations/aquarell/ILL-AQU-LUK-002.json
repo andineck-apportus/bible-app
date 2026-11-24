@@ -1,0 +1,110 @@
+{
+  "id": "ILL-AQU-LUK-002",
+  "type": "illustration",
+  "status": "draft",
+  "tags": [],
+  "style": "ILLSTYLE-AQUARELL",
+  "brief": "BRIEF-LUK-002",
+  "level": "chapter",
+  "reference": "LUK.2",
+  "target": "TU-LUK-002-001-052",
+  "file": "data/illustrations/aquarell/ILL-AQU-LUK-002.svg",
+  "depicts": [],
+  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Maria bringt ihren Sohn zur Welt und legt ihn in eine Futterkrippe. 2 Der Engel verkündet den Hirten: «Heute ist euch ein Retter geboren»; die Hirten finden das Kind und loben Gott. 3 Im Tempel preist Simeon mit dem Kind auf den Armen Gott: «Meine Augen haben dein Heil gesehen.» 4 Der zwölfjährige Jesus im Tempel unter den Lehrern: «Wusstet ihr nicht, dass ich im Haus meines Vaters sein muss?»",
+  "note_de": "Vier Felder für die drei Abschnitte ([[LUK.2.1-LUK.2.52]]): Geburt und Botschaft an die Hirten (zwei Felder), Simeon im Tempel, der Zwölfjährige im Tempel. Futterkrippe, Hirten, Simeon (mit dem Kind, [[LUK.2.28]]) und Jesus als Junge sind eigene Lexikoneinträge (seit Runde 15); Jesus ohne Namensschild wie überall, Simeon ohne Schild, weil es das Kind auf seinem Arm verdecken würde.",
+  "scenes": [
+    {
+      "scene": "S-LUK-002",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "LUK.2",
+      "form": "struktur",
+      "speech": []
+    }
+  ],
+  "evidence": [
+    [
+      {
+        "s": "B",
+        "ref": "LUK.2.6-LUK.2.7",
+        "de": "Maria bringt ihren Sohn zur Welt und legt ihn in eine Futterkrippe."
+      },
+      {
+        "s": "B",
+        "ref": "LUK.2.8-LUK.2.20",
+        "de": "Der Engel verkündet den Hirten: «Heute ist euch ein Retter geboren»; die Hirten finden das Kind und loben Gott."
+      },
+      {
+        "s": "B",
+        "ref": "LUK.2.21-LUK.2.40",
+        "de": "Im Tempel preist Simeon mit dem Kind auf den Armen Gott: «Meine Augen haben dein Heil gesehen.»"
+      },
+      {
+        "s": "B",
+        "ref": "LUK.2.41-LUK.2.52",
+        "de": "Der zwölfjährige Jesus im Tempel unter den Lehrern: «Wusstet ihr nicht, dass ich im Haus meines Vaters sein muss?»"
+      }
+    ]
+  ],
+  "license": "CC0 1.0 (KI-generiert mit dem Bildmodell von OpenAI; keine Urheberrechte beansprucht)",
+  "authorship_de": "KI-Bild: gemalt mit dem Bildmodell von OpenAI nach Szenenplan, Figurenblatt und Stilreferenz (docs/BILDSTIL.md); Auswahl, Blasen und Datensatz KI-Entwurf (Claude) vom 2026-11-24 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "knowledge": {
+    "asserted_at": "2026-11-24",
+    "supersedes": null
+  },
+  "check": {
+    "stufe": "entwurf",
+    "process": "PROC-BILD-AQUARELL@2.5",
+    "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
+    "felder": [
+      {
+        "scene": "S-LUK-002",
+        "ergebnis": "durchgefallen",
+        "punkte": 3,
+        "kern": null,
+        "bild_sha": "07e0e14759d132e9",
+        "plan_sha": "f54d534034ff263a",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: sie brachte ihren Sohn, den Erstgeborenen, zur Welt; si hät iren Sohn, de Erschtgeborne, überchoo)"
+        ],
+        "schluss": {
+          "ergebnis": "durchgefallen",
+          "kern": null,
+          "bild_sha": "07e0e14759d132e9",
+          "offen_de": []
+        }
+      }
+    ],
+    "open_de": [
+      "S-LUK-002: Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: sie brachte ihren Sohn, den Erstgeborenen, zur Welt; si hät iren Sohn, de Erschtgeborne, überchoo)"
+    ],
+    "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
+  }
+}

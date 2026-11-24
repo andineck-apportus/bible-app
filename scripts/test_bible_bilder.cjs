@@ -7,7 +7,8 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     await p.goto('file://'+path.join(__dirname,'../app/bible/index.html'));await p.waitForTimeout(800);
     assert(await p.$('.has-ill .ill-img svg'),'Bild auf der Ebene Bibel');
     assert.equal(await p.$$eval('.ill-styles',x=>x.length),0,'nur ein Bildstil (Anime), kein Umschalter');
-    assert(await p.evaluate(()=>!!document.querySelector('.has-ill .ill-img use[href^="#an-"]')),'Anime-Bild auf der Ebene Bibel');
+    // Ebene Bibel: Strukturbild im Aquarellstil mit Bildern aus dem Bildlexikon (strukturgeruest.py, Entscheid Andi Neck 2026-11-24)
+    assert(await p.evaluate(()=>{const s=document.querySelector('.has-ill .ill-img svg.ill-tile');return !!s&&s.querySelectorAll('image').length>=3&&s.querySelectorAll('text').length>=8;}),'Strukturbild mit Lexikonbildern auf der Ebene Bibel');
     await p.click('[data-action=index]');await p.fill('input[type=search]','Joh 2,1');await p.waitForTimeout(300);await p.click('.results button');await p.click('.sheet .nav-open');await p.waitForTimeout(900);
     while(+await p.evaluate(()=>document.querySelector('.app').dataset.level)>5){await p.evaluate(()=>document.querySelector('.immersed')?.classList.remove('immersed'));await p.click('[data-action=up]');await p.click('.sheet .pick-open');await p.waitForTimeout(800);}
     assert(await p.$$eval('.has-ill',x=>x.length)>=3,'Bilder bei den Abschnitten von Johannes 2 (und den geladenen Nachbarn)');

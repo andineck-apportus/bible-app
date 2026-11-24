@@ -1,0 +1,110 @@
+{
+  "id": "ILL-AQU-LUK-004",
+  "type": "illustration",
+  "status": "draft",
+  "tags": [],
+  "style": "ILLSTYLE-AQUARELL",
+  "brief": "BRIEF-LUK-004",
+  "level": "chapter",
+  "reference": "LUK.4",
+  "target": "TU-LUK-004-001-044",
+  "file": "data/illustrations/aquarell/ILL-AQU-LUK-004.svg",
+  "depicts": [],
+  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 In der Wüste versucht der Teufel Jesus dreimal; Jesus antwortet jedes Mal: «Es steht geschrieben.» 2 In Nazaret liest Jesus: «Der Geist des Herrn ist auf mir …» und sagt: «Heute hat sich dieses Schriftwort erfüllt.» 3 «Kein Prophet ist willkommen in seiner Heimat»: Voller Wut wollen sie ihn den Abhang hinabstürzen; er geht mitten durch sie hindurch. 4 In Kafarnaum treibt Jesus einen Dämon aus: «Schweig und fahr aus ihm aus!»; er heilt viele und sagt: «Dazu bin ich gesandt worden.»",
+  "note_de": "Vier Felder für die drei Abschnitte ([[LUK.4.1-LUK.4.44]]): die Versuchung, Nazaret in zwei Feldern (Lesung und Ablehnung), Kafarnaum. Der Teufel erscheint als dunkler Schatten, der Dämon als Schatten beim Menschen.",
+  "scenes": [
+    {
+      "scene": "S-LUK-004",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "LUK.4",
+      "form": "struktur",
+      "speech": []
+    }
+  ],
+  "evidence": [
+    [
+      {
+        "s": "B",
+        "ref": "LUK.4.1-LUK.4.13",
+        "de": "In der Wüste versucht der Teufel Jesus dreimal; Jesus antwortet jedes Mal: «Es steht geschrieben.»"
+      },
+      {
+        "s": "B",
+        "ref": "LUK.4.14-LUK.4.21",
+        "de": "In Nazaret liest Jesus: «Der Geist des Herrn ist auf mir …» und sagt: «Heute hat sich dieses Schriftwort erfüllt.»"
+      },
+      {
+        "s": "B",
+        "ref": "LUK.4.22-LUK.4.30",
+        "de": "«Kein Prophet ist willkommen in seiner Heimat»: Voller Wut wollen sie ihn den Abhang hinabstürzen; er geht mitten durch sie hindurch."
+      },
+      {
+        "s": "B",
+        "ref": "LUK.4.31-LUK.4.44",
+        "de": "In Kafarnaum treibt Jesus einen Dämon aus: «Schweig und fahr aus ihm aus!»; er heilt viele und sagt: «Dazu bin ich gesandt worden.»"
+      }
+    ]
+  ],
+  "license": "CC0 1.0 (KI-generiert mit dem Bildmodell von OpenAI; keine Urheberrechte beansprucht)",
+  "authorship_de": "KI-Bild: gemalt mit dem Bildmodell von OpenAI nach Szenenplan, Figurenblatt und Stilreferenz (docs/BILDSTIL.md); Auswahl, Blasen und Datensatz KI-Entwurf (Claude) vom 2026-11-24 auf Wunsch von Andi Neck; keine fachliche Prüfung.",
+  "knowledge": {
+    "asserted_at": "2026-11-24",
+    "supersedes": null
+  },
+  "check": {
+    "stufe": "entwurf",
+    "process": "PROC-BILD-AQUARELL@2.5",
+    "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
+    "felder": [
+      {
+        "scene": "S-LUK-004",
+        "ergebnis": "durchgefallen",
+        "punkte": 3,
+        "kern": null,
+        "bild_sha": "85c094b0c4cbcedc",
+        "plan_sha": "450ad07a2d3029a8",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: Heute hat sich dieses Schriftwort erfüllt; Kein Prophet ist willkommen in seiner Heimat; Kei Prophet isch willkomme i sinere Heimat)"
+        ],
+        "schluss": {
+          "ergebnis": "durchgefallen",
+          "kern": null,
+          "bild_sha": "85c094b0c4cbcedc",
+          "offen_de": []
+        }
+      }
+    ],
+    "open_de": [
+      "S-LUK-004: Beschriftungen passen in ihre Felder (höchstens 40 Zeichen) (fehler: Heute hat sich dieses Schriftwort erfüllt; Kein Prophet ist willkommen in seiner Heimat; Kei Prophet isch willkomme i sinere Heimat)"
+    ],
+    "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
+  }
+}
