@@ -159,6 +159,21 @@ Szenen werden gemalt; was gemessen, gezählt oder verortet ist, kommt aus Daten 
 - **2026-10-28:** Automatische Prüfung mit Regeln auf drei Ebenen, Prüfstufen und automatisch gesetzten Blasen (Abschnitt 8); Pilot Strukturen (Abschnitt 9); weitere Beispiele Mk 4,35–41 und Lk 15,11–32 (Wunsch Andi Neck: Regelwerk an mehr Beispielen testen).
 - **2026-10-28:** Bildlexikon im Aquarellstil: Einzelporträts je Lexikon-Eintrag mit automatischer Prüfung, als Vorlage für die Szenen (Abschnitt 4, PROC-BILD-AQUARELL 2.4).
 
+## Karten der Strukturbilder (2026-11-24)
+
+Entscheid Andi Neck («einzelne Bilder mit nur Text, vieles schaut nach Platzhalter aus»): Allgemeine Regeln für jede Karte eines
+Strukturbilds aus dem Bildauftrag (scripts/authoring/strukturgeruest.py, Karten aus scripts/authoring/kartentexte.py):
+
+1. **Keine Karte ohne Bild.** Bis zu drei Bilder aus dem Bildlexikon: die handelnden Personen oder Gruppen und, wo passend, ein
+   Zeichen oder Gegenstand, der die Aussage trägt. Kandidaten sind die Einträge des Felds im Bildauftrag, dann die Einträge, die der
+   Text des Felds nennt, dann die übrigen des Bildauftrags. Personen ohne Wiederkehr nie als Bild (personen.py).
+2. **Kartentext kurz und vollständig** (höchstens 42 Zeichen), kein abgeschnittenes Satzstück aus dem Vers («Jesus vergit em
+   Glähmte sini Sünde» statt «wo Jesus ire Glaube gseh hät»); Züritüütsch nach [ZUERITUEUETSCH.md](ZUERITUEUETSCH.md), mit den
+   Wörtern der zürichdeutschen Handlung, geprüft mit scripts/mundart.py.
+3. Die Auswahl trifft eine KI-Instanz aus der festen Kandidatenliste; das Werkzeug prüft Kandidaten, Länge, Grossschreibung und
+   Mundart und legt das Ergebnis mit Fingerabdruck des Bildauftrags ab. Ändert sich der Bildauftrag, wird die Karte neu erzeugt.
+   Ein Abschnitt ohne jeden Kandidaten behält sein bisheriges Bild.
+
 ## Farben der Strukturbilder als Rollen (2026-11-21)
 
 Entscheid Andi Neck: Die Farben der gezeichneten Strukturbilder sind Rollen, die die App von aussen setzen kann (Palette, Hell und

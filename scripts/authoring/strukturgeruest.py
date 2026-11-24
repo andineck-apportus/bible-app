@@ -7,8 +7,9 @@ bestehenden Bildauftrag (Felder mit Stelle, Stichwort, Figuren, Gegenständen, Z
 gemalt; die Bilder sind die geprüften Einzelbilder des Lexikons (freigestellt). Personen ohne Wiederkehr erscheinen nicht
 als Bild (personen.py), ihr Name steht im Stichwort; Gott ist der gezeichnete Strahlenkranz.
 
-Reihenfolge der Bilder je Karte: Personen und Gruppen, dann Gegenstände und Orte, dann Zeichen; nur Einträge mit geprüftem
-Bild. Fehlt einem Feld jedes Bild, bleibt die Karte ohne Bild. Malt das Lexikon später fehlende Einträge, erscheinen sie
+Kartentext und Bilder je Karte kommen aus kartentexte.py (strukturgeruest_daten/karten.json: kurzer vollständiger Text, keine
+Karte ohne Bild, Entscheid 2026-11-24). Ohne gültigen Eintrag dort gilt die frühere Regel: Stichwort aus dem Bildauftrag,
+Personen und Gruppen, dann Gegenstände und Orte, dann Zeichen; nur Einträge mit geprüftem Bild. Malt das Lexikon später fehlende Einträge, erscheinen sie
 beim nächsten Lauf («fehlend» listet sie).
 
     python3 scripts/authoring/strukturgeruest.py schreiben     # Szenenpläne szenen-struktur-<buch>.json
@@ -27,6 +28,18 @@ import personen as P  # noqa: E402
 import vignetten as V  # noqa: E402
 
 EBENEN = ("bible", "testament", "group", "chapter", "section")
+KARTEN_DATEI = ROOT / "scripts/authoring/strukturgeruest_daten/karten.json"
+KARTEN = json.loads(KARTEN_DATEI.read_text(encoding="utf-8")) if KARTEN_DATEI.exists() else {}
+
+
+def KARTEN_GUELTIG(b):
+    """Karten aus kartentexte.py gelten, wenn sie zum aktuellen Bildauftrag passen (Fingerabdruck) und ohne Befund sind."""
+    import kartentexte as K
+    ks = KARTEN.get(b["id"])
+    if not ks or len(ks) != len(b["panels"]) or any(k.get("befunde") for k in ks):
+        return False
+    akt = K.gsw_aktionen(b)
+    return all(k.get("fp") == K.fingerabdruck(b, i, akt[i] if i < len(akt) else "") for i, k in enumerate(ks))
 MAX_BILDER = 3
 
 
@@ -81,7 +94,17 @@ def schreibe():
         el = []
         loc = ROOT / f"data/localizations/gsw-u-sd-chzh/{b['id']}.json"
         akt_gsw = (lade(loc).get("fields") or {}).get("actions_de") or [] if loc.exists() else []
+        karten = KARTEN.get(b["id"]) if KARTEN_GUELTIG(b) else None
         for i, pa in enumerate(b["panels"]):
+            if karten:   # kartentexte.py: kurzer vollständiger Text und Bilder je Karte (Entscheid 2026-11-24)
+                k = karten[i]
+                e = {"de": k["de"], "gsw": k["gsw"]}
+                if pa.get("reference"):
+                    e["ref"] = pa["reference"]
+                if k.get("bilder"):
+                    e["depicts"] = [f for f in k["bilder"] if f == "FIG-GOTT" or V.bild(f)]
+                el.append(e)
+                continue
             kw = pa.get("keywords") or {}
             if kw.get("de"):
                 e = {"de": kw["de"], "gsw": kw.get("gsw") or kw["de"]}
