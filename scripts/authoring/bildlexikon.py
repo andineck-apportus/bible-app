@@ -104,7 +104,7 @@ def E(fid, kind, de, en, ident, gsw, traits, pal, rules, era=None, find=None, di
 # ---------------------------------------------------------------------------------------------------------------
 E("FIG-GOTT", "divine", "Gott", "God",
   "Der Gott Israels, im Alten Testament mit dem Eigennamen JHWH genannt ([[JON.1.1]]), von Jesus als «Vater» angeredet ([[MAT.6.9]]).",
-  "Gott vo Israel, im Alte Teschtamänt mit em Eigename JHWH gnännt ([[JON.1.1]]), vo Jesus als «Vatter» aagredt ([[MAT.6.9]]).",
+  "De Gott vo Israel, im Alte Teschtamänt mit em Eigename JHWH gnännt ([[JON.1.1]]), vo Jesus als «Vatter» aagredt ([[MAT.6.9]]).",
   [T("Goldener Strahlenkranz (Glorie) um eine helle Scheibe mit dem Gottesnamen יהוה in hebräischen Buchstaben", "tradition",
      note="Entscheid Andi Neck 2026-10-14. Der Gottesname im Strahlenkranz ist seit der Reformation in reformierten und lutherischen Kirchen verbreitet; "
           "er zeigt Gott, ohne ihn abzubilden. Ersetzt den Entwurf «segnende Hand aus der Wolke», der zu wenig verständlich war."),

@@ -475,7 +475,7 @@ QUESTIONS = [
   "Wer sind die «Griechen», die Jesus sehen wollen ([[JHN.12.20-JHN.12.21]])?",
   "Johannes nennt sie Ἕλληνες, nicht «Hellenisten» (vgl. [[ACT.6.1]], wo griechischsprachige Juden gemeint sind); sie ziehen hinauf, «um am Fest anzubeten». Gemeint sein können Nichtjuden, die den Gott Israels verehrten, oder Juden aus der griechischsprachigen Welt (vgl. [[JHN.7.35]], wo von der Diaspora «unter den Griechen» die Rede ist). Ob sie Jesus treffen, erzählt Johannes nicht; Jesus antwortet mit dem Wort von der Stunde ([[JHN.12.23]]).",
   "Wär sind d «Grieche», wo Jesus wänd gseh ([[JHN.12.20-JHN.12.21]])?",
-  "De Johannes nännt si Ἕλληνες, nöd «Hellenischte» (vgl. [[ACT.6.1]], wo griechischsprachigi Jude gmeint sind); si ziehnd ufe, «zum am Fäscht aazbätte». Gmeint sii chönd Nöd-Jude, wo Gott vo Israel verehrt händ, oder Jude us de griechischsprachige Wält (vgl. [[JHN.7.35]], wo vo de Diaspora «under de Grieche» d Red isch). Öb si Jesus träffed, verzellt de Johannes nöd; Jesus antwortet mit em Wort vo de Stund ([[JHN.12.23]])."),
+  "De Johannes nännt si Ἕλληνες, nöd «Hellenischte» (vgl. [[ACT.6.1]], wo griechischsprachigi Jude gmeint sind); si ziehnd ufe, «zum am Fäscht aazbätte». Gmeint sii chönd Nöd-Jude, wo de Gott vo Israel verehrt händ, oder Jude us de griechischsprachige Wält (vgl. [[JHN.7.35]], wo vo de Diaspora «under de Grieche» d Red isch). Öb si Jesus träffed, verzellt de Johannes nöd; Jesus antwortet mit em Wort vo de Stund ([[JHN.12.23]])."),
 ]
 RELATIONS = [
  ("REL-JHN-2001", U(8, 1, 11), "LEV.20.10", "background", "high"),

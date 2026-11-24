@@ -1121,7 +1121,7 @@ REFLECTIONS = [
      "question_de": "Was meint Jesus mit «für ihn leben alle»?",
      "note_de": "Jesus begründet die Auferstehung mit dem Gott Abrahams, Isaaks und Jakobs, der kein Gott von Toten ist ([[LUK.20.37-LUK.20.38]]).",
      "gsw": {"question_de": "Was meint Jesus mit «für ihn läbed alli»?",
-             "note_de": "Jesus begründet d Uferstehig mit Gott vom Abraham, Isaak und Jakob, wo kei Gott vo Tote isch ([[LUK.20.37-LUK.20.38]])."}},
+             "note_de": "Jesus begründet d Uferstehig mit em Gott vom Abraham, Isaak und Jakob, wo kei Gott vo Tote isch ([[LUK.20.37-LUK.20.38]])."}},
     {"id": "REFL-LUK-0278", "subject": "TU-LUK-020-027-040", "order": 2,
      "question_de": "Warum antworten Schriftgelehrte am Ende mit Zustimmung?",
      "gsw": {"question_de": "Wieso antworted Schriftglehrti am Schluss mit Zuestimmig?"}},

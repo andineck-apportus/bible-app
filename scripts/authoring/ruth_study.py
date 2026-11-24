@@ -138,7 +138,7 @@ INTERPRETATIONS = [
   "S Buech isch e Gägestimm zur Uflösig vo de Mischehe under em Esra und em Nehemia ([[EZR.10.1-EZR.10.44]]; [[NEH.13.23-NEH.13.27]]) und zum Usschluss vo de Moabiter us de Gmeind ([[DEU.23.3]]): Usgrächnet e moabitischi Ehefrau wird Ahnin vom David. S ständig «d Moabiteri» haltet dä Punkt wach.",
   "Setzt e Entstehig i de Perserziit voruus; s Buech nännt weder de Esra no de Nehemia no [[DEU.23.3]].",
   ["D Datierig i d Perserziit isch nöd gsicheret; Sprach und Inhalt wärded au für e früeneri Entstehig aagfüert.",
-   "D Rut wird nöd als Frömdi ufgnoo, wo frömd bliibt, sondern si bindet sich a s Volk und Gott vo Israel ([[RUT.1.16]]). Drum cha me s Buech au so läse, dass es d Bedingige vo de Ufnahm zeigt, nöd dass es Gränze grundsätzlich bestriitet.",
+   "D Rut wird nöd als Frömdi ufgnoo, wo frömd bliibt, sondern si bindet sich a s Volk und de Gott vo Israel ([[RUT.1.16]]). Drum cha me s Buech au so läse, dass es d Bedingige vo de Ufnahm zeigt, nöd dass es Gränze grundsätzlich bestriitet.",
    "Di rabbinisch Uslegig bezieht s Verbot uf moabitischi Manne, nöd uf Fraue (Mischna, Jevamot 8,3); so verstande, widerspricht d Rut em Gsetz nöd."],
   ["Moabiteri", "Frömdi, Usländeri"]),
  ("INT-RUT-0003", CHAPTER[2], ["FIND-RUT-0004", "FIND-RUT-0006", "FIND-RUT-0011"],

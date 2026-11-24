@@ -185,11 +185,11 @@ INTERPRETATIONS = [
   ["Ältere Literarkritik erklärte den Wechsel mit verschiedenen Quellen oder Bearbeitungen.",
    "Andere halten den Wechsel weitgehend für stilistische Abwechslung ohne festes Prinzip."],
   [("heb", "יהוה", "JHWH, der Name des Gottes Israels", "JHWH"), ("heb", "אֱלֹהִים", "Gott; Götter", "elohim")],
-  "De Wächsel vo de Gottesnäme isch erzählerisch gstüüret: Wo Nöd-Israelite ohni Kenntnis vom JHWH handled, staat eher Elohim («Gott»), wo s um Gott vo Israel und sin Bund gaat, staat JHWH. D Seelüüt chömed vom «Gott» zum Name JHWH ([[JON.1.5]]; [[JON.1.16]]); d Niniviter glaubed «Gott» ([[JON.3.5]]).",
+  "De Wächsel vo de Gottesnäme isch erzählerisch gstüüret: Wo Nöd-Israelite ohni Kenntnis vom JHWH handled, staat eher Elohim («Gott»), wo s um de Gott vo Israel und sin Bund gaat, staat JHWH. D Seelüüt chömed vom «Gott» zum Name JHWH ([[JON.1.5]]; [[JON.1.16]]); d Niniviter glaubed «Gott» ([[JON.3.5]]).",
   "D Verteilig isch nöd sträng: Au de Jona bättet im Psalm zum «JHWH, mim Gott» ([[JON.2.6]]), und i [[JON.4.7-JON.4.9]] handlet Elohim am Jona.",
   ["Elteri Literarkritik hät de Wächsel mit verschidene Quälle oder Bearbeitige erklärt.",
    "Anderi halted de Wächsel wiitgehend für stilistischi Abwächslig ohni feschts Prinzip."],
-  ["JHWH, de Name vo Gott vo Israel", "Gott; Götter"]),
+  ["JHWH, de Name vom Gott vo Israel", "Gott; Götter"]),
 ]
 
 # (id, abgeleitet aus, Aussage, Konfidenz | Mundart)
