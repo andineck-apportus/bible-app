@@ -10,16 +10,36 @@
   "target": "TU-MAT-005-017-020",
   "file": "data/illustrations/aquarell/ILL-AQU-MAT-005-017-020.svg",
   "depicts": [],
-  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen. 2 Jesus sagt: Kein einziges Jota und kein Häkchen vergeht vom Gesetz, bis alles geschieht. Wer eines der kleinsten Gebote auflöst und so lehrt, wird im Reich der Himmel der Kleinste genannt; wer sie tut und lehrt, wird gross genannt. 3 Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr gewiss nicht in das Reich der Himmel hineinkommen.",
+  "alt_de": "3 Bildfelder (0 gemalt, 3 gezeichnet): 1 Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen. 2 Jesus sagt: Kein einziges Jota und kein Häkchen vergeht vom Gesetz, bis alles geschieht. Wer eines der kleinsten Gebote auflöst und so lehrt, wird im Reich der Himmel der Kleinste genannt; wer sie tut und lehrt, wird gross genannt. 3 Jesus sagt: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht, werdet ihr gewiss nicht in das Reich der Himmel hineinkommen.",
   "note_de": "Bild einer Rede als Strukturbild des Beweisgangs: Grundsatz «nicht aufheben, sondern erfüllen» ([[MAT.5.17]]), Begründung und Folgerung mit beiden Zweigen der kleinsten Gebote ([[MAT.5.18-MAT.5.19]]), Zuspitzung mit nur einem Zweig, wie im Text ([[MAT.5.20]]). Die Pharisäer stehen als Massstab, nicht als Gegner. Die Schriftrolle steht für «das Gesetz oder die Propheten».",
   "scenes": [
     {
-      "scene": "S-MAT-005-017-020",
+      "scene": "S-MAT-005-017-020-1",
       "image": null,
       "model": null,
       "run": null,
       "variant": null,
-      "reference": "MAT.5.17-MAT.5.20",
+      "reference": "MAT.5.17",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-017-020-2",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.18-MAT.5.19",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-017-020-3",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.20",
       "form": "struktur",
       "speech": []
     }
@@ -30,12 +50,16 @@
         "s": "B",
         "ref": "MAT.5.17",
         "de": "Jesus sagt: Meint nicht, dass ich gekommen sei, das Gesetz oder die Propheten aufzuheben; ich bin nicht gekommen, um aufzuheben, sondern um zu erfüllen."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.18-MAT.5.19",
         "de": "Jesus sagt: Kein einziges Jota und kein Häkchen vergeht vom Gesetz, bis alles geschieht. Wer eines der kleinsten Gebote auflöst und so lehrt, wird im Reich der Himmel der Kleinste genannt; wer sie tut und lehrt, wird gross genannt."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.20",
@@ -50,17 +74,17 @@
     "supersedes": null
   },
   "check": {
-    "stufe": "ki-geprueft",
+    "stufe": "entwurf",
     "process": "PROC-BILD-AQUARELL@2.5",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
-        "scene": "S-MAT-005-017-020",
+        "scene": "S-MAT-005-017-020-1",
         "ergebnis": "bestanden",
         "punkte": 4,
         "kern": null,
-        "bild_sha": "14ba91c58137f576",
-        "plan_sha": "6fdc9ce955e8f3e1",
+        "bild_sha": "c6e4ceb83f8a6559",
+        "plan_sha": "b762c8679d8c1972",
         "regeln_version": "2026-10-28d",
         "datum": null,
         "modell": "Werkzeug (struktur_kachel.py)",
@@ -90,12 +114,96 @@
         "schluss": {
           "ergebnis": "bestanden",
           "kern": null,
-          "bild_sha": "14ba91c58137f576",
+          "bild_sha": "c6e4ceb83f8a6559",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-017-020-2",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "01fbc1777ad5f6b1",
+        "plan_sha": "e020349c14e8b55a",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "01fbc1777ad5f6b1",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-017-020-3",
+        "ergebnis": "durchgefallen",
+        "punkte": 3,
+        "kern": null,
+        "bild_sha": "53d0275bad5c120a",
+        "plan_sha": "d57b5bfbb55b337d",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Beschriftungen passen in ihre Felder (höchstens 70 Zeichen) (fehler: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht; Wänn öii Grächtigkeit nöd wiit über die vo de Schriftglehrte und Pharisäer usegaat)"
+        ],
+        "schluss": {
+          "ergebnis": "durchgefallen",
+          "kern": null,
+          "bild_sha": "53d0275bad5c120a",
           "offen_de": []
         }
       }
     ],
-    "open_de": [],
+    "open_de": [
+      "S-MAT-005-017-020-3: Beschriftungen passen in ihre Felder (höchstens 70 Zeichen) (fehler: Wenn eure Gerechtigkeit nicht weit über die der Schriftgelehrten und Pharisäer hinausgeht; Wänn öii Grächtigkeit nöd wiit über die vo de Schriftglehrte und Pharisäer usegaat)"
+    ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
   }
 }

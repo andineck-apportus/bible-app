@@ -159,6 +159,19 @@ Szenen werden gemalt; was gemessen, gezählt oder verortet ist, kommt aus Daten 
 - **2026-10-28:** Automatische Prüfung mit Regeln auf drei Ebenen, Prüfstufen und automatisch gesetzten Blasen (Abschnitt 8); Pilot Strukturen (Abschnitt 9); weitere Beispiele Mk 4,35–41 und Lk 15,11–32 (Wunsch Andi Neck: Regelwerk an mehr Beispielen testen).
 - **2026-10-28:** Bildlexikon im Aquarellstil: Einzelporträts je Lexikon-Eintrag mit automatischer Prüfung, als Vorlage für die Szenen (Abschnitt 4, PROC-BILD-AQUARELL 2.4).
 
+## Abschnittsbilder Feld für Feld (2026-11-24)
+
+Rückmeldung Andi Neck 2026-11-24: «vorher war es bedeutend voller hier mit Strukturen, die sich einprägen lassen»; auf Versebene
+waren drei Bilder zusammen zu klein. Regeln (scripts/authoring/strukturgeruest.py, zuerst Matthäus 5, Liste FELDWEISE):
+
+1. Je Feld des Bildauftrags eine eigene Kachel. Die App stellt auf Versebene jede Kachel gross neben die Verse ihres Felds (bis
+   640 px breit), auf Abschnittsebene stehen die Kacheln untereinander.
+2. Hat das Feld ein Diagramm, zeigt die Kachel dessen Gestalt mit dem Wortlaut des Diagramms: Raster (z. B. die acht
+   Seligpreisungen, je Gruppe und Verheissung), Pfeilkette mit Verbindungswort («denn», «nämlich»), Gegenüberstellung
+   («Ihr habt gehört …» | «Ich aber sage euch …»), Stufen, Ebenen, Weiche. Die Zeichen des Diagramms erscheinen als Bilder aus
+   dem Bildlexikon (nur gemalte Einträge).
+3. Ohne Diagramm ist die Kachel eine Karte mit grossen Bildern und dem Kartentext (kartentexte.py).
+
 ## Karten der Strukturbilder (2026-11-24)
 
 Entscheid Andi Neck («einzelne Bilder mit nur Text, vieles schaut nach Platzhalter aus»): Allgemeine Regeln für jede Karte eines

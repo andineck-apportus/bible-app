@@ -674,6 +674,10 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 /* Erklärung je Feld genau so breit wie ihr Bild (Hinweis Andi Neck 2026-10-28) */
 #bible-stream .tile-box:has(>svg.ill-tile[data-scene])>.tile-cap{max-width:480px}
 #bible-stream .verse-ill .tile-box:has(>svg.ill-tile[data-scene]){max-width:480px;margin:0 auto}
+/* Versebene: jede Kachel des Abschnittsbilds gross bei ihren Versen (Rückmeldung Andi Neck 2026-11-24: drei Bilder zusammen zu klein) */
+#bible-stream .verse-ill .ill-tiles:has(>.tile-box>svg.ill-tile[data-scene]){grid-template-columns:1fr;max-width:none}
+#bible-stream .verse-ill .tile-box:has(>svg.ill-tile[data-scene]){width:100%;max-width:640px}
+#bible-stream .verse-ill .tile-box>svg.ill-tile[data-scene]{max-width:none}
 #bible-stream .tile-cap{box-sizing:border-box}
 @media (min-width:601px){#bible-stream .ill-tiles:has(>svg.ill-tile[data-scene]),#bible-stream .ill-tiles:has(>.tile-box>svg.ill-tile[data-scene]){grid-template-columns:1fr;gap:10px;max-width:480px}}
 @media (min-width:760px){

@@ -10,16 +10,26 @@
   "target": "TU-MAT-005-038-042",
   "file": "data/illustrations/aquarell/ILL-AQU-MAT-005-038-042.svg",
   "depicts": [],
-  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Jesus stellt dem Gehörten «Auge um Auge und Zahn um Zahn» entgegen: Ich aber sage euch: Ihr sollt dem Bösen nicht widerstehen. 2 Wer dich auf die rechte Wange schlägt, dem halte auch die andere hin; wer dein Hemd nehmen will, dem lass auch den Mantel; wer dich zwingt, eine Meile mitzugehen, mit dem geh zwei; gib dem, der dich bittet, und wende dich nicht ab von dem, der borgen will.",
+  "alt_de": "2 Bildfelder (0 gemalt, 2 gezeichnet): 1 Jesus stellt dem Gehörten «Auge um Auge und Zahn um Zahn» entgegen: Ich aber sage euch: Ihr sollt dem Bösen nicht widerstehen. 2 Wer dich auf die rechte Wange schlägt, dem halte auch die andere hin; wer dein Hemd nehmen will, dem lass auch den Mantel; wer dich zwingt, eine Meile mitzugehen, mit dem geh zwei; gib dem, der dich bittet, und wende dich nicht ab von dem, der borgen will.",
   "note_de": "Bild einer Rede als Strukturbild: Gegenüberstellung «Auge um Auge» – «dem Bösen nicht widerstehen» ([[MAT.5.38-MAT.5.39]]) und die Reihe der vier Beispiele ([[MAT.5.39-MAT.5.42]]); das vierte Glied ist abgesetzt, weil es nicht mit «Wer dich …» beginnt. Die Zeichen in den Zellen sind Merkhilfen; der Schlag wird nicht gezeigt.",
   "scenes": [
     {
-      "scene": "S-MAT-005-038-042",
+      "scene": "S-MAT-005-038-042-1",
       "image": null,
       "model": null,
       "run": null,
       "variant": null,
-      "reference": "MAT.5.38-MAT.5.42",
+      "reference": "MAT.5.38-MAT.5.39",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-038-042-2",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.39-MAT.5.42",
       "form": "struktur",
       "speech": []
     }
@@ -30,7 +40,9 @@
         "s": "B",
         "ref": "MAT.5.38-MAT.5.39",
         "de": "Jesus stellt dem Gehörten «Auge um Auge und Zahn um Zahn» entgegen: Ich aber sage euch: Ihr sollt dem Bösen nicht widerstehen."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.39-MAT.5.42",
@@ -50,12 +62,12 @@
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
-        "scene": "S-MAT-005-038-042",
+        "scene": "S-MAT-005-038-042-1",
         "ergebnis": "bestanden",
         "punkte": 4,
         "kern": null,
-        "bild_sha": "dd4879bcde88253f",
-        "plan_sha": "8db4f3ec12a6af36",
+        "bild_sha": "5ab93ce0945d290f",
+        "plan_sha": "62ceba83a3f98d30",
         "regeln_version": "2026-10-28d",
         "datum": null,
         "modell": "Werkzeug (struktur_kachel.py)",
@@ -85,7 +97,47 @@
         "schluss": {
           "ergebnis": "bestanden",
           "kern": null,
-          "bild_sha": "dd4879bcde88253f",
+          "bild_sha": "5ab93ce0945d290f",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-038-042-2",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "d043762eea205332",
+        "plan_sha": "e8ba9bda51094fa0",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "d043762eea205332",
           "offen_de": []
         }
       }

@@ -10,16 +10,36 @@
   "target": "TU-MAT-005-043-048",
   "file": "data/illustrations/aquarell/ILL-AQU-MAT-005-043-048.svg",
   "depicts": [],
-  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Jesus stellt dem Gehörten «Du sollst deinen Nächsten lieben und deinen Feind hassen» entgegen: Liebt eure Feinde und betet für die, die euch verfolgen. 2 So sollen die Jünger Söhne ihres Vaters in den Himmeln werden; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte. Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes: Das tun auch die Zöllner und die Heiden. 3 Jesus sagt: Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist.",
+  "alt_de": "3 Bildfelder (0 gemalt, 3 gezeichnet): 1 Jesus stellt dem Gehörten «Du sollst deinen Nächsten lieben und deinen Feind hassen» entgegen: Liebt eure Feinde und betet für die, die euch verfolgen. 2 So sollen die Jünger Söhne ihres Vaters in den Himmeln werden; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte. Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes: Das tun auch die Zöllner und die Heiden. 3 Jesus sagt: Ihr sollt also vollkommen sein, wie euer himmlischer Vater vollkommen ist.",
   "note_de": "Bild einer Rede: Feld 1 zeigt die Gegenüberstellung als Spalten ([[MAT.5.43-MAT.5.44]]); «deinen Feind hassen» steht so nicht im Alten Testament ([[LEV.19.18]] nennt nur die Nächstenliebe). Feld 2 zeigt Zweck und Begründung aus dem Handeln des Vaters, darunter die Gegenprobe mit Zöllnern und Heiden ([[MAT.5.45-MAT.5.47]]). Feld 3 ist der Schlusssatz ([[MAT.5.48]]); dass er alle sechs Gegensätze abschliesst, ist Deutung. Gott erscheint als Strahlenkranz.",
   "scenes": [
     {
-      "scene": "S-MAT-005-043-048",
+      "scene": "S-MAT-005-043-048-1",
       "image": null,
       "model": null,
       "run": null,
       "variant": null,
-      "reference": "MAT.5.43-MAT.5.48",
+      "reference": "MAT.5.43-MAT.5.44",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-043-048-2",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.45-MAT.5.47",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-043-048-3",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.48",
       "form": "struktur",
       "speech": []
     }
@@ -30,12 +50,16 @@
         "s": "B",
         "ref": "MAT.5.43-MAT.5.44",
         "de": "Jesus stellt dem Gehörten «Du sollst deinen Nächsten lieben und deinen Feind hassen» entgegen: Liebt eure Feinde und betet für die, die euch verfolgen."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.45-MAT.5.47",
         "de": "So sollen die Jünger Söhne ihres Vaters in den Himmeln werden; denn er lässt seine Sonne aufgehen über Böse und Gute und lässt regnen über Gerechte und Ungerechte. Wer nur die liebt, die ihn lieben, und nur seine Brüder grüsst, tut nichts Besonderes: Das tun auch die Zöllner und die Heiden."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.48",
@@ -55,12 +79,12 @@
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
-        "scene": "S-MAT-005-043-048",
+        "scene": "S-MAT-005-043-048-1",
         "ergebnis": "bestanden",
         "punkte": 4,
         "kern": null,
-        "bild_sha": "58b519f9eeec4ca4",
-        "plan_sha": "aa5c43be5133ad21",
+        "bild_sha": "3ca2fa9cfc1c4c0f",
+        "plan_sha": "33cfe1c03d355f81",
         "regeln_version": "2026-10-28d",
         "datum": null,
         "modell": "Werkzeug (struktur_kachel.py)",
@@ -90,7 +114,87 @@
         "schluss": {
           "ergebnis": "bestanden",
           "kern": null,
-          "bild_sha": "58b519f9eeec4ca4",
+          "bild_sha": "3ca2fa9cfc1c4c0f",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-043-048-2",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "cf1ec2f8627cf726",
+        "plan_sha": "60c789649be9475d",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "cf1ec2f8627cf726",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-043-048-3",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "5e201624d1c6e449",
+        "plan_sha": "6cfcc3c7d6eae77c",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "5e201624d1c6e449",
           "offen_de": []
         }
       }

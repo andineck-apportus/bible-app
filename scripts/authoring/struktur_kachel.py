@@ -91,6 +91,12 @@ class Glied:
         self.fs = fs
         _, z = zeilen(e, self.iw, fs)
         self.th = z * fs * ZH
+        # Rolle (kleine Überschrift, z. B. «Ihr habt gehört …») und Unterzeile (Folge, z. B. «→ sie werden getröstet»): Diagramme
+        # der Bildaufträge (Rückmeldung Andi Neck 2026-11-24: einprägsame Strukturen wie früher)
+        self.fs2 = max(10.5, fs - 2)
+        self.rh = zeilen(e["rolle"], self.iw, self.fs2)[1] * self.fs2 * ZH + 2 if e.get("rolle") else 0
+        self.uh = zeilen(e["unter"], self.iw, self.fs2)[1] * self.fs2 * ZH + 2 if e.get("unter") else 0
+        self.th += self.rh + self.uh
         self.ref_h = 13 if e.get("ref") else 0
         oben = max(self.bild_h + (4 if self.bild else 0), 0)
         self.h = PAD + oben + self.th + self.ref_h + PAD
@@ -110,9 +116,17 @@ class Glied:
             o.append(vign(self.k, ix, yy, self.iw, self.bild_h))
             yy += self.bild_h + 4
         tx = ix + self.iw / 2 if self.anchor == "middle" else ix
-        s, _ = text(tx, yy, e, self.iw, self.fs, anchor=self.anchor, weight=600 if e.get("betont") else 400,
+        if e.get("rolle"):
+            s, _ = text(tx, yy, e["rolle"], self.iw, self.fs2, anchor=self.anchor, fill=FARBE.get(self.seite, FARBE["a"])[1]
+                        if self.seite in ("a", "b") else FARBE["akzent"], weight=600, italic=True)
+            o.append(s)
+            yy += self.rh
+        s, th = text(tx, yy, e, self.iw, self.fs, anchor=self.anchor, weight=600 if e.get("betont") or e.get("unter") else 400,
                     fill=MUTED if e.get("gestrichen") else INK, strike=e.get("gestrichen"))
         o.append(s)
+        if e.get("unter"):
+            s, _ = text(tx, yy + th + 2, e["unter"], self.iw, self.fs2, anchor=self.anchor, fill=MUTED if e.get("gestrichen") else INK)
+            o.append(s)
         if e.get("ref"):
             o.append(ref_text(x + self.b - PAD, y + h - PAD + 2, e["ref"]))
         return "".join(o)
@@ -215,12 +229,19 @@ def _kette(sx, el, y):
     o = []
     w = BREITE - 2 * RAND
     for i, e in enumerate(el):
-        g = Glied(e, i + 1, w, None, "n")
+        g = Glied(e, i + 1, w, None, e.get("seite") or "n")
         o.append(g.svg(RAND, y))
         y += g.h
         if i < len(el) - 1:
-            o.append(pfeil(BREITE / 2, y + 1, BREITE / 2, y + 12))
-            y += 14
+            wort = (sx.get("verbindungen") or [None] * len(el))[i + 1] if len(sx.get("verbindungen") or []) > i + 1 else None
+            if wort:   # Verbindungswort am Pfeil («denn», «nämlich»)
+                o.append(pfeil(BREITE / 2, y + 1, BREITE / 2, y + 28))
+                s, _ = text(BREITE / 2 + 10, y + 6, wort, 120, FS_KLEIN, anchor="start", fill=FARBE["akzent"], italic=True)
+                o.append(s)
+                y += 30
+            else:
+                o.append(pfeil(BREITE / 2, y + 1, BREITE / 2, y + 12))
+                y += 14
     return "".join(o), y
 
 
@@ -250,6 +271,9 @@ def spaltenzahl(el, mit_bild):
 
 def _raster(sx, el, y):
     mit_bild = any(_V.get(str(k)) for k in range(1, len(el) + 1))
+    if len(el) == 1:   # eine Karte allein (Szene im Abschnitt): Bilder gross (Rückmeldung 2026-11-24: drei Bilder zu klein)
+        g = Glied(el[0], 1, BREITE - 2 * RAND, None, "n", FS + 1, 2 * BILD_H if mit_bild else BILD_H)
+        return g.svg(RAND, y), y + g.h
     sp = spaltenzahl(el, mit_bild)
     return gitter(lambda i, w: Glied(el[i], i + 1, w, str(i + 1), "n", FS if sp < 3 else FS_KLEIN), len(el), y, sp)
 
@@ -630,8 +654,11 @@ def pruefe(sx, stelle_ok=None):
     """Feste Prüfungen der Strukturkachel. Liefert Liste von Regeln wie die Bildprüfung (id, stufe, de, ergebnis, grund)."""
     erg = []
     el = sx.get("elemente") or []
-    lang = [e.get(lg) for e in el + [x for x in (sx.get("mitte"), sx.get("titel")) if x] for lg in ("de", "gsw") if len(e.get(lg) or "") > 40]
-    erg.append({"id": "K-LAENGE", "stufe": "pflicht", "de": "Beschriftungen passen in ihre Felder (höchstens 40 Zeichen)",
+    # Wortlaut aus dem Diagramm eines Bildauftrags (strukturgeruest.py): ganze Satzglieder bis 70 Zeichen, der Kasten wächst mit;
+    # ob es passt, misst struktur_layout.py
+    grenze = 70 if sx.get("quelle") == "diagramm" else 40
+    lang = [e.get(lg) for e in el + [x for x in (sx.get("mitte"), sx.get("titel")) if x] for lg in ("de", "gsw") if len(e.get(lg) or "") > grenze]
+    erg.append({"id": "K-LAENGE", "stufe": "pflicht", "de": f"Beschriftungen passen in ihre Felder (höchstens {grenze} Zeichen)",
                 "ergebnis": "fehler" if lang else "ok", "grund": "; ".join(lang)})
     zu_lang_zeilen = []
     for e in el:

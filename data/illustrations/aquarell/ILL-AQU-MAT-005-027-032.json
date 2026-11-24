@@ -10,16 +10,26 @@
   "target": "TU-MAT-005-027-032",
   "file": "data/illustrations/aquarell/ILL-AQU-MAT-005-027-032.svg",
   "depicts": [],
-  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Jesus stellt zweimal dem Gehörten sein Wort gegenüber: Dem Gebot «Du sollst nicht ehebrechen»: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen. Dem Wort vom Scheidebrief: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird, und wer eine Entlassene heiratet, bricht die Ehe. 2 Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es herausreissen oder abhauen und von sich werfen; denn es ist besser, dass ein Glied verloren geht, als dass der ganze Leib in die Hölle kommt.",
+  "alt_de": "2 Bildfelder (0 gemalt, 2 gezeichnet): 1 Jesus stellt zweimal dem Gehörten sein Wort gegenüber: Dem Gebot «Du sollst nicht ehebrechen»: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen. Dem Wort vom Scheidebrief: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird, und wer eine Entlassene heiratet, bricht die Ehe. 2 Wenn das rechte Auge oder die rechte Hand zu Fall bringt, soll man es herausreissen oder abhauen und von sich werfen; denn es ist besser, dass ein Glied verloren geht, als dass der ganze Leib in die Hölle kommt.",
   "note_de": "Bild einer Rede als Strukturbild: Feld 1 zeigt beide Gegenüberstellungen als Spalten, «Du sollst nicht ehebrechen» ([[MAT.5.27-MAT.5.28]]) und das Wort vom Scheidebrief, das nur mit «Es ist gesagt worden» eingeleitet wird ([[MAT.5.31-MAT.5.32]]). Feld 2 zeigt die beiden Fälle von Auge und Hand mit ihrer Begründung ([[MAT.5.29-MAT.5.30]]) nur in Worten, nicht als Handlung; gewöhnlich werden sie als drastisches Bildwort verstanden (Deutung).",
   "scenes": [
     {
-      "scene": "S-MAT-005-027-032",
+      "scene": "S-MAT-005-027-032-1",
       "image": null,
       "model": null,
       "run": null,
       "variant": null,
       "reference": "MAT.5.27-MAT.5.32",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-027-032-2",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.29-MAT.5.30",
       "form": "struktur",
       "speech": []
     }
@@ -30,7 +40,9 @@
         "s": "B",
         "ref": "MAT.5.27-MAT.5.32",
         "de": "Jesus stellt zweimal dem Gehörten sein Wort gegenüber: Dem Gebot «Du sollst nicht ehebrechen»: Wer eine Frau ansieht, um sie zu begehren, hat in seinem Herzen schon die Ehe gebrochen. Dem Wort vom Scheidebrief: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird, und wer eine Entlassene heiratet, bricht die Ehe."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.29-MAT.5.30",
@@ -45,17 +57,59 @@
     "supersedes": null
   },
   "check": {
-    "stufe": "ki-geprueft",
+    "stufe": "entwurf",
     "process": "PROC-BILD-AQUARELL@2.5",
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
-        "scene": "S-MAT-005-027-032",
+        "scene": "S-MAT-005-027-032-1",
+        "ergebnis": "durchgefallen",
+        "punkte": 3,
+        "kern": null,
+        "bild_sha": "636b9c44864b6881",
+        "plan_sha": "ec8c107e63ff5721",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "fehler"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [
+          "Beschriftungen passen in ihre Felder (höchstens 70 Zeichen) (fehler: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird;; Wär sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ehe broche wird;)"
+        ],
+        "schluss": {
+          "ergebnis": "durchgefallen",
+          "kern": null,
+          "bild_sha": "636b9c44864b6881",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-027-032-2",
         "ergebnis": "bestanden",
         "punkte": 4,
         "kern": null,
-        "bild_sha": "94d54993f6292d06",
-        "plan_sha": "63d5febf0a7af63b",
+        "bild_sha": "9b5c99d619530ac9",
+        "plan_sha": "c77e87007e2d7ece",
         "regeln_version": "2026-10-28d",
         "datum": null,
         "modell": "Werkzeug (struktur_kachel.py)",
@@ -85,12 +139,14 @@
         "schluss": {
           "ergebnis": "bestanden",
           "kern": null,
-          "bild_sha": "94d54993f6292d06",
+          "bild_sha": "9b5c99d619530ac9",
           "offen_de": []
         }
       }
     ],
-    "open_de": [],
+    "open_de": [
+      "S-MAT-005-027-032-1: Beschriftungen passen in ihre Felder (höchstens 70 Zeichen) (fehler: Wer seine Frau entlässt, ausser wegen Unzucht, macht, dass mit ihr die Ehe gebrochen wird;; Wär sini Frau entlaat, ussert wäge Unzucht, macht, dass mit ire d Ehe broche wird;)"
+    ],
     "limits_de": "Stand Entwurf: kein Test mit Leserinnen und Lesern, keine fachliche und keine muttersprachliche Prüfung (Züritüütsch). Stufe «ki-geprueft» heisst: alle Pflichtregeln erfüllt, keine fachliche Freigabe."
   }
 }

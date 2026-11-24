@@ -10,16 +10,36 @@
   "target": "TU-MAT-005-013-016",
   "file": "data/illustrations/aquarell/ILL-AQU-MAT-005-013-016.svg",
   "depicts": [],
-  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Jesus sagt den Jüngern: Ihr seid das Salz der Erde. Wenn aber das Salz fad wird, taugt es zu nichts mehr, ausser hinausgeworfen und von den Menschen zertreten zu werden. 2 Jesus sagt den Jüngern: Ihr seid das Licht der Welt. Eine Stadt auf einem Berg kann nicht verborgen bleiben; eine Lampe stellt man nicht unter den Scheffel, sondern auf den Leuchter, und sie leuchtet allen im Haus. 3 So soll das Licht der Jünger vor den Menschen leuchten, damit diese ihre guten Werke sehen und ihren Vater in den Himmeln preisen.",
+  "alt_de": "3 Bildfelder (0 gemalt, 3 gezeichnet): 1 Jesus sagt den Jüngern: Ihr seid das Salz der Erde. Wenn aber das Salz fad wird, taugt es zu nichts mehr, ausser hinausgeworfen und von den Menschen zertreten zu werden. 2 Jesus sagt den Jüngern: Ihr seid das Licht der Welt. Eine Stadt auf einem Berg kann nicht verborgen bleiben; eine Lampe stellt man nicht unter den Scheffel, sondern auf den Leuchter, und sie leuchtet allen im Haus. 3 So soll das Licht der Jünger vor den Menschen leuchten, damit diese ihre guten Werke sehen und ihren Vater in den Himmeln preisen.",
   "note_de": "Bild einer Rede als Strukturbild: zwei gleich gebaute Bildworte nebeneinander, «Ihr seid das Salz der Erde» ([[MAT.5.13]]) mit der Warnung vor fadem Salz und «Ihr seid das Licht der Welt» ([[MAT.5.14-MAT.5.15]]) mit Stadt und Lampe; darunter als Pfeilkette der Zweck: Licht → gute Werke sehen → den Vater preisen ([[MAT.5.16]]).",
   "scenes": [
     {
-      "scene": "S-MAT-005-013-016",
+      "scene": "S-MAT-005-013-016-1",
       "image": null,
       "model": null,
       "run": null,
       "variant": null,
-      "reference": "MAT.5.13-MAT.5.16",
+      "reference": "MAT.5.13",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-013-016-2",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.14-MAT.5.15",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-013-016-3",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.16",
       "form": "struktur",
       "speech": []
     }
@@ -30,12 +50,16 @@
         "s": "B",
         "ref": "MAT.5.13",
         "de": "Jesus sagt den Jüngern: Ihr seid das Salz der Erde. Wenn aber das Salz fad wird, taugt es zu nichts mehr, ausser hinausgeworfen und von den Menschen zertreten zu werden."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.14-MAT.5.15",
         "de": "Jesus sagt den Jüngern: Ihr seid das Licht der Welt. Eine Stadt auf einem Berg kann nicht verborgen bleiben; eine Lampe stellt man nicht unter den Scheffel, sondern auf den Leuchter, und sie leuchtet allen im Haus."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.16",
@@ -55,12 +79,12 @@
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
-        "scene": "S-MAT-005-013-016",
+        "scene": "S-MAT-005-013-016-1",
         "ergebnis": "bestanden",
         "punkte": 4,
         "kern": null,
-        "bild_sha": "d9d0a0717b0a7f9f",
-        "plan_sha": "a068765e687bfabe",
+        "bild_sha": "8718ff30babcc9ff",
+        "plan_sha": "7d43d65cc03e6252",
         "regeln_version": "2026-10-28d",
         "datum": null,
         "modell": "Werkzeug (struktur_kachel.py)",
@@ -90,7 +114,87 @@
         "schluss": {
           "ergebnis": "bestanden",
           "kern": null,
-          "bild_sha": "d9d0a0717b0a7f9f",
+          "bild_sha": "8718ff30babcc9ff",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-013-016-2",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "5fc86ea14f635814",
+        "plan_sha": "077b4c3592bbf733",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "5fc86ea14f635814",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-013-016-3",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "4acbefd7b5a7cbd7",
+        "plan_sha": "98ea678b1bcab4ad",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "4acbefd7b5a7cbd7",
           "offen_de": []
         }
       }

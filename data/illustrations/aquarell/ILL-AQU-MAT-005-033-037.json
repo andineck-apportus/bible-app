@@ -10,16 +10,36 @@
   "target": "TU-MAT-005-033-037",
   "file": "data/illustrations/aquarell/ILL-AQU-MAT-005-033-037.svg",
   "depicts": [],
-  "alt_de": "1 Bildfelder (0 gemalt, 1 gezeichnet): 1 Jesus stellt dem Gehörten «Du sollst keinen Meineid schwören; du sollst aber dem Herrn deine Eide halten» entgegen: Ich aber sage euch: Ihr sollt überhaupt nicht schwören. 2 Weder beim Himmel, denn er ist der Thron Gottes, noch bei der Erde, dem Schemel seiner Füsse, noch bei Jerusalem, der Stadt des grossen Königs; auch nicht beim eigenen Kopf, denn man kann kein einziges Haar weiss oder schwarz machen. 3 Euer Ja sei ein Ja, euer Nein ein Nein; was darüber hinausgeht, ist vom Bösen.",
+  "alt_de": "3 Bildfelder (0 gemalt, 3 gezeichnet): 1 Jesus stellt dem Gehörten «Du sollst keinen Meineid schwören; du sollst aber dem Herrn deine Eide halten» entgegen: Ich aber sage euch: Ihr sollt überhaupt nicht schwören. 2 Weder beim Himmel, denn er ist der Thron Gottes, noch bei der Erde, dem Schemel seiner Füsse, noch bei Jerusalem, der Stadt des grossen Königs; auch nicht beim eigenen Kopf, denn man kann kein einziges Haar weiss oder schwarz machen. 3 Euer Ja sei ein Ja, euer Nein ein Nein; was darüber hinausgeht, ist vom Bösen.",
   "note_de": "Bild einer Rede als Strukturbild: Gegenüberstellung «Ihr habt gehört … Ich aber sage euch …» ([[MAT.5.33-MAT.5.34]]), die vier Schwurformeln je mit Begründung ([[MAT.5.34-MAT.5.36]]), die vierte abgesetzt, weil sie mit «du» spricht und vom Menschen her begründet, und die Weisung «Euer Ja sei ein Ja, euer Nein ein Nein» ([[MAT.5.37]]). Dass das Gebot aus [[LEV.19.12]] stammt, sagt der Text nicht ausdrücklich.",
   "scenes": [
     {
-      "scene": "S-MAT-005-033-037",
+      "scene": "S-MAT-005-033-037-1",
       "image": null,
       "model": null,
       "run": null,
       "variant": null,
-      "reference": "MAT.5.33-MAT.5.37",
+      "reference": "MAT.5.33-MAT.5.34",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-033-037-2",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.34-MAT.5.36",
+      "form": "struktur",
+      "speech": []
+    },
+    {
+      "scene": "S-MAT-005-033-037-3",
+      "image": null,
+      "model": null,
+      "run": null,
+      "variant": null,
+      "reference": "MAT.5.37",
       "form": "struktur",
       "speech": []
     }
@@ -30,12 +50,16 @@
         "s": "B",
         "ref": "MAT.5.33-MAT.5.34",
         "de": "Jesus stellt dem Gehörten «Du sollst keinen Meineid schwören; du sollst aber dem Herrn deine Eide halten» entgegen: Ich aber sage euch: Ihr sollt überhaupt nicht schwören."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.34-MAT.5.36",
         "de": "Weder beim Himmel, denn er ist der Thron Gottes, noch bei der Erde, dem Schemel seiner Füsse, noch bei Jerusalem, der Stadt des grossen Königs; auch nicht beim eigenen Kopf, denn man kann kein einziges Haar weiss oder schwarz machen."
-      },
+      }
+    ],
+    [
       {
         "s": "B",
         "ref": "MAT.5.37",
@@ -55,12 +79,12 @@
     "method_de": "Prüfung nach dem Prozess in «process» (docs/PROZESSE.md): je Feld Blindbeschreibung, Prüfregeln auf drei Ebenen (allgemein, Figur, Feld) und Vergleich mit dem Moment durch weitere Instanzen; danach Schlussprüfung der fertigen Kachel.",
     "felder": [
       {
-        "scene": "S-MAT-005-033-037",
+        "scene": "S-MAT-005-033-037-1",
         "ergebnis": "bestanden",
         "punkte": 4,
         "kern": null,
-        "bild_sha": "57099588781dcc1f",
-        "plan_sha": "00c3325b0ce0f398",
+        "bild_sha": "5a1f2b568f672042",
+        "plan_sha": "4bffef15ceef000e",
         "regeln_version": "2026-10-28d",
         "datum": null,
         "modell": "Werkzeug (struktur_kachel.py)",
@@ -90,7 +114,87 @@
         "schluss": {
           "ergebnis": "bestanden",
           "kern": null,
-          "bild_sha": "57099588781dcc1f",
+          "bild_sha": "5a1f2b568f672042",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-033-037-2",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "b3199cb7bad9d793",
+        "plan_sha": "a27d63e2b461f421",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "b3199cb7bad9d793",
+          "offen_de": []
+        }
+      },
+      {
+        "scene": "S-MAT-005-033-037-3",
+        "ergebnis": "bestanden",
+        "punkte": 4,
+        "kern": null,
+        "bild_sha": "34b38608d9e479d6",
+        "plan_sha": "744955d2f9d5a086",
+        "regeln_version": "2026-10-28d",
+        "datum": null,
+        "modell": "Werkzeug (struktur_kachel.py)",
+        "regeln": [
+          {
+            "id": "K-LAENGE",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-WORT",
+            "stufe": "soll",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-STELLEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          },
+          {
+            "id": "K-SPRACHEN",
+            "stufe": "pflicht",
+            "ergebnis": "ok"
+          }
+        ],
+        "offen_de": [],
+        "schluss": {
+          "ergebnis": "bestanden",
+          "kern": null,
+          "bild_sha": "34b38608d9e479d6",
           "offen_de": []
         }
       }

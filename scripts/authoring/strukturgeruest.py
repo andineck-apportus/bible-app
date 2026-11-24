@@ -78,6 +78,105 @@ def depicts(pa):
     return [f for f in dict.fromkeys(kandidaten(pa)) if V.bild(f)][:MAX_BILDER]
 
 
+# Einprägsame Strukturen (Rückmeldung Andi Neck 2026-11-24: «vorher war es bedeutend voller hier mit Strukturen, die sich einprägen
+# lassen»; auf Versebene waren drei Bilder zusammen zu klein): je Feld des Bildauftrags eine eigene Kachel. Hat das Feld ein
+# Diagramm (Raster, Pfeilkette, Gegenüberstellung, Stufen, Ebenen …), wird es in der passenden Strukturform gezeichnet, mit dem
+# Wortlaut des Diagramms und den Zeichen als Bilder aus dem Bildlexikon; sonst eine Karte mit grossen Bildern (kartentexte.py).
+# Die App stellt auf Versebene jede Kachel neben die Verse ihres Felds. Zuerst für die Bücher und Kapitel in FELDWEISE.
+FELDWEISE = ("BRIEF-MAT-005",)
+
+
+def feldweise(b):
+    return b["level"] == "section" and b["id"].startswith(FELDWEISE)
+
+
+def _bilder(icons):
+    return [f for f in dict.fromkeys(icons or []) if f == "FIG-GOTT" or (V.bild(f) and not P.nur_namensschild(f))][:MAX_BILDER]
+
+
+def _glied(c, seite=None):
+    """Zelle eines Diagramms → Glied der Strukturkachel."""
+    a = c.get("a") or {}
+    e = {"de": a.get("de", ""), "gsw": a.get("gsw") or a.get("de", "")}
+    if c.get("b"):
+        e["unter"] = {"de": c["b"].get("de", ""), "gsw": c["b"].get("gsw") or c["b"].get("de", "")}
+    if c.get("role"):
+        e["rolle"] = {"de": c["role"].get("de", ""), "gsw": c["role"].get("gsw") or c["role"].get("de", "")}
+    if c.get("tone") == "new":
+        e["betont"] = True
+    if c.get("strike"):
+        e["gestrichen"] = True
+    if seite:
+        e["seite"] = seite
+    d = _bilder(([c["who"]] if isinstance(c.get("who"), str) else []) + list(c.get("icons") or []))
+    if d:
+        e["depicts"] = d
+    return e
+
+
+def _text(x):
+    return {"de": x.get("de", ""), "gsw": x.get("gsw") or x.get("de", "")} if isinstance(x, dict) and x.get("de") else None
+
+
+def diagramm_struktur(d):
+    """Diagramm eines Bildauftrags (diagram.visual) → Strukturkachel (struktur_kachel.py). Allgemein für alle Formen."""
+    v = d.get("visual")
+    sx = {"quelle": "diagramm"}
+    if _text(d.get("title")):
+        sx["titel"] = _text(d["title"])
+    zellen = [c for c in d.get("cells") or [] if isinstance(c, dict) and c.get("a") and not c.get("empty")]
+    if v in ("columns", "balance") or (v == "mirror" and d.get("rows")):
+        kopf = d.get("head") or []
+        if len(kopf) >= 2 and _text(kopf[0]) and _text(kopf[1]):
+            sx["kopf"] = {"a": _text(kopf[0]), "b": _text(kopf[1])}
+        el = []
+        for r in d.get("rows") or []:
+            for c, sd in zip(r, ("a", "b")):
+                if isinstance(c, dict) and c.get("a"):
+                    el.append(_glied(c, sd))
+        if not el and (d.get("left") or d.get("right")):
+            el = [_glied(c, "a") for c in d.get("left") or [] if c.get("a")] + [_glied(c, "b") for c in d.get("right") or [] if c.get("a")]
+        if not el:   # Spalten ohne Zeilen: Zellen abwechselnd
+            el = [_glied(c, "ab"[i % 2]) for i, c in enumerate(zellen)]
+        return {**sx, "typ": "spalten", "elemente": el} if el else None
+    if v == "switch":
+        el = [_glied(d[k], sd) for k, sd in (("yes", "a"), ("no", "b")) if isinstance(d.get(k), dict) and d[k].get("a")]
+        if _text((d.get("cond") or {}).get("a")):
+            sx["mitte"] = _text(d["cond"]["a"])
+        if _text(d.get("yes_label")) and _text(d.get("no_label")):
+            sx["kopf"] = {"a": _text(d["yes_label"]), "b": _text(d["no_label"])}
+        return {**sx, "typ": "spalten", "elemente": el} if el else None
+    if v == "levels":
+        el = [_glied(c, "a") for c in d.get("top") or [] if c.get("a")] + [_glied(c, "b") for c in d.get("bottom") or [] if c.get("a")]
+        kopf = {k: _text(d.get(l)) for k, l in (("a", "top_label"), ("b", "bottom_label")) if _text(d.get(l))}
+        if kopf:
+            sx["kopf"] = kopf
+        return {**sx, "typ": "ebenen", "elemente": el} if el else None
+    if v in ("arrows", "stairs", "dialogue", "timeline"):
+        quelle = zellen or [t for t in d.get("turns") or [] if isinstance(t, dict) and t.get("a")]
+        el = []
+        for c in quelle:
+            sd = "a" if c.get("tone") == "old" else ("b" if v == "stairs" and el and c.get("role") else None)
+            el.append(_glied(c, sd))
+        if v == "stairs":   # nach «Ich aber sage euch» gehören die Stufen zur neuen Seite
+            neu = False
+            for e in el:
+                neu = neu or e.get("seite") == "b"
+                if neu and not e.get("seite"):
+                    e["seite"] = "b"
+        links = [(_text(x) if x else None) for x in d.get("links") or []]
+        if any(links):
+            sx["verbindungen"] = [None] + links
+        return {**sx, "typ": "kette", "elemente": el} if el else None
+    # Raster und alle übrigen Formen: die Zellen nebeneinander
+    if not zellen:
+        for k in ("top", "bottom", "left", "right", "ring", "core", "there", "back", "up"):
+            x = d.get(k)
+            zellen += [c for c in (x if isinstance(x, list) else [x]) if isinstance(c, dict) and c.get("a")]
+    el = [_glied(c) for c in zellen]
+    return {**sx, "typ": "raster", "elemente": el} if el else None
+
+
 def plan_code(b):
     return "oben" if b["level"] in ("bible", "testament", "group") else b["id"].split("-")[1].lower()
 
@@ -119,6 +218,26 @@ def schreibe():
         if not any(e.get("depicts") for e in el):   # ohne jedes Bild bringt das Strukturbild nichts; bis das Lexikon die Bilder hat, bleibt das bisherige
             continue
         pl = plaene[plan_code(b)]
+        if feldweise(b):   # je Feld eine Kachel: Diagramm als Strukturform, sonst eine Karte mit grossen Bildern
+            felder = []
+            for i, (pa, e) in enumerate(zip(b["panels"], el), 1):
+                fid = f"{sid}-{i}"
+                sx = diagramm_struktur(pa["diagram"]) if pa.get("diagram") else None
+                if not sx:
+                    sx = {"typ": "raster", "elemente": [e]}
+                pl["szenen"][fid] = {
+                    "brief": b["id"], "panel": i, "reference": pa.get("reference") or b.get("reference") or "", "form": "struktur",
+                    "form_grund_de": "Feld des Bildauftrags als eigene Kachel: Diagramm in der passenden Strukturform, sonst eine Karte "
+                                     "mit grossen Bildern (Rückmeldung Andi Neck 2026-11-24, strukturgeruest.py).",
+                    "depicts": [], "bild_en": "", "speech": [],
+                    "evidence": [{"s": "B", "ref": pa["reference"], "de": pa.get("action_de", "")}] if pa.get("reference") else
+                                [{"s": "I", "de": "Feld aus dem Bildauftrag."}],
+                    "pruefung": [], "struktur": sx, "band": {"de": "", "gsw": ""}}
+                felder.append(fid)
+            pl["bilder"].append({"id": f"ILL-AQU-{rest}", "brief": b["id"], "level": b["level"], "reference": b.get("reference") or "",
+                                 "target": b.get("target"), "felder": felder,
+                                 "note_de": b.get("interpretation_note_de") or "Strukturbild: je Feld des Bildauftrags eine Kachel; Bilder aus dem Bildlexikon."})
+            continue
         pl["szenen"][sid] = {
             "brief": b["id"], "panel": 1, "reference": b.get("reference") or "", "form": "struktur",
             "form_grund_de": "Strukturbild aus dem Bildauftrag: je Feld eine Karte mit Stichwort und Bildern aus dem Bildlexikon "
