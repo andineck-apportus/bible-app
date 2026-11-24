@@ -21,7 +21,7 @@ import json
 import pathlib
 import re
 import sys
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -188,27 +188,37 @@ def erzeugen(nur=None):
     briefs = [b for b in briefs if any(kandidaten(b, i) for i in range(len(b["panels"])))]   # ohne jedes Bild: bleibt beim bisherigen Bild
     print(f"{len(briefs)} Bildaufträge zu bearbeiten")
     pakete = [briefs[i:i + 8] for i in range(0, len(briefs), 8)]
-    with ThreadPoolExecutor(6) as ex:
-        antworten = list(ex.map(lambda pk: frage(AUFTRAG.format(daten=daten_fuer(pk))), pakete))
-    for pk, a in zip(pakete, antworten):
-        for b in pk:
-            akt = gsw_aktionen(b)
-            ks = a.get(b["id"]) or []
-            out = []
-            for i in range(len(b["panels"])):
-                k = ks[i] if i < len(ks) and isinstance(ks[i], dict) else {}
-                kand = kandidaten(b, i)
-                k = {"bilder": [x for x in k.get("bilder", []) if x in kand][:MAX_BILDER], "de": (k.get("de") or "").strip().rstrip("."),
-                     "gsw": (k.get("gsw") or "").strip().rstrip(".")}
-                if not k["bilder"] and kand:
-                    k["bilder"] = kand[:1]
-                k["befunde"] = befunde(k, kand)
-                k["fp"] = fingerabdruck(b, i, akt[i] if i < len(akt) else "")
-                out.append(k)
-            ab[b["id"]] = out
     ABLAGE.parent.mkdir(exist_ok=True)
-    ABLAGE.write_text(json.dumps(dict(sorted(ab.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    with ThreadPoolExecutor(10) as ex:
+        laeufe = {ex.submit(frage, AUFTRAG.format(daten=daten_fuer(pk))): pk for pk in pakete}
+        for n, fu in enumerate(as_completed(laeufe), 1):
+            pk, a = laeufe[fu], fu.result()
+            if not a:
+                print(f"Paket ohne Antwort: {pk[0]['id']} …", flush=True)
+                continue
+            uebernehmen(pk, a, ab)
+            ABLAGE.write_text(json.dumps(dict(sorted(ab.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            print(f"{n}/{len(pakete)} Pakete", flush=True)
     pruefen()
+
+
+def uebernehmen(pk, a, ab):
+    """Antwort eines Pakets prüfen und in die Ablage übernehmen (laufend gespeichert, ein Abbruch verliert nichts)."""
+    for b in pk:
+        akt = gsw_aktionen(b)
+        ks = a.get(b["id"]) or []
+        out = []
+        for i in range(len(b["panels"])):
+            k = ks[i] if i < len(ks) and isinstance(ks[i], dict) else {}
+            kand = kandidaten(b, i)
+            k = {"bilder": [x for x in k.get("bilder", []) if x in kand][:MAX_BILDER], "de": (k.get("de") or "").strip().rstrip("."),
+                 "gsw": (k.get("gsw") or "").strip().rstrip(".")}
+            if not k["bilder"] and kand:
+                k["bilder"] = kand[:1]
+            k["befunde"] = befunde(k, kand)
+            k["fp"] = fingerabdruck(b, i, akt[i] if i < len(akt) else "")
+            out.append(k)
+        ab[b["id"]] = out
 
 
 def pruefen():
