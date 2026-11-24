@@ -344,7 +344,7 @@ DEC_GSW = [
  ("MAT.6.28", "chrampfed", "adapted", "κοπιῶσιν", "müeied sich ab", None, "«Chrampfe» = hert schaffe."),
  ("MAT.6.29", "Pracht", "adapted", "δόξῃ", "Herrlichkeit", None, None),
  ("MAT.6.30", "ir Chliigläubige", "literal", "ὀλιγόπιστοι", None, None, "Es Wort vom Matthäus ([[MAT.8.26]], [[MAT.14.31]], [[MAT.16.8]]); einheitlich «Chliigläubigi»."),
- ("MAT.6.32", "d Heide", "interpretive", "τὰ ἔθνη", "d Völker", ["d Nichtjude"], "Wie [[MAT.6.7]]. Gmeint isch e Läbeswiis ohni Vertroue uf Gott vo Israel, kei Urteil über Mänsche vo andere Herkunft."),
+ ("MAT.6.32", "d Heide", "interpretive", "τὰ ἔθνη", "d Völker", ["d Nichtjude"], "Wie [[MAT.6.7]]. Gmeint isch e Läbeswiis ohni Vertroue uf de Gott vo Israel, kei Urteil über Mänsche vo andere Herkunft."),
  ("MAT.6.33", "s Riich", "literal", "τὴν βασιλείαν", None, ["sis Riich", "s Riich vo Gott"], "Im SBLGNT ohni Zuesatz; «sini» cha sich uf beides bezieh. Lueg d Alternative."),
  ("MAT.6.34", "Jedem Tag längt sini eiget Plag", "adapted", "ἀρκετὸν τῇ ἡμέρᾳ ἡ κακία αὐτῆς", "Gnueg für de Tag isch sis Übel", None, "κακία heisst da Not, Müe; «eiget» isch ergänzt."),
  ("MAT.6.34", "wird für sich sälber sorge", "literal", "μεριμνήσει αὑτῆς", None, None, "Zur Läsart «für s Sine» lueg d Alternative."),

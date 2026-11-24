@@ -591,7 +591,7 @@ _Q = [
     (158, _tu("012-018-027"), 1, "Was heisst es, dass Gott ein Gott von Lebenden ist?",
      "Jesus beruft sich auf das Wort am Dornbusch: «Ich bin der Gott Abrahams und der Gott Isaaks und der Gott Jakobs» ([[MRK.12.26-MRK.12.27]]).",
      "Was heisst s, dass Gott en Gott vo Läbige isch?",
-     "Jesus beruefft sich uf s Wort bim Dornbusch: «Ich bi em Abraham sin Gott und em Isaak sin Gott und em Jakob sin Gott» ([[MRK.12.26-MRK.12.27]])."),
+     "Jesus beruefft sich uf s Wort bim Dornbusch: «Ich bi de Gott vom Abraham und de Gott vom Isaak und de Gott vom Jakob» ([[MRK.12.26-MRK.12.27]])."),
     (159, _tu("012-018-027"), 2, "Wie stellst du dir das Leben nach dem Tod vor – oder lieber gar nicht?",
      None, "Wie stellsch du dir s Läbe nach em Tod vor – oder lieber gar nöd?", None),
     # 12,28–34

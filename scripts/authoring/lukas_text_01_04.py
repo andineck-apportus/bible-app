@@ -370,7 +370,7 @@ GSW = {
  "LUK.1.65": "Und{1} [Angscht]{5} [isch]{2} [über]{3} [alli]{4} [choo]{2}, [wo]{6} [rund um si]{8} [gwohnt händ]{7}, und{9} [im]{10,12} [ganze]{11} [Bergland]{13} [vo]{14} [Judäa]{15} [hät me]{16} [vo]{17} [all]{17} [dene]{18,20} [Sache]{19} [verzellt]{16}.",
  "LUK.1.66": "Und{1} [alli]{3}, [wo]{4} [das ghört händ]{5}, [händ sich s]{2} [z Herze]{6-9} [gnoo]{2} [und gseit]{10}: «[Was]{11} [wird]{16} [ächt]{12} us [däm]{13,15} [Chind]{14} [wärde]{16}?» [Dänn]{17,18} [d Hand]{19} [vom Herr]{20} [isch]{21} [mit]{22} [ihm]{23} [gsii]{21}.",
  "LUK.1.67": "Und{1} [sin]{5} [Vatter]{3,4} [Zacharias]{2} [isch]{6} [mit Heiligem]{8} [Geischt]{7} [erfüllt worde]{6} und{9} [hät prophezeit]{10} [und gseit]{11}:",
- "LUK.1.68": "«[Globt]{1} seig [de Herr]{2}, [Gott]{3,4} [vo Israel]{5,6}, [dänn]{7} [er hät]{8} [sis]{14} [Volk]{12,13} [bsuecht]{8} und{9} ihm [d Erlösig]{11} [bracht]{10},",
+ "LUK.1.68": "«[Globt]{1} seig [de Herr]{2}, [de]{3} [Gott]{4} [vo Israel]{5,6}, [dänn]{7} [er hät]{8} [sis]{14} [Volk]{12,13} [bsuecht]{8} und{9} ihm [d Erlösig]{11} [bracht]{10},",
  "LUK.1.69": "und{1} [er hät]{2} [öis]{5} [es Horn]{3} [vo de Rettig]{4} [ufgrichtet]{2} [im]{6} [Huus]{7} [vo sim]{10} [Chnächt]{9} [David]{8},",
  "LUK.1.70": "[wien]{1} [er]{2} [sit jeher]{7,8} [dur]{3} [de Mund]{4} [vo sine]{10} [heilige]{5,6} [Prophete]{9} [gredt hät]{2}:",
  "LUK.1.71": "[Rettig]{1} [vor]{2} [öise]{4} [Feind]{3} und{5} [us]{6} [de Hand]{7} [vo allne]{8}, [wo]{9} [öis]{11} [hassed]{10};",

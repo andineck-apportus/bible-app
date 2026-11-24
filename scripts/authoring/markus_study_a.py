@@ -214,7 +214,7 @@ INTERPRETATIONS = [
   "D Aaklang sind über Stichwort erschlosse; usdrücklichi Zitat git s kei. De Schlaf im Sturm erinneret au a de Jona ([[JON.1.4-JON.1.6]]), dört aber mit umgchehrter Rolle.",
   ["ἐγώ εἰμι isch im Griechische au di gwöhnlich Sälbervorstellig «ich bi s»; i [[MRK.6.50]] cha s eifach heisse, dass kei Gspänscht chunnt.",
    "«Er hät a ine wele verbiigaa» ([[MRK.6.48]]) cha au heisse, dass er si hät wele überhole oder a ine verbii as Ufer gaa; dänn isch de Bezug uf Gotteserschiinige nöd beabsichtiget.",
-   "Gschichte vo Herrscher oder Wundertäter, wo über s Wasser gönd oder Stürm stilled, hät s au i de griechisch-römische Wält gää; d Läser händ d Szene au eso chöne iiordne, ohni a Gott vo Israel z dänke."],
+   "Gschichte vo Herrscher oder Wundertäter, wo über s Wasser gönd oder Stürm stilled, hät s au i de griechisch-römische Wält gää; d Läser händ d Szene au eso chöne iiordne, ohni a de Gott vo Israel z dänke."],
   ["ich bi s; ich bi", "verbiigaa"]),
  ("INT-MRK-1005", U(5, 1, 20), ["FIND-MRK-1009"],
   "Der Name «Legion» und die Bitte, nicht «aus dem Gebiet» fortgeschickt zu werden ([[MRK.5.10]]), lassen für Leser im Römischen Reich an die römische Besatzung denken: Die zerstörerische Macht, die einen Menschen besetzt hält, trägt den Namen eines Heeresverbandes und endet im See. Markus erzählt keine politische Allegorie, aber er lässt diesen Beiklang zu.",
