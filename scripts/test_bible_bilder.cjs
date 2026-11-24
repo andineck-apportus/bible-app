@@ -57,6 +57,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     // Abschnitt ohne Worte (Knopf oben beim Umschalter): Worte verdeckt, Zellen zeigen Zeichen gross; Antippen deckt stufenweise auf
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(400);
     assert(await p.$('.ill.nowords'),'Abschnittsbild ohne Worte');
+    if(await p.$('.ill.nowords g.dg-cell')){
     const nw=await p.evaluate(()=>{const c=document.querySelector('.ill.nowords g.dg-cell');return {full:getComputedStyle(c.querySelector('.dg-full')).display,nw:getComputedStyle(c.querySelector('.dg-nw')).display};});
     assert.equal(nw.full,'none','ganze Worte verdeckt');assert(!await p.evaluate(()=>[...document.querySelectorAll('.ill.nowords .dg-nw text')].some(t=>t.getBoundingClientRect().width>0)),'ohne Worte: kein Text, nur Zeichen');assert.equal(nw.nw,'inline','Zeichen gross');
     const cell=p.locator('.ill.nowords g.dg-cell:visible').first();await cell.click();  // nur Zeichen, Antippen zeigt gleich die Worte (keine Anfangsbuchstaben mehr)
@@ -66,6 +67,10 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
       const box=await p.evaluate(s=>{const g=[...document.querySelectorAll(s)].find(x=>x.getBoundingClientRect().width>0&&!x.classList.contains('r1')&&!x.classList.contains('r2')&&[...x.querySelectorAll('rect')].some(r=>r.getBoundingClientRect().width>0));if(!g)return null;g.scrollIntoView({block:'center'});const r=[...g.querySelectorAll('rect')].map(x=>x.getBoundingClientRect()).find(x=>x.width>0);g.dataset.t='1';return {x:r.left+4,y:r.top+r.height-4};},sel);
       assert(box,'Feld vorhanden: '+sel);await p.mouse.click(box.x,box.y);
       assert(await p.evaluate(()=>{const g=document.querySelector('[data-t="1"]');const ok=g.classList.contains('r1')||g.classList.contains('r2');delete g.dataset.t;return ok;}),'Antippen der Feldecke deckt auf: '+sel);}
+    }else{  // Strukturbild: Kartentexte verdeckt, Antippen einer Kachel deckt sie auf
+      assert(!await p.evaluate(()=>[...document.querySelectorAll('.ill.nowords text.lw')].some(t=>getComputedStyle(t).visibility==='visible'&&t.getBoundingClientRect().width>0)),'ohne Worte: Kartentexte verdeckt');
+      const t=p.locator('.ill.nowords svg.ill-tile:visible').first();await t.scrollIntoViewIfNeeded();const bb=await t.boundingBox();await p.mouse.click(bb.x+bb.width/2,bb.y+bb.height/2);await p.waitForTimeout(200);
+      assert(await p.evaluate(()=>{const s=document.querySelector('.ill.nowords svg.ill-tile.reveal');return !!s&&[...s.querySelectorAll('text.lw')].some(t=>getComputedStyle(t).visibility==='visible');}),'Antippen der Kachel zeigt die Worte');}
     await p.locator('[data-nowords]:visible').first().click();await p.waitForTimeout(300);assert(!await p.$('.ill.nowords'),'wieder mit Worten');
     // Umschalter Text | Bild (Entscheid Andi Neck 2026-10-27): beide unabhängig, mindestens einer an, gilt für alle Ebenen; auf Versebene
     // stehen die Felder des Abschnittsbilds bei ihren Versen

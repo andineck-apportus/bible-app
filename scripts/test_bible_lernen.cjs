@@ -38,7 +38,7 @@ let chromium;try{({chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'
     // Bildkarten ohne Worte: Abschnittsbild nur mit Zeichen, aufdecken zeigt Titel und Zusammenfassung, Bewertung nach Leitner
     await p.click('[data-learn=menu]');await p.waitForTimeout(300);await p.click('[data-learn="start:pics"]');await p.waitForTimeout(800);
     assert(await p.$('.sheet .learn-pic.nowords'),'Bildkarte ohne Worte');
-    assert(!await p.evaluate(()=>[...document.querySelectorAll('.sheet .learn-pic text')].some(t=>t.getBoundingClientRect().width>0&&!t.classList.contains('pn-n'))),'Bildkarte: kein Text sichtbar');
+    assert(!await p.evaluate(()=>[...document.querySelectorAll('.sheet .learn-pic text')].some(t=>t.getBoundingClientRect().width>0&&getComputedStyle(t).visibility!=='hidden'&&!t.classList.contains('pn-n'))),'Bildkarte: kein Text sichtbar');
     await p.click('[data-learn=reveal]');await p.waitForTimeout(300);assert(await p.$('.sheet .body'),'Bildkarte: Zusammenfassung nach dem Aufdecken');
     assert.equal(await p.$$eval('.sheet .rate3 button',x=>x.length),3,'drei Bewertungen: nicht gewusst, teilweise, gewusst');
     assert(await p.$('.sheet .learn-pic:not(.nowords)'),'Aufdecken zeigt auch die Worte im Bild');

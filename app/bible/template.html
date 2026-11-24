@@ -617,6 +617,7 @@ html:has(.app[data-theme=dark]),html:has(.app[data-theme=dark]) body{background:
 #bible-stream .verse-ill .tile-cap{margin:4px auto 6px}
 #bible-stream .verse-ill figcaption{margin-top:2px}
 #bible-stream .ill.nowords text:not(.pn-n){visibility:hidden}
+.ill.nowords text.lw{visibility:hidden}.ill.nowords .reveal text.lw{visibility:visible}
 #bible-stream .ill.nowords .dg-keep text{visibility:visible}
 #bible-stream .ill.nowords .dg-full{display:none}
 #bible-stream .ill.nowords .dg-nw{display:inline}
@@ -1278,6 +1279,8 @@ const illNarrow=svg=>illTiles(svg)?'':` tiles" style="max-width:${Math.round(ill
 const illWide=il=>{const t=illTiles(il&&il.svg);return t?(t.filter(x=>!x.includes('ill-narrow')).length>1||t.some(x=>x.includes('data-span="2"'))):illVbW(il&&il.svg)>=300;};
 // Bilder ohne Worte (Kapitelebene, Hinweis Andi Neck 2026-10-25): zum Abrufen nach dem Lernen. Die Worte im Bild und die
 // Zusammenfassung daneben sind verdeckt; Antippen eines Feldes oder Kästchens zeigt dessen Worte, Antippen des Textes den Text.
+// Bild mit Worten: Zeichnung mit Zeichen-Ersatz (dg-nw) oder Strukturbild mit Kartentexten (lw); Antippen einer Kachel deckt sie auf
+const mitWorten=svg=>/dg-nw|class="lw lw-/.test(svg);
 const nwBtn=()=>`<button type="button" class="tool nowords-btn" data-nowords="1" aria-pressed="${!!S.nowords}" aria-label="${lang==='de'?'Ohne Worte':'No words'}" title="${lang==='de'?'Bild ohne Worte: Inhalt aus dem Gedächtnis zusammenbringen':'Picture without words: recall the content'}">${icon('nowords')}<span>${lang==='de'?'Ohne Worte':'No words'}</span></button>`;
 // Erklärung eines einzelnen Feldes, beim Antippen direkt unter dem Feld (Hinweis Andi Neck 2026-10-28): was man sieht, darunter
 // eingeklappt «Was ist belegt?» (B/R/I dieses Feldes) und «Mehr zum Bild» (Deutungshinweis, Prüfung, Prozess, Legende zu allen Feldern)
@@ -1393,7 +1396,7 @@ function entry(id){
   const il=illFor(n);
   const tg=il?viewToggle():'';
   const tl=tools(id);
-  const nw=il&&/dg-nw/.test(il.svg);  // «ohne Worte» auf allen Bildern mit Worten (Hinweis Andi Neck 2026-10-25: hilft beim Lernen)
+  const nw=il&&mitWorten(il.svg);  // «ohne Worte» auf allen Bildern mit Worten (Hinweis Andi Neck 2026-10-25: hilft beim Lernen)
   const body=il?`<div class="ill-wrap${illWide(il)?' wide':''}${nw&&S.nowords?' nowords':''}"><div class="ill-text">${copy}${deep?`<div class="actions actions-side">${deep}</div>`:''}</div>${illFigure(il,nw)}</div>`:copy;
   const zs=n.level===0&&ZUG?zgSwitch():'';
   if(zs&&S.zugang!=='zoom'&&ZG_VIEWS.includes(S.zugang))return `<article class="stream-entry has-zg" data-stream="${id}"><h2>${esc(heading)}${readBtn(id)}</h2><div class="entry-tools">${tl}</div>${zs}${zgView(S.zugang)}</article>`;
@@ -1472,7 +1475,7 @@ function picNodes(sc){const out=[],chap=(bi,c)=>{const ch=nodes.get(`c${bi}-${c}
   else if(sc.startsWith('bk:'))book(sc.slice(3));else [...new Set(MERK().map(merkCode))].forEach(book);
   return out;}
 const picCodes=sc=>sc.startsWith('ch:')||sc.startsWith('bk:')?[sc.slice(3).split('.')[0]]:[...new Set(MERK().map(merkCode))];
-function picStart(sc){withData(picCodes(sc),()=>{let refs=picNodes(sc).filter(x=>{const il=illFor(x);return il&&/dg-nw/.test(il.svg);}).map(x=>'img:'+x.id);
+function picStart(sc){withData(picCodes(sc),()=>{let refs=picNodes(sc).filter(x=>{const il=illFor(x);return il&&mitWorten(il.svg);}).map(x=>'img:'+x.id);
   if(!refs.length){openSheet('learn',head(lang==='de'?'Lernen':'Learn')+`<p class="note">${lang==='de'?'In diesem Umfang gibt es noch keine Abschnittsbilder.':'No section pictures in this scope yet.'}</p><button type="button" class="learn-main" data-learn="menu">${lang==='de'?'Zur Auswahl':'Back to choice'}</button>`);return;}
   const d=refs.filter(isDue);refs=shuffle(d.length?d:refs,Date.now()%997+1);
   LN={pickScope:sc,method:'pics',refs,i:0,step:0,stage:1,shown:new Set(),placed:[],wrong:0,score:0,done:0};learnRender();});}
