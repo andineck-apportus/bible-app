@@ -88,14 +88,14 @@ GSW = {
  "MAT.3.1": "[I]{1} [dere]{5} [Ziit]{3,4} [isch]{6} [aber]{2} [de Johannes]{7} [de Täufer]{8,9} [uftrete]{6} [und hät]{10} [i]{11} [de Wüeschti]{12,13} [vo Judäa]{14,15} [verchündet]{10}",
  "MAT.3.2": "und{1} [hät gseit]{2}: «[Chehred um]{3}, [dänn]{5} [s Himmelriich]{6-9} [isch nöch choo]{4}!»",
  "MAT.3.3": "[Er]{1} [isch]{3} [nämli]{2} [dä, vo däm]{4} [dur]{6} [de Prophet]{8,9} [Jesaja]{7} [gseit worde isch]{5}: «[E Stimm]{11} [vo eim, wo]{12} [i]{13} [de Wüeschti]{14,15} [rüeft]{12}: ‹[Mached]{16} [de Wäg]{17,18} [vom Herr]{19} [parat]{16}, [mached]{21} [sini]{24} [Pfäd]{22,23} [grad]{20}!›» ~10(λέγοντος «wo seit» leitet s Zitat ii; mit em Doppelpunkt widergää)",
- "MAT.3.4": "[De Johannes]{3,4} [sälber]{1} [aber]{2} [hät]{5} [es]{8} [Gwand]{6,7} [us]{9} [Kamelhaar]{10,11} und{12} [en lädrige]{14} [Gurt]{13} [um]{15} [d]{18} [Hüfte]{16,17} [ghaa]{5}; [sis]{23} [Ässe]{19,21} [aber]{20} [sind]{22} [Höischrecke]{24} und{25} [wilde]{27} [Hung]{26} [gsii]{22}.",
+ "MAT.3.4": "[De Johannes]{3,4} [sälber]{1} [hät]{5} [aber]{2} [es]{8} [Gwand]{6,7} [us]{9} [Kamelhaar]{10,11} und{12} [en lädrige]{14} [Gurt]{13} [um]{15} [d]{18} [Hüfte]{16,17} [ghaa]{5}, und{20} [sis]{23} [Ässe]{19,21} [sind]{22} [Höischrecke]{24} und{25} [wilde]{27} [Hung]{26} [gsii]{22}.",
  "MAT.3.5": "[Dänn]{1} [sind]{2} Jerusalem{5} und{6} [ganz]{7} [Judäa]{8,9} und{10} [di ganz]{11,12} [Gäged]{13} [am Jordan]{14,15} [zu]{3} [ihm]{4} [usegange]{2},",
  "MAT.3.6": "und{1} [si händ sich]{2} [vo]{7} [ihm]{8} [im]{3,4} [Fluss]{6} Jordan{5} [la taufe]{2} [und händ]{9} [iri]{12} [Sünde]{10,11} [bekännt]{9}.",
- "MAT.3.7": "[Won er]{1} [aber]{2} [gseh hät]{1}, [dass vili]{3} [vo de]{4} [Pharisäer]{5} und{6} [Sadduzäer]{7} [zu]{9} [sinere]{12} [Taufi]{10,11} [chömed]{8}, [hät er]{13} [zu ine]{14} [gseit]{13}: «[Ir Viperebruet]{15,16}! [Wär]{17} [hät]{18} [öi]{19} [biibracht]{18}, [vor]{21} [em]{22} [Zorn]{24}, [wo chunnt]{23}, [z flüchte]{20}?",
+ "MAT.3.7": "[Won er]{1} [aber]{2} [gseh hät]{1}, [dass vili]{3} [vo de]{4} [Pharisäer]{5} und{6} [Sadduzäer]{7} [zu]{9} [sinere]{12} [Taufi]{10,11} [chömed]{8}, [hät er]{13} [zu ine]{14} [gseit]{13}: «[Ir Viperebruet]{15,16}! [Wär]{17} [hät]{18} [öi]{19} [biibracht]{18}, dass ir [vor]{21} [em]{22} [chömmende]{23} [Zorn]{24} [chönd flüchte]{20}?",
  "MAT.3.8": "[Bringed]{1} [also]{2} [Frucht]{3}, wo [zur Umkehr]{5,6} [passt]{4}!",
  "MAT.3.9": "Und{1} [chömed]{3} [nöd]{2} [uf d Idee]{3}, [bi öi]{5,6} [z säge]{4}: ‹[Mir händ]{8} [de Abraham]{9,10} [als Vatter]{7}.› [Ich säge]{11} [öi]{13} [nämli]{12}: [Gott]{16,17} [cha]{15} [us]{18} [dene]{21} [Stei]{19,20} [em Abraham]{24,25} [Chind]{23} [erwecke]{22}. ~14(ὅτι leitet d Red ii)",
  "MAT.3.10": "[D Axt]{3,4} [liit]{10} [aber]{2} [scho]{1} [a]{5} [de Wurzle]{6,7} [vo de Bäum]{8,9}. [Jede]{11} [Baum]{13} [also]{12}, wo [kei]{14} [gueti]{17} [Frucht]{16} [bringt]{15}, [wird umghaue]{18} und{19} [is]{20} [Füür]{21} [gworfe]{22}.",
- "MAT.3.11": "[Ich]{1} [taufe]{4} [öi]{3} [zwar]{2} [mit]{5} [Wasser]{6} [zur]{7} [Umkehr]{8}; [dä]{9} [aber]{10}, wo [nach]{11} [mir]{12} [chunnt]{13}, [isch]{16} [stärcher]{14} [als ich]{15}; [ich bi]{19} [nöd]{18} [wärt]{20}, [sini]{17} [Sandale]{21,22} [z träge]{23}. [Er]{24} [wird]{26} [öi]{25} [mit]{27} [heilige]{29} [Geischt]{28} und{30} [Füür]{31} [taufe]{26}.",
+ "MAT.3.11": "[Ich]{1} [taufe]{4} [öi]{3} [zwar]{2} [mit]{5} [Wasser]{6} [zur]{7} [Umkehr]{8}; [aber]{10} [dä]{9}, wo [nach]{11} [mir]{12} [chunnt]{13}, [isch]{16} [stärcher]{14} [als ich]{15}, und [ich bi]{19} [nöd]{18} [wärt]{20}, [sini]{17} [Sandale]{21,22} [z träge]{23}. [Er]{24} [wird]{26} [öi]{25} [mit]{27} em [Heilige]{29} [Geischt]{28} und{30} [Füür]{31} [taufe]{26}.",
  "MAT.3.12": "[Er]{1} hät [d Worfschufle]{2,3} [i]{4} [de]{5} [Hand]{6}, und{8} [er macht]{9} [sis]{12} [Tenn]{10,11} [ganz suuber]{9} und{13} [sammlet]{14} [sin]{17} [Weize]{15,16} [i]{18} [d Schüür]{19,20}; [d Sprüür]{21,23} [aber]{22} [verbrännt er]{24} [mit Füür]{25}, [wo nie usgaat]{26}.» ~7(αὐτοῦ «sini» isch dur «er hät … i de Hand» usdruckt)",
  "MAT.3.13": "[Dänn]{1} [chunnt]{2} [Jesus]{3,4} [vo]{5} [Galiläa]{6,7} [a]{8} [de Jordan]{9,10} [zum]{11} [Johannes]{12,13}; [er wott]{14} [sich]{15} [vo]{16} [ihm]{17} [la taufe]{15}.",
  "MAT.3.14": "[De Johannes]{1,3} [aber]{2} [hät]{4} [en]{5} [wele devo abhalte]{4} [und gseit]{6}: «[Ich]{7} [han s nötig]{8,9}, [dass]{12} [du]{10,11} [mich]{12} [taufsch]{12}, und{13} [du]{14} [chunnsch]{15} [zu]{16} [mir]{17}?»",
@@ -112,7 +112,7 @@ GSW = {
  "MAT.4.7": "[Jesus]{3,4} [hät]{1} [zu ihm]{2} [gseit]{1}: «[Es staat]{6} [au]{5} [gschribe]{6}: ‹[Du söllsch]{8} [de Herr]{9}, [din]{12} [Gott]{10,11}, [nöd]{7} [uf d Prob stelle]{8}.›»",
  "MAT.4.8": "[Wider]{1} [nimmt]{2} [en]{3} [de Tüüfel]{4,5} [mit]{2} [uf]{6} [en ganz]{9} [höche]{8} [Bärg]{7} und{10} [zeigt]{11} [ihm]{12} [alli]{13} [Riich]{14,15} [vo de Wält]{16,17} und{18} [iri]{21} [Herrlichkeit]{19,20}",
  "MAT.4.9": "und{1} [hät]{2} [zu ihm]{3} [gseit]{2}: «[Das]{4} [alles]{6} [gibe ich]{7} [dir]{5}, [wänn]{8} du [di uf de Bode wirfsch]{9} und [mich]{11} [aabättisch]{10}.»",
- "MAT.4.10": "[Dänn]{1} [seit]{2} [Jesus]{4,5} [zu ihm]{3}: «[Gang wäg]{6}, [Satan]{7}! [Es staat]{8} [nämli]{9} [gschribe]{8}: ‹[De Herr]{10}, [din]{13} [Gott]{11,12}, [söllsch du aabätte]{14} und{15} [nu]{17} [ihm]{16} [diene]{18}.›»",
+ "MAT.4.10": "[Dänn]{1} [seit]{2} [Jesus]{4,5} [zu ihm]{3}: «[Gang wäg]{6}, [Satan]{7}! [Es staat]{8} [nämli]{9} [gschribe]{8}: ‹[Du söllsch]{14} [de Herr]{10}, [din]{13} [Gott]{11,12}, [aabätte]{14} und{15} [nu]{17} [ihm]{16} [diene]{18}.›»",
  "MAT.4.11": "[Dänn]{1} [laat]{2} [de Tüüfel]{4,5} [vo ihm]{3} [ab]{2}, und{6} [lueg]{7}, [Ängel]{8} [sind härechoo]{9} und{10} [händ]{11} [ihm]{12} [dienet]{11}.",
  "MAT.4.12": "[Won er]{1} [aber]{2} [ghört hät]{1}, [dass]{3} [de Johannes]{4} [usgliferet worde isch]{5}, [hät er sich]{6} [uf]{7} [Galiläa]{8,9} [zruggzoge]{6}.",
  "MAT.4.13": "Und{1} [er hät]{2} [Nazaret]{3,4} [verlaa]{2} [und isch]{5} [uf]{7} [Kafarnaum]{8} [cho]{5} [wohne]{6}, [wo]{9} [am See]{10} liit, [im]{11} [Gebiet]{12} [vo Sebulon]{13} und{14} [Naftali]{15},",
@@ -120,10 +120,10 @@ GSW = {
  "MAT.4.15": "«[S Land]{1} [Sebulon]{2} und{3} [s Land]{4} [Naftali]{5}, [de Wäg]{6} [am Meer]{7}, [ännet]{8} [em Jordan]{9,10}, [Galiläa]{11} [vo de Völker]{12,13}:",
  "MAT.4.16": "[s Volk]{1,2}, [wo]{3} [i]{5} [de Fiischteri]{6} [gsässe isch]{4}, [hät]{8} [es grosses]{9} [Liecht]{7} [gseh]{8}, und{10} [dene]{11}, wo [im]{13} [Land]{14} und{15} [Schatte]{16} [vom Tod]{17} [gsässe sind]{12}, [isch]{19} [es Liecht]{18} [ufgange]{19}.» ~20(αὐτοῖς «ine» nimmt «dene» uuf; nöd eigens widergää)",
  "MAT.4.17": "[Vo dänn aa]{1,2} [hät]{3} [Jesus]{4,5} [aagfange]{3} [z verchünde]{6} und{7} [z säge]{8}: «[Chehred um]{9}, [dänn]{11} [s Himmelriich]{12-15} [isch nöch choo]{10}!»",
- "MAT.4.18": "[Won er]{1} [aber]{2} [am]{3,4} [See]{5} [vo Galiläa]{6,7} [entlang gloffe isch]{1}, [hät er]{8} [zwei]{9} [Brüeder]{10} [gseh]{8}, [de Simon]{11}, [wo]{12} [men em]{13} [Petrus]{14} [seit]{13}, und{15} [de Andreas]{16}, [sin]{19} [Brueder]{17,18}, [wie si]{20} [es Wurfnetz]{21} [in]{22,23} [See]{24} [uswärfed]{20}; [si sind]{25} [nämli]{26} Fischer{27} [gsii]{25}.",
+ "MAT.4.18": "[Won er]{1} [aber]{2} [am]{3,4} [See]{5} [vo Galiläa]{6,7} [entlang gloffe isch]{1}, [hät er]{8} [zwei]{9} [Brüeder]{10} [gseh]{8}: [de Simon]{11}, [wo]{12} [men em]{13} [Petrus]{14} [seit]{13}, und{15} [sin]{19} [Brueder]{17,18} [Andreas]{16}. [Si händ]{20} [es Wurfnetz]{21} [in]{22,23} [See]{24} [usgworfe]{20}; [si sind]{25} [nämli]{26} Fischer{27} [gsii]{25}.",
  "MAT.4.19": "Und{1} [er seit]{2} [zu ine]{3}: «[Chömed]{4} [mir]{6} [nache]{5}, und{7} [ich mache]{8} [öi]{9} [zu Mänschefischer]{10,11}!»",
  "MAT.4.20": "[Si]{1} [aber]{2} [händ]{4} [grad]{3} [d Netz]{5,6} [la ligge]{4} [und sind]{7} [ihm]{8} [nachegange]{7}.",
- "MAT.4.21": "Und{1} [won er]{2} [vo dört]{3} [wiitergange isch]{2}, [hät er]{4} [zwei]{6} [anderi]{5} [Brüeder]{7} [gseh]{4}, [de Jakobus]{8}, [de Sohn]{9} [vom Zebedäus]{10,11}, und{12} [de Johannes]{13}, [sin]{16} [Brueder]{14,15}, [im]{17,18} [Boot]{19} [mit]{20} [em Zebedäus]{21}, [irem]{24} [Vatter]{22,23}, [wie si]{25} [iri]{28} [Netz]{26,27} [gflickt händ]{25}; und{29} [er hät]{30} [si]{31} [grüeft]{30}.",
+ "MAT.4.21": "Und{1} [won er]{2} [vo dört]{3} [wiitergange isch]{2}, [hät er]{4} [zwei]{6} [anderi]{5} [Brüeder]{7} [gseh]{4}: [de Jakobus]{8}, [de Sohn]{9} [vom Zebedäus]{10,11}, und{12} [sin]{16} [Brueder]{14,15} [Johannes]{13}. Si sind [mit]{20} [irem]{24} [Vatter]{22,23} [Zebedäus]{21} [im]{17,18} [Boot]{19} gsii und [händ]{25} [iri]{28} [Netz]{26,27} [gflickt]{25}; und{29} [er hät]{30} [si]{31} [grüeft]{30}.",
  "MAT.4.22": "[Si]{1} [aber]{2} [händ]{4} [grad]{3} [s Boot]{5,6} und{7} [ire]{10} [Vatter]{8,9} [zrugglaa]{4} [und sind]{11} [ihm]{12} [nachegange]{11}.",
  "MAT.4.23": "Und{1} [er isch]{2} [i]{3} [ganz]{4} [Galiläa]{5,6} [umezoge]{2}, [hät]{7} [i]{8} [ire]{11} [Synagoge]{9,10} [glehrt]{7} und{12} [s Evangelium]{14,15} [vom Riich]{16,17} [verchündet]{13} und{18} [jedi]{20} [Chrankheit]{21} und{22} [jedes]{23} [Liide]{24} [im]{25,26} [Volk]{27} [gheilt]{19}.",
  "MAT.4.24": "Und{1} [s Grücht]{3,4} [über ihn]{5} [hät sich]{2} [i]{6} [ganz]{7} [Syrie]{8,9} [verbreitet]{2}. Und{10} [me hät]{11} [ihm]{12} [alli]{13} [Chranke]{14,15,16} [bracht]{11}, wo [vo allerlei]{17} [Chrankheite]{18} und{19} [Schmärze]{20} [plaget gsii sind]{21}: [Bsässni]{22} und{23} [Mondsüchtigi]{24} und{25} [Glähmti]{26}; und{27} [er hät]{28} [si]{29} [gheilt]{28}.",
@@ -310,8 +310,8 @@ DEC_GSW = [
   "ἐγείρω «ufrichte, erwecke» staat susch oft fürs Uferwecke vo Tote. Hebräisch und aramäisch tönt «Söhn» (banim) ähnlich wie «Stei» (abanim); öb da es Wortspil drhinder staat, cha me nöd nachwiise."),
  ("MAT.3.11", "zur Umkehr", "interpretive", "εἰς μετάνοιαν", None, ["wäge de Umkehr"],
   "εἰς cha s Zil oder de Grund aagää. Anders als [[MRK.1.4]] redt de Matthäus bim Johannes nöd vo «Vergäbig vo de Sünde»."),
- ("MAT.3.11", "mit heilige Geischt und Füür", "interpretive", "ἐν πνεύματι ἁγίῳ καὶ πυρί", None, ["im heilige Geischt und im Füür"],
-  "Ohni Artikel, im Gägesatz zu «mit Wasser». «Füür» cha Lüüterig oder Gricht meine ([[MAT.3.10]], [[MAT.3.12]]). πνεῦμα ἅγιον überall «heilige Geischt»."),
+ ("MAT.3.11", "mit em Heilige Geischt und Füür", "interpretive", "ἐν πνεύματι ἁγίῳ καὶ πυρί", "mit heilige Geischt und Füür", ["im Heilige Geischt und im Füür"],
+  "Im Griechische ohni Artikel, im Gägesatz zu «mit Wasser»; nach em Entscheid vom 2026-11-24 (Andi Neck) staat «de Heilig Geischt» i de Mundart immer mit Artikel. «Füür» cha Lüüterig oder Gricht meine ([[MAT.3.10]], [[MAT.3.12]]). πνεῦμα ἅγιον überall «Heilige Geischt»."),
  ("MAT.3.12", "Worfschufle", "literal", "πτύον", None, None,
   "Mit de Worfschufle hät me s tröschet Chorn i de Wind gworfe; d Sprüür isch wäggfloge, d Chörner sind ufs Tenn gfalle. Es Bild fürs Gricht, wo scheidet."),
  ("MAT.3.14", "hät en wele devo abhalte", "interpretive", "διεκώλυεν αὐτὸν", "hät en abghalte", ["hät probiert, en abzhalte"],
@@ -368,6 +368,9 @@ DEC_GSW = [
   "S Wort verbindet Aafäll mit em Mond, wie me s i de Antike gmeint hät; «Epileptiker» wär e hüttigi Diagnose."),
  ("MAT.4.25", "Lüüt", "adapted", "ὄχλοι", "Mängene", ["Schaare vo Lüüt", "Mängine"],
   "Einheitlich im Matthäus: ὄχλος «d Mängi», d Mehrzahl οἱ ὄχλοι «d Lüüt»."),
+ ('MAT.3.7', 'dass ir vor em chömmende Zorn chönd flüchte', 'adapted', 'φυγεῖν ἀπὸ τῆς μελλούσης ὀργῆς', 'vor em Zorn, wo chunnt, z flüchte', None, 'Infinitiv als dass-Satz und s Partizip μελλούσης als Adjektiv, damit de Satz ohni Iischüb fliesst (Satzbau-Entscheid Andi Neck 2026-11-24).'),
+ ('MAT.4.18', 'Si händ es Wurfnetz in See usgworfe', 'adapted', 'βάλλοντας ἀμφίβληστρον εἰς τὴν θάλασσαν', 'wie si es Wurfnetz in See uswärfed', None, 'S Partizip isch als eigete Satz widergää; d Brüeder sind vorher mit Name gnännt (Satzbau-Entscheid Andi Neck 2026-11-24).'),
+ ('MAT.4.21', 'Si sind mit irem Vatter Zebedäus im Boot gsii und händ iri Netz gflickt', 'adapted', 'ἐν τῷ πλοίῳ μετὰ Ζεβεδαίου τοῦ πατρὸς αὐτῶν καταρτίζοντας τὰ δίκτυα αὐτῶν', 'im Boot mit em Zebedäus, irem Vatter, wie si iri Netz gflickt händ', None, 'Ortsaagab und Partizip als eigete Satz; «Si sind … gsii» isch ergänzt (Satzbau-Entscheid Andi Neck 2026-11-24).'),
 ]
 
 # (Lesart, Stelle, von de, zu de, von gsw, zu gsw, Wirkung, Hinweis de, Hinweis gsw, Wortlaute de, Wortlaute gsw,
@@ -419,7 +422,7 @@ ALTS = [
   ["καί cha us de Parallele [[LUK.3.9]] choo sii; oder es isch wäggfalle.",
    "Nach de automatische Zueornig läsed 01, 03, 04 und 032 ohni καί; 05 isch a dere Stell nöd erhalte."]),
  ("VAR-SBLGNTAPP-MAT-003-011-02:R2", "MAT.3.11", "mit heiligem Geist und Feuer", "mit heiligem Geist",
-  "mit heilige Geischt und Füür", "mit heilige Geischt", "mittel",
+  "mit em Heilige Geischt und Füür", "mit em Heilige Geischt", "mittel",
   "Ohne «und Feuer» fehlt der Hinweis auf Läuterung oder Gericht; der Satz entspricht dann [[MRK.1.8]].",
   "Ohni «und Füür» fehlt de Hiiwiis uf Lüüterig oder Gricht; de Satz entspricht dänn [[MRK.1.8]].",
   {"R1": [("καὶ πυρί", "und Feuer", "WH, Treg, NA28")], "R2": [("–", "ohne «und Feuer»", "RP")]},
@@ -604,7 +607,7 @@ NOTES_GSW = [
  ("D Zueornig vo Handschrifte zu Läsarte beruet uf maschineller Kollation (METHOD-AUTO-COLLATION-V1) und em dört erfasste "
   "Wortluut vo de CNTR-Transkriptione, nöd uf eigeter Prüefig vo de Handschrifte."),
  ("Einheitlichi Begriff im Matthäus: «s Riich vo de Himmel», «s Riich vo Gott», «de Mänschesohn», «Amen, ich säge öi», «Vatter i "
-  "de Himmel», ἰδού «lueg», εὐθέως/εὐθύς «grad», τότε «dänn», «Chehred um», «Umkehr», «Dämon», «Bsässne», «heilige Geischt», "
+  "de Himmel», ἰδού «lueg», εὐθέως/εὐθύς «grad», τότε «dänn», «Chehred um», «Umkehr», «Dämon», «Bsässne», «de Heilig Geischt» (mit Artikel), "
   "«Christus», d Erfüllungsformle «damit erfüllt wird, was … dur de Prophet gseit worde isch»."),
  ("I Kapitel 3–4 neu feschtgleit (Vorschlag für di andere Kapitel): δικαιοσύνη «Grächtigkeit»; πειράζω «versueche» (bim "
   "Tüüfel), ἐκπειράζω «uf d Prob stelle»; διάβολος «Tüüfel», ὁ πειράζων «de Versuecher»; προσέρχομαι «härechoo»; προσκυνέω "
