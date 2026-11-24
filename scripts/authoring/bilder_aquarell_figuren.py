@@ -82,7 +82,7 @@ def eintraege():
     return out
 
 
-STUFE = 3   # Stufen der Lockerung; jede Stufe lockert nur, darum bleiben Bilder gültig, die eine frühere Stufe bestanden haben
+STUFE = 4   # Stufen der Lockerung; jede Stufe lockert nur, darum bleiben Bilder gültig, die eine frühere Stufe bestanden haben
 
 
 def lockern(r, e, c, an=True):
@@ -94,6 +94,10 @@ def lockern(r, e, c, an=True):
     s3 = (lo.get("stufe3") or {}).get("je_regel_en", {})                         # Stufe 3: weitere Regeln (ab Lauf 83)
     if an >= 3 and r["id"] in s3:
         r = {**r, "en": r["en"] + s3[r["id"]]}
+    s4 = lo.get("stufe4") or {}                                                   # Stufe 4: Beschreibung vor Porträtregeln (ab Lauf 112)
+    if an >= 4 and (r["id"] in s4.get("regeln", []) or r["id"] in s4.get("je_regel_en", {})):
+        r = {**r, "en": r["en"] + s4.get("je_regel_en", {}).get(r["id"], "")
+             + (lo["zusatz_en"].replace("{beschreibung}", e["beschreibung"]) if r["id"] in s4.get("regeln", []) and r["id"] not in lo.get("regeln", []) else "")}
     if not an or r["id"] not in lo.get("regeln", []):
         return r
     return {**r, "en": r["en"] + ((lo.get("je_regel_en") or {}).get(r["id"], "") if an >= 2 else "")
@@ -118,14 +122,17 @@ def regeln(e, c=None, lockerung=True):
         if r["id"] == "P-LEXIKON" and not e["lexikon"]:
             continue
         erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
+        r = lockern(r, e, c, lockerung)
         out.append({**r, "en": r["en"].replace("{beschreibung}", e["beschreibung"]).replace("{lexikon}", e["lexikon"] or "")
                     .replace("{erlaubt}", f" (also allowed: {erl})" if erl else ""), "ebene": "portraet"})
     ers = c["pruef"].get(e["id"], {})
+    s4f = ((c.get("lockerung") or {}).get("stufe4") or {}).get("je_regel_en", {}).get("figur", "") \
+        if (STUFE if lockerung is True else int(lockerung or 0)) >= 4 else ""
     for r in e["pruef"]:
         if r["id"] not in ers.get("ersetzt", []):
-            out.append({**r, "ebene": "figur", "figur": e["id"]})
+            out.append({**r, "en": r["en"] + s4f, "ebene": "figur", "figur": e["id"]})
     for r in ers.get("regeln", []):
-        out.append({**r, "ebene": "figur", "figur": e["id"]})
+        out.append({**r, "en": r["en"] + s4f, "ebene": "figur", "figur": e["id"]})
     for r in (ers.get("vergleich") or {}).get("regeln", []):
         out.append({**r, "ebene": "vergleich", "figur": e["id"], "mit": ers["vergleich"]["mit"]})
     return out
@@ -156,6 +163,8 @@ def auftrag(e, c=None, lockerung=True):
         t += (c.get("lockerung") or {}).get("gruppe_anzahl_en", "")
     if (STUFE if lockerung is True else int(lockerung or 0)) >= 3 and e["art"] == "gruppe":
         t += ((c.get("lockerung") or {}).get("stufe3") or {}).get("gruppe_en", "")
+    if (STUFE if lockerung is True else int(lockerung or 0)) >= 4:
+        t += ((c.get("lockerung") or {}).get("stufe4") or {}).get("auftrag_en", "")
     erl = c["pruef"].get(e["id"], {}).get("erlaubt_en")
     if erl:
         t += f" Allowed in addition: {erl}."
